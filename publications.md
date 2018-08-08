@@ -6,7 +6,6 @@ subtitle:
 ## Published
 ### 2018
 <div data-badge-popover="right" data-badge-type="2" data-doi="10.1038/s41467-018-04391-6" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. [Nature Communications 9: 1951 (2018)](https://www.nature.com/articles/s41467-018-04391-6)
-<div align="center" data-badge-type="donut" data-doi="10.1038/s41467-018-04391-6" data-hide-no-mentions="true" class="altmetric-embed"></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](http://www.sciencemag.org/news/2018/05/excess-hippo-dung-may-be-harming-aquatic-species-across-africa), [The Atlantic](https://www.theatlantic.com/science/archive/2018/05/hippos-poop-so-much-that-sometimes-all-the-fish-die/560486/) and others.
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/Th8yFC6c03c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div> 
 <p align="center"> ---------- </p>
