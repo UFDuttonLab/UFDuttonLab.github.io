@@ -8,9 +8,7 @@ subtitle:
 
 <div align="center" data-badge-type="donut" data-doi="10.1038/s41467-018-04391-6" data-hide-no-mentions="true" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nature Communications 9: 1951 (2018)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by Science Magazine, The Atlantic and others.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Th8yFC6c03c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/Th8yFC6c03c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 <p align="center"> ---------- </p>
 
 Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post. 2018. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. PLOS ONE 13(2): e0192828.
