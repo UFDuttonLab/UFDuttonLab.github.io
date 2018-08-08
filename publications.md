@@ -11,7 +11,7 @@ Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loadi
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/Th8yFC6c03c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div> 
 <p align="center"> ---------- </p>
 
-<div data-badge-type="1" data-doi="10.1371/journal.pone.0192828" data-hide-no-mentions="true" class="altmetric-embed">Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post. 2018. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. [PLOS ONE 13(2): e0192828.](https://doi.org/10.1371/journal.pone.0192828)</div>
+<div data-badge-popover="right" data-badge-type="2" data-doi="https://doi.org/10.1371/journal.pone.0192828" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post. 2018. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. [PLOS ONE 13(2): e0192828.](https://doi.org/10.1371/journal.pone.0192828)
 
 <p align="center"> ---------- </p>
 
