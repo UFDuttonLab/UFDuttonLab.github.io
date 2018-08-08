@@ -4,7 +4,7 @@ title: About me
 subtitle: 
 ---
 
-I'm an ecologist using a variety of techniques to investigate the natural world.
+I'm an ecologist using a variety of techniques to investigate the natural world. I have acquired a unique skillset by following a path through several different fields.
 
 ### Education
 1998 - I attended the Indiana Law Enforcement Academy and became a certified police officer in the state of Indiana.
@@ -13,7 +13,7 @@ I'm an ecologist using a variety of techniques to investigate the natural world.
 
 2012 - I received a Master's of Environmental Studies degree from the the Yale School of Forestry and Environmental Studies.
 
-2019 - I expect to received a PhD from the Department of Ecology and Evolutionary Biology at Yale University.
+2019 - I expect to receive a PhD from the Department of Ecology and Evolutionary Biology at Yale University.
 
 ### Significant Accomplishments
 
