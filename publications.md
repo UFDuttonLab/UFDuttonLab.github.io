@@ -6,19 +6,11 @@ subtitle:
 
 ## Published
 
-First Header | Second Header
------------- | -------------
-<div data-badge-type="donut" data-doi="10.1038/s41467-018-04391-6" data-hide-no-mentions="true" class="altmetric-embed"></div> | Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nature Communications 9: 1951 (2018)
-
-
-
-Covered by Science Magazine, The Atlantic and others.
+<div data-badge-type="donut" data-doi="10.1038/s41467-018-04391-6" data-hide-no-mentions="true" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nature Communications 9: 1951 (2018)  Covered by Science Magazine, The Atlantic and others.
 
 Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post. 2018. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. PLOS ONE 13(2): e0192828.
 
-Subalusky, A. L., C. L. Dutton, E. J. Rosi, and D. M. Post. 2017. Annual mass drownings of the Serengeti wildebeest migration influence nutrient cycling and storage in the Mara River. Proceedings of the National Academy of Sciences 114: 7647-7652.
-
-Covered by Science Magazine (Pennisi, E. 2017. 356:1217-1218), The Washington Post, Smithsonian Magazine, National Geographic, The Atlantic and others.
+Subalusky, A. L., C. L. Dutton, E. J. Rosi, and D. M. Post. 2017. Annual mass drownings of the Serengeti wildebeest migration influence nutrient cycling and storage in the Mara River. Proceedings of the National Academy of Sciences 114: 7647-7652.  Covered by Science Magazine (Pennisi, E. 2017. 356:1217-1218), The Washington Post, Smithsonian Magazine, National Geographic, The Atlantic and others.
 
 Subalusky, A. L., C. L. Dutton, E. J. Rosi-Marshall, D. M. Post. 2015. The hippopotamus conveyor belt: vectors of carbon and nutrients from terrestrial grasslands to aquatic systems in sub-Saharan Africa. Freshwater Biology 60:512-525.
 
