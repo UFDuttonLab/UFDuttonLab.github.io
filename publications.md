@@ -3,7 +3,6 @@ layout: page
 title: Publications
 subtitle: 
 ---
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
 ## Published
 Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nature Communications 9: 1951 (2018)
@@ -29,3 +28,4 @@ Jantz, S.C., C. L. Dutton, A. Saha, R. Maskini, J. Almirall.  Novel "filter pell
 ## In Revisions
 Subalusky, A. L., C. L. Dutton, E. J. Rosi, and D. M. Post. Organic matter and nutrient inputs from wildlife interact with discharge to influence ecosystem function in an African river. Submitted to Ecology.
 
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
