@@ -3,7 +3,6 @@ layout: page
 title: Publications
 subtitle: 
 ---
-[I'm an inline-style link](https://www.google.com)
 ## Published
 
 <div align="center" data-badge-type="donut" data-doi="10.1038/s41467-018-04391-6" data-hide-no-mentions="true" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. [Nature Communications 9: 1951 (2018)](https://www.nature.com/articles/s41467-018-04391-6)
