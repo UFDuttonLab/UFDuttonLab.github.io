@@ -16,20 +16,22 @@ subtitle:
 <p align="center"> ---------- </p>
 
 ### 2017
-
+<div data-badge-popover="right" data-badge-type="2" data-doi="10.1073/pnas.1614778114" class="altmetric-embed"></div>
 Subalusky, A. L., C. L. Dutton, E. J. Rosi, and D. M. Post. 2017. Annual mass drownings of the Serengeti wildebeest migration influence nutrient cycling and storage in the Mara River. Proceedings of the National Academy of Sciences 114: 7647-7652.  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by Science Magazine (Pennisi, E. 2017. 356:1217-1218), The Washington Post, Smithsonian Magazine, National Geographic, The Atlantic and others.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](http://www.sciencemag.org/news/2017/06/every-year-thousands-drowned-wildebeest-feed-african-ecosystem), [The Washington Post](https://www.washingtonpost.com/news/animalia/wp/2017/06/19/six-thousand-wildebeest-die-in-a-serengeti-river-every-year-heres-why-thats-a-good-thing/?utm_term=.d3df2391356d), Smithsonian Magazine, National Geographic, [The Atlantic](https://www.theatlantic.com/science/archive/2017/06/how-the-mass-drownings-of-wildebeest-feed-the-serengeti/530799/) and others.
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ppIMJtQL5lg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div> 
 
 ### 2015
+<div data-badge-popover="right" data-badge-type="2" data-doi="10.1111/fwb.12474 " class="altmetric-embed"></div>
+Subalusky, A. L., C. L. Dutton, E. J. Rosi-Marshall, D. M. Post. 2015. The hippopotamus conveyor belt: vectors of carbon and nutrients from terrestrial grasslands to aquatic systems in sub-Saharan Africa. [Freshwater Biology 60:512-525.](https://onlinelibrary.wiley.com/doi/abs/10.1111/fwb.12474)
 
-Subalusky, A. L., C. L. Dutton, E. J. Rosi-Marshall, D. M. Post. 2015. The hippopotamus conveyor belt: vectors of carbon and nutrients from terrestrial grasslands to aquatic systems in sub-Saharan Africa. Freshwater Biology 60:512-525.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by Science Magazine (Pennisi, E. 2014. 346:802-805).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](http://science.sciencemag.org/content/346/6211/802).
 
 ### 2013
 
-Dutton, C.L., S.C. Anisfeld. and H. Ernstberger.  2013.  A novel sediment fingerprinting method using filtration: application to the Mara River.  Journal of Soils and Sediments 13: 1708.
+Dutton, C.L., S.C. Anisfeld. and H. Ernstberger.  2013.  A novel sediment fingerprinting method using filtration: application to the Mara River.  [Journal of Soils and Sediments 13: 1708.](https://link.springer.com/article/10.1007/s11368-013-0725-z)
 
 Jantz, S.C., C. L. Dutton, A. Saha, R. Maskini, J. Almirall.  Novel "filter pellet" sample preparation strategy for quantitative LA-ICP-MS analysis of filter-bound sediments: A "green chemistry" alternative to sediment fingerprinting in Tanzania's Ruvu River Basin.  Journal of Soils and Sediments.
 
