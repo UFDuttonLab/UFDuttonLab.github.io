@@ -24,6 +24,8 @@ description: Ecology and Conservation
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Research:
+  Publications "publications"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
