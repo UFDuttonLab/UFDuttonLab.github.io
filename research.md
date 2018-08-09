@@ -4,7 +4,7 @@ title: Research
 subtitle: 
 ---
 
-My research is focused on understanding the causes and conseauences of ecological change.
+My research is focused on understanding the causes and consequences of ecological change.
 
 ## Animal mediated change
 A key component of my research is understanding how animals can alter their environments.
