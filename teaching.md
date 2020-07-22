@@ -5,6 +5,10 @@ subtitle:
 ---
 I have experience serving as an instructor in a variety of settings for a variety of course topics.
 
+Instructor at University of Florida
+ - Data Collection with Open Technologies for Reproducible Research (Fall 2020) 
+ - Research Skills with Arduino and R (Spring 2019)
+
 Short Course Instructor (designed and taught courses in the US, Kenya, Tanzania and Rwanda)
  - Design and Development of Low-Cost Sensors for Monitoring Watersheds (2013 – present)
  - Data Analysis for Sediment Fingerprinting Watersheds (2012 – present)
@@ -20,10 +24,3 @@ Teaching Assistant
  
 Invited Lecturer
  - Water Resources Management, Yale University (2014)
-
-Previous Non-Science Courses Taught
- - Indiana State Certified Police Academy General Instructor (2001-2004)
- - Indiana State Certified Police Academy Instructor in Firearms, Defensive Tactics and Survival Tactics (2001-2004)
- - Rape Aggression Defense Certified Instructor (2001-2004)
- - Contact Defense and Control Certified Instructor (2001-2004)
- - Pressure Point Control Tactics Certified Instructor (2001-2004)
