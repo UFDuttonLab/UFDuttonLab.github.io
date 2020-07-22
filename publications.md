@@ -6,43 +6,45 @@ subtitle:
 
 ### 2020
 
-Dutton, C. L., A. L. Subalusky, S. K. Hamilton, E. C. Bayer, L. Njoroge, E. J. Rosi, and D. M. Post. 
-Alternative Biogeochemical States of River Pools Mediated by Hippo Use and Flow Variability.
-[Ecosystems (2020)](https://doi.org/10.1007/s10021-020-00518-3)
+Dutton, C. L., A. L. Subalusky, S. K. Hamilton, E. C. Bayer, L. Njoroge, E. J. Rosi, and D. M. Post.  
+Alternative Biogeochemical States of River Pools Mediated by Hippo Use and Flow Variability.  
+[Ecosystems (2020)](https://doi.org/10.1007/s10021-020-00518-3)  
 
-Masese F. O., M. J. Kiplagat, C. R. González-Quijano, A. L. Subalusky, C. L. Dutton, D. M. Post and G. A. Singer
-Hippopotamus are distinct from domestic livestock in their resource subsidies to and effects on aquatic ecosystems.
-[Proceedings of the Royal Society B 287: 20193000 (2020)](https://doi.org/10.1098/rspb.2019.3000)
+Masese F. O., M. J. Kiplagat, C. R. González-Quijano, A. L. Subalusky, C. L. Dutton, D. M. Post and G. A. Singer.  
+Hippopotamus are distinct from domestic livestock in their resource subsidies to and effects on aquatic ecosystems.  
+[Proceedings of the Royal Society B 287: 20193000 (2020)](https://doi.org/10.1098/rspb.2019.3000)  
 
-Subalusky, A. L., C. L. Dutton, E. J. Rosi, L. M. Puth, and D. M. Post. 
-A River of Bones: Wildebeest Skeletons Leave a Legacy of Mass Mortality in the Mara River, Kenya. 
-[Frontiers in Ecology and Evolution 8: 31 (2020)](https://doi.org/10.3389/fevo.2020.00031)
+Subalusky, A. L., C. L. Dutton, E. J. Rosi, L. M. Puth, and D. M. Post.   
+A River of Bones: Wildebeest Skeletons Leave a Legacy of Mass Mortality in the Mara River, Kenya.  
+[Frontiers in Ecology and Evolution 8: 31 (2020)](https://doi.org/10.3389/fevo.2020.00031)  
 
 ### 2019
 
-Schoelynck J., A. L. Subalusky, E. Struyf, C. L. Dutton, D. Unzué-Belmonte1, B. Van de Vijver, D. M. Post, E. J. Rosi, P. Meire1and, and P. Frings.
-Hippos (Hippopotamus amphibius): The animal silicon pump.
-[Science Advances 5: 5 eaav0395](https://advances.sciencemag.org/content/5/5/eaav0395)
+Schoelynck J., A. L. Subalusky, E. Struyf, C. L. Dutton, D. Unzué-Belmonte1, B. Van de Vijver, D. M. Post, E. J. Rosi, P. Meire1and, and P. Frings.  
+Hippos (Hippopotamus amphibius): The animal silicon pump.  
+[Science Advances 5: 5 eaav0395](https://advances.sciencemag.org/content/5/5/eaav0395)  
 
-Dutton, C. L., A. L. Subalusky, T. D. Hill, J. C. Aleman, E. J. Rosi, K. B. Onyango, K. Kanuni, J. A. Cousins, A. C. Staver, and D. M. Post. 
-A 2000-year sediment record reveals rapidly changing sedimentation and land use since the 1960s in the Upper Mara-Serengeti Ecosystem. 
-[Science of the Total Environment 664: 148 (2019)](https://doi.org/10.1016/j.scitotenv.2019.01.421)
+Dutton, C. L., A. L. Subalusky, T. D. Hill, J. C. Aleman, E. J. Rosi, K. B. Onyango, K. Kanuni, J. A. Cousins, A. C. Staver, and D. M. Post.   
+A 2000-year sediment record reveals rapidly changing sedimentation and land use since the 1960s in the Upper Mara-Serengeti Ecosystem.   
+[Science of the Total Environment 664: 148 (2019)](https://doi.org/10.1016/j.scitotenv.2019.01.421)  
 
 ### 2018
-Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J. Rosi, and D. M. Post. 
-The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya.
-[PLoS ONE 13(2): e0192828](https://doi.org/10.1371/journal.pone.0192828)
+Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J. Rosi, and D. M. Post.   
+The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya.  
+[PLoS ONE 13(2): e0192828](https://doi.org/10.1371/journal.pone.0192828)  
 
 
-<div data-badge-popover="right" data-badge-type="2" data-doi="10.1038/s41467-018-04391-6" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post. 
-Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. 
-[Nature Communications 9: 1951 (2018)](https://www.nature.com/articles/s41467-018-04391-6)
+<div data-badge-popover="right" data-badge-type="2" data-doi="10.1038/s41467-018-04391-6" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, E. J. Rosi, and D. M. Post.  
+Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills.   
+[Nature Communications 9: 1951 (2018)](https://www.nature.com/articles/s41467-018-04391-6)  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](http://www.sciencemag.org/news/2018/05/excess-hippo-dung-may-be-harming-aquatic-species-across-africa), [The Atlantic](https://www.theatlantic.com/science/archive/2018/05/hippos-poop-so-much-that-sometimes-all-the-fish-die/560486/) and others.
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/Th8yFC6c03c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div> 
 <p align="center"> ---------- </p>
 
-<div data-badge-popover="right" data-badge-type="2" data-doi="https://doi.org/10.1371/journal.pone.0192828" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post. 2018. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. [PLOS ONE 13(2): e0192828.](https://doi.org/10.1371/journal.pone.0192828)
+<div data-badge-popover="right" data-badge-type="2" data-doi="https://doi.org/10.1371/journal.pone.0192828" class="altmetric-embed"></div>Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J.  Rosi, and D. M. Post.   
+The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya.   
+[PLOS ONE 13(2): e0192828.](https://doi.org/10.1371/journal.pone.0192828)
 
 <div data-badge-popover="top" data-badge-type="2" data-doi="https://link.springer.com/article/10.1007/s11368-018-2076-2" data-hide-no-mentions="true" class="altmetric-embed"></div>Jantz, S.C., C. L. Dutton, A. Saha, R. Maskini, J. Almirall.  Novel "filter pellet" sample preparation strategy for quantitative LA-ICP-MS analysis of filter-bound sediments: A "green chemistry" alternative to sediment fingerprinting in Tanzania's Ruvu River Basin.  Journal of Soils and Sediments (2018). https://doi.org/10.1007/s11368-018-2076-2
 
