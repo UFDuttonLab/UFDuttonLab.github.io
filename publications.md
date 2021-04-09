@@ -4,7 +4,22 @@ title: Publications
 subtitle: 
 ---
 
+### Pre-print
+
+Dutton, C. L., A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. 
+The meta-gut: Hippo inputs lead to community coalescence of animal and environmental microbiomes. [BioRxiv 2021] (https://www.biorxiv.org/content/10.1101/2021.04.06.438626v1)
+
+### 2021
+
+Handler, K. S., A. L. Subalusky, C. J. Kendall, C. L. Dutton, E. J. Rosi, D. M. Post. 
+Temporal resource partitioning of wildebeest carcasses by scavengers after riverine mass mortality events. 
+[Ecosphere (2021)](https://doi.org/10.1002/ecs2.3326)
+
 ### 2020
+
+Akayezu, P., L. Musinguzi, V. Natugonza, R. Ogutu-Ohwayo, K. Mwathe, C. L. Dutton, M. Manyifika. 
+Using sediment fingerprinting to identify erosion hotspots in a sub-catchment of Lake Kivu, Rwanda. 
+[Environmental Monitoring and Assessment 2020] (https://doi.org/10.1007/s10661-020-08774-5)
 
 Dutton, C. L., A. L. Subalusky, S. K. Hamilton, E. C. Bayer, L. Njoroge, E. J. Rosi, and D. M. Post.
 Alternative Biogeochemical States of River Pools Mediated by Hippo Use and Flow Variability.
