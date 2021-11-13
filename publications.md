@@ -11,7 +11,7 @@ The meta-gut: Hippo inputs lead to community coalescence of animal and environme
 
 Kemp, A., C. H. Vane, A. Kim, C. L. Dutton, A. Subalusky, S. Kemp, A. Parnell. Fecal steroids as a potential tool for conservation paleobiology in East Africa. In Press at Biodiversity and Conservation. 
 
-Frauendorf, T., A. L. Subalusky, C. L. Dutton, S. K. Hamilton, F. O. Masese, E. J. Rosi, G. A. Singer, D. M. Post. 2021. Animal legacies lost and found in freshwater ecosystems. [Environmental Research Letters 2021](https://iopscience.iop.org/article/10.1088/1748-9326/ac2cb0)
+Frauendorf, T., A. L. Subalusky, C. L. Dutton, S. K. Hamilton, F. O. Masese, E. J. Rosi, G. A. Singer, D. M. Post. 2021. Animal legacies lost and found in freshwater ecosystems. [Environmental Research Letters (2021)](https://iopscience.iop.org/article/10.1088/1748-9326/ac2cb0)
 
 Handler, K. S., A. L. Subalusky, C. J. Kendall, C. L. Dutton, E. J. Rosi, D. M. Post. 
 Temporal resource partitioning of wildebeest carcasses by scavengers after riverine mass mortality events. 
