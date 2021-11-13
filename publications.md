@@ -4,10 +4,6 @@ title: Publications
 subtitle: 
 ---
 
-### Pre-print
-
-
-
 ### 2021
 
 Dutton, C. L., A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. 
