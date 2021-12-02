@@ -7,7 +7,9 @@ subtitle:
 ### 2021
 
 Dutton, C. L., A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. 
-The meta-gut: Hippo inputs lead to community coalescence of animal and environmental microbiomes. [BioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.04.06.438626v1) - IN PRESS AT NATURE SCIENTIFIC REPORTS
+The meta-gut: community coalescence of animal gut and environmental microbiomes. [Nature Scientific Reports (2021)](https://www.nature.com/articles/s41598-021-02349-1) 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](https://www.science.org/content/article/pooping-hippos-create-community-guts-african-ponds) and others.
 
 Kemp, A., C. H. Vane, A. Kim, C. L. Dutton, A. Subalusky, S. Kemp, A. Parnell. Fecal steroids as a potential tool for conservation paleobiology in East Africa. In Press at Biodiversity and Conservation. 
 
