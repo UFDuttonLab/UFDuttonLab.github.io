@@ -17,6 +17,9 @@ Short Course Instructor (designed and taught courses in the US, Kenya, Tanzania 
 
 ![Class in Kericho](img/kericho2.jpg){:style="float: center;margin-right: 7px;:class="img-responsive"}
 
+![Class in the field in Kenya](img/dutch6.jpg){:style="float: center;margin-right: 7px;:class="img-responsive"}
+
+
  - Design and Development of Low-Cost Sensors for Monitoring Watersheds (2013 – present)
  - Data Analysis for Sediment Fingerprinting Watersheds (2012 – present)
  - Field Methods for Sediment Fingerprinting Watersheds (2012 – present)
