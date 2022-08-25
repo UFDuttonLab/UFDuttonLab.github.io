@@ -9,6 +9,7 @@ I am a broadly trained aquatic ecologist with an active international research p
 <p style="text-align:center;">
 <img src="img/622.JPG" height="600" class="center"></p>
 
+![Chris at the Mara River](img/622_small.JPG){:style="float: center;margin-right: 7px;:class="img-responsive"}
 
 
 ### Positions
