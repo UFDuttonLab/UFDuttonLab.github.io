@@ -7,8 +7,7 @@ subtitle:
 I am a broadly trained aquatic ecologist with an active international research program. My research seeks to describe and quantify how animals and their microbial symbionts (microbiomes) alter microbial community composition and ecosystem function within the environment, and how these dynamics are influenced by environmental variability. I seek to answer these questions using a range of approaches from field-based surveys to multi-scale experimental manipulations. In my research, I prioritize the use of open source software and technologies and emphasize the open sharing of data, techniques, and methods. I am a rapid adopter of new approaches and can quickly adapt to complex challenges. I am comfortable using a range of analytical methods from detailed environmental biogeochemistry through the characterization of microbial communities using the 16S rRNA gene.
 
 <p style="text-align:center;">
-<img src="img/622.JPG" height="600" class="center"></p>
-
+<img src="https://github.com/cldutton/cldutton.github.io/blob/b316557e47298664bd545c6cda7da97b85f429be/img/622.JPG" height="600" class="center"></p>
 
 
 
