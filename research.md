@@ -44,3 +44,7 @@ Through defecation and death, animals transfer a portion of their gut microbiome
 Dutton CL. Animal Inputs Drive Shifts in Biogeochemical Processes and Microbial Communities. PhD Dissertation. Department of Ecology and Evolutionary Biology. 2019. New Haven, CT: Yale University.
 
 Dutton, CL, A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. The meta-gut: community coalescence of animal gut and environmental microbiomes. Nature Scientific Reports. 2021 December. doi: 10.1038/s41598-021-02349-1
+
+Here is a Twitter thread detailing my dissertation work at Yale.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What in the world just happened? Why were all the fish dead? Here’s a short thread as to how our latest paper, the last of my PhD at <a href="https://twitter.com/yale_eeb?ref_src=twsrc%5Etfw">@yale_eeb</a>, came to be by starting at the beginning. <a href="https://t.co/xQSSM0C8W9">pic.twitter.com/xQSSM0C8W9</a></p>&mdash; Christopher L Dutton (@ChrisLDutton) <a href="https://twitter.com/ChrisLDutton/status/1467892263380529157?ref_src=twsrc%5Etfw">December 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
