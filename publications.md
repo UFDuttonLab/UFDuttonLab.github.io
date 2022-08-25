@@ -6,7 +6,7 @@ subtitle:
 
 ### 2022
 
-Klein, R., C.L. Dutton, A. K. Koeser. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. [Arboricultural Journal (2022).] (https://www.tandfonline.com/doi/abs/10.1080/03071375.2022.2030603)
+Klein, R., C.L. Dutton, A. K. Koeser. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. [Arboricultural Journal (2022).](https://www.tandfonline.com/doi/abs/10.1080/03071375.2022.2030603)
 
 ### 2021
 
