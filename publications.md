@@ -11,7 +11,7 @@ The meta-gut: community coalescence of animal gut and environmental microbiomes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](https://www.science.org/content/article/pooping-hippos-create-community-guts-african-ponds) and others.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Included in the top 100 papers in Microbiology at Nature Scientific Reports for 2021.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Included in the [top 100 papers in Microbiology at Nature Scientific Reports for 2021.](https://www.nature.com/collections/jejbehijhi)
 
 Kemp, A., C. H. Vane, A. Kim, C. L. Dutton, A. Subalusky, S. Kemp, A. Parnell. Fecal steroids as a potential tool for conservation paleobiology in East Africa. [Biodiversity and Conservation (2021)](https://link.springer.com/article/10.1007/s10531-021-02328-y) 
 
