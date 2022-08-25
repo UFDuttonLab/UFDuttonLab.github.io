@@ -30,6 +30,8 @@ I am a broadly trained aquatic ecologist with an active international research p
 2015 - Yale University EEB Departmental Retreat, first place graduate poster presentation award.  
 2012 - Yale University School of Forestry and Environmental Studies, second place graduate poster presentation award.  
 
-<img src="[img/install-steps.gif](https://photos.google.com/share/AF1QipM4MJSL64cBE7KO73QG-Tx4zVnTvWOmS5pLjLmxOQC12mGkXQwhP7nIOvojPK810w/photo/AF1QipMJJOxpVwR8FvCDaFEbXO-B5BFSbGxSDXOH8IXw?key=cl9UaDZKX0ZXdXJEQ0ZWTFNFVWc2MDZfVHhJU2NR)" alt="river" />
+![Mara River](img/PXL_20220701_101424622.MP.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}
+
+
 
 ...
