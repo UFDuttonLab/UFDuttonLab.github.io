@@ -6,6 +6,10 @@ subtitle:
 I have experience serving as an instructor in a variety of settings for a variety of course topics.
 
 Instructor at University of Florida
+
+![Class at UF](img/IMG_20200130_110114.jpg){:style="float: center;margin-right: 7px;:class="img-responsive"}
+
+
  - Data Collection with Open Technologies for Reproducible Research (Fall 2020) 
  - Research Skills with Arduino and R (Spring 2019)
 
