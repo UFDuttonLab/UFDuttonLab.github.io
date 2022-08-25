@@ -34,4 +34,4 @@ Through defecation and death, animals transfer a portion of their gut microbiome
 
 Dutton CL. Animal Inputs Drive Shifts in Biogeochemical Processes and Microbial Communities. PhD Dissertation. Department of Ecology and Evolutionary Biology. 2019. New Haven, CT: Yale University.
 
-Dutton, CL, A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. The meta-gut: Hippo inputs lead to community coalescence of animal and environmental microbiomes. BioRxiv 2021 - IN PRESS AT NATURE SCIENTIFIC REPORTS
+Dutton, CL, A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. The meta-gut: community coalescence of animal gut and environmental microbiomes. Nature Scientific Reports. 2021 December. doi: 10.1038/s41598-021-02349-1
