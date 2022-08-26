@@ -6,7 +6,7 @@ subtitle:
 
 My research seeks to describe and quantify how animals and their microbial symbionts (microbiomes) alter microbial community composition and ecosystem function within the environment, and how these dynamics are influenced by environmental variability. My research currently addresses three central questions. 1) How do animals alter environmental biogeochemistry? 2) How does environmental variability alter interactions between animals, microbial communities and ecosystem function? 3) What are the abiotic and biotic drivers that allow microbial taxa to move between hosts and the environment? I use a combination of observational experiments along environmental gradients, historical reconstructions, mesocosm experiments, and whole ecosystem manipulations to understand the role of animals and their microbiomes on ecosystem function.
 
-Since 2020, I've begun to expand upon these ideas and I'm currently working with an international team of geneticists and anthropologists to understand how maternal stress/trauma can alter the microbiome of the developing infant within a population of Congolese dyads. As part of this team, we are also working to decipher the transgenerational transmission of epigenetic signals from violence exposure in multigenerational Syrian families. Working between biogeochemistry, environmental ecosystem functioning, microbial communities, and now with human populations and their lived experience, I am becoming uniquely suited to help bridge the gap between environmental health and human health. A healthier environment ultimately leads healthier people.
+Since 2020, I've begun to expand upon these ideas and I'm currently working with an international team of geneticists and anthropologists to understand how maternal stress/trauma can alter the microbiome of the developing infant within a population of Congolese dyads. As part of this team, we are also working to decipher the transgenerational transmission of epigenetic signals from violence exposure in multigenerational Syrian families. Working between biogeochemistry, environmental ecosystem functioning, microbial communities, and now with human populations and their lived experience, I am becoming uniquely suited to help bridge the gap between environmental health and human health. A healthier environment ultimately leads to healthier people. Environmental conservation is not just for the plants and animals, it is also to improve human well-being
 
 ## Animal influences on biogeochemistry
 
@@ -47,6 +47,7 @@ Dutton CL. Animal Inputs Drive Shifts in Biogeochemical Processes and Microbial 
 
 Dutton, CL, A. L. Subalusky, A. Sanchez, S. Estrela, N. Lu, S. K. Hamilton, L. Njoroge, E. J. Rosi, and D. M. Post. The meta-gut: community coalescence of animal gut and environmental microbiomes. Nature Scientific Reports. 2021 December. doi: 10.1038/s41598-021-02349-1
 
-Here is an easy explainer on some of my research.
-
+## Here is an easy explainer on some of my research
+<p align=center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">What in the world just happened? Why were all the fish dead? Here’s a short thread as to how our latest paper, the last of my PhD at <a href="https://twitter.com/yale_eeb?ref_src=twsrc%5Etfw">@yale_eeb</a>, came to be by starting at the beginning. <a href="https://t.co/xQSSM0C8W9">pic.twitter.com/xQSSM0C8W9</a></p>&mdash; Christopher L Dutton (@ChrisLDutton) <a href="https://twitter.com/ChrisLDutton/status/1467892263380529157?ref_src=twsrc%5Etfw">December 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
