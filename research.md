@@ -4,7 +4,7 @@ title: Research
 subtitle: 
 ---
 
-[TL;DR? Jump to my easy explainer](#Easy-explainer-on-some-of-my-research)
+[TL;DR? Jump to my easy explainer](##Easy-explainer-on-some-of-my-research)
 
 My research seeks to describe and quantify how animals and their microbial symbionts (microbiomes) alter microbial community composition and ecosystem function within the environment, and how these dynamics are influenced by environmental variability. My research currently addresses three central questions. 1) How do animals alter environmental biogeochemistry? 2) How does environmental variability alter interactions between animals, microbial communities and ecosystem function? 3) What are the abiotic and biotic drivers that allow microbial taxa to move between hosts and the environment? I use a combination of observational experiments along environmental gradients, historical reconstructions, mesocosm experiments, and whole ecosystem manipulations to understand the role of animals and their microbiomes on ecosystem function.
 
