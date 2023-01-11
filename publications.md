@@ -10,7 +10,11 @@ CV available upon request
 
 ### 2022
 
-Klein, R., C.L. Dutton, A. K. Koeser. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. [Arboricultural Journal (2022).](https://www.tandfonline.com/doi/abs/10.1080/03071375.2022.2030603)
+Blaszczak, J. R., L. E. Koenig, F. H. Mejia, L. Gómez‐Gener, C. L. Dutton, A. M Carter, N. B Grimm, J. W. Harvey, A. M. Helton, M. J. Cohen. Extent, patterns, and drivers of hypoxia in the world's streams and rivers. [Limnology and Oceanography Letters (2002).](https://aslopubs.onlinelibrary.wiley.com/doi/full/10.1002/lol2.10297)
+
+Klein, R., C. L. Dutton, A. K. Koeser. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. [Arboricultural Journal (2022).](https://www.tandfonline.com/doi/abs/10.1080/03071375.2022.2030603)
+
+Kemp, A., C. H. Vane, A. Kim, C. L. Dutton, A. Subalusky, S. Kemp, A. Parnell. Fecal steroids as a potential tool for conservation paleobiology in East Africa. [Biodiversity and Conservation (2022)](https://link.springer.com/article/10.1007/s10531-021-02328-y) 
 
 ### 2021
 
@@ -20,8 +24,6 @@ The meta-gut: community coalescence of animal gut and environmental microbiomes.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered by [Science Magazine](https://www.science.org/content/article/pooping-hippos-create-community-guts-african-ponds) and others.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Included in the [top 100 papers in Microbiology at Nature Scientific Reports for 2021.](https://www.nature.com/collections/jejbehijhi)
-
-Kemp, A., C. H. Vane, A. Kim, C. L. Dutton, A. Subalusky, S. Kemp, A. Parnell. Fecal steroids as a potential tool for conservation paleobiology in East Africa. [Biodiversity and Conservation (2021)](https://link.springer.com/article/10.1007/s10531-021-02328-y) 
 
 Frauendorf, T., A. L. Subalusky, C. L. Dutton, S. K. Hamilton, F. O. Masese, E. J. Rosi, G. A. Singer, D. M. Post. 2021. Animal legacies lost and found in freshwater ecosystems. [Environmental Research Letters (2021)](https://iopscience.iop.org/article/10.1088/1748-9326/ac2cb0)
 
