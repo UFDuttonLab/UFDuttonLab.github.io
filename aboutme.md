@@ -14,6 +14,7 @@ I am a broadly trained aquatic ecologist with an active international research p
 ### Positions
 
 2023 to Present - Assistant Professor, Biology Department, University of Florida, Gainesville
+
 2020 to 2023 - Postdoctoral Associate, Biology and Anthropology Departments, University of Florida, Gainesville  
 2015 to 2019 - PhD Student, Department of Ecology and Evolutionary Biology, Yale University, New Haven, CT  
 2014 to 2015 - Research Technician, Cary Institute of Ecosystem Studies, Millbrook, NY  
