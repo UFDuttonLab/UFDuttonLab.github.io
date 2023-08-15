@@ -8,6 +8,12 @@ subtitle:
 
 CV available upon request
 
+### 2023
+
+Pringle, R.M., J.O. Abraham, T.M. Anderson, T.C. Coverdale, A.B. Davies, C.L. Dutton, A. Gaylard, J.R. Goheen, R.M. Holdo, M.C. Hutchinson, C.M. Kimuyu, R.A. Long, A.L. Subalusky, and M.P. Veldhuis. 2023. Impacts of large herbivores on terrestrial ecosystems. [Current Biology, 33:11.](https://www.sciencedirect.com/science/article/pii/S0960982223004724?via%3Dihub)
+
+Dutton, C.L., F. M. Maisha, E. Quinn, K. L. Morales, J. Moore, C. J. Mulligan. Maternal Psychosocial Stress Is Associated with Reduced Diversity in the Early Infant Gut Microbiome. [Microorganisms (Jan 2023).](https://www.mdpi.com/2076-2607/11/4/975)
+
 ### 2022
 
 Blaszczak, J. R., L. E. Koenig, F. H. Mejia, L. Gómez‐Gener, C. L. Dutton, A. M Carter, N. B Grimm, J. W. Harvey, A. M. Helton, M. J. Cohen. Extent, patterns, and drivers of hypoxia in the world's streams and rivers. [Limnology and Oceanography Letters (2002).](https://aslopubs.onlinelibrary.wiley.com/doi/full/10.1002/lol2.10297)
