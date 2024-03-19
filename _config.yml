@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Christopher L Dutton
+title: Dutton Lab @ the University of Florida
 
 # Short description of your site
 description: Ecology and Conservation
@@ -23,7 +23,8 @@ description: Ecology and Conservation
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  People: "aboutme"
+  The Lab: "lab"
   Research: "research"
   Teaching: "teaching"
   Publications: "publications"
