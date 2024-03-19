@@ -23,7 +23,7 @@ description: Ecology and Conservation
 
 # List of links in the navigation bar
 navbar-links:
-  People: "aboutme"
+  People: "people"
   The Lab: "lab"
   Research: "research"
   Teaching: "teaching"
