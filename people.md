@@ -19,13 +19,21 @@ Dawson Houghtaling
 ## Undergrads
 
 Alesha Wallen 
+
 Faith Dunlap
+
 Meg Morrow
+
 Serena Huberty
+
 Sierra Mulholland
+
 Katelyn Lancaster
+
 Cameron Teal
+
 Tavis Goldwire
+
 
 ![Mara River](img/PXL_20220701_101424622.MP.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}
 
