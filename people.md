@@ -10,7 +10,9 @@ subtitle:
 1999 - Bachelor's degree in saxophone performance / music / criminal justice from the presigious School of Music at Indiana University (Bloomington).  
 
 ## Postdoctoral Associates
-TBD
+Dr. Audrey Goeckner
+
+Dr. Emily (Lee) Nonnamaker
 
 ## PhD Students
 
