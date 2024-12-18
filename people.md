@@ -12,11 +12,9 @@ subtitle:
 ## Postdoctoral Associates
 Dr. Audrey Goeckner  
 
-![Audrey](img/audrey.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}  
+![Audrey](img/audrey.jpg)
 
-<br>
-
-
+<br>  
 Audrey joined the Dutton lab as a postdoctoral research associate in August 2024. She received her B.S. in environmental science from the University of South Florida in 2017 and her M.S in soil and water sciences from the University of Florida in 2020 working on carbon burial and greenhouse gas fluxes in stormwater ponds. Audrey received her PhD in soil, water, and ecosystem sciences in 2024 from the University of Florida working on the biogeochemistry and microbial ecology of stormwater ponds and their effects on streams that receive pond discharge. In the Dutton lab, Audrey focuses on environmental genomics, contributing to a variety of projects that explore the structure and function of microbial communities at terrestrial-aquatic interfaces, along river continua, and within lake ecosystems. As a freshwater ecosystem and microbial ecologist, Audrey wants to explore what microbial metabolic functions are associated to ecosystem scale fluxes and pools of carbon and nitrogen.
 
 Dr. Emily (Lee) Nonnamaker
