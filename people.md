@@ -10,9 +10,9 @@ subtitle:
 1999 - Bachelor's degree in saxophone performance / music / criminal justice from the presigious School of Music at Indiana University (Bloomington).  
 
 ## Postdoctoral Associates
-Dr. Audrey Goeckner
+Dr. Audrey Goeckner  
 
-![Audrey](img/audrey.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}
+![Audrey](img/audrey.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}  
 
 
 
