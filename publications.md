@@ -8,6 +8,14 @@ subtitle:
 
 CV available upon request
 
+### 2025
+Mulligan, Connie J., Edward B. Quinn, Dima Hamadmad, Christopher L. Dutton, Lisa Nevell, Alexandra M. Binder, Catherine Panter-Brick, and Rana Dajani. 2025. Epigenetic Signatures of Intergenerational Exposure to Violence in Three Generations of Syrian Refugees. 2025. [Scientific Reports.](https://www.nature.com/articles/s41598-025-89818-z)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered in [Science Magazine] (https://www.science.org/content/article/children-war-refugees-may-inherit-their-parents-trauma)
+
+Benjamin, Joshua, Megan Gomes, Christopher Dutton, Jonas Schoelynch, Amanda Subalusky. Land-Water Connections from River Source to Mouth in Afrotropical Rivers. 2025
+
+Twining, Cornelia Wingfield, Andreu Blanco, Christopher Dutton, Martin Kainz, Eric Harvey, Joanna Kraus, Dominik Martin-Creuzburg, et al. 2025. Integrating the bright and dark sides of aquatic resource subsidies—a synthesis. [Ecology Letters](https://onlinelibrary.wiley.com/doi/epdf/10.1111/ele.70109)
+
 ### 2023
 
 Pringle, R.M., J.O. Abraham, T.M. Anderson, T.C. Coverdale, A.B. Davies, C.L. Dutton, A. Gaylard, J.R. Goheen, R.M. Holdo, M.C. Hutchinson, C.M. Kimuyu, R.A. Long, A.L. Subalusky, and M.P. Veldhuis. 2023. Impacts of large herbivores on terrestrial ecosystems. [Current Biology, 33:11.](https://www.sciencedirect.com/science/article/pii/S0960982223004724?via%3Dihub)
