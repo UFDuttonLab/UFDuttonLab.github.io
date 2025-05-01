@@ -11,7 +11,7 @@ CV available upon request
 ### 2025
 Mulligan, Connie J., Edward B. Quinn, Dima Hamadmad, Christopher L. Dutton, Lisa Nevell, Alexandra M. Binder, Catherine Panter-Brick, and Rana Dajani. 2025. Epigenetic Signatures of Intergenerational Exposure to Violence in Three Generations of Syrian Refugees. 2025. [Scientific Reports.](https://www.nature.com/articles/s41598-025-89818-z)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered in [Science Magazine] (https://www.science.org/content/article/children-war-refugees-may-inherit-their-parents-trauma)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered in [Science Magazine](https://www.science.org/content/article/children-war-refugees-may-inherit-their-parents-trauma)
 
 Benjamin, Joshua, Megan Gomes, Christopher Dutton, Jonas Schoelynch, Amanda Subalusky. Land-Water Connections from River Source to Mouth in Afrotropical Rivers. 2025
 
