@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gainesville Scientific Method Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: blur(4px) brightness(0.7);
+            z-index: -1;
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a56db; /* A nice blue */
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .story-text {
+            font-size: 1.1rem;
+            color: #374151; /* Gray-700 */
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .choice-button, .gemini-button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0.5rem;
+            background-color: #f3f4f6; /* Gray-100 */
+            color: #1f2937; /* Gray-800 */
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #d1d5db; /* Gray-300 */
+        }
+        .choice-button:hover, .gemini-button:hover {
+            background-color: #e5e7eb; /* Gray-200 */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .gemini-button {
+            background-color: #e0e7ff;
+            border-color: #c7d2fe;
+            color: #3730a3;
+            text-align: center;
+        }
+        .gemini-button:hover {
+             background-color: #c7d2fe;
+        }
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .modal-body {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+        .modal-close-btn {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            background-color: #4f46e5;
+            color: white;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .modal-close-btn:hover {
+            background-color: #4338ca;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <div class="background-container"></div>
+
+    <div id="game" class="game-container">
+        <div class="content-box">
+            <h2 id="step-title" class="step-title"></h2>
+            <p id="story-text" class="story-text"></p>
+            <div id="choices" class="choices-container"></div>
+            <div id="gemini-features" class="mt-4"></div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="gemini-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-title" class="modal-title"></h3>
+            <div id="modal-body" class="modal-body"></div>
+            <button id="modal-close" class="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const gameContainer = document.getElementById('game');
+        const stepTitleElement = document.getElementById('step-title');
+        const storyTextElement = document.getElementById('story-text');
+        const choicesElement = document.getElementById('choices');
+        const geminiFeaturesContainer = document.getElementById('gemini-features');
+
+        // Modal elements
+        const modal = document.getElementById('gemini-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalCloseBtn = document.getElementById('modal-close');
+
+        modalCloseBtn.onclick = () => modal.classList.remove('visible');
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('visible');
+            }
+        };
+
+        // --- Gemini API Call Function ---
+        async function callGemini(prompt, systemInstruction) {
+            modalTitle.textContent = "Thinking...";
+            modalBody.innerHTML = '<div class="flex justify-center items-center"><div class="loader"></div></div>';
+            modal.classList.add('visible');
+
+            const apiKey = ""; // Will be provided by the environment
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: {
+                    parts: [{ text: systemInstruction }]
+                },
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    return text;
+                } else {
+                    return "Sorry, I couldn't generate a response. Please try again.";
+                }
+            } catch (error) {
+                console.error("Gemini API call error:", error);
+                return `An error occurred: ${error.message}`;
+            }
+        }
+
+        // --- Feature 1: AI Field Notes ---
+        async function getSweetwaterAiFieldNotes() {
+            const systemInstruction = "You are an expert field ecologist conducting a preliminary survey at Sweetwater Wetlands. Your task is to synthesize the following disparate field observations into a single, insightful field note entry. Connect the observations, identify the most pressing ecological indicators, and suggest which investigative path seems most critical based on the evidence. Frame your notes as if you are speaking to a student, guiding their thinking process. Use markdown for formatting.";
+            
+            const observations = [
+                story.sweetwater_observe_birds.text,
+                story.sweetwater_observe_snails.text,
+                story.sweetwater_observe_water.text,
+                story.sweetwater_observe_nests.text
+            ].join('\n- ');
+
+            const prompt = `Here are my initial observations from Sweetwater Wetlands:\n- ${observations}`;
+
+            const responseText = await callGemini(prompt, systemInstruction);
+            modalTitle.textContent = "✨ AI Field Notes: Sweetwater";
+            modalBody.innerHTML = responseText.replace(/\n/g, '<br>'); // Basic markdown rendering
+        }
+        
+        async function getNatlAiFieldNotes() {
+            const systemInstruction = "You are an expert field ecologist conducting a preliminary survey at NATL. Your task is to synthesize the following disparate field observations into a single, insightful field note entry. Connect the observations, identify the most pressing ecological indicators, and suggest which investigative path seems most critical based on the evidence. Frame your notes as if you are speaking to a student, guiding their thinking process. Use markdown for formatting.";
+            
+            const observations = [
+                story.natl_observe_green_anoles.text,
+                story.natl_observe_cuban_anoles.text,
+                story.natl_observe_insects.text,
+                story.natl_observe_habitat.text
+            ].join('\n- ');
+
+            const prompt = `Here are my initial observations from NATL:\n- ${observations}`;
+
+            const responseText = await callGemini(prompt, systemInstruction);
+            modalTitle.textContent = "✨ AI Field Notes: NATL";
+            modalBody.innerHTML = responseText.replace(/\n/g, '<br>'); // Basic markdown rendering
+        }
+
+
+        // --- Feature 2: Brainstorm Solutions ---
+        async function brainstormSolutions(conclusionText) {
+            const systemInstruction = "You are a conservation biologist and restoration ecologist. Based on the following conclusion, brainstorm a multi-faceted action plan. Provide a list of solutions categorized into 'Short-Term Interventions', 'Long-Term Management', and 'Research & Monitoring'. For each solution, provide a brief, actionable description. Format your response using markdown headings for each category.";
+            
+            const prompt = `The investigation concluded with the following: "${conclusionText}". Now, create a management plan.`;
+
+            const responseText = await callGemini(prompt, systemInstruction);
+            modalTitle.textContent = "✨ Solution Brainstorm";
+            modalBody.innerHTML = responseText.replace(/\n/g, '<br>'); // Basic markdown rendering
+        }
+
+
+        const story = {
+            start: {
+                step: "Select a Field Site",
+                text: "Welcome, ecologist. Two local sites are facing ecological mysteries. Your skills are needed to investigate using the scientific method. Where will you begin?",
+                choices: [ 
+                    { text: "Investigate the Sweetwater Wetlands.", next: "sweetwater_start" },
+                    { text: "Investigate the Natural Area Teaching Lab (NATL).", next: "natl_start" }
+                ]
+            },
+
+            // =================================================================
+            // == SWEETWATER WETLANDS PATHWAY
+            // =================================================================
+            sweetwater_start: {
+                step: "The Mystery at Sweetwater",
+                text: "You've arrived at Sweetwater Wetlands in Gainesville, FL. The park is a critical habitat for the endangered Snail Kite, a raptor that feeds exclusively on apple snails. This year, the Kites have returned, but their nesting attempts are failing. The nests are abandoned, and the population is at risk. Your job is to find out why.",
+                choices: [ { text: "Begin the investigation.", next: "sweetwater_observation" } ]
+            },
+            sweetwater_observation: {
+                step: "Step 1: Observation",
+                text: "You stand on the boardwalk, overlooking the vast marsh. The first step is to make careful observations. What is your priority?",
+                choices: [
+                    { text: "Use binoculars to observe the Snail Kites' behavior.", next: "sweetwater_observe_birds" },
+                    { text: "Examine the apple snail population, the Kites' only food source.", next: "sweetwater_observe_snails" },
+                    { text: "Analyze the water in the wetlands.", next: "sweetwater_observe_water" },
+                    { text: "Inspect the abandoned nests for clues.", next: "sweetwater_observe_nests" }
+                ],
+                geminiFeature: {
+                    buttonText: "✨ Get AI Field Notes",
+                    action: getSweetwaterAiFieldNotes
+                }
+            },
+            sweetwater_observe_birds: { step: "Observation", text: "The adult Snail Kites appear underweight. They spend a lot of time hunting, but you rarely see them successfully catch a snail. They seem stressed and agitated.", choices: [{ text: "These observations are noted. Time to form a question.", next: "sweetwater_question" }] },
+            sweetwater_observe_snails: { step: "Observation", text: "You wade into the shallows. You find far fewer apple snails than in previous years. The ones you do find are smaller than average. Crucially, you see almost no bright pink clusters of apple snail eggs on the emergent vegetation.", choices: [{ text: "These observations are noted. Time to form a question.", next: "sweetwater_question" }] },
+            sweetwater_observe_water: { step: "Observation", text: "The water seems clearer than usual, with less floating vegetation. You also notice that large sections of the marsh are covered in a dense, unfamiliar aquatic plant.", choices: [{ text: "These observations are noted. Time to form a question.", next: "sweetwater_question" }] },
+            sweetwater_observe_nests: { step: "Observation", text: "The nests are well-constructed in suitable locations. There are no signs of predator attacks (like raccoon tracks or broken shells). The nests are simply empty, as if the parents gave up.", choices: [{ text: "These observations are noted. Time to form a question.", next: "sweetwater_question" }] },
+            
+            sweetwater_question: {
+                step: "Step 2: Ask a Question",
+                text: "Your initial observations have given you clues. Now, you must formulate a specific, testable question to guide your investigation.",
+                choices: [
+                    { text: "What is causing the apple snail population to decline?", next: "sweetwater_hypothesis_snails" },
+                    { text: "Is a new disease weakening the Snail Kites?", next: "sweetwater_hypothesis_disease" },
+                    { text: "Has a change in water chemistry harmed the snails?", next: "sweetwater_hypothesis_chemistry" },
+                    { text: "Are human disturbances stressing the Kites into abandoning their nests?", next: "sweetwater_hypothesis_human" }
+                ]
+            },
+            
+            // --- Sweetwater Path 1: Snails (Correct Path) ---
+            sweetwater_hypothesis_snails: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You've focused on the apple snails. A good hypothesis is a specific, testable statement proposing an explanation. Which of these is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: An invasive aquatic plant has replaced native vegetation, which apple snails require to lay their eggs.", next: "sweetwater_experiment_invasive_plant_options" },
+                    { text: "Hypothesis: The environment has become generally bad for the snails.", next: "feedback_hypothesis_broad" },
+                    { text: "Hypothesis: If we fix the problem, the snails will come back.", next: "feedback_hypothesis_prediction" },
+                    { text: "Hypothesis: The snails are disappearing due to some unknown, unlucky reason.", next: "feedback_hypothesis_untestable" }
+                ]
+            },
+            feedback_hypothesis_broad: { step: "Feedback", text: "This statement is too broad. A good hypothesis must be specific and testable. What specific part of the environment is 'bad' and how is it affecting the snails? Try to be more precise.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_snails" }] },
+            feedback_hypothesis_prediction: { step: "Feedback", text: "This is a prediction, not a hypothesis. A hypothesis explains *why* something is happening. The prediction is what you expect to see if your explanation is correct. Formulate the explanation first.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_snails" }] },
+            feedback_hypothesis_untestable: { step: "Feedback", text: "This hypothesis isn't scientific because it's not testable. Science relies on measurable and observable phenomena. 'Unlucky' can't be measured.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_snails" }] },
+            sweetwater_experiment_invasive_plant_options: {
+                step: "Step 4: Design an Experiment",
+                text: "Excellent. That's a specific and testable hypothesis. Now, how will you design an experiment to test it?",
+                choices: [
+                    { text: "Conduct a systematic survey comparing snail egg density on native vs. invasive plants in multiple wetland zones.", next: "sweetwater_experiment_invasive_plant" },
+                    { text: "Just count all the snail eggs you can find on the invasive plant.", next: "experiment_flawed_no_control" },
+                    { text: "Compare the number of snails in Sweetwater to a different, healthy wetland.", next: "experiment_flawed_confounding" },
+                    { text: "Measure the chemical composition of the invasive plant's leaves.", next: "experiment_flawed_wrong_measurement" }
+                ]
+            },
+            experiment_flawed_no_control: { step: "Step 4: Experiment", text: "You spend a day searching and find 5 snail egg clusters on the invasive hyacinth.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_no_control" }] },
+            experiment_flawed_confounding: { step: "Step 4: Experiment", text: "You visit a nearby healthy marsh and count 500 snails in a sample area. Back at Sweetwater, you only find 50 in a similar area.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_confounding" }] },
+            experiment_flawed_wrong_measurement: { step: "Step 4: Experiment", text: "Lab tests show the invasive hyacinth has high levels of cellulose, but no unusual toxins.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_wrong_measurement" }] },
+            sweetwater_experiment_invasive_plant: { step: "Step 4: Experiment", text: "You conduct a thorough vegetation survey, mapping native plants (like spatterdock) vs. the invasive species. At each survey point, you quantify the number of snail egg clusters.", choices: [{ text: "Analyze the survey results.", next: "sweetwater_analysis_invasive_plant_found" }] },
+            sweetwater_analysis_invasive_plant_found: { step: "Step 5: Analyze Data", text: "Your survey reveals a clear pattern. You found an average of 15.2 egg clusters per square meter on native spatterdock, but only 0.1 clusters on the invasive hyacinth. The invasive plant has displaced over 80% of the native vegetation.", choices: [{ text: "This is a strong lead. Draw your conclusion.", next: "sweetwater_conclusion_supported" }] },
+            
+            // --- Sweetwater Path 2: Disease ---
+            sweetwater_hypothesis_disease: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You suspect an illness is directly affecting the Snail Kites. Which of these is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: A specific pathogen, like West Nile Virus, is causing neurological symptoms that impair the Kites' hunting ability.", next: "sweetwater_experiment_disease_options" },
+                    { text: "Hypothesis: Why are the birds sick?", next: "feedback_hypothesis_question_sw" },
+                    { text: "Hypothesis: The birds are just not feeling well.", next: "feedback_hypothesis_broad_disease_sw" },
+                    { text: "Hypothesis: The snails must be poisonous now.", next: "feedback_hypothesis_untestable_disease_sw" }
+                ]
+            },
+            feedback_hypothesis_question_sw: { step: "Feedback", text: "This is a great research question, but a hypothesis is a proposed answer to that question. It should be a statement, not another question.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_disease" }] },
+            feedback_hypothesis_broad_disease_sw: { step: "Feedback", text: "This statement is too broad and subjective. A good hypothesis must be specific and testable. 'Not feeling well' isn't a measurable scientific term. What specific symptoms or disease are you proposing?", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_disease" }] },
+            feedback_hypothesis_untestable_disease_sw: { step: "Feedback", text: "This is too speculative. While bioaccumulation is real, 'poisonous' is vague. A better hypothesis would focus on testing for specific toxins in snail tissues.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_disease" }] },
+            sweetwater_experiment_disease_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A solid hypothesis. Now, how would you test for this specific pathogen?",
+                choices: [
+                     { text: "Safely capture a sample of birds and take blood tests for specific pathogens like West Nile Virus.", next: "sweetwater_experiment_disease" },
+                     { text: "Observe the birds from afar to see if they look sick.", next: "experiment_flawed_anecdotal" },
+                     { text: "Check the water for viruses.", next: "experiment_flawed_wrong_measurement_disease" },
+                     { text: "Collect snail tissue to test for avian diseases.", next: "experiment_flawed_wrong_subject" }
+                ]
+            },
+            experiment_flawed_wrong_subject: { step: "Step 4: Experiment", text: "You test snail tissues for bird diseases. Unsurprisingly, you find no trace of avian pathogens in the snails.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_wrong_subject" }] },
+            sweetwater_experiment_disease: { step: "Step 4: Experiment", text: "Under a special permit, your team safely captures two adult Snail Kites. You take blood samples and cloacal swabs to test for West Nile Virus and other common avian pathogens.", choices: [{ text: "Analyze the lab results.", next: "sweetwater_analysis_disease_negative" }] },
+            sweetwater_analysis_disease_negative: { step: "Step 5: Analyze Data", text: "The lab results for the Snail Kites are negative for all major pathogens. Their bloodwork does indicate signs of nutritional stress, but not an active disease.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+            
+            // --- Sweetwater Path 3: Chemistry ---
+            sweetwater_hypothesis_chemistry: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You believe a chemical change in the water is the root cause. Which is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: Increased salinity from agricultural runoff is making the water unsuitable for the freshwater apple snails.", next: "sweetwater_experiment_chemistry_options" },
+                    { text: "Hypothesis: The water is polluted.", next: "feedback_hypothesis_vague_chem_sw" },
+                    { text: "Hypothesis: If the water chemistry is bad, the snails will die.", next: "feedback_hypothesis_prediction_chem_sw" },
+                    { text: "Hypothesis: The water just doesn't feel right anymore.", next: "feedback_hypothesis_untestable_chem_sw" }
+                ]
+            },
+            feedback_hypothesis_vague_chem_sw: { step: "Feedback", text: "This is too vague. 'Polluted' could mean anything. A scientific hypothesis must propose a specific, measurable change. What specific pollutant or chemical property do you suspect has changed?", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_chemistry" }] },
+            feedback_hypothesis_prediction_chem_sw: { step: "Feedback", text: "This is a prediction, not an explanation. Propose *why* the chemistry might have changed and how it affects the snails.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_chemistry" }] },
+            feedback_hypothesis_untestable_chem_sw: { step: "Feedback", text: "This is not a scientific statement. 'Feels' is subjective and cannot be measured for a hypothesis.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_chemistry" }] },
+            sweetwater_experiment_chemistry_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A specific, testable hypothesis. How will you test for salinity?",
+                choices: [
+                    { text: "Use a multiparameter water quality sonde to systematically measure salinity at various depths and locations, comparing results to historical data.", next: "sweetwater_experiment_chemistry" },
+                    { text: "Taste the water to see if it's salty.", next: "experiment_flawed_taste" },
+                    { text: "Measure the salinity at one spot near a water inflow pipe.", next: "experiment_flawed_single_point" },
+                    { text: "Test the water for heavy metals like lead and mercury.", next: "experiment_flawed_wrong_measurement_chem" }
+                ]
+            },
+            experiment_flawed_taste: { step: "Step 4: Experiment", text: "You taste the water. It doesn't taste salty. This is not only unscientific, but also dangerous, as you don't know what contaminants might be present.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_taste" }] },
+            experiment_flawed_single_point: { step: "Step 4: Experiment", text: "You test the water at one inflow pipe and find the salinity is normal.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_single_point" }] },
+            experiment_flawed_wrong_measurement_chem: { step: "Step 4: Experiment", text: "You test for heavy metals and find none. While good news, this doesn't test your hypothesis about salinity.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_wrong_measurement" }] },
+            sweetwater_experiment_chemistry: { step: "Step 4: Experiment", text: "You take 30 samples from across the wetlands. The average salinity is 0.4 parts per thousand (ppt), well within the healthy range for freshwater ecosystems and consistent with park records.", choices: [{ text: "Analyze the data.", next: "sweetwater_analysis_chemistry_normal" }] },
+            sweetwater_analysis_chemistry_normal: { step: "Step 5: Analyze Data", text: "The water quality is excellent. Salinity is low, and dissolved oxygen is high. There are no chemical red flags that would explain the decline of the snails.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+
+            // --- Sweetwater Path 4: Human Disturbance ---
+            sweetwater_hypothesis_human: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You think human activity is the problem. Which is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: High-decibel noise from nearby construction is causing chronic stress in the nesting Kites, leading to nest abandonment.", next: "sweetwater_experiment_human_options" },
+                    { text: "Hypothesis: The birds are failing because more people are visiting the park.", next: "feedback_hypothesis_correlation_sw" },
+                    { text: "Hypothesis: Human activity is bothering the birds.", next: "feedback_hypothesis_vague_human_sw" },
+                    { text: "Hypothesis: The birds are scared of the new buildings.", next: "feedback_hypothesis_untestable_human_sw" }
+                ]
+            },
+            feedback_hypothesis_correlation_sw: { step: "Feedback", text: "This statement assumes a cause-and-effect relationship without proposing a specific mechanism. It's a classic case of 'correlation does not equal causation'. A stronger hypothesis would propose *how* the visitors are causing the problem.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_human" }] },
+            feedback_hypothesis_vague_human_sw: { step: "Feedback", text: "This is too vague. What specific 'activity'? How does 'bothering' manifest? A strong hypothesis needs measurable variables.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_human" }] },
+            feedback_hypothesis_untestable_human_sw: { step: "Feedback", text: "This is not testable. You cannot measure a bird's fear of a building. Focus on measurable stressors, like noise, light, or physical proximity.", choices: [{ text: "Try Again", next: "sweetwater_hypothesis_human" }] },
+            sweetwater_experiment_human_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A specific and testable hypothesis. How will you measure the noise?",
+                choices: [
+                    { text: "Install sound-level meters near active and abandoned nest sites to record noise levels over several weeks, comparing the data to known stress thresholds and construction schedules.", next: "sweetwater_experiment_human" },
+                    { text: "Go stand by the nests and listen to see if it seems loud.", next: "experiment_flawed_subjective_noise" },
+                    { text: "Ask park visitors if they think it's been noisy lately.", next: "experiment_flawed_anecdotal_human" },
+                    { text: "Measure the air quality near the construction site.", next: "experiment_flawed_wrong_measurement_human" }
+                ]
+            },
+            experiment_flawed_subjective_noise: { step: "Step 4: Experiment", text: "You stand near a nest. A truck goes by and it seems loud to you. But another time it's quiet. This is subjective and not systematically collected data.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_anecdotal" }] },
+            experiment_flawed_anecdotal_human: { step: "Step 4: Experiment", text: "You ask a few visitors, and one says they 'thought they saw something big' last week. This is anecdotal and unreliable.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_anecdotal" }] },
+            experiment_flawed_wrong_measurement_human: { step: "Step 4: Experiment", text: "The air quality is fine, but this doesn't test your hypothesis about noise pollution.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_wrong_measurement" }] },
+            sweetwater_experiment_human: { step: "Step 4: Experiment", text: "You install sound-level meters. While construction noise causes temporary spikes, the average decibel level is within a range the Kites have tolerated for years according to past studies. You also see nest failures on days with no construction.", choices: [{ text: "Analyze the acoustic data.", next: "sweetwater_analysis_human_negative" }] },
+            sweetwater_analysis_human_negative: { step: "Step 5: Analyze Data", text: "The noise levels don't consistently correlate with nest abandonment. This is unlikely to be the primary cause for the universal nesting failure.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+
+
+            // =================================================================
+            // == NATL PATHWAY
+            // =================================================================
+            natl_start: {
+                step: "The Mystery at NATL",
+                text: "You are now at the Natural Area Teaching Lab (NATL) on the UF campus. This urban forest remnant is a hotspot of biodiversity, but there are signs of trouble. The native Green Anole lizard, once common, is now rarely seen. Meanwhile, the invasive Cuban Anole is everywhere. Is there a connection?",
+                choices: [ { text: "Begin the investigation.", next: "natl_observation" } ]
+            },
+            natl_observation: {
+                step: "Step 1: Observation",
+                text: "You walk the trails of NATL. The air is thick with the sound of insects, but the undergrowth seems strangely quiet. What do you focus on?",
+                choices: [
+                    { text: "Search for native Green Anoles.", next: "natl_observe_green_anoles" },
+                    { text: "Observe the invasive Cuban Anoles.", next: "natl_observe_cuban_anoles" },
+                    { text: "Survey the insect populations on leaves and on the ground.", next: "natl_observe_insects" },
+                    { text: "Examine the habitat structure and leaf litter.", next: "natl_observe_habitat" }
+                ],
+                geminiFeature: {
+                    buttonText: "✨ Get AI Field Notes",
+                    action: getNatlAiFieldNotes
+                }
+            },
+            natl_observe_green_anoles: { step: "Observation", text: "After an hour of searching, you spot only two Green Anoles, both high up in the tree canopy. They seem wary and restricted to higher perches.", choices: [{ text: "These observations are noted. Time to form a question.", next: "natl_question" }] },
+            natl_observe_cuban_anoles: { step: "Observation", text: "You easily count over 50 Cuban Anoles. They are bold and occupy a wide range of habitats, from the ground and leaf litter to the lower tree trunks.", choices: [{ text: "These observations are noted. Time to form a question.", next: "natl_question" }] },
+            natl_observe_insects: { step: "Observation", text: "Using a sweep net, you find abundant flying and leaf-dwelling insects. However, when you sift through the leaf litter, ground-dwelling insects like crickets and beetles seem scarce.", choices: [{ text: "These observations are noted. Time to form a question.", next: "natl_question" }] },
+            natl_observe_habitat: { step: "Observation", text: "NATL has a healthy mix of sun and shade, with deep leaf litter on the forest floor. This provides ample cover and foraging ground, especially for terrestrial species.", choices: [{ text: "These observations are noted. Time to form a question.", next: "natl_question" }] },
+
+            natl_question: {
+                step: "Step 2: Ask a Question",
+                text: "Your observations suggest a shift in the anole community. What is the most direct, testable question to pursue?",
+                choices: [
+                    { text: "Are Cuban Anoles out-competing Green Anoles for resources?", next: "natl_hypothesis_competition" },
+                    { text: "Are Cuban Anoles directly preying on Green Anoles?", next: "natl_hypothesis_predation" },
+                    { text: "Has a change in climate favored the Cuban Anoles?", next: "natl_hypothesis_climate" },
+                    { text: "Is a disease impacting only the Green Anoles?", next: "natl_hypothesis_disease" }
+                ]
+            },
+            
+            // --- NATL Path 1: Competition (Correct Path) ---
+            natl_hypothesis_competition: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You're focusing on competition. A strong hypothesis must be a specific, testable statement about this interaction. Which is the best one?",
+                choices: [
+                    { text: "Hypothesis: Cuban Anoles and Green Anoles have a high degree of dietary overlap, and the more aggressive Cuban Anoles are depleting the shared food source on the ground.", next: "natl_experiment_competition_options" },
+                    { text: "Hypothesis: The Cuban Anoles are just better at finding food.", next: "feedback_hypothesis_untestable_natl" },
+                    { text: "Hypothesis: There isn't enough food for all the lizards.", next: "feedback_hypothesis_broad_natl" },
+                    { text: "Hypothesis: If we remove the Cuban Anoles, the Green Anoles will recover.", next: "feedback_hypothesis_prediction_natl" }
+                ]
+            },
+            feedback_hypothesis_untestable_natl: { step: "Feedback", text: "'Better' is not a scientific or measurable term. A good hypothesis must focus on quantifiable data, like diet composition or resource availability.", choices: [{ text: "Try Again", next: "natl_hypothesis_competition" }] },
+            feedback_hypothesis_broad_natl: { step: "Feedback", text: "This is too broad. A strong hypothesis needs to be more specific. What food source? How is it being depleted? Who is depleting it?", choices: [{ text: "Try Again", next: "natl_hypothesis_competition" }] },
+            feedback_hypothesis_prediction_natl: { step: "Feedback", text: "This is a prediction of an experiment's outcome, not an explanation of the underlying ecological mechanism. First, propose *why* the Green Anoles are declining.", choices: [{ text: "Try Again", next: "natl_hypothesis_competition" }] },
+            natl_experiment_competition_options: {
+                step: "Step 4: Design an Experiment",
+                text: "An excellent, testable hypothesis. How will you investigate this dietary overlap and resource depletion?",
+                choices: [
+                    { text: "Perform a comparative gut content analysis of both anole species and conduct parallel insect surveys in their respective habitats (ground vs. canopy).", next: "natl_experiment_competition" },
+                    { text: "Watch a few of each lizard for an hour and write down what they eat.", next: "experiment_flawed_anecdotal" },
+                    { text: "Only analyze the gut contents of Green Anoles to see if they seem hungry.", next: "experiment_flawed_no_control_natl" },
+                    { text: "Set up a feeding station with mealworms to see which lizard gets there first.", next: "experiment_flawed_artificial_natl" }
+                ]
+            },
+            experiment_flawed_no_control_natl: { step: "Step 4: Experiment", text: "You analyze the gut contents of two Green Anoles. They contain mostly spiders and a few small beetles.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_no_control" }] },
+            experiment_flawed_artificial_natl: { step: "Step 4: Experiment", text: "You place a dish of mealworms on a tree trunk. Within minutes, several large Cuban Anoles have devoured them all before any Green Anoles appear.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_artificial" }] },
+            natl_experiment_competition: { step: "Step 4: Experiment", text: "You collect samples from both species. You also conduct insect surveys using beat sheets in the canopy and pitfall traps on the ground.", choices: [{ text: "Analyze the lab and field results.", next: "natl_analysis_competition" }] },
+            natl_analysis_competition: { step: "Step 5: Analyze Data", text: "The results are striking. Gut content analysis shows a 90% overlap in diet for ground-dwelling insects (crickets, beetles). Your insect survey confirms that these insects are abundant in the canopy but scarce on the ground.", choices: [{ text: "This is strong evidence. Draw your conclusion.", next: "natl_conclusion_supported" }] },
+
+            // --- NATL Path 2: Predation ---
+            natl_hypothesis_predation: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You suspect predation is the cause. Which is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: Adult male Cuban Anoles, which are larger, are directly preying on the smaller juvenile Green Anoles, reducing recruitment into the adult population.", next: "natl_experiment_predation_options" },
+                    { text: "Hypothesis: The Cuban Anoles are eating the Green Anoles.", next: "feedback_hypothesis_vague_pred_natl" },
+                    { text: "Hypothesis: The Cuban Anoles are scaring the Green Anoles to death.", next: "feedback_hypothesis_untestable_pred_natl" },
+                    { text: "Hypothesis: If Cuban Anoles are predators, we will see fewer Green Anoles.", next: "feedback_hypothesis_prediction_natl_pred" }
+                ]
+            },
+            feedback_hypothesis_vague_pred_natl: { step: "Feedback", text: "This is too vague. Are adults eating adults? Adults eating juveniles? Be specific to propose a clear, testable mechanism.", choices: [{ text: "Try Again", next: "natl_hypothesis_predation" }] },
+            feedback_hypothesis_untestable_pred_natl: { step: "Feedback", text: "This is not testable. 'Scaring to death' is not a scientific mechanism you can measure. Focus on direct, physical interactions.", choices: [{ text: "Try Again", next: "natl_hypothesis_predation" }] },
+            feedback_hypothesis_prediction_natl_pred: { step: "Feedback", text: "This is a prediction, not a hypothesis. Propose the actual mechanism of predation first.", choices: [{ text: "Try Again", next: "natl_hypothesis_predation" }] },
+            natl_experiment_predation_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A specific hypothesis. How will you test if Cuban Anoles are eating young Green Anoles?",
+                choices: [
+                    { text: "Perform gut content analysis on a sample of large, adult male Cuban Anoles specifically looking for anole remains (scales, bones).", next: "natl_experiment_predation" },
+                    { text: "Watch the lizards and wait to see one eat another.", next: "experiment_flawed_anecdotal" },
+                    { text: "Analyze the gut contents of Green Anoles to see what they ate.", next: "experiment_flawed_wrong_subject" },
+                    { text: "Put one of each in a small tank together and see what happens.", next: "experiment_flawed_artificial_natl" }
+                ]
+            },
+            natl_experiment_predation: { step: "Step 4: Experiment", text: "After analyzing the gut contents of 20 large male Cuban Anoles, you find insect remains, but no scales, bones, or other evidence of lizard predation.", choices: [{ text: "Analyze the lab results.", next: "natl_analysis_predation_negative" }] },
+            natl_analysis_predation_negative: { step: "Step 5: Analyze Data", text: "Despite a thorough search, you found no evidence of Green Anoles in the diet of Cuban Anoles. While this doesn't mean it never happens, it is clearly not a primary factor.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+
+            // --- NATL Path 3: Climate ---
+            natl_hypothesis_climate: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You think climate is the driver. Which is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: Recent microclimate changes, specifically warmer and drier conditions on the forest floor, have created an environment that is more favorable to the tropical Cuban Anole than the native Green Anole.", next: "natl_experiment_climate_options" },
+                    { text: "Hypothesis: It's getting hotter, so the Cuban Anoles are doing better.", next: "feedback_hypothesis_vague_climate_natl" },
+                    { text: "Hypothesis: The weather just feels different.", next: "feedback_hypothesis_untestable_climate_natl" },
+                    { text: "Hypothesis: If the climate has changed, the Green Anoles will move.", next: "feedback_hypothesis_prediction_climate_natl" }
+                ]
+            },
+            feedback_hypothesis_vague_climate_natl: { step: "Feedback", text: "Too vague. How much hotter? Where? A good hypothesis needs to be specific about the location (microclimate) and the variable (temperature, humidity).", choices: [{ text: "Try Again", next: "natl_hypothesis_climate" }] },
+            feedback_hypothesis_untestable_climate_natl: { step: "Feedback", text: "Not scientific. 'Feels' is subjective. Science requires objective, quantifiable data.", choices: [{ text: "Try Again", next: "natl_hypothesis_climate" }] },
+            feedback_hypothesis_prediction_climate_natl: { step: "Feedback", text: "This is a prediction. The hypothesis must first propose the underlying environmental change.", choices: [{ text: "Try Again", next: "natl_hypothesis_climate" }] },
+            natl_experiment_climate_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A good microclimate hypothesis. How will you test it?",
+                choices: [
+                    { text: "Place an array of temperature and humidity data loggers in both ground-level habitats and canopy habitats, and compare the data to historical weather records for the area.", next: "natl_experiment_climate" },
+                    { text: "Use a thermometer to check the temperature on the ground once on a sunny day.", next: "experiment_flawed_single_point" },
+                    { text: "Look at global climate change reports for the entire planet.", next: "experiment_flawed_wrong_scale" },
+                    { text: "Ask a long-time park visitor if they think it's gotten hotter over the years.", next: "experiment_flawed_anecdotal" }
+                ]
+            },
+            experiment_flawed_wrong_scale: { step: "Step 4: Experiment", text: "You review global climate data, which shows a warming trend. But this doesn't tell you about the specific microclimate in NATL.", choices: [{ text: "Analyze this result.", next: "analysis_flawed_confounding" }] },
+            natl_experiment_climate: { step: "Step 4: Experiment", text: "After a month, your data loggers show that while daily temperatures fluctuate, the average temperature and humidity in NATL's microclimates are consistent with records from the past 30 years.", choices: [{ text: "Analyze the data.", next: "natl_analysis_climate_negative" }] },
+            natl_analysis_climate_negative: { step: "Step 5: Analyze Data", text: "You found no evidence of a significant microclimate shift in NATL. The conditions on the ground and in the canopy are within historical norms.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+
+            // --- NATL Path 4: Disease ---
+            natl_hypothesis_disease: {
+                step: "Step 3: Form a Hypothesis",
+                text: "You suspect a disease is involved. Which is a well-formed hypothesis?",
+                choices: [
+                    { text: "Hypothesis: A novel parasite, transmitted through a shared insect prey item, is causing higher mortality rates in Green Anoles compared to the more resistant invasive Cuban Anoles.", next: "natl_experiment_disease_options" },
+                    { text: "Hypothesis: A disease is killing the Green Anoles.", next: "feedback_hypothesis_vague_disease_natl" },
+                    { text: "Hypothesis: The Green Anoles have lost their will to live.", next: "feedback_hypothesis_untestable_disease_natl" },
+                    { text: "Hypothesis: If there's a disease, we'll find sick lizards.", next: "feedback_hypothesis_prediction_disease_natl" }
+                ]
+            },
+            feedback_hypothesis_vague_disease_natl: { step: "Feedback", text: "Too vague. What kind of disease? A virus? A parasite? A specific pathogen must be proposed to be testable.", choices: [{ text: "Try Again", next: "natl_hypothesis_disease" }] },
+            feedback_hypothesis_untestable_disease_natl: { step: "Feedback", text: "Not scientific. 'Will to live' cannot be measured. A hypothesis must be based on observable, biological phenomena.", choices: [{ text: "Try Again", next: "natl_hypothesis_disease" }] },
+            feedback_hypothesis_prediction_disease_natl: { step: "Feedback", text: "This is a prediction. The hypothesis must first propose the specific disease or parasite causing the issue.", choices: [{ text: "Try Again", next: "natl_hypothesis_disease" }] },
+            natl_experiment_disease_options: {
+                step: "Step 4: Design an Experiment",
+                text: "A specific and comparative hypothesis. How will you test it?",
+                choices: [
+                    { text: "Conduct a comparative health screening, including blood smears and fecal analysis for parasites, on captured samples of both Green and Cuban Anoles.", next: "natl_experiment_disease" },
+                    { text: "Walk around and look for lizards that look sick.", next: "experiment_flawed_anecdotal" },
+                    { text: "Test the soil for lizard diseases.", next: "experiment_flawed_wrong_subject" },
+                    { text: "Only test the Green Anoles for parasites.", next: "experiment_flawed_no_control_natl" }
+                ]
+            },
+            natl_experiment_disease: { step: "Step 4: Experiment", text: "You capture 15 of each species. Lab analysis of blood and fecal samples shows that both species carry a similar low load of common reptilian parasites. No novel pathogens are found.", choices: [{ text: "Analyze the lab results.", next: "natl_analysis_disease_negative" }] },
+            natl_analysis_disease_negative: { step: "Step 5: Analyze Data", text: "You found no significant difference in parasite load or health between the two species. A species-specific epidemic is not the cause.", choices: [{ text: "This hypothesis is refuted. Re-evaluate.", next: "conclusion_refuted" }] },
+
+            // --- Analysis of Flawed Experiments ---
+            analysis_flawed_no_control: { step: "Step 5: Analyze Data", text: "Your data lacks a control group for comparison. Without knowing the status of the other group (native plants, Cuban anoles, etc.), your results are uninterpretable. You cannot draw a valid conclusion.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_inconclusive" }] },
+            analysis_flawed_confounding: { step: "Step 5: Analyze Data", text: "Your comparison between two different sites introduces too many confounding variables (different chemistry, predators, history, etc.). You cannot scientifically isolate the variable you intended to test.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_correlation" }] },
+            analysis_flawed_wrong_measurement: { step: "Step 5: Analyze Data", text: "The data you collected, while scientifically valid, does not address your specific hypothesis. Your experiment failed to measure the key variable you proposed.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_refuted" }] },
+            analysis_flawed_anecdotal: { step: "Step 5: Analyze Data", text: "Your conclusion is based on subjective or unreliable reports, not systematic, measurable data. This is not reliable scientific evidence.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_inconclusive" }] },
+            analysis_flawed_wrong_measurement_disease: { step: "Step 5: Analyze Data", text: "The water appears clean, but this doesn't rule out a disease spreading directly between birds. Your experiment tested the environment, not the subjects of your hypothesis.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_refuted" }] },
+            analysis_flawed_wrong_subject: { step: "Step 5: Analyze Data", text: "You tested the wrong subject. Finding no avian diseases in snails doesn't mean the birds aren't sick. Your experiment failed to test your hypothesis directly.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_refuted" }] },
+            analysis_flawed_artificial: { step: "Step 5: Analyze Data", text: "This experiment shows one species is more aggressive in an artificial setting, but it doesn't reflect what they eat naturally or how they interact in a complex environment. You can't draw conclusions about their real-world interactions.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_correlation" }] },
+            analysis_flawed_taste: { step: "Step 5: Analyze Data", text: "Your conclusion is based on subjective taste, not objective measurement. Human senses are not precise enough for scientific data, and this method was unsafe.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_inconclusive" }] },
+            analysis_flawed_single_point: { step: "Step 5: Analyze Data", text: "A single data point isn't representative of a whole ecosystem. The problem could be localized elsewhere. Your sample size was too small to draw a valid conclusion.", choices: [{ text: "Draw a conclusion from this flawed data.", next: "conclusion_flawed_inconclusive" }] },
+
+
+            // --- Conclusions ---
+            conclusion_refuted: { step: "Step 6: Draw a Conclusion", text: "Your hypothesis was not supported by the evidence. This is a success in science! By ruling out a potential cause, you have narrowed the search. It's time to form a new question based on your initial observations.", choices: [ { text: "Return to the main menu.", next: "start" } ] },
+            sweetwater_conclusion_supported: { 
+                step: "Step 6: Draw a Conclusion", 
+                text: "Success! Your hypothesis is strongly supported. The invasive water hyacinth has displaced the native plants apple snails require for egg-laying. Without a place to reproduce, the snail population has crashed, leaving the Snail Kites without food. Your work has identified the root cause.", 
+                choices: [ { text: "Play again.", next: "start" } ],
+                geminiFeature: {
+                    buttonText: "✨ Brainstorm Solutions with AI",
+                    action: () => brainstormSolutions(story.sweetwater_conclusion_supported.text)
+                }
+            },
+            natl_conclusion_supported: { 
+                step: "Step 6: Draw a Conclusion", 
+                text: "Success! Your hypothesis is strongly supported. The invasive Cuban Anole, which forages on the ground, has depleted the terrestrial insects that native Green Anoles also rely on. This competition for food has forced the Green Anoles into the higher canopy, effectively excluding them from a key part of their niche.", 
+                choices: [ { text: "Play again.", next: "start" } ],
+                geminiFeature: {
+                    buttonText: "✨ Brainstorm Solutions with AI",
+                    action: () => brainstormSolutions(story.natl_conclusion_supported.text)
+                }
+            },
+            conclusion_flawed_inconclusive: { step: "Step 6: Flawed Conclusion", text: "Your experiment yielded inconclusive data. You cannot support or refute your hypothesis. A poorly designed experiment leads to a dead end, forcing you to start over with a better design.", choices: [ { text: "Return to the main menu.", next: "start" } ] },
+            conclusion_flawed_correlation: { step: "Step 6: Flawed Conclusion", text: "You've mistakenly concluded that because two things are different, one must be the cause. This is a classic error: correlation does not equal causation. Your experiment was too broad to isolate the true cause.", choices: [ { text: "Return to the main menu.", next: "start" } ] }
+        };
+
+        let currentStage = 'start';
+
+        function showStage(stageKey) {
+            const stage = story[stageKey];
+            if (!stage) {
+                console.error("Story stage not found:", stageKey);
+                return;
+            }
+            currentStage = stageKey;
+
+            gameContainer.style.opacity = 0;
+
+            setTimeout(() => {
+                const contentBox = document.querySelector('.content-box');
+                contentBox.scrollTop = 0;
+                
+                stepTitleElement.textContent = stage.step;
+                storyTextElement.textContent = stage.text;
+                
+                choicesElement.innerHTML = '';
+                geminiFeaturesContainer.innerHTML = '';
+
+                stage.choices.forEach(choice => {
+                    const button = document.createElement('button');
+                    button.textContent = choice.text;
+                    button.className = 'choice-button';
+                    button.onclick = () => showStage(choice.next);
+                    choicesElement.appendChild(button);
+                });
+
+                if (stage.geminiFeature) {
+                    const geminiButton = document.createElement('button');
+                    geminiButton.textContent = stage.geminiFeature.buttonText;
+                    geminiButton.className = 'gemini-button';
+                    geminiButton.onclick = stage.geminiFeature.action;
+                    geminiFeaturesContainer.appendChild(geminiButton);
+                }
+
+                gameContainer.style.opacity = 1;
+            }, 300);
+        }
+        
+        gameContainer.style.transition = 'opacity 0.3s ease-in-out';
+        
+        showStage(currentStage);
+    </script>
+</body>
+</html>
