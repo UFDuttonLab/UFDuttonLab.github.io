@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecology Species Interactions Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for the timer progress bar animation */
+        .timer-circle-progress {
+            transition: stroke-dashoffset 1s linear;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-green-50 flex flex-col min-h-screen">
+
+    <main id="game-container" class="flex-grow">
+        <!-- Game content will be rendered here by JavaScript -->
+    </main>
+
+    <footer class="text-center py-4 text-gray-600 text-sm">
+        Developed by <a href="https://ufduttonlab.github.io" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-700">UF Dutton Lab</a>
+    </footer>
+
+    <script>
+        // --- DATA STORE ---
+        // All game data and educational content is stored here.
+        const gameData = {
+          interactions: {
+            competition: { name: "Competition", description: "Both species are negatively affected as they compete for the same limited resources", symbol: "(-/-)", color: "bg-red-500", icon: "⚔️", scenarios: [ { id: 1, title: "Wolves vs Coyotes in Yellowstone", description: "In Yellowstone National Park, the reintroduction of gray wolves in 1995 created intense competition with resident coyote populations. Both species hunt similar prey including elk calves, deer, and small mammals like rabbits and rodents. Studies show that coyote populations declined by up to 50% in areas with established wolf packs, while wolf reproduction rates also decreased in areas with high coyote density.", species1: { name: "Gray Wolf", icon: "🐺" }, species2: { name: "Coyote", icon: "🦊" }, question: "Given that both wolves and coyotes hunt similar prey species and compete for the same territories, resulting in population declines for both species, what type of ecological interaction best describes their relationship?", options: ["Competition", "Predation", "Mutualism", "Commensalism"], correctAnswer: "Competition", explanation: "This is interspecific competition. Both species compete for the same limited resources (prey and territory), and both experience negative effects from the interaction." }, { id: 2, title: "Oak Trees Competing for Sunlight", description: "In a dense forest, mature oak trees grow close together. Their crowns overlap and compete intensively for sunlight. Trees in shaded positions show reduced growth rates, smaller leaf production, and lower reproductive success compared to trees with full sun access.", species1: { name: "Oak Tree A", icon: "🌳" }, species2: { name: "Oak Tree B", icon: "🌳" }, question: "When two oak trees compete for the same sunlight resources, with both showing reduced growth in shaded conditions, what interaction type is this?", options: ["Intraspecific competition", "Predation", "Mutualism", "Amensalism"], correctAnswer: "Intraspecific competition", explanation: "This is intraspecific competition - individuals of the same species competing for limited light resources, with both experiencing negative effects." }, { id: 3, title: "Cheetahs vs Lions Hunting Gazelles", description: "On the African savanna, cheetahs and lions both hunt Thomson's gazelles. Lions often steal kills from cheetahs, forcing cheetahs to hunt more frequently and avoid areas with high lion density. Both predators expend more energy due to this competitive interaction.", species1: { name: "Cheetah", icon: "🐆" }, species2: { name: "Lion", icon: "🦁" }, question: "When cheetahs and lions compete for the same prey species, with lions stealing cheetah kills and both species avoiding each other, what type of interaction is this?", options: ["Interspecific competition", "Predation", "Kleptoparasitism", "Commensalism"], correctAnswer: "Interspecific competition", explanation: "This is interspecific competition. Both species compete for the same prey resource, and both experience negative effects from increased energy expenditure and territory avoidance." }, { id: 4, title: "Barnacles Competing for Rock Space", description: "On rocky intertidal shores, two barnacle species (Balanus and Chthamalus) compete for limited attachment space. Balanus grows faster and can overgrow Chthamalus, while Chthamalus can only survive in areas where Balanus cannot tolerate the environmental stress.", species1: { name: "Balanus barnacle", icon: "🦪" }, species2: { name: "Chthamalus barnacle", icon: "🦪" }, question: "When barnacle species compete for limited space on rocks, with one species excluding the other through faster growth, what interaction occurs?", options: ["Competitive exclusion", "Predation", "Facilitation", "Neutralism"], correctAnswer: "Competitive exclusion", explanation: "This is competitive exclusion, where one species outcompetes another for a limiting resource (space), leading to local elimination of the inferior competitor." }, { id: 5, title: "Bacteria Competing in Human Gut", description: "In the human intestinal microbiome, different bacterial species compete for nutrients and attachment sites. Some bacteria produce antibiotics to inhibit competitors, while others compete by rapidly consuming available nutrients, creating a complex competitive environment.", species1: { name: "E. coli", icon: "🦠" }, species2: { name: "Bacteroides", icon: "🦠" }, question: "When gut bacteria compete for nutrients and space, sometimes producing chemicals to inhibit competitors, what type of interaction is this?", options: ["Interference competition", "Exploitation competition", "Mutualism", "Amensalism"], correctAnswer: "Interference competition", explanation: "This is interference competition, where organisms directly interfere with competitors through aggressive interactions like producing antibiotics or toxins." } ] },
+            predation: { name: "Predation", description: "One species benefits by consuming another species", symbol: "(+/-)", color: "bg-orange-500", icon: "🦷", scenarios: [ { id: 6, title: "Lions Hunting Zebras in Serengeti", description: "In the Serengeti, lions are apex predators that regularly hunt zebras. A successful lion hunt provides essential nutrients and energy for the pride, while the zebra population is controlled through predation pressure. This relationship has shaped both species' evolution over millions of years.", species1: { name: "Lion", icon: "🦁" }, species2: { name: "Zebra", icon: "🦓" }, question: "When lions hunt and consume zebras for nutrition while zebras evolve anti-predator defenses, what interaction type is this?", options: ["Predation", "Competition", "Parasitism", "Commensalism"], correctAnswer: "Predation", explanation: "This is classic predation where the predator (lion) benefits by obtaining energy and nutrients, while the prey (zebra) is harmed or killed." }, { id: 7, title: "Spiders Catching Flies in Webs", description: "Orb weaver spiders construct intricate webs to trap flying insects like flies. The spider gains essential protein and energy from consuming the trapped flies, while flies face mortality risk when flying through spider territories.", species1: { name: "Orb Weaver Spider", icon: "🕷️" }, species2: { name: "House Fly", icon: "🪰" }, question: "When a spider traps and consumes flies in its web, gaining nutrition while the fly dies, what type of ecological interaction is this?", options: ["Predation", "Parasitism", "Competition", "Mutualism"], correctAnswer: "Predation", explanation: "This is predation - the spider benefits by consuming the fly for nutrition, while the fly is killed in the process." }, { id: 8, title: "Hawks Hunting Field Mice", description: "Red-tailed hawks are skilled hunters that prey on field mice and other small rodents. Hawks use their keen eyesight and powerful talons to capture mice, obtaining essential nutrients while mice populations are regulated by this predation pressure.", species1: { name: "Red-tailed Hawk", icon: "🦅" }, species2: { name: "Field Mouse", icon: "🐭" }, question: "When hawks hunt mice from above, gaining nutrition while mice develop anti-predator behaviors, what interaction is occurring?", options: ["Predation", "Parasitism", "Commensalism", "Competition"], correctAnswer: "Predation", explanation: "This is predation where the hawk benefits by obtaining food and energy, while the mouse is negatively affected (killed) in the process." }, { id: 9, title: "Praying Mantis Ambush Hunting", description: "Praying mantises are ambush predators that remain motionless on plants until prey insects come within striking distance. Their powerful forelegs can snatch bees, flies, and other insects, providing the mantis with essential nutrients for growth and reproduction.", species1: { name: "Praying Mantis", icon: "🦗" }, species2: { name: "Bee", icon: "🐝" }, question: "When a praying mantis captures and eats a bee that was foraging nearby, what type of species interaction is demonstrated?", options: ["Predation", "Competition", "Parasitism", "Amensalism"], correctAnswer: "Predation", explanation: "This is predation - the mantis benefits by consuming the bee for nutrition, while the bee is killed and consumed." }, { id: 10, title: "Whales Filter Feeding on Krill", description: "Baleen whales like blue whales feed on massive swarms of krill by filtering thousands of these small crustaceans through their baleen plates. A single whale can consume several tons of krill per day during feeding season.", species1: { name: "Blue Whale", icon: "🐋" }, species2: { name: "Krill", icon: "🦐" }, question: "When blue whales filter feed on krill swarms, consuming millions of individual krill for nutrition, what interaction type is this?", options: ["Predation", "Filter feeding", "Parasitism", "Mutualism"], correctAnswer: "Predation", explanation: "This is predation (specifically filter feeding) where the whale benefits by consuming krill for nutrition, while the krill are killed and consumed." } ] },
+            mutualism: { name: "Mutualism", description: "Both species benefit from their interaction", symbol: "(+/+)", color: "bg-green-500", icon: "🤝", scenarios: [ { id: 11, title: "Bees Pollinating Flowers", description: "Bees visit flowers to collect nectar and pollen for food, while simultaneously transferring pollen between flowers, enabling plant reproduction. Both species have co-evolved specialized structures - bees have branched hairs for pollen collection, while flowers have evolved bright colors and sweet nectar to attract pollinators.", species1: { name: "Honey Bee", icon: "🐝" }, species2: { name: "Flowering Plant", icon: "🌸" }, question: "When bees collect nectar for food while transferring pollen between flowers for plant reproduction, what interaction type is this?", options: ["Mutualism", "Commensalism", "Parasitism", "Competition"], correctAnswer: "Mutualism", explanation: "This is mutualism - bees benefit by obtaining nectar and pollen for food, while plants benefit from pollination services that enable reproduction." }, { id: 12, title: "Mycorrhizal Fungi and Plant Roots", description: "Mycorrhizal fungi form symbiotic associations with plant roots, where fungal hyphae extend the plant's absorption surface area for water and nutrients. In return, plants provide the fungi with carbohydrates produced through photosynthesis. This relationship is crucial for forest ecosystem functioning.", species1: { name: "Mycorrhizal Fungi", icon: "🍄" }, species2: { name: "Tree Roots", icon: "🌳" }, question: "When fungi help plant roots absorb nutrients while receiving carbohydrates from the plant, what type of interaction is this?", options: ["Mutualism", "Parasitism", "Commensalism", "Competition"], correctAnswer: "Mutualism", explanation: "This is mutualism - fungi benefit by receiving carbohydrates from plants, while plants benefit from increased nutrient and water absorption through fungal networks." }, { id: 13, title: "Cleaner Fish and Large Fish", description: "Cleaner wrasses operate 'cleaning stations' on coral reefs where larger fish visit to have parasites and dead tissue removed. The cleaner fish gains nutrition from eating parasites, while the client fish benefits from parasite removal and wound cleaning.", species1: { name: "Cleaner Wrasse", icon: "🐠" }, species2: { name: "Grouper", icon: "🐟" }, question: "When small cleaner fish remove parasites from larger fish, gaining food while the large fish becomes healthier, what interaction occurs?", options: ["Mutualism", "Commensalism", "Parasitism", "Predation"], correctAnswer: "Mutualism", explanation: "This is mutualism - cleaner fish benefit by obtaining food (parasites), while larger fish benefit from parasite removal and improved health." }, { id: 14, title: "Ants Protecting Acacia Trees", description: "Bullhorn acacia trees provide hollow thorns for ant nesting and produce special protein-rich food bodies (Beltian bodies) to feed ants. In return, aggressive ants defend the tree from herbivores and competing plants, even removing vegetation that grows too close to their host tree.", species1: { name: "Acacia Ant", icon: "🐜" }, species2: { name: "Bullhorn Acacia", icon: "🌿" }, question: "When ants receive shelter and food from acacia trees while aggressively defending the trees from herbivores, what type of relationship is this?", options: ["Mutualism", "Commensalism", "Parasitism", "Competition"], correctAnswer: "Mutualism", explanation: "This is mutualism - ants benefit from shelter and food provided by the tree, while the tree benefits from protection against herbivores and competing plants." }, { id: 15, title: "Oxpeckers and Large African Mammals", description: "Red-billed oxpeckers perch on large African mammals like buffalo and rhinos, feeding on ticks, flies, and other parasites. The birds gain nutrition while the mammals benefit from parasite removal. Some studies suggest oxpeckers also serve as early warning systems, alerting their hosts to approaching predators.", species1: { name: "Red-billed Oxpecker", icon: "🐦" }, species2: { name: "African Buffalo", icon: "🐃" }, question: "When oxpecker birds feed on parasites from large mammals while providing parasite control services, what interaction type is demonstrated?", options: ["Mutualism", "Commensalism", "Parasitism", "Predation"], correctAnswer: "Mutualism", explanation: "This is mutualism - oxpeckers benefit by obtaining food (parasites), while large mammals benefit from parasite removal and potentially early predator warnings." } ] },
+            commensalism: { name: "Commensalism", description: "One species benefits while the other is unaffected", symbol: "(+/0)", color: "bg-blue-500", icon: "↗️", scenarios: [ { id: 16, title: "Barnacles on Whale Skin", description: "Barnacles attach to whale skin and gain access to nutrient-rich waters as whales travel through different ocean regions. The barnacles filter feed on plankton in the water column while the whale's movement and feeding behavior remain unaffected by the barnacles' presence.", species1: { name: "Barnacle", icon: "🦪" }, species2: { name: "Humpback Whale", icon: "🐋" }, question: "When barnacles attach to whales for transportation to feeding areas without affecting the whale's behavior, what interaction type is this?", options: ["Commensalism", "Mutualism", "Parasitism", "Competition"], correctAnswer: "Commensalism", explanation: "This is commensalism - barnacles benefit from transportation and access to feeding areas, while whales are neither helped nor harmed by the barnacles." }, { id: 17, title: "Cattle Egrets Following Grazing Animals", description: "Cattle egrets follow grazing livestock and large herbivores, feeding on insects disturbed by the animals' movement through grass. The birds gain easy access to prey insects while the grazing animals are unaffected by the birds' presence.", species1: { name: "Cattle Egret", icon: "🦅" }, species2: { name: "Cattle", icon: "🐄" }, question: "When cattle egrets follow grazing cattle to catch disturbed insects without affecting the cattle, what type of interaction is this?", options: ["Commensalism", "Mutualism", "Predation", "Competition"], correctAnswer: "Commensalism", explanation: "This is commensalism - egrets benefit by easily catching insects disturbed by cattle movement, while cattle are unaffected by the birds' presence." }, { id: 18, title: "Epiphytic Plants on Tree Branches", description: "Bromeliads and orchids grow as epiphytes on tree branches in tropical rainforests. These plants gain access to sunlight in the forest canopy and collect water and nutrients from rainfall and debris, while the host tree experiences no significant positive or negative effects.", species1: { name: "Bromeliad Epiphyte", icon: "🌺" }, species2: { name: "Rainforest Tree", icon: "🌳" }, question: "When epiphytic plants grow on tree branches for support and light access without harming the tree, what interaction occurs?", options: ["Commensalism", "Parasitism", "Mutualism", "Competition"], correctAnswer: "Commensalism", explanation: "This is commensalism - epiphytes benefit from structural support and canopy access, while the host tree is typically unaffected (assuming the epiphyte load isn't excessive)." }, { id: 19, title: "Remora Fish Attached to Sharks", description: "Remora fish use specialized sucker discs to attach to sharks and other large marine animals. The remoras gain transportation, protection from predators, and access to food scraps from the shark's feeding, while sharks show no behavioral changes or physiological effects from carrying remoras.", species1: { name: "Remora Fish", icon: "🐟" }, species2: { name: "Tiger Shark", icon: "🦈" }, question: "When remora fish attach to sharks for transportation and food scraps without affecting shark behavior, what type of relationship is this?", options: ["Commensalism", "Mutualism", "Parasitism", "Predation"], correctAnswer: "Commensalism", explanation: "This is commensalism - remoras benefit from transportation, protection, and food access, while sharks are unaffected by the remoras' presence." }, { id: 20, title: "Birds Nesting in Cacti", description: "Cactus wrens and other desert birds build nests in the protective spines of large cacti like saguaros. The birds gain protection from predators and harsh weather, while the cactus experiences no measurable benefit or harm from hosting the nests.", species1: { name: "Cactus Wren", icon: "🐦" }, species2: { name: "Saguaro Cactus", icon: "🌵" }, question: "When birds nest in cactus spines for protection without affecting the cactus, what interaction type is demonstrated?", options: ["Commensalism", "Mutualism", "Parasitism", "Competition"], correctAnswer: "Commensalism", explanation: "This is commensalism - birds benefit from protection and nesting sites, while the cactus is unaffected by the presence of bird nests." } ] },
+            amensalism: { name: "Amensalism", description: "One species is harmed while the other is unaffected", symbol: "(-/0)", color: "bg-purple-500", icon: "⛔", scenarios: [ { id: 21, title: "Black Walnut Trees and Neighboring Plants", description: "Black walnut trees produce juglone, a chemical compound that is toxic to many other plant species. This allelopathic chemical is released through root exudates and leaf decomposition, inhibiting the growth of nearby plants like tomatoes, roses, and many grasses within the tree's root zone.", species1: { name: "Black Walnut Tree", icon: "🌰" }, species2: { name: "Tomato Plant", icon: "🍅" }, question: "When black walnut trees release toxic chemicals that inhibit nearby plant growth without being affected themselves, what interaction type is this?", options: ["Amensalism", "Competition", "Parasitism", "Predation"], correctAnswer: "Amensalism", explanation: "This is amensalism - the walnut tree is unaffected by producing juglone, while other plants are harmed by the toxic chemical compounds." }, { id: 22, title: "Elephants Trampling Small Plants", description: "As African elephants move through savanna grasslands and forests, their large size and weight inadvertently crush small plants, seedlings, and ground vegetation. The elephants are unaffected by this trampling behavior, while small plants may be damaged or killed.", species1: { name: "African Elephant", icon: "🐘" }, species2: { name: "Grass Seedlings", icon: "🌱" }, question: "When elephants accidentally trample small plants while walking without being affected themselves, what type of interaction occurs?", options: ["Amensalism", "Competition", "Predation", "Commensalism"], correctAnswer: "Amensalism", explanation: "This is amensalism - elephants are unaffected by their trampling behavior, while small plants are negatively affected (damaged or killed)." }, { id: 23, title: "Bread Mold Producing Antibiotics", description: "Penicillium mold produces penicillin and other antibiotic compounds that kill or inhibit bacterial growth in the surrounding environment. The mold continues its normal growth and reproduction while bacteria in the vicinity are harmed or killed by the antibiotic compounds.", species1: { name: "Penicillium Mold", icon: "🦠" }, species2: { name: "Bacteria", icon: "🧫" }, question: "When mold produces antibiotics that kill nearby bacteria without affecting the mold's own growth, what interaction type is this?", options: ["Amensalism", "Competition", "Predation", "Parasitism"], correctAnswer: "Amensalism", explanation: "This is amensalism - the mold is unaffected by producing antibiotics, while bacteria are harmed or killed by these chemical compounds." }, { id: 24, title: "Large Trees Shading Forest Floor", description: "Mature canopy trees in dense forests create deep shade that prevents sunlight from reaching the forest floor. Small understory plants and seedlings may be unable to photosynthesize effectively in these low-light conditions, while the large trees are unaffected by creating shade.", species1: { name: "Canopy Tree", icon: "🌳" }, species2: { name: "Forest Floor Plants", icon: "🌿" }, question: "When large trees create shade that inhibits small plant growth without affecting the large trees, what interaction is demonstrated?", options: ["Amensalism", "Competition", "Parasitism", "Commensalism"], correctAnswer: "Amensalism", explanation: "This is amensalism - large trees are unaffected by creating shade, while small plants are negatively affected by reduced light availability." }, { id: 25, title: "Cattle Stepping on Insects", description: "Grazing cattle inadvertently step on and crush ground-dwelling insects, spiders, and other small arthropods as they move through grasslands. The cattle continue their normal grazing behavior unaffected, while the small arthropods may be injured or killed.", species1: { name: "Grazing Cattle", icon: "🐄" }, species2: { name: "Ground Insects", icon: "🐛" }, question: "When cattle accidentally crush ground insects while grazing without being affected themselves, what type of interaction is this?", options: ["Amensalism", "Predation", "Competition", "Commensalism"], correctAnswer: "Amensalism", explanation: "This is amensalism - cattle are unaffected by their trampling behavior, while ground insects are negatively affected (injured or killed)." } ] },
+            parasitism: { name: "Parasitism", description: "One species benefits while the other is harmed", symbol: "(+/-)", color: "bg-yellow-500", icon: "🦟", scenarios: [ { id: 26, title: "Tapeworms in Human Intestines", description: "Tapeworms live in human intestines where they absorb nutrients from digested food, gaining nutrition for growth and reproduction. The human host experiences nutrient deficiency, abdominal discomfort, and potential weight loss while the tapeworm benefits from the steady food supply.", species1: { name: "Tapeworm", icon: "🪱" }, species2: { name: "Human", icon: "👤" }, question: "When tapeworms absorb nutrients from human intestines, gaining nutrition while causing nutrient deficiency in humans, what interaction type is this?", options: ["Parasitism", "Predation", "Commensalism", "Mutualism"], correctAnswer: "Parasitism", explanation: "This is parasitism - tapeworms benefit by obtaining nutrients from the host, while humans are harmed through nutrient depletion and digestive problems." }, { id: 27, title: "Ticks Feeding on Deer Blood", description: "Ticks attach to deer and feed on their blood for several days, obtaining essential nutrients for reproduction and development. The deer loses blood, may develop anemia, and faces increased risk of tick-borne diseases while providing nourishment for the tick parasites.", species1: { name: "Deer Tick", icon: "🕷️" }, species2: { name: "White-tailed Deer", icon: "🦌" }, question: "When ticks feed on deer blood for nutrition while potentially transmitting diseases to deer, what type of interaction occurs?", options: ["Parasitism", "Predation", "Commensalism", "Mutualism"], correctAnswer: "Parasitism", explanation: "This is parasitism - ticks benefit by obtaining blood nutrients, while deer are harmed through blood loss and disease risk." }, { id: 28, title: "Mistletoe Growing on Tree Branches", description: "Mistletoe is a parasitic plant that grows on tree branches, sending specialized roots (haustoria) into the host tree to extract water and nutrients. While mistletoe gains resources for photosynthesis and reproduction, the host tree experiences reduced growth and may suffer branch death.", species1: { name: "Mistletoe", icon: "🎄" }, species2: { name: "Oak Tree", icon: "🌳" }, question: "When mistletoe extracts water and nutrients from tree branches while weakening the host tree, what interaction type is this?", options: ["Parasitism", "Commensalism", "Mutualism", "Competition"], correctAnswer: "Parasitism", explanation: "This is parasitism - mistletoe benefits by extracting resources from the host tree, while the tree is harmed through resource depletion and potential branch damage." }, { id: 29, title: "Fleas Living on Cat Fur", description: "Fleas live in cat fur and feed on cat blood multiple times per day. Adult fleas require blood meals for reproduction, while flea larvae feed on organic debris in the cat's environment. Cats experience itching, skin irritation, and potential anemia from heavy flea infestations.", species1: { name: "Cat Flea", icon: "🦟" }, species2: { name: "Domestic Cat", icon: "🐱" }, question: "When fleas live on cats and feed on their blood while causing itching and irritation, what type of relationship is this?", options: ["Parasitism", "Commensalism", "Predation", "Mutualism"], correctAnswer: "Parasitism", explanation: "This is parasitism - fleas benefit by obtaining blood for nutrition and reproduction, while cats are harmed through blood loss and skin irritation." }, { id: 30, title: "Cuckoo Birds and Host Nests", description: "Cuckoo birds practice brood parasitism by laying their eggs in other bird species' nests. The host birds unknowingly incubate cuckoo eggs and feed cuckoo chicks, which often outcompete or eject the host's own offspring. Cuckoos benefit from parental care without investment, while host birds lose reproductive success.", species1: { name: "Common Cuckoo", icon: "🐦" }, species2: { name: "Reed Warbler", icon: "🐤" }, question: "When cuckoos lay eggs in other birds' nests, benefiting from free parental care while host birds lose their own offspring, what interaction is this?", options: ["Brood parasitism", "Predation", "Commensalism", "Competition"], correctAnswer: "Brood parasitism", explanation: "This is brood parasitism (a form of parasitism) - cuckoos benefit from free parental care, while host birds are harmed by losing their own reproductive success." } ] }
+          }
+        };
+
+        const biggerPictureInfo = {
+          competition: { title: "Competition and Community Structure", text: "Competition is a major driving force in evolution. The 'Competitive Exclusion Principle' states that two species competing for the same limiting resource cannot coexist at constant population values. Over time, this pressure can lead to resource partitioning, where species evolve to use different resources, or character displacement, where their physical traits diverge. Competition is fundamental in shaping the structure of ecological communities and determining which species can survive in a given habitat." },
+          predation: { title: "Predation and Co-evolution", text: "Predator-prey relationships lead to a fascinating co-evolutionary 'arms race.' Prey evolve better defenses (like camouflage, speed, or toxins), while predators evolve more effective hunting strategies. These dynamics can create population cycles and are crucial for maintaining ecosystem health by controlling herbivore populations, which prevents overgrazing and promotes biodiversity. A predator that has a disproportionately large effect on its ecosystem is known as a 'keystone species.'" },
+          mutualism: { title: "Mutualism and Ecosystem Stability", text: "Mutualisms are vital for the functioning of almost every ecosystem. Pollination, for example, is a mutualism essential for the reproduction of most flowering plants, which form the base of terrestrial food webs. Some mutualisms are 'obligate,' meaning the species cannot survive without each other (like lichen, an association of fungus and algae). These cooperative relationships increase the stability and resilience of ecosystems by creating complex, interdependent networks." },
+          commensalism: { title: "Commensalism and Niche Creation", text: "While one partner is seemingly unaffected, commensal relationships are important for creating niches and habitats for other organisms. For example, an epiphytic orchid growing on a tree creates a micro-habitat for insects and microorganisms. It can be difficult for ecologists to prove a truly neutral interaction, as even slight effects may exist. Commensalism highlights the subtle and intricate ways species can be linked within a community." },
+          amensalism: { title: "Amensalism and Environmental Modification", text: "Amensalism often occurs when one organism produces a chemical or physical change in its environment that is detrimental to others. A classic example is 'allelopathy' in plants, where one plant releases biochemicals that inhibit the growth of its neighbors. This interaction plays a significant role in plant succession and the spatial distribution of plant communities. On a larger scale, human activities often have amensalistic effects, such as pollution that harms aquatic life while providing no benefit to us." },
+          parasitism: { title: "Parasitism and Population Regulation", text: "Parasites are incredibly diverse and abundant, making up a huge portion of an ecosystem's biodiversity. While they harm their hosts, they play a critical role in regulating host populations, preventing them from becoming overabundant and exhausting their resources. The health and prevalence of certain parasites can also be an indicator of overall ecosystem health. The complex life cycles of many parasites link different species and habitats in surprising ways." }
+        };
+
+        // --- GAME STATE & LOGIC ---
+        
+        // This object holds all the changing variables for the game.
+        let state = {
+            gameState: 'menu', // 'menu', 'single', 'setup', 'playing'
+            viewingInteraction: null,
+
+            // Single Player
+            singlePlayerQuestions: [],
+            currentScenarioIndex: 0,
+            userAnswers: [],
+            
+            // Multiplayer
+            multiplayer: {
+                players: [],
+                currentQuestionIndex: 0,
+                questions: [],
+                currentPlayerToAnswer: null,
+                showAnswer: false,
+                gameComplete: false,
+                isCallOnRound: false,
+                calledOnPlayer: null,
+                lastAnswerCorrect: null,
+                lastAnswerIndex: null,
+                timer: null,
+                timerDuration: null,
+            },
+            
+            timerInterval: null // Holds the setInterval ID for the timer
+        };
+
+        const gameContainer = document.getElementById('game-container');
+
+        // --- HELPER FUNCTIONS ---
+        
+        function shuffleOptions(scenario) {
+            const options = [...scenario.options];
+            const correctAnswer = scenario.correctAnswer;
+            // Fisher-Yates shuffle algorithm
+            for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
+            }
+            const correct = options.indexOf(correctAnswer);
+            return { ...scenario, options, correct };
+        }
+
+        // Main render function: Clears the screen, renders new content, and attaches event listeners.
+        function render(html, attachListeners) {
+            gameContainer.innerHTML = html;
+            if (attachListeners) {
+                attachListeners();
+            }
+        }
+
+        // --- NAVIGATION & STATE CHANGES ---
+
+        function navigate(targetState) {
+            state.gameState = targetState;
+            mainRenderSwitch();
+        }
+
+        function mainRenderSwitch() {
+            // Stop any active timers when changing views
+            if (state.timerInterval) clearInterval(state.timerInterval);
+
+            switch (state.gameState) {
+                case 'menu':
+                    renderMainMenu();
+                    break;
+                case 'single':
+                    startSinglePlayerGame();
+                    break;
+                case 'setup':
+                    resetMultiplayerGame();
+                    renderMultiplayerSetup();
+                    break;
+                case 'playing':
+                    renderMultiplayerGame();
+                    break;
+            }
+        }
+        
+        // --- SINGLE PLAYER LOGIC ---
+
+        function startSinglePlayerGame() {
+            const allScenarios = Object.values(gameData.interactions).flatMap(i => i.scenarios);
+            state.singlePlayerQuestions = [...allScenarios].sort(() => 0.5 - Math.random()).map(shuffleOptions);
+            state.currentScenarioIndex = 0;
+            state.userAnswers = [];
+            renderSinglePlayerGame();
+        }
+
+        function handleSinglePlayerAnswer(answerIndex) {
+            const currentQuestion = state.singlePlayerQuestions[state.currentScenarioIndex];
+            if (state.userAnswers.some(a => a.scenarioId === currentQuestion.id)) return;
+
+            const isCorrect = answerIndex === currentQuestion.correct;
+            state.userAnswers.push({
+                scenarioId: currentQuestion.id,
+                answerIndex,
+                correct: isCorrect
+            });
+            renderSinglePlayerGame();
+        }
+
+        // --- MULTIPLAYER LOGIC ---
+        
+        function resetMultiplayerGame() {
+            state.multiplayer = {
+                players: [], currentQuestionIndex: 0, questions: [], currentPlayerToAnswer: null,
+                showAnswer: false, gameComplete: false, isCallOnRound: false, calledOnPlayer: null,
+                lastAnswerCorrect: null, lastAnswerIndex: null, timer: null, timerDuration: null,
+            };
+        }
+        
+        function setupMultiplayerPlayers(numPlayers) {
+            state.multiplayer.players = Array.from({ length: numPlayers }, (_, i) => ({
+                id: i + 1, name: `Player ${i + 1}`, score: 0
+            }));
+            
+            const allScenarios = Object.values(gameData.interactions).flatMap(i => i.scenarios);
+            const shuffled = [...allScenarios].sort(() => 0.5 - Math.random());
+            state.multiplayer.questions = shuffled.slice(0, 15).map(shuffleOptions);
+            
+            const callOnQuestions = [];
+            const numCallOns = Math.floor(Math.random() * 2) + 2; // 2-3 call-ons
+            while (callOnQuestions.length < numCallOns) {
+                const randomQ = Math.floor(Math.random() * 15);
+                if (!callOnQuestions.includes(randomQ) && randomQ > 2) {
+                    callOnQuestions.push(randomQ);
+                }
+            }
+            state.multiplayer.callOnQuestions = callOnQuestions;
+            renderMultiplayerSetup();
+        }
+
+        function startMultiplayerGame() {
+            const isFirstQuestionCallOn = state.multiplayer.callOnQuestions.includes(0);
+            if (isFirstQuestionCallOn) {
+                state.multiplayer.isCallOnRound = true;
+                const randomPlayer = state.multiplayer.players[Math.floor(Math.random() * state.multiplayer.players.length)];
+                state.multiplayer.calledOnPlayer = randomPlayer.id;
+            }
+            navigate('playing');
+        }
+
+        function submitMultiplayerAnswer(answerIndex) {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            const { multiplayer } = state;
+            const currentQuestion = multiplayer.questions[multiplayer.currentQuestionIndex];
+            const isCorrect = answerIndex !== -1 && answerIndex === currentQuestion.correct;
+            
+            let pointChange = isCorrect ? 10 : -5;
+            if (multiplayer.isCallOnRound) {
+                pointChange = isCorrect ? 20 : -10;
+            }
+            
+            const playerToUpdateId = multiplayer.isCallOnRound ? multiplayer.calledOnPlayer : multiplayer.currentPlayerToAnswer;
+            const playerToUpdate = multiplayer.players.find(p => p.id === playerToUpdateId);
+            if(playerToUpdate) {
+                playerToUpdate.score += pointChange;
+            }
+
+            multiplayer.showAnswer = true;
+            multiplayer.lastAnswerCorrect = isCorrect;
+            multiplayer.lastAnswerIndex = answerIndex;
+            multiplayer.timer = null;
+            renderMultiplayerGame();
+        }
+
+        function nextMultiplayerQuestion() {
+            const { multiplayer } = state;
+            if (multiplayer.currentQuestionIndex + 1 >= multiplayer.questions.length) {
+                multiplayer.gameComplete = true;
+            } else {
+                multiplayer.currentQuestionIndex++;
+                multiplayer.currentPlayerToAnswer = null;
+                multiplayer.showAnswer = false;
+                multiplayer.lastAnswerCorrect = null;
+                multiplayer.lastAnswerIndex = null;
+                multiplayer.isCallOnRound = multiplayer.callOnQuestions.includes(multiplayer.currentQuestionIndex);
+                if (multiplayer.isCallOnRound) {
+                    const randomPlayer = multiplayer.players[Math.floor(Math.random() * multiplayer.players.length)];
+                    multiplayer.calledOnPlayer = randomPlayer.id;
+                }
+            }
+            renderMultiplayerGame();
+        }
+        
+        function startTimer() {
+            const { multiplayer } = state;
+            multiplayer.timer = multiplayer.timerDuration;
+            
+            state.timerInterval = setInterval(() => {
+                multiplayer.timer--;
+                if (multiplayer.timer <= 0) {
+                    clearInterval(state.timerInterval);
+                    submitMultiplayerAnswer(-1); // -1 indicates timeout
+                } else {
+                    renderMultiplayerGame(); // Re-render to update the timer display
+                }
+            }, 1000);
+        }
+
+        // --- RENDER FUNCTIONS ---
+        // Each function generates the HTML for a specific view.
+
+        function renderMainMenu() {
+            const html = `
+                <div class="max-w-4xl mx-auto p-6">
+                    <div class="text-center mb-8">
+                        <h1 class="text-4xl font-bold text-blue-600 mb-4">🌿 Ecology Species Interactions Game</h1>
+                        <p class="text-xl text-gray-600 mb-8">Learn about the fascinating relationships between species in nature</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div id="single-player-btn" class="bg-gradient-to-br from-green-400 to-blue-500 p-8 rounded-xl shadow-lg cursor-pointer transform transition-transform hover:scale-105">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold mb-3">Single Player</h2>
+                                <p class="text-lg opacity-90">Explore all 6 interaction types at your own pace. Deep dive into 30 detailed ecological scenarios.</p>
+                            </div>
+                        </div>
+                        <div id="multiplayer-btn" class="bg-gradient-to-br from-purple-400 to-pink-500 p-8 rounded-xl shadow-lg cursor-pointer transform transition-transform hover:scale-105">
+                            <div class="text-center text-white">
+                                <h2 class="text-2xl font-bold mb-3">Multiplayer</h2>
+                                <p class="text-lg opacity-90">Compete with friends! 2-6 players, 15 random questions, and surprise call-on rounds!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <h3 class="text-2xl font-bold text-gray-700 mb-6">Species Interaction Types</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            ${Object.entries(gameData.interactions).map(([key, interaction]) => `
+                                <button data-interaction-key="${key}" class="interaction-modal-btn ${interaction.color} text-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                                    <div class="text-2xl mb-2">${interaction.icon}</div>
+                                    <div class="font-bold">${interaction.name}</div>
+                                    <div class="text-sm opacity-90">${interaction.symbol}</div>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+                ${renderInteractionModal()}
+            `;
+            render(html, () => {
+                document.getElementById('single-player-btn').addEventListener('click', () => navigate('single'));
+                document.getElementById('multiplayer-btn').addEventListener('click', () => navigate('setup'));
+                document.querySelectorAll('.interaction-modal-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        state.viewingInteraction = btn.dataset.interactionKey;
+                        renderMainMenu(); // Re-render to show modal
+                    });
+                });
+                if (state.viewingInteraction) {
+                    document.getElementById('close-modal-btn').addEventListener('click', () => {
+                        state.viewingInteraction = null;
+                        renderMainMenu();
+                    });
+                }
+            });
+        }
+        
+        function renderInteractionModal() {
+            if (!state.viewingInteraction) return '';
+            const interaction = gameData.interactions[state.viewingInteraction];
+            const info = biggerPictureInfo[state.viewingInteraction];
+            const examples = interaction.scenarios.slice(0, 2);
+            return `
+                <div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
+                    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+                        <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl p-3 rounded-full ${interaction.color} text-white mr-4">${interaction.icon}</div>
+                            <div>
+                                <h2 class="text-3xl font-bold text-gray-800">${interaction.name}</h2>
+                                <p class="text-xl font-mono text-gray-500">${interaction.symbol}</p>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-8">${interaction.description}.</p>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 pb-2">Examples</h3>
+                            <div class="space-y-4">
+                                ${examples.map(ex => `
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <div class="font-bold text-gray-700 flex items-center">
+                                            <span class="text-2xl mr-2">${ex.species1.icon}</span> vs <span class="text-2xl ml-2">${ex.species2.icon}</span>
+                                            <span class="ml-4">${ex.title}</span>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-3">${info.title}</h3>
+                            <p class="text-blue-900 leading-relaxed">${info.text}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSinglePlayerGame() {
+            const gameComplete = state.currentScenarioIndex >= state.singlePlayerQuestions.length;
+            const correctAnswers = state.userAnswers.filter(a => a.correct).length;
+            const totalAnswered = state.userAnswers.length;
+
+            if (gameComplete) {
+                const accuracy = state.singlePlayerQuestions.length > 0 ? Math.round((correctAnswers / state.singlePlayerQuestions.length) * 100) : 0;
+                let feedback = "Keep studying! 📚";
+                if (accuracy >= 80) feedback = "Excellent work! 🌟";
+                else if (accuracy >= 60) feedback = "Good job! 👍";
+                
+                const html = `
+                    <div class="max-w-4xl mx-auto p-6">
+                        <div class="text-center mb-8">
+                            <h1 class="text-4xl font-bold text-green-600 mb-4">🎉 Quiz Complete! 🎉</h1>
+                            <h2 class="text-2xl font-bold text-gray-700 mb-6">Final Score: ${correctAnswers} / ${state.singlePlayerQuestions.length} correct</h2>
+                            <p class="text-xl text-gray-600">${feedback}</p>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-6">
+                             <div class="text-center">
+                                <div class="text-6xl font-bold text-green-500 mb-2">${accuracy}%</div>
+                                <p class="text-gray-600 mb-6">Accuracy</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="play-again-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg mr-4">Play Again 🔄</button>
+                            <button id="main-menu-btn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg">Main Menu</button>
+                        </div>
+                    </div>`;
+                render(html, () => {
+                    document.getElementById('play-again-btn').addEventListener('click', startSinglePlayerGame);
+                    document.getElementById('main-menu-btn').addEventListener('click', () => navigate('menu'));
+                });
+                return;
+            }
+
+            const currentQuestion = state.singlePlayerQuestions[state.currentScenarioIndex];
+            const userAnswer = state.userAnswers.find(a => a.scenarioId === currentQuestion.id);
+
+            const html = `
+                <div class="max-w-4xl mx-auto p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <button id="main-menu-btn" class="flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            Main Menu
+                        </button>
+                        <div class="text-right">
+                             <p class="text-gray-600">Question ${state.currentScenarioIndex + 1} of ${state.singlePlayerQuestions.length}</p>
+                             <p class="text-sm text-gray-500">Score: ${correctAnswers} / ${totalAnswered}</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">${currentQuestion.species1.icon}</div>
+                            <div class="text-2xl mr-4">🔄</div>
+                            <div class="text-4xl mr-4">${currentQuestion.species2.icon}</div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">${currentQuestion.title}</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">${currentQuestion.description}</p>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <p class="font-medium text-blue-800">${currentQuestion.question}</p>
+                        </div>
+                        
+                        ${!userAnswer ? `
+                            <div class="grid md:grid-cols-2 gap-4">
+                                ${currentQuestion.options.map((option, index) => `
+                                    <button data-answer-index="${index}" class="single-player-option p-4 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium text-left transition-colors">
+                                        ${String.fromCharCode(65 + index)}. ${option}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        ` : `
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold">${userAnswer.correct ? 'Correct!' : 'Incorrect'}</h4>
+                                <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                                    <p class="font-medium text-gray-800 mb-2">Correct Answer: ${currentQuestion.options[currentQuestion.correct]}</p>
+                                    <p class="text-gray-700">${currentQuestion.explanation}</p>
+                                </div>
+                            </div>
+                        `}
+                        
+                        <div class="flex justify-between items-center pt-4 border-t mt-6">
+                            <button id="prev-question-btn" ${state.currentScenarioIndex === 0 ? 'disabled' : ''} class="flex items-center bg-gray-500 hover:bg-gray-600 disabled:bg-gray-300 text-white font-bold py-2 px-4 rounded-lg">
+                                Previous
+                            </button>
+                            <button id="next-question-btn" ${!userAnswer ? 'disabled' : ''} class="flex items-center bg-blue-500 hover:bg-blue-600 disabled:bg-gray-300 text-white font-bold py-2 px-4 rounded-lg">
+                                ${state.currentScenarioIndex === state.singlePlayerQuestions.length - 1 ? 'Finish Quiz' : 'Next'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            render(html, () => {
+                document.getElementById('main-menu-btn').addEventListener('click', () => navigate('menu'));
+                document.querySelectorAll('.single-player-option').forEach(btn => {
+                    btn.addEventListener('click', () => handleSinglePlayerAnswer(parseInt(btn.dataset.answerIndex)));
+                });
+                document.getElementById('prev-question-btn').addEventListener('click', () => {
+                    if (state.currentScenarioIndex > 0) {
+                        state.currentScenarioIndex--;
+                        renderSinglePlayerGame();
+                    }
+                });
+                 document.getElementById('next-question-btn').addEventListener('click', () => {
+                    if (userAnswer) {
+                        state.currentScenarioIndex++;
+                        renderSinglePlayerGame();
+                    }
+                });
+            });
+        }
+        
+        function renderMultiplayerSetup() {
+            const { players, timerDuration } = state.multiplayer;
+            const html = `
+                <div class="max-w-4xl mx-auto p-6">
+                    <button id="main-menu-btn" class="flex items-center text-blue-600 hover:text-blue-800 font-medium mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        Back to Menu
+                    </button>
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl font-bold text-purple-600 mb-4">🎮 Multiplayer Setup</h1>
+                    </div>
+                    ${players.length === 0 ? `
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h2 class="text-2xl font-bold text-center mb-6">Select Number of Players</h2>
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                ${[2, 3, 4, 5, 6].map(num => `
+                                    <button data-player-count="${num}" class="player-count-btn bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-6 rounded-lg transform transition-transform hover:scale-105">${num} Players</button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : `
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-center mb-6">Enter Player Names</h2>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                ${players.map(p => `
+                                    <div class="flex items-center space-x-3">
+                                        <input type="text" data-player-id="${p.id}" class="player-name-input flex-1 p-3 border border-gray-300 rounded-lg" value="${p.name}">
+                                    </div>
+                                `).join('')}
+                                </div>
+                            </div>
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-center mb-6">Select Timer Speed</h2>
+                                <div class="grid grid-cols-3 gap-4">
+                                    <button data-timer="10" class="timer-btn p-4 rounded-lg font-bold border-2 ${timerDuration === 10 ? 'bg-red-500 text-white border-red-700' : 'bg-gray-100 hover:bg-red-100'}">Lightning (10s)</button>
+                                    <button data-timer="20" class="timer-btn p-4 rounded-lg font-bold border-2 ${timerDuration === 20 ? 'bg-yellow-500 text-white border-yellow-700' : 'bg-gray-100 hover:bg-yellow-100'}">Stressful (20s)</button>
+                                    <button data-timer="30" class="timer-btn p-4 rounded-lg font-bold border-2 ${timerDuration === 30 ? 'bg-green-500 text-white border-green-700' : 'bg-gray-100 hover:bg-green-100'}">Relaxed (30s)</button>
+                                </div>
+                            </div>
+                            <div class="flex justify-center space-x-4">
+                                <button id="change-player-count-btn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg">Change Player Count</button>
+                                <button id="start-game-btn" ${!timerDuration ? 'disabled' : ''} class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg disabled:bg-gray-300">Start Game! 🚀</button>
+                            </div>
+                        </div>
+                    `}
+                </div>
+            `;
+             render(html, () => {
+                document.getElementById('main-menu-btn').addEventListener('click', () => navigate('menu'));
+                document.querySelectorAll('.player-count-btn').forEach(btn => {
+                    btn.addEventListener('click', () => setupMultiplayerPlayers(parseInt(btn.dataset.playerCount)));
+                });
+                if(players.length > 0) {
+                    document.getElementById('change-player-count-btn').addEventListener('click', () => {
+                       state.multiplayer.players = [];
+                       renderMultiplayerSetup();
+                    });
+                     document.getElementById('start-game-btn').addEventListener('click', startMultiplayerGame);
+                     document.querySelectorAll('.player-name-input').forEach(input => {
+                        input.addEventListener('input', (e) => {
+                            const player = state.multiplayer.players.find(p => p.id === parseInt(e.target.dataset.playerId));
+                            if(player) player.name = e.target.value;
+                        });
+                     });
+                     document.querySelectorAll('.timer-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            state.multiplayer.timerDuration = parseInt(btn.dataset.timer);
+                            renderMultiplayerSetup();
+                        });
+                     });
+                }
+            });
+        }
+        
+        function renderMultiplayerGame() {
+            const { multiplayer } = state;
+
+            if (multiplayer.gameComplete) {
+                const sortedPlayers = [...multiplayer.players].sort((a, b) => b.score - a.score);
+                const winner = sortedPlayers[0];
+                const html = `
+                    <div class="max-w-4xl mx-auto p-6">
+                        <div class="text-center mb-8">
+                            <h1 class="text-4xl font-bold text-purple-600 mb-4">🏆 Game Complete!</h1>
+                            <h2 class="text-2xl font-bold text-green-600">🎉 Congratulations ${winner.name}! 🎉</h2>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-6">
+                            <h3 class="text-2xl font-bold text-center mb-6">Final Scores</h3>
+                            <div class="space-y-4">
+                                ${sortedPlayers.map((player, index) => `
+                                    <div class="flex justify-between items-center p-4 rounded-lg ${index === 0 ? 'bg-yellow-100' : 'bg-gray-100'}">
+                                        <div class="font-bold text-lg">${index + 1}. ${player.name}</div>
+                                        <div class="text-3xl font-bold text-purple-600">${player.score}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="play-again-btn" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-lg mr-4">Play Again</button>
+                            <button id="main-menu-btn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg">Main Menu</button>
+                        </div>
+                    </div>
+                `;
+                 render(html, () => {
+                    document.getElementById('play-again-btn').addEventListener('click', () => navigate('setup'));
+                    document.getElementById('main-menu-btn').addEventListener('click', () => navigate('menu'));
+                });
+                return;
+            }
+
+            const currentQuestion = multiplayer.questions[multiplayer.currentQuestionIndex];
+            const isAnsweringTurn = multiplayer.isCallOnRound || !!multiplayer.currentPlayerToAnswer;
+            
+            let timerColor = 'text-green-500';
+            if(multiplayer.timer <= multiplayer.timerDuration * 0.5) timerColor = 'text-yellow-500';
+            if(multiplayer.timer <= multiplayer.timerDuration * 0.3) timerColor = 'text-red-500';
+
+            const html = `
+                <div class="max-w-6xl mx-auto p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <button id="main-menu-btn" class="flex items-center text-blue-600 hover:text-blue-800 font-medium">End Game</button>
+                        <h1 class="text-2xl font-bold text-purple-600">Question ${multiplayer.currentQuestionIndex + 1} of ${multiplayer.questions.length}</h1>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                        ${multiplayer.players.map(p => `
+                            <div class="p-4 rounded-lg border-2 ${p.id === multiplayer.currentPlayerToAnswer ? 'border-green-500 bg-green-50' : (p.id === multiplayer.calledOnPlayer && multiplayer.isCallOnRound) ? 'border-yellow-500 bg-yellow-50' : 'border-gray-300 bg-white'}">
+                                <div class="text-center">
+                                    <div class="font-bold text-lg">${p.name}</div>
+                                    <div class="text-2xl font-bold text-purple-600">${p.score}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    ${!multiplayer.showAnswer ? `
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-6">
+                            ${multiplayer.isCallOnRound ? `<div class="text-center bg-yellow-100 p-4 rounded-lg mb-4 text-yellow-800 font-bold">🎯 SURPRISE CALL-ON ROUND! ${multiplayer.players.find(p=>p.id === multiplayer.calledOnPlayer).name} must answer!</div>` : ''}
+                            <div class="flex items-center mb-4"><div class="text-4xl mr-4">${currentQuestion.species1.icon}</div><div class="text-2xl mr-4">🔄</div><div class="text-4xl mr-4">${currentQuestion.species2.icon}</div></div>
+                            <h2 class="text-2xl font-bold mb-4">${currentQuestion.title}</h2>
+                            <p class="text-gray-700 mb-6">${currentQuestion.description}</p>
+                            <div class="bg-blue-50 p-4 rounded-lg"><p class="font-medium text-blue-800">${currentQuestion.question}</p></div>
+                        </div>
+
+                        ${isAnsweringTurn && multiplayer.timer !== null ? `
+                            <div class="flex justify-center mb-6">
+                                <div class="relative w-32 h-32">
+                                     <svg class="w-full h-full" viewBox="0 0 120 120">
+                                        <circle class="text-gray-200" stroke-width="10" stroke="currentColor" fill="transparent" r="50" cx="60" cy="60"/>
+                                        <circle class="timer-circle-progress ${timerColor}" stroke-width="10" stroke-dasharray="${2 * Math.PI * 50}" stroke-dashoffset="${2 * Math.PI * 50 - (multiplayer.timer / multiplayer.timerDuration) * (2 * Math.PI * 50)}" stroke-linecap="round" stroke="currentColor" fill="transparent" r="50" cx="60" cy="60" transform="rotate(-90 60 60)"/>
+                                    </svg>
+                                    <div class="absolute inset-0 flex flex-col items-center justify-center ${timerColor}"><span class="text-4xl font-bold">${Math.ceil(multiplayer.timer)}</span></div>
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                            <h3 class="text-xl font-bold text-center mb-4">${isAnsweringTurn ? 'Choose your answer:' : 'Answer Options:'}</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                ${currentQuestion.options.map((option, index) => isAnsweringTurn ? 
+                                    `<button data-answer-index="${index}" class="multiplayer-option p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium text-left">${String.fromCharCode(65 + index)}. ${option}</button>` :
+                                    `<div class="p-4 bg-gray-50 rounded-lg border-2"><span class="font-bold text-blue-600">${String.fromCharCode(65 + index)}.</span> ${option}</div>`
+                                ).join('')}
+                            </div>
+                        </div>
+
+                        ${!isAnsweringTurn ? `
+                            <div class="text-center mb-6">
+                                <h3 class="text-xl font-bold mb-4">Who knows the answer? Click your name! ✋</h3>
+                                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                                ${multiplayer.players.map(p => `<button data-player-id="${p.id}" class="player-buzz-btn p-4 rounded-lg font-bold bg-blue-500 hover:bg-blue-600 text-white">${p.name}</button>`).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    ` : `
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold mb-4">${multiplayer.lastAnswerIndex === -1 ? "Time's Up!" : multiplayer.lastAnswerCorrect ? 'Correct!' : 'Incorrect'}</h3>
+                            ${!multiplayer.lastAnswerCorrect ? `<div class="p-3 bg-red-50 border-l-4 border-red-500 rounded mb-3">Your Answer: ${currentQuestion.options[multiplayer.lastAnswerIndex]}</div>` : ''}
+                            <div class="p-3 bg-green-50 border-l-4 border-green-500 rounded mb-4">Correct Answer: ${currentQuestion.options[currentQuestion.correct]}</div>
+                            <p class="text-gray-700 mb-4 p-4 bg-gray-50 rounded-lg">${currentQuestion.explanation}</p>
+                            <div class="text-center">
+                                <button id="next-question-btn" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg">Next Question →</button>
+                            </div>
+                        </div>
+                    `}
+                </div>
+            `;
+            render(html, () => {
+                document.getElementById('main-menu-btn').addEventListener('click', () => navigate('menu'));
+                if (!multiplayer.showAnswer) {
+                     document.querySelectorAll('.player-buzz-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            state.multiplayer.currentPlayerToAnswer = parseInt(btn.dataset.playerId);
+                            renderMultiplayerGame();
+                            startTimer();
+                        });
+                    });
+                     document.querySelectorAll('.multiplayer-option').forEach(btn => {
+                        btn.addEventListener('click', () => submitMultiplayerAnswer(parseInt(btn.dataset.answerIndex)));
+                    });
+                     // Auto-start timer for call-on rounds
+                    if(multiplayer.isCallOnRound && multiplayer.timer === null) {
+                        startTimer();
+                    }
+                } else {
+                    document.getElementById('next-question-btn').addEventListener('click', nextMultiplayerQuestion);
+                }
+            });
+        }
+        
+        // --- INITIALIZATION ---
+        // Start the app by rendering the main menu.
+        document.addEventListener('DOMContentLoaded', mainRenderSwitch);
+
+    </script>
+</body>
+</html>
