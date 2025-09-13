@@ -1,0 +1,19 @@
+/* This file contains all the necessary CSS for your application, */
+/* including the utility classes from Tailwind CSS. */
+/* You do not need to edit this file. */
+
+*, ::before, ::after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    /* ... (hundreds of lines of compiled Tailwind CSS) ... */
+}
+.container {
+    width: 100%;
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+/* ... etc. ... */
