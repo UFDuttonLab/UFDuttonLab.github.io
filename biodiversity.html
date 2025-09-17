@@ -95,7 +95,7 @@
                     content: {
                         explanation: 'Genetic diversity refers to the total number of genetic characteristics in the genetic makeup of a species. It includes diversity within populations (different versions of genes) and between populations (population differences). Higher genetic diversity provides raw material for adaptation and evolutionary responses to environmental change.',
                         visual: '🧬 DNA Variation → 🔀 Different Gene Versions → 🦋🦋🦋 Population Differences → 🌱 Ability to Adapt',
-                        example: 'Cheetahs have extremely low genetic diversity due to a population bottleneck about 12,000 years ago - they share over 99% of their DNA. In contrast, humans show high genetic diversity with about 0.1% DNA differences between individuals, providing greater evolutionary potential.',
+                        example: 'Cheetahs have extremely low genetic diversity due to a population bottleneck approximately 10,000-12,000 years ago (with confidence intervals spanning 8,000-15,000 years based on genetic analyses) - they share over 99% of their DNA. In contrast, humans show high genetic diversity with approximately 0.1-0.4% DNA differences between individuals (0.1% for SNPs only; 0.4% including all variants such as insertions, deletions, and structural variations), providing greater evolutionary potential.',
                         limitations: 'Challenges include: (1) Genetic diversity does not always match with physical diversity, (2) Small populations can lose genetic diversity through random chance regardless of natural selection, (3) Some species function well with low genetic diversity, (4) Measuring genetic diversity requires expensive molecular techniques, and (5) Neutral genetic diversity may not reflect the ability to adapt.'
                     },
                     challenge: { question: 'You are studying two island bird populations. Island A has high genetic diversity. Island B has low genetic diversity. A new disease arrives. Which population is more likely to survive and why?', options: ['Island A - higher genetic diversity provides more immune system variants', 'Island B - genetic uniformity means proven successful traits', 'Both equally - population size is the same', 'Neither - diseases always cause extinction'], correct: 0, explanation: 'Island A has higher evolutionary potential. Greater genetic diversity means more variants of an immune system genes, increasing the probability that some individuals carry versions that provide disease resistance.' }
@@ -119,8 +119,12 @@
                     content: {
                         explanation: 'Ecosystem diversity encompasses the variety of biological communities, their physical environments, and ecological processes. It includes habitat diversity, community types, and ecosystem functions. Ecosystem diversity operates at landscape scales and provides the environmental context for species and genetic diversity.',
                         visual: '🏔️ Mountains → 🌊 Rivers → 🌲 Forests → 🏜️ Deserts → 🌍 Landscape Diversity',
-                        example: 'Costa Rica, despite covering only 0.03% of Earth\'s surface, contains about 5% of global biodiversity partly due to high ecosystem diversity: 12 ecological zones from lowland rainforests to cloud forests to dry forests, coral reefs, mangroves, and high-altitude ecosystems.',
-                        limitations: 'Challenges include: (1) Ecosystem boundaries are often arbitrary and scale-dependent, (2) Classification systems vary among researchers, (3) Human-modified ecosystems are difficult to categorize, (4) Ecosystem functions may be similar despite structural differences, and (5) Climate change is rapidly altering ecosystem distributions.'
+                        example: `<strong>Costa Rica:</strong> Despite covering only 0.03% of Earth's surface, Costa Rica contains approximately 4-5% of global biodiversity partly due to high ecosystem diversity: 12 ecological zones from lowland rainforests to cloud forests to dry forests, coral reefs, and mangroves.<br><br>
+<strong>Arctic Tundra:</strong> The Arctic tundra, despite appearing barren, supports over 1,700 plant species and serves as critical breeding habitat for millions of migratory birds. Its permafrost stores approximately 1,700 billion tons of carbon—nearly twice the amount currently in the atmosphere.<br><br>
+<strong>Temperate Forest:</strong> Temperate deciduous forests of eastern North America contain 25-35 tree species per hectare but support over 200 bird species through vertical habitat stratification from forest floor to canopy.<br><br>
+<strong>Marine Example:</strong> Coral reef ecosystems occupy less than 1% of ocean area but support approximately 25% of all marine fish species, demonstrating how ecosystem diversity creates biodiversity hotspots.<br><br>
+<strong>Grassland Example:</strong> North American tallgrass prairies appear simple above ground but contain root systems extending 15+ feet deep, supporting soil carbon storage and over 200 plant species in a single acre.`,
+                        limitations: "Challenges include: (1) Ecosystem boundaries are often arbitrary and scale-dependent. (2) Classification systems vary among researchers. The World Wildlife Fund recognizes 14 major biomes, while Walter's zonobiome system identifies 9 climate-based zones. Indigenous knowledge systems often recognize additional ecosystem types not captured in Western scientific classifications. This variation highlights how ecosystem boundaries can be subjectively defined. (3) Human-modified ecosystems are difficult to categorize. (4) Ecosystem functions may be similar despite structural differences. (5) Climate change is rapidly altering ecosystem distributions."
                     },
                     challenge: { question: 'A development project will destroy 1000 hectares. Option A: 1000ha of a single forest type. Option B: 200ha each of forest, wetland, grassland, shrubland, and river habitat. Which loss is more severe?', options: ['Option A - larger continuous area lost', 'Option B - multiple ecosystem types lost', 'Equal - same total area destroyed', 'Option A - forests are more valuable'], correct: 1, explanation: 'Option B represents a greater loss of ecosystem diversity because five different ecosystem types are destroyed versus one. Each ecosystem supports unique species and processes.' }
                 },
@@ -142,7 +146,7 @@
                      content: {
                         explanation: 'A population bottleneck is an event that drastically reduces the size of a population. The surviving population often has less genetic variation than the original population because many alleles are lost by chance. This can make the population more vulnerable to future environmental changes or diseases.',
                         visual: 'Diverse Population (🔴🔵🟢⚫️⚪️) → Event → Reduced Population (🔴🔵) → Recovered Population (Less Diverse)',
-                        example: 'The Northern elephant seal was hunted to near extinction in the 1890s, with only about 20 individuals remaining. Although the population has recovered to over 100,000, they have much lower genetic diversity than the Southern elephant seal, which was not so severely hunted.'
+                        example: 'The Northern elephant seal was hunted to near extinction in the 1890s, with an estimated 20-100 individuals remaining (historical records suggest 20-30, but uncertainty exists due to incomplete population surveys). Although the population has recovered to over 100,000, they have much lower genetic diversity than the Southern elephant seal, which was not so severely hunted.'
                      },
                     challenge: { question: 'A population of seals is reduced from 10,000 to 100 individuals due to overhunting. This is an example of:', options: ['The founder effect', 'A population bottleneck', 'Adaptive radiation', 'Gene flow'], correct: 1, explanation: 'A population bottleneck occurs when a population\'s size is sharply reduced, leading to a loss of genetic diversity, as seen in the Northern elephant seal.' }
                 },
@@ -220,7 +224,8 @@
                             'Shannon Index (H\')': {
                                 description: 'Quantifies the uncertainty in predicting the species identity of an individual taken at random. It combines richness and evenness, giving more weight to rare species.',
                                 formula: "H' = -Σ(pi × ln(pi))",
-                                interpretation: 'Where pi is the proportion of individuals belonging to the i-th species. Values typically range from 1.5 (low) to 3.5 (high).',
+                                interpretation: "Shannon index values vary significantly based on community size and species richness. For small communities (2-10 species), values typically range from 0.3-2.0. For moderately diverse communities (10-50 species), values commonly range from 1.5-3.0. For highly diverse communities (>50 species), values can reach 3.0-4.5 or higher. The theoretical maximum equals ln(S) where S is the number of species. Context matters: a value of 1.5 could be high for a 5-species community but low for a 100-species community.",
+                                mathContext: "Why do Shannon values vary so much? The index is logarithmic, meaning small changes in evenness create large changes in the index value. Additionally, the maximum possible Shannon value depends on species richness: 2 species can never exceed H' = 0.69 (ln(2)), while 100 species could theoretically reach H' = 4.61 (ln(100)).",
                                 whenToUse: 'A very common, robust index for comparing diversity across communities, especially when you want to account for both richness and evenness.'
                             },
                             'Simpson Index (D)': {
@@ -236,8 +241,15 @@
                                 whenToUse: 'To specifically quantify the evenness component of diversity, separating it from the richness component.'
                             }
                         },
-                        example: 'Garden A: 90 daisies, 10 roses (S=2, H\'=0.33, J\'=0.48). Garden B: 50 daisies, 50 roses (S=2, H\'=0.69, J\'=1.0). Both have the same richness (S), but Garden B has much higher Shannon diversity and perfect evenness.',
-                        limitations: 'Alpha diversity is scale-dependent; the size of the area you define matters. It doesn\'t tell you anything about diversity across a wider landscape or the uniqueness of the species present.'
+                        example: `<strong>Example Calculation:</strong> Garden A: 90 daisies, 10 roses (S=2, H'=0.33, J'=0.48). Garden B: 50 daisies, 50 roses (S=2, H'=0.69, J'=1.0). Both have the same richness (S), but Garden B has much higher Shannon diversity and perfect evenness.
+<br><br><strong>Step-by-Step Shannon Calculation:</strong>
+<br>Forest plot with [50, 30, 15, 3, 2] individuals of 5 species:
+<br>1. Calculate proportions (p<sub>i</sub>): [0.50, 0.30, 0.15, 0.03, 0.02]
+<br>2. Calculate -p<sub>i</sub>×ln(p<sub>i</sub>) for each: [0.35, 0.36, 0.28, 0.11, 0.08]
+<br>3. Sum all values: H' = 1.18
+<br>4. Maximum possible (perfect evenness): ln(5) = 1.61
+<br>5. Pielou's evenness: J' = 1.18/1.61 = 0.73`,
+                        limitations: "Alpha diversity is scale-dependent; the size of the area you define matters. It doesn't tell you anything about diversity across a wider landscape. <br><br><strong>Sampling Challenges:</strong> (1) <strong>Detection bias</strong> - rare species are often missed in surveys, leading to underestimation of diversity; (2) <strong>Spatial bias</strong> - easily accessible areas are oversampled while remote areas are undersampled; (3) <strong>Temporal bias</strong> - seasonal surveys may miss species active at different times; (4) <strong>Observer bias</strong> - different researchers detect species at different rates; (5) <strong>Taxonomic bias</strong> - some groups (birds, mammals) are better studied than others (invertebrates, microbes)."
                     },
                     challenge: { question: 'A forest plot has 5 tree species with counts: [40, 25, 20, 10, 5]. Which index would best capture the fact that one species is very dominant?', options: ['Species Richness (S)', "Shannon Index (H')", "Simpson Index (D)", "Pielou's Evenness (J')"], correct: 2, explanation: "The Simpson Index (D) gives more weight to abundant species. Its formula (Σpi²) will be heavily influenced by the most common species (with proportion 0.4), making it sensitive to dominance." }
                 },
@@ -269,7 +281,7 @@
                             }
                         },
                         example: 'Lake A has fish [trout, bass, perch]. Lake B has [carp, catfish, perch]. The total species (gamma) is 5. Average alpha is 3. Whittaker\'s Beta = 5/3 ≈ 1.67. For a pairwise comparison, the Jaccard similarity is 1 / (3 + 3 - 1) = 1/5 = 0.2. The dissimilarity is 1 - 0.2 = 0.8, indicating high beta diversity.',
-                        limitations: 'Beta diversity is highly dependent on the scale and distance between samples. Different indices can give different results, and many do not account for species abundance, only presence or absence.'
+                        limitations: "Beta diversity is highly dependent on the scale and distance between samples. Different indices can give different results. <br><br><strong>Sampling Challenges:</strong> (1) <strong>Detection bias</strong> - rare species are often missed in surveys; (2) <strong>Spatial bias</strong> - easily accessible areas are oversampled; (3) <strong>Temporal bias</strong> - seasonal surveys may miss species active at different times; (4) <strong>Observer bias</strong> - different researchers detect species at different rates; (5) <strong>Taxonomic bias</strong> - some groups (e.g., birds) are better studied than others (e.g., microbes)."
                     },
                     challenge: { question: 'You study insects on two mountains. Mountain A has 100 species. Mountain B has 100 species. A total of 110 unique species are found across both mountains. What does this indicate?', options: ['High beta diversity; the mountains have very different insect communities.', 'Low beta diversity; the mountains share most of their insect species.', 'High gamma diversity, but we cannot determine beta.', 'Low alpha diversity on both mountains.'], correct: 1, explanation: "Low beta diversity. If the communities were very different (high beta), the total species count (gamma) would be closer to 200. Since it's only 110, it means most species (90 of them) are found on both mountains, indicating low turnover and high similarity." }
                 },
@@ -295,15 +307,29 @@
                             }
                         },
                         example: 'A mountain range has a gamma diversity of 200 bird species. If the average birds per forest patch (alpha) is 20, then the Whittaker\'s beta diversity is 200 / 20 = 10. This indicates there are effectively 10 distinct bird communities across the mountain range, highlighting high turnover.',
-                        limitations: 'Defining the boundaries of a "region" for gamma diversity can be arbitrary and greatly influences the result. A full species inventory is often impossible to obtain, meaning most gamma diversity estimates are based on extrapolation and sampling.'
+                        limitations: "Defining the boundaries of a 'region' for gamma diversity can be arbitrary. A full inventory is often impossible, so estimates are based on extrapolation. <br><br><strong>Sampling Challenges:</strong> (1) <strong>Detection bias</strong> - rare species are often missed; (2) <strong>Spatial bias</strong> - remote areas are undersampled; (3) <strong>Temporal bias</strong> - surveys may miss seasonal species; (4) <strong>Observer bias</strong> - expert and novice surveyors produce different results; (5) <strong>Taxonomic bias</strong> - well-known groups are overrepresented in data."
                     },
                     challenge: { question: 'Two regions, X and Y, both have a gamma diversity of 300 plant species. Region X has high alpha and low beta diversity. Region Y has low alpha and high beta diversity. Which region is more vulnerable to the destruction of a single large habitat patch?', options: ['Region X, because each patch contains a large proportion of the total regional diversity.', 'Region Y, because each patch contains unique species not found elsewhere.', 'Both are equally vulnerable because their gamma diversity is the same.', 'Neither, as long as some habitat remains.'], correct: 1, explanation: 'Region Y is more vulnerable. High beta diversity means each habitat patch holds a unique collection of species. Destroying one patch could cause regional extinction of those unique species. In Region X, the same species are found everywhere (low beta).' }
+                },
+                {
+                    id: 'recent-advances',
+                    title: 'Recent Advances in Biodiversity Monitoring',
+                    description: 'New technologies revolutionizing ecology.',
+                    content: {
+                        explanation: 'The field of biodiversity monitoring is rapidly evolving with new technologies that allow for faster, broader, and less invasive data collection.',
+                        visual: '🧬 eDNA + 🔊 Acoustics + 🛰️ Satellites + 📱 Citizen Science',
+                        example: `<strong>Environmental DNA (eDNA):</strong> Scientists can now detect species from water or soil samples by analyzing DNA shed by organisms (e.g., skin, feces). This has revolutionized surveys for rare or elusive aquatic species like the great crested newt in Europe.<br><br>
+<strong>Automated Acoustic Monitoring:</strong> Arrays of microphones can be left in a habitat to record sounds 24/7. AI algorithms then analyze these recordings to identify species by their calls, providing data on birds, bats, frogs, and insects over long time periods.<br><br>
+<strong>Remote Sensing:</strong> Satellite imagery, LiDAR, and drones allow for landscape-scale mapping of habitat structure, forest health, and even large animal populations, providing a macro view of biodiversity.<br><br>
+<strong>Citizen Science:</strong> Apps like iNaturalist and eBird engage millions of observers worldwide to submit photographic or observational data. While data quality varies, these platforms provide biodiversity data at an unprecedented scale.`
+                    },
+                    challenge: { question: 'A researcher wants to know if a rare, elusive fish still lives in a large, murky river system without catching it. Which modern technique would be most effective?', options: ['Satellite remote sensing', 'Citizen science photos', 'Environmental DNA (eDNA) sampling', 'Acoustic monitoring'], correct: 2, explanation: 'eDNA is ideal for this scenario. By taking water samples from various points in the river, the researcher can analyze for traces of the fish\'s DNA to confirm its presence without ever having to see or capture it.' }
                 },
                 {
                     id: 'shannon-interpretation',
                     title: 'Shannon Index Interpretation',
                     description: 'Understanding evenness in communities.',
-                    content: {
+                     content: {
                         explanation: "Pielou's Evenness Index (J') standardizes the Shannon Index to a value between 0 and 1, making it easier to interpret. A value of 1 means all species are perfectly even in their abundance (e.g., a community with 10 species, each with 10 individuals). A value near 0 indicates that one or a few species are highly dominant. This index allows you to isolate the evenness component from the richness component of diversity.",
                         visual: "H' (Combined Diversity) ÷ ln(S) (Max Possible Diversity) = J' (Pure Evenness)",
                         example: "A rainforest with a J' of 0.9 has very evenly distributed species. A cornfield with a few weed species might have a J' of 0.1, indicating the corn is overwhelmingly dominant, even if several other species are technically present."
@@ -424,6 +450,19 @@
                         example: 'Soil formation by microorganisms and weathering of rock can take centuries, but it is the essential supporting service that enables provisioning services (food, timber), regulating services (water filtration), and cultural services (parks). Without soil formation, there would be no agriculture or forests.'
                      },
                     challenge: { question: 'Which of the following is the best example of a supporting ecosystem service?', options: ['Timber from a forest', 'Flood control by a wetland', 'Nutrient cycling in the soil', 'Hiking in a national park'], correct: 2, explanation: 'Supporting services are the fundamental processes necessary for all other ecosystem services. Nutrient cycling, soil formation, and primary production are key examples.' }
+                },
+                 {
+                    id: 'conservation-in-action',
+                    title: 'Biodiversity Monitoring in Action',
+                    description: 'Real-world applications of diversity data.',
+                    content: {
+                        explanation: "Biodiversity data isn't just for academic study; it has critical real-world applications in conservation, policy, and urban planning.",
+                        visual: '📊 Data → 📜 Policy → 🏗️ Action',
+                        example: `<strong>Forest Carbon Projects:</strong> To receive funding, many carbon credit projects must now demonstrate 'biodiversity co-benefits'. They use techniques like eDNA surveys and acoustic monitoring to verify that their conservation efforts are protecting wildlife alongside storing carbon.<br><br>
+<strong>Marine Protected Areas (MPAs):</strong> Acoustic monitoring is used within and outside of MPA boundaries to track the recovery of fish populations. An increase in the diversity and abundance of fish sounds inside the MPA is a powerful indicator of its success.<br><br>
+<strong>Urban Planning:</strong> Cities use alpha and beta diversity measures to design effective 'green corridors'. By analyzing the species turnover (beta diversity) between parks, planners can identify which areas need to be connected to facilitate movement for the most species, improving the ecological health of the entire city.`
+                    },
+                    challenge: { question: 'A city wants to build a wildlife corridor between two parks. To design the most effective corridor, they should prioritize connecting areas that have:', options: ['The highest alpha diversity in each park', 'High beta diversity between them', 'Low beta diversity between them', 'The most charismatic species'], correct: 1, explanation: 'High beta diversity indicates the two parks have very different species compositions. A corridor connecting them would facilitate the most movement and genetic exchange between distinct communities, maximizing the benefit for regional biodiversity.' }
                 },
                 {
                     id: 'pollination-service',
@@ -1203,6 +1242,17 @@
                         example: "In a tropical forest, if you map the location of a parent tree and all its seedlings, you'll often find a 'doughnut' pattern of survival. There's a 'dead zone' around the parent tree where pests and diseases are so concentrated that no seedlings survive. The successful seedlings are those that were dispersed further away, leaving space for other tree species to grow near the parent."
                     },
                     challenge: { question: 'What does the Janzen-Connell hypothesis primarily use to explain high tree diversity in the tropics?', options: ['High rainfall and sunlight', 'Host-specific pests and pathogens that kill seedlings near the parent tree', 'A long history without glaciation', 'High rates of mutation'], correct: 1, explanation: 'This hypothesis suggests that specialized natural enemies (insects, fungi) prevent any single species from dominating by killing its offspring near the parent tree, thus opening up space for other species to establish.' }
+                },
+                {
+                    id: 'climate-change-patterns',
+                    title: 'Climate Change Impacts on Diversity Patterns',
+                    description: 'How global warming is altering biodiversity gradients.',
+                    content: {
+                        explanation: "Climate change is rapidly altering traditional biodiversity patterns. As the planet warms, established gradients are being disrupted. This makes historical baseline biodiversity data extremely valuable for tracking and predicting future changes.",
+                        visual: '📈 Temperature → ↗️ Species moving poleward/upward → 🗺️ Shifting patterns',
+                        example: 'Pika, small mammals adapted to cold alpine environments, are being forced to move to higher elevations to escape warming temperatures. They are running out of mountain, a phenomenon known as the "escalator to extinction." In marine systems, tropical coral species are appearing in previously subtropical waters, while temperate kelp forests are contracting.'
+                    },
+                    challenge: { question: 'What is a primary way climate change is altering the latitudinal diversity gradient?', options: ['By making the tropics less diverse', 'By causing species to shift their ranges towards the poles and higher elevations', 'By increasing the number of species globally', 'By making all ecosystems identical'], correct: 1, explanation: 'The most documented global response is the movement of species ranges toward cooler areas—poleward in latitude and upward in elevation—to track their preferred climate conditions.' }
                 }
             ]
         };
@@ -1421,6 +1471,7 @@
                     <h5 class="font-semibold text-blue-700 mb-2">${key}</h5>
                     <p class="text-slate-700 mb-2">${value.description}</p>
                     ${value.formula ? `<div class="bg-white rounded p-2 mb-2 font-mono text-sm border"><strong>Formula:</strong> ${value.formula}</div>` : ''}
+                    ${value.mathContext ? `<div class="bg-blue-50 border border-blue-200 rounded p-3 my-2 text-sm text-blue-800"><strong>Understanding the Numbers:</strong> ${value.mathContext}</div>` : ''}
                     ${value.range ? `<p class="text-sm text-slate-600 mb-1"><strong>Range:</strong> ${value.range}</p>` : ''}
                     ${value.interpretation ? `<p class="text-sm text-slate-600 mb-1"><strong>Interpretation:</strong> ${value.interpretation}</p>` : ''}
                     ${value.whenToUse ? `<p class="text-sm text-slate-600 mb-1"><strong>When to use:</strong> ${value.whenToUse}</p>` : ''}
