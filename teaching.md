@@ -15,7 +15,7 @@ Join me for one of my courses at the University of Florida!
 
 I'm always pushing myself to learn new methods and try new ways of teaching. As part of the General Ecology course, I've begun developing web apps to help reinforce concepts from my lectures. I'll give a lecture, then the students will break up into groups and use the web app to reinforce concepts discussed in the lecture. These web apps are either simulations, games, a choose-your-own-adventure style app, or a quiz/review type app. Here is my curent list based off my lectures. Feel free to use them, modify them, or take them and customize them for your own ecology course. They were made with various coding tools (Lovable.ai, Google Gemini, Claude Code, Perplexity.ai). Most of them run great on mobile screens...so students can be studying for the exams and reimforcing concepts while using their phone and waiting for the bus between classes....etc.
 
- - Lokta-Volterra Models Explorer (interactive simulator for the competition and predator-prey models)
+ - [Lokta-Volterra Models Explorer](https://ufduttonlab.github.io/lotka-volterra/) (interactive simulator for the competition and predator-prey models)
  - The Planet of Florilandia (design and test food webs)
  - Florida Niche Explorer (niche concepts with native and invasive species in Florida - not mobile friendly)
  - Life History Traits Battle Royale
