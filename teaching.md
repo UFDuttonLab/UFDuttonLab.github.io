@@ -9,9 +9,10 @@ Join me for one of my courses at the University of Florida!
  - Data Collection with Open Technologies for Reproducible Research (Fall 2020) 
  - Animal and Ecosystem Microbiomes (Spring 2024)
  - Ecology of the Microbiome (Fall 2024)
- - Ecology portion of Intro Bio BSC2011 (Spring 2025)
+ - Ecology portion of Intro Bio BSC2011 - 900 students! (Spring 2025)
  - Population and Community Ecology portion of General Ecology (Fall 2025)
  - Animal and Ecosystem Microbiomes (Spring 2026)
+ - Ecology portion of Intro Bio BSC2011 (Spring 2026)
 
 ## WEB APPS FOR TEACHING
 
