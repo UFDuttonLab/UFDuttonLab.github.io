@@ -6,17 +6,23 @@ subtitle:
 
 Our lab consists of everything we need to extract, sequence, and analyze DNA or RNA from environmental samples or animals. 
 
+[Lab Equipment Scheduling App](https://ufduttonlab.github.io/lab-scheduler/)
+
 Absolutely Q dPCR
 
 3 Opentrons OT-2 robots
 
-1 Opentrons Flex robot
+2 Opentrons Flex robots
 
 Tapestation
 
 Bioanalyzer
 
 Centrifuges
+
+Quantstudio 3 qPCR
+
+Absolute Q dPCR
 
 Chai qPCR
 
