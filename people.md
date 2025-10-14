@@ -5,9 +5,10 @@ subtitle:
 ---
 
 ## Christopher Dutton
-2019 - PhD from the Department of Ecology and Evolutionary Biology at Yale University.  
-2012 - Master's of Environmental Studies degree from the the Yale School of Forestry and Environmental Studies.  
-1999 - Bachelor's degree in saxophone performance / music / criminal justice from the presigious School of Music at Indiana University (Bloomington).  
+
+![Chris](img/chris.jpg)
+
+Chris is an Assistant Professor at the University of Florida who leads the lab, specializing in environmental microbiology, ecology, and open source low-cost technologies. He earned his PhD in 2019 from the Department of Ecology and Evolutionary Biology at Yale University, a Master’s of Environmental Studies from Yale’s School of Forestry and Environmental Studies (2012), and a Bachelor’s degree in saxophone performance, music, and criminal justice from the prestigious School of Music at Indiana University Bloomington (1999). The Dutton Lab at the University of Florida explores how environmental and animal microbiomes shape ecosystems and alter health. Every initiative from the lab aims to make research and education more effective and inclusive, empowering students, scientists, and the broader public to engage with ecology and protect natural resources.
 
 ## Postdoctoral Associates
 Dr. Audrey Goeckner  
