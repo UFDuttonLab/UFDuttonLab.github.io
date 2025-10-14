@@ -33,7 +33,25 @@ Tavis Goldwire
 
 After joining the Dutton lab in 2022 as an undergraduate, Tavis graduated from the University of Florida with a B.S. in Biology in 2025. His undergraduate research included work on Disney's Animal Kingdom microbiomes and an Honors Thesis on microbial transference from hippos to fish. Continuing as a Master's student, Tavis now investigates the links between microbial ecology, zoo practices, and the health of captive giraffe populations. He also loves his cat, Kitty.
 
+Suzanna Mickey
+
 ## Undergrads
+
+Charlotte Levet Bourtayre
+
+Audrey-Anne Haynes
+
+Cecilia Aragon
+
+Maggie Johnson
+
+Ryleigh Sperry
+
+Will Sophocles
+
+Sierra Mulholland
+
+## Past Members
 
 Alesha Wallen 
 
@@ -42,8 +60,6 @@ Faith Dunlap
 Meg Morrow
 
 Serena Huberty
-
-Sierra Mulholland
 
 Katelyn Lancaster
 
