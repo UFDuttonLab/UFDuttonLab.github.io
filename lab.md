@@ -8,6 +8,12 @@ Our lab consists of everything we need to extract, sequence, and analyze DNA or 
 
 [Lab Equipment Scheduling App](https://ufduttonlab.github.io/lab-scheduler/)
 
+![lab1](img/lab1.png)
+
+![lab2](img/lab2.png)
+
+![lab3](img/lab3.png)
+
 Absolutely Q dPCR
 
 3 Opentrons OT-2 robots
