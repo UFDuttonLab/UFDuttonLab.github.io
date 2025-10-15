@@ -45,6 +45,8 @@ Charlotte Levet Bourtayre
 
 Audrey-Anne Haynes
 
+![Audrey-Anne](img/audrey-anne.jpeg)
+
 Cecilia Aragon
 
 Maggie Johnson
