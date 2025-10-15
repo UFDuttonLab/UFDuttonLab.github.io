@@ -40,6 +40,14 @@ Computers
 
 Access to the UF Supercomputer
 
+We use a custom in-house deveveloped scheduling app to track equipment usage on different proejcts. This also allows us to track effort by students on different projects. [Lab Equipment Scheduling App](https://ufduttonlab.github.io/lab-scheduler/)
+
+![schedule1](img/schedule1.png)
+
+![schedule2](img/schedule2.png)
+
+![schedule3](img/schedule3.png)
+
 
 ![Mara River](img/PXL_20220701_101424622.MP.jpg){:style="float: left;margin-right: 7px;:class="img-responsive"}
 
