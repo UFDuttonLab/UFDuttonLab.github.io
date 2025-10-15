@@ -35,6 +35,10 @@ After joining the Dutton lab in 2022 as an undergraduate, Tavis graduated from t
 
 Suzanna Mickey
 
+![Suzanna](img/suzanna.jpg)
+
+Suzanna joined the Dutton Lab as a part time MS student in Fall 2025. She works full time as a marine mammal stranding biologist for the [UF Marine Animal Rescue program](https://cdpm.vetmed.ufl.edu/services/marine-animal-rescue-program/). Her research focuses on bottlenose dolphins, collaborating with the [Cedar Key Dolphin Project](https://www.cedarkeydolphinproject.org/#/), to explore non-invasive methods for assessing dolphin health. She is studying the respiratory microbiomes of dolphins to investigate the presence of infectious diseases. Her long-term goal is to strengthen the link between health and ecology to better understand and protect dolphin populations. Squint closely to see her amazing xtra tufs with orcas on them. 
+
 ## Undergrads
 
 Charlotte Levet Bourtayre
