@@ -11,9 +11,10 @@ Our research seeks to describe and quantify how animals and their microbial symb
 Our current research projects include;
 - Can we develop models to help predict the later health of a animal of conservation concern using passive fecal sampling and sequencing?
 - Can we develop a realistic enough robotic bunny to serve as a python lure in the Everglades?
+- How does the developing infant's gut microbiome alter their susceptibility to later disease?
 - Can we use dolphins as environmental sentinels?
 - How does carbon cycling change over the terrestrial aquatic interface of wetlands?
-- Does the meta-gut with hippos in rivers alter their behavior?
+- How does the meta-gut dynamic with hippos in rivers alter their behavior?
 
 ## Animal influences on biogeochemistry
 
