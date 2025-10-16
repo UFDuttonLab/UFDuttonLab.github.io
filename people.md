@@ -57,6 +57,10 @@ Maggie Johnson
 
 Ryleigh Sperry
 
+![Ryleigh](img/ryleigh.jpg)
+
+Ryleigh joined the Dutton lab as an undergrad student in the summer of 2025. She is currently pursuing a degree in Wildlife, Ecology, and Conservation with a pre-professional focus with the goal of attending graduate school to obtain a doctorate in veterinary medicine. Ryleigh is interested in DNA extraction and sequencing in order to answer questions about animal behavior and health.
+
 Will Sophocles
 
 Sierra Mulholland
