@@ -10,8 +10,8 @@ subtitle:
 
 Chris is an Assistant Professor at the University of Florida who leads the lab, specializing in environmental microbiology, ecology, and open source low-cost technologies. He earned his PhD in 2019 from the Department of Ecology and Evolutionary Biology at Yale University, a Master’s of Environmental Studies from Yale’s School of Forestry and Environmental Studies (2012), and a Bachelor’s degree in saxophone performance, music, and criminal justice from the prestigious School of Music at Indiana University Bloomington (1999). The Dutton Lab at the University of Florida explores how environmental and animal microbiomes shape ecosystems and alter health. Every initiative from the lab aims to make research and education more effective and inclusive, empowering students, scientists, and the broader public to engage with ecology and protect natural resources.
 
-## Postdoctoral Associates
-Dr. Audrey Goeckner  
+# Postdoctoral Associates
+## Dr. Audrey Goeckner  
 
 ![Audrey](img/audrey.jpg)
 
@@ -83,9 +83,9 @@ Will Sophocles
 
 Sierra Mulholland
 
-![Sierra](img/sierra.jpg)
+![Sierra](img/sierra.jpeg)
 
-Sierra joined the Dutton lab as an undergrad student in Spring of 2024. She is interested in Public Health and microbiomes. 
+Sierra is a 4th year undergraduate studying public health and zoology. She joined the Dutton lab after taking his microbiome course through the biology Semester of Immersion program. She assists in DNA extraction and analysis, primarily with the Animal Kingdom samples, and is interested in learning more about microbiology for both animal and human health applications. 
 
 ## Past Members
 
