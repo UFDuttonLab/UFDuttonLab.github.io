@@ -19,6 +19,10 @@ Audrey joined the Dutton lab as a postdoctoral research associate in August 2024
 
 Dr. Emily (Lee) Nonnamaker
 
+![Lee](img/lee.JPG)
+
+Lee joined the Dutton in the fall of 2024 on a prestigious US National Science Foundation Postdoctoral Fellowship. Lee is interested in microbiomes, animal behavior, and so much more. 
+
 ## PhD Students
 
 Dawson Houghtaling 
