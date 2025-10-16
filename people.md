@@ -19,9 +19,9 @@ Audrey joined the Dutton lab as a postdoctoral research associate in August 2024
 
 Dr. Emily (Lee) Nonnamaker
 
-![Lee](img/lee.JPG)
+![Lee](img/lee.jpg)
 
-Lee joined the Dutton in the fall of 2024 on a prestigious US National Science Foundation Postdoctoral Fellowship. Lee is interested in microbiomes, animal behavior, and so much more. 
+Lee (Emily) Nonnamaker joined the lab in 2024 as a NSF funded postdoctoral researcher. They specialize in the connections between microbiomes and animal behavior. They began their career as an ecologist and animal behaviorist at Tulane University, where they earned their undergraduate and 4+1 masters degrees in 2016 and 2017, respectively. After graduation, they spent a year in the Mara, Kenya working as a research assistant with the Hyena Project, ran by Dr. Kay Holekamp at Michigan State University. Hyena camp and “Maji” camp, run by Drs. Subalusky and Dutton, are neighbors in the Mara, and Lee first met Chris and Amanda during this time. Amanda and Chris helped Lee apply for PhD programs, and in 2024 Lee earned their PhD from The Department of Biology at The University of Notre Dame. Their thesis work focused on the role of the vaginal microbiome in producing odors that may be used to communicate reproductive state in Yellow and Olive Baboons. They collected data for this project from wild animals in Amboseli, Kenya with the Amboseli Baboon Research Project, as well as captive females in Rousset, France at the CNRS SdP. In France, Lee learned how to train animals using positive reinforcement techniques. While finishing their PhD, they chose to apply for an NSF grant in order to work with Amanda and Chris. Now, Lee is bringing an animal behavior perspective to the Dutton lab, studying hippo social behavior and gut microbiomes, back in the Mara, Kenya. They are keen to collaborate with other hippo people.
 
 ## PhD Students
 
