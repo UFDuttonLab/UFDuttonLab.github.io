@@ -53,6 +53,10 @@ Audrey-Anne Haynes
 
 Cecilia Aragon
 
+![CC](img/cc.jpeg)
+
+Cecilia is a third year undergraduate who joined the Dutton lab in Fall ‘25 to support ongoing research projects, mostly through DNA extraction and analysis. She is working towards her degree in Natural Resource Conservation and is especially interested in restoration and conservation ecology, and microbial ecology!
+
 Maggie Johnson
 
 Ryleigh Sperry
