@@ -47,6 +47,10 @@ Suzanna joined the Dutton Lab as a part time MS student in Fall 2025. She works 
 
 Charlotte Levet Bourtayre
 
+![Charlotte](img/charlotte.jpeg)
+
+Charlotte joined the Dutton lab in Summer 2025, helping out with the Robotic Rabbit Project. She is a 3rd year undergraduate student, studying Biology with a minor in Wildlife Ecology and Conservation, and aspires to attend veterinary school after finishing her undergraduate studies. Charlotte is interested in assessing animal gut microbiomes to improve their overall health.
+
 Audrey-Anne Haynes
 
 ![Audrey-Anne](img/audrey-anne.jpeg)
@@ -58,6 +62,10 @@ Cecilia Aragon
 Cecilia is a third year undergraduate who joined the Dutton lab in Fall ‘25 to support ongoing research projects, mostly through DNA extraction and analysis. She is working towards her degree in Natural Resource Conservation and is especially interested in restoration and conservation ecology, and microbial ecology!
 
 Maggie Johnson
+
+![Maggie](img/maggie.jpeg)
+
+Maggie is a second year undergrad student who joined the Dutton lab in the spring of 2025. She is currently working towards a Biology degree to purse future health or veterinary studies. After assisting with the development of robotic python lures over the summer, she now contributes to several ongoing research projects within the lab, primarily aiding in DNA extraction and analysis processes.
 
 Ryleigh Sperry
 
