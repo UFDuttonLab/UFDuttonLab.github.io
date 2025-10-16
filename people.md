@@ -81,6 +81,10 @@ Will Sophocles
 
 Sierra Mulholland
 
+![Sierra](img/sierra.jpg)
+
+Sierra joined the Dutton lab as an undergrad student in Spring of 2024. She is interested in Public Health and microbiomes. 
+
 ## Past Members
 
 Alesha Wallen 
