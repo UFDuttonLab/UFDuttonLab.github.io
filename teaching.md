@@ -28,6 +28,7 @@ I'm always pushing myself to learn new methods and try new ways of teaching. As 
  - [Exam 1 Study App](https://ufduttonlab.github.io/ge1-study-buddy/) (Population Ecology)
  - [Exam 2 Study App](https://ufduttonlab.github.io/ge2-study-buddy/) (Community Ecology)
  - [Diversity Explorer](https://ufduttonlab.github.io/diversity/) (explore how Alpha, Beta, and Gamma diversity changes)
+ - [PEEP: Power Estimator for Ecological Planning](https://ufduttonlab.github.io/peep-power/) Our friendly companion for sample size calculations, power analysis, and experimental design.
 
 ![Class at UF](img/IMG_20200130_110114.jpg){:style="float: center;margin-right: 7px;:class="img-responsive"}
 
