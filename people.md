@@ -59,6 +59,8 @@ Audrey-Anne Haynes
 
 ![Audrey-Anne](img/audrey-anne.jpeg)
 
+Audrey-Anne is a 4th year undergraduate majoring in zoology and marine science. She joined the lab in 2024 and has since worked on projects such as the robotic rabbits in the Everglades, hippo gut microbiomes, and sediment microbial community sampling. She thoroughly enjoys field work such as bird banding, shark tagging, and AAUS science diving. Audrey-Anne is currently working on an undergraduate thesis on hippo aggregation behavior and dynamics, and hopes to continue working with hippo behavior and microbiomes in the future.
+
 Cecilia Aragon
 
 ![CC](img/cc.jpeg)
