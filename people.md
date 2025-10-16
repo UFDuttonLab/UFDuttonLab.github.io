@@ -25,6 +25,10 @@ Dawson Houghtaling
 
 Ava Gabrys
 
+![Ava](img/ava.jpg)
+
+Ava joined the lab as a PhD student in the fall of 2025 on a prestigious US National Science Foundation Graduate Research Fellowship. She received her B.S. in Biology with a concentration in genetics at Penn State, where she explored the evolution of the human oral microbiome and its role in tooth decay. Ava is interested in the intersections between microbial dispersal through environments and hosts, microbial competition, and ecosystem functioning and health.
+
 ## Master's Students
 
 Tavis Goldwire
