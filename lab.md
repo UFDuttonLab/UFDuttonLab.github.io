@@ -30,7 +30,7 @@ A short list of available equipment:
 - Computers
 - Access to the UF Supercomputer
 
-We use a custom in-house developed scheduling app to track equipment usage on different proejcts. This allows students to "book" equipment so that we have coordination between all our different projects. This also allows us to track effort by students on different projects, so that we can give them proper credit and recognition. [Lab Equipment Scheduling App](https://ufduttonlab.github.io/lab-scheduler/)
+We use a custom in-house developed scheduling app to track equipment usage on different projects. This allows students to "book" equipment so that we have coordination between all our different projects and people. This also allows us to track effort by students on different projects, so that we can give them proper credit and recognition. [Lab Equipment Scheduling App](https://ufduttonlab.github.io/lab-scheduler/)
 
 ![schedule1](img/schedule1.png)
 
