@@ -87,6 +87,14 @@ Ryleigh joined the Dutton lab as an undergrad student in the summer of 2025. She
 
 Sierra is a 4th year undergraduate studying public health and zoology. She joined the Dutton lab after taking his microbiome course through the biology Semester of Immersion program. She assists in DNA extraction and analysis, primarily with the Animal Kingdom samples, and is interested in learning more about microbiology for both animal and human health applications. 
 
+# Kenya Field Team
+
+## Geemi Paul
+
+![Geemi](img/geemi.jpg)
+
+Geemi Paul has been part of our team since 2010, beginning as a volunteer sorting aquatic macroinvertebrates and now serving as our Camp and Research Manager at Maji Camp in the Maasai Mara National Reserve. With a Diploma in Tour Guiding and Administration and Silver-level Guide certification, Geemi brings over 15 years of experience in guiding, camp management, Land Rover repairs, and field research across the Mara River Basin. He is an experienced naturalist known for his deep knowledge of the ecosystem, commitment to supporting researchers and students, and skill in maintaining field equipment and coordinating with local communities throughout the region.
+
 # Past Members
 
 Alesha Wallen 
