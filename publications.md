@@ -9,6 +9,13 @@ subtitle:
 CV available upon request
 
 ### 2025
+
+Subalusky, Amanda L., Christopher Dutton. 2025. Role of Aquatic and Terrestrial Carcasses in Freshwater Ecosystems. [Carrion Ecology, Evolution, and Their Applications.](https://www.taylorfrancis.com/chapters/edit/10.1201/9781003610885-23/role-aquatic-terrestrial-carcasses-freshwater-ecosystems-amanda-subalusky-christopher-dutton)
+
+Ogutu, Joseph O., Jared A Stabach, J Grant C Hopcraft, Randall B Boone, Holly T Dublin, Christopher L Dutton, Andrew Gichira, Abby Guthmann, Ask L Herrik, Kay E Holekamp, Rebekah R Karimi, Shem C Kifugo, Peter Leimgruber, Niels Mogensen, Stephen S Moiko, Joseph M Mukeka, Harrison Nabaala, Stephen Ndambuki, Lucy M Njino, Gordon O Ojwang, Han Olff, Craig Packer, Lemein Parmuntoro, Robin S Reid, Rehema B Rioba, Mohammed Y Said, Jully S Senteu, Amanda L Subalusky, Jens-Christian Svenning, Stewart Thompson, Antonio Uzal, Michiel P Veldhuis, Robert Buitenwerf. 2025. Short-term study fails to capture negative impacts of livestock intensification on wildlife. [Proceedings of the National Academy of Sciences 122 (23)](https://www.pnas.org/doi/abs/10.1073/pnas.2502418122)
+
+Saha, A.K., Christopher Dutton, Marc Manyifika, Sarah C. Jantzi, Sylvere N. Sirikare. 2025. Sediment Fingerprinting Enables the Determination of Soil Erosion Sources and Sediment Transport Processes in a Topographically Complex Nile Headwater Basin [Soil Systems 9(3), 70.](https://www.mdpi.com/2571-8789/9/3/70)
+
 Mulligan, Connie J., Edward B. Quinn, Dima Hamadmad, Christopher L. Dutton, Lisa Nevell, Alexandra M. Binder, Catherine Panter-Brick, and Rana Dajani. 2025. Epigenetic Signatures of Intergenerational Exposure to Violence in Three Generations of Syrian Refugees. 2025. [Scientific Reports.](https://www.nature.com/articles/s41598-025-89818-z)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covered in [Science Magazine](https://www.science.org/content/article/children-war-refugees-may-inherit-their-parents-trauma)
