@@ -15,7 +15,6 @@ Our lab consists of everything we need to extract, sequence, and analyze DNA or 
 ![lab3](img/lab3.png)
 
 A short list of available equipment:
-- Absolutely Q dPCR
 - 3 Opentrons OT-2 robots
 - 2 Opentrons Flex robots (one with a 96 head pipette)
 - 4 Nanopore Minion (different variants)
