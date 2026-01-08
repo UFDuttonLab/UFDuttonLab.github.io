@@ -4,7 +4,6 @@ title: Artificial Intelligence Use Policy
 permalink: /ai-policy/
 ---
 
-# Artificial Intelligence Use Policy
 *Effective Date: January 2026*
 
 ---
