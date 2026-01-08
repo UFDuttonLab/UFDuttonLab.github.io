@@ -4,7 +4,7 @@ title: Authorship Policy
 permalink: /authorship-policy/
 ---
 
-# Ecology and Microbiome Research Laboratory
+# Dutton Lab
 ## University of Florida
 **Effective Date:** January 2026
 
