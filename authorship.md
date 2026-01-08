@@ -10,76 +10,76 @@ permalink: /authorship/
 
 ### Purpose and Scope
 
-This policy establishes clear and equitable standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members—faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff—must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration<sup>[1,2,3](#ref1)</sup>. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process<sup>[4,5,6](#ref4)</sup>.
+This policy establishes clear and equitable standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members—faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff—must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration<sup>[[1](#ref1), [2](#ref2), [3](#ref3)]</sup>. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process<sup>[[4](#ref4), [5](#ref5), [6](#ref6)]</sup>.
 
 ### Core Principles
 
-Authorship in this laboratory is governed by three principles: **merit-based attribution** ensuring that authorship reflects genuine intellectual contribution; **accountability** requiring all authors to take responsibility for the integrity of published work; and **transparency** through early discussion, written agreements, and clear documentation of individual contributions<sup>[1,2,7,8](#ref1)</sup>. Authorship confers both credit and responsibility, and the two cannot be separated<sup>[9,10](#ref9)</sup>.
+Authorship in this laboratory is governed by three principles: **merit-based attribution** ensuring that authorship reflects genuine intellectual contribution; **accountability** requiring all authors to take responsibility for the integrity of published work; and **transparency** through early discussion, written agreements, and clear documentation of individual contributions<sup>[[1](#ref1), [2](#ref2), [7](#ref7), [8](#ref8)]</sup>. Authorship confers both credit and responsibility, and the two cannot be separated<sup>[[9](#ref9), [10](#ref10)]</sup>.
 
 ### Authorship Criteria
 
-This laboratory follows the International Committee of Medical Journal Editors (ICMJE) criteria, which are widely recognized across scientific disciplines and required by many journals<sup>[1,2,11-13](#ref1)</sup>. To qualify as an author, an individual must meet **all four** of the following criteria:
+This laboratory follows the International Committee of Medical Journal Editors (ICMJE) criteria, which are widely recognized across scientific disciplines and required by many journals<sup>[[1](#ref1), [2](#ref2), [11](#ref11), [12](#ref12), [13](#ref13)]</sup>. To qualify as an author, an individual must meet **all four** of the following criteria:
 
 1. Substantial contributions to the conception or design of the work, or the acquisition, analysis, or interpretation of data;
 2. Drafting the manuscript or revising it critically for important intellectual content;
 3. Final approval of the version to be published; and
-4. Agreement to be accountable for all aspects of the work, ensuring that questions related to accuracy or integrity are appropriately investigated and resolved<sup>[1,2,11-13](#ref1)</sup>.
+4. Agreement to be accountable for all aspects of the work, ensuring that questions related to accuracy or integrity are appropriately investigated and resolved<sup>[[1](#ref1), [2](#ref2), [11](#ref11), [12](#ref12), [13](#ref13)]</sup>.
 
-Individuals who do not meet all four criteria should be recognized in the Acknowledgments section rather than as authors<sup>[1,11,14](#ref1)</sup>.
+Individuals who do not meet all four criteria should be recognized in the Acknowledgments section rather than as authors<sup>[[1](#ref1), [11](#ref11), [14](#ref14)]</sup>.
 
 ### Contribution Roles and CRediT Taxonomy
 
-To enhance transparency and reduce ambiguity about individual contributions, this laboratory uses the **Contributor Roles Taxonomy (CRediT)**, which defines 14 standardized roles including conceptualization, methodology, formal analysis, investigation, data curation, writing (original draft and review/editing), visualization, supervision, project administration, and funding acquisition<sup>[15-19](#ref15)</sup>. Authors will document their specific contributions using CRediT categories for all manuscripts, and these contribution statements will be included in submitted publications<sup>[15,17-19](#ref15)</sup>. CRediT is a tool for clarifying contributions and does not replace the ICMJE authorship criteria; all listed authors must still meet all four ICMJE requirements<sup>[15,17,20](#ref15)</sup>.
+To enhance transparency and reduce ambiguity about individual contributions, this laboratory uses the **Contributor Roles Taxonomy (CRediT)**, which defines 14 standardized roles including conceptualization, methodology, formal analysis, investigation, data curation, writing (original draft and review/editing), visualization, supervision, project administration, and funding acquisition<sup>[[15](#ref15), [16](#ref16), [17](#ref17), [18](#ref18), [19](#ref19)]</sup>. Authors will document their specific contributions using CRediT categories for all manuscripts, and these contribution statements will be included in submitted publications<sup>[[15](#ref15), [17](#ref17), [18](#ref18), [19](#ref19)]</sup>. CRediT is a tool for clarifying contributions and does not replace the ICMJE authorship criteria; all listed authors must still meet all four ICMJE requirements<sup>[[15](#ref15), [17](#ref17), [20](#ref20)]</sup>.
 
 ### Prohibited Practices
 
 The following authorship practices are strictly prohibited:
 
-1. **Guest, gift, or honorary authorship:** Inclusion of individuals who have not made substantial intellectual contributions to enhance prestige, increase publication likelihood, or as professional courtesy<sup>[21-25](#ref21)</sup>.
-2. **Ghost authorship:** Intentional exclusion of individuals who have made substantial contributions, including appropriation of student or trainee work by faculty without proper attribution<sup>[23,24,26,27](#ref23)</sup>.
-3. **Coercive authorship:** Demanding authorship based on position, resources provided, or supervisory role rather than intellectual contribution<sup>[28](#ref28)</sup>.
-4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools should be disclosed in the methods or acknowledgments<sup>[29,30](#ref29)</sup>.
+1. **Guest, gift, or honorary authorship:** Inclusion of individuals who have not made substantial intellectual contributions to enhance prestige, increase publication likelihood, or as professional courtesy<sup>[[21](#ref21), [22](#ref22), [23](#ref23), [24](#ref24), [25](#ref25)]</sup>.
+2. **Ghost authorship:** Intentional exclusion of individuals who have made substantial contributions, including appropriation of student or trainee work by faculty without proper attribution<sup>[[23](#ref23), [24](#ref24), [26](#ref26), [27](#ref27)]</sup>.
+3. **Coercive authorship:** Demanding authorship based on position, resources provided, or supervisory role rather than intellectual contribution<sup>[[28](#ref28)]</sup>.
+4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools should be disclosed in the methods or acknowledgments<sup>[[29](#ref29), [30](#ref30)]</sup>.
 
-These practices undermine scientific integrity and may constitute research misconduct or violations of integrity standards<sup>[21-24,28](#ref21)</sup>.
+These practices undermine scientific integrity and may constitute research misconduct or violations of integrity standards<sup>[[21](#ref21), [22](#ref22), [23](#ref23), [24](#ref24), [28](#ref28)]</sup>.
 
 ### Author Order and Position-Specific Responsibilities
 
-In ecology and related fields, author order typically follows a first-last author emphasis (FLAE) convention<sup>[31-33](#ref31)</sup>.
+In ecology and related fields, author order typically follows a first-last author emphasis (FLAE) convention<sup>[[31](#ref31), [32](#ref32), [33](#ref33)]</sup>.
 
-* **First Author:** The individual who contributed most substantially to the research, typically leading study design, data collection and analysis, and manuscript preparation<sup>[31,32,34,35](#ref31)</sup>.
-* **Last Author:** Generally the senior investigator or principal investigator who provided conceptual guidance, supervision, funding, and laboratory resources, and who bears ultimate responsibility for the integrity of the work<sup>[31-35](#ref31)</sup>.
-* **Middle Authors:** Individuals who made specific, substantial contributions in areas such as methodology, data generation, analysis, or interpretation, typically listed in descending order of contribution<sup>[34,35](#ref34)</sup>.
-* **Corresponding Author:** Responsible for manuscript submission, managing revisions, ensuring all co-authors meet criteria and approve the final manuscript, and serving as the point of contact for post-publication inquiries<sup>[31-34,36](#ref31)</sup>. In this laboratory, the first author will serve as corresponding author unless circumstances make the senior author more appropriate<sup>[31-33](#ref31)</sup>.
+* **First Author:** The individual who contributed most substantially to the research, typically leading study design, data collection and analysis, and manuscript preparation<sup>[[31](#ref31), [32](#ref32), [34](#ref34), [35](#ref35)]</sup>.
+* **Last Author:** Generally the senior investigator or principal investigator who provided conceptual guidance, supervision, funding, and laboratory resources, and who bears ultimate responsibility for the integrity of the work<sup>[[31](#ref31), [32](#ref32), [33](#ref33), [34](#ref34), [35](#ref35)]</sup>.
+* **Middle Authors:** Individuals who made specific, substantial contributions in areas such as methodology, data generation, analysis, or interpretation, typically listed in descending order of contribution<sup>[[34](#ref34), [35](#ref35)]</sup>.
+* **Corresponding Author:** Responsible for manuscript submission, managing revisions, ensuring all co-authors meet criteria and approve the final manuscript, and serving as the point of contact for post-publication inquiries<sup>[[31](#ref31), [32](#ref32), [33](#ref33), [34](#ref34), [36](#ref36)]</sup>. In this laboratory, the first author will serve as corresponding author unless circumstances make the senior author more appropriate<sup>[[31](#ref31), [32](#ref32), [33](#ref33)]</sup>.
 
 ### Authorship Discussions and Agreements
 
-Authorship must be discussed openly at the beginning of each project, before substantial work begins<sup>[2,7,8,37-39](#ref2)</sup>. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes<sup>[37-41](#ref37)</sup>. This agreement is a living document that should be revisited at key project milestones<sup>[37-39,41](#ref37)</sup>.
+Authorship must be discussed openly at the beginning of each project, before substantial work begins<sup>[[2](#ref2), [7](#ref7), [8](#ref8), [37](#ref37), [38](#ref38), [39](#ref39)]</sup>. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes<sup>[[37](#ref37), [38](#ref38), [39](#ref39), [40](#ref40), [41](#ref41)]</sup>. This agreement is a living document that should be revisited at key project milestones<sup>[[37](#ref37), [38](#ref38), [39](#ref39), [41](#ref41)]</sup>.
 
 ### Rights and Responsibilities of Trainees
 
-Graduate students, postdoctoral researchers, and undergraduate researchers have the right to authorship on publications to which they have made substantial intellectual contributions meeting ICMJE criteria<sup>[42-46](#ref42)</sup>. Students are presumed to have primary authorship of work arising from their thesis or dissertation research, provided they lead the manuscript preparation. Faculty may not appropriate student work without proper attribution<sup>[42,43,45](#ref42)</sup>. Faculty are responsible for mentoring trainees on responsible authorship and must not penalize trainees for raising legitimate concerns<sup>[42-45](#ref42)</sup>.
+Graduate students, postdoctoral researchers, and undergraduate researchers have the right to authorship on publications to which they have made substantial intellectual contributions meeting ICMJE criteria<sup>[[42](#ref42), [43](#ref43), [44](#ref44), [45](#ref45), [46](#ref46)]</sup>. Students are presumed to have primary authorship of work arising from their thesis or dissertation research, provided they lead the manuscript preparation. Faculty may not appropriate student work without proper attribution<sup>[[42](#ref42), [43](#ref43), [45](#ref45)]</sup>. Faculty are responsible for mentoring trainees on responsible authorship and must not penalize trainees for raising legitimate concerns<sup>[[42](#ref42), [43](#ref43), [44](#ref44), [45](#ref45)]</sup>.
 
 ### Collaborative and Multi-Institutional Projects
 
-For external collaborations, authorship agreements should be established at the outset and explicitly reference dispute resolution processes<sup>[4,5,8](#ref4)</sup>. Multi-institutional consortia should list individual authors who meet ICMJE criteria rather than the consortium name alone<sup>[50,51](#ref50)</sup>. Co-senior authorship ("these authors contributed equally") should be documented in the authorship agreement and indicated in the publication<sup>[31,32](#ref31)</sup>.
+For external collaborations, authorship agreements should be established at the outset and explicitly reference dispute resolution processes<sup>[[4](#ref4), [5](#ref5), [8](#ref8)]</sup>. Multi-institutional consortia should list individual authors who meet ICMJE criteria rather than the consortium name alone<sup>[[50](#ref50), [51](#ref51)]</sup>. Co-senior authorship ("these authors contributed equally") should be documented in the authorship agreement and indicated in the publication<sup>[[31](#ref31), [32](#ref32)]</sup>.
 
 ### Dispute Resolution
 
-Authorship disputes should first be resolved through direct, collegial discussion among the involved parties<sup>[2,4,5,52,53](#ref2)</sup>. If resolution cannot be achieved within the research group:
+Authorship disputes should first be resolved through direct, collegial discussion among the involved parties<sup>[[2](#ref2), [4](#ref4), [5](#ref5), [52](#ref52), [53](#ref53)]</sup>. If resolution cannot be achieved within the research group:
 
-1.  The matter should be escalated to the **Department Chair** or an uninvolved senior faculty member for mediation<sup>[4,5,52,53](#ref4)</sup>.
+1.  The matter should be escalated to the **Department Chair** or an uninvolved senior faculty member for mediation<sup>[[4](#ref4), [5](#ref5), [52](#ref52), [53](#ref53)]</sup>.
 2.  If mediation is unsuccessful, the matter may be referred to the **College Dean** or the **University Ombuds**.
 3.  In cases that cannot be resolved through these steps, the principal investigator (in consultation with the Department Chair) will have final authority to determine authorship.
 
-**Note:** Allegations of research misconduct (fabrication, falsification, plagiarism, or serious deviations such as ghost authorship) are distinct from standard disputes and will be referred to **UF Research Integrity, Security & Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[4,5,26,52](#ref4)</sup>.
+**Note:** Allegations of research misconduct (fabrication, falsification, plagiarism, or serious deviations such as ghost authorship) are distinct from standard disputes and will be referred to **UF Research Integrity, Security & Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[[4](#ref4), [5](#ref5), [26](#ref26), [52](#ref52)]</sup>.
 
 ### Acknowledgments
 
-Individuals who contributed to the research but do not meet all four ICMJE authorship criteria must be acknowledged in the manuscript's Acknowledgments section with their permission<sup>[1,2,11](#ref1)</sup>. This includes funding acquisition, general supervision, administrative support, technical assistance, or writing assistance without intellectual contribution. Acknowledged individuals must consent to being named<sup>[1,2](#ref1)</sup>.
+Individuals who contributed to the research but do not meet all four ICMJE authorship criteria must be acknowledged in the manuscript's Acknowledgments section with their permission<sup>[[1](#ref1), [2](#ref2), [11](#ref11)]</sup>. This includes funding acquisition, general supervision, administrative support, technical assistance, or writing assistance without intellectual contribution. Acknowledged individuals must consent to being named<sup>[[1](#ref1), [2](#ref2)]</sup>.
 
 ### Compliance and Review
 
-This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Society of America guidelines<sup>[31,54](#ref31)</sup>, and UF research integrity standards. All laboratory members are required to read and acknowledge this policy upon joining. Violations may result in internal consequences and investigation under UF's Research Misconduct Policy where applicable.
+This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Society of America guidelines<sup>[[31](#ref31), [54](#ref54)]</sup>, and UF research integrity standards. All laboratory members are required to read and acknowledge this policy upon joining. Violations may result in internal consequences and investigation under UF's Research Misconduct Policy where applicable.
 
 ---
 
