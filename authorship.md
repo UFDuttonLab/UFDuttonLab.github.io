@@ -4,8 +4,6 @@ title: Authorship Policy
 permalink: /authorship/
 ---
 
-# Dutton Lab
-## University of Florida
 **Effective Date:** January 2026
 
 ---
