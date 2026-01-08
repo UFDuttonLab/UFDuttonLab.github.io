@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Authorship Policy
-permalink: /authorship-policy/
+permalink: /authorship/
 ---
 
 # Dutton Lab
