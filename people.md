@@ -25,8 +25,6 @@ Lee (Emily) Nonnamaker joined the lab in 2024 as a NSF funded postdoctoral resea
 
 # PhD Students
 
-## Dawson Houghtaling 
-
 ## Ava Gabrys
 
 ![Ava](img/ava.jpg)
