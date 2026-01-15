@@ -203,20 +203,6 @@ External funding for undergraduate research.
 
 ---
 
-### Botany-Specific Grants (if relevant)
-
-**Florida Native Plant Society Research Grant**
-- Award: $1,500 or less
-- Deadline: March
-- Eligibility: Research on native Florida plants
-
-**BSA Undergraduate Student Research Award**
-- Award: $200
-- Deadline: March
-- Eligibility: Mentor and student must both be BSA members
-
----
-
 ## Getting Started
 
 1. **Talk to me first.** Let me know you're interested in paid research and we'll discuss current projects and your interests.
