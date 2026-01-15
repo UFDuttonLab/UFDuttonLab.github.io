@@ -26,7 +26,7 @@ We conduct field work in Africa (Kenya, South Africa), Florida, and other ecosys
 
 If you are interested in pursuing postdoctoral research in the Dutton Lab, please send me an email with the following information:
 
-**Email:** [Your email address - update this]
+Send me an email with the following information...
 
 **Subject Line:** "Prospective Postdoc - [Your Name]"
 
@@ -36,7 +36,7 @@ If you are interested in pursuing postdoctoral research in the Dutton Lab, pleas
 3. Names and contact information for 2-3 references
 4. A brief description of a potential research project or area you'd like to pursue (1 paragraph)
 
-I read all emails personally and will respond to inquiries that align with our lab's research directions. Due to the volume of emails, I may not be able to respond to all inquiries, but I encourage you to apply for independent postdoctoral fellowships (see below).
+I read all emails personally and will respond to inquiries that align with our lab's research directions. Due to the volume of emails, I may not be able to respond to all inquiries, but I encourage you to apply for independent postdoctoral fellowships (see below). I'm happy to work with you on any of these opportunities.
 
 ---
 
@@ -91,7 +91,7 @@ The Smith Fellowship is one of the most prestigious programs for early-career co
 
 This UF-based fellowship supports tropical and subtropical ecology and environmental science research. Fellows conduct research with a UF faculty mentor in any subdiscipline of ecology or environmental science. **This is an excellent opportunity for prospective postdocs specifically interested in joining our lab.**
 
-**Website:** [https://forestgeo.si.edu/ewel-postdoctoral-fellowship-program-ecology-tropics](https://forestgeo.si.edu/ewel-postdoctoral-fellowship-program-ecology-tropics)
+**Website:** [https://postdoc.aa.ufl.edu/current-postdocs/programs/ewel-postdoctoral-fellowship/](https://postdoc.aa.ufl.edu/current-postdocs/programs/ewel-postdoctoral-fellowship/)
 
 ---
 
