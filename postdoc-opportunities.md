@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Postdoctoral Opportunities
-permalink: /join/postdocs/
 ---
 
 ## Prospective Postdoctoral Researchers
@@ -174,14 +173,12 @@ For those interested in applying scientific expertise to policy, AAAS fellowship
 
 ### Why Join Our Lab?
 
-- **Cutting-edge infrastructure:** Opentrons robots, nanopore sequencing (MinION, PromethION), digital PCR, qPCR, and more
+- **Cutting-edge infrastructure:** Opentrons robots, nanopore sequencing (MinION), digital PCR, qPCR, and more
 - **International field sites:** Ongoing research in Kenya (Mara River), South Africa, and Florida ecosystems
-- **Collaborative environment:** Strong partnerships with McCleery Lab, National Museums of Kenya, and conservation organizations
+- **Collaborative environment:** Strong partnerships with the Subalusky Lab, the Mulligan Lab, the Moore Lab, the McCleery Lab, National Museums of Kenya, and conservation organizations
 - **Interdisciplinary training:** Opportunities to develop skills in molecular ecology, bioinformatics, field ecology, and lab automation
 - **Location:** University of Florida offers excellent research facilities, tropical/subtropical field sites, and a vibrant ecology community
 
 ---
 
 *Last updated: January 2026*
-
-**Questions?** Email me at [your email] or visit our lab website at [your website URL]
