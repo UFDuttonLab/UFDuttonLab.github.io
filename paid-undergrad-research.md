@@ -9,6 +9,8 @@ permalink: /undergrad-funding/
 
 There are several ways undergraduates can get paid to conduct research in our lab. This page lists all the structured funding programs available at UF, plus direct employment options.
 
+CURRENT AS OF JANUARY 2026
+
 ---
 
 ## University-Wide Competitive Programs
