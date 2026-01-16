@@ -3,6 +3,8 @@ layout: page
 title: People
 subtitle: 
 ---
+Interested in joining the lab as an [Undergraduate](https://ufduttonlab.github.io/paid-undergrad-research), [Graduate](https://ufduttonlab.github.io/grad-opportunities/), or [Post-doc](https://ufduttonlab.github.io/postdoc-opportunities/)?
+)?
 
 ## Christopher Dutton
 
