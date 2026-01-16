@@ -42,7 +42,7 @@ I read all emails personally and will respond to inquiries that align with our l
 
 ## Postdoctoral Fellowship Funding Opportunities
 
-Securing independent funding strengthens your application and provides greater flexibility in pursuing your research interests. Below are major fellowship programs well-suited to our research areas:
+Securing independent funding strengthens your application and provides greater flexibility in pursuing your research interests. Johns Hopkins University frequently curates a list of postdoctoral opportunities that you can [view here](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/). Below are major fellowship programs well-suited to our research areas:
 
 ### U.S.-Based Federal Fellowships
 
