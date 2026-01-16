@@ -2,7 +2,6 @@
 layout: page
 title: Paid Research Opportunities for Undergraduates
 description: Programs to fund your work in the Dutton Lab
-permalink: /undergrad-funding/
 ---
 
 # Getting Paid to Work in the Lab
@@ -257,4 +256,3 @@ External funding for undergraduate research.
 
 *Last updated: January 2026*
 
-For questions about any of these programs or to discuss joining the lab, contact Dr. Christopher Dutton.
