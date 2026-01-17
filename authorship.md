@@ -12,6 +12,9 @@ permalink: /authorship/
 
 This policy establishes clear and equitable standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members—faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff—must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration<sup>[[1](#ref1), [2](#ref2), [3](#ref3)]</sup>. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process<sup>[[4](#ref4), [5](#ref5), [6](#ref6)]</sup>.
 
+[![Authorship Policy Flowchart](/img/authorshipflowchart.jpg)](/img/authorshipflowchart.jpg)
+*Click on the flowchart above to view it in full size.*
+
 ### Core Principles
 
 Authorship in this laboratory is governed by three principles: **merit-based attribution** ensuring that authorship reflects genuine intellectual contribution; **accountability** requiring all authors to take responsibility for the integrity of published work; and **transparency** through early discussion, written agreements, and clear documentation of individual contributions<sup>[[1](#ref1), [2](#ref2), [7](#ref7), [8](#ref8)]</sup>. Authorship confers both credit and responsibility, and the two cannot be separated<sup>[[9](#ref9), [10](#ref10)]</sup>.
