@@ -81,6 +81,8 @@ In ecology and related fields, author order typically follows a first-last autho
 
 Authorship must be discussed openly at the beginning of each project, before substantial work begins^[[2](#ref2), [7](#ref7), [8](#ref8), [37](#ref37), [38](#ref38), [39](#ref39)]^. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes^[[37](#ref37), [38](#ref38), [39](#ref39), [40](#ref40), [41](#ref41)]^. This agreement is a living document that should be revisited at key project milestones^[[37](#ref37), [38](#ref38), [39](#ref39), [41](#ref41)]^.
 
+[Authorship Agreement Template](https://docs.google.com/document/d/1jNxKBKBofz0KolyTq8oEt_7J-WP-WrAnfBgt8P0VHKs/copy)
+
 ### Authors Departing the Laboratory
 
 Individuals who leave the laboratory before manuscript completion retain their right to authorship if they have met the ICMJE criteria through their contributions to date^[[42](#ref42), [43](#ref43)]^. However, the following expectations apply:
