@@ -71,6 +71,8 @@ In ecology and related fields, author order typically follows a first-last autho
 
 Authorship must be discussed openly at the beginning of each project, before substantial work begins<sup>[[2](#ref2), [7](#ref7), [8](#ref8), [37](#ref37), [38](#ref38), [39](#ref39)]</sup>. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes<sup>[[37](#ref37), [38](#ref38), [39](#ref39), [40](#ref40), [41](#ref41)]</sup>. This agreement is a living document that should be revisited at key project milestones<sup>[[37](#ref37), [38](#ref38), [39](#ref39), [41](#ref41)]</sup>.
 
+[Authorship Agreement Template](https://docs.google.com/document/d/1jNxKBKBofz0KolyTq8oEt_7J-WP-WrAnfBgt8P0VHKs/copy)
+
 ### Rights and Responsibilities of Trainees
 
 Graduate students, postdoctoral researchers, and undergraduate researchers have the right to authorship on publications to which they have made substantial intellectual contributions meeting ICMJE criteria<sup>[[42](#ref42), [43](#ref43), [44](#ref44), [45](#ref45), [46](#ref46)]</sup>. Students are presumed to have primary authorship of work arising from their thesis or dissertation research, provided they lead the manuscript preparation. Faculty may not appropriate student work without proper attribution<sup>[[42](#ref42), [43](#ref43), [45](#ref45)]</sup>. Faculty are responsible for mentoring trainees on responsible authorship and must not penalize trainees for raising legitimate concerns<sup>[[42](#ref42), [43](#ref43), [44](#ref44), [45](#ref45)]</sup>.
