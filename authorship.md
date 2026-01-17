@@ -31,13 +31,26 @@ Individuals who do not meet all four criteria should be recognized in the Acknow
 
 To enhance transparency and reduce ambiguity about individual contributions, this laboratory uses the **Contributor Roles Taxonomy (CRediT)**, which defines 14 standardized roles including conceptualization, methodology, formal analysis, investigation, data curation, writing (original draft and review/editing), visualization, supervision, project administration, and funding acquisition<sup>[[15](#ref15), [16](#ref16), [17](#ref17), [18](#ref18), [19](#ref19)]</sup>. Authors will document their specific contributions using CRediT categories for all manuscripts, and these contribution statements will be included in submitted publications<sup>[[15](#ref15), [17](#ref17), [18](#ref18), [19](#ref19)]</sup>. CRediT is a tool for clarifying contributions and does not replace the ICMJE authorship criteria; all listed authors must still meet all four ICMJE requirements<sup>[[15](#ref15), [17](#ref17), [20](#ref20)]</sup>.
 
+### Technical Resources & Equipment Usage
+
+Authorship in the Dutton Lab is primarily established through shared intellectual contribution from a project's inception (e.g., co-development of proposals and study design). However, specific guidelines apply when the primary interaction is through the use of laboratory infrastructure:
+
+1. **Independent Access (Service Model):**
+   If a researcher operates lab equipment independently (or via standard service protocols) and performs their own data analysis, this **does not** warrant authorship.
+   * **Requirements:** The user is responsible for **providing or paying for all consumables** (reagents, kits, etc.) and any applicable equipment usage fees.
+   * **Recognition:** The Dutton Lab, the funding source for the equipment, **and the specific individuals who provided technical support or training** must be recognized in the **Acknowledgments** section.
+
+2. **Assisted Acquisition & Analysis (Collaborative Model):**
+   If a lab member is required to **operate specialized equipment** (Data Acquisition) AND assists in **interpreting or analyzing the resulting data** (Data Interpretation), this constitutes a substantial intellectual contribution that meets the first ICMJE criterion.
+   * **Authorship Warranted:** Because this work warrants authorship, these individuals **must be afforded the opportunity to participate** in the drafting or critical revision of the manuscript. If they accept this opportunity and approve the final version, they must be listed as authors.
+
 ### Prohibited Practices
 
 The following authorship practices are strictly prohibited:
 
 1. **Guest, gift, or honorary authorship:** Inclusion of individuals who have not made substantial intellectual contributions to enhance prestige, increase publication likelihood, or as professional courtesy<sup>[[21](#ref21), [22](#ref22), [23](#ref23), [24](#ref24), [25](#ref25)]</sup>.
 2. **Ghost authorship:** Intentional exclusion of individuals who have made substantial contributions, including appropriation of student or trainee work by faculty without proper attribution<sup>[[23](#ref23), [24](#ref24), [26](#ref26), [27](#ref27)]</sup>.
-3. **Coercive authorship:** Demanding authorship based on position, resources provided, or supervisory role rather than intellectual contribution<sup>[[28](#ref28)]</sup>.
+3. **Coercive authorship:** Demanding authorship based **solely** on position, financial support, or the provision of equipment/resources, **without a corresponding intellectual contribution to the work**<sup>[[28](#ref28)]</sup>.
 4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools should be disclosed in the methods or acknowledgments<sup>[[29](#ref29), [30](#ref30)]</sup>.
 
 These practices undermine scientific integrity and may constitute research misconduct or violations of integrity standards<sup>[[21](#ref21), [22](#ref22), [23](#ref23), [24](#ref24), [28](#ref28)]</sup>.
@@ -67,9 +80,9 @@ For external collaborations, authorship agreements should be established at the 
 
 Authorship disputes should first be resolved through direct, collegial discussion among the involved parties<sup>[[2](#ref2), [4](#ref4), [5](#ref5), [52](#ref52), [53](#ref53)]</sup>. If resolution cannot be achieved within the research group:
 
-1.  The matter should be escalated to the **Department Chair** or an uninvolved senior faculty member for mediation<sup>[[4](#ref4), [5](#ref5), [52](#ref52), [53](#ref53)]</sup>.
-2.  If mediation is unsuccessful, the matter may be referred to the **College Dean** or the **University Ombuds**.
-3.  In cases that cannot be resolved through these steps, the principal investigator (in consultation with the Department Chair) will have final authority to determine authorship.
+1.  The matter should be escalated to the **Department Chair** or an uninvolved senior faculty member for mediation<sup>[[4](#ref4), [5](#ref5), [52](#ref52), [53](#ref53)]</sup>.
+2.  If mediation is unsuccessful, the matter may be referred to the **College Dean** or the **University Ombuds**.
+3.  In cases that cannot be resolved through these steps, the principal investigator (in consultation with the Department Chair) will have final authority to determine authorship.
 
 **Note:** Allegations of research misconduct (fabrication, falsification, plagiarism, or serious deviations such as ghost authorship) are distinct from standard disputes and will be referred to **UF Research Integrity, Security & Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[[4](#ref4), [5](#ref5), [26](#ref26), [52](#ref52)]</sup>.
 
