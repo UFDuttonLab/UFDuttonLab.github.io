@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Collaboration and Authorship Policy
-permalink: /policies/authorship/
+permalink: /authorship/
 ---
 
 **Effective Date:** January 2026
