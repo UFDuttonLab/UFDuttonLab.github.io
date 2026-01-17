@@ -10,7 +10,7 @@ permalink: /policies/authorship/
 
 ### Purpose and Scope
 
-Science is a team sport. The Dutton Lab welcomes collaborations that advance our understanding of ecological systems, microbiome dynamics, and novel sensing technologies. We strive to be transparent, fair, and reliable partners.
+Science is a team sport. The Dutton Lab welcomes collaborations that advance our understanding of ecological systems, microbiome dynamics, robotics, and automation technologies. We strive to be transparent, fair, and reliable partners.
 
 This policy establishes clear and equitable standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members—faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff—must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration^[[1](#ref1), [2](#ref2), [3](#ref3)]^. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process^[[4](#ref4), [5](#ref5), [6](#ref6)]^.
 
@@ -19,7 +19,7 @@ This policy establishes clear and equitable standards for determining authorship
 
 ### Models of Engagement: Using Lab Resources
 
-When external researchers wish to use our laboratory's specialized equipment (e.g., sequencing platforms, custom sensor arrays, computational resources), the relationship will generally fall into one of two categories. **The specific model must be agreed upon prior to access.**
+When external researchers wish to use our laboratory's specialized equipment (e.g., sequencing platforms, robotics, analystical instruments, computational resources), the relationship will generally fall into one of two categories. **The specific model must be agreed upon prior to access.**
 
 #### 1. The Service & Access Model (Acknowledgment Only)
 * **Definition:** The collaborator requests access to equipment or resources but operates them independently. The Dutton Lab provides the "hardware" but not the "headware."
