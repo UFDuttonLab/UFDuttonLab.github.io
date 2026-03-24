@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSC 2011 Ecology Spring 2026 — Study Guide</title>
+<style>
+  :root {
+    --uf-blue: #0021A5;
+    --uf-orange: #FA4616;
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #5a6370;
+    --success: #16a34a;
+    --success-bg: #dcfce7;
+    --error: #dc2626;
+    --error-bg: #fee2e2;
+    --border: #e2e8f0;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.12);
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* SKIP LINK */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--uf-blue);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 10000;
+  }
+  .skip-link:focus { top: 0; }
+
+  /* NAV */
+  nav {
+    background: linear-gradient(135deg, var(--uf-blue) 0%, #0035d4 100%);
+    color: white;
+    border-bottom: 3px solid var(--uf-orange);
+    padding: 14px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-lg);
+  }
+
+  nav .inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  nav h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .nav-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .streak-display {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+
+  .streak-fire {
+    font-size: 1.1rem;
+    animation: flicker 1.5s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .xp-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+  }
+
+  nav .tabs {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  nav .tabs button {
+    background: rgba(255,255,255,0.15);
+    border: 2px solid transparent;
+    padding: 10px 16px;
+    min-height: 44px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    transition: var(--transition);
+  }
+
+  nav .tabs button:hover { color: white; background: rgba(255,255,255,0.25); }
+  nav .tabs button.active {
+    background: #D63600;
+    color: white;
+    box-shadow: 0 4px 12px rgba(221,58,11,0.4);
+  }
+  nav .tabs button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 100px; }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+  }
+
+  .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .card h2 { font-size: 1.2rem; margin-bottom: 12px; color: var(--uf-blue); font-weight: 700; }
+  .card h3 { font-size: 1.05rem; color: var(--uf-blue); margin-bottom: 8px; }
+
+  /* LANDING SCREEN */
+  .landing-screen {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .landing-screen h2 {
+    font-size: 2.2rem;
+    color: var(--uf-blue);
+    margin-bottom: 16px;
+    font-weight: 800;
+  }
+
+  .landing-screen p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .landing-cta {
+    background: linear-gradient(135deg, var(--uf-blue), #0035d4);
+    color: white;
+    border: none;
+    padding: 16px 48px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,33,165,0.3);
+    transition: var(--transition);
+  }
+
+  .landing-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,33,165,0.4); }
+  .landing-cta:focus { outline: 3px solid var(--uf-orange); outline-offset: 2px; }
+
+  .landing-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .landing-quick {
+    background: var(--card);
+    color: var(--uf-blue);
+    border: 2px solid var(--uf-blue);
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .landing-quick:hover { background: var(--uf-blue); color: white; transform: translateY(-2px); }
+  .landing-quick:focus { outline: 3px solid var(--uf-orange); outline-offset: 2px; }
+
+  .landing-hint {
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    margin-top: 14px !important;
+  }
+
+  /* QUIZ TOOLBAR */
+  .quiz-toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .topic-select {
+    flex: 1;
+    min-width: 160px;
+    padding: 12px 14px;
+    min-height: 44px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--card);
+    cursor: pointer;
+    transition: var(--transition);
+    appearance: auto;
+  }
+  .topic-select:focus { border-color: var(--uf-blue); outline: 2px solid var(--uf-blue); outline-offset: 1px; }
+
+  .reset-btn {
+    padding: 12px 20px;
+    min-height: 44px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    background: var(--card);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .reset-btn:hover, .reset-btn:active { border-color: #D63600; color: #D63600; }
+  .reset-btn:focus { outline: 2px solid var(--uf-blue); outline-offset: 1px; }
+
+  .score-bar {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555e68;
+    margin-bottom: 14px;
+    padding: 0 2px;
+  }
+
+  /* PROGRESS (unused but kept for compat) */
+  .progress-section {
+    background: linear-gradient(135deg, rgba(0,33,165,0.05), rgba(250,70,22,0.05));
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+  }
+
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .progress-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .progress-ring {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+
+  .progress-ring svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+  }
+
+  .progress-ring circle {
+    fill: none;
+    stroke-width: 6;
+  }
+
+  .progress-ring-bg {
+    stroke: var(--border);
+  }
+
+  .progress-ring-fill {
+    stroke: url(#gradient);
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    stroke-linecap: round;
+  }
+
+  .progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .progress-label .num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--uf-blue);
+  }
+
+  .progress-label .denom {
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+
+  /* STATS */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .stat-card:hover { border-color: var(--uf-blue); }
+
+  .stat-card .value {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--uf-blue), var(--uf-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stat-card .label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  /* TOPIC FILTERS */
+  .topic-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .topic-pill {
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 2px solid var(--border);
+    background: var(--card);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text);
+  }
+
+  .topic-pill:hover {
+    border-color: var(--uf-blue);
+    background: rgba(0,33,165,0.05);
+  }
+
+  .topic-pill.active {
+    border-color: var(--uf-orange);
+    background: var(--uf-orange);
+    color: white;
+    box-shadow: 0 4px 12px rgba(250,70,22,0.3);
+  }
+
+  .topic-pill:focus { outline: 2px solid var(--uf-blue); outline-offset: 2px; }
+
+  /* MODE TOGGLE */
+  .mode-toggle {
+    display: flex;
+    gap: 6px;
+    background: var(--border);
+    border-radius: var(--radius);
+    padding: 6px;
+    margin-bottom: 20px;
+  }
+
+  .mode-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    transition: var(--transition);
+  }
+
+  .mode-btn.active {
+    background: var(--card);
+    color: var(--uf-blue);
+    box-shadow: var(--shadow);
+  }
+
+  .mode-btn:focus { outline: 2px solid var(--uf-blue); outline-offset: -2px; }
+
+  /* QUESTION AREA */
+  .q-progress { font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+
+  .q-progress-bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .q-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--uf-blue), var(--uf-orange));
+    border-radius: 4px;
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .q-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--uf-blue), #0035d4);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .q-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .choice-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: var(--transition);
+    position: relative;
+  }
+
+  .choice-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,33,165,0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  .choice-btn:hover:not(.disabled)::before,
+  .choice-btn:active:not(.disabled)::before { opacity: 1; }
+  .choice-btn:hover:not(.disabled),
+  .choice-btn:active:not(.disabled) { border-color: var(--uf-blue); }
+
+  .choice-btn:focus {
+    outline: 3px solid var(--uf-orange);
+    outline-offset: 1px;
+  }
+
+  .choice-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: var(--border);
+    color: var(--muted);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: var(--transition);
+  }
+
+  .choice-btn.correct {
+    border-color: var(--success);
+    background: var(--success-bg);
+  }
+
+  .choice-btn.correct .choice-letter {
+    background: var(--success);
+    color: white;
+    animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .choice-btn.wrong {
+    border-color: var(--error);
+    background: var(--error-bg);
+  }
+
+  .choice-btn.wrong .choice-letter {
+    background: var(--error);
+    color: white;
+    animation: shake 0.4s;
+  }
+
+  .choice-btn.disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+
+  /* FEEDBACK */
+  .feedback {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    display: none;
+    animation: slideDown 0.3s ease;
+    role: alert;
+  }
+
+  .feedback.correct {
+    background: var(--success-bg);
+    border-left: 4px solid var(--success);
+    color: var(--text);
+  }
+
+  .feedback.wrong {
+    background: var(--error-bg);
+    border-left: 4px solid var(--error);
+    color: var(--text);
+  }
+
+  .feedback.show { display: block; }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .feedback-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* EXPLANATION */
+  .explanation {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(0,33,165,0.08);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* NAVIGATION */
+  .q-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .btn-nav {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .btn-next {
+    background: linear-gradient(135deg, var(--uf-blue), #0035d4);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,33,165,0.2);
+  }
+
+  .btn-next:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,33,165,0.3); }
+  .btn-next:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-next:focus { outline: 2px solid var(--uf-orange); outline-offset: 2px; }
+
+  /* CONFETTI */
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    animation: confettiFall 3s ease-in forwards;
+  }
+
+  @keyframes confettiFall {
+    to {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  /* ACHIEVEMENTS */
+  .achievement-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 2px solid var(--uf-orange);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp 0.5s ease;
+    z-index: 1000;
+    max-width: 280px;
+    width: calc(100% - 40px);
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .achievement-toast .icon { font-size: 2rem; margin-bottom: 8px; }
+  .achievement-toast .text { font-weight: 700; color: var(--text); }
+
+  /* CONCEPTS TAB */
+  .concept-section { margin-bottom: 20px; }
+
+  .concept-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .concept-header:hover, .concept-header:active {
+    border-color: var(--uf-blue);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .concept-header:focus { outline: 2px solid var(--uf-orange); outline-offset: 2px; }
+  .concept-header:focus-within { outline: 2px solid var(--uf-orange); outline-offset: 2px; }
+
+  .concept-header h3 {
+    font-size: 1.05rem;
+    color: var(--uf-blue);
+    font-weight: 700;
+  }
+
+  .concept-header .arrow {
+    transition: transform 0.3s;
+    font-size: 1.3rem;
+    color: var(--muted);
+  }
+
+  .concept-header.open .arrow { transform: rotate(180deg); color: var(--uf-blue); }
+
+  .concept-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 0 16px;
+  }
+
+  .concept-body.open {
+    max-height: 2500px;
+    padding: 16px;
+  }
+
+  .concept-body p { margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7; }
+
+  .concept-body ul { padding-left: 20px; margin-bottom: 12px; }
+  .concept-body li { font-size: 0.95rem; margin-bottom: 6px; line-height: 1.6; }
+
+  .key-term { font-weight: 700; color: var(--uf-blue); }
+
+  .formula-box {
+    background: linear-gradient(135deg, rgba(0,33,165,0.05), rgba(250,70,22,0.05));
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--uf-orange);
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text);
+    overflow-x: auto;
+  }
+
+  /* FORMULAS TAB */
+  .formula-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .formula-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    transition: var(--transition);
+  }
+
+  .formula-card:hover { border-color: var(--uf-orange); box-shadow: var(--shadow-lg); }
+
+  .formula-card .name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--uf-blue);
+  }
+
+  .formula-card .eq {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--text);
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(0,33,165,0.05), transparent);
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  .formula-card .desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .formula-card .terms {
+    margin: 8px 0 10px;
+    padding-left: 4px;
+  }
+
+  .formula-card .term {
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .formula-card .term:last-child { border-bottom: none; }
+
+  .formula-card .usage {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid var(--border);
+  }
+
+  /* RESULTS */
+  .results-card {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .results-score {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--uf-blue);
+    background: linear-gradient(135deg, var(--uf-blue), var(--uf-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    animation: slideDown 0.5s ease;
+  }
+
+  .results-message {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .results-breakdown {
+    text-align: left;
+    margin-top: 30px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+
+  .results-breakdown h3 {
+    color: var(--uf-blue);
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+  }
+
+  .topic-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+
+  .topic-result:last-child { border-bottom: none; }
+
+  .topic-result .name { font-weight: 600; }
+
+  .topic-result .score { color: var(--uf-blue); font-weight: 700; }
+
+  .btn-restart {
+    margin-top: 30px;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, var(--uf-blue), #0035d4);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,33,165,0.3);
+    transition: var(--transition);
+  }
+
+  .btn-restart:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,33,165,0.4); }
+  .btn-restart:focus { outline: 2px solid var(--uf-orange); outline-offset: 2px; }
+
+  .results-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .results-actions .btn-restart { margin-top: 0; }
+
+  .btn-secondary {
+    background: white !important;
+    color: var(--uf-blue) !important;
+    border: 2px solid var(--uf-blue) !important;
+    box-shadow: none !important;
+  }
+  .btn-secondary:hover { background: var(--bg) !important; box-shadow: 0 4px 12px rgba(0,33,165,0.15) !important; }
+
+  /* FOOTER */
+  .site-footer {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+  .site-footer a {
+    color: var(--uf-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .site-footer a:hover { text-decoration: underline; }
+  .site-footer a:focus { outline: 2px solid var(--uf-blue); outline-offset: 2px; border-radius: 2px; }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  /* REDUCED MOTION */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  /* RESPONSIVE — TABLETS */
+  @media (max-width: 700px) {
+    nav .inner { flex-direction: column; align-items: flex-start; }
+    nav h1 { font-size: 1.1rem; }
+    nav .tabs { margin-left: 0; width: 100%; }
+    nav .tabs button { padding: 8px 14px; font-size: 0.85rem; min-height: 44px; }
+    .nav-stats { flex-direction: column; gap: 8px; align-items: flex-start; }
+    main { padding: 16px 12px 80px; }
+    .card { padding: 16px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .topic-filters { gap: 6px; }
+    .q-text { font-size: 1rem; }
+    .choice-btn { padding: 12px 14px; font-size: 0.9rem; }
+    .results-score { font-size: 2.5rem; }
+    .results-message { font-size: 1.1rem; }
+  }
+
+  /* RESPONSIVE — PHONES */
+  @media (max-width: 480px) {
+    nav .inner { gap: 10px; }
+    nav h1 { font-size: 1rem; }
+    nav .tabs { gap: 4px; }
+    nav .tabs button { flex: 1; text-align: center; padding: 8px 10px; font-size: 0.8rem; min-height: 44px; }
+    main { padding: 14px 10px 80px; }
+    .card { padding: 14px; }
+    .landing-screen { padding: 40px 16px; }
+    .landing-screen h2 { font-size: 1.6rem; }
+    .landing-cta, .landing-quick { padding: 14px 32px; font-size: 1rem; }
+    .quiz-toolbar { flex-direction: column; }
+    .topic-select { width: 100%; }
+    .choice-btn { padding: 14px 12px; }
+    .results-score { font-size: 2rem; }
+    .achievement-toast { max-width: 90%; }
+  }
+
+  /* RESPONSIVE — SMALL PHONES */
+  @media (max-width: 375px) {
+    nav h1 { font-size: 0.95rem; }
+    main { padding: 12px 8px 60px; }
+    .landing-screen h2 { font-size: 1.4rem; }
+    .choice-btn { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#tab-quiz" class="skip-link">Skip to main content</a>
+
+<nav>
+  <div class="inner">
+    <h1>🎓 BSC 2011 Ecology — Spring 2026</h1>
+    <div class="nav-stats">
+      <div class="streak-display" aria-label="Correct answer streak" id="streak-box" style="display:none">
+        <span class="streak-fire" id="fire-emoji"></span>
+        <span id="streak-count">0</span>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Study guide sections" onkeydown="handleTabKeydown(event)">
+      <button id="tab-btn-quiz" role="tab" class="active" onclick="showTab('quiz')" aria-label="Practice quiz" aria-selected="true" aria-controls="tab-quiz" tabindex="0">Quiz</button>
+      <button id="tab-btn-concepts" role="tab" onclick="showTab('concepts')" aria-label="Concept reference materials" aria-selected="false" aria-controls="tab-concepts" tabindex="-1">Concepts</button>
+      <button id="tab-btn-formulas" role="tab" onclick="showTab('formulas')" aria-label="Formula reference sheet" aria-selected="false" aria-controls="tab-formulas" tabindex="-1">Formulas</button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+  <!-- QUIZ TAB -->
+  <div id="tab-quiz" role="tabpanel" aria-labelledby="tab-btn-quiz">
+    <div id="landing-screen" class="landing-screen">
+      <h2>Ecology Study Guide</h2>
+      <p>100 practice questions covering all 11 lectures</p>
+      <div class="landing-buttons">
+        <button class="landing-cta" onclick="startQuiz()" aria-label="Start full quiz with all 100 questions">Full Quiz</button>
+        <button class="landing-quick" onclick="startQuickQuiz()" aria-label="Quick 6-question mini-quiz, under 2 minutes">Quick 6</button>
+      </div>
+      <p class="landing-hint">Short on time? Quick 6 gives you a random mini-quiz in under 2 minutes.</p>
+    </div>
+
+    <div id="quiz-content" class="hidden">
+      <div class="quiz-toolbar" role="toolbar" aria-label="Quiz settings">
+        <select id="topic-select" class="topic-select" onchange="filterTopicSelect(this.value)" aria-label="Filter by topic">
+          <option value="all">All Topics (100)</option>
+        </select>
+        <button class="reset-btn" onclick="resetAndReshuffle()" aria-label="Reset quiz and reshuffle questions">Reset</button>
+      </div>
+
+      <div class="score-bar" aria-live="polite">
+        <span id="stat-summary"></span>
+      </div>
+
+      <div id="quiz-area" role="main"></div>
+      <div id="results-area" class="hidden" role="region" aria-live="polite" aria-label="Quiz Results"></div>
+    </div>
+  </div>
+
+  <!-- CONCEPTS TAB -->
+  <div id="tab-concepts" class="hidden" role="tabpanel" aria-labelledby="tab-btn-concepts"></div>
+
+  <!-- FORMULAS TAB -->
+  <div id="tab-formulas" class="hidden" role="tabpanel" aria-labelledby="tab-btn-formulas"></div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener noreferrer">Dutton Lab @ UF</a>
+</footer>
+
+<script>
+// ============================================================
+// TOPICS
+// ============================================================
+const TOPICS = {
+  1: "Intro to Ecology",
+  2: "Climate",
+  3: "Biomes",
+  4: "Population Ecology I",
+  5: "Population Ecology II",
+  6: "Community Ecology",
+  7: "Food Webs & Trophic Cascades",
+  8: "Island Biogeography & Biodiversity Patterns",
+  9: "Ecosystem Ecology & Nutrient Cycling",
+  10: "Biodiversity & Ecosystem Function",
+  11: "Conservation Biology",
+  0: "Integrative"
+};
+
+// ============================================================
+// ALL QUESTIONS (59 PRACTICE + 45+ NEW)
+// ============================================================
+const ALL_QUESTIONS = [
+  // PRACTICE QUESTIONS (59 existing from original file)
+  {q:"Which of the following is an abiotic factor?",c:["A predator hunting its prey","Competition between two plant species","Parasites living inside a host organism","Temperature fluctuations in a desert","Pollination by bees"],correct:3,explanation:"Temperature is a physical (abiotic) factor — it is not a living organism or a biological interaction.",t:1},
+  {q:"All the populations of different species living and interacting in a particular area make up a(n):",c:["Population","Organism","Biosphere","Community","Ecosystem"],correct:3,explanation:"A community consists of all populations of different species living and interacting in an area.",t:1},
+  {q:"The coevolutionary arms race between the Rough-skinned Newt and the Common Garter Snake is an example of:",c:["Mutualism","Commensalism","Coevolution (reciprocal selection)","Genetic drift","Convergent evolution"],correct:2,explanation:"Reciprocal selection occurs when two species exert selective pressure on each other, driving coevolution.",t:1},
+  {q:"Which level of ecological organization encompasses all ecosystems on Earth?",c:["Community","Ecosystem","Population","Biome","Biosphere"],correct:4,explanation:"The biosphere is the sum of all ecosystems on Earth — the global ecological system.",t:1},
+  {q:"Which of the following best illustrates how ecology is relevant to human well-being?",c:["The study of cellular respiration in mitochondria","Studying the chemical structure of DNA","The classification of beetles by taxonomists","Mapping the human genome","Understanding how pollination supports food crop production"],correct:4,explanation:"Pollination is an ecological process that directly benefits human agriculture and food production.",t:1},
+  {q:"The Intertropical Convergence Zone (ITCZ) is characterized by:",c:["Descending dry air and desert formation","Rising warm, moist air and high rainfall","Strong westerly winds","Cold polar air masses","Low atmospheric pressure and no precipitation"],correct:1,explanation:"The ITCZ is where trade winds converge near the equator, causing warm, moist air to rise and produce heavy rainfall.",t:1},
+  {q:"The Coriolis effect causes moving air and water in the Northern Hemisphere to be deflected:",c:["To the left","To the right","Toward the equator","Straight up","In random directions"],correct:1,explanation:"Due to Earth's rotation, moving objects deflect to the right in the Northern Hemisphere and to the left in the Southern Hemisphere.",t:1},
+  {q:"A rain shadow desert forms when:",c:["Cold ocean currents cool coastal air","Deforestation removes all vegetation","Descending air in Hadley cells dries the surface","Moist air is forced up over a mountain range, losing moisture on the windward side","Rivers are diverted away from arid regions"],correct:3,explanation:"Mountains force air upward; it cools, condenses, and precipitates on the windward side. The dry air descends on the leeward side, creating a rain shadow.",t:1},
+  {q:"Which of the following is the primary greenhouse gas responsible for recent global warming?",c:["Oxygen (O₂)","Nitrogen (N₂)","Carbon dioxide (CO₂)","Argon (Ar)","Hydrogen (H₂)"],correct:2,explanation:"CO₂ is the primary greenhouse gas driving recent anthropogenic climate change.",t:11},
+  {q:"Ocean currents influence regional climates primarily by:",c:["Producing rainfall directly over land","Blocking wind patterns","Increasing the salinity of coastal waters","Redistributing heat from the equator toward the poles","Generating volcanic activity"],correct:3,explanation:"Ocean currents are a major mechanism for redistributing thermal energy from equatorial to polar regions.",t:1},
+  {q:"A biome is best defined as:",c:["A specific geographic location with unique species","A major life zone characterized by its dominant vegetation and climate","Any area where organisms interact","A group of populations of different species","An area defined by political boundaries"],correct:1,explanation:"Biomes are large-scale ecological regions defined primarily by their dominant vegetation type and the climate that supports it.",t:1},
+  {q:"The observation that grasslands on different continents have similar-looking plants and animals, even when unrelated, is an example of:",c:["Convergent evolution","Adaptive radiation","Genetic drift","Coevolution","Natural selection within a single lineage"],correct:0,explanation:"Convergent evolution produces similar traits in unrelated organisms facing similar environmental pressures.",t:3},
+  {q:"Which terrestrial biome has the highest species diversity?",c:["Tropical rain forest","Boreal forest","Tundra","Temperate forest","Temperate grassland"],correct:0,explanation:"Tropical rain forests support the greatest biodiversity of any terrestrial biome due to high energy, moisture, and evolutionary time.",t:3},
+  {q:"The boreal forest is dominated by conifers primarily because:",c:["Conifers require very high temperatures","Their cone shape sheds snow, and evergreen needles allow photosynthesis in short growing seasons with poor soils","There are no herbivores to eat deciduous leaves","Conifers require extremely fertile soils","Deciduous trees cannot survive any cold"],correct:1,explanation:"Conifers are adapted to boreal conditions: their cone shape sheds snow, evergreen needles avoid regrowth costs, and they tolerate poor, acidic soils.",t:3},
+  {q:"Desert plants are adapted to conserve water. Which is a common adaptation?",c:["Broad, thin leaves","Fleshy stems and leaves with thick cuticles","Tall growth to access canopy light","Shallow root systems only","Deciduous leaves that drop in winter"],correct:1,explanation:"Fleshy stems (succulence) store water, and thick cuticles minimize evaporative water loss — classic xerophyte adaptations.",t:3},
+  {q:"Population ecology is the study of:",c:["How births, deaths, and dynamic forces regulate populations","Interactions between species in a community","How ecosystems recycle nutrients","The evolution of new species","Classification of organisms"],correct:0,explanation:"Population ecology focuses on the factors — births, deaths, immigration, emigration — that regulate population size and dynamics.",t:4},
+  {q:"The principle of allocation in life history theory states that:",c:["All organisms allocate equal energy to all functions","Organisms must divide limited resources among competing functions, resulting in trade-offs","Natural selection always favors maximum reproduction","Energy allocation is determined entirely by body size","Organisms can increase energy to all functions simultaneously"],correct:1,explanation:"Limited energy must be allocated among growth, reproduction, defense, and maintenance, creating fundamental life history trade-offs.",t:4},
+  {q:"In the exponential growth model, if a population of 200 has b = 0.06 and d = 0.02, how many individuals are added per time period?",c:["4","16","12","8","40"],correct:3,explanation:"r = b − d = 0.06 − 0.02 = 0.04. ΔN = r × N = 0.04 × 200 = 8 individuals per time period.",t:4},
+  {q:"Which distinguishes dispersal from migration?",c:["Dispersal is seasonal; migration is permanent","No difference","Migration only occurs in birds","Dispersal only occurs in plants","Dispersal is movement from one location to another; migration is repeated back-and-forth"],correct:4,explanation:"Dispersal is typically one-directional (leaving natal area), while migration is repeated cyclical movement between locations.",t:4},
+  {q:"Exponential population growth is most likely when:",c:["Resources are limited","Population is at carrying capacity","A species colonizes a new, resource-rich environment","Predators are abundant","Population is very large"],correct:2,explanation:"Exponential growth occurs when resources are effectively unlimited — such as when a species first colonizes a new, empty habitat.",t:4},
+  {q:"In the logistic growth model, what does K represent?",c:["The intrinsic rate of increase","The death rate","The initial population size","The carrying capacity of the environment","The birth rate"],correct:3,explanation:"K is the carrying capacity — the maximum population size that an environment can sustainably support.",t:5},
+  {q:"Which is a density-independent factor?",c:["Intraspecific competition","Disease transmission between individuals","A severe hurricane destroying habitat","Territorial aggression between males","Increased parasitism at high population density"],correct:2,explanation:"Density-independent factors affect populations regardless of density. A hurricane kills the same proportion of organisms whether the population is sparse or dense.",t:5},
+  {q:"An insect-pollinated plant in a sparse population has low seed production. This is most likely due to:",c:["Allee effect reducing mating or pollination success","Density-independent environmental stress","Density-dependent factors limiting growth","Exponential growth phase","Reaching carrying capacity"],correct:0,explanation:"At low densities, finding mates or pollinators becomes difficult — an Allee effect (positive density dependence at low population size).",t:5},
+  {q:"The human population has grown exponentially primarily due to:",c:["Decreased death rates from medical advances while birth rates remained high","Increased carrying capacity from increased food production","Both A and B","Genetic mutations favoring reproduction","Solar energy output increasing"],correct:2,explanation:"Human population growth stems from both improved survival (lower death rates) and increased food production capacity.",t:5},
+  {q:"When a population stops changing in size, it has reached ________ and r = ________.",c:["exponential growth / positive","maximum fitness / one","stable equilibrium / negative","carrying capacity / zero","minimum density / infinity"],correct:3,explanation:"At carrying capacity (K), births equal deaths, so r = 0 and population size stabilizes.",t:5},
+  {q:"Which interaction is correctly paired with its +/− classification?",c:["Parasitism / +−","Predation / ++","Mutualism / +−","Competition / ++","Commensalism / −0"],correct:0,explanation:"Parasitism is +/− (parasite benefits, host is harmed). Mutualism is +/+. Competition is −/−. Commensalism is +/0.",t:6},
+  {q:"The relationship between mycorrhizal fungi and plant roots is:",c:["Mutualism","Parasitism","Commensalism","Competition","Predation"],correct:0,explanation:"Mycorrhizal fungi provide the plant with nutrients; the plant provides the fungus with carbohydrates — mutualism (+/+).",t:6},
+  {q:"Species diversity takes into account both:",c:["Population size and growth rate","Species richness and evenness","Birth rate and death rate","Immigration and emigration","Predation and parasitism"],correct:1,explanation:"Diversity = richness (number of species) + evenness (relative abundance of each species).",t:6},
+  {q:"A community with 10 species where one makes up 91% of individuals has:",c:["High richness and high evenness","High richness and low evenness","Low richness and high evenness","Low richness and low evenness","Maximum diversity"],correct:1,explanation:"Richness is high (10 species), but evenness is low (dominated by one species). Overall diversity is moderate to low.",t:6},
+  {q:"In a food web, primary consumers are:",c:["Herbivores that eat producers","Carnivores that eat herbivores","Decomposers that break down dead matter","Producers that photosynthesize","Omnivores eating both plants and animals"],correct:0,explanation:"Primary consumers are herbivores (the first step above producers in a food chain).",t:7},
+  {q:"Top-down control occurs when:",c:["Nutrient levels in the soil limit plant growth","Predators regulate the abundance of their prey","Plants regulate the growth of herbivores","Decomposers limit nutrient cycling","Rainfall determines species richness"],correct:1,explanation:"Top-down control means higher trophic levels (predators) regulate lower levels (prey) in the food web.",t:7},
+  {q:"After wolves were reintroduced to Yellowstone in 1995:",c:["Elk populations decreased, leading to vegetation recovery and ecosystem-wide changes","Elk populations increased due to reduced predation pressure","Vegetation had no response to elk herbivory changes","Wolves only ate elk, ignoring other prey","The ecosystem returned to its state before 1872"],correct:0,explanation:"Wolves controlled elk populations (top-down), allowing vegetation to recover — a textbook trophic cascade affecting the entire ecosystem.",t:7},
+  {q:"An inverted biomass pyramid in aquatic ecosystems occurs because:",c:["Aquatic organisms are smaller than terrestrial organisms","There are fewer trophic levels in aquatic than terrestrial systems","Large predatory fish consume all the algae","Phytoplankton have rapid turnover; standing crop is low but productivity is high","Water density increases biomass"],correct:3,explanation:"Phytoplankton reproduce rapidly, so little standing biomass accumulates, yet production is high — hence standing crop can be less than the zooplankton above them.",t:7},
+  {q:"Adding piscivorous fish to a lake would be expected to:",c:["Decrease fish populations overall","Increase algal populations indirectly through a trophic cascade","Increase zooplankton and decrease algae","Eliminate all competition","Have no effect on plankton communities"],correct:2,explanation:"Piscivorous fish eat other fish (including planktivorous fish), releasing zooplankton from predation, which then graze down algae — a trophic cascade.",t:7},
+  {q:"The latitudinal diversity gradient describes:",c:["Decreasing diversity as you move from equator to poles","Increasing diversity at higher altitudes","Changing seasons at different latitudes","Ocean currents flowing toward the equator","More species in deserts than rainforests"],correct:0,explanation:"Species richness is highest at the equator and decreases toward the poles — a fundamental pattern in ecology.",t:8},
+  {q:"According to island biogeography, which island has HIGHEST species richness?",c:["Small and near the mainland","Small and far from the mainland","Large and far from the mainland","Large and near the mainland","All islands have equal richness"],correct:3,explanation:"Large islands (lower extinction) + near mainland (higher immigration) = highest equilibrium richness.",t:8},
+  {q:"The Theory of Island Biogeography can be applied to:",c:["Oceanic islands only","Habitat fragments in fragmented landscapes","National parks surrounded by developed land","All of the above","None of the above"],correct:3,explanation:"The principles apply to any isolated habitat patch, not just oceanic islands.",t:8},
+  {q:"Wildlife corridors benefit conservation by:",c:["Eliminating invasive species","Reducing biodiversity","Increasing carrying capacity indefinitely","Preventing all extinction","Allowing gene flow and recolonization between fragmented populations"],correct:4,explanation:"Corridors reconnect isolated populations, reducing the genetic isolation and extinction risk of fragments.",t:8},
+  {q:"The First Law of Thermodynamics states that energy:",c:["Always increases in organisms","Is only found in photosynthesis","Is destroyed during respiration","Is neither created nor destroyed but can change form","Flows only in one direction through ecosystems"],correct:3,explanation:"Energy is conserved in form changes (sunlight → chemical → heat) but never created or lost.",t:9},
+  {q:"Decomposers are critical because they:",c:["Produce energy for the ecosystem","Are the largest organism in ecosystems","Consume all herbivores","Prevent all disease","Recycle nutrients, returning them to the soil where producers can reuse them"],correct:4,explanation:"Decomposers break down dead organic matter, releasing nutrients back into available forms (biogeochemical cycles).",t:9},
+  {q:"Among terrestrial biomes, which has the HIGHEST NPP?",c:["Desert","Tundra","Tropical rainforest","Boreal forest","Temperate grassland"],correct:2,explanation:"Tropical rainforests have high temperature, rainfall, and year-round growing season — all conditions for high NPP.",t:9},
+  {q:"Marine NPP is highest near coastlines because:",c:["Warmer water photosynthesizes faster","Deep water has more sunlight","Salt concentration is higher","Upwelling brings nutrient-rich deep water to the surface, fueling phytoplankton growth","Ocean currents reduce competition"],correct:3,explanation:"Upwelling delivers nutrients (especially nitrogen and phosphorus) that limit phytoplankton in open ocean.",t:9},
+  {q:"Nitrogen fixation is the process by which:",c:["Nitrates are taken up by plants","Nitrogen returns to the atmosphere","Proteins are broken down during decomposition","Ammonia is oxidized to nitrate","Atmospheric N₂ is converted to usable forms like ammonia by bacteria"],correct:4,explanation:"Only certain bacteria (in soil, root nodules, or oceans) can fix N₂ into NH₃ or NO₃⁻ that organisms can use.",t:9},
+  {q:"Excess nitrogen runoff leads to dead zones because:",c:["Nitrogen is toxic to fish","Sunlight cannot penetrate nitrogen-rich water","Nitrogen hardens fish gills","Excess N fertilizes algal blooms; decomposition of dead algae depletes oxygen","Nitrogen converts water to ice"],correct:3,explanation:"Eutrophication → algal bloom → algae die → decomposers consume O₂ → hypoxia/dead zone.",t:9},
+  {q:"The primary source of new phosphorus entering ecosystems is:",c:["Nitrogen-fixing bacteria","Rivers from the ocean","Atmospheric deposition","Volcanic activity","Rock weathering and erosion"],correct:4,explanation:"Phosphorus has no gaseous cycle; it enters ecosystems slowly through physical weathering of phosphate-containing rocks.",t:9},
+  {q:"Burning fossil fuels contributes to climate change because it:",c:["Produces oxygen that blankets the Earth","Decreases the albedo of the planet","Heats the sun","Releases ancient geological carbon stored underground, increasing atmospheric CO₂ and warming","Eliminates the ozone layer directly"],correct:3,explanation:"Fossil fuels are ancient photosynthetic products; burning them releases CO₂, a greenhouse gas.",t:9},
+  {q:"The insurance effect means that:",c:["Diverse communities reduce ecosystem stability","All species contribute equally to ecosystem function","Only dominant species matter for ecosystem stability","Communities with more species can better withstand environmental disturbance through functional redundancy","Species richness is unrelated to stability"],correct:3,explanation:"If one species fails under stress, others can compensate — diverse communities are more resilient (insurance hypothesis).",t:10},
+  {q:"Complementarity means that:",c:["Species compete for the same resources","Predators complement prey","All species have identical niches","Different species use resources in different ways, allowing more complete resource utilization and higher productivity","Competitive exclusion occurs"],correct:3,explanation:"Complementarity: different species fill different ecological roles, leading to higher total productivity.",t:10},
+  {q:"Conservation biology studies phenomena affecting the:",c:["Evolution of new species only","Loss and preservation of biodiversity","Climate patterns only","Photosynthesis mechanisms","Classification of organisms"],correct:1,explanation:"Conservation biology applies ecological principles to prevent species extinction and preserve ecosystems.",t:10},
+  {q:"Which is NOT one of the three levels of biodiversity?",c:["Genetic diversity","Species diversity","Ecosystem diversity","Population diversity","All are levels of biodiversity"],correct:3,explanation:"The three levels are genetic (within species), species (among species), and ecosystem (habitats and processes).",t:10},
+  {q:"Inbreeding depression leads to:",c:["Increased adaptability","Reduced expression of harmful alleles","Higher reproduction rates","Increased expression of harmful recessive alleles and reduced fitness","Greater genetic diversity"],correct:3,explanation:"Small populations experience inbreeding; harmful recessive alleles become homozygous, reducing survival and reproduction.",t:10},
+  {q:"In a metapopulation, a source population is one where:",c:["Extinction rates exceed immigration","Birth rate is zero","All individuals emigrate","Death rate is zero","Local births exceed local deaths (b > d), producing surplus individuals that emigrate to sinks"],correct:4,explanation:"Source populations sustain themselves and help recolonize or supplement sink populations.",t:10},
+  {q:"The BIDE model differs from BD by accounting for:",c:["Biodiversity","Environmental change","Individual-based dynamics","Immigration and emigration (open populations)","Disease impact"],correct:3,explanation:"BIDE: Births + Immigration − Deaths − Emigration. BD ignores movement; BIDE is the full open population model.",t:4},
+  {q:"The rosy periwinkle exemplifies biodiversity's value because:",c:["It is the most beautiful flower","It tastes good","It is rare and endangered","It contains alkaloids used to treat childhood leukemia and other cancers, generating billions in pharmaceutical value","It pollinates food crops"],correct:3,explanation:"Two alkaloids from Madagascar's rosy periwinkle (vinblastine, vincristine) are blockbuster cancer drugs.",t:10},
+  {q:"Deforestation of tropical rain forest for cattle ranching simultaneously affects multiple ecological processes. Which BEST captures the full range of consequences?",c:["Only carbon cycle and biodiversity are affected","Rainfall patterns and water cycles are unaffected by deforestation","Nitrogen is the only nutrient lost","Only apex predators are threatened","Habitat loss → reduced biodiversity and carbon storage; land conversion to pasture → altered nutrient cycles and increased runoff; cattle production → methane emissions and inefficient trophic transfer; fragmentation → reduced gene flow and increased extinction risk"],correct:4,explanation:"This integrates habitat loss, nutrient cycling, climate (greenhouse gases), and conservation genetics.",t:0},
+  {q:"Climate change is causing permafrost to thaw, releasing methane into the atmosphere, while warming allows shrubs and boreal trees to colonize former tundra. Which statement BEST integrates these concepts?",c:["The thaw has no ecological consequence","Shrubs cannot photosynthesize in cold climates so no biome shift occurs","Permafrost thaw cools the planet by reflecting more sunlight","Methane release → warming → biome shift northward; changed vegetation → altered albedo and carbon storage → feedback loop amplifying warming","Only the nitrogen cycle is affected by permafrost thaw"],correct:3,explanation:"This is an integrative question linking climate change, biogeochemistry (greenhouse gases), biomes, and positive feedback loops.",t:0},
+  {q:"A lake receives heavy phosphorus runoff from agriculture. Algal blooms increase, zooplankton thrive, then fish increase. Eventually the blooms create a dead zone killing fish. Without fish predation, zooplankton crash from a viral epidemic. Which concepts are illustrated?",c:["Only eutrophication matters","Eutrophication → trophic cascade (loss of top-down control) → ecosystem state shift; disease acts as an alternative regulator; shows how coupled abiotic and biotic processes determine ecosystem stability","Phosphorus cycles so rapidly that no lasting effects occur","Viruses never play a role in regulating ecosystem dynamics","Only bottom-up control is relevant since nutrients started the chain"],correct:1,explanation:"Multiple feedback loops: nutrient enrichment, trophic interactions, disease dynamics, and ecosystem resilience.",t:0},
+  {q:"Researchers studying Galápagos finches after a drought find only large-beaked survivors. The next year, a new large-beaked finch species colonizes the island. Which sequence is MOST likely?",c:["Evolution and speciation happened simultaneously in one generation","The resident species will switch to eating insects to avoid competition","Random genetic mutation created the drought conditions","Both species will immediately form a mutualistic relationship","Directional selection on beak size (drought); the new arrival represents colonization from another island; potential competitive exclusion or resource partitioning between similar species"],correct:4,explanation:"Integrates natural selection (evolution), dispersal-colonization, and community assembly (how diversity is maintained).",t:0},
+  {q:"The Everglades restoration project addresses agricultural phosphorus runoff, invasive Burmese pythons, and habitat fragmentation isolating Florida panthers. Which statement BEST integrates these threats?",c:["Only one of these problems needs to be solved for full restoration","Phosphorus eutrophication → altered plant communities; invasive predators → trophic cascade and native species decline; habitat fragmentation → small, isolated panther populations suffering inbreeding depression and reduced genetic diversity; restoration must address nutrients, species interactions, and connectivity","Panthers naturally prey on pythons so the problem is self-correcting","Phosphorus runoff only affects terrestrial plants, not aquatic ecosystems","Habitat fragmentation increases genetic diversity by creating new selection pressures"],correct:1,explanation:"Multi-level integration: ecosystem (nutrient cycling), community (invasive species, trophic cascades), population (fragmentation, genetics), and conservation.",t:0},
+
+  // NEW ORIGINAL QUESTIONS (45+) — Similar topics, different stems/scenarios
+  {q:"Which of the following best describes an ecosystem?",c:["A group of organisms of the same species in one location","The ocean only","All organisms on Earth","A type of forest biome","Communities plus their abiotic physical and chemical environment"],correct:4,explanation:"An ecosystem includes both biotic (living) and abiotic (non-living) components interacting together.",t:1},
+  {q:"Ecologists studying predator-prey relationships in a forest observe that owl and mouse populations show predictable cycles. This demonstrates:",c:["Evolution","Density-independent effects only","Random variation with no pattern","Interspecific interactions shaping population dynamics","Mutualism"],correct:3,explanation:"The regular cycles show how one species directly affects another's birth and death rates through predation.",t:1},
+  {q:"Which abiotic factor is MOST important in determining which plants grow in a specific location?",c:["Temperature and precipitation patterns","Presence of predators","pH of the water","Color of the soil","Number of decomposers"],correct:0,explanation:"Climate (temperature and rainfall) is the primary abiotic factor determining plant community composition.",t:1},
+  {q:"The trade winds that circle the Earth are primarily caused by:",c:["Ocean currents","Earth's tilt and rotation combined with differential solar heating","The Everglades","Human pollution","Star positions"],correct:1,explanation:"The Coriolis effect and uneven solar heating create the major wind patterns (trade winds, westerlies).",t:1},
+  {q:"Which region would experience the MOST extreme temperature fluctuations between day and night?",c:["Tropical rainforest","Coastal area with oceanic influence","Desert","Tundra","Ocean surface"],correct:2,explanation:"Deserts lack cloud cover and have low humidity, so heat escapes rapidly at night without a water blanket.",t:1},
+  {q:"Alpine tundra above the tree line on mountains is similar to arctic tundra in climate because:",c:["Both are at high latitudes","Both experience high precipitation","Elevation and latitude both reduce temperature and growing season length, causing cold, short-season conditions","Mountains are always near poles","Altitude has no effect on climate"],correct:2,explanation:"High altitude mimics high latitude: both are cold and have short growing seasons, preventing tree growth.",t:3},
+  {q:"Which biome would you expect to have the LOWEST annual rainfall?",c:["Temperate deciduous forest","Grassland","Desert","Boreal forest","Wetland"],correct:2,explanation:"Deserts are defined by extremely low precipitation (typically <25 cm/year).",t:3},
+  {q:"A scientist studies a terrestrial biome with moderate rainfall (50-150 cm/year), cold winters, and deciduous trees. Which biome is this MOST likely?",c:["Temperate rainforest","Tropical dry forest","Temperate deciduous forest","Savanna","Taiga"],correct:2,explanation:"Moderate rainfall and cold winters characterize temperate deciduous forests (tree leaves fall in winter).",t:3},
+  {q:"If Earth had no seasonal tilt and received equal solar radiation year-round at all latitudes, which climate pattern would be eliminated?",c:["Monsoons","Hadley cells","Equatorial rainforests","Seasons","Daily weather"],correct:3,explanation:"Earth's 23.5° tilt creates seasons. Without it, there would be no seasonal variation in sunlight.",t:1},
+  {q:"In a population of squirrels, the birth rate is 0.08 and the death rate is 0.03. This population is currently:",c:["At carrying capacity","Declining (r < 0)","Growing (r > 0)","Stable (r = 0)","Going extinct"],correct:2,explanation:"r = b − d = 0.08 − 0.03 = 0.05 > 0, so the population is growing.",t:4},
+  {q:"A population colonizes a new island with abundant resources. Which growth pattern would you predict?",c:["Logistic growth immediately","Exponential growth initially, then logistic as K is approached","Constant decline","No growth","Oscillating growth with no pattern"],correct:1,explanation:"New colonists experience exponential growth until resources become limiting (approaching K).",t:4},
+  {q:"Which of the following is an example of a density-dependent factor?",c:["Accumulation of toxic waste in a crowded population","Volcanic eruption","Hurricane","Extreme cold spell","UV radiation from ozone hole"],correct:0,explanation:"Toxic waste accumulates more at high density (more individuals producing waste), so its effect intensifies with density.",t:5},
+  {q:"A bird species experiences reduced nesting success at very low population densities due to difficulty finding mates. This is an example of:",c:["Logistic growth","Intraspecific competition","Carrying capacity","Allee effect","Predation pressure"],correct:3,explanation:"The Allee effect: positive density dependence at low population sizes where cooperation or mate-finding is difficult.",t:5},
+  {q:"If a population has r_max = 0.2 and K = 1000, at what population size is the rate of population growth (dN/dt) GREATEST?",c:["100","250","500","750","1000"],correct:2,explanation:"In logistic growth, growth rate is highest at K/2 (half carrying capacity): dN/dt = r_max × N × (K−N)/K is maximized when N = K/2.",t:5},
+  {q:"Two beetle species coexist in the same forest but one feeds on oak leaves and the other on pine needles. This is an example of:",c:["Competitive exclusion","Mutualism","Predation","Parasitism","Resource partitioning"],correct:4,explanation:"By using different resources (different plants), the two species reduce competition and partition niche space.",t:6},
+  {q:"In Connell's classic barnacle experiment, when Balanus was removed, Chthamalus expanded its distribution downward into lower zones, revealing that:",c:["Chthamalus is a superior competitor","Lower zones lack suitable substrate","Chthamalus is desiccation-tolerant","Competition limits the realized niche of Chthamalus to the upper zone only","Predators were preventing Chthamalus from expanding"],correct:3,explanation:"Chthamalus is competitively excluded by Balanus in the lower zone; Balanus's absence allows Chthamalus to realize its full fundamental niche.",t:6},
+  {q:"A lion and leopard hunt the same prey (zebra) but do not directly compete with each other. If hunting lions increases, leopard populations may decline. This is:",c:["Direct competition","Predation","Mutualism","Apparent competition","Amensalism"],correct:3,explanation:"Both predators share a common prey; more lions may reduce zebra abundance, indirectly harming leopards (shared enemy resource use).",t:6},
+  {q:"Which scenario would produce the HIGHEST species diversity score?",c:["10 species, one with 80% abundance","20 species, all with equal (5%) abundance","5 species, all with equal (20%) abundance","15 species, distributed unevenly","30 species, dominated by one species"],correct:1,explanation:"Diversity integrates richness (number of species) and evenness (relative abundance). High richness + equal evenness = highest diversity.",t:6},
+  {q:"In a food chain: grass → grasshopper → sparrow → hawk, what are the secondary consumers?",c:["Sparrow","Grasshopper","Grass","Hawk","Multiple answers"],correct:0,explanation:"Primary consumers (herbivores) = grasshopper. Secondary consumers = sparrow (eats primary consumer).",t:7},
+  {q:"If primary producers fix 10,000 kcal of energy, and trophic efficiency is 10%, approximately how much is available to secondary consumers?",c:["10,000 kcal","0 kcal","100 kcal","10 kcal","1,000 kcal"],correct:2,explanation:"Producers: 10,000 kcal → Primary consumers (10%): 1,000 kcal → Secondary consumers (10%): 100 kcal.",t:7},
+  {q:"Removing sea stars from a rocky intertidal zone leads to dramatic loss of species diversity as sea urchin populations explode and overgraze algae. This exemplifies:",c:["Keystone species and trophic cascade","Competitive exclusion","Bottom-up control only","Carrying capacity","Mutualism"],correct:0,explanation:"Sea stars are a keystone predator: their removal causes a trophic cascade (loss of top-down control) affecting the entire community.",t:7},
+  {q:"Which factor would shift an equilibrium island biogeography curve to the right (increasing S* at a given island size)?",c:["Increasing distance from mainland","Decreasing island size","Decreasing extinction rate (larger or less isolated island)","Climate change reducing mainland species pool","Invasive species eliminating natives"],correct:2,explanation:"Lower extinction (due to larger size) shifts the extinction curve down, raising the equilibrium point.",t:8},
+  {q:"A habitat fragment of tropical forest is only 100 hectares, surrounded by pasture. According to island biogeography, which management strategy would help MOST?",c:["Increase fragment size by restoring surrounding forest and creating corridors","Focus only on protecting the single large fragment","Allow invasive species to reduce diversity","Increase edge habitat by fragmenting further","Prevent all species movement"],correct:0,explanation:"Larger size + connection via corridors = lower extinction and higher immigration in metapopulation.",t:8},
+  {q:"The reason tropical latitudes have higher species diversity than temperate latitudes is BEST explained by:",c:["More rain at tropics","Plate tectonics isolated tropical species","Fewer predators at tropics","Mountains block speciation at temperate latitudes","Higher temperatures and longer growing seasons → more energy, faster speciation, and reduced extinction over evolutionary time"],correct:4,explanation:"High energy input and long evolutionary time allow higher diversification rates and lower extinction.",t:8},
+  {q:"Gross Primary Productivity (GPP) minus plant respiration equals:",c:["Net Primary Productivity (NPP)","Trophic efficiency","Carrying capacity","Standing crop","Ecosystem services"],correct:0,explanation:"NPP = GPP − Respiration; NPP is the energy available to consumers after plants use some for their own maintenance.",t:9},
+  {q:"A temperate grassland has high NPP but low standing crop of plants, while a boreal forest has moderate NPP but very high standing crop. This occurs because:",c:["Grassland plants are more efficient at photosynthesis","Boreal trees never lose biomass","Grasslands have no roots","Grasslands are grazed heavily and have rapid turnover; boreal cold slows decomposition, allowing biomass to accumulate","Forests photosynthesize at night"],correct:3,explanation:"Fast herbivory and decomposition in grasslands prevent biomass buildup despite high production; cold boreal conditions slow both processes.",t:9},
+  {q:"Which is the correct sequence of the nitrogen cycle?",c:["Assimilation → Fixation → Nitrification → Denitrification","Fixation → Nitrification → Assimilation → Denitrification","Denitrification → Fixation → Nitrification → Assimilation","Fixation → Assimilation → Nitrification → Denitrification","Random order, no sequence"],correct:1,explanation:"N₂ gas is fixed into usable forms, nitrified to NO₃⁻, assimilated by organisms, and denitrified back to N₂.",t:9},
+  {q:"Eutrophication of a lake causes a dead zone because:",c:["Too many fish breed","Phosphorus is toxic","Algal blooms from excess nutrients die and decompose; decomposers deplete oxygen → hypoxia → fish death","Nitrogen turns into acid","Sediment becomes too thick"],correct:2,explanation:"Excess nutrients (N/P) → algal bloom → algae die → decomposition consumes O₂ → anoxia.",t:9},
+  {q:"Unlike nitrogen and carbon, phosphorus:",c:["Enters ecosystems primarily through rock weathering and has no gaseous phase","Cycles rapidly through the atmosphere","Is produced by photosynthesis","Is toxic to all organisms","Cannot be recycled"],correct:0,explanation:"Phosphorus lacks a gaseous cycle, so it's easily lost from ecosystems and enters only slowly through weathering.",t:9},
+  {q:"A forest ecosystem has high plant diversity with many different species using different resources. This is expected to result in:",c:["Lower total productivity","Increased nitrogen cycling","Ecosystem instability","Reduced resilience to disturbance","Higher total productivity due to complementarity and reduced competition"],correct:4,explanation:"Diverse species with different niches use resources more completely, increasing ecosystem-level productivity.",t:10},
+  {q:"Biodiversity supports ecosystem stability through the insurance effect because:",c:["All species are identical","Redundancy: multiple species can fill similar functions, so loss of one species is buffered by others","Diversity always increases stability","Only rare species matter","Species interactions are irrelevant"],correct:1,explanation:"Functional redundancy: if one species declines, others can compensate, maintaining ecosystem function.",t:10},
+  {q:"Which statement about ecosystem services is MOST accurate?",c:["Only rainforests provide ecosystem services","Biodiversity is unrelated to ecosystem services","Humans can replace all ecosystem services with technology","Ecosystem services include pollination, water filtration, climate regulation, and nutrient cycling — services worth trillions annually","Cities have no need for ecosystem services"],correct:3,explanation:"Ecosystem services are the benefits humans derive from natural ecosystems; they are invaluable and difficult to replace.",t:10},
+  {q:"Conservation of genetic diversity within a species is important because it:",c:["Ensures all individuals are identical","Maintains heritable variation that allows adaptation to environmental change","Prevents evolution","Increases inbreeding depression","Makes organisms more uniform"],correct:1,explanation:"Genetic diversity is the raw material for adaptation; loss of diversity reduces a population's ability to respond to change.",t:11},
+  {q:"Effective population size (Nₑ) is important in conservation because it accounts for:",c:["Total number of individuals only","The fact that unequal sex ratios, variable reproduction, and inbreeding reduce genetic diversity more than census size suggests","Population density only","Movement patterns only","Predation rate"],correct:1,explanation:"Nₑ is usually much smaller than census size (N). Equal sex ratios and equal reproductive success maximize Nₑ.",t:11},
+  {q:"A conservation biologist discovers that a small population of frogs (N=50) has low genetic diversity and declining fitness. The BEST management strategy would be:",c:["Increase population size through translocation or habitat restoration to increase Nₑ and reduce inbreeding","Allow natural selection to strengthen the population","Prevent all migration between populations","Focus only on protecting existing individuals","Capture all remaining frogs for captive breeding"],correct:0,explanation:"Larger populations maintain more genetic diversity and reduce inbreeding depression. Connectivity (gene flow) also helps.",t:11},
+  {q:"In a source-sink metapopulation model, a sink habitat experiences:",c:["High birth and low death rates","Complete isolation from other populations","No extinction","Unlimited resources","Low birth and high death rates (r < 0); persists only via immigration from sources"],correct:4,explanation:"Sink populations cannot sustain themselves; they would go extinct without immigration from source populations.",t:11},
+  {q:"The primary cause of current global biodiversity loss is:",c:["Climate change alone","Overhunting alone","Habitat loss and fragmentation","Invasive species exclusively","Pollution exclusively"],correct:2,explanation:"While all factors contribute, habitat loss due to land-use change is the single largest driver of extinction worldwide.",t:11},
+  {q:"A researcher compares diversity in a pristine tropical forest with a recently fragmented version of the same forest. The fragmented forest would likely show:",c:["Higher diversity (more edge habitat)","Lower diversity due to loss of habitat area, increased edge effects, and reduced gene flow between fragments","No change in diversity","Higher evenness","Lower richness but higher evenness"],correct:1,explanation:"Fragmentation reduces total habitat area and creates isolation, leading to local extinctions and lower diversity.",t:11},
+  {q:"CITES (Convention on International Trade in Endangered Species) is an example of:",c:["A conservation strategy using international agreements to prevent overharvesting of endangered species","A federal law protecting national parks only","A breeding program for captive species only","An agreement with no enforcement mechanism","A method to increase invasive species"],correct:0,explanation:"CITES is an international agreement that regulates trade in endangered species to prevent exploitation.",t:11},
+  {q:"A landscape-level conservation plan protecting an endangered mammal should prioritize:",c:["A network of moderately-sized reserves connected by wildlife corridors to maximize population size and gene flow","Multiple small reserves only","Single large reserves only","Urban areas with highest human population","Eliminating all herbivores"],correct:0,explanation:"Multiple connected reserves maintain larger effective populations and allow recolonization — the 'single large or several small' debate favors several connected.",t:11},
+  {q:"Which example BEST illustrates the concept of top-down vs. bottom-up control in ecosystems?",c:["Nutrient levels determine plant growth, which determines herbivore abundance — this is purely bottom-up","Predators control herbivore populations, which indirectly controls plant abundance — this is purely top-down","Both operate simultaneously: nutrients support production from below while predators regulate consumers from above, jointly structuring communities","Only producer biomass matters because energy always flows upward","Top-down and bottom-up control never occur in the same ecosystem"],correct:2,explanation:"Most ecosystems experience both: nutrients support production (bottom-up) AND predators regulate consumers (top-down).",t:0},
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let activeTopic = null;
+let currentQuestions = [];
+let currentIdx = 0;
+let answered = {};
+let answered_correctly = {};
+let streak = 0;
+let xp = 0;
+let isQuickQuiz = false;
+let achievements = new Set();
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  createTopicSelect();
+  createConceptsTab();
+  createFormulasTab();
+}
+
+function createTopicSelect() {
+  const sel = document.getElementById('topic-select');
+  sel.innerHTML = `<option value="all">All Topics (${ALL_QUESTIONS.length})</option>`;
+  const order = [1,2,3,4,5,6,7,8,9,10,11,0];
+  order.forEach(t => {
+    const count = ALL_QUESTIONS.filter(q => q.t === t).length;
+    if (count > 0) {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = `${TOPICS[t]} (${count})`;
+      sel.appendChild(opt);
+    }
+  });
+}
+
+function filterTopicSelect(val) {
+  filterTopic(val === 'all' ? null : parseInt(val));
+}
+
+function filterTopic(topic) {
+  activeTopic = topic;
+  currentQuestions = activeTopic === null
+    ? [...ALL_QUESTIONS]
+    : ALL_QUESTIONS.filter(q => q.t === activeTopic);
+  currentIdx = 0;
+  answered = {};
+  answered_correctly = {};
+
+  // Shuffle
+  currentQuestions = shuffleArray([...currentQuestions]);
+
+  renderQuiz();
+}
+
+function resetAndReshuffle() {
+  answered = {};
+  answered_correctly = {};
+  streak = 0;
+  xp = 0;
+  achievements.clear();
+  document.getElementById('streak-count').textContent = '0';
+  document.getElementById('stat-summary').textContent = '';
+  const streakBox = document.getElementById('streak-box');
+  if (streakBox) streakBox.style.display = 'none';
+  updateFireEmoji();
+  if (isQuickQuiz) {
+    currentQuestions = shuffleArray([...ALL_QUESTIONS]).slice(0, 6);
+  } else {
+    currentQuestions = shuffleArray([...(activeTopic === null ? ALL_QUESTIONS : ALL_QUESTIONS.filter(q => q.t === activeTopic))]);
+  }
+  currentIdx = 0;
+  document.getElementById('results-area').classList.add('hidden');
+  renderQuiz();
+}
+
+function renderQuiz() {
+  const quizArea = document.getElementById('quiz-area');
+  const resultsArea = document.getElementById('results-area');
+
+  if (currentIdx >= currentQuestions.length) {
+    // Show results
+    showResults(quizArea, resultsArea);
+    return;
+  }
+
+  const q = currentQuestions[currentIdx];
+  const answeredCount = Object.keys(answered).length;
+  const progress = (answeredCount / currentQuestions.length) * 100;
+  const correctCount = Object.keys(answered_correctly).filter(k => answered_correctly[k]).length;
+  const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+
+  // Update compact score bar
+  const summary = document.getElementById('stat-summary');
+  if (answeredCount > 0) {
+    summary.textContent = `${correctCount}/${answeredCount} correct (${accuracy}%)`;
+  } else {
+    summary.textContent = '';
+  }
+
+  // Show/hide streak in nav
+  const streakBox = document.getElementById('streak-box');
+  if (streakBox) streakBox.style.display = streak >= 2 ? 'flex' : 'none';
+
+  quizArea.innerHTML = `
+    <div class="card">
+      <div class="q-progress">Question ${currentIdx + 1} of ${currentQuestions.length}</div>
+      <div class="q-progress-bar"><div class="q-progress-fill" style="width:${progress}%"></div></div>
+
+      <div class="q-number">${TOPICS[q.t]}</div>
+      <h2 id="current-question" class="q-text" tabindex="-1">${q.q}</h2>
+
+      <div class="choices" role="group" aria-label="Answer choices">
+        ${q.c.map((choice, idx) => `
+          <button
+            class="choice-btn"
+            data-idx="${idx}"
+            onclick="selectAnswer(${idx}, ${currentIdx})"
+            ${answered[currentIdx] !== undefined ? 'disabled' : ''}
+            aria-label="${String.fromCharCode(65 + idx)}: ${choice}"
+          >
+            <span class="choice-letter">${String.fromCharCode(65 + idx)}</span>
+            <span>${choice}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      ${answered[currentIdx] !== undefined ? `
+        <div class="feedback ${answered_correctly[currentIdx] ? 'correct' : 'wrong'} show" role="alert">
+          <div class="feedback-title">
+            ${answered_correctly[currentIdx] ? '✓ Correct!' : '✗ Incorrect'}
+          </div>
+          <div class="explanation">${q.explanation}</div>
+        </div>
+      ` : ''}
+
+      <div class="q-nav">
+        <button
+          class="btn-nav btn-next"
+          onclick="nextQuestion()"
+          ${answered[currentIdx] === undefined ? 'disabled' : ''}
+          aria-label="${currentIdx === currentQuestions.length - 1 ? 'Finish quiz' : 'Next question'}"
+        >
+          ${currentIdx === currentQuestions.length - 1 ? 'Finish' : 'Next →'}
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Focus management: move focus to new question for screen readers
+  const questionEl = document.getElementById('current-question');
+  if (questionEl) {
+    questionEl.focus();
+  }
+}
+
+function selectAnswer(choiceIdx, qIdx) {
+  const q = currentQuestions[qIdx];
+  answered[qIdx] = choiceIdx;
+  const isCorrect = choiceIdx === q.correct;
+  answered_correctly[qIdx] = isCorrect;
+
+  // XP and streak
+  if (isCorrect) {
+    xp += 10;
+    streak++;
+    checkAchievements();
+    createConfetti();
+    showEncouragement();
+  } else {
+    streak = 0;
+  }
+  updateFireEmoji();
+  document.getElementById('streak-count').textContent = streak;
+
+  // Disable all choices and mark correct/wrong for screen readers
+  document.querySelectorAll('.choice-btn').forEach(btn => {
+    btn.disabled = true;
+    const idx = parseInt(btn.getAttribute('data-idx'));
+    if (idx === choiceIdx) btn.setAttribute('aria-pressed', 'true');
+    if (idx === q.correct) {
+      btn.classList.add('correct');
+      btn.setAttribute('aria-label', btn.getAttribute('aria-label') + ' (correct answer)');
+    }
+    if (idx === choiceIdx && idx !== q.correct) {
+      btn.classList.add('wrong');
+      btn.setAttribute('aria-label', btn.getAttribute('aria-label') + ' (incorrect)');
+    }
+  });
+
+  // Show feedback
+  const feedback = document.querySelector('.feedback');
+  if (feedback) feedback.classList.add('show');
+
+  renderQuiz();
+
+  // Move focus to Next button after answering
+  const nextBtn = document.querySelector('.btn-next');
+  if (nextBtn) nextBtn.focus();
+}
+
+function nextQuestion() {
+  if (answered[currentIdx] === undefined) return;
+  currentIdx++;
+  renderQuiz();
+}
+
+function startQuiz() {
+  isQuickQuiz = false;
+  document.getElementById('landing-screen').classList.add('hidden');
+  document.getElementById('quiz-content').classList.remove('hidden');
+  document.getElementById('topic-select').style.display = '';
+  filterTopic(null);
+}
+
+function startQuickQuiz() {
+  isQuickQuiz = true;
+  document.getElementById('landing-screen').classList.add('hidden');
+  document.getElementById('quiz-content').classList.remove('hidden');
+  document.getElementById('topic-select').style.display = 'none';
+
+  // Pick 6 random questions from the full pool
+  const shuffled = shuffleArray([...ALL_QUESTIONS]);
+  currentQuestions = shuffled.slice(0, 6);
+  currentIdx = 0;
+  answered = {};
+  answered_correctly = {};
+  streak = 0;
+  document.getElementById('streak-count').textContent = '0';
+  document.getElementById('stat-summary').textContent = '';
+  const streakBox = document.getElementById('streak-box');
+  if (streakBox) streakBox.style.display = 'none';
+  updateFireEmoji();
+  renderQuiz();
+
+}
+
+function backToHome() {
+  isQuickQuiz = false;
+  document.getElementById('quiz-content').classList.add('hidden');
+  document.getElementById('results-area').classList.add('hidden');
+  document.getElementById('landing-screen').classList.remove('hidden');
+  document.getElementById('topic-select').style.display = '';
+}
+
+function showResults(quizArea, resultsArea) {
+  const correctCount = Object.values(answered_correctly).filter(v => v).length;
+  const accuracy = Math.round((correctCount / currentQuestions.length) * 100);
+
+  let message = '';
+  if (accuracy === 100) message = '🎉 Perfect! You\'re an Ecology Master!';
+  else if (accuracy >= 90) message = '🌟 Excellent work!';
+  else if (accuracy >= 80) message = '👏 Great job!';
+  else if (accuracy >= 70) message = '✓ Good effort!';
+  else message = '💪 Keep practicing!';
+
+  quizArea.innerHTML = '';
+  resultsArea.classList.remove('hidden');
+  resultsArea.innerHTML = `
+    <div class="card results-card">
+      <div class="results-score" aria-label="Your score: ${accuracy} percent">${accuracy}%</div>
+      <div class="results-message">${message}</div>
+      <div class="results-message" style="font-size: 1rem; color: var(--muted);">
+        You got ${correctCount} out of ${currentQuestions.length} correct
+      </div>
+
+      <div class="results-breakdown">
+        <h3>Breakdown by Topic</h3>
+        ${Object.keys(TOPICS).map(topicId => {
+          const topicId_num = parseInt(topicId);
+          const qsInTopic = currentQuestions.filter(q => q.t === topicId_num);
+          if (qsInTopic.length === 0) return '';
+          const correctInTopic = qsInTopic.filter(q => answered_correctly[currentQuestions.indexOf(q)]).length;
+          const pct = Math.round((correctInTopic / qsInTopic.length) * 100);
+          return `
+            <div class="topic-result">
+              <div class="name">${TOPICS[topicId_num]}</div>
+              <div class="score">${correctInTopic}/${qsInTopic.length} (${pct}%)</div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+
+      <div class="results-actions">
+        <button class="btn-restart" onclick="resetQuiz()">
+          ${isQuickQuiz ? 'New Quick 6' : 'Try Again'}
+        </button>
+        ${isQuickQuiz ? '<button class="btn-restart btn-secondary" onclick="backToHome()">Back to Home</button>' : ''}
+      </div>
+    </div>
+  `;
+
+  // Focus the restart button for keyboard/screen reader users
+  const restartBtn = resultsArea.querySelector('.btn-restart');
+  if (restartBtn) restartBtn.focus();
+}
+
+function resetQuiz() {
+  resetAndReshuffle();
+}
+
+function handleTabKeydown(e) {
+  const tabs = Array.from(e.currentTarget.querySelectorAll('[role="tab"]'));
+  const currentIdx = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+  let nextIdx;
+
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+    nextIdx = (currentIdx + 1) % tabs.length;
+    e.preventDefault();
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    nextIdx = (currentIdx - 1 + tabs.length) % tabs.length;
+    e.preventDefault();
+  } else if (e.key === 'Home') {
+    nextIdx = 0;
+    e.preventDefault();
+  } else if (e.key === 'End') {
+    nextIdx = tabs.length - 1;
+    e.preventDefault();
+  }
+
+  if (nextIdx !== undefined) {
+    tabs[nextIdx].focus();
+    showTab(tabs[nextIdx].id.replace('tab-btn-', ''));
+  }
+}
+
+function showTab(tab) {
+  document.querySelectorAll('[role="tabpanel"]').forEach(t => t.classList.add('hidden'));
+  document.getElementById(`tab-${tab}`).classList.remove('hidden');
+  document.querySelectorAll('nav .tabs button').forEach(btn => {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-selected', 'false');
+    btn.setAttribute('tabindex', '-1');
+  });
+  const activeBtn = document.querySelector(`nav .tabs button[onclick*="'${tab}'"]`);
+  activeBtn.classList.add('active');
+  activeBtn.setAttribute('aria-selected', 'true');
+  activeBtn.setAttribute('tabindex', '0');
+
+  // When switching to Quiz tab, show the landing screen so user can choose Full Quiz or Quick 6
+  if (tab === 'quiz') {
+    backToHome();
+  }
+}
+
+function createConceptsTab() {
+  const container = document.getElementById('tab-concepts');
+  container.innerHTML = Object.keys(TOPICS).map(topicId => {
+    const topic = TOPICS[parseInt(topicId)];
+    const concept = CONCEPTS[parseInt(topicId)];
+    if (!concept) return '';
+    return `
+      <div class="concept-section">
+        <div class="concept-header" onclick="toggleConcept(this)" onkeydown="conceptKeyHandler(event)" role="button" tabindex="0" aria-expanded="false" aria-controls="concept-${topicId}">
+          <h3>${topic}</h3>
+          <span class="arrow" aria-hidden="true">▼</span>
+        </div>
+        <div class="concept-body" id="concept-${topicId}">
+          <p>${concept.summary}</p>
+          <h4 style="margin-top: 16px; margin-bottom: 8px; color: var(--uf-blue); font-weight: 700;">Key Concepts:</h4>
+          <ul>
+            ${concept.keyPoints.map(point => `<li>${point}</li>`).join('')}
+          </ul>
+          ${concept.formulas ? `
+            <h4 style="margin-top: 16px; margin-bottom: 8px; color: var(--uf-blue); font-weight: 700;">Equations:</h4>
+            ${concept.formulas.map(f => `<div class="formula-box">${f}</div>`).join('')}
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function conceptKeyHandler(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleConcept(e.target.closest('.concept-header'));
+  } else if (e.key === 'Escape') {
+    const header = e.target.closest('.concept-header');
+    if (header && header.classList.contains('open')) {
+      e.preventDefault();
+      toggleConcept(header);
+      header.focus();
+    }
+  }
+}
+
+function toggleConcept(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+  header.setAttribute('aria-expanded', header.classList.contains('open'));
+}
+
+function createFormulasTab() {
+  const container = document.getElementById('tab-formulas');
+  const formulas = [
+    { name: 'Per Capita Growth Rate',
+      eq: 'r = b − d',
+      terms: [
+        '<strong>r</strong> = per capita rate of population increase',
+        '<strong>b</strong> = per capita birth rate (births per individual per time)',
+        '<strong>d</strong> = per capita death rate (deaths per individual per time)',
+      ],
+      usage: 'Use this to determine whether a population is growing (r > 0), declining (r < 0), or stable (r = 0). Calculate r first whenever a question gives you birth and death rates.' },
+    { name: 'Exponential Growth',
+      eq: 'dN/dt = r_max × N',
+      terms: [
+        '<strong>dN/dt</strong> = rate of change in population size over time',
+        '<strong>r_max</strong> = maximum per capita rate of increase (intrinsic rate)',
+        '<strong>N</strong> = current population size',
+      ],
+      usage: 'Describes unlimited, J-shaped growth. Use when resources are abundant and there is no carrying capacity — e.g., a species colonizing a new, empty habitat. The larger N gets, the faster the population grows.' },
+    { name: 'Logistic Growth',
+      eq: 'dN/dt = r_max × N × (K − N) / K',
+      terms: [
+        '<strong>dN/dt</strong> = rate of change in population size over time',
+        '<strong>r_max</strong> = maximum per capita rate of increase',
+        '<strong>N</strong> = current population size',
+        '<strong>K</strong> = carrying capacity (max population the environment supports)',
+        '<strong>(K − N) / K</strong> = fraction of carrying capacity remaining; slows growth as N → K',
+      ],
+      usage: 'Describes density-dependent, S-shaped growth. The key term is (K−N)/K: when N is small it is near 1 (growth is near exponential); when N = K it equals 0 (growth stops). Use this model when resources are limited.' },
+    { name: 'Lincoln–Petersen Mark-Recapture',
+      eq: 'N = (M × C) / R',
+      terms: [
+        '<strong>N</strong> = estimated total population size',
+        '<strong>M</strong> = number of individuals marked and released in the first sample',
+        '<strong>C</strong> = total number of individuals captured in the second sample',
+        '<strong>R</strong> = number of marked (recaptured) individuals in the second sample',
+      ],
+      usage: 'Estimates population size from two sampling events. Key trap: M is the number actually <em>marked</em>, not the number captured. If some escaped before marking, use only those successfully marked.' },
+    { name: 'Lindeman\'s 10% Rule',
+      eq: '~10% of energy transfers between trophic levels',
+      terms: [
+        '<strong>10%</strong> = approximate efficiency of energy transfer from one trophic level to the next',
+        '<strong>~90%</strong> = energy lost as metabolic heat at each level',
+      ],
+      usage: 'Use to calculate energy available at higher trophic levels. Example: if producers capture 1,000,000 kcal, then primary consumers get ~100,000, secondary consumers ~10,000, and tertiary consumers ~1,000 kcal. Multiply by 0.10 for each step up.' },
+    { name: 'Net Primary Productivity',
+      eq: 'NPP = GPP − R_plant',
+      terms: [
+        '<strong>NPP</strong> = net primary productivity (energy stored as new plant biomass)',
+        '<strong>GPP</strong> = gross primary productivity (total energy captured by photosynthesis)',
+        '<strong>R_plant</strong> = energy used by plants for their own cellular respiration',
+      ],
+      usage: 'NPP represents what is actually available to consumers. GPP is total photosynthesis; plants "burn" some of that for their own metabolism. Tropical forests have the highest terrestrial NPP.' },
+    { name: 'Shannon Diversity Index',
+      eq: 'H\' = −Σ (p_i × ln p_i)',
+      terms: [
+        '<strong>H\'</strong> = Shannon diversity index value (higher = more diverse)',
+        '<strong>p_i</strong> = proportion of total individuals belonging to species i',
+        '<strong>ln</strong> = natural logarithm',
+        '<strong>Σ</strong> = sum over all species in the community',
+      ],
+      usage: 'Measures both species richness (number of species) and evenness (how equal their abundances are). A community with 10 equally abundant species has higher H\' than one where a single species dominates. Useful for comparing diversity across communities.' },
+    { name: 'Effective Population Size',
+      eq: 'N_e = 4(N_m × N_f) / (N_m + N_f)',
+      terms: [
+        '<strong>N_e</strong> = effective population size (genetic "equivalent" population)',
+        '<strong>N_m</strong> = number of breeding males',
+        '<strong>N_f</strong> = number of breeding females',
+      ],
+      usage: 'Measures how many individuals actually contribute genes to the next generation. Equal sex ratios maximize N_e. A population of 100 with 50M/50F has N_e = 100; but 10M/90F has N_e = only 36 — much more vulnerable to genetic drift and inbreeding.' },
+    { name: 'BIDE Model (Open Population)',
+      eq: 'N(t+1) = N(t) + B + I − D − E',
+      terms: [
+        '<strong>N(t)</strong> = population size at time t',
+        '<strong>B</strong> = births during the time interval',
+        '<strong>I</strong> = immigrants arriving from other populations',
+        '<strong>D</strong> = deaths during the time interval',
+        '<strong>E</strong> = emigrants leaving for other populations',
+      ],
+      usage: 'Extends the simple birth-death model to open populations connected by movement. Use for metapopulation questions. Source populations have B + I > D + E; sink populations have B + I < D + E and depend on immigration to persist.' },
+  ];
+  container.innerHTML = `
+    <h2 style="margin-bottom:6px;font-size:1.15rem;color:var(--uf-blue);">Formula Reference</h2>
+    <p style="color:var(--muted);margin-bottom:20px;font-size:0.9rem;">These formulas will also be provided on the front page of your exam.</p>
+    <div class="formula-grid">${formulas.map(f => `
+    <article class="formula-card">
+      <h3 class="name">${f.name}</h3>
+      <div class="eq" aria-label="Formula: ${f.eq}">${f.eq}</div>
+      <div class="terms">
+        ${f.terms.map(t => `<div class="term">${t}</div>`).join('')}
+      </div>
+      <div class="usage"><strong>When to use it:</strong> ${f.usage}</div>
+    </article>
+  `).join('')}</div>`;
+}
+
+const CONCEPTS = {
+  1: {
+    summary: "Ecology is the study of organisms and their interactions with each other and their environment. It spans from individual organisms to the entire biosphere.",
+    keyPoints: [
+      "<span class='key-term'>Abiotic factors</span>: physical/chemical environment (temperature, water, light, pH, nutrients)",
+      "<span class='key-term'>Biotic factors</span>: all living organisms (predators, prey, competitors, symbionts)",
+      "<span class='key-term'>Hierarchy of organization</span>: organism → population → community → ecosystem → biome → biosphere",
+      "<span class='key-term'>Community</span>: all populations of different species in an area",
+      "<span class='key-term'>Coevolution</span>: species evolve in response to selective pressure from each other"
+    ]
+  },
+  2: {
+    summary: "Earth's climate is shaped by solar radiation, atmospheric circulation, ocean currents, and land features. These patterns determine regional climates and biomes.",
+    keyPoints: [
+      "<span class='key-term'>Hadley cells</span>: warm air rises at equator (wet) and descends at ~30° (dry deserts)",
+      "<span class='key-term'>Coriolis effect</span>: deflects moving air/water right (N. Hemisphere) and left (S. Hemisphere)",
+      "<span class='key-term'>Rain shadow</span>: mountains force air up (precipitation on windward), down and dry on leeward",
+      "<span class='key-term'>Ocean currents</span>: redistribute heat, warming some regions, cooling others",
+      "<span class='key-term'>Greenhouse gases</span>: CO₂, CH₄, N₂O trap heat; CO₂ is primary driver of current warming"
+    ]
+  },
+  3: {
+    summary: "Biomes are large regions defined by dominant vegetation and climate. Climate (temperature + precipitation) determines which plants and animals can survive.",
+    keyPoints: [
+      "<span class='key-term'>Tropical rainforest</span>: warm, wet year-round; highest NPP and biodiversity",
+      "<span class='key-term'>Desert</span>: <25 cm rain/year; low NPP but extreme adaptations",
+      "<span class='key-term'>Grassland/Savanna</span>: moderate rain; dominated by grasses; high herbivory",
+      "<span class='key-term'>Temperate forest</span>: deciduous (lose leaves) in cold season; moderate NPP",
+      "<span class='key-term'>Boreal forest (Taiga)</span>: cold, short season; conifers tolerate poor soil and snow; low NPP",
+      "<span class='key-term'>Tundra</span>: permafrost; very low T; low NPP; few trees"
+    ]
+  },
+  4: {
+    summary: "Population ecology examines factors regulating population size and dynamics: births, deaths, immigration, emigration. Populations show exponential or logistic growth patterns.",
+    keyPoints: [
+      "<span class='key-term'>Population</span>: group of interbreeding individuals of same species in one area",
+      "<span class='key-term'>r (intrinsic rate)</span>: r = b − d; positive = growth, negative = decline, zero = stable",
+      "<span class='key-term'>Exponential growth</span>: N(t) = N₀ × e^(rt); occurs when resources unlimited (early colonization)",
+      "<span class='key-term'>Life history trade-offs</span>: energy allocated among growth, reproduction, defense, maintenance",
+      "<span class='key-term'>Dispersal vs. migration</span>: dispersal = one-way (leaving natal area); migration = cyclical"
+    ]
+  },
+  5: {
+    summary: "Logistic growth model incorporates carrying capacity (K). Populations show density-dependent regulation as they approach K. Allee effects occur at low densities.",
+    keyPoints: [
+      "<span class='key-term'>Carrying capacity (K)</span>: maximum population size sustainable by environment",
+      "<span class='key-term'>Logistic growth</span>: dN/dt = r_max × N × (K−N)/K; S-shaped growth curve",
+      "<span class='key-term'>Density-dependent factors</span>: effect increases with density (competition, disease, predation)",
+      "<span class='key-term'>Density-independent factors</span>: affect all individuals equally (weather, catastrophes)",
+      "<span class='key-term'>Allee effect</span>: positive density dependence at low population (difficulty finding mates/resources at low density)"
+    ]
+  },
+  6: {
+    summary: "Species interact in communities. Competition, predation, parasitism, mutualism, and commensalism shape community structure. Resource partitioning and niche concepts explain coexistence.",
+    keyPoints: [
+      "<span class='key-term'>Species interactions</span>: +/+ mutualism, +/− predation/parasitism, −/− competition, +/0 commensalism, −/0 amensalism",
+      "<span class='key-term'>Competitive exclusion</span>: two species cannot indefinitely occupy the same niche",
+      "<span class='key-term'>Resource partitioning</span>: species divide resources to reduce competition and coexist",
+      "<span class='key-term'>Fundamental vs. realized niche</span>: fundamental = all conditions tolerated; realized = what's actually used given competition",
+      "<span class='key-term'>Apparent competition</span>: two prey species negatively affect each other through a shared predator",
+      "<span class='key-term'>Species diversity</span>: richness (number of species) + evenness (relative abundance)"
+    ]
+  },
+  7: {
+    summary: "Energy flows through ecosystems via food chains and webs. Only ~10% of energy transfers between trophic levels. Predators can control entire ecosystems from the top down.",
+    keyPoints: [
+      "<span class='key-term'>Trophic levels</span>: producers → primary consumers (herbivores) → secondary consumers → tertiary consumers",
+      "<span class='key-term'>Top-down control</span>: predators regulate lower trophic levels",
+      "<span class='key-term'>Bottom-up control</span>: nutrients/producers determine what higher levels can support",
+      "<span class='key-term'>Trophic cascade</span>: indirect effect propagating through a food web (e.g., Yellowstone wolves → elk decrease → vegetation recovers)",
+      "<span class='key-term'>Keystone species</span>: predator whose removal causes ecosystem collapse disproportionate to its abundance"
+    ]
+  },
+  8: {
+    summary: "MacArthur and Wilson's theory explains species richness on islands (and habitat fragments) as a balance between immigration and extinction rates.",
+    keyPoints: [
+      "<span class='key-term'>Equilibrium model</span>: species richness (S*) where immigration rate = extinction rate",
+      "Large islands → lower extinction; Near islands → higher immigration → largest effect: <strong>large + near</strong>",
+      "Applies to <strong>habitat fragments</strong>, not just oceanic islands",
+      "<span class='key-term'>Latitudinal diversity gradient</span>: species richness increases from poles to equator",
+      "<span class='key-term'>Wildlife corridors</span>: reconnect fragmented habitats, allow gene flow and recolonization"
+    ]
+  },
+  9: {
+    summary: "Energy flows one-way through ecosystems and is lost as heat at each transfer. Matter (nutrients) cycles through biogeochemical cycles.",
+    keyPoints: [
+      "<span class='key-term'>1st Law</span>: energy is neither created nor destroyed",
+      "<span class='key-term'>2nd Law</span>: every energy transfer loses energy as heat → energy does NOT recycle",
+      "<span class='key-term'>Matter cycles; energy flows</span> — fundamental distinction",
+      "<span class='key-term'>NPP = GPP − Respiration</span>: net energy stored in plant tissue available to consumers",
+      "<span class='key-term'>Nitrogen cycle</span>: fixation → nitrification → assimilation → decomposition → denitrification",
+      "<span class='key-term'>Phosphorus cycle</span>: no gaseous phase; weathering → soil → organisms → decomposition",
+      "<span class='key-term'>Eutrophication</span>: excess N/P → algal blooms → decomposition → O₂ depletion → dead zones"
+    ],
+    formulas: ["NPP = GPP − Respiration", "Trophic efficiency ≈ 10%"]
+  },
+  10: {
+    summary: "Biodiversity directly supports ecosystem function and stability. Diverse ecosystems are more productive and resilient due to insurance effects and complementarity.",
+    keyPoints: [
+      "<span class='key-term'>Insurance effect</span>: diverse communities have species that can compensate when others fail → stability",
+      "<span class='key-term'>Complementarity</span>: species use resources differently → more complete resource use → higher productivity",
+      "<span class='key-term'>Ecosystem services</span>: benefits humans derive from nature (pollination, water filtration, climate regulation, ~$44 trillion/year value)",
+      "<span class='key-term'>Carbon cycle</span>: fossil fuel burning releases ancient geological carbon → greenhouse effect",
+      "<span class='key-term'>Biodiversity-ecosystem function hypothesis</span>: biodiversity supports ecosystem stability and productivity"
+    ]
+  },
+  11: {
+    summary: "Conservation biology applies ecological principles to protect biodiversity. Current extinction rates are ~1,000× background, primarily driven by habitat loss.",
+    keyPoints: [
+      "<span class='key-term'>Three levels of biodiversity</span>: genetic, species, and ecosystem diversity",
+      "<span class='key-term'>Effective population size (Nₑ)</span>: Nₑ = 4(N_m)(N_f)/(N_m + N_f) — equal sex ratios maximize Nₑ",
+      "<span class='key-term'>Inbreeding depression</span>: small populations → mating between relatives → increased harmful recessive alleles",
+      "<span class='key-term'>Source-sink dynamics</span>: source populations (r > 0) sustain sink populations (r < 0) via immigration",
+      "<span class='key-term'>#1 threat</span>: habitat loss and fragmentation",
+      "Biodiversity's direct value: medicines, food, materials; indirect value: ecosystem services"
+    ],
+    formulas: ["Nₑ = 4(N_m)(N_f) / (N_m + N_f)"]
+  }
+};
+
+function updateFireEmoji() {
+  const fireEl = document.getElementById('fire-emoji');
+  let fires = '';
+  if (streak >= 10) fires = '🔥🔥🔥';
+  else if (streak >= 5) fires = '🔥🔥';
+  else if (streak >= 3) fires = '🔥';
+  fireEl.textContent = fires;
+}
+
+function checkAchievements() {
+  if (streak === 10 && !achievements.has('10streak')) {
+    achievements.add('10streak');
+    showAchievement('🔥 On Fire!', 'Earned 10 correct in a row');
+  }
+  if (Object.keys(answered_correctly).filter(k => answered_correctly[k]).length === 10 && !achievements.has('10correct')) {
+    achievements.add('10correct');
+    showAchievement('🎯 First 10!', 'Answered 10 questions correctly');
+  }
+}
+
+function showAchievement(icon, text) {
+  const toast = document.createElement('div');
+  toast.className = 'achievement-toast';
+  toast.setAttribute('role', 'alert');
+  toast.setAttribute('aria-live', 'assertive');
+  toast.innerHTML = `<div class="icon">${icon}</div><div class="text">${text}</div>`;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
+}
+
+function createConfetti() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  for (let i = 0; i < 20; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + '%';
+    confetti.style.background = ['#0021A5', '#FA4616', '#16a34a'][Math.floor(Math.random() * 3)];
+    confetti.style.animation = `confettiFall ${2 + Math.random() * 1}s ease-in forwards`;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 3000);
+  }
+}
+
+function showEncouragement() {
+  const messages = ['Nice!', 'You\'re on fire!', 'Ecology master!', 'Excellent!', 'Keep it up!', 'Way to go!'];
+  // Could add a toast here
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Start
+init();
+</script>
+</body>
+</html>
