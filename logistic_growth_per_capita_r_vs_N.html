@@ -1,0 +1,251 @@
+
+<div style="padding: 1rem 0; max-width: 680px; margin: 0 auto;">
+  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+    <label style="font-size: 14px; color: var(--color-text-secondary); white-space: nowrap;">Initial population (N₀)</label>
+    <input type="range" min="5" max="195" value="20" step="5" id="n0Slider" style="flex: 1;" />
+    <span id="n0Val" style="font-size: 14px; font-weight: 500; min-width: 32px;">20</span>
+  </div>
+  <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+    <button id="playBtn" style="min-width: 80px;">Play</button>
+    <button id="resetBtn">Reset</button>
+    <div style="flex:1;"></div>
+    <div id="statusBadge" style="font-size: 13px; padding: 4px 12px; border-radius: var(--border-radius-md); background: var(--color-background-secondary); color: var(--color-text-secondary); display: flex; align-items: center; gap: 6px;">
+      <span id="statusDot" style="width:8px;height:8px;border-radius:50%;background:#888;"></span>
+      <span id="statusText">Ready</span>
+    </div>
+  </div>
+  <canvas id="mainCanvas" style="width:100%; border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary);"></canvas>
+  <div style="display: flex; gap: 12px; margin-top: 12px;">
+    <div style="flex:1; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px;">
+      <div style="font-size: 12px; color: var(--color-text-secondary);">Current N</div>
+      <div id="curN" style="font-size: 20px; font-weight: 500;">20</div>
+    </div>
+    <div style="flex:1; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px;">
+      <div style="font-size: 12px; color: var(--color-text-secondary);">Per capita r</div>
+      <div id="curR" style="font-size: 20px; font-weight: 500;">+0.36</div>
+    </div>
+    <div style="flex:1; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px;">
+      <div style="font-size: 12px; color: var(--color-text-secondary);">Status</div>
+      <div id="curStatus" style="font-size: 20px; font-weight: 500;">Growing</div>
+    </div>
+  </div>
+</div>
+<script>
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio || 1;
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+
+const COL = {
+  bg: isDark ? '#1a1a1a' : '#ffffff',
+  axis: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.8)',
+  grid: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
+  line: isDark ? '#85B7EB' : '#378ADD',
+  posZone: isDark ? 'rgba(30,120,60,0.10)' : 'rgba(30,150,60,0.07)',
+  negZone: isDark ? 'rgba(180,40,40,0.10)' : 'rgba(220,60,60,0.06)',
+  kLine: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.3)',
+  text: isDark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.8)',
+  textMuted: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.45)',
+  dot: '#378ADD',
+  dotGlow: isDark ? 'rgba(56,138,221,0.3)' : 'rgba(56,138,221,0.2)',
+  green: '#1D9E75',
+  red: '#E24B4A',
+  arrow: isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.4)',
+};
+
+const K = 100;
+const rMax = 0.4;
+const margin = { top: 40, right: 30, bottom: 50, left: 65 };
+let W, H, plotW, plotH;
+let N = 20, animating = false, animId = null;
+let trail = [];
+
+function resize() {
+  const rect = canvas.getBoundingClientRect();
+  W = rect.width; H = Math.round(W * 0.6);
+  canvas.style.height = H + 'px';
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  plotW = W - margin.left - margin.right;
+  plotH = H - margin.top - margin.bottom;
+}
+
+function xPos(n) { return margin.left + (n / 200) * plotW; }
+function yPos(r) { return margin.top + (1 - (r + rMax) / (2 * rMax)) * plotH; }
+function rFromN(n) { return rMax * (1 - n / K); }
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = COL.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  const y0 = yPos(0);
+  ctx.fillStyle = COL.posZone;
+  ctx.fillRect(margin.left, margin.top, plotW, y0 - margin.top);
+  ctx.fillStyle = COL.negZone;
+  ctx.fillRect(margin.left, y0, plotW, margin.top + plotH - y0);
+
+  ctx.strokeStyle = COL.grid; ctx.lineWidth = 0.5;
+  for (let r = -0.3; r <= 0.4; r += 0.1) {
+    if (Math.abs(r) < 0.001) continue;
+    const y = yPos(r);
+    ctx.beginPath(); ctx.moveTo(margin.left, y); ctx.lineTo(margin.left + plotW, y); ctx.stroke();
+  }
+
+  ctx.strokeStyle = COL.axis; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(margin.left, margin.top); ctx.lineTo(margin.left, margin.top + plotH); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(margin.left, y0); ctx.lineTo(margin.left + plotW, y0); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(margin.left, margin.top + plotH); ctx.lineTo(margin.left + plotW, margin.top + plotH); ctx.stroke();
+
+  ctx.fillStyle = COL.text; ctx.font = '13px system-ui, sans-serif'; ctx.textAlign = 'center';
+  for (let n = 0; n <= 200; n += 50) {
+    const x = xPos(n);
+    ctx.beginPath(); ctx.moveTo(x, margin.top + plotH); ctx.lineTo(x, margin.top + plotH + 5); ctx.strokeStyle = COL.axis; ctx.stroke();
+    ctx.fillText(n, x, margin.top + plotH + 20);
+  }
+  ctx.font = '14px system-ui, sans-serif'; ctx.fillStyle = COL.text;
+  ctx.fillText('Population size (N)', margin.left + plotW / 2, H - 5);
+
+  ctx.textAlign = 'right'; ctx.font = '12px system-ui, sans-serif'; ctx.fillStyle = COL.text;
+  for (let r = -0.3; r <= 0.4; r += 0.1) {
+    const y = yPos(r);
+    ctx.fillText((r >= 0 ? '+' : '') + r.toFixed(1), margin.left - 8, y + 4);
+  }
+
+  ctx.save(); ctx.translate(15, margin.top + plotH / 2); ctx.rotate(-Math.PI / 2);
+  ctx.textAlign = 'center'; ctx.font = '14px system-ui, sans-serif'; ctx.fillStyle = COL.text;
+  ctx.fillText('Per capita growth rate (r)', 0, 0);
+  ctx.restore();
+
+  ctx.setLineDash([6, 4]); ctx.strokeStyle = COL.kLine; ctx.lineWidth = 1.5;
+  const kx = xPos(K);
+  ctx.beginPath(); ctx.moveTo(kx, margin.top); ctx.lineTo(kx, margin.top + plotH); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = COL.text; ctx.font = 'bold 16px system-ui, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('K', kx, margin.top - 10);
+
+  ctx.strokeStyle = COL.line; ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  for (let n = 0; n <= 200; n += 1) {
+    const x = xPos(n), y = yPos(rFromN(n));
+    n === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  const arrowY = margin.top + plotH - 18;
+  ctx.fillStyle = COL.green; ctx.font = '12px system-ui, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('N < K: population grows →', xPos(K/2), margin.top + 20);
+  ctx.fillStyle = COL.red;
+  ctx.fillText('← N > K: population shrinks', xPos(K + (200-K)/2), margin.top + 20);
+
+  drawArrow(xPos(30), arrowY, xPos(70), arrowY, COL.green);
+  drawArrow(xPos(170), arrowY, xPos(130), arrowY, COL.red);
+
+  if (trail.length > 1) {
+    ctx.strokeStyle = COL.dotGlow; ctx.lineWidth = 3;
+    ctx.beginPath();
+    trail.forEach((t, i) => {
+      const x = xPos(t), y = yPos(rFromN(t));
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+  }
+
+  const cx = xPos(N), cy = yPos(rFromN(N));
+  ctx.beginPath(); ctx.arc(cx, cy, 10, 0, Math.PI * 2);
+  ctx.fillStyle = COL.dotGlow; ctx.fill();
+  ctx.beginPath(); ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+  ctx.fillStyle = rFromN(N) > 0.001 ? COL.green : rFromN(N) < -0.001 ? COL.red : COL.dot;
+  ctx.fill();
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke();
+
+  ctx.fillStyle = COL.textMuted; ctx.font = '11px system-ui, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('r = 0 (equilibrium)', xPos(K) + 60, y0 - 6);
+}
+
+function drawArrow(x1, y1, x2, y2, color) {
+  ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.fillStyle = color;
+  ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+  const angle = Math.atan2(y2 - y1, x2 - x1);
+  ctx.beginPath();
+  ctx.moveTo(x2, y2);
+  ctx.lineTo(x2 - 8 * Math.cos(angle - 0.4), y2 - 8 * Math.sin(angle - 0.4));
+  ctx.lineTo(x2 - 8 * Math.cos(angle + 0.4), y2 - 8 * Math.sin(angle + 0.4));
+  ctx.closePath(); ctx.fill();
+}
+
+function updateStats() {
+  const r = rFromN(N);
+  document.getElementById('curN').textContent = Math.round(N);
+  document.getElementById('curR').textContent = (r >= 0 ? '+' : '') + r.toFixed(3);
+  const s = document.getElementById('curStatus');
+  const dot = document.getElementById('statusDot');
+  if (Math.abs(N - K) < 1) {
+    s.textContent = 'At K'; s.style.color = COL.dot;
+    document.getElementById('statusText').textContent = 'At equilibrium';
+    dot.style.background = COL.dot;
+  } else if (N < K) {
+    s.textContent = 'Growing'; s.style.color = COL.green;
+    document.getElementById('statusText').textContent = 'Approaching K';
+    dot.style.background = COL.green;
+  } else {
+    s.textContent = 'Declining'; s.style.color = COL.red;
+    document.getElementById('statusText').textContent = 'Approaching K';
+    dot.style.background = COL.red;
+  }
+}
+
+function step() {
+  const r = rFromN(N);
+  const dN = r * N * 0.02;
+  N += dN;
+  if (N < 1) N = 1;
+  if (N > 199) N = 199;
+  trail.push(N);
+  if (trail.length > 300) trail.shift();
+  draw(); updateStats();
+  if (Math.abs(N - K) < 0.5) {
+    N = K; animating = false;
+    document.getElementById('playBtn').textContent = 'Play';
+    document.getElementById('statusText').textContent = 'At equilibrium';
+    document.getElementById('statusDot').style.background = COL.dot;
+    draw(); updateStats();
+    return;
+  }
+  animId = requestAnimationFrame(step);
+}
+
+document.getElementById('playBtn').addEventListener('click', () => {
+  if (animating) {
+    animating = false; cancelAnimationFrame(animId);
+    document.getElementById('playBtn').textContent = 'Play';
+    document.getElementById('statusText').textContent = 'Paused';
+  } else {
+    animating = true; trail = [N];
+    document.getElementById('playBtn').textContent = 'Pause';
+    step();
+  }
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  animating = false; cancelAnimationFrame(animId);
+  N = parseInt(document.getElementById('n0Slider').value);
+  trail = [];
+  document.getElementById('playBtn').textContent = 'Play';
+  document.getElementById('statusText').textContent = 'Ready';
+  document.getElementById('statusDot').style.background = '#888';
+  draw(); updateStats();
+});
+
+document.getElementById('n0Slider').addEventListener('input', (e) => {
+  if (!animating) {
+    N = parseInt(e.target.value); trail = [];
+    document.getElementById('n0Val').textContent = N;
+    draw(); updateStats();
+  }
+  document.getElementById('n0Val').textContent = e.target.value;
+});
+
+resize(); draw(); updateStats();
+window.addEventListener('resize', () => { resize(); draw(); });
+</script>
