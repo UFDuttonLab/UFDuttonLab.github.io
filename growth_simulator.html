@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exponential vs Logistic Growth</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #fafaf8; --surface: #fff; --surface-alt: #f3f2ee;
+    --text: #1a1a18; --text-muted: #6b6a65; --text-dim: #9c9b95;
+    --border: #e2e1db; --border-light: #eeedea;
+    --a-color: #2c5ea0; --a-light: #e6f0fa; --a-muted: #7aa3d0;
+    --b-color: #c44b2b; --b-light: #fdf0ec; --b-muted: #d4856f;
+    --a-mod: #1a7a5a; --a-mod-light: #ebf5f0;
+    --b-mod: #8b5e00; --b-mod-light: #faf3e0;
+    --radius: 10px; --radius-sm: 6px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141413; --surface: #1e1e1c; --surface-alt: #262624;
+      --text: #e8e7e3; --text-muted: #9c9b95; --text-dim: #6b6a65;
+      --border: #333330; --border-light: #2a2a27;
+      --a-color: #5b96dc; --a-light: #1a2a3d; --a-muted: #3d6fa0;
+      --b-color: #e8704f; --b-light: #2d1f1a; --b-muted: #a35840;
+      --a-mod: #3db88a; --a-mod-light: #162a21;
+      --b-mod: #c4ad4e; --b-mod-light: #2a2618;
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+
+  header { text-align: center; margin-bottom: 1.25rem; }
+  header h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+  header p { font-size: 0.9rem; color: var(--text-muted); }
+
+  .mode-bar {
+    display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1.25rem; flex-wrap: wrap;
+  }
+  .mode-btn {
+    padding: 0.5rem 1rem; font-family: inherit; font-size: 0.82rem; font-weight: 500;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--surface); color: var(--text-muted); cursor: pointer; transition: all 0.15s;
+  }
+  .mode-btn:hover { background: var(--surface-alt); }
+  .mode-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  .params-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  @media (max-width: 600px) { .params-row { grid-template-columns: 1fr; } }
+
+  .param-panel {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+  }
+  .param-panel.a { border-top: 3px solid var(--a-color); }
+  .param-panel.b { border-top: 3px solid var(--b-color); }
+
+  .panel-header {
+    display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;
+  }
+  .panel-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .panel-dot.a { background: var(--a-color); }
+  .panel-dot.b { background: var(--b-color); }
+  .panel-title { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .panel-model { font-size: 0.75rem; color: var(--text-muted); margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace; }
+
+  .ctrl { margin-bottom: 0.85rem; }
+  .ctrl:last-child { margin-bottom: 0; }
+  .ctrl-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.3rem; }
+  .ctrl-label { font-size: 0.8rem; font-weight: 500; }
+  .ctrl-val {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; font-weight: 500;
+    background: var(--surface-alt); padding: 1px 7px; border-radius: 4px;
+  }
+  .ctrl-val.a { color: var(--a-color); }
+  .ctrl-val.b { color: var(--b-color); }
+
+  input[type="range"] {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 4px;
+    border-radius: 2px; background: var(--border); outline: none; cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--surface); border: 2px solid var(--text-muted); cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--surface); border: 2px solid var(--text-muted); cursor: pointer;
+  }
+
+  .presets-row {
+    display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; justify-content: center;
+  }
+  .preset-btn {
+    padding: 0.35rem 0.75rem; font-family: inherit; font-size: 0.75rem; font-weight: 500;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--surface); color: var(--text-muted); cursor: pointer; transition: all 0.12s;
+  }
+  .preset-btn:hover { background: var(--surface-alt); color: var(--text); }
+
+  .scrubber-wrap {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.85rem 1.25rem; margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .scrub-label { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); white-space: nowrap; }
+  .scrub-val {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 500;
+    color: var(--text); min-width: 40px; text-align: right;
+  }
+
+  .chart-panel {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1rem 1.25rem; margin-bottom: 1rem;
+  }
+  .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.4rem; }
+  .chart-title { font-size: 0.82rem; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .chart-legend { display: flex; gap: 0.85rem; font-size: 0.72rem; color: var(--text-muted); flex-wrap: wrap; }
+  .lg-item { display: flex; align-items: center; gap: 4px; }
+  .lg-sw { width: 14px; height: 3px; border-radius: 2px; }
+  canvas { width: 100%; display: block; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem; }
+  .stat-card { background: var(--surface-alt); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem; text-align: center; }
+  .stat-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1px; }
+  .stat-value { font-family: 'IBM Plex Mono', monospace; font-size: 0.95rem; font-weight: 500; }
+  .stat-value.a { color: var(--a-color); }
+  .stat-value.b { color: var(--b-color); }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Population growth simulator</h1>
+    <p>Compare growth models side by side — expand the x-axis to explore</p>
+  </header>
+
+  <div class="mode-bar">
+    <button class="mode-btn active" data-mode="exp-v-log">Exponential vs Logistic</button>
+    <button class="mode-btn" data-mode="exp-v-exp">Exponential vs Exponential</button>
+    <button class="mode-btn" data-mode="log-v-log">Logistic vs Logistic</button>
+  </div>
+
+  <div class="params-row">
+    <div class="param-panel a">
+      <div class="panel-header">
+        <div class="panel-dot a"></div>
+        <span class="panel-title">Set A</span>
+        <span class="panel-model" id="modelA">Exponential</span>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl-top"><span class="ctrl-label">N₀</span><span class="ctrl-val a" id="a_n0Val">10</span></div>
+        <input type="range" id="a_n0" min="1" max="500" value="10" step="1">
+      </div>
+      <div class="ctrl">
+        <div class="ctrl-top"><span class="ctrl-label">r<sub>max</sub></span><span class="ctrl-val a" id="a_rVal">0.15</span></div>
+        <input type="range" id="a_r" min="0.01" max="0.50" value="0.15" step="0.01">
+      </div>
+      <div class="ctrl" id="a_kWrap">
+        <div class="ctrl-top"><span class="ctrl-label">K</span><span class="ctrl-val a" id="a_kVal">500</span></div>
+        <input type="range" id="a_k" min="50" max="2000" value="500" step="10">
+      </div>
+    </div>
+    <div class="param-panel b">
+      <div class="panel-header">
+        <div class="panel-dot b"></div>
+        <span class="panel-title">Set B</span>
+        <span class="panel-model" id="modelB">Logistic</span>
+      </div>
+      <div class="ctrl">
+        <div class="ctrl-top"><span class="ctrl-label">N₀</span><span class="ctrl-val b" id="b_n0Val">10</span></div>
+        <input type="range" id="b_n0" min="1" max="500" value="10" step="1">
+      </div>
+      <div class="ctrl">
+        <div class="ctrl-top"><span class="ctrl-label">r<sub>max</sub></span><span class="ctrl-val b" id="b_rVal">0.15</span></div>
+        <input type="range" id="b_r" min="0.01" max="0.50" value="0.15" step="0.01">
+      </div>
+      <div class="ctrl" id="b_kWrap">
+        <div class="ctrl-top"><span class="ctrl-label">K</span><span class="ctrl-val b" id="b_kVal">500</span></div>
+        <input type="range" id="b_k" min="50" max="2000" value="500" step="10">
+      </div>
+    </div>
+  </div>
+
+  <div class="presets-row" id="presetsRow"></div>
+
+  <div class="scrubber-wrap">
+    <span class="scrub-label">X-axis range</span>
+    <input type="range" id="tMaxSlider" min="10" max="300" value="80" step="5" style="flex:1;">
+    <span class="scrub-val" id="tMaxVal">80</span>
+    <span class="scrub-label" style="color:var(--text-dim);">time steps</span>
+  </div>
+
+  <div class="chart-panel">
+    <div class="chart-header">
+      <span class="chart-title">Population over time</span>
+      <div class="chart-legend" id="popLegend"></div>
+    </div>
+    <canvas id="popChart"></canvas>
+  </div>
+
+  <div class="chart-panel" id="rPanel">
+    <div class="chart-header">
+      <span class="chart-title">Per capita growth rate over time</span>
+      <div class="chart-legend" id="rLegend"></div>
+    </div>
+    <canvas id="rChart"></canvas>
+  </div>
+
+  <div class="chart-panel" id="modPanel">
+    <div class="chart-header">
+      <span class="chart-title">Density-dependent modifier (K − N)/K over time</span>
+      <div class="chart-legend" id="modLegend"></div>
+    </div>
+    <canvas id="modChart"></canvas>
+  </div>
+
+  <div class="stats-row" id="statsRow"></div>
+</div>
+
+<script>
+const dpr = window.devicePixelRatio || 1;
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+
+const C = {
+  bg: isDark ? '#1e1e1c' : '#fff',
+  axis: isDark ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.6)',
+  grid: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.05)',
+  tick: isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)',
+  zero: isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)',
+  dot: isDark ? '#fff' : '#fff',
+  a: isDark ? '#5b96dc' : '#2c5ea0',
+  aFill: isDark ? 'rgba(91,150,220,0.10)' : 'rgba(44,94,160,0.07)',
+  aK: isDark ? 'rgba(91,150,220,0.35)' : 'rgba(44,94,160,0.3)',
+  aMod: isDark ? '#3db88a' : '#1a7a5a',
+  aModFill: isDark ? 'rgba(61,184,138,0.10)' : 'rgba(26,122,90,0.07)',
+  b: isDark ? '#e8704f' : '#c44b2b',
+  bFill: isDark ? 'rgba(232,112,79,0.10)' : 'rgba(196,75,43,0.07)',
+  bK: isDark ? 'rgba(232,112,79,0.35)' : 'rgba(196,75,43,0.3)',
+  bMod: isDark ? '#c4ad4e' : '#8b6d00',
+  bModFill: isDark ? 'rgba(196,173,78,0.10)' : 'rgba(139,109,0,0.07)',
+};
+
+let mode = 'exp-v-log';
+
+const PRESETS = {
+  'exp-v-log': [
+    { name: 'Default', a: { n0:10, r:0.15, k:500 }, b: { n0:10, r:0.15, k:500 }, t:80 },
+    { name: 'High r\u2098\u2090\u2093', a: { n0:5, r:0.35, k:500 }, b: { n0:5, r:0.35, k:500 }, t:50 },
+    { name: 'Overshoot', a: { n0:600, r:0.10, k:500 }, b: { n0:600, r:0.10, k:500 }, t:100 },
+  ],
+  'exp-v-exp': [
+    { name: 'Same N₀, different r', a: { n0:10, r:0.10, k:500 }, b: { n0:10, r:0.25, k:500 }, t:60 },
+    { name: 'Same r, different N₀', a: { n0:5, r:0.15, k:500 }, b: { n0:50, r:0.15, k:500 }, t:80 },
+    { name: 'Slow vs fast', a: { n0:10, r:0.05, k:500 }, b: { n0:10, r:0.40, k:500 }, t:50 },
+  ],
+  'log-v-log': [
+    { name: 'Different r\u2098\u2090\u2093', a: { n0:10, r:0.10, k:500 }, b: { n0:10, r:0.30, k:500 }, t:100 },
+    { name: 'Different K', a: { n0:10, r:0.15, k:300 }, b: { n0:10, r:0.15, k:800 }, t:100 },
+    { name: 'Both overshoot', a: { n0:400, r:0.12, k:300 }, b: { n0:700, r:0.12, k:500 }, t:120 },
+  ],
+};
+
+function isLogA() { return mode === 'log-v-log'; }
+function isLogB() { return mode === 'exp-v-log' || mode === 'log-v-log'; }
+
+const el = id => document.getElementById(id);
+
+function getP(set) {
+  return { n0: +el(set+'_n0').value, r: +el(set+'_r').value, k: +el(set+'_k').value };
+}
+
+function sim(p, isLog, tMax) {
+  const dt = 0.05, steps = Math.round(tMax / dt);
+  const d = { t: [0], n: [p.n0], pcr: [isLog ? p.r * (p.k - p.n0) / p.k : p.r], mod: [(p.k - p.n0) / p.k], dt };
+  let n = p.n0;
+  for (let i = 1; i <= steps; i++) {
+    const dn = isLog ? p.r * n * ((p.k - n) / p.k) * dt : p.r * n * dt;
+    n += dn;
+    if (n > 1e9) n = 1e9;
+    if (n < 0.01) n = 0.01;
+    d.t.push(i * dt);
+    d.n.push(n);
+    d.pcr.push(isLog ? p.r * ((p.k - n) / p.k) : p.r);
+    d.mod.push((p.k - n) / p.k);
+  }
+  return d;
+}
+
+function idxForTime(d, t) {
+  const i = Math.round(t / d.dt);
+  return Math.min(i, d.t.length - 1);
+}
+
+function setupC(cv, hr) {
+  const w = cv.parentElement.getBoundingClientRect().width - 40, h = Math.round(w * hr);
+  cv.style.height = h + 'px'; cv.width = w * dpr; cv.height = h * dpr;
+  const c = cv.getContext('2d'); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { c, w, h };
+}
+
+function niceMax(v) {
+  if (v <= 0) return 1;
+  const m = Math.pow(10, Math.floor(Math.log10(v)));
+  const n = v / m;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * m;
+}
+
+function fmt(n) {
+  if (Math.abs(n) >= 1e6) return (n/1e6).toFixed(1)+'M';
+  if (Math.abs(n) >= 1000) return (n/1e3).toFixed(1)+'K';
+  if (Number.isInteger(n)) return ''+n;
+  return n.toFixed(1);
+}
+
+function drawChart(cv, o) {
+  const { c, w, h } = setupC(cv, o.hr);
+  const mg = { t: 18, r: 22, b: 34, l: 52 };
+  const pw = w - mg.l - mg.r, ph = h - mg.t - mg.b;
+  c.clearRect(0, 0, w, h);
+
+  const xP = t => mg.l + (t / o.tMax) * pw;
+  const yP = v => mg.t + (1 - (v - o.yMin) / (o.yMax - o.yMin)) * ph;
+
+  // grid
+  c.strokeStyle = C.grid; c.lineWidth = 0.5;
+  for (let i = 0; i <= 5; i++) {
+    const v = o.yMin + ((o.yMax - o.yMin) / 5) * i;
+    c.beginPath(); c.moveTo(mg.l, yP(v)); c.lineTo(mg.l + pw, yP(v)); c.stroke();
+  }
+
+  // zero line
+  if (o.yMin < 0 && o.yMax > 0) {
+    c.strokeStyle = C.zero; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(mg.l, yP(0)); c.lineTo(mg.l + pw, yP(0)); c.stroke();
+  }
+
+  // h-lines (K lines etc)
+  if (o.hl) o.hl.forEach(h => {
+    const y = yP(h.v);
+    if (y < mg.t - 5 || y > mg.t + ph + 5) return;
+    c.setLineDash(h.d || [6,4]); c.strokeStyle = h.c; c.lineWidth = 1.3;
+    c.beginPath(); c.moveTo(mg.l, y); c.lineTo(mg.l + pw, y); c.stroke(); c.setLineDash([]);
+    c.fillStyle = h.c; c.font = '500 10px IBM Plex Sans, sans-serif'; c.textAlign = 'left';
+    c.fillText(h.lb, mg.l + pw + 3, y + 3);
+  });
+
+
+  // axes
+  c.strokeStyle = C.axis; c.lineWidth = 1;
+  c.beginPath(); c.moveTo(mg.l, mg.t); c.lineTo(mg.l, mg.t + ph); c.stroke();
+  c.beginPath(); c.moveTo(mg.l, mg.t + ph); c.lineTo(mg.l + pw, mg.t + ph); c.stroke();
+
+  // ticks
+  c.fillStyle = C.tick; c.font = '10px IBM Plex Mono, monospace'; c.textAlign = 'center';
+  for (let i = 0; i <= 5; i++) c.fillText(Math.round((o.tMax/5)*i), xP((o.tMax/5)*i), mg.t + ph + 14);
+  c.textAlign = 'right';
+  for (let i = 0; i <= 5; i++) {
+    const v = o.yMin + ((o.yMax - o.yMin)/5)*i;
+    c.fillText(o.yMax <= 2 ? (Math.abs(v)<0.005 ? '0' : v.toFixed(2)) : fmt(Math.round(v)), mg.l - 5, yP(v) + 3);
+  }
+  c.fillStyle = C.tick; c.font = '11px IBM Plex Sans, sans-serif'; c.textAlign = 'center';
+  c.fillText('Time', mg.l + pw/2, h - 3);
+  c.save(); c.translate(11, mg.t + ph/2); c.rotate(-Math.PI/2); c.fillText(o.yLb, 0, 0); c.restore();
+
+  // series
+  const sp = Math.max(1, Math.floor(1 / o.dt));
+  o.sr.forEach(s => {
+    const ei = idxForTime(s, o.tMax);
+    if (s.fl) {
+      c.fillStyle = s.fl; c.beginPath();
+      const bl = s.fb !== undefined ? s.fb : o.yMin;
+      c.moveTo(xP(s.t[0]), yP(bl));
+      for (let i = 0; i <= ei; i += sp) c.lineTo(xP(s.t[i]), yP(Math.max(o.yMin, Math.min(s.d[i], o.yMax))));
+      c.lineTo(xP(s.t[Math.min(ei, s.t.length-1)]), yP(bl));
+      c.closePath(); c.fill();
+    }
+    c.strokeStyle = s.c; c.lineWidth = 2.5;
+    if (s.ds) c.setLineDash(s.ds);
+    c.beginPath(); let f = true;
+    for (let i = 0; i <= ei; i += sp) {
+      const x = xP(s.t[i]), y = yP(Math.max(o.yMin, Math.min(s.d[i], o.yMax)));
+      f ? c.moveTo(x, y) : c.lineTo(x, y); f = false;
+    }
+    c.stroke(); c.setLineDash([]);
+
+    // endpoint dot
+    const si = ei;
+    const rawVal = s.d[si];
+    const clampedVal = Math.max(o.yMin, Math.min(rawVal, o.yMax));
+    const dx = xP(s.t[si]), dy = yP(clampedVal);
+    c.beginPath(); c.arc(dx, dy, 5, 0, Math.PI*2); c.fillStyle = s.c; c.fill();
+    c.strokeStyle = C.dot; c.lineWidth = 1.5; c.stroke();
+
+    // off-chart label when value exceeds y-axis
+    if (rawVal > o.yMax * 0.98) {
+      c.fillStyle = s.c; c.font = '600 11px IBM Plex Mono, monospace';
+      c.textAlign = dx > mg.l + pw * 0.7 ? 'right' : 'left';
+      const labelX = dx > mg.l + pw * 0.7 ? dx - 10 : dx + 10;
+      c.fillText('N=' + fmt(Math.round(rawVal)) + ' \u2191', labelX, dy + 16);
+    }
+  });
+}
+
+function updateLegends() {
+  const aLabel = isLogA() ? 'Logistic' : 'Exponential';
+  const bLabel = isLogB() ? 'Logistic' : 'Exponential';
+  el('modelA').textContent = aLabel;
+  el('modelB').textContent = bLabel;
+
+  el('popLegend').innerHTML =
+    `<div class="lg-item"><div class="lg-sw" style="background:${C.a};"></div>A: ${aLabel}</div>` +
+    `<div class="lg-item"><div class="lg-sw" style="background:${C.b};"></div>B: ${bLabel}</div>`;
+
+  el('rLegend').innerHTML =
+    `<div class="lg-item"><div class="lg-sw" style="background:${C.a};"></div>A per capita r</div>` +
+    `<div class="lg-item"><div class="lg-sw" style="background:${C.b};"></div>B per capita r</div>`;
+
+  const showMod = isLogA() || isLogB();
+  el('modPanel').classList.toggle('hidden', !showMod);
+  if (showMod) {
+    let html = '';
+    if (isLogA()) html += `<div class="lg-item"><div class="lg-sw" style="background:${C.aMod};"></div>A: (K−N)/K</div>`;
+    if (isLogB()) html += `<div class="lg-item"><div class="lg-sw" style="background:${C.bMod};"></div>B: (K−N)/K</div>`;
+    el('modLegend').innerHTML = html;
+  }
+
+  el('a_kWrap').classList.toggle('hidden', !isLogA());
+  el('b_kWrap').classList.toggle('hidden', !isLogB());
+}
+
+function buildPresets() {
+  const row = el('presetsRow');
+  row.innerHTML = '';
+  (PRESETS[mode] || []).forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'preset-btn'; btn.textContent = p.name;
+    btn.addEventListener('click', () => applyPreset(p));
+    row.appendChild(btn);
+  });
+}
+
+function applyPreset(p) {
+  el('a_n0').value = p.a.n0; el('a_n0Val').textContent = p.a.n0;
+  el('a_r').value = p.a.r; el('a_rVal').textContent = p.a.r;
+  el('a_k').value = p.a.k; el('a_kVal').textContent = p.a.k;
+  el('b_n0').value = p.b.n0; el('b_n0Val').textContent = p.b.n0;
+  el('b_r').value = p.b.r; el('b_rVal').textContent = p.b.r;
+  el('b_k').value = p.b.k; el('b_kVal').textContent = p.b.k;
+  el('tMaxSlider').value = p.t; el('tMaxVal').textContent = p.t;
+  redraw();
+}
+
+function buildStats(dA, dB) {
+  const siA = dA.n.length - 1, siB = dB.n.length - 1;
+  let html = '';
+  html += `<div class="stat-card"><div class="stat-label">Set A — N</div><div class="stat-value a">${fmt(Math.round(dA.n[siA]))}</div></div>`;
+  html += `<div class="stat-card"><div class="stat-label">Set B — N</div><div class="stat-value b">${fmt(Math.round(dB.n[siB]))}</div></div>`;
+  html += `<div class="stat-card"><div class="stat-label">A per capita r</div><div class="stat-value a">${dA.pcr[siA].toFixed(4)}</div></div>`;
+  html += `<div class="stat-card"><div class="stat-label">B per capita r</div><div class="stat-value b">${dB.pcr[siB].toFixed(4)}</div></div>`;
+  if (isLogA()) html += `<div class="stat-card"><div class="stat-label">A — (K−N)/K</div><div class="stat-value a">${dA.mod[siA].toFixed(3)}</div></div>`;
+  if (isLogB()) html += `<div class="stat-card"><div class="stat-label">B — (K−N)/K</div><div class="stat-value b">${dB.mod[siB].toFixed(3)}</div></div>`;
+  el('statsRow').innerHTML = html;
+}
+
+function redraw() {
+  const pA = getP('a'), pB = getP('b');
+  const tMax = +el('tMaxSlider').value;
+
+  const dA = sim(pA, isLogA(), tMax);
+  const dB = sim(pB, isLogB(), tMax);
+
+  // population chart — cap y-axis near K so logistic curves are visible
+  let popMax = 0;
+  const hasLog = isLogA() || isLogB();
+  if (hasLog) {
+    const maxK = Math.max(isLogA() ? pA.k : 0, isLogB() ? pB.k : 0);
+    const maxN0 = Math.max(pA.n0, pB.n0);
+    popMax = Math.max(maxK, maxN0) * 1.4;
+  } else {
+    for (let i = 0; i < dA.n.length; i++) popMax = Math.max(popMax, dA.n[i]);
+    for (let i = 0; i < dB.n.length; i++) popMax = Math.max(popMax, dB.n[i]);
+  }
+  popMax = niceMax(popMax);
+
+  const popHL = [];
+  if (isLogA()) popHL.push({ v: pA.k, c: C.aK, lb: 'K\u2090 = ' + fmt(pA.k), d: [6,4] });
+  if (isLogB()) popHL.push({ v: pB.k, c: C.bK, lb: 'K\u1D47 = ' + fmt(pB.k), d: [6,4] });
+
+  drawChart(el('popChart'), {
+    hr: 0.42, tMax, yMin: 0, yMax: popMax, yLb: 'N', dt: dA.dt,
+    hl: popHL,
+    sr: [
+      { t: dA.t, d: dA.n, c: C.a, fl: C.aFill, dt: dA.dt },
+      { t: dB.t, d: dB.n, c: C.b, fl: C.bFill, dt: dB.dt },
+    ],
+  });
+
+  // per capita r chart
+  let rMin = 0, rMax = 0;
+  for (let i = 0; i < dA.pcr.length; i++) { rMin = Math.min(rMin, dA.pcr[i]); rMax = Math.max(rMax, dA.pcr[i]); }
+  for (let i = 0; i < dB.pcr.length; i++) { rMin = Math.min(rMin, dB.pcr[i]); rMax = Math.max(rMax, dB.pcr[i]); }
+  rMax = Math.max(rMax * 1.25, 0.05); rMin = Math.min(rMin * 1.2, -0.02);
+
+  const rHL = [];
+  if (!isLogA()) rHL.push({ v: pA.r, c: C.a, lb: 'A rmax=' + pA.r.toFixed(2), d: [4,4] });
+  if (!isLogB()) rHL.push({ v: pB.r, c: C.b, lb: 'B rmax=' + pB.r.toFixed(2), d: [4,4] });
+
+  drawChart(el('rChart'), {
+    hr: 0.30, tMax, yMin: rMin, yMax: rMax, yLb: 'Per capita r', dt: dA.dt,
+    hl: rHL,
+    sr: [
+      { t: dA.t, d: dA.pcr, c: C.a, fl: isLogA() ? C.aFill : null, fb: 0, ds: isLogA() ? null : [6,4], dt: dA.dt },
+      { t: dB.t, d: dB.pcr, c: C.b, fl: isLogB() ? C.bFill : null, fb: 0, ds: isLogB() ? null : [6,4], dt: dB.dt },
+    ],
+  });
+
+  // modifier chart
+  if (isLogA() || isLogB()) {
+    let mMin = 0, mMax = 1.05;
+    if (isLogA()) for (let i = 0; i < dA.mod.length; i++) mMin = Math.min(mMin, dA.mod[i]);
+    if (isLogB()) for (let i = 0; i < dB.mod.length; i++) mMin = Math.min(mMin, dB.mod[i]);
+    mMin = Math.min(mMin * 1.2, -0.15);
+
+    const modSr = [];
+    if (isLogA()) modSr.push({ t: dA.t, d: dA.mod, c: C.aMod, fl: C.aModFill, fb: 0, dt: dA.dt });
+    if (isLogB()) modSr.push({ t: dB.t, d: dB.mod, c: C.bMod, fl: C.bModFill, fb: 0, dt: dB.dt });
+
+    drawChart(el('modChart'), {
+      hr: 0.25, tMax, yMin: mMin, yMax: mMax, yLb: '(K−N)/K', dt: dA.dt,
+      hl: [{ v: 1.0, c: C.tick, lb: '1.0', d: [3,3] }],
+      sr: modSr,
+    });
+  }
+
+  buildStats(dA, dB);
+}
+
+// mode switching
+document.querySelectorAll('.mode-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mode = btn.dataset.mode;
+    updateLegends();
+    buildPresets();
+    // apply first preset
+    if (PRESETS[mode] && PRESETS[mode][0]) applyPreset(PRESETS[mode][0]);
+    else redraw();
+  });
+});
+
+// slider events
+['a_n0','a_r','a_k','b_n0','b_r','b_k'].forEach(id => {
+  el(id).addEventListener('input', () => {
+    el(id + 'Val').textContent = el(id).value;
+    redraw();
+  });
+});
+
+el('tMaxSlider').addEventListener('input', () => {
+  el('tMaxVal').textContent = el('tMaxSlider').value;
+  redraw();
+});
+
+// init
+updateLegends();
+buildPresets();
+if (PRESETS[mode][0]) applyPreset(PRESETS[mode][0]);
+window.addEventListener('resize', redraw);
+</script>
+</body>
+</html>
