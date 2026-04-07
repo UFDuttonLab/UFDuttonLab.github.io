@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hubbard Brook Deforestation Experiment</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1e;--surface:#131a2e;--border:#253050;--text:#e0e6f0;--dim:#7a8aaa;--accent:#64ffda;--control:#60a5fa;--deforest:#ef4444}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:16px}
+h1{font-family:'Space Mono',monospace;font-size:1.3rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.sub{color:var(--dim);font-size:0.8rem;margin-bottom:12px;text-align:center;max-width:750px;line-height:1.5}
+.container{width:100%;max-width:900px}
+.panel{background:var(--surface);border-radius:12px;padding:16px;margin-bottom:10px}
+.pt{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+canvas#chart{width:100%;height:380px;display:block;border-radius:8px;background:#0b1020}
+
+.controls{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:12px;flex-wrap:wrap}
+.btn{font-family:'Space Mono',monospace;font-size:0.72rem;padding:9px 20px;border:2px solid var(--border);border-radius:6px;background:transparent;color:var(--dim);cursor:pointer;transition:all 0.2s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.active{background:rgba(100,255,218,0.1);border-color:var(--accent);color:var(--accent)}
+.btn-reveal{border-color:var(--deforest);color:var(--deforest);font-size:0.8rem;padding:10px 24px}
+.btn-reveal:hover{background:rgba(239,68,68,0.12)}
+.btn-reveal.active{background:rgba(239,68,68,0.15);border-color:var(--deforest);color:var(--deforest)}
+
+.legend{display:flex;gap:20px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--dim)}
+.leg-line{width:24px;height:3px;border-radius:2px}
+
+.narration{background:var(--surface);border-radius:12px;padding:14px 20px;text-align:center;font-size:0.88rem;line-height:1.6;min-height:50px}
+.narration strong{color:var(--accent)}
+.narration .red{color:var(--deforest);font-weight:700;font-family:'Space Mono',monospace}
+
+.takeaway{background:var(--surface);border-radius:12px;padding:14px 18px;margin-top:10px}
+.tk-list{display:flex;flex-direction:column;gap:8px}
+.tk-item{font-size:0.82rem;color:var(--text);line-height:1.5;padding:6px 10px;background:#1a2240;border-radius:6px;border-left:3px solid var(--accent)}
+.tk-item strong{color:var(--accent)}
+</style>
+</head>
+<body>
+<h1>Hubbard Brook Deforestation Experiment</h1>
+<p class="sub">In 1965–66, Watershed 2 at Hubbard Brook Experimental Forest was completely clear-cut and treated with herbicide to prevent regrowth. Watershed 6 was left undisturbed as a control. What happened to nutrient export in stream water?</p>
+
+<div class="container">
+  <div class="panel">
+    <div class="pt">Nitrate Concentration in Stream Water (mg/L NO₃⁻)</div>
+    <canvas id="chart"></canvas>
+    <div class="legend">
+      <div class="leg"><div class="leg-line" style="background:var(--control)"></div>Watershed 6 (Control — forested)</div>
+      <div class="leg"><div class="leg-line" style="background:var(--deforest)"></div>Watershed 2 (Deforested)</div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="btnControl" onclick="showControl()">Show Control Only</button>
+      <button class="btn btn-reveal active" id="btnReveal" onclick="showBoth()">🪓 Reveal Deforested Watershed</button>
+    </div>
+  </div>
+
+  <div class="narration" id="narration"></div>
+
+  <div class="takeaway">
+    <div class="pt">Key Takeaways</div>
+    <div class="tk-list">
+      <div class="tk-item">🌲 <strong>Living vegetation regulates nutrient cycling</strong> — plant roots continuously absorb nitrogen and other nutrients from soil, preventing them from leaching into streams. Forests act as nutrient sponges.</div>
+      <div class="tk-item">📊 <strong>Removing vegetation causes a nutrient hemorrhage</strong> — after clear-cutting, nitrate export surged ~60× because decomposition continued releasing nutrients but no living roots were there to reabsorb them.</div>
+      <div class="tk-item">💡 <strong>Ecosystems perform critical functions beyond biodiversity</strong> — this experiment demonstrated that forests aren't just collections of species. They are biogeochemical machines that regulate water quality, nutrient retention, and soil stability.</div>
+      <div class="tk-item">🔬 <strong>Watershed experiments are powerful natural laboratories</strong> — by comparing a treated watershed to an undisturbed control, Likens et al. isolated the effect of vegetation removal on nutrient cycling — a foundational study in ecosystem ecology.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Approximate data from Likens et al., Hubbard Brook
+const years = [1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977];
+const control  = [0.9, 1.0, 0.8, 0.9, 1.1, 1.0, 0.8, 0.9, 1.0, 0.9, 1.1, 0.8, 0.9, 1.0, 0.8];
+const deforest = [0.8, 0.9, 1.0, 6.0, 38.0, 53.0, 58.0, 40.0, 25.0, 18.0, 10.0, 6.0, 4.0, 3.0, 2.5];
+
+let showDeforested = true;
+
+function showControl() {
+  showDeforested = false;
+  document.getElementById('btnControl').classList.add('active');
+  document.getElementById('btnReveal').classList.remove('active');
+  document.getElementById('narration').innerHTML = '<p>Watershed 6 — the <strong>undisturbed control</strong>. Nitrate stays low and stable around 1 mg/L year after year. Living plant roots are absorbing nitrogen from the soil, keeping it from washing into the stream. This is what a healthy, functioning ecosystem looks like.</p>';
+  drawChart();
+}
+
+function showBoth() {
+  showDeforested = true;
+  document.getElementById('btnReveal').classList.add('active');
+  document.getElementById('btnControl').classList.remove('active');
+  document.getElementById('narration').innerHTML = '<p>After clear-cutting in 1965–66, nitrate concentration in Watershed 2 surged to <span class="red">58 mg/L</span> — nearly <strong>60× the control</strong>. With no living roots to absorb nutrients, decomposition kept releasing nitrogen straight into the stream. The forest wasn\'t just trees — it was the nutrient recycling system. Remove it, and the nutrients hemorrhage out.</p>';
+  drawChart();
+}
+
+function lerp(data, yr) {
+  const idx = yr - years[0];
+  const i = Math.floor(idx), f = idx - i;
+  if (i < 0) return data[0];
+  if (i >= data.length - 1) return data[data.length - 1];
+  return data[i] + (data[i + 1] - data[i]) * f;
+}
+
+function drawChart() {
+  const cv = document.getElementById('chart');
+  if (!cv || cv.offsetWidth === 0) return;
+  const ctx = cv.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = cv.offsetWidth * dpr; cv.height = cv.offsetHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const W = cv.offsetWidth, H = cv.offsetHeight;
+  ctx.clearRect(0, 0, W, H);
+
+  const pad = { l: 55, r: 25, t: 20, b: 35 };
+  const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b;
+  const xMin = 1963, xMax = 1977, yMin = 0, yMax = 65;
+
+  function tx(yr) { return pad.l + ((yr - xMin) / (xMax - xMin)) * cW; }
+  function ty(v) { return pad.t + (1 - (v - yMin) / (yMax - yMin)) * cH; }
+
+  // Grid
+  ctx.strokeStyle = '#1a2340'; ctx.lineWidth = 1;
+  for (let v = 0; v <= 60; v += 10) {
+    ctx.beginPath(); ctx.moveTo(pad.l, ty(v)); ctx.lineTo(W - pad.r, ty(v)); ctx.stroke();
+    ctx.fillStyle = '#4a5a7a'; ctx.font = '11px "Space Mono"'; ctx.textAlign = 'right';
+    ctx.fillText(v, pad.l - 8, ty(v) + 4);
+  }
+  for (let yr = 1963; yr <= 1977; yr += 2) {
+    ctx.fillStyle = '#4a5a7a'; ctx.font = '11px "Space Mono"'; ctx.textAlign = 'center';
+    ctx.fillText(yr, tx(yr), H - pad.b + 18);
+  }
+
+  // Y axis label
+  ctx.save();
+  ctx.fillStyle = '#5a6a8a'; ctx.font = '11px "DM Sans"';
+  ctx.translate(14, pad.t + cH / 2); ctx.rotate(-Math.PI / 2);
+  ctx.textAlign = 'center'; ctx.fillText('NO₃⁻ (mg/L)', 0, 0);
+  ctx.restore();
+
+  // Deforestation event line
+  ctx.strokeStyle = '#ffffff33'; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+  ctx.beginPath(); ctx.moveTo(tx(1965.5), pad.t); ctx.lineTo(tx(1965.5), pad.t + cH); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#ffffff66'; ctx.font = '700 11px "DM Sans"'; ctx.textAlign = 'center';
+  ctx.fillText('Clear-cut', tx(1965.5), pad.t - 6);
+  ctx.font = '500 10px "DM Sans"'; ctx.fillStyle = '#ffffff44';
+  ctx.fillText('1965–66', tx(1965.5), pad.t + cH + 14);
+
+  // Control line (always visible)
+  ctx.strokeStyle = '#60a5fa'; ctx.lineWidth = 3;
+  ctx.shadowColor = '#60a5fa'; ctx.shadowBlur = 6;
+  ctx.beginPath();
+  for (let yr = xMin; yr <= xMax; yr += 0.25) {
+    const x = tx(yr), y = ty(lerp(control, yr));
+    yr === xMin ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.stroke(); ctx.shadowBlur = 0;
+
+  // Control label
+  ctx.fillStyle = '#60a5fa'; ctx.font = '700 11px "DM Sans"'; ctx.textAlign = 'left';
+  ctx.fillText('Control: ~1 mg/L', tx(1977) + 8, ty(lerp(control, 1977)));
+
+  // Deforested line
+  if (showDeforested) {
+    ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 3.5;
+    ctx.shadowColor = '#ef4444'; ctx.shadowBlur = 8;
+    ctx.beginPath();
+    for (let yr = xMin; yr <= xMax; yr += 0.25) {
+      const x = tx(yr), y = ty(lerp(deforest, yr));
+      yr === xMin ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke(); ctx.shadowBlur = 0;
+
+    // Peak annotation
+    const peakYr = 1969, peakVal = 58;
+    const px = tx(peakYr), py = ty(peakVal);
+
+    // Peak dot
+    ctx.fillStyle = '#ef4444';
+    ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#0b1020';
+    ctx.beginPath(); ctx.arc(px, py, 3, 0, Math.PI * 2); ctx.fill();
+
+    // Peak label with background
+    ctx.fillStyle = '#0b1020cc';
+    ctx.fillRect(px + 10, py - 28, 130, 36);
+    ctx.fillStyle = '#ef4444'; ctx.font = '700 14px "Space Mono"'; ctx.textAlign = 'left';
+    ctx.fillText('58 mg/L', px + 16, py - 10);
+    ctx.fillStyle = '#ef4444aa'; ctx.font = '600 11px "DM Sans"';
+    ctx.fillText('60× the control', px + 16, py + 4);
+
+    // Deforested end label
+    ctx.fillStyle = '#ef4444'; ctx.font = '700 11px "DM Sans"'; ctx.textAlign = 'left';
+    ctx.fillText('Deforested', tx(1977) + 8, ty(lerp(deforest, 1977)));
+  }
+}
+
+// Default: show full data
+showBoth();
+window.addEventListener('resize', drawChart);
+</script>
+<div style="text-align:center;padding:12px 0 6px;font-family:sans-serif;font-size:0.75rem;color:#4a5a7a">Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener" style="color:#64ffda;text-decoration:none;font-weight:600">Dutton Lab</a> @ University of Florida</div>
+</body>
+</html>

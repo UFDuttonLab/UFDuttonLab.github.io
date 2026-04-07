@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eutrophication Simulator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1e;--surface:#131a2e;--border:#253050;--text:#e0e6f0;--dim:#7a8aaa;--accent:#64ffda}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:16px}
+h1{font-family:'Space Mono',monospace;font-size:1.4rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.sub{color:var(--dim);font-size:0.82rem;margin-bottom:14px;text-align:center}
+.main{display:flex;gap:16px;width:100%;max-width:1060px;flex-wrap:wrap;justify-content:center}
+.viz-panel{background:var(--surface);border-radius:12px;padding:16px;flex:2;min-width:400px}
+.ctrl-panel{background:var(--surface);border-radius:12px;padding:16px;flex:1;min-width:280px;max-width:320px}
+.panel-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+canvas#lake{width:100%;height:340px;display:block;border-radius:8px}
+.ctrl{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.ctrl label{font-size:0.75rem;color:var(--dim);min-width:110px;font-weight:500}
+.ctrl input[type="range"]{flex:1;accent-color:var(--accent)}
+.ctrl .cv{font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--accent);min-width:40px;text-align:right}
+.indicators{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.ind{display:flex;align-items:center;gap:8px}
+.ind-label{font-size:0.72rem;color:var(--dim);min-width:90px}
+.ind-bar-bg{flex:1;height:14px;background:#1a2240;border-radius:7px;overflow:hidden}
+.ind-bar{height:100%;border-radius:7px;transition:width 0.4s,background 0.4s}
+.ind-val{font-family:'Space Mono',monospace;font-size:0.75rem;min-width:45px;text-align:right}
+.status-box{margin-top:14px;padding:10px 14px;border-radius:8px;border:1px solid var(--border);font-size:0.82rem;line-height:1.5;text-align:center}
+.status-box strong{font-family:'Space Mono',monospace}
+.btn-row{display:flex;gap:6px;margin-top:10px}
+.btn{font-family:'Space Mono',monospace;font-size:0.7rem;padding:7px 14px;border:2px solid var(--border);border-radius:6px;background:transparent;color:var(--dim);cursor:pointer;transition:all 0.2s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.active{background:rgba(100,255,218,0.1);border-color:var(--accent);color:var(--accent)}
+
+.takeaway{background:#131a2e;border-radius:10px;padding:14px 18px;margin-top:10px;width:100%;max-width:1140px}
+.takeaway .pt{font-family:'Space Mono',monospace;font-size:0.66rem;color:#7a8aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.tk-list{display:flex;flex-direction:column;gap:8px}
+.tk-item{font-size:0.82rem;color:#e0e6f0;line-height:1.5;padding:6px 10px;background:#1a2240;border-radius:6px;border-left:3px solid #64ffda}
+.tk-item strong{color:#64ffda}
+</style>
+</head>
+<body>
+<h1>Eutrophication Simulator</h1>
+<p class="sub">Nutrient runoff → algal bloom → oxygen depletion → dead zone</p>
+
+<div class="main">
+  <div class="viz-panel">
+    <div class="panel-title">Lake Cross-Section</div>
+    <canvas id="lake"></canvas>
+  </div>
+
+  <div class="ctrl-panel">
+    <div class="panel-title">Controls</div>
+    <div class="ctrl">
+      <label>Fertilizer runoff</label>
+      <input type="range" id="sNutrient" min="0" max="100" value="10" oninput="calc()">
+      <span class="cv" id="cvN">10%</span>
+    </div>
+    <div class="ctrl">
+      <label>Temperature</label>
+      <input type="range" id="sTemp" min="5" max="35" value="20" oninput="calc()">
+      <span class="cv" id="cvT">20°C</span>
+    </div>
+    <div class="ctrl">
+      <label>Water flow</label>
+      <input type="range" id="sFlow" min="0" max="100" value="50" oninput="calc()">
+      <span class="cv" id="cvF">50%</span>
+    </div>
+
+    <div class="indicators">
+      <div class="ind">
+        <span class="ind-label">Nutrients</span>
+        <div class="ind-bar-bg"><div class="ind-bar" id="bNut" style="width:10%;background:#f59e0b"></div></div>
+        <span class="ind-val" id="vNut" style="color:#f59e0b">Low</span>
+      </div>
+      <div class="ind">
+        <span class="ind-label">Algae</span>
+        <div class="ind-bar-bg"><div class="ind-bar" id="bAlg" style="width:5%;background:#22c55e"></div></div>
+        <span class="ind-val" id="vAlg" style="color:#22c55e">Low</span>
+      </div>
+      <div class="ind">
+        <span class="ind-label">Dissolved O₂</span>
+        <div class="ind-bar-bg"><div class="ind-bar" id="bO2" style="width:90%;background:#60a5fa"></div></div>
+        <span class="ind-val" id="vO2" style="color:#60a5fa">High</span>
+      </div>
+      <div class="ind">
+        <span class="ind-label">Fish health</span>
+        <div class="ind-bar-bg"><div class="ind-bar" id="bFish" style="width:90%;background:#64ffda"></div></div>
+        <span class="ind-val" id="vFish" style="color:#64ffda">Good</span>
+      </div>
+    </div>
+
+    <div class="status-box" id="status">
+      Healthy lake. Nutrient levels balanced.
+    </div>
+
+    <div class="btn-row">
+      <button class="btn" onclick="preset('healthy')">Healthy Lake</button>
+      <button class="btn" onclick="preset('farm')">Farm Runoff</button>
+      <button class="btn" onclick="preset('deadzone')">Dead Zone</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let state = { nutrients: 10, algae: 5, o2: 90, fish: 90 };
+
+function preset(p) {
+  if (p === 'healthy') {
+    document.getElementById('sNutrient').value = 10;
+    document.getElementById('sTemp').value = 20;
+    document.getElementById('sFlow').value = 50;
+  } else if (p === 'farm') {
+    document.getElementById('sNutrient').value = 65;
+    document.getElementById('sTemp').value = 25;
+    document.getElementById('sFlow').value = 30;
+  } else if (p === 'deadzone') {
+    document.getElementById('sNutrient').value = 95;
+    document.getElementById('sTemp').value = 32;
+    document.getElementById('sFlow').value = 10;
+  }
+  calc();
+}
+
+function calc() {
+  const nutrient = parseInt(document.getElementById('sNutrient').value);
+  const temp = parseInt(document.getElementById('sTemp').value);
+  const flow = parseInt(document.getElementById('sFlow').value);
+
+  document.getElementById('cvN').textContent = nutrient + '%';
+  document.getElementById('cvT').textContent = temp + '°C';
+  document.getElementById('cvF').textContent = flow + '%';
+
+  // Model: higher nutrients + higher temp + lower flow = more algae
+  const tempFactor = Math.max(0, (temp - 5) / 30); // 0-1
+  const flowDilution = 1 - flow / 150; // higher flow = less algae
+  const algae = Math.min(100, nutrient * (0.5 + 0.5 * tempFactor) * Math.max(0.3, flowDilution));
+
+  // O2: inversely related to algae (decomposition consumes O2)
+  const o2 = Math.max(0, 95 - algae * 0.95);
+
+  // Fish: need O2 > ~30% to survive, stress at <50%
+  const fish = o2 < 15 ? 0 : o2 < 30 ? (o2 - 15) / 15 * 20 : Math.min(95, o2 * 1.05);
+
+  state = { nutrients: nutrient, algae, o2, fish };
+
+  // Update indicators
+  updateBar('bNut', 'vNut', nutrient, '#f59e0b', ['Low', 'Moderate', 'High', 'Extreme']);
+  updateBar('bAlg', 'vAlg', algae, '#22c55e', ['Low', 'Moderate', 'Bloom', 'Toxic Bloom']);
+  updateBar('bO2', 'vO2', o2, o2 < 30 ? '#ef4444' : o2 < 50 ? '#f59e0b' : '#60a5fa', ['Anoxic', 'Hypoxic', 'Low', 'Normal']);
+  updateBar('bFish', 'vFish', fish, fish < 20 ? '#ef4444' : fish < 50 ? '#f59e0b' : '#64ffda', ['Dead', 'Critical', 'Stressed', 'Healthy']);
+
+  // Status
+  let statusText, statusColor;
+  if (algae > 80) {
+    statusText = '<strong style="color:#ef4444">DEAD ZONE</strong> — Massive algal bloom has depleted dissolved oxygen. Fish and invertebrates cannot survive. Decomposition of dead algae consumes remaining O₂.';
+    statusColor = '#ef4444';
+  } else if (algae > 50) {
+    statusText = '<strong style="color:#f59e0b">EUTROPHIC</strong> — Algal bloom in progress. Dissolved oxygen dropping as bacteria decompose dead algae. Fish under severe stress.';
+    statusColor = '#f59e0b';
+  } else if (algae > 25) {
+    statusText = '<strong style="color:#f59e0b">MESOTROPHIC</strong> — Elevated nutrient levels promoting algal growth. Oxygen levels starting to decline in deeper water.';
+    statusColor = '#f59e0b';
+  } else {
+    statusText = '<strong style="color:#64ffda">OLIGOTROPHIC</strong> — Healthy lake. Nutrient levels balanced, oxygen plentiful, aquatic life thriving.';
+    statusColor = '#64ffda';
+  }
+  const sb = document.getElementById('status');
+  sb.innerHTML = statusText;
+  sb.style.borderColor = statusColor + '44';
+
+  drawLake();
+}
+
+function updateBar(barId, valId, pct, color, labels) {
+  const bar = document.getElementById(barId);
+  const val = document.getElementById(valId);
+  bar.style.width = Math.max(2, pct) + '%';
+  bar.style.background = color;
+  val.style.color = color;
+  const idx = pct < 25 ? 0 : pct < 50 ? 1 : pct < 75 ? 2 : 3;
+  val.textContent = labels[idx];
+}
+
+function drawLake() {
+  const cv = document.getElementById('lake');
+  const ctx = cv.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = cv.offsetWidth * dpr;
+  cv.height = cv.offsetHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const W = cv.offsetWidth, H = cv.offsetHeight;
+  ctx.clearRect(0, 0, W, H);
+
+  const waterTop = H * 0.2;
+  const waterBot = H * 0.92;
+  const lakeL = W * 0.08;
+  const lakeR = W * 0.92;
+
+  // Sky
+  const skyGrad = ctx.createLinearGradient(0, 0, 0, waterTop);
+  skyGrad.addColorStop(0, '#0d1a35');
+  skyGrad.addColorStop(1, '#1a2d50');
+  ctx.fillStyle = skyGrad;
+  ctx.fillRect(0, 0, W, waterTop);
+
+  // Sun
+  ctx.fillStyle = '#f59e0b33';
+  ctx.beginPath(); ctx.arc(W * 0.85, H * 0.08, 20, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#f59e0b';
+  ctx.beginPath(); ctx.arc(W * 0.85, H * 0.08, 12, 0, Math.PI * 2); ctx.fill();
+
+  // Ground/banks
+  ctx.fillStyle = '#2a1f0e';
+  ctx.beginPath();
+  ctx.moveTo(0, waterTop);
+  ctx.lineTo(lakeL, waterTop);
+  ctx.lineTo(lakeL - 10, waterBot);
+  ctx.lineTo(0, waterBot);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(W, waterTop);
+  ctx.lineTo(lakeR, waterTop);
+  ctx.lineTo(lakeR + 10, waterBot);
+  ctx.lineTo(W, waterBot);
+  ctx.fill();
+
+  // Lake bed
+  ctx.fillStyle = '#1a1408';
+  ctx.beginPath();
+  ctx.moveTo(lakeL - 10, waterBot);
+  ctx.quadraticCurveTo(W / 2, waterBot + 20, lakeR + 10, waterBot);
+  ctx.lineTo(lakeR + 10, H);
+  ctx.lineTo(lakeL - 10, H);
+  ctx.fill();
+
+  // Water - color based on algae
+  const algaeNorm = state.algae / 100;
+  const waterR = Math.round(10 + algaeNorm * 40);
+  const waterG = Math.round(60 + algaeNorm * 100);
+  const waterB = Math.round(120 - algaeNorm * 80);
+
+  const waterGrad = ctx.createLinearGradient(0, waterTop, 0, waterBot);
+  waterGrad.addColorStop(0, `rgba(${waterR},${waterG},${waterB},0.85)`);
+  waterGrad.addColorStop(0.6, `rgba(${Math.round(waterR * 0.6)},${Math.round(waterG * 0.7)},${Math.round(waterB * 0.5)},0.9)`);
+  waterGrad.addColorStop(1, `rgba(${Math.round(waterR * 0.3)},${Math.round(waterG * 0.3)},${Math.round(waterB * 0.2)},0.95)`);
+  ctx.fillStyle = waterGrad;
+  ctx.fillRect(lakeL, waterTop, lakeR - lakeL, waterBot - waterTop);
+
+  // Algae surface bloom
+  if (state.algae > 20) {
+    const bloomAlpha = Math.min(0.7, (state.algae - 20) / 80 * 0.7);
+    ctx.fillStyle = `rgba(34,180,60,${bloomAlpha})`;
+    ctx.fillRect(lakeL, waterTop, lakeR - lakeL, 12 + algaeNorm * 20);
+
+    // Algae particles
+    const numParticles = Math.floor(state.algae * 1.5);
+    ctx.fillStyle = `rgba(60,200,80,${bloomAlpha * 0.6})`;
+    for (let i = 0; i < numParticles; i++) {
+      const px = lakeL + Math.random() * (lakeR - lakeL);
+      const maxDepth = waterTop + (waterBot - waterTop) * (0.3 + algaeNorm * 0.4);
+      const py = waterTop + Math.random() * (maxDepth - waterTop);
+      ctx.beginPath(); ctx.arc(px, py, 1.5 + Math.random() * 2, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+  // Dead zone shading at bottom
+  if (state.o2 < 50) {
+    const dzAlpha = Math.min(0.5, (50 - state.o2) / 50 * 0.5);
+    const dzTop = waterBot - (waterBot - waterTop) * (0.1 + (50 - state.o2) / 50 * 0.5);
+    const dzGrad = ctx.createLinearGradient(0, dzTop, 0, waterBot);
+    dzGrad.addColorStop(0, 'transparent');
+    dzGrad.addColorStop(1, `rgba(80,20,20,${dzAlpha})`);
+    ctx.fillStyle = dzGrad;
+    ctx.fillRect(lakeL, dzTop, lakeR - lakeL, waterBot - dzTop);
+
+    if (state.o2 < 30) {
+      ctx.fillStyle = '#ef444488';
+      ctx.font = '700 12px "Space Mono"';
+      ctx.textAlign = 'center';
+      ctx.fillText('HYPOXIC ZONE', W / 2, waterBot - 15);
+    }
+  }
+
+  // Fish
+  const numFish = Math.floor(state.fish / 10);
+  for (let i = 0; i < numFish; i++) {
+    const fx = lakeL + 30 + Math.random() * (lakeR - lakeL - 60);
+    const maxFishDepth = state.o2 < 50 ? waterTop + (waterBot - waterTop) * 0.4 : waterBot - 20;
+    const fy = waterTop + 20 + Math.random() * (maxFishDepth - waterTop - 30);
+    drawFish(ctx, fx, fy, 8 + Math.random() * 6, state.fish > 50);
+  }
+
+  // Dead fish at bottom if oxygen critical
+  if (state.o2 < 30) {
+    const deadCount = Math.floor((30 - state.o2) / 5);
+    for (let i = 0; i < deadCount; i++) {
+      const dx = lakeL + 40 + Math.random() * (lakeR - lakeL - 80);
+      const dy = waterBot - 10 - Math.random() * 20;
+      drawDeadFish(ctx, dx, dy, 7);
+    }
+  }
+
+  // Nutrient runoff arrow (left side)
+  if (state.nutrients > 15) {
+    const arrowAlpha = Math.min(0.8, state.nutrients / 100);
+    ctx.strokeStyle = `rgba(245,158,11,${arrowAlpha})`;
+    ctx.lineWidth = 2 + state.nutrients / 30;
+    ctx.setLineDash([6, 4]);
+    ctx.beginPath();
+    ctx.moveTo(lakeL - 15, waterTop - 10);
+    ctx.quadraticCurveTo(lakeL + 10, waterTop + 20, lakeL + 40, waterTop + 40);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = `rgba(245,158,11,${arrowAlpha})`;
+    ctx.font = '600 10px "DM Sans"';
+    ctx.textAlign = 'center';
+    ctx.fillText('Nutrient', lakeL - 8, waterTop - 22);
+    ctx.fillText('Runoff', lakeL - 8, waterTop - 10);
+  }
+
+  // Labels
+  ctx.fillStyle = '#ffffff55';
+  ctx.font = '600 10px "DM Sans"';
+  ctx.textAlign = 'center';
+  ctx.fillText('Surface', W / 2, waterTop + 14);
+  ctx.fillText('Deep water', W / 2, waterBot - 35);
+}
+
+function drawFish(ctx, x, y, size, alive) {
+  ctx.fillStyle = alive ? '#60a5fa99' : '#ef444477';
+  ctx.beginPath();
+  ctx.moveTo(x + size, y);
+  ctx.quadraticCurveTo(x + size * 0.5, y - size * 0.5, x - size, y);
+  ctx.quadraticCurveTo(x + size * 0.5, y + size * 0.5, x + size, y);
+  ctx.fill();
+  // Tail
+  ctx.beginPath();
+  ctx.moveTo(x - size, y);
+  ctx.lineTo(x - size * 1.5, y - size * 0.4);
+  ctx.lineTo(x - size * 1.5, y + size * 0.4);
+  ctx.fill();
+}
+
+function drawDeadFish(ctx, x, y, size) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(Math.PI); // upside down
+  ctx.fillStyle = '#ef444466';
+  ctx.beginPath();
+  ctx.moveTo(size, 0);
+  ctx.quadraticCurveTo(size * 0.5, -size * 0.4, -size, 0);
+  ctx.quadraticCurveTo(size * 0.5, size * 0.4, size, 0);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(-size, 0);
+  ctx.lineTo(-size * 1.4, -size * 0.3);
+  ctx.lineTo(-size * 1.4, size * 0.3);
+  ctx.fill();
+  ctx.restore();
+}
+
+calc();
+window.addEventListener('resize', drawLake);
+</script>
+<div class="takeaway">
+  <div class="pt">Key Takeaways</div>
+  <div class="tk-list">
+    <div class="tk-item">🌾 <strong>Nutrient runoff triggers the cascade</strong> — excess nitrogen and phosphorus from agriculture, sewage, or fertilizer wash into waterways and fuel explosive algal growth that wouldn't occur under natural nutrient levels.</div>
+    <div class="tk-item">🦠 <strong>Decomposition is the oxygen killer</strong> — when the algal bloom dies, bacteria decompose the massive organic load, consuming dissolved oxygen faster than it can be replenished. This is biological oxygen demand (BOD).</div>
+    <div class="tk-item">🐟 <strong>Hypoxia creates dead zones</strong> — when dissolved oxygen drops below ~2 mg/L, fish and invertebrates suffocate. The Gulf of Mexico dead zone (~15,000 km²) is caused by this exact mechanism, driven by Mississippi River nutrient loading.</div>
+    <div class="tk-item">🌡️ <strong>Warming makes it worse</strong> — warmer water holds less dissolved oxygen and accelerates bacterial metabolism, making eutrophication more severe under climate change.</div>
+  </div>
+</div>
+<div style="text-align:center;padding:12px 0 6px;font-family:sans-serif;font-size:0.75rem;color:#4a5a7a">Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener" style="color:#64ffda;text-decoration:none;font-weight:600">Dutton Lab</a> @ University of Florida</div>
+</body>
+</html>
