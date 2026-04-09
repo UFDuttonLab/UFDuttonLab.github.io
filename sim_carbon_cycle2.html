@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carbon Cycle Simulator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0f1e;--surface:#131a2e;--border:#253050;--text:#e0e6f0;--dim:#7a8aaa;--accent:#64ffda;--atm:#ff8c42;--ocean:#4da6ff;--land:#34d399;--soil:#a78bfa;--fossil:#ef4444}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:14px}
+h1{font-family:'Space Mono',monospace;font-size:1.8rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:4px}
+.sub{color:var(--dim);font-size:1rem;margin-bottom:12px}
+.wrap{width:100%;max-width:1100px}
+.panel{background:var(--surface);border-radius:12px;padding:16px;margin-bottom:12px}
+.pt{font-family:'Space Mono',monospace;font-size:0.95rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+canvas{display:block;border-radius:8px}
+#lineChart{width:100%;height:380px;background:#0b1020}
+#stackChart{width:100%;height:320px;background:#0b1020}
+
+.legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.lg{display:flex;align-items:center;gap:5px;font-size:0.95rem;color:var(--dim);font-weight:500}
+.lg-d{width:18px;height:5px;border-radius:3px}
+
+.ctrl-bar{background:var(--surface);border-radius:12px;padding:14px 20px;margin-bottom:10px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
+.ctrl{display:flex;align-items:center;gap:8px}
+.ctrl label{font-size:0.95rem;color:var(--dim);min-width:120px;font-weight:600}
+.ctrl input[type="range"]{width:120px;accent-color:var(--accent);height:6px}
+.ctrl .cv{font-family:'Space Mono',monospace;font-size:1rem;color:var(--accent);min-width:65px;text-align:right}
+.btn{font-family:'Space Mono',monospace;font-size:0.85rem;padding:8px 16px;border:2px solid var(--border);border-radius:6px;background:transparent;color:var(--dim);cursor:pointer;transition:all 0.15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.active{background:rgba(100,255,218,0.1);border-color:var(--accent);color:var(--accent)}
+.btn.reset{border-color:var(--fossil);color:var(--fossil)}
+.status{font-family:'Space Mono',monospace;font-size:1.1rem;color:var(--atm);text-align:center;margin-bottom:10px;padding:6px 0}
+
+.takeaway{background:var(--surface);border-radius:12px;padding:16px 20px}
+.tk-list{display:flex;flex-direction:column;gap:10px}
+.tk-item{font-size:1rem;color:var(--text);line-height:1.6;padding:8px 14px;background:#1a2240;border-radius:8px;border-left:4px solid var(--accent)}
+.tk-item strong{color:var(--accent)}
+</style>
+</head>
+<body>
+<h1>Carbon Cycle Simulator</h1>
+<p class="sub">Watch carbon move between reservoirs — total mass is always conserved</p>
+
+<div class="wrap">
+  <div class="ctrl-bar">
+    <div class="ctrl"><label>Fossil burning</label><input type="range" id="sFossil" min="0" max="25" step="0.5" value="10" oninput="uc()"><span class="cv" id="cvF">10 Gt/yr</span></div>
+    <div class="ctrl"><label>Deforestation</label><input type="range" id="sDefor" min="0" max="5" step="0.1" value="1" oninput="uc()"><span class="cv" id="cvD">1 Gt/yr</span></div>
+    <div class="ctrl"><label>Ocean sensitivity</label><input type="range" id="sOcean" min="0" max="8" step="0.1" value="2.5" oninput="uc()"><span class="cv" id="cvO">2.5</span></div>
+    <button class="btn" id="btnRun" onclick="toggleRun()">▶ Run</button>
+    <button class="btn" onclick="step()">+1 yr</button>
+    <button class="btn" onclick="runTo(2100)">→ 2100</button>
+    <button class="btn" onclick="runTo(2200)">→ 2200</button>
+    <button class="btn reset" onclick="resetSim()">Reset</button>
+  </div>
+
+  <div class="status">Year <span id="yD">2025</span> &nbsp;|&nbsp; CO₂ <span id="pD">420</span> ppm &nbsp;|&nbsp; +<span id="tD">1.2</span>°C &nbsp;|&nbsp; Ocean eq: <span id="eqD">280</span> ppm</div>
+
+  <div class="panel">
+    <div class="pt">Reservoir Stocks Over Time</div>
+    <canvas id="lineChart"></canvas>
+    <div class="legend">
+      <div class="lg"><div class="lg-d" style="background:#ff8c42"></div>Atmosphere</div>
+      <div class="lg"><div class="lg-d" style="background:#ef4444"></div>Fossil Fuels</div>
+      <div class="lg"><div class="lg-d" style="background:#a78bfa"></div>Soils</div>
+      <div class="lg"><div class="lg-d" style="background:#34d399"></div>Land Biomass</div>
+      <div class="lg"><div class="lg-d" style="background:#4da6ff;border-top:2px dashed #4da6ff;height:3px"></div>Ocean (right axis)</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pt">Total Carbon — Conservation of Mass</div>
+    <canvas id="stackChart"></canvas>
+    <div class="legend">
+      <div class="lg"><div class="lg-d" style="background:#4da6ff"></div>Ocean</div>
+      <div class="lg"><div class="lg-d" style="background:#ff8c42"></div>Atmosphere</div>
+      <div class="lg"><div class="lg-d" style="background:#a78bfa"></div>Soils</div>
+      <div class="lg"><div class="lg-d" style="background:#ef4444"></div>Fossil Fuels</div>
+      <div class="lg"><div class="lg-d" style="background:#34d399"></div>Land Biomass</div>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="pt">Key Takeaways</div>
+    <div class="tk-list">
+      <div class="tk-item">⚖️ <strong>Carbon is conserved</strong> — it moves between reservoirs but the total amount on Earth never changes. The stacked chart makes this visible.</div>
+      <div class="tk-item">🔥 <strong>Fossil fuels transfer ancient carbon to the atmosphere</strong> — burning releases carbon locked underground for millions of years, increasing atmospheric CO₂ beyond what natural sinks can absorb quickly.</div>
+      <div class="tk-item">🌊 <strong>The ocean is the largest sink but has finite capacity</strong> — as the ocean absorbs more CO₂, its equilibrium shifts upward and absorption slows. It also causes ocean acidification.</div>
+      <div class="tk-item">📈 <strong>The system finds a new, higher equilibrium</strong> — even after fossil fuels are depleted, atmospheric CO₂ does not return to pre-industrial levels. The extra carbon is permanently redistributed.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const GT_PPM=2.12;
+const I={atm:890,land:550,ocean:38000,soil:1500,fossil:4000};
+const TOTAL=I.atm+I.land+I.ocean+I.soil+I.fossil;
+let S={...I},yr=2025,running=false,intId=null;
+let hist=[{yr:2025,...I}];
+const PH=120,AR=60,LF=60,SR=58;
+
+// Font sizes for projection
+const F={axis:'14px "Space Mono"',axisLabel:'14px "DM Sans"',endLabel:'bold 13px "Space Mono"',gridLabel:'13px "Space Mono"',xLabel:'13px "Space Mono"',totalLabel:'bold 13px "DM Sans"',stackLabel:'bold 13px "Space Mono"'};
+
+function uc(){
+  document.getElementById('cvF').textContent=pf('sFossil')+' Gt/yr';
+  document.getElementById('cvD').textContent=pf('sDefor')+' Gt/yr';
+  document.getElementById('cvO').textContent=pf('sOcean');
+}
+function pf(id){return parseFloat(document.getElementById(id).value).toFixed(1)}
+function gv(id){return parseFloat(document.getElementById(id).value)}
+
+function step(){
+  const fb_w=gv('sFossil'),df_w=gv('sDefor'),ouSens=gv('sOcean');
+  const fb=Math.min(fb_w,S.fossil);
+  const df=Math.min(df_w,Math.max(0,S.land-10));
+  const lf=Math.max(0,S.land/I.land),sf=Math.max(0,S.soil/I.soil);
+  const photo=PH*lf,aResp=AR*lf,litter=LF*lf,sResp=SR*sf;
+  const regrowth=6.0*(S.land/I.land)*Math.max(0,1-S.land/I.land);
+  const ppm=S.atm/GT_PPM;
+  const oceanExcess=S.ocean-I.ocean;
+  const eqPPM=280+oceanExcess*0.12;
+  const ou=ouSens*(ppm-eqPPM)/(420-280);
+
+  S.atm+=aResp+sResp+fb+df-photo-ou-regrowth;
+  S.fossil-=fb;
+  S.land+=photo-aResp-litter-df+regrowth;
+  S.soil+=litter-sResp;
+  S.ocean+=ou;
+  yr++;
+  hist.push({yr,atm:S.atm,land:S.land,ocean:S.ocean,soil:S.soil,fossil:S.fossil});
+  render();
+}
+
+function render(){
+  const ppm=Math.round(S.atm/GT_PPM);
+  const tc=(3.0*Math.log(Math.max(ppm,1)/280)/Math.log(2)).toFixed(1);
+  const eqPPM=Math.round(280+(S.ocean-I.ocean)*0.12);
+  document.getElementById('yD').textContent=yr;
+  document.getElementById('pD').textContent=ppm;
+  document.getElementById('tD').textContent=tc;
+  document.getElementById('eqD').textContent=eqPPM;
+  drawLineChart();drawStackChart();
+}
+
+function toggleRun(){
+  running=!running;const b=document.getElementById('btnRun');
+  if(running){b.textContent='⏸ Pause';b.classList.add('active');intId=setInterval(step,100)}
+  else{b.textContent='▶ Run';b.classList.remove('active');clearInterval(intId)}
+}
+function runTo(t){if(running)toggleRun();const r=setInterval(()=>{if(yr>=t){clearInterval(r);return}step()},12)}
+function resetSim(){if(running)toggleRun();S={...I};yr=2025;hist=[{yr:2025,...I}];render()}
+
+function niceStep(max,n){if(max<=0)return 1;const r=max/n,m=Math.pow(10,Math.floor(Math.log10(r))),d=r/m;return(d<=1.5?1:d<=3.5?2:d<=7.5?5:10)*m}
+
+// ===== LINE CHART =====
+function drawLineChart(){
+  const cv=document.getElementById('lineChart'),ctx=cv.getContext('2d');
+  const dpr=window.devicePixelRatio||1;cv.width=cv.offsetWidth*dpr;cv.height=cv.offsetHeight*dpr;ctx.scale(dpr,dpr);
+  const W=cv.offsetWidth,H=cv.offsetHeight;ctx.clearRect(0,0,W,H);
+  if(hist.length<2){ctx.fillStyle='#3a4a6a';ctx.font='16px "DM Sans"';ctx.textAlign='center';ctx.fillText('Press Run to see reservoir stocks over time',W/2,H/2);return}
+
+  const pad={l:65,r:65,t:14,b:36},cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  const xMin=hist[0].yr,xMax=Math.max(hist[hist.length-1].yr,xMin+10);
+  function tx(y){return pad.l+((y-xMin)/(xMax-xMin))*cW}
+
+  // Left axis
+  const leftKeys=['atm','fossil','soil','land'];
+  let lMax=100;
+  for(const h of hist)for(const k of leftKeys)lMax=Math.max(lMax,h[k]);
+  lMax=Math.ceil(lMax*1.15/500)*500;
+  function tyL(v){return pad.t+(1-v/lMax)*cH}
+
+  // Right axis
+  let oMin=Infinity,oMax=-Infinity;
+  for(const h of hist){oMin=Math.min(oMin,h.ocean);oMax=Math.max(oMax,h.ocean)}
+  const oRange=Math.max(200,oMax-oMin);
+  oMin=Math.max(0,oMin-oRange*0.3);oMax=oMax+oRange*0.3;
+  function tyR(v){return pad.t+(1-(v-oMin)/(oMax-oMin))*cH}
+
+  // Left grid
+  ctx.strokeStyle='#1a2340';ctx.lineWidth=1;
+  const lStep=niceStep(lMax,4);
+  for(let v=0;v<=lMax;v+=lStep){
+    ctx.beginPath();ctx.moveTo(pad.l,tyL(v));ctx.lineTo(W-pad.r,tyL(v));ctx.stroke();
+    ctx.fillStyle='#6a7a9a';ctx.font=F.gridLabel;ctx.textAlign='right';
+    ctx.fillText(v>=1000?(v/1000).toFixed(0)+'K':v,pad.l-8,tyL(v)+5);
+  }
+  // Right labels
+  const rStep=niceStep(oMax-oMin,4);
+  for(let v=Math.ceil(oMin/rStep)*rStep;v<=oMax;v+=rStep){
+    ctx.fillStyle='#4da6ff66';ctx.font=F.gridLabel;ctx.textAlign='left';
+    ctx.fillText(v>=1000?(v/1000).toFixed(1)+'K':v,W-pad.r+8,tyR(v)+5);
+  }
+
+  // X labels
+  const xStep=Math.max(5,Math.ceil((xMax-xMin)/6/5)*5);
+  ctx.fillStyle='#5a6a8a';ctx.font=F.xLabel;ctx.textAlign='center';
+  for(let y=Math.ceil(xMin/xStep)*xStep;y<=xMax;y+=xStep)ctx.fillText(y,tx(y),H-8);
+
+  // Lines
+  const lColors={atm:'#ff8c42',fossil:'#ef4444',soil:'#a78bfa',land:'#34d399'};
+  const lWidths={atm:3,fossil:2.5,soil:2.5,land:2.5};
+  for(const k of leftKeys){
+    ctx.strokeStyle=lColors[k];ctx.lineWidth=lWidths[k];ctx.beginPath();
+    hist.forEach((h,i)=>{const x=tx(h.yr),y=tyL(h[k]);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)});
+    ctx.stroke();
+    const last=hist[hist.length-1];
+    ctx.fillStyle=lColors[k];ctx.font=F.endLabel;ctx.textAlign='left';
+    ctx.fillText(last[k].toFixed(0),tx(last.yr)+6,tyL(last[k])+5);
+  }
+
+  // Ocean
+  ctx.strokeStyle='#4da6ff';ctx.lineWidth=3;ctx.setLineDash([8,4]);ctx.beginPath();
+  hist.forEach((h,i)=>{const x=tx(h.yr),y=tyR(h.ocean);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)});
+  ctx.stroke();ctx.setLineDash([]);
+  const lastO=hist[hist.length-1];
+  ctx.fillStyle='#4da6ff';ctx.font=F.endLabel;ctx.textAlign='left';
+  ctx.fillText(Math.round(lastO.ocean).toLocaleString(),tx(lastO.yr)+6,tyR(lastO.ocean)+5);
+
+  // Axis labels
+  ctx.fillStyle='#6a7a9a';ctx.font='bold '+F.axisLabel;ctx.textAlign='center';
+  ctx.save();ctx.translate(14,pad.t+cH/2);ctx.rotate(-Math.PI/2);ctx.fillText('Gt C',0,0);ctx.restore();
+  ctx.fillStyle='#4da6ff66';
+  ctx.save();ctx.translate(W-10,pad.t+cH/2);ctx.rotate(-Math.PI/2);ctx.fillText('Ocean (Gt C)',0,0);ctx.restore();
+}
+
+// ===== STACKED CHART =====
+function drawStackChart(){
+  const cv=document.getElementById('stackChart'),ctx=cv.getContext('2d');
+  const dpr=window.devicePixelRatio||1;cv.width=cv.offsetWidth*dpr;cv.height=cv.offsetHeight*dpr;ctx.scale(dpr,dpr);
+  const W=cv.offsetWidth,H=cv.offsetHeight;ctx.clearRect(0,0,W,H);
+  if(hist.length<2){ctx.fillStyle='#3a4a6a';ctx.font='16px "DM Sans"';ctx.textAlign='center';ctx.fillText('Total carbon stays constant — conservation of mass',W/2,H/2);return}
+
+  const pad={l:65,r:20,t:14,b:36},cW=W-pad.l-pad.r,cH=H-pad.t-pad.b;
+  const xMin=hist[0].yr,xMax=Math.max(hist[hist.length-1].yr,xMin+10);
+  function tx(y){return pad.l+((y-xMin)/(xMax-xMin))*cW}
+  function ty(v){return pad.t+(1-v/TOTAL)*cH}
+
+  const layers=[
+    {key:'land',color:'#34d399'},{key:'fossil',color:'#ef4444'},
+    {key:'soil',color:'#a78bfa'},{key:'atm',color:'#ff8c42'},
+    {key:'ocean',color:'#4da6ff'},
+  ];
+
+  // Y grid
+  ctx.strokeStyle='#1a2340';ctx.lineWidth=1;
+  const yStep=niceStep(TOTAL,4);
+  for(let v=0;v<=TOTAL;v+=yStep){
+    ctx.beginPath();ctx.moveTo(pad.l,ty(v));ctx.lineTo(W-pad.r,ty(v));ctx.stroke();
+    ctx.fillStyle='#5a6a8a';ctx.font=F.gridLabel;ctx.textAlign='right';
+    ctx.fillText((v/1000).toFixed(0)+'K',pad.l-8,ty(v)+5);
+  }
+
+  // X labels
+  const xStep=Math.max(5,Math.ceil((xMax-xMin)/6/5)*5);
+  ctx.fillStyle='#5a6a8a';ctx.font=F.xLabel;ctx.textAlign='center';
+  for(let y=Math.ceil(xMin/xStep)*xStep;y<=xMax;y+=xStep)ctx.fillText(y,tx(y),H-8);
+
+  // Cumulative
+  const cum=[];
+  for(let li=0;li<layers.length;li++){
+    cum[li]=[];
+    for(let hi=0;hi<hist.length;hi++) cum[li][hi]=(li>0?cum[li-1][hi]:0)+hist[hi][layers[li].key];
+  }
+
+  // Areas
+  for(let li=layers.length-1;li>=0;li--){
+    ctx.fillStyle=layers[li].color+'44';ctx.strokeStyle=layers[li].color+'88';ctx.lineWidth=1.5;
+    ctx.beginPath();
+    for(let hi=0;hi<hist.length;hi++){const x=tx(hist[hi].yr);hi===0?ctx.moveTo(x,ty(cum[li][hi])):ctx.lineTo(x,ty(cum[li][hi]))}
+    for(let hi=hist.length-1;hi>=0;hi--)ctx.lineTo(tx(hist[hi].yr),li>0?ty(cum[li-1][hi]):ty(0));
+    ctx.closePath();ctx.fill();ctx.stroke();
+  }
+
+  // Total line
+  ctx.strokeStyle='#ffffff44';ctx.lineWidth=2;ctx.setLineDash([5,4]);
+  ctx.beginPath();ctx.moveTo(pad.l,ty(TOTAL));ctx.lineTo(W-pad.r,ty(TOTAL));ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#ffffff66';ctx.font=F.totalLabel;ctx.textAlign='right';
+  ctx.fillText('Total: '+(TOTAL/1000).toFixed(1)+'K Gt C (constant)',W-pad.r,ty(TOTAL)-7);
+
+  // Layer labels
+  const last=hist.length-1;
+  for(let li=0;li<layers.length;li++){
+    const top=cum[li][last],bot=li>0?cum[li-1][last]:0;
+    const layerPx=ty(bot)-ty(top);
+    if(layerPx>20){
+      ctx.fillStyle=layers[li].color;ctx.font=F.stackLabel;ctx.textAlign='center';
+      ctx.fillText(Math.round(hist[last][layers[li].key]).toLocaleString(),pad.l+cW*0.5,ty((top+bot)/2)+5);
+    }
+  }
+
+  // Y axis label
+  ctx.fillStyle='#6a7a9a';ctx.font='bold '+F.axisLabel;ctx.textAlign='center';
+  ctx.save();ctx.translate(14,pad.t+cH/2);ctx.rotate(-Math.PI/2);ctx.fillText('Gt C',0,0);ctx.restore();
+}
+
+render();
+window.addEventListener('resize',render);
+</script>
+<div style="text-align:center;padding:12px 0 6px;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:#4a5a7a">
+  Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener" style="color:#64ffda;text-decoration:none;font-weight:600">Dutton Lab</a> @ University of Florida
+</div>
+</body>
+</html>
