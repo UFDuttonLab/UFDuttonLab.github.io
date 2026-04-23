@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lily's Moon Gravity Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --sky-top: #0b0d2e;
+    --sky-mid: #1a1f5c;
+    --moon-glow: #fffde7;
+    --crater: #d4cfa8;
+    --accent: #ffd54f;
+    --text: #e8e6f0;
+    --surface: rgba(255,255,255,0.06);
+  }
+
+  body {
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(175deg, var(--sky-top) 0%, var(--sky-mid) 50%, #0f1135 100%);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+
+  /* --- stars --- */
+  .stars, .stars2 {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  }
+  .stars  { background: radial-gradient(1px 1px at 10% 20%, #fff 100%, transparent),
+                         radial-gradient(1.5px 1.5px at 40% 70%, #fff 100%, transparent),
+                         radial-gradient(1px 1px at 65% 15%, #fff 100%, transparent),
+                         radial-gradient(1.2px 1.2px at 80% 55%, #fff 100%, transparent),
+                         radial-gradient(1px 1px at 25% 85%, #fff 100%, transparent),
+                         radial-gradient(1.5px 1.5px at 55% 40%, #fff 100%, transparent),
+                         radial-gradient(1px 1px at 90% 30%, #fff 100%, transparent),
+                         radial-gradient(1px 1px at 5% 60%, #fff 100%, transparent),
+                         radial-gradient(1.3px 1.3px at 72% 88%, #fff 100%, transparent),
+                         radial-gradient(1px 1px at 35% 50%, #fff 100%, transparent);
+           animation: twinkle 4s ease-in-out infinite alternate; }
+  .stars2 { background: radial-gradient(1px 1px at 15% 45%, rgba(255,255,255,.6) 100%, transparent),
+                         radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,.5) 100%, transparent),
+                         radial-gradient(1.2px 1.2px at 78% 72%, rgba(255,255,255,.7) 100%, transparent),
+                         radial-gradient(1px 1px at 30% 30%, rgba(255,255,255,.4) 100%, transparent),
+                         radial-gradient(1px 1px at 88% 15%, rgba(255,255,255,.6) 100%, transparent),
+                         radial-gradient(1.5px 1.5px at 60% 60%, rgba(255,255,255,.5) 100%, transparent);
+            animation: twinkle 5s ease-in-out 1s infinite alternate; }
+
+  @keyframes twinkle { from { opacity: .5; } to { opacity: 1; } }
+
+  /* --- moon --- */
+  .moon {
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at 38% 35%, #fffef5, #e8e4c9 60%, #c9c3a0 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 40px 15px rgba(255,253,231,.15), 0 0 100px 40px rgba(255,253,231,.07);
+    position: relative;
+    margin-bottom: 1.5rem;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+  }
+  .moon::before, .moon::after, .moon .c1, .moon .c2, .moon .c3 {
+    content: ''; position: absolute; border-radius: 50%;
+    background: radial-gradient(circle, var(--crater), rgba(180,175,140,.4));
+  }
+  .moon::before { width: 28px; height: 28px; top: 30px; left: 35px; opacity: .35; }
+  .moon::after  { width: 18px; height: 18px; top: 70px; left: 80px; opacity: .3; }
+  .moon .c1 { width: 22px; height: 22px; top: 50px; left: 45px; opacity: .25; }
+  .moon .c2 { width: 14px; height: 14px; top: 25px; left: 85px; opacity: .3; }
+  .moon .c3 { width: 10px; height: 10px; top: 95px; left: 50px; opacity: .2; }
+  .moon .cheese {
+    position: absolute;
+    font-size: 24px;
+    bottom: 18px;
+    right: 16px;
+    transform: rotate(-12deg);
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,.25));
+    animation: cheese-wobble 3s ease-in-out infinite;
+    z-index: 2;
+  }
+  @keyframes cheese-wobble {
+    0%, 100% { transform: rotate(-12deg); }
+    50% { transform: rotate(-6deg) translateY(-2px); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* --- card --- */
+  .card {
+    background: var(--surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.25;
+    margin-bottom: .4rem;
+  }
+  .subtitle {
+    font-size: .95rem;
+    color: rgba(232,230,240,.55);
+    margin-bottom: 2rem;
+  }
+
+  /* --- input row --- */
+  .input-row {
+    display: flex;
+    gap: .75rem;
+    align-items: stretch;
+    margin-bottom: .5rem;
+  }
+  .input-wrap {
+    flex: 1;
+    position: relative;
+  }
+  input[type="number"] {
+    width: 100%;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.35rem;
+    padding: .85rem 1rem;
+    border: 2px solid rgba(255,255,255,.12);
+    border-radius: 14px;
+    background: rgba(0,0,0,.25);
+    color: #fff;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255,213,79,.15);
+  }
+  input::placeholder { color: rgba(255,255,255,.25); font-size: 1rem; }
+
+  /* --- unit toggle --- */
+  .unit-toggle {
+    display: flex;
+    background: rgba(0,0,0,.3);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,.08);
+  }
+  .unit-btn {
+    font-family: 'Fredoka', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .85rem .9rem;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,.4);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .unit-btn.active {
+    background: rgba(255,213,79,.15);
+    color: var(--accent);
+  }
+
+  /* --- button --- */
+  .go-btn {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.25rem;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffd54f, #ffb300);
+    color: #1a1a2e;
+    cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+    letter-spacing: .02em;
+  }
+  .go-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(255,213,79,.3);
+  }
+  .go-btn:active { transform: translateY(0); }
+
+  /* --- result --- */
+  .result {
+    margin-top: 1.75rem;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .4s, transform .4s;
+    pointer-events: none;
+  }
+  .result.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .result-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .result-unit {
+    font-size: 1.1rem;
+    color: rgba(232,230,240,.5);
+    margin-top: .25rem;
+  }
+  .result-fun {
+    margin-top: 1rem;
+    font-size: .95rem;
+    color: rgba(232,230,240,.7);
+    line-height: 1.5;
+    padding: 0 .5rem;
+  }
+
+  /* --- astronaut emoji bounce --- */
+  .astro {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+    font-size: 1.4rem;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .footer {
+    margin-top: 2rem;
+    font-size: .75rem;
+    color: rgba(232,230,240,.25);
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="stars2"></div>
+
+<div class="moon">
+  <div class="c1"></div>
+  <div class="c2"></div>
+  <div class="c3"></div>
+  <div class="cheese">🧀</div>
+</div>
+
+<div class="card">
+  <h1>Lily's Moon Gravity Calculator</h1>
+  <p class="subtitle">The Moon's gravity is only 1/6 of Earth's!</p>
+
+  <div class="input-row">
+    <div class="input-wrap">
+      <input type="number" id="weight" placeholder="Your weight" min="0" max="9999" step="any" autofocus>
+    </div>
+    <div class="unit-toggle">
+      <button class="unit-btn active" data-unit="lbs" onclick="setUnit('lbs')">lbs</button>
+      <button class="unit-btn" data-unit="kg" onclick="setUnit('kg')">kg</button>
+    </div>
+  </div>
+
+  <button class="go-btn" onclick="calculate()">
+    <span class="astro">🚀</span> Blast Off!
+  </button>
+
+  <div class="result" id="result">
+    <div class="result-number" id="moonWeight">—</div>
+    <div class="result-unit" id="moonUnit">lbs on the Moon</div>
+    <div class="result-fun" id="funFact"></div>
+  </div>
+</div>
+
+<div class="footer">Gravity factor: 0.1654 &middot; Dutton Lab</div>
+
+<script>
+  const MOON_GRAVITY = 0.1654;
+  let unit = 'lbs';
+
+  const facts = [
+    "You could jump about 6 times higher on the Moon!",
+    "A bowling ball on the Moon would feel like a tennis ball on Earth.",
+    "Apollo astronauts bounced around because everything felt so light!",
+    "On the Moon, you could carry your best friend on your shoulders, easy.",
+    "A house cat would weigh less than a stick of butter on the Moon!",
+    "You could throw a baseball almost 6 times farther on the Moon!",
+    "The Moon has no atmosphere, so you'd need a spacesuit too!",
+    "Neil Armstrong's first step on the Moon was on July 20, 1969.",
+  ];
+
+  function setUnit(u) {
+    unit = u;
+    document.querySelectorAll('.unit-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.unit === u);
+    });
+    // recalculate if there's already a value
+    const val = parseFloat(document.getElementById('weight').value);
+    if (val > 0) calculate();
+  }
+
+  function calculate() {
+    const input = document.getElementById('weight');
+    const val = parseFloat(input.value);
+    if (!val || val <= 0) {
+      input.focus();
+      return;
+    }
+
+    const moonWt = (val * MOON_GRAVITY).toFixed(1);
+    document.getElementById('moonWeight').textContent = moonWt;
+    document.getElementById('moonUnit').textContent = unit + ' on the Moon';
+    document.getElementById('funFact').textContent = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById('result').classList.add('show');
+  }
+
+  // Enter key triggers calculation
+  document.getElementById('weight').addEventListener('keydown', e => {
+    if (e.key === 'Enter') calculate();
+  });
+</script>
+</body>
+</html>
