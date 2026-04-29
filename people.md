@@ -32,6 +32,13 @@ Lee (Emily) Nonnamaker joined the lab in 2024 as a NSF funded postdoctoral resea
 
 Ava joined the lab as a PhD student in the fall of 2025 on a prestigious US National Science Foundation Graduate Research Fellowship. She received her B.S. in Biology with a concentration in genetics at Penn State, where she explored the evolution of the human oral microbiome and its role in tooth decay. Ava is interested in the intersections between microbial dispersal through environments and hosts, microbial competition, and ecosystem functioning and health.
 
+## Audrey-Anne Haynes
+
+![Audrey-Anne](img/audrey-anne.jpeg)
+
+Audrey-Anne is a PhD student in the Dutton lab. She graduated from UF in 2026 with BS degrees in zoology and marine science. She joined the lab in 2024 and has since worked on projects such as the robotic rabbits in the Everglades, hippo gut microbiomes, an honors thesis on hippo aggregation behavior, and sediment microbial community sampling. She thoroughly enjoys field work such as bird banding, shark tagging, and AAUS science diving. Although she hopes to continue working with hippo behavior and microbiomes in the future, she is excited to see where her opportunities in the Dutton lab take her.
+
+
 # Master's Students
 
 ## Tavis Goldwire
@@ -46,6 +53,12 @@ After joining the Dutton lab in 2022 as an undergraduate, Tavis graduated from t
 
 Suzanna joined the Dutton Lab as a part time MS student in Fall 2025. She works full time as a marine mammal stranding biologist for the [UF Marine Animal Rescue program](https://cdpm.vetmed.ufl.edu/services/marine-animal-rescue-program/). Her research focuses on bottlenose dolphins, collaborating with the [Cedar Key Dolphin Project](https://www.cedarkeydolphinproject.org/#/), to explore non-invasive methods for assessing dolphin health. She is studying the respiratory microbiomes of dolphins to investigate the presence of infectious diseases. Her long-term goal is to strengthen the link between health and ecology to better understand and protect dolphin populations. Squint closely to see her amazing xtra tufs with orcas on them. 
 
+## Cameron Teal
+
+![Cameron](img/cameron.jpeg).
+
+Cameron graduated from the University of Florida with a B.S. in Zoology in 2026.  She joined the Dutton Lab as a Master’s student in Fall 2026.  She enjoys both lab and field work and hopes to combine them in her future career.  Cameron is interested in the connections between microbial ecology and the health and behavior of wildlife under human managed care.
+
 # Undergrads
 
 ## Charlotte Levet Bourtayre
@@ -53,12 +66,6 @@ Suzanna joined the Dutton Lab as a part time MS student in Fall 2025. She works 
 ![Charlotte](img/charlotte.jpeg)
 
 Charlotte joined the Dutton lab in Summer 2025, helping out with the Robotic Rabbit Project. She is a 3rd year undergraduate student, studying Biology with a minor in Wildlife Ecology and Conservation, and aspires to attend veterinary school after finishing her undergraduate studies. Charlotte is interested in assessing animal gut microbiomes to improve their overall health.
-
-## Audrey-Anne Haynes
-
-![Audrey-Anne](img/audrey-anne.jpeg)
-
-Audrey-Anne is a 4th year undergraduate majoring in zoology and marine science. She joined the lab in 2024 and has since worked on projects such as the robotic rabbits in the Everglades, hippo gut microbiomes, and sediment microbial community sampling. She thoroughly enjoys field work such as bird banding, shark tagging, and AAUS science diving. Audrey-Anne is currently working on an undergraduate thesis on hippo aggregation behavior and dynamics, and hopes to continue working with hippo behavior and microbiomes in the future.
 
 ## Cecilia Aragon
 
