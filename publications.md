@@ -8,9 +8,19 @@ subtitle:
 
 CV available upon request
 
-### 2025
+### 2026
 
-McCleery, Robert, Sam M. Ferreria, Philip Mhlava, Olbert Mathebula, Tiger Tanneback, Tatenda Dalu, Christopher Dutton, Linton Munyai, Daniel Parker,  Amanda Subalusky, Buhlebenkosi Twala, Michael Voysey, Corli Wigley-Coetsee, Benjamen Wigley. 2025. Reservoirs Reshape the Timing, Extent, and Ecological Influence of Large Mammalian Herbivores in an African Savanna. Ecological Applications - In press.
+Dutton, C. L., A. Goeckner, T. Goldwire, C. G. B. Grupstra, D. Houghtaling, L. E. Nonnamaker, and A. Subalusky. Bioreactors on the move: how animals contribute to microbial community coalescence and shape ecosystem function. [Environmental Microbiology 28(4), e70291 (2026).](https://enviromicro-journals.onlinelibrary.wiley.com/doi/10.1111/1462-2920.70291)
+
+Dutton, C. L., M. Follis, J. Munaweera, F. M. Maisha, C. J. Mulligan, and J. M. Moore. The gut microbiome in early life predicts malaria susceptibility. [Frontiers in Cellular and Infection Microbiology 16, 1769376 (2026).](https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2026.1769376/full)
+
+Frauendorf, T. C., A. Reside, C. L. Dutton, L. Njoroge, E. Njagi, E. J. Rosi, D. M. Post, and A. L. Subalusky. A gradient of wildlife subsidies alters riverine food web structure. [Freshwater Biology 71(4), e70208 (2026).](https://onlinelibrary.wiley.com/doi/10.1111/fwb.70208)
+
+McCleery, R. A., S. M. Ferreria, P. Mhlava, O. Mathebula, T. Tanneback, C. Coetsee, T. Dalu, C. L. Dutton, D. Khosa, L. F. Munyai, D. M. Parker, A. L. Subalusky, B. Twala, M. D. Voysey, and B. J. Wigley. Artificial surface water broadens the spatiotemporal footprint of herbivores and alters species responses. [Ecological Applications 36(1), e70185 (2026).](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.70185)
+
+Twala, B. B., S. P. Ngcobo, R. A. McCleery, T. Dalu, C. L. Dutton, S. M. Ferreria, L. Munyai, A. Subalusky, M. D. Voysey, C. Coetsee, B. Wigley, and D. M. Parker. Effects of water impoundments on the distribution and activity of elephants in the southern Kruger National Park. [African Journal of Ecology 64(2), e70154 (2026).](https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.70154)
+
+### 2025
 
 Subalusky, Amanda L., Christopher Dutton. 2025. Role of Aquatic and Terrestrial Carcasses in Freshwater Ecosystems. [Carrion Ecology, Evolution, and Their Applications.](https://www.taylorfrancis.com/chapters/edit/10.1201/9781003610885-23/role-aquatic-terrestrial-carcasses-freshwater-ecosystems-amanda-subalusky-christopher-dutton)
 
@@ -84,6 +94,10 @@ A 2000-year sediment record reveals rapidly changing sedimentation and land use 
 [Science of the Total Environment 664: 148 (2019)](https://doi.org/10.1016/j.scitotenv.2019.01.421)
 
 ### 2018
+Subalusky, A. L., C. L. Dutton, L. Njoroge, E. J. Rosi, and D. M. Post.
+Organic matter and nutrient inputs from large wildlife influence ecosystem function in the Mara River, Africa.
+[Ecology 99(11): 2558-2574 (2018).](https://doi.org/10.1002/ecy.2509)
+
 Dutton, C. L., A. L. Subalusky, S. C. Anisfeld, L. Njoroge, E. J. Rosi, and D. M. Post.
 The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya.
 [PLoS ONE 13(2): e0192828](https://doi.org/10.1371/journal.pone.0192828)
