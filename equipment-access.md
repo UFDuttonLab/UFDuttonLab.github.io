@@ -42,9 +42,9 @@ Occupational health requirements are set by UF rather than by this laboratory; s
 
 ## Scheduling and Effort Attribution
 
-All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). Booking serves two purposes, and the second is easy to overlook: it coordinates access across concurrent projects, and it **creates a durable record of who did what, on which project, and when.**
+All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). Booking coordinates access across concurrent projects and creates a record of who did what, on which project, and when.
 
-That record is a credit mechanism. Contribution to a project is frequently remembered selectively and reconstructed generously at the point of manuscript preparation, months or years after the work. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes. Members should book accurately for the same reason they should keep an accurate notebook.<sup>[4](#ref4)</sup>
+That record is also a credit mechanism, because contribution is often reconstructed from memory months after the work. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
 
 Booking rules:
 

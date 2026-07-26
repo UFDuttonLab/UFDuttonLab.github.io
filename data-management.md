@@ -40,7 +40,7 @@ Separately, PAPPG Chapter XI.D.4 requires investigators to share primary data, s
 
 ## Metadata Standards, by Data Type
 
-Metadata is not documentation added at the end. It is recorded at the bench and at the sampling point.
+Metadata is recorded at the bench and at the sampling point, not added at the end.
 
 | Data type | Standard | NCBI BioSample package |
 | --- | --- | --- |
@@ -98,8 +98,6 @@ Practices adopted directly from the reproducibility literature: record how every
 Because NSF's research misconduct definition now explicitly encompasses AI-based tools, **AI-assisted code and analysis must be disclosed** consistent with the [Artificial Intelligence Use Policy](/ai-policy/).<sup>[11](#ref11)</sup>
 
 ## Storage on HiPerGator
-
-Members must internalise one fact above all others.
 
 **Nothing on HiPerGator is backed up by default.** UF Research Computing states this plainly: the storage systems are not backed up by default, and users are responsible for purchasing backup services or setting up their own backups.<sup>[38](#ref38),[39](#ref39),[41](#ref41)</sup>
 

@@ -42,16 +42,16 @@ Research licensing through the **National Commission for Science, Technology and
 
 ## What the Kenyan Affiliation Obligates You to Disclose
 
-Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both are disclosable on NSF Senior Personnel Documents and NIH Other Support, and NSF now requires Research Security Training. This laboratory does not write its own rules here: before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office. The obligation arises directly from complying with this policy, which is exactly why it is easy to miss.
+Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both are disclosable on NSF Senior Personnel Documents and NIH Other Support, and NSF now requires Research Security Training. Before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office.
 
 ## Digital Sequence Information
 
 **Kenya regulates digital sequence information derived from its biological resources.** Regulation 4(1)(e) of Legal Notice 68 applies the regulations to "any digital sequence information relating to Kenya biological resources," and regulation 2 defines that term broadly as biological data associated with or derived from genetic resources, including nucleotide sequences and epigenetic, protein, and metabolite data. There is no separate DSI procedure; DSI flows through the same access permit, PIC, MAT, and benefit-sharing machinery as physical material. Depositing Mara-derived sequence in a public archive is therefore a regulated act.<sup>[1](#ref1)</sup>
 
-At the international level, COP16 Decision 16/2, adopted at Cali on 1 November 2024, established a multilateral mechanism and the Cali Fund. Two points must be stated precisely, because both are routinely misreported.
+At the international level, COP16 Decision 16/2, adopted at Cali on 1 November 2024, established a multilateral mechanism and the Cali Fund. Two points, both routinely misreported:
 
 1. **Public research and academic institutions are expressly not expected to make monetary contributions** to the Cali Fund, which is operational and administered through the CBD Secretariat, UNEP and UNDP.<sup>[15](#ref15)</sup> Monetary contributions are expected from large commercial entities in listed sectors that exceed at least two of three thresholds. **This laboratory has no payment obligation.**<sup>[13](#ref13),[14](#ref14)</sup>
-2. **The absence of a payment obligation does not exempt us from anything else.** All users of DSI, academic included, should share non-monetary benefits fairly and equitably, and the multilateral mechanism operates **without prejudice to national ABS measures**. Kenya's regulations bind us regardless of the Cali Fund exemption. This is the single most important nuance in this policy.<sup>[13](#ref13),[1](#ref1)</sup>
+2. **The absence of a payment obligation does not exempt us from anything else.** All users of DSI, academic included, should share non-monetary benefits fairly and equitably, and the multilateral mechanism operates **without prejudice to national ABS measures**. Kenya's regulations bind us regardless of the Cali Fund exemption.<sup>[13](#ref13),[1](#ref1)</sup>
 
 Accordingly, for every sequence submission derived from non-US material, laboratory members must record **country of origin** in the submission metadata, retain the permit and MTA references in the project record, and disclose any access-derived restriction in the relevant sponsor data management plan. Database governance under Decision 16/2 is expected to be consistent with the FAIR, CARE, and TRUST principles.<sup>[13](#ref13),[20](#ref20),[17](#ref17),[24](#ref24)</sup>
 
@@ -83,7 +83,7 @@ Compliance is the floor. The following are commitments, and they are auditable.
 
 ## Compliance Workflow
 
-The regulatory burden on non-commercial microbial and environmental research under Nagoya-style frameworks is documented as disproportionate, which is precisely why this laboratory maintains a standing workflow rather than chasing permits reactively.<sup>[23](#ref23),[24](#ref24)</sup>
+The regulatory burden on non-commercial microbial and environmental research under Nagoya-style frameworks is documented as disproportionate. This laboratory therefore maintains a standing workflow rather than chasing permits reactively.<sup>[23](#ref23),[24](#ref24)</sup>
 
 Before any international sampling campaign, the Principal Investigator confirms in writing that the following are current and on file: NACOSTI research licence and Kenyan institutional affiliation; NEMA access permit under Legal Notice 68; documented PIC and MAT; WRTI permit and, where applicable, KWS authorisation; executed MTA for any material leaving Kenya; county-level notifications; and the deposition arrangement with the National Museums of Kenya. No sample leaves a field site before this confirmation exists.
 
