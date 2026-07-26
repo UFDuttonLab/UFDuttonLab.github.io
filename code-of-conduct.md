@@ -28,13 +28,15 @@ The Principal Investigator's commitments to every member: regular scheduled meet
 
 Development is structured against the six **National Postdoctoral Association Core Competencies**: discipline-specific conceptual knowledge, research skill development, communication skills, professionalism, leadership and management, and responsible conduct of research. We use those categories rather than inventing our own.<sup>[7](#ref7)</sup>
 
-Postdocs maintain an Individual Development Plan, reviewed annually. They are expected to develop independent research directions, mentor junior members, and lead manuscripts. The laboratory commits to protected time for independent work, support for fellowship and faculty applications, and honest calibration of the job market. UF's Office of Postdoctoral Affairs coordinates appointment, benefits, visa policy, and professional development, and supports the UF Postdoctoral Association.<sup>[7](#ref7),[23](#ref23)</sup>
+Postdocs maintain an Individual Development Plan, reviewed annually. UF's IDP requirement is written for PhD students, so for postdocs this is a lab expectation rather than a university one; the UF Graduate School templates work well enough for the purpose.<sup>[32](#ref32)</sup> They are expected to develop independent research directions, mentor junior members, and lead manuscripts. The laboratory commits to protected time for independent work, support for fellowship and faculty applications, and honest calibration of the job market. UF's Office of Postdoctoral Affairs coordinates appointment, benefits, visa policy, and professional development, and supports the UF Postdoctoral Association.<sup>[7](#ref7),[23](#ref23)</sup>
 
 ### Graduate students
 
-Doctoral and master's students maintain an Individual Development Plan, reviewed annually with the PI, and are expected to know their programme's regulations, which are their responsibility under UF Graduate School rules including supervisory committee requirements and the 3.00 GPA standard.<sup>[22](#ref22)</sup>
+Doctoral and master's students are expected to know their programme's regulations, which are their responsibility under UF Graduate School rules including supervisory committee requirements and the 3.00 GPA standard.<sup>[22](#ref22)</sup>
 
-Regarding IDPs, the requirement should be stated accurately, because it is widely misdescribed: **NIH does not require Individual Development Plans. NIH strongly encourages them.** What NIH requires is that the Research Performance Progress Report describe whether and how IDPs are used for graduate students and postdoctoral researchers, and the IDPs themselves are **not** submitted. We use the free myIDP tool, built on the framework FASEB proposed in 2003.<sup>[2](#ref2),[3](#ref3),[4](#ref4)</sup>
+**UF requires an Individual Development Plan for every PhD student, and has since 2017.** It must be revised every year. Use the UF Graduate School templates: there is a Year 1 template and a separate one for Year 2 onwards. We review yours annually together. Master's students are not covered by the UF requirement but are welcome to use the same templates, and we recommend it.<sup>[32](#ref32)</sup>
+
+UF points STEM students to myIDP as a supplementary tool. Separately, NIH encourages but does not require IDPs; what NIH requires is that the Research Performance Progress Report describe whether and how they are used, and the plans themselves are not submitted.<sup>[2](#ref2),[3](#ref3),[4](#ref4)</sup>
 
 ### Undergraduate researchers
 
@@ -182,6 +184,8 @@ This document is reviewed annually with the whole laboratory, and amended by agr
 <li id="ref27">University of Florida Human Resources. <a href="https://admin.hr.ufl.edu/compliance/employee-relations-and-ethics/union-negotiations/gau-collective-bargaining-agreement/">Agreement Between University of Florida Board of Trustees and Graduate Assistants United / United Faculty of Florida, 2021-2023</a>. See Articles 7.1, 8.2, 8.3 and 22.</li>
 <li id="ref28">University of Florida Graduate School. <a href="https://grad.ufl.edu/work/ga">Graduate Assistants</a>.</li>
 <li id="ref29">University of Florida. <a href="https://policy.ufl.edu/policy/title-ix/">Title IX Policy (Policy 5-003)</a>. See Sections 5.5, 5.8 and 6.1.</li>
+
 <li id="ref30">University of Florida Human Resources. <a href="https://hr.ufl.edu/return-to-workplace/">Return to Workplace</a>. Full in-person work required by 25 August 2025 unless an extension or exception is approved in writing by the Vice President of Human Resources; disability accommodation requests route to the UF ADA office.</li>
 <li id="ref31">University of Florida. <a href="https://statements.ufl.edu/statements/2025/july/full-return-to-workplace.html">Full Return to Workplace</a>. Statement of 24 July 2025 directing a full return to in-person work over the following 30 days.</li>
+<li id="ref32">University of Florida Graduate School. <a href="https://grad.ufl.edu/gss/idp/">Individual Development Plans</a>. Required of all PhD students since 2017 and revised annually; Year 1 and Years 2+ templates provided.</li>
 </ol>

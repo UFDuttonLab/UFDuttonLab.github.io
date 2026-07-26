@@ -5,7 +5,38 @@ title: Graduate Study Opportunities
 
 ## Master's and PhD Students
 
-Thank you for your interest in pursuing graduate research in the Dutton Lab at the University of Florida! I am actively recruiting motivated graduate students interested in ecosystem ecology, microbiomes, conservation biology, and related fields.
+Thank you for your interest in graduate research in the Dutton Lab at the University of Florida. I am actively recruiting motivated graduate students interested in ecosystem ecology, microbiomes, conservation biology, and related fields.
+
+---
+
+## Fellowship deadlines at a glance
+
+Checked July 2026. Deadlines shift every year, so confirm on the linked page before you plan around one.
+
+| Deadline | Fellowship | Amount |
+| --- | --- | --- |
+| 1 Oct | Sigma Xi Grants in Aid of Research | $500 to $5,000 |
+| Late Oct (2026) | Hertz Foundation Fellowship | Up to $250,000 total |
+| 27 Oct 2026 | HHMI Gilliam Fellowship | $65,000/yr, up to 3 years |
+| 29 Oct 2026 | Paul and Daisy Soros Fellowship | Up to $90,000 |
+| 30 Oct 2026 | NDSEG Fellowship | $43,200/yr plus tuition |
+| Early Nov (field-staggered) | NSF GRFP | $37,000/yr plus $16,000 |
+| 16 Nov 2026 | APS Lewis and Clark Field Research | Up to about $5,400 |
+| Nov 2026 (tentative) | DOE SCGSR | Up to $3,600/month |
+| Dec (check page) | Michael May Fellowship, UF Biology | Two awards of $4,000 |
+| 8 Dec | NIH F31 (renewal/resubmission cycle) | $29,364/yr |
+| 31 Dec | GCA Ecological Restoration Fellowship | $8,000/yr |
+| 15 Jan | McKnight Doctoral Fellowship | Stipend, tuition, 5 years |
+| 15 Mar | Sigma Xi Grants in Aid of Research | $500 to $5,000 |
+| 1 Apr | UF Scholarship Universe (graduate) | Varies |
+| 8 Apr | NIH F31 (new applications) | $29,364/yr |
+| Apr (FY26 was 16 Apr) | USDA NIFA AFRI Predoctoral | Up to $180,000 |
+| Sept 2026 (opens) | Switzer Environmental Fellowship | $17,000 |
+| 1 Sep | Welder Wildlife Fellowship | Not published |
+| Admission application | CALS Dean's Award | $31,000 over 4 years |
+| Through your unit | Grinter Fellowship (incoming students) | $2,000 to $4,000 |
+
+---
 
 ### Research Focus Areas
 
@@ -18,260 +49,228 @@ Our lab pursues interdisciplinary research at the intersection of:
 - **Water quality monitoring** and aquatic ecosystems
 - **Conservation genomics** and community ecology
 
-We conduct field work in Africa (Kenya, South Africa), Florida, and other ecosystems, combined with cutting-edge laboratory automation, nanopore sequencing, and bioinformatics approaches.
+We work in Kenya and South Africa, in Florida, and in other systems, combining field ecology with laboratory automation, nanopore sequencing, and bioinformatics.
 
 ---
 
 ### How to Contact Me
 
-If you are interested in pursuing graduate research in the Dutton Lab, please send me an email with the following information:
-
-Send me an email with the following...
-
-**Subject Line:** "Prospective Graduate Student - [Your Name]"
+**Subject line:** "Prospective Graduate Student - [Your Name]"
 
 **Please include:**
-1. A brief cover letter (1 page) describing your research interests, career goals, and why you're interested in our lab
-2. Your CV including publications or research experience
-3. A brief description of a potential research project or area you'd like to pursue (1 paragraph)
 
-I read all emails personally and encourage you to also explore fellowship funding opportunities below to strengthen your application and secure independent support for your graduate work. It is possible to be admitted on a Teaching Assistantship into the Biology Graduate program but can be difficult. Coming in with your own money or on a grant is a bit easier to get admitted into the program.
+1. A one-page cover letter describing your research interests, career goals, and why our lab
+2. Your CV, including publications or research experience
+3. One paragraph on a project or area you would like to pursue
+
+I read all emails personally. Please also look at the fellowships below. Admission on a Teaching Assistantship is possible but competitive; arriving with your own funding makes admission considerably easier.
 
 ---
 
-## Graduate Fellowship Funding Opportunities
+## Graduate Fellowship Funding
 
-Securing external fellowship support strengthens your graduate application, provides financial independence, and gives you greater flexibility to pursue your research interests. The fellowships listed below are well-suited to ecology, conservation, and biology graduate students and are **portable to the University of Florida**.
+External fellowship support strengthens your application, gives you financial independence, and gives you more control over what you work on. Everything below is portable to the University of Florida.
 
 ### U.S. Federal Fellowships
 
 #### NSF Graduate Research Fellowship Program (GRFP)
-**Deadline:** Mid-October (varies by field; typically October-November)  
-**Award:** $37,000/year stipend + $16,000/year tuition/fees coverage for 3 years out of 5-year fellowship period  
-**Eligibility:** US citizens, nationals, or permanent residents; must be early in graduate career (≤1 academic year of full-time graduate study); research-based master's or PhD in STEM fields
 
-The NSF GRFP is one of the most prestigious and competitive graduate fellowships in the United States. It provides three years of support, no service obligation post-completion, and is portable to any accredited US institution. The fellowship emphasizes both **intellectual merit** and **broader impacts** of your research.
+**Award:** $37,000/yr stipend plus $16,000/yr cost-of-education allowance, 3 years of support within a 5-year window.
+**Deadline:** Early November, **staggered by field**. Life Sciences was 10 November in the last cycle, other fields 12 to 14 November.
+**Eligibility:** US citizens, nationals, and permanent residents; first or second year of graduate study, or applying before starting.
 
-**Website:** [https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program](https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program)
+As of July 2026 the FY2027 solicitation has not been posted. Watch the programme page from late summer.
 
-**Tip:** Apply as an undergraduate senior or during your first year of graduate school. Biology and ecology projects can fit within NSF's research scope. UF Graduate School offers application workshops in late summer.
-
----
+- [NSF GRFP](https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program)
 
 #### National Defense Science and Engineering Graduate (NDSEG) Fellowship
-**Deadline:** Mid-November (typically November 15-17)  
-**Award:** Full tuition and fees + $43,200/year stipend ($3,600/month) + up to $1,600 health insurance for 3 years  
-**Eligibility:** US citizens, nationals, or dual citizens; undergraduate seniors or graduate students with <2 years of full-time graduate study; pursuing PhD in designated STEM disciplines
 
-The NDSEG Fellowship is sponsored by the Department of Defense and supports doctoral research in science and engineering disciplines of military importance. Relevant fields include biological sciences, environmental sciences, and related areas. This is a highly competitive, portable fellowship that covers full tuition.
+**Award:** Full tuition and required fees, $43,200/yr stipend, health insurance up to $1,600/yr, and up to $5,000 for professional travel over the fellowship.
+**Deadline:** **30 October 2026, 5 pm ET.** Applications open 3 August 2026.
 
-**Website:** [https://ndseg.sysplus.com](https://ndseg.sysplus.com)
+- [NDSEG](https://ndseg.sysplus.com)
 
----
+#### DOE Office of Science Graduate Student Research (SCGSR)
 
-#### DOE Office of Science Graduate Student Research (SCGSR) Program
-**Deadline:** Biannual (typically May and November)  
-**Award:** Up to $3,600/month stipend while at DOE lab + travel reimbursement (up to $2,000); 3-12 month research visits  
-**Eligibility:** US citizens or permanent residents; PhD candidates; enrolled in qualified graduate program; research aligned with DOE Office of Science priorities
+**Award:** Up to $3,600/month while in residence at a DOE laboratory, plus up to $3,000 total travel.
+**Deadline:** Two cycles a year. The 2026 first cycle closed in May. The second is expected November 2026, and DOE currently marks those dates tentative.
 
-The SCGSR program provides **supplemental** funding to support thesis research conducted in collaboration with scientists at DOE National Laboratories. This is an excellent opportunity to access world-class facilities and instrumentation for part of your PhD research while remaining enrolled at UF.
+- [SCGSR](https://science.osti.gov/wdts/scgsr)
 
-**Website:** [https://science.osti.gov/wdts/scgsr](https://science.osti.gov/wdts/scgsr)
+#### NIH F31 Predoctoral Fellowship
 
----
+**Award:** $29,364/yr predoctoral stipend (FY2026), plus tuition and fees allowance and an institutional allowance. Up to 5 years aggregate.
+**Deadlines:** 8 April, 8 August, 8 December.
 
-#### NIH F31 National Research Service Award (NRSA) Predoctoral Fellowships
-**Deadline:** April, August, December (varies by program)  
-**Award:** $30,500+/year stipend for up to 5 years + tuition/fees allowance + institutional allowance  
-**Eligibility:** US citizens, nationals, or permanent residents; PhD students in biomedical/biobehavioral research at accredited US institutions
+Ecology and conservation projects need a clear health or environmental-health framing to be competitive here.
 
-These NIH fellowships support doctoral dissertation research in biomedical and behavioral sciences. Ecology and conservation biology projects with clear **health or environmental relevance** may qualify, particularly research on microbial ecology, water quality, zoonotic diseases, or ecosystem health.
+- [Parent F31 (PA-25-422)](https://grants.nih.gov/grants/guide/pa-files/PA-25-422.html)
+- [Current NRSA stipend levels](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-044.html)
 
-**Website:** [https://grants.nih.gov/grants/funding/nrsa.htm](https://grants.nih.gov/grants/funding/nrsa.htm)
-
----
-
-### Highly Competitive Merit Fellowships
+### Merit Fellowships
 
 #### Hertz Foundation Graduate Fellowship
-**Deadline:** Fall (typically September/October)  
-**Award:** Up to $250,000 total (up to 5 years of support; approximately $38,000/year stipend plus full tuition)  
-**Eligibility:** College seniors or first-year graduate students; US citizens or permanent residents; pursuing PhD in applied physical/biological sciences, mathematics, or engineering
 
-The Hertz Fellowship is one of the nation's most prestigious PhD awards. Unlike many fellowships, Hertz explicitly expects fellows to direct their studies toward **understanding and solving major, near-term problems facing society**. Conservation and ecosystem applications fit well within this framework. The Fellowship includes mentorship, internship opportunities, and a lifelong professional network.
+**Award:** Up to $250,000 over as much as 5 years. Option 1 is a $38,000 nine-month stipend; Option 2 is $44,000 for nine months for two years followed by a $9,000/yr supplement. Fellows with dependent children receive an extra $5,000/yr.
+**Deadline:** Late October 2026. Hertz has not published an exact date.
 
-**Website:** [https://www.hertzfoundation.org/hertz-fellowship/](https://www.hertzfoundation.org/hertz-fellowship/)
+- [Hertz Fellowship](https://www.hertzfoundation.org/hertz-fellowship/)
 
----
+#### HHMI Gilliam Fellowships
+
+**Award:** $65,000/yr for up to 3 years ($50,000 stipend, $5,000 discretionary, $10,000 institutional).
+**Deadline:** **27 October 2026, 11:59 pm ET.**
+**Eligibility:** Students in year 2 or 3 of a PhD in the biological or biomedical sciences. The student is the lead applicant, with their adviser.
+
+A strong fit for microbiome work.
+
+- [Gilliam Fellows](https://www.hhmi.org/programs/gilliam-fellows)
 
 ### Field-Specific Fellowships
 
 #### Simons Graduate Fellowships in Ecology and Evolution
-**Deadline:** July 31 (annually)  
-**Award:** $265,800 total over 3-5 years (including $50,000/year stipend, $25,000/year cost of education, $3,000/year research funds)  
-**Eligibility:** Students entering US PhD programs in ecology and/or evolution; prior bachelor's degree required; any US institution
 
-The Simons Foundation explicitly seeks graduate students entering PhD programs in ecology and evolution. The Foundation particularly values **interdisciplinary research** that jointly considers ecological and evolutionary timescales or links ecology/evolution to other STEM fields (physics, computer science, mathematics, genetics).
+**Award:** $265,800 total over 3 to 5 years, including a $50,000/yr stipend, up to $25,000/yr education costs, and $3,000/yr research funds.
+**Deadline:** Letter of intent, **30 June**. The 2026 LOI has passed; the next window opens in 2027.
+**Eligibility:** Students **entering** a US PhD programme, not students already enrolled. Plan for this before you start.
 
-**Website:** [https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/](https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/)
+- [Simons Graduate Fellowships](https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/)
 
----
+#### USDA NIFA AFRI Predoctoral Fellowship
+
+**Award:** Up to $180,000 total, $60,000/yr over 36 months.
+**Deadline:** April. The FY2026 deadline was 16 April.
+
+Directly relevant to agricultural, food, and environmental systems work, and often overlooked by ecology students.
+
+- [AFRI Education and Workforce Development](https://www.nifa.usda.gov/grants/funding-opportunities/agriculture-food-research-initiative-education-workforce-development)
+
+#### Switzer Environmental Fellowship
+
+**Award:** $17,000.
+**Deadline:** Applications open September 2026.
+**Eligibility:** From the 2027 cycle the fellowship is **open nationally** for the first time, having previously been limited to New England and California. PhD candidates must have passed qualifying exams.
+
+- [Switzer Fellowship](https://www.switzernetwork.org/fellowship/become-fellow)
+
+#### Garden Club of America Fellowship in Ecological Restoration
+
+**Award:** $8,000/yr.
+**Deadline:** 31 December.
+**Eligibility:** Graduate students who are US citizens or permanent residents.
+
+- [GCA Ecological Restoration Fellowship](https://www.gcamerica.org/scholarships/details/ecological-restoration-fellowship)
 
 ### Diversity-Focused Fellowships
 
-#### Paul & Daisy Soros Fellowships for New Americans
-**Deadline:** November 1 (annually)  
-**Award:** Up to $90,000 total ($25,000/year for up to 2 years of graduate study)  
-**Eligibility:** New Americans (immigrants or children of immigrants); age ≤31 by deadline; any graduate degree field; any US university
+#### Paul and Daisy Soros Fellowships for New Americans
 
-These fellowships support the graduate education of 30 New Americans annually across all fields, including STEM. If you are an immigrant or child of immigrant(s), this is an excellent opportunity with strong community support and networking.
+**Award:** Up to $90,000 over 2 years ($25,000/yr stipend plus up to $20,000/yr tuition, capped at half of tuition and fees).
+**Deadline:** **29 October 2026, 2 pm ET.**
+**Eligibility:** Immigrants and children of immigrants, **age 30 or younger** as of the deadline. Soros makes no exceptions. You also cannot have begun the third year of graduate study.
 
-**Website:** [https://www.pdsoros.org/](https://www.pdsoros.org/)
+- [Soros Fellowships](https://www.pdsoros.org/)
 
----
+#### McKnight Doctoral Fellowship
 
-#### L'Oréal USA For Women in Science Fellowship
-**Deadline:** Mid-February (annually)  
-**Award:** $75,000 for 1 year  
-**Eligibility:** Women PhD students or postdoctoral researchers in STEM fields
+**Award:** Stipend plus tuition, funded by FEF for 3 years with the university adding 2 more, for 5 years total. FEF's own pages give conflicting stipend figures, so confirm with the programme.
+**Deadline:** 15 January. The UF admission deadline is 28 February.
 
-Five exceptional women scientists are selected annually for these prestigious awards that recognize scientific excellence and support advancement in STEM careers.
+- [McKnight Doctoral Fellowship](http://www.fefonline.org/mdf.html)
 
-**Website:** [https://www.aaas.org/programs/loreal-usa-women-science](https://www.aaas.org/programs/loreal-usa-women-science)
+### University of Florida Opportunities
 
----
+#### CALS Dean's Award
 
-#### McKnight Doctoral Fellowship (University of Florida)
-**Deadline:** January 15 (annually)  
-**Award:** Base stipend + tuition waiver + health insurance + fees for maximum 5 years (PhD)  
-**Eligibility:** US citizens from historically underrepresented groups; admitted to UF PhD program; entering first year
+**Award:** $31,000 spread over 4 years, as a supplement rather than full support.
+**Deadline:** None. It is awarded automatically to outstanding incoming students from the graduate application.
 
-The McKnight Doctoral Fellowship provides comprehensive support for underrepresented minority students pursuing doctoral degrees at the University of Florida. Applications are submitted directly to the Florida Education Fund before January 15.
+- [Example funding page](https://soils.ifas.ufl.edu/academics/funding-opportunities/)
 
-**Website:** [http://www.fefonline.org/mdf.html](http://www.fefonline.org/mdf.html)
+#### Grinter Fellowship
 
----
+**Award:** $2,000 to $4,000, up to 3 years for PhD students.
+**Deadline:** No published date. Nominations go through your academic unit.
+**Note:** This is a **recruitment fellowship for incoming students**, not dissertation support for students already here.
 
-### University of Florida-Specific Opportunities
+- [Grinter Fellowship](https://grad.ufl.edu/gss/funding/grinter/)
 
-Graduate students at the University of Florida should also explore these internal funding sources:
+#### UF Biology Department Awards
 
-#### CALS Dean's Award (UF)
-**Deadline:** Varies by program  
-**Award:** Stipend + tuition for 4 years  
-**Eligibility:** Top-qualified applicants to graduate programs in the College of Agricultural and Life Sciences
+The Biology graduate awards page lists more than a dozen internal awards. Several suit ecology and field research:
 
-The CALS Dean's Office provides one graduate assistantship to the most competitive applicant in select programs. Recipients must identify a faculty advisor and lab.
+- **Dr. Michael May Graduate Student Fellowship**: two awards of $4,000 for dissertation research
+- **H. Jane Brockmann Graduate Research Award**: two awards of $2,000 for field research
+- **Carrie Lynn Yoder Memorial Scholarship**: two awards of $1,000 for plant ecology
+- **Frank Maturo Excellence Fund**: four awards of up to $2,500
+- **Mildred Mason Griffith Botany Award**: two awards of up to $1,000
+- **Brian A. Shafer Memorial Scholarship**: six awards of $300 for zoological research
+- **Davis Graduate Fellowship in Botany**: two awards of up to $2,000
 
-**Website:** Contact CALS Graduate Programs Office
+Deadlines are usually in December. The page is often not updated until late in the year.
 
----
+- [UF Biology graduate awards](https://biology.ufl.edu/graduate-programs/awards/)
 
-#### Grinter Fellowships (UF)
-**Deadline:** March 15 (annually)  
-**Award:** $3,000 for dissertation support  
-**Eligibility:** UF graduate students currently holding an assistantship; renewable for up to 3 years with satisfactory progress
+#### UF Scholarship Universe
 
-These fellowships support dissertation research across multiple UF graduate programs.
+**Deadline:** 1 April. The average graduate award was $2,280 in 2024-25.
 
-**Website:** [UF Graduate School](https://gradschool.ufl.edu)
+- [CALS scholarships](https://cals.ufl.edu/scholarships/)
 
----
+### Research and Travel Grants
 
-#### Dr. Michael May Graduate Student Fellowship (UF Biology)
-**Deadline:** Varies (check with Biology Department)  
-**Award:** Two scholarships of $4,000 each for dissertation research  
-**Eligibility:** All graduate students in UF Department of Biology
+#### Sigma Xi Grants in Aid of Research
 
-Funds may be used for equipment, core facility fees, travel to field sites, consumables, and other research expenses. Priority given to students without extensive funding requesting support for their main project.
+**Award:** $500 to $5,000 for graduate members; non-members are capped at $1,000.
+**Deadlines:** 15 March and 1 October.
 
-**Website:** [UF Biology Graduate Awards](https://biology.ufl.edu/graduate-programs/awards/)
+- [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
 
----
+#### APS Lewis and Clark Fund for Exploration and Field Research
 
-#### Additional UF Biology Department Fellowships:
+**Award:** Up to about $5,400 for doctoral fieldwork.
+**Deadline:** 16 November 2026. Letters of support are due 13 November.
 
-- **Brian A. Shafer Memorial Scholarship** - $300 grants (6 awarded) for zoological research
-- **Carrie C. Reinhardt-Adams Memorial Scholarship** - Two $1,000 scholarships for plant ecology research, particularly coastal ecosystems and conservation
-- **Davis Graduate Fellowship in Botany** - Two fellowships up to $2,000 each for field work in botany/plant ecology
+- [Lewis and Clark Fund](https://www.amphilsoc.org/grants/lewis-and-clark-fund-exploration-and-field-research)
 
-**Website:** [UF Biology Graduate Awards](https://biology.ufl.edu/graduate-programs/awards/)
+#### Welder Wildlife Foundation Graduate Fellowship
 
----
+**Award:** Not published. The foundation also provides housing, office space, and laboratory facilities.
+**Deadline:** 1 September.
 
-### Research Support & Travel Grants
-
-#### Eppley Foundation for Research
-**Deadline:** December 1 (annually)  
-**Award:** Grants typically $5,000-$15,000 for research projects  
-**Eligibility:** Researchers in biological and physical sciences; no degree restriction
-
-The Eppley Foundation funds innovative research in biological and physical sciences with particular interest in endangered species, ecosystems, and climate change. Graduate students can apply for research project support.
-
-**Website:** [https://www.eppley.org/](https://www.eppley.org/)
+- [Welder Wildlife fellowships](https://welderwildlife.org/about-fellowships/)
 
 ---
 
-#### Welder Wildlife Foundation Graduate Research Fellowship
-**Deadline:** Varies (check annually)  
-**Award:** Varies ($5,000-$25,000+ depending on project)  
-**Eligibility:** Graduate students conducting wildlife research
+## Two programmes that no longer exist
 
-The Welder Foundation supports graduate research on wildlife ecology and conservation, particularly relevant for those studying mammals, birds, and reptiles in field settings.
+Both still appear on older funding lists.
 
-**Website:** [https://www.welderwildlife.org/](https://www.welderwildlife.org/)
+- **Ford Foundation Fellowships** are being wound down by 2028. 2023 was the last full cohort.
+- **EPA STAR Graduate Fellowships** ended in 2015.
 
----
-
-## Tips for Successful Fellowship Applications
-
-1. **Start early:** Most fellowship applications require 3-6 months of preparation
-2. **Identify your research passion:** Be clear about what ecological or conservation questions excite you
-3. **Contact potential advisors:** Reach out to faculty whose research aligns with your interests, including me, before applying
-4. **Emphasize broader impacts:** Discuss how your research will benefit society and conservation outcomes
-5. **Highlight research experience:** Detail any prior field work, lab experience, or independent research projects
-6. **Get strong letters of recommendation:** Cultivate relationships with mentors who can write compelling letters
-7. **Tailor your proposals:** Customize each application to the specific fellowship's priorities and values
-8. **Apply broadly:** Submit multiple fellowship applications to maximize your chances of success
-9. **Polish your writing:** Spend time crafting clear, compelling research and personal statements
-10. **Seek feedback:** Have multiple people review your application materials before submission
-11. **Attend UF workshops:** The UF Graduate School and other offices offer fellowship application workshops
+There is also no active successor to the NSF Doctoral Dissertation Improvement Grant in the BIO directorate.
 
 ---
 
-## Why Pursue a PhD with the Dutton Lab?
+## Tips
 
-- **Cutting-edge infrastructure:** Opentrons Flex and OT-2 robots, nanopore sequencing (MinION, PromethION), digital PCR (Absolute Q), qPCR (QuantStudio 3), plate readers (Synergy LX), bead ruptor, and extensive sample processing equipment
-- **International field sites:** Ongoing research in Kenya (Mara River region), South Africa (Kruger National Park), and Florida ecosystems
-- **Collaborative network:** Strong partnerships with McCleery Lab, National Museums of Kenya, and conservation organizations worldwide
-- **Interdisciplinary training:** Develop skills spanning molecular ecology, metagenomics, bioinformatics, field ecology, lab automation, and conservation science
-- **Computational resources:** Access to HiPerGator supercomputer for data analysis and bioinformatics pipelines
-- **Mentorship and professional development:** Emphasis on grant writing, manuscript preparation, teaching, and career development
-- **Vibrant research community:** UF's Department of Biology offers strong support, seminar series, and collaborative opportunities
-- **Location:** Gainesville offers excellent field sites, proximity to diverse ecosystems (Everglades, coastal systems, springs), and a supportive college town atmosphere
+1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid-November. Preparing four applications in that window is not realistic unless you begin over the summer.
+2. **Ask me early.** Every one of these needs a letter, and several need a research plan we develop together.
+3. **Check the deadline yourself.** This page is checked once a year; the programme pages are authoritative.
+4. **Apply to the small ones too.** Sigma Xi, Lewis and Clark, and the Biology department awards are far less competitive and fund real fieldwork.
 
 ---
 
 ## Graduate Program Information
 
-**Department:** Biology, College of Agricultural and Life Sciences  
-**University:** University of Florida  
-**Graduate Degrees:** Master's (thesis-based) and PhD in Biology with specializations in Ecology, Evolution, and related areas  
-**Program Website:** [https://biology.ufl.edu](https://biology.ufl.edu)  
-**CALS Graduate Programs:** [https://cals.ufl.edu/graduate/](https://cals.ufl.edu/graduate/)
+- [UF Department of Biology](https://biology.ufl.edu)
+- [UF CALS graduate programs](https://cals.ufl.edu/graduate/)
+- [UF Graduate School](https://grad.ufl.edu)
 
-For information about the graduate application process, admission requirements, and departmental funding, please visit the University of Florida Graduate Admissions website or contact the Department of Biology Graduate Coordinator.
+## Additional Resources
 
----
+- [Society for Conservation Biology](https://conbio.org)
+- [Conservation Careers funding](https://www.conservation-careers.com)
 
-## Additional Fellowship Resources
-
-- **UF Graduate School Fellowship Database** - [https://gradschool.ufl.edu](https://gradschool.ufl.edu)
-- **CALS Graduate Awards and Scholarships** - [https://cals.ufl.edu/graduate/](https://cals.ufl.edu/graduate/)
-- **Ecological Society of America Fellowships** - [https://esa.org/career-development/](https://esa.org/career-development/)
-- **Society for Conservation Biology** - [https://conbio.org](https://conbio.org)
-- **Conservation Careers** - [https://www.conservation-careers.com](https://www.conservation-careers.com)
-
----
-
-*Last updated: January 2026*
+*Last updated: July 2026*

@@ -5,180 +5,200 @@ title: Postdoctoral Opportunities
 
 ## Prospective Postdoctoral Researchers
 
-Thank you for your interest in joining the Dutton Lab at the University of Florida! I welcome inquiries from highly motivated postdoctoral researchers interested in ecosystem ecology, microbiomes, conservation biology, and related fields.
+I welcome enquiries from postdoctoral researchers whose interests overlap with the lab's work in ecosystem ecology, microbial ecology, conservation genomics, and environmental DNA.
+
+---
+
+## Fellowship deadlines at a glance
+
+Checked July 2026. Confirm on the linked page before planning around any of these.
+
+| Deadline | Fellowship | Amount |
+| --- | --- | --- |
+| 9 Sep 2026 | Marie Sklodowska-Curie Postdoctoral Fellowship | Living, mobility, family allowances |
+| 10 Sep 2026 (nomination) | Miller Research Fellowship, UC Berkeley | About $378,000 over 3 years |
+| 15 Sep 2026 | Fulbright US Scholar Awards | Varies by country |
+| 24 Sep 2026 | Human Frontier Science Program | 3 years |
+| 29 Sep 2026 | NSF Postdoctoral Research Fellowships in Biology | $110,000/yr for 2 years |
+| 30 Sep 2026 | David H. Smith Conservation Research Fellowship | About $74,000/yr plus $45,000 research |
+| 1 Oct 2026 | Life Sciences Research Foundation | $255,000 over 3 years |
+| 15 Oct | Smithsonian Environmental Research Center | $57,000 plus benefits |
+| 15 Oct | Smithsonian Biodiversity Genomics | $62,000/yr plus research funds |
+| 1 Nov 2026 | AAAS Science and Technology Policy Fellowship | 12-month term |
+| Feb (2026 was 23 Feb) | L'Oreal USA For Women in Science | $75,000 |
+| Apr (FY26 was 30 Apr) | USDA NIFA AFRI Postdoctoral | Up to $244,000 |
+| Spring 2027 (nomination) | Schmidt Science Fellows | Not published |
+| Confirm with UF | Ewel Postdoctoral Fellowship | $70,000 plus $20,000/yr |
+
+---
 
 ### Research Focus Areas
-
-Our lab pursues interdisciplinary research at the intersection of:
 
 - **Ecosystem ecology** and biogeochemistry
 - **Microbial ecology** and metagenomics
 - **Wildlife conservation** and zoogeochemistry
 - **Environmental DNA** and molecular ecology
-- **Water quality monitoring** and aquatic ecosystems
 - **Conservation genomics** and community ecology
 
-We conduct field work in Africa (Kenya, South Africa), Florida, and other ecosystems, combined with cutting-edge laboratory automation, nanopore sequencing, and bioinformatics approaches.
+We work in Kenya and South Africa, in Florida, and in other systems, combining field ecology with laboratory automation, nanopore sequencing, and bioinformatics.
 
 ---
 
 ### How to Contact Me
 
-If you are interested in pursuing postdoctoral research in the Dutton Lab, please send me an email with the following information:
+Email me with your CV, a short statement of research interests, and an outline of the project you would want to develop here. Most postdoctoral routes below require a named host and a jointly developed proposal, so start the conversation several months before the deadline.
 
-Send me an email with the following information...
-
-**Subject Line:** "Prospective Postdoc - [Your Name]"
-
-**Please include:**
-1. A brief cover letter (1 page) describing your research interests, career goals, and why you're interested in our lab
-2. Your CV including publications
-3. Names and contact information for 2-3 references
-4. A brief description of a potential research project or area you'd like to pursue (1 paragraph)
-
-I read all emails personally and will respond to inquiries that align with our lab's research directions. Due to the volume of emails, I may not be able to respond to all inquiries, but I encourage you to apply for independent postdoctoral fellowships (see below). I'm happy to work with you on any of these opportunities.
+I read all emails personally. Because of volume I may not reply to every enquiry, but I do read them.
 
 ---
 
-## Postdoctoral Fellowship Funding Opportunities
+## Postdoctoral Fellowship Funding
 
-Securing independent funding strengthens your application and provides greater flexibility in pursuing your research interests. Johns Hopkins University frequently curates a list of postdoctoral opportunities that you can [view here](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/). Below are major fellowship programs well-suited to our research areas:
+### NSF Postdoctoral Research Fellowships in Biology (PRFB)
 
-### U.S.-Based Federal Fellowships
+**This programme changed substantially in 2026. Read the current solicitation rather than older summaries.**
 
-#### NSF Postdoctoral Research Fellowships in Biology (PRFB)
-**Deadline:** Early November (annually)  
-**Award:** $90,000/year for 2-3 years ($70,000 stipend + $20,000 research allowance)  
-**Eligibility:** Recent PhD recipients (within eligibility window)
+**Award:** $110,000/yr ($85,000 stipend plus $25,000 research and training allowance) for 24 months, $220,000 total.
+**Deadline:** **29 September 2026**, 5 pm local time. Then the fourth Tuesday in September annually.
+**Scope:** Solicitation NSF 26-504 replaced NSF 24-593 and narrowed the competition to the intersection of AI and the biological sciences, framed around biotechnology innovation. Roughly 75 awards expected.
 
-The NSF PRFB offers three competitive areas:
-- **Broadening Participation** of underrepresented groups in biology
-- **Integrative Research** investigating Rules of Life (genomes, environment, phenotypes)
-- **Plant Genome** postdoctoral fellowships
+The earlier competitive areas, including Broadening Participation and Rules of Life, existed only under the previous solicitation, which is now archived. If your project is ecology-first rather than AI-first, contact the programme at bio-dbi-prfb@nsf.gov before investing time.
 
-**Website:** [https://www.nsf.gov/funding/opportunities/prfb-postdoctoral-research-fellowships-biology](https://www.nsf.gov/funding/opportunities/prfb-postdoctoral-research-fellowships-biology)
+- [NSF PRFB](https://www.nsf.gov/funding/opportunities/prfb-postdoctoral-research-fellowships-biology)
 
----
+### USDA NIFA AFRI Postdoctoral Fellowships
 
-#### USDA NIFA Postdoctoral Fellowships
-**Deadline:** Typically July (annually)  
-**Award:** Up to $225,000 total for 2 years (primarily salary + research expenses)  
-**Eligibility:** U.S. citizens or permanent residents; PhD within 4 years
+**Award:** Up to $244,000 including institutional allowance, up to 24 months.
+**Deadline:** April. The FY2026 deadline was 30 April. The FY2027 notice is not yet posted.
 
-The Agriculture and Food Research Initiative (AFRI) Education and Workforce Development program supports postdoctoral training in AFRI priority areas relevant to agriculture, food systems, and natural resources.
+- [AFRI Education and Workforce Development](https://www.nifa.usda.gov/grants/funding-opportunities/agriculture-food-research-initiative-education-workforce-development)
 
-**Website:** [https://nifa.usda.gov/program/afri-education-workforce-development](https://nifa.usda.gov/program/afri-education-workforce-development)
+### David H. Smith Conservation Research Fellowship
 
----
+**Award:** $74,263/yr for a 2027 start, $76,490 for 2028, for 2 years, plus a $45,000 research and travel budget and benefits.
+**Deadline:** **30 September 2026**, 11 pm ET, for the 2027-2028 cycle. Fellows may start between 1 June and 30 September 2027.
 
-### Prestigious Conservation & Ecology Fellowships
+One of the best fits on this page for applied conservation work.
 
-#### David H. Smith Conservation Research Fellowship
-**Deadline:** September 30 (annually)  
-**Award:** $72,100-$74,263/year salary for 2 years + $40,000 research/travel budget + benefits  
-**Eligibility:** PhD within 3 years; any nationality; U.S.-based research
+- [Smith Fellows](https://www.smithfellows.org)
 
-The Smith Fellowship is one of the most prestigious programs for early-career conservation scientists. Fellows must propose innovative, applied conservation research addressing pressing challenges in the United States and its territories, working with both academic and practitioner mentors.
+### Ewel Postdoctoral Fellowship (University of Florida)
 
-**Website:** [https://www.smithfellows.org](https://www.smithfellows.org)
+**Award:** $70,000 stipend plus a $20,000 annual allowance, 2 years.
+**Deadline:** Not currently posted. An older UF page still advertises a 2024 cycle at $60,000, so confirm the current cycle and deadline with postdoc-affairs@ufl.edu before relying on either.
 
----
+- [Ewel Fellowship](https://postdoc.aa.ufl.edu/current-postdocs/programs/ewel-postdoctoral-fellowship/)
 
-#### John J. and Katherine C. Ewel Postdoctoral Fellowship (University of Florida)
-**Deadline:** Early January (annually)  
-**Award:** $70,000 stipend + $20,000 allowance for 2 years  
-**Eligibility:** PhD within 2 years prior to fellowship start
+### Life Sciences Research Foundation
 
-This UF-based fellowship supports tropical and subtropical ecology and environmental science research. Fellows conduct research with a UF faculty mentor in any subdiscipline of ecology or environmental science. **This is an excellent opportunity for prospective postdocs specifically interested in joining our lab.**
+**Award:** $255,000 total, $85,000/yr for 3 years ($79,000 salary, $6,000 research).
+**Deadline:** **1 October 2026**, 8 pm ET. The portal opens 15 August 2026. Reference letters are due 1 November.
 
-**Website:** [https://postdoc.aa.ufl.edu/current-postdocs/programs/ewel-postdoctoral-fellowship/](https://postdoc.aa.ufl.edu/current-postdocs/programs/ewel-postdoctoral-fellowship/)
+- [LSRF](https://lsrf.org/apply/)
 
----
+### Miller Research Fellowship, UC Berkeley
 
-### Women in Science
+**Award:** About $378,000 over 3 years. Salary starts at $95,000 and rises to about $106,000, plus $10,000/yr research funds.
+**Deadline:** Nominations 10 September 2026, full materials 9 October 2026, for a 2027 to 2030 term.
+**Eligibility:** PhD awarded after 1 January 2025 and no more than 2 years of postdoctoral experience.
 
-#### L'Oréal USA For Women in Science Fellowship
-**Deadline:** Mid-February (annually)  
-**Award:** $75,000 for 1 year  
-**Eligibility:** Women postdoctoral researchers in STEM fields
+- [Miller Institute](https://miller.berkeley.edu/nominate-apply/miller-research-fellowship)
 
-Five exceptional women scientists receive this prestigious fellowship annually. The program recognizes scientific excellence and supports postdoctoral research across life sciences, physical sciences, engineering, technology, computer science, and mathematics.
+### Human Frontier Science Program
 
-**Website:** [https://www.aaas.org/programs/loreal-usa-women-science](https://www.aaas.org/programs/loreal-usa-women-science)
+**Award:** 3 years, non-renewable. Long-Term and Cross-Disciplinary tracks.
+**Deadline:** Letter of intent in May, full proposals 24 September 2026. The next entry point is spring 2027.
+**Important limitation:** HFSP explicitly excludes projects directed at agricultural, forestry, environmental, or conservation problems. Basic ecology and host-microbe biology can fit; applied conservation will not.
 
----
+- [HFSP Postdoctoral Fellowships](https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships)
 
-### International Fellowships
+### Smithsonian Environmental Research Center
 
-#### Marie Skłodowska-Curie Postdoctoral Fellowships (MSCA)
-**Deadline:** Typically September (annually)  
-**Award:** Living allowance + mobility allowance + research costs (varies by country)  
-**Eligibility:** PhD holders; any nationality; max 8 years research experience
+**Award:** $57,000 plus health, relocation, and research support. One year, frequently extended to two.
+**Deadline:** 15 October, annually.
 
-MSCA Postdoctoral Fellowships support researchers wishing to work in EU Member States or Horizon Europe Associated Countries. Two types available:
-- **European Fellowships:** 1-2 years in Europe
-- **Global Fellowships:** 2-3 years (including return phase to Europe)
+- [SERC fellowships](https://serc.si.edu/fellowships)
 
-**Website:** [https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships](https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships)
+### Smithsonian Biodiversity Genomics Fellowship
 
----
+**Award:** $62,000/yr plus up to $5,000 research funds, 12 to 24 months.
+**Deadline:** 15 October. Confirm the current year on the page.
 
-#### Fulbright Postdoctoral Awards
-**Deadline:** Varies by country  
-**Award:** Country-specific stipend + travel + health insurance  
-**Eligibility:** U.S. citizens; PhD within 5 years
+- [Biodiversity Genomics Fellowship](https://fellowships.si.edu/opportunity/smithsonian-biodiversity-genomics-postdoctoral-fellowship-program-biog)
 
-Fulbright Postdoctoral Awards provide opportunities for recently graduated scholars to conduct research and receive professional training abroad (3-10 months).
+### Schmidt Science Fellows
 
-**Website:** [https://fulbrightscholars.org/us-scholar-awards](https://fulbrightscholars.org/us-scholar-awards)
+**Award:** Not published.
+**Deadline:** Nominations in May, applications in July. The next cycle opens around spring 2027.
+**Important:** You must be **nominated by your PhD institution**, so this needs to be raised with your graduate programme many months in advance.
 
----
+- [Schmidt Science Fellows](https://schmidtsciencefellows.org)
 
-### Science Policy Fellowships
+### NIH K99/R00 Pathway to Independence
 
-#### AAAS Science & Technology Policy Fellowship
-**Deadline:** November 1 (annually)  
-**Award:** Competitive salary for 1-2 years  
-**Eligibility:** PhD or Master's + 3 years experience; U.S. citizens
+**Award:** K99 phase varies by institute; R00 phase is capped at $249,000/yr.
+**Deadlines:** Standard NIH dates, including October and February.
 
-For those interested in applying scientific expertise to policy, AAAS fellowships place scientists in executive and legislative branches of the federal government. This is an excellent pathway for scientists interested in conservation policy, environmental regulation, or science diplomacy.
+Relevant if your microbiome work can be framed toward health.
 
-**Website:** [https://www.aaaspolicyfellowships.org](https://www.aaaspolicyfellowships.org)
+- [K99/R00 (PA-24-194)](https://grants.nih.gov/grants/guide/pa-files/PA-24-194.html)
 
----
+### L'Oreal USA For Women in Science
 
-### Additional Resources
+**Award:** $75,000 for one fellowship year.
+**Deadline:** February. The 2026 cycle closed 23 February. AAAS still administers the programme.
+**Eligibility:** PhD conferred and a postdoctoral position started before the stated date.
 
-#### General Fellowship Databases
-- **Society for Conservation Biology** - [Fellowship opportunities](https://conbio.org)
-- **Conservation Careers** - [Conservation scholarships & fellowships](https://www.conservation-careers.com/conservation-scholarships-research-projects/)
-- **EcoLog** - [Ecology job board including postdoc opportunities](https://www.ecolog.org)
+- [L'Oreal USA FWIS](https://www.aaas.org/programs/loreal-usa-women-science)
 
-#### UF-Specific Resources
-- **UF Postdoctoral Affairs** - [Internal funding opportunities](https://postdoc.aa.ufl.edu)
-- **UF Office of Research** - [Limited submission opportunities](https://research.ufl.edu)
+### Marie Sklodowska-Curie Postdoctoral Fellowships
 
----
+**Award:** Living, mobility, and family allowances, at country-specific rates.
+**Deadline:** **9 September 2026** for call HORIZON-MSCA-2026-PF-01-01.
 
-### Tips for Successful Applications
+For moving to a European host institution, or returning to Europe.
 
-1. **Start early:** Most fellowship applications require 3-6 months of preparation
-2. **Develop your research proposal collaboratively:** Contact potential mentors (including me) early in the process
-3. **Highlight broader impacts:** Emphasize conservation applications, broader societal relevance, and training/mentorship goals
-4. **Demonstrate innovation:** Show how your proposed work goes beyond your PhD research
-5. **Get feedback:** Have multiple people review your application materials
-6. **Apply broadly:** Consider applying to multiple fellowships to maximize your chances
+- [MSCA Postdoctoral Fellowships](https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships)
+
+### Fulbright US Scholar Awards
+
+**Award:** Country-specific stipend, travel, and health benefits.
+**Deadline:** **15 September 2026**, 5 pm EDT, for the 2027-2028 competition, which is open now.
+
+- [Fulbright US Scholar Awards](https://fulbrightscholars.org/us-scholar-awards)
+
+### AAAS Science and Technology Policy Fellowship
+
+**Award:** Stipend not published on the public pages. Base term is 12 months, 1 September to 31 August.
+**Deadline:** **1 November**, 11:59 pm ET. Applications open 1 August 2026 for the 2027-2028 class.
+
+Apply through the fellowship application site. The older aaaspolicyfellowships.org domain still serves content from roughly 2014 and should not be used.
+
+- [AAAS STPF application](https://fellowshipapp.aaas.org/)
 
 ---
 
-### Why Join Our Lab?
+## Programmes that have closed
 
-- **Cutting-edge infrastructure:** Opentrons robots, nanopore sequencing (MinION), digital PCR, qPCR, and more
-- **International field sites:** Ongoing research in Kenya (Mara River), South Africa, and Florida ecosystems
-- **Collaborative environment:** Strong partnerships with the Subalusky Lab, the Mulligan Lab, the Moore Lab, the McCleery Lab, National Museums of Kenya, and conservation organizations
-- **Interdisciplinary training:** Opportunities to develop skills in molecular ecology, bioinformatics, field ecology, and lab automation
-- **Location:** University of Florida offers excellent research facilities, tropical/subtropical field sites, and a vibrant ecology community
+- **NatureNet Science Fellows** (The Nature Conservancy) is no longer taking applications.
 
 ---
 
-*Last updated: January 2026*
+## Tips
+
+1. **Start six months out.** Most of these need a host, a jointly written proposal, and letters. Miller and Schmidt need a nomination on top of that.
+2. **Contact me before the deadline month.** A proposal we build together is far stronger than one built around a lab I have not discussed with you.
+3. **Watch the scope changes.** NSF PRFB is the clearest current example: the programme still exists but is no longer the one most ecology postdocs remember.
+
+---
+
+## Additional Resources
+
+- [Johns Hopkins postdoctoral funding database](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/)
+- [Society for Conservation Biology](https://conbio.org)
+- [Conservation Careers](https://www.conservation-careers.com/conservation-scholarships-research-projects/)
+- [ECOLOG-L, now hosted by ESA](https://community.esa.org)
+- [UF Office of Postdoctoral Affairs](https://postdoc.aa.ufl.edu)
+- [UF Research](https://research.ufl.edu)
+
+*Last updated: July 2026*
