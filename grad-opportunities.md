@@ -1,46 +1,62 @@
 ---
 layout: page
 title: Graduate Study Opportunities
+permalink: /grad-opportunities/
 ---
 
 ## Master's and PhD Students
 
-Thank you for your interest in graduate research in the Dutton Lab at the University of Florida. I am actively recruiting motivated graduate students interested in ecosystem ecology, microbiomes, conservation biology, and related fields.
+I am recruiting graduate students interested in ecosystem ecology, microbiomes, conservation biology, and related fields. Most of the funding below is doctoral; where a source is open to master's students it says so.
+
+**Before anything else:** apply to a graduate programme, not to me. I take students through the **UF Department of Biology** and, for some projects, through **CALS**. They are different colleges with different applications and different deadlines. Email me first and I will tell you which one fits your project, then apply there. Contacting me does not substitute for the application, and the application deadline is the one date on this page you cannot miss.
 
 ---
 
 ## Fellowship deadlines at a glance
 
-Checked July 2026. Deadlines shift every year, so confirm on the linked page before you plan around one.
+These are the windows fellowships usually fall in, checked July 2026. **Use them to plan when to start, not to plan a submission.** Get the actual date from the linked page.
 
-| Deadline | Fellowship | Amount |
-| --- | --- | --- |
-| 1 Oct | Sigma Xi Grants in Aid of Research | $500 to $5,000 |
-| Late Oct (2026) | Hertz Foundation Fellowship | Up to $250,000 total |
-| 27 Oct 2026 | HHMI Gilliam Fellowship | $65,000/yr, up to 3 years |
-| 29 Oct 2026 | Paul and Daisy Soros Fellowship | Up to $90,000 |
-| 30 Oct 2026 | NDSEG Fellowship | $43,200/yr plus tuition |
-| Early Nov (field-staggered) | NSF GRFP | $37,000/yr plus $16,000 |
-| 16 Nov 2026 | APS Lewis and Clark Field Research | Up to about $5,400 |
-| Nov 2026 (tentative) | DOE SCGSR | Up to $3,600/month |
-| Dec (check page) | Michael May Fellowship, UF Biology | Two awards of $4,000 |
-| 8 Dec | NIH F31 (renewal/resubmission cycle) | $29,364/yr |
-| 31 Dec | GCA Ecological Restoration Fellowship | $8,000/yr |
-| 15 Jan | McKnight Doctoral Fellowship | Stipend, tuition, 5 years |
-| 15 Mar | Sigma Xi Grants in Aid of Research | $500 to $5,000 |
-| 1 Apr | UF Scholarship Universe (graduate) | Varies |
-| 8 Apr | NIH F31 (new applications) | $29,364/yr |
-| Apr (FY26 was 16 Apr) | USDA NIFA AFRI Predoctoral | Up to $180,000 |
-| Sept 2026 (opens) | Switzer Environmental Fellowship | $17,000 |
-| 1 Sep | Welder Wildlife Fellowship | Not published |
-| Admission application | CALS Dean's Award | $31,000 over 4 years |
-| Through your unit | Grinter Fellowship (incoming students) | $2,000 to $4,000 |
+| When | Fellowship | Who | Rough amount |
+| --- | --- | --- | --- |
+| Rolling | Rufford Small Grants | MSc/PhD, project in Kenya or South Africa | Up to about £7,000 |
+| Late Aug | Explorers Club Pathfinder | Grad students doing fieldwork | $2,500 to $5,000 |
+| Early Sep | Welder Wildlife Fellowship | Grad students, residency in Texas | About $24,000 to $26,400/yr |
+| Mid Sep | AAUW International Fellowship | Women who are **not** US citizens or PRs | $20,000 to $25,000 |
+| Mid Sep | Fogarty Global Health Fellowship | US or Kenyan citizens and PRs | $7,500 research funding |
+| Early Oct | Fulbright US Student Program | US citizens, no PhD yet | Stipend, travel, health |
+| Early Oct, and early Mar | Sigma Xi Grants in Aid | Any grad researcher | $500 to $5,000 |
+| Late Oct | Hertz Fellowship | US citizens and PRs | Up to $250,000 total |
+| Late Oct | HHMI Gilliam | PhD years 2 to 3, with adviser, HHMI-eligible institution | $65,000/yr |
+| Late Oct | Soros Fellowship | US immigration status required; age 30 or under | Up to $90,000 |
+| Late Oct | NDSEG | US citizens and PRs | $43,200/yr plus tuition |
+| Early Nov | NSF GRFP | US citizens and PRs; entering, or years 1 to 2 | $37,000 plus $16,000/yr |
+| Mid Nov | APS Lewis and Clark | Doctoral fieldwork | About $5,400 |
+| Nov | DOE SCGSR | US citizens and PRs | Up to $3,600/month |
+| Dec | UF Biology department awards (7) | UF Biology grad students | $300 to $4,000 |
+| Late Dec | GCA Ecological Restoration | US citizens and PRs | $8,000/yr |
+| Mid Jan | McKnight Doctoral Fellowship | African American or Hispanic US citizens; **entering** | Stipend plus tuition |
+| Apr, Aug, Dec | NIH F31 | US citizens, nationals, PRs | $29,364/yr |
+| Apr | USDA NIFA AFRI Predoctoral | US citizens and PRs | Up to $180,000 |
+| Apr | UF Scholarship Universe | Admitted UF students | Varies |
+| Jun (LOI) | Simons Ecology and Evolution | Students **entering** a US PhD | $265,800 total |
+| Opens Sep, close TBA | Switzer Fellowship | Post-quals PhD candidates | $17,000 |
+| Varies | UF Research Abroad for Doctoral Students | Post-candidacy, research abroad | Up to $5,000 |
+| With admission | CALS Dean's Award | Incoming CALS students | $31,000 over 4 years |
+| Through your unit | Grinter Fellowship | **Incoming** PhD students | $2,000 to $4,000 |
+
+---
+
+### If you are not a US citizen or permanent resident
+
+Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA AFRI, McKnight, GCA, Hertz, and Fulbright US Student all require citizenship or permanent residency. That is not a reason to stop, but it changes where to look.
+
+Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **UF Research Abroad**, the **UF Biology department awards** once you are enrolled, and, if you are a Kenyan citizen or permanent resident, **Fogarty**.
+
+The most common route is still a departmental assistantship. Terms for those, including the hours a given FTE actually means, are in the [Laboratory Code of Conduct](/code-of-conduct/).
 
 ---
 
 ### Research Focus Areas
-
-Our lab pursues interdisciplinary research at the intersection of:
 
 - **Ecosystem ecology** and biogeochemistry
 - **Microbial ecology** and metagenomics
@@ -51,6 +67,8 @@ Our lab pursues interdisciplinary research at the intersection of:
 
 We work in Kenya and South Africa, in Florida, and in other systems, combining field ecology with laboratory automation, nanopore sequencing, and bioinformatics.
 
+If your project involves fieldwork in Kenya, read the [International Research Partnership Policy](/international-partnership/) before you build a timeline. Research licensing, access permits, and export agreements run on annual cycles and are not transferable between people, so a funded season can still be blocked on paperwork you do not control.
+
 ---
 
 ### How to Contact Me
@@ -59,218 +77,260 @@ We work in Kenya and South Africa, in Florida, and in other systems, combining f
 
 **Please include:**
 
-1. A one-page cover letter describing your research interests, career goals, and why our lab
+1. A one-page cover letter on your research interests, career goals, and why this lab
 2. Your CV, including publications or research experience
 3. One paragraph on a project or area you would like to pursue
 
-I read all emails personally. Please also look at the fellowships below. Admission on a Teaching Assistantship is possible but competitive; arriving with your own funding makes admission considerably easier.
+I read enquiries personally, though I may not manage to reply to all of them. Admission on a Teaching Assistantship is possible but competitive; arriving with your own funding makes admission considerably easier.
+
+**Letters:** ask me at least three weeks before the deadline, and send your draft and the prompt with the request.
 
 ---
 
-## Graduate Fellowship Funding
+## Fellowships
 
-External fellowship support strengthens your application, gives you financial independence, and gives you more control over what you work on. Everything below is portable to the University of Florida.
+### Before you enroll
 
-### U.S. Federal Fellowships
+#### NSF Graduate Research Fellowship Program
 
-#### NSF Graduate Research Fellowship Program (GRFP)
+**Award:** $37,000/yr stipend plus $16,000/yr cost-of-education, 3 years within a 5-year window.
+**Deadline:** Early November, **staggered by field**. Life Sciences falls a few days before the others.
+**Eligibility:** US citizens, nationals, and permanent residents; entering, or in year 1 or 2.
 
-**Award:** $37,000/yr stipend plus $16,000/yr cost-of-education allowance, 3 years of support within a 5-year window.
-**Deadline:** Early November, **staggered by field**. Life Sciences was 10 November in the last cycle, other fields 12 to 14 November.
-**Eligibility:** US citizens, nationals, and permanent residents; first or second year of graduate study, or applying before starting.
-
-As of July 2026 the FY2027 solicitation has not been posted. Watch the programme page from late summer.
+As of July 2026 the FY2027 solicitation had not been posted. Check the programme page from late summer.
 
 - [NSF GRFP](https://www.nsf.gov/funding/opportunities/grfp-nsf-graduate-research-fellowship-program)
 
-#### National Defense Science and Engineering Graduate (NDSEG) Fellowship
+#### Simons Graduate Fellowships in Ecology and Evolution
 
-**Award:** Full tuition and required fees, $43,200/yr stipend, health insurance up to $1,600/yr, and up to $5,000 for professional travel over the fellowship.
-**Deadline:** **30 October 2026, 5 pm ET.** Applications open 3 August 2026.
+**Award:** $265,800 total over 3 to 5 years, including a $50,000/yr stipend.
+**Deadline:** Letter of intent, late June, with a full proposal the following spring.
+**Eligibility:** Students **entering** a US PhD programme, not students already enrolled. Plan for this before you start.
+
+- [Simons Fellowships](https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/)
+
+#### McKnight Doctoral Fellowship
+
+**Award:** Stipend plus tuition. FEF's pages give conflicting figures, so confirm with the programme.
+**Deadline:** Mid January. FEF separately requires that you hold an admission offer from a participating PhD programme by late February.
+**Eligibility:** African American or Hispanic US citizens holding a bachelor's degree. **Students already enrolled in a doctoral programme are not eligible.**
+
+- [McKnight Doctoral Fellowship](https://www.fefonline.org/mdf.html)
+
+#### Grinter Fellowship and CALS Dean's Award (UF)
+
+Both are recruitment awards for **incoming** students, not dissertation support. Grinter is $2,000 to $4,000, nominated through your academic unit. The CALS Dean's Award is $31,000 spread over four years and is made automatically from the graduate application.
+
+- [Grinter Fellowship](https://grad.ufl.edu/gss/funding/grinter/)
+
+### Years 1 to 2
+
+#### NDSEG Fellowship
+
+**Award:** Full tuition and required fees, $43,200/yr, health insurance up to $1,600/yr, and up to $5,000 professional travel.
+**Deadline:** Late October.
+**Eligibility:** US citizens and permanent residents.
 
 - [NDSEG](https://ndseg.sysplus.com)
 
-#### DOE Office of Science Graduate Student Research (SCGSR)
+#### Hertz Foundation Fellowship
 
-**Award:** Up to $3,600/month while in residence at a DOE laboratory, plus up to $3,000 total travel.
-**Deadline:** Two cycles a year. The 2026 first cycle closed in May. The second is expected November 2026, and DOE currently marks those dates tentative.
-
-- [SCGSR](https://science.osti.gov/wdts/scgsr)
-
-#### NIH F31 Predoctoral Fellowship
-
-**Award:** $29,364/yr predoctoral stipend (FY2026), plus tuition and fees allowance and an institutional allowance. Up to 5 years aggregate.
-**Deadlines:** 8 April, 8 August, 8 December.
-
-Ecology and conservation projects need a clear health or environmental-health framing to be competitive here.
-
-- [Parent F31 (PA-25-422)](https://grants.nih.gov/grants/guide/pa-files/PA-25-422.html)
-- [Current NRSA stipend levels](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-044.html)
-
-### Merit Fellowships
-
-#### Hertz Foundation Graduate Fellowship
-
-**Award:** Up to $250,000 over as much as 5 years. Option 1 is a $38,000 nine-month stipend; Option 2 is $44,000 for nine months for two years followed by a $9,000/yr supplement. Fellows with dependent children receive an extra $5,000/yr.
-**Deadline:** Late October 2026. Hertz has not published an exact date.
+**Award:** Up to $250,000 over as much as 5 years. One option is a $38,000 nine-month stipend; another pairs a higher stipend during the Hertz-funded period with a supplement while another major fellowship pays. The split depends on the other award.
+**Deadline:** Late October.
+**Eligibility:** US citizens and permanent residents.
 
 - [Hertz Fellowship](https://www.hertzfoundation.org/hertz-fellowship/)
 
+#### Paul and Daisy Soros Fellowships for New Americans
+
+**Award:** Up to $90,000 over 2 years.
+**Deadline:** Late October.
+**Eligibility:** You must already hold US citizenship, permanent residency, or DACA status, or be the US-born child of immigrants. Applying from outside the US does not qualify. Age 30 or under at the deadline, which the programme publishes as a hard cut-off. You cannot have begun your third year of graduate study.
+
+- [Soros Fellowships](https://www.pdsoros.org/)
+
+### Years 2 and beyond
+
 #### HHMI Gilliam Fellowships
 
-**Award:** $65,000/yr for up to 3 years ($50,000 stipend, $5,000 discretionary, $10,000 institutional).
-**Deadline:** **27 October 2026, 11:59 pm ET.**
-**Eligibility:** Students in year 2 or 3 of a PhD in the biological or biomedical sciences. The student is the lead applicant, with their adviser.
-
-A strong fit for microbiome work.
+**Award:** $65,000/yr for up to 3 years.
+**Deadline:** Late October.
+**Eligibility:** Applications come from a **pair**, a PhD student in year 2 or 3 and their faculty adviser, each contributing materials. Your institution must be on HHMI's eligible list; confirm UF's status with the programme before starting.
 
 - [Gilliam Fellows](https://www.hhmi.org/programs/gilliam-fellows)
 
-### Field-Specific Fellowships
+#### NIH F31 Predoctoral Fellowship
 
-#### Simons Graduate Fellowships in Ecology and Evolution
+**Award:** $29,364/yr predoctoral stipend, plus tuition and institutional allowances. Up to 5 years aggregate.
+**Deadlines:** 8 April, 8 August, 8 December for new applications. Resubmission dates differ; check the announcement.
+**Eligibility:** US citizens, nationals, or permanent residents.
 
-**Award:** $265,800 total over 3 to 5 years, including a $50,000/yr stipend, up to $25,000/yr education costs, and $3,000/yr research funds.
-**Deadline:** Letter of intent, **30 June**. The 2026 LOI has passed; the next window opens in 2027.
-**Eligibility:** Students **entering** a US PhD programme, not students already enrolled. Plan for this before you start.
+Ecology and conservation projects need a clear health or environmental-health framing here.
 
-- [Simons Graduate Fellowships](https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/)
-
-#### USDA NIFA AFRI Predoctoral Fellowship
-
-**Award:** Up to $180,000 total, $60,000/yr over 36 months.
-**Deadline:** April. The FY2026 deadline was 16 April.
-
-Directly relevant to agricultural, food, and environmental systems work, and often overlooked by ecology students.
-
-- [AFRI Education and Workforce Development](https://www.nifa.usda.gov/grants/funding-opportunities/agriculture-food-research-initiative-education-workforce-development)
+- [NIH F31 programme](https://www.nigms.nih.gov/training/individual-fellowships)
+- [Current NRSA stipend levels](https://grants.nih.gov/policy-and-compliance/policy-topics/nrsa)
 
 #### Switzer Environmental Fellowship
 
 **Award:** $17,000.
-**Deadline:** Applications open September 2026.
-**Eligibility:** From the 2027 cycle the fellowship is **open nationally** for the first time, having previously been limited to New England and California. PhD candidates must have passed qualifying exams.
+**Deadline:** Applications open in September; the close date is not yet published.
+**Eligibility:** From the 2027 cycle the fellowship is open nationally, having previously been limited to New England and California. PhD candidates must have passed qualifying exams.
 
 - [Switzer Fellowship](https://www.switzernetwork.org/fellowship/become-fellow)
 
-#### Garden Club of America Fellowship in Ecological Restoration
+#### USDA NIFA AFRI Predoctoral Fellowship
 
-**Award:** $8,000/yr.
-**Deadline:** 31 December.
-**Eligibility:** Graduate students who are US citizens or permanent residents.
+**Award:** Up to $180,000 total over 36 months.
+**Deadline:** April.
+**Eligibility:** US citizens and permanent residents.
 
-- [GCA Ecological Restoration Fellowship](https://www.gcamerica.org/scholarships/details/ecological-restoration-fellowship)
+- [AFRI Education and Workforce Development](https://www.nifa.usda.gov/grants/funding-opportunities/agriculture-food-research-initiative-education-workforce-development)
 
-### Diversity-Focused Fellowships
+#### DOE SCGSR
 
-#### Paul and Daisy Soros Fellowships for New Americans
+**Award:** Up to $3,600/month in residence at a DOE laboratory, plus up to $3,000 travel. This is a residency rather than portable support.
+**Deadline:** Two cycles a year, roughly May and November.
+**Eligibility:** US citizens and permanent residents.
 
-**Award:** Up to $90,000 over 2 years ($25,000/yr stipend plus up to $20,000/yr tuition, capped at half of tuition and fees).
-**Deadline:** **29 October 2026, 2 pm ET.**
-**Eligibility:** Immigrants and children of immigrants, **age 30 or younger** as of the deadline. Soros makes no exceptions. You also cannot have begun the third year of graduate study.
+- [SCGSR](https://science.osti.gov/wdts/scgsr)
 
-- [Soros Fellowships](https://www.pdsoros.org/)
+### Fieldwork and travel, any year
 
-#### McKnight Doctoral Fellowship
+#### Rufford Small Grants
 
-**Award:** Stipend plus tuition, funded by FEF for 3 years with the university adding 2 more, for 5 years total. FEF's own pages give conflicting stipend figures, so confirm with the programme.
-**Deadline:** 15 January. The UF admission deadline is 28 February.
+**Award:** First grant up to £7,000, rising across later grants.
+**Deadline:** Rolling, one application per twelve months.
+**Eligibility:** MSc and PhD students, or within 3 years of graduating. Kenya and South Africa are both eligible countries. Applicants based in advanced economies are considered only where the work is high conservation priority and builds local capacity.
 
-- [McKnight Doctoral Fellowship](http://www.fefonline.org/mdf.html)
+The only rolling deadline here, so the one that can rescue a field season mid-year.
 
-### University of Florida Opportunities
+- [Rufford Small Grants](https://apply.ruffordsmallgrants.org/help/criteria)
 
-#### CALS Dean's Award
+#### Explorers Club Pathfinder Grant
 
-**Award:** $31,000 spread over 4 years, as a supplement rather than full support.
-**Deadline:** None. It is awarded automatically to outstanding incoming students from the graduate application.
+**Award:** $2,500 to $5,000 typical.
+**Deadline:** Late August.
+**Eligibility:** Graduate and post-graduate students doing fieldwork. No citizenship restriction stated.
 
-- [Example funding page](https://soils.ifas.ufl.edu/academics/funding-opportunities/)
-
-#### Grinter Fellowship
-
-**Award:** $2,000 to $4,000, up to 3 years for PhD students.
-**Deadline:** No published date. Nominations go through your academic unit.
-**Note:** This is a **recruitment fellowship for incoming students**, not dissertation support for students already here.
-
-- [Grinter Fellowship](https://grad.ufl.edu/gss/funding/grinter/)
-
-#### UF Biology Department Awards
-
-The Biology graduate awards page lists more than a dozen internal awards. Several suit ecology and field research:
-
-- **Dr. Michael May Graduate Student Fellowship**: two awards of $4,000 for dissertation research
-- **H. Jane Brockmann Graduate Research Award**: two awards of $2,000 for field research
-- **Carrie Lynn Yoder Memorial Scholarship**: two awards of $1,000 for plant ecology
-- **Frank Maturo Excellence Fund**: four awards of up to $2,500
-- **Mildred Mason Griffith Botany Award**: two awards of up to $1,000
-- **Brian A. Shafer Memorial Scholarship**: six awards of $300 for zoological research
-- **Davis Graduate Fellowship in Botany**: two awards of up to $2,000
-
-Deadlines are usually in December. The page is often not updated until late in the year.
-
-- [UF Biology graduate awards](https://biology.ufl.edu/graduate-programs/awards/)
-
-#### UF Scholarship Universe
-
-**Deadline:** 1 April. The average graduate award was $2,280 in 2024-25.
-
-- [CALS scholarships](https://cals.ufl.edu/scholarships/)
-
-### Research and Travel Grants
+- [Explorers Club grants](https://www.explorers.org/grants/)
 
 #### Sigma Xi Grants in Aid of Research
 
-**Award:** $500 to $5,000 for graduate members; non-members are capped at $1,000.
-**Deadlines:** 15 March and 1 October.
+**Award:** $500 to $5,000 for graduate members; non-members capped at $1,000.
+**Deadlines:** Early March and early October.
 
 - [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
 
 #### APS Lewis and Clark Fund for Exploration and Field Research
 
 **Award:** Up to about $5,400 for doctoral fieldwork.
-**Deadline:** 16 November 2026. Letters of support are due 13 November.
+**Deadline:** Mid November, with letters of support a few days earlier.
 
 - [Lewis and Clark Fund](https://www.amphilsoc.org/grants/lewis-and-clark-fund-exploration-and-field-research)
 
+#### UF Research Abroad for Doctoral Students
+
+**Award:** Up to $5,000 for travel and travel-related costs.
+**Deadline:** The posted date is often behind; email UFIC to confirm the current cycle.
+**Eligibility:** PhD students who have advanced to candidacy, research abroad. No citizenship restriction stated.
+
+- [Research Abroad for Doctoral Students](https://internationalcenter.ufl.edu/research/funding-opportunities/research-abroad-doctoral-students)
+
+#### Fulbright US Student Program
+
+**Award:** Living stipend, health benefits, round-trip airfare, roughly 140 countries.
+**Deadline:** Early October nationally. UF runs a campus committee process that adds weeks, so start in the summer.
+**Eligibility:** US citizens holding a bachelor's, no PhD yet.
+
+- [Fulbright Study/Research Award](https://us.fulbrightonline.org/applicants/types-of-awards/study-research)
+
+#### Fogarty Global Health Fellowship
+
+**Award:** $7,500 research funding for US pre-doctoral fellows, over a 12-month placement.
+**Deadline:** Mid September.
+**Eligibility:** Citizens or permanent residents of the US, **Kenya**, and several other countries. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
+
+The clearest One Health route here, and it funds Kenyan nationals directly.
+
+- [Fogarty Global Health Fellows](https://fogartyfellows.org/apply/)
+
+#### Garden Club of America Fellowship in Ecological Restoration
+
+**Award:** $8,000/yr.
+**Deadline:** Late December.
+**Eligibility:** Graduate students who are US citizens or permanent residents.
+
+- [GCA Ecological Restoration](https://www.gcamerica.org/scholarships/details/ecological-restoration-fellowship)
+
 #### Welder Wildlife Foundation Graduate Fellowship
 
-**Award:** Not published. The foundation also provides housing, office space, and laboratory facilities.
-**Deadline:** 1 September.
+**Award:** About $24,000/yr for MSc and $26,400/yr for PhD, plus on-site housing, office space, and laboratory facilities.
+**Deadline:** Early September.
 
 - [Welder Wildlife fellowships](https://welderwildlife.org/about-fellowships/)
 
+### Open to non-US citizens
+
+#### AAUW International Fellowships
+
+**Award:** $20,000 for master's, $25,000 for doctoral study.
+**Deadline:** Mid September.
+**Eligibility:** Women who are **not** US citizens, permanent residents, or green-card applicants. STEM fields, 3.5 GPA.
+
+- [AAUW International Fellowships](https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/)
+
+#### UF FLAS Fellowships, African languages
+
+**Award:** Academic year $20,000 plus tuition and fees. Summer $2,500 plus up to $5,000 tuition.
+**Deadline:** February.
+**Eligibility:** US citizen or permanent resident, enrolled or admitted at UF. Languages include Swahili and Zulu.
+
+A full year of funding to learn Swahili, which maps directly onto Mara fieldwork.
+
+- [FLAS, graduate](https://africa.ufl.edu/academics-programs/graduate-studies/flas-fellowships/)
+
+### UF department awards
+
+The Biology graduate awards page lists more than a dozen internal awards, usually with December deadlines. Several suit ecology and field research:
+
+- Dr. Michael May Graduate Student Fellowship, dissertation research
+- H. Jane Brockmann Graduate Research Award, field research
+- Carrie Lynn Yoder Memorial Scholarship, plant ecology
+- Frank Maturo Excellence Fund
+- Mildred Mason Griffith Botany Award
+- Brian Riewald Memorial Fund Research Grant
+- Davis Graduate Fellowship in Botany
+
+Amounts range from a few hundred dollars to $4,000 and change year to year.
+
+- [UF Biology graduate awards](https://biology.ufl.edu/graduate-programs/awards/)
+- [UF Scholarship Universe, via CALS](https://cals.ufl.edu/scholarships/) (requires a UF login, so not usable before admission)
+
 ---
 
-## Two programmes that no longer exist
+## No longer accepting applications
 
-Both still appear on older funding lists.
+Both still circulate on funding lists.
 
-- **Ford Foundation Fellowships** are being wound down by 2028. 2023 was the last full cohort.
-- **EPA STAR Graduate Fellowships** ended in 2015.
-
-There is also no active successor to the NSF Doctoral Dissertation Improvement Grant in the BIO directorate.
+- **Ford Foundation Fellowships.** The programme is winding down; 2023 was the last full cohort.
+- **EPA STAR Graduate Fellowships.** Ended in 2015.
 
 ---
 
 ## Tips
 
-1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid-November. Preparing four applications in that window is not realistic unless you begin over the summer.
-2. **Ask me early.** Every one of these needs a letter, and several need a research plan we develop together.
-3. **Check the deadline yourself.** This page is checked once a year; the programme pages are authoritative.
-4. **Apply to the small ones too.** Sigma Xi, Lewis and Clark, and the Biology department awards are far less competitive and fund real fieldwork.
+1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid November. Four applications in that window is not realistic unless you begin over the summer.
+2. **Ask me for letters three weeks out**, with your draft and the prompt.
+3. **Check the deadline yourself.** This page is verified once a year; the programme pages are authoritative.
+4. **Apply to the small ones too.** Sigma Xi, Lewis and Clark, Explorers Club, and the Biology department awards are much less work per application and fund real fieldwork.
 
 ---
 
-## Graduate Program Information
+## Programme information
 
 - [UF Department of Biology](https://biology.ufl.edu)
 - [UF CALS graduate programs](https://cals.ufl.edu/graduate/)
 - [UF Graduate School](https://grad.ufl.edu)
-
-## Additional Resources
-
 - [Society for Conservation Biology](https://conbio.org)
-- [Conservation Careers funding](https://www.conservation-careers.com)
 
-*Last updated: July 2026*
+*Sources last verified: July 2026. Nothing here should be trusted for a deadline after June 2027 without checking the link.*

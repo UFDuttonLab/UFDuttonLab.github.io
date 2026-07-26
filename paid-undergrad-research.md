@@ -1,220 +1,212 @@
 ---
 layout: page
 title: Paid Research Opportunities for Undergraduates
+permalink: /paid-undergrad-research/
 description: Programs to fund your work in the Dutton Lab
 ---
 
 # Getting Paid to Work in the Lab
 
-There are several ways undergraduates can get paid to do research in our lab. This page lists programs that are officially documented and available at UF.
+Several routes let undergraduates get paid to do research here. Two of them you can start this week; the rest are competitive awards with a mentor and a project attached.
 
-Deadlines and amounts move every year. Everything below was checked in July 2026, but confirm against the linked page before you rely on it.
+Some jargon first, because these pages are full of it. **PI** is the principal investigator, in this case me. **OPS** is "Other Personnel Services," UF's term for an hourly job with no benefits. **CLAS** is the College of Liberal Arts and Sciences and **CALS** is the College of Agricultural and Life Sciences; if you are not sure which one you are in, it is on your degree audit.
+
+---
+
+## Start here
+
+1. **Email me.** Subject line "Undergraduate research: [your name]." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph is fine. Attach a transcript if you have one handy. Yes, emailing a professor you have not met is the correct thing to do, and I will reply within about a week.
+2. **Agree on a project.** Every competitive award below needs a named mentor and a specific project. None of them can be applied for cold.
+3. **Work backwards from the deadline.** Most UF programmes need a departmental nomination, and departments set internal deadlines weeks before the college one. Ask in the fall about a February deadline.
+4. **Ask me for a letter at least three weeks out**, and send me your draft and the prompt when you ask.
+
+**Order matters.** Emerging Scholars is the one award written for a sophomore with no experience, and it requires that you have no prior university research experience. If you are eligible, apply for it **before** you start a paid or for-credit position.
+
+**If you have Federal Work-Study, tell me.** It makes hiring you considerably easier.
 
 ---
 
 ## Deadlines at a glance
 
-| Deadline | Program | Amount |
-| --- | --- | --- |
-| Rolling | OPS hourly position | $12 to $16 per hour |
-| Rolling | Federal Work-Study | $15 to $20 per hour |
-| Before drop/add each term | Research credit (BSC 4910 and related) | Course credit, no stipend |
-| Fall and spring cycles | Beyond120 Experiential Scholarship | Up to $1,000 |
-| 1 Oct | Sigma Xi Grants in Aid of Research | $500 to $2,000 (members) |
-| 1 Oct | UF Honors Wentworth Fund | Varies |
-| 1 Nov | CLAS Sustainability Student Research Award | $750 |
-| Late Nov | Emerging Scholars Program | $1,000 |
-| Feb (CLAS: 9 Feb 2027) | University Scholars Program | $1,750 |
-| Feb | McNair Scholars Program | Summer stipend |
-| Mid-Feb | Summer Undergraduate International Research | Up to $5,000 |
-| 15 Mar | Sigma Xi Grants in Aid of Research | $500 to $2,000 (members) |
-| Spring (check page) | URAP Undergraduate Research Grant | $250 |
+These are the windows programmes usually fall in, checked July 2026. **Use them to plan when to start, not to plan a submission.** Get the actual date from the linked page.
+
+| When | Programme | Who | Rough amount |
+| --- | --- | --- | --- |
+| Rolling | OPS hourly position | Anyone I have funds for | Hourly |
+| Rolling | Federal Work-Study | Aid package includes FWS; US citizen or PR | Hourly |
+| Before drop/add | Research credit | Any undergrad | Credit, no stipend |
+| Late Aug | Explorers Club Rising Explorer | Undergrads doing fieldwork | About $1,500 |
+| Early Oct, and early Mar | Sigma Xi Grants in Aid | Any undergrad researcher | $500 to $2,000 |
+| Apr, Jul, Oct | UF Honors Wentworth Fund | Honors students | Varies |
+| Early Nov | CLAS Sustainability Research Award | Any major, not graduating that spring | $750 |
+| Late Nov | Emerging Scholars | First and second years, no prior research | $1,000 |
+| Feb | University Scholars Program | Not graduating before May of the next year | $1,750 |
+| Feb | McNair Scholars | First-gen and income-eligible; US citizen or PR | Summer stipend |
+| Feb | Summer International Research | 1+ year of prior UF research | Up to $5,000 |
+| Feb | UF FLAS (African languages) | US citizen or PR | $5,000 plus tuition |
+| Fall and spring | Beyond120 Experiential Scholarship | CLAS undergrads | Up to $1,000 |
+| Spring | URAP Research Grant | Biology undergrads | $250 |
 
 ---
 
-## Competitive Stipend Programs
+## Direct lab employment
 
-### University Scholars Program (USP)
+These pay within weeks. Everything else on this page pays six to twelve months after you apply.
 
-**Award:** $1,750 ($750 in September, $1,000 in January). Your faculty mentor also receives $500.
-**Deadline:** February. Each college sets its own date and departments set earlier internal ones. CLAS is **9 February 2027**.
-**Eligibility:** Any UF undergraduate who will not graduate before May of the following year.
+### OPS hourly positions
 
-Applications are reviewed each spring by the participating colleges. You find a mentor first, then apply through your department, which ranks and forwards applications.
+**Pay:** UF requires at least Florida's minimum wage ($14.00/hour now, rising to $15.00 on 30 September 2026) and caps student wages at double it. Lab rates sit near the lower end.
 
-The **CLAS University Scholars Award** is the CLAS instance of this same program, not a second award you can stack on top of it.
+I hire undergraduates directly from grant or startup funds. There is no application form and these are not advertised anywhere. You ask me.
 
-- [University Scholars Program](https://cur.aa.ufl.edu/programs-university-scholars-program/)
-- [CLAS University Scholars](https://clas.ufl.edu/undergraduate/clas-university-scholars/)
+You can hold an OPS position and take research credit at the same time. Arrange it with the Biology Undergraduate Coordinator.
 
----
-
-### Emerging Scholars Program
-
-**Award:** $1,000, paid as $500 at the start of spring and $500 at the start of fall.
-**Deadline:** Late November. The last cycle closed 23 November.
-**Eligibility:** Freshmen and sophomores with no prior university-level research experience. Students who have already taken a CURE course are not eligible.
-
-- [Emerging Scholars Program](https://cur.aa.ufl.edu/emerging-scholars-program/)
-
----
-
-### Summer Undergraduate International Research Program
-
-**Award:** Up to $5,000 for travel and living expenses.
-**Deadline:** Mid-February.
-
-The largest UF-internal undergraduate research award. Relevant to our lab because our field programme is in Kenya.
-
-- [Summer Undergraduate International Research](https://cur.aa.ufl.edu/summer-undergraduate-international-research-program/)
-
----
-
-### McNair Scholars Program
-
-**Award:** Summer research stipend. UF does not publish the amount; ask the program.
-**Deadline:** February. The last cycle closed 8 February.
-**Eligibility:** US citizen or permanent resident, first-generation and income-eligible or from an underrepresented group, 3.0 GPA, 60 credits by the start of summer, intending to pursue a PhD. Students planning only an MD, JD, or PharmD are not eligible.
-
-- [UF McNair Scholars](https://mcnair.aa.ufl.edu/)
-
----
-
-### Beyond120 Experiential Scholarships (CLAS)
-
-**Award:** Up to $1,000 per semester.
-**Deadline:** Fall and spring cycles, applied for through Scholarship Universe.
-
-Covers a research category explicitly. You do not need to have secured the position before applying.
-
-- [Beyond120 Scholarships](https://beyond120.clas.ufl.edu/scholarships/)
-
----
-
-### CLAS Sustainability Student Research Award
-
-**Award:** $750, two awarded.
-**Deadline:** 1 November.
-**Eligibility:** Any major.
-
-- [Sustainability Student Research Award](https://sustainability.clas.ufl.edu/student-research-award)
-
----
-
-### Science for Life
-
-A UF early-research programme historically funded by the Howard Hughes Medical Institute, built around a 1-credit course (IDH 3931) and multi-year projects starting the summer after freshman year.
-
-**Check before you plan around this one.** The Biology page still describes it, but the programme's own site has not posted an application, amount, or deadline in years. Contact the Biology undergraduate office to confirm it is still running.
-
-- [Biology undergraduate research](https://biology.ufl.edu/undergraduates/research/)
-
----
-
-## Direct Lab Employment
-
-### OPS Hourly Positions
-
-**Pay:** Typically $12 to $16 per hour, depending on experience and available funding.
-
-Faculty hire undergraduates directly as hourly employees from grant, startup, or departmental funds. This is the most flexible route. Hours and duties are agreed with the PI. These positions are not advertised centrally, so ask me directly whether I have funds.
-
-You can hold an OPS position and take research credit at the same time. Arrange it with the Undergraduate Coordinator.
+Hours are agreed **in writing before you start**, per the [Laboratory Code of Conduct](/code-of-conduct/), which also says that hours above that are never a condition of a recommendation letter and that exam periods and illness reduce hours without penalty.
 
 - [UF job listings](https://explore.jobs.ufl.edu/en-us/listing/)
 
----
-
 ### Federal Work-Study
 
-**Pay:** Typically $15 to $20 per hour.
-**Hours:** Up to 20 per week during the semester. You can petition to work up to 31.
-**Eligibility:** Demonstrated financial need on the FAFSA, at least half-time enrollment, and US citizen, national, or permanent resident status.
+**Pay:** At least Florida minimum wage; UF does not publish a work-study rate.
+**Hours:** Up to 20 per week during the semester, with a petition route to 31.
+**Eligibility:** Financial need on the FAFSA, at least half-time enrollment, and US citizen, national, or permanent resident.
 
-If Federal Work-Study is in your aid package, part of your wages is federally covered, which makes you cheaper for a PI to hire. **Tell me if you have it.** It makes hiring you considerably easier.
+Part of your wages is federally covered, which makes you cheaper for a PI to hire. File your FAFSA early; the form opens 1 October for the following year. Funding is limited and not guaranteed to everyone eligible.
 
-File your FAFSA as early as you can. The form opens 1 October for the following academic year. UF does not publish a work-study priority date, but funding is limited and is not guaranteed to every eligible student.
-
-- [Find work-study positions](https://explore.jobs.ufl.edu/en-us/listing/) (Work Type: Student Ast.)
 - [UF Student Financial Aid: employment](https://www.sfa.ufl.edu/types-of-aid/employment/)
 
 ---
 
-## Research for Course Credit
+## Research for course credit
 
 ### BSC 4910, BSC 4912, BOT 4911, ZOO 4911
 
-**Credits:** 0 to 3. Zero-credit registration is free; 1 to 3 credits count against your full-time tuition cap.
-**Deadlines:** Research proposal by 4:00 pm on the last day of drop/add. Final report by 11:59 pm on the last day of instruction.
-**Report length:** Minimum 750 words for 1 credit, 1,300 words for 2 credits.
+**Credits:** 0 to 4. Registering for 0 credits costs nothing. Registering for 1 to 4 adds to your semester load, so check with your adviser whether it pushes you past your tuition cap before you register.
+**Proposal:** Due **the week before drop/add**, which is earlier than drop/add itself.
+**Final report:** Due **by noon** on the last day of instruction. Missing it is an automatic NG, no grade.
+**Report length:** Minimum 750, 1,300, 1,600, and 1,800 words for 1, 2, 3, and 4 credits.
 **Caps:** Up to 6 credits in CLAS Biology, up to 3 in CALS.
 
-Biology majors taking BSC 4910 for the first time also enroll in **BSC 3911 Entering Research** (1 credit). You do not repeat it for BSC 4912.
+Biology majors taking BSC 4910 or BOT 4911 for the first time also enroll in **BSC 3911 Entering Research** (1 credit). You do not repeat it for BSC 4912.
 
 Other departments use their own numbers, including ALS 4911, BCH 4905, MCB 4905, AGR 4911, BMS 4905, and IDH 4917.
+
+Every undergraduate in the lab also completes responsible conduct of research instruction. Ask me which one.
 
 - [Application forms](https://biology.ufl.edu/undergraduates/research/)
 - [Entering research](https://major.biology.ufl.edu/do-research/entering-research/)
 
 ---
 
-## Research Grants
+## Competitive awards
 
-### URAP Undergraduate Research Grants
+### Emerging Scholars Program
 
-**Award:** $250. Only one is funded per year.
-**Deadline:** Spring. The posted date on the URAP page is several years out of date, so email the coordinator rather than trusting it.
+**Award:** $1,000, paid $500 at the start of spring and $500 at the start of fall.
+**Deadline:** Late November.
+**Eligibility:** First and second years with no prior university-level research experience. Students who have taken a **CURE** course are not eligible. A CURE is a Course-based Undergraduate Research Experience, a class where the whole section does original research rather than a standard teaching lab. If you are unsure whether a class you took counts, email the programme before you write anything.
 
-A second award, the **URAP Engagement Grant** ($150, fall cycle), is on the same page and is less well known.
+- [Emerging Scholars](https://cur.aa.ufl.edu/emerging-scholars-program/)
 
-- [URAP](https://biology.ufl.edu/undergraduates/urap/)
+### University Scholars Program
+
+**Award:** $1,750 ($750 in September, $1,000 in January). Your mentor receives $500.
+**Deadline:** February. Each college sets its own date and departments set earlier internal ones, so ask in the fall.
+**Eligibility:** Any UF undergraduate not graduating before May of the following year.
+
+The **CLAS University Scholars Award** is the CLAS instance of this same programme, not a second award you can hold alongside it.
+
+- [University Scholars](https://cur.aa.ufl.edu/programs-university-scholars-program/)
+- [CLAS University Scholars](https://clas.ufl.edu/undergraduate/clas-university-scholars/)
+
+### Summer Undergraduate International Research
+
+**Award:** Up to $5,000 for travel and living expenses.
+**Deadline:** February.
+**Eligibility:** At least one year of prior UF research experience.
+
+Relevant here because our field programme is in Kenya. Read the [Field Safety and Travel Policy](/field-safety/) before you budget: the lab covers required training, the pre-travel medical consultation, vaccination, chemoprophylaxis, and protective equipment, so those do not come out of your award.
+
+- [Summer International Research](https://cur.aa.ufl.edu/summer-undergraduate-international-research-program/)
+
+### UF FLAS Fellowships, African languages
+
+**Award:** Academic year $5,000 plus tuition and fees. Summer $2,500 plus up to $5,000 tuition.
+**Deadline:** February.
+**Eligibility:** US citizen or permanent resident, enrolled at UF. Languages include Swahili and Zulu.
+
+Direct fit if you are heading for the Mara.
+
+- [FLAS, undergraduate](https://africa.ufl.edu/academics-programs/undergraduate-studies/flas-fellowships)
+
+### McNair Scholars Program
+
+**Award:** Summer research stipend; ask the programme for the current figure.
+**Deadline:** February.
+**Eligibility:** US citizen or permanent resident, **first-generation and income-eligible** (both required), 3.0 GPA, 60 credits by the start of summer, intending a PhD. Not open to students planning only an MD, JD, DVM, PharmD, PsyD, or DNP.
+
+- [UF McNair](https://mcnair.aa.ufl.edu/)
+
+### Beyond120 Experiential Scholarships
+
+**Award:** Up to $1,000 per semester.
+**Deadline:** Fall and spring cycles, through Scholarship Universe.
+**Eligibility:** CLAS undergraduates. You do not need the position secured before applying.
+
+- [Beyond120 Scholarships](https://beyond120.clas.ufl.edu/scholarships/)
+
+### CLAS Sustainability Student Research Award
+
+**Award:** $750, two awarded.
+**Deadline:** Early November.
+**Eligibility:** Any major, provided you are not graduating before the following spring.
+
+- [Sustainability Research Award](https://sustainability.clas.ufl.edu/student-research-award)
 
 ---
+
+## Grants for your own project
 
 ### Sigma Xi Grants in Aid of Research
 
 **Award:** $500 to $2,000 for undergraduate members. Non-members are capped at $1,000, so joining is usually worth it.
-**Deadlines:** **15 March** and **1 October**. Application forms open 15 December and 1 July respectively.
+**Deadlines:** Early March and early October.
 
-- [Sigma Xi Grants in Aid of Research](https://www.sigmaxi.org/programs/grants-in-aid)
+- [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
 
----
+### Explorers Club Rising Explorer Grant
+
+**Award:** About $1,500.
+**Deadline:** Late August.
+**Eligibility:** Undergraduates doing fieldwork. No citizenship restriction stated.
+
+- [Explorers Club grants](https://www.explorers.org/grants/)
+
+### URAP Research Grant
+
+**Award:** $250. One is funded per year, so treat it as a supplement rather than a plan.
+**Deadline:** Spring. The posted date is often behind; email the URAP coordinator through the Biology office to confirm the current cycle. A second award, the URAP Engagement Grant ($150, fall), is on the same page.
+
+- [URAP](https://biology.ufl.edu/undergraduates/urap/)
 
 ### UF Honors Wentworth Fund
 
-**Award:** Set case by case; covers research travel and conference presentation.
+**Award:** Set case by case; covers research and conference travel.
 **Deadlines:** 1 April, 1 July, 1 October.
 
 - [Honors internal funding](https://www.honors.ufl.edu/academics/internal-funding/)
 
----
-
 ### Biology travel funds
 
-The Biology department funds research and conference travel. Apply at least one month before you travel.
+Apply at least one month before you travel.
 
 - [Biology research pages](https://major.biology.ufl.edu/do-research/)
 
 ---
 
-## Getting Started
+## Worth confirming before you plan around it
 
-1. **Email me** with your interests, your year, and your availability. Say whether you have Federal Work-Study.
-2. **Agree on a project** before you apply for anything. Every competitive programme requires a named mentor and a project.
-3. **Work backwards from the deadline.** Most UF programmes need a departmental nomination, and departments set internal deadlines weeks before the college one.
-
-## Summary
-
-| Programme | Amount | Deadline | Who |
-| --- | --- | --- | --- |
-| University Scholars | $1,750 | February | Any undergrad not graduating before May of the next year |
-| Emerging Scholars | $1,000 | Late November | Freshmen and sophomores, no prior research |
-| Summer International Research | Up to $5,000 | Mid-February | Undergrads doing international research |
-| McNair | Summer stipend | February | First-generation, income-eligible, or underrepresented; PhD-bound |
-| Beyond120 | Up to $1,000 | Fall and spring | CLAS undergrads |
-| CLAS Sustainability | $750 | 1 November | Any major |
-| URAP Grant | $250 | Spring | Biology undergrads |
-| Sigma Xi | $500 to $2,000 | 15 Mar, 1 Oct | Any undergrad researcher |
+**Science for Life** was a UF early-research programme funded by the Howard Hughes Medical Institute, built around a 1-credit course and multi-year projects starting after the first year. It still appears on Biology pages. Confirm with the Biology undergraduate office that it is currently running before you build a plan on it.
 
 ---
 
@@ -223,6 +215,5 @@ The Biology department funds research and conference travel. Apply at least one 
 - [UF Center for Undergraduate Research](https://cur.aa.ufl.edu/)
 - [Biology undergraduate research](https://biology.ufl.edu/undergraduates/research/)
 - [Do research in Biology](https://major.biology.ufl.edu/do-research/)
-- [UF Student Financial Aid](https://www.sfa.ufl.edu/types-of-aid/employment/)
 
-*Last updated: July 2026*
+*Sources last verified: July 2026. Nothing here should be trusted for a deadline after June 2027 without checking the link.*
