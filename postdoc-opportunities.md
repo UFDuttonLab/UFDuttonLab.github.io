@@ -8,13 +8,13 @@ permalink: /postdoc-opportunities/
 
 I welcome enquiries from postdoctoral researchers working on ecosystem ecology, microbial ecology, conservation genomics, or environmental DNA.
 
-**Read this first.** Almost everything below is a fellowship you bring with you rather than a position I advertise. If I have a funded line open I will say so in reply. Because most routes need a host, a jointly written proposal, and letters, start the conversation several months before any deadline, and ask me for a letter at least three weeks out with your draft and the prompt attached.
+Almost everything below is a fellowship you bring with you rather than a position I advertise. If I have a funded line open I will say so in reply. Because most routes need a host, a jointly written proposal, and letters, start the conversation several months before any deadline, and ask me for a letter at least three weeks out with your draft and the prompt attached.
 
 ---
 
 ## Fellowship deadlines at a glance
 
-These are the windows fellowships usually fall in, checked July 2026. **Use them to plan when to start, not to plan a submission.** Get the actual date from the linked page.
+These are the windows fellowships usually fall in, checked July 2026. Confirm the actual date on the linked page.
 
 | When | Fellowship | Who | Rough amount |
 | --- | --- | --- | --- |
@@ -80,7 +80,7 @@ If your project is ecology-first rather than AI-first, read the current solicita
 **Deadlines:** 8 April, 8 August, 8 December.
 **Eligibility:** US citizens, nationals, or permanent residents.
 
-The rung between the predoctoral F31 and K99/R00.
+The postdoctoral equivalent of the F31, and the usual step before K99/R00.
 
 - [NIH fellowships](https://www.nigms.nih.gov/training/individual-fellowships)
 
@@ -90,7 +90,7 @@ The rung between the predoctoral F31 and K99/R00.
 **Deadlines:** 12 February, 12 June, 12 October.
 **Eligibility:** **No more than 4 years of postdoctoral research experience** at the due date.
 
-Relevant if your microbiome work can be framed toward health.
+K99/R00 projects require a health framing.
 
 - [K99/R00](https://www.nih.gov/research-training/careers-nih/k99-r00-pathway-independence-award)
 
@@ -108,8 +108,6 @@ Relevant if your microbiome work can be framed toward health.
 
 **Award:** About $75,000/yr for 2 years, plus a $45,000 research and travel budget and benefits.
 **Deadline:** Late September.
-
-The best fit on this page for applied conservation work.
 
 - [Smith Fellows](https://www.smithfellows.org)
 
@@ -165,7 +163,7 @@ The best fit on this page for applied conservation work.
 
 **Award:** 3 years, non-renewable.
 **Deadline:** Letter of intent in May. The September full-proposal date is **by invitation only**, reachable only if you filed the LOI.
-**Eligibility:** A country-mobility rule applies and disqualifies more applicants than anything else about the scheme, alongside a limit of roughly 3 years post-PhD. HFSP also excludes projects directed at agricultural, forestry, environmental, or conservation problems.
+**Eligibility:** A country-mobility rule applies, alongside a limit of roughly 3 years post-PhD. HFSP also excludes projects directed at agricultural, forestry, environmental, or conservation problems.
 
 - [HFSP Postdoctoral Fellowships](https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships)
 
@@ -176,8 +174,6 @@ The best fit on this page for applied conservation work.
 **Award:** $50,000.
 **Deadline:** Late September.
 **Eligibility:** Women who are US citizens, nationals, or permanent residents.
-
-Larger than L'Oreal and with an earlier deadline.
 
 - [AAUW Postdoctoral Research Leave](https://www.aauw.org/resources/programs/american-postdoctoral-research-leave-fellowship-program/)
 
@@ -195,7 +191,7 @@ Larger than L'Oreal and with an earlier deadline.
 
 **Award:** Living, mobility, and family allowances at country-specific rates.
 **Deadline:** Early September.
-**Eligibility:** A mobility rule governs where you may have lived before applying; check it before anything else.
+**Eligibility:** A mobility rule governs where you may have lived before applying. Check it first.
 
 - [MSCA Postdoctoral Fellowships](https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships)
 
@@ -234,7 +230,7 @@ Larger than L'Oreal and with an earlier deadline.
 
 ---
 
-## Worth confirming before you plan around it
+## Status unconfirmed
 
 **NatureNet Science Fellows** (The Nature Conservancy) was not accepting applications when this page was last checked. Confirm with TNC before ruling it out.
 
@@ -249,4 +245,4 @@ Larger than L'Oreal and with an earlier deadline.
 - [UF Office of Postdoctoral Affairs](https://postdoc.aa.ufl.edu)
 - [UF Research](https://research.ufl.edu)
 
-*Sources last verified: July 2026. Nothing here should be trusted for a deadline after June 2027 without checking the link.*
+*Sources last verified July 2026. Confirm every deadline against the linked page.*

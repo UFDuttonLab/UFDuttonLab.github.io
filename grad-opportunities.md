@@ -8,13 +8,13 @@ permalink: /grad-opportunities/
 
 I am recruiting graduate students interested in ecosystem ecology, microbiomes, conservation biology, and related fields. Most of the funding below is doctoral; where a source is open to master's students it says so.
 
-**Before anything else:** apply to a graduate programme, not to me. I take students through the **UF Department of Biology** and, for some projects, through **CALS**. They are different colleges with different applications and different deadlines. Email me first and I will tell you which one fits your project, then apply there. Contacting me does not substitute for the application, and the application deadline is the one date on this page you cannot miss.
+**Before anything else:** apply to a graduate programme, not to me. I take students principally through the **UF Department of Biology** in the College of Liberal Arts and Sciences, and for some projects through the **UF Genetics Institute's Genetics and Genomics** PhD programme, whose deadline is 1 December. **I do not take students through CALS.** Email me first and I will tell you which route fits your project, then apply there. Contacting me does not substitute for the application.
 
 ---
 
 ## Fellowship deadlines at a glance
 
-These are the windows fellowships usually fall in, checked July 2026. **Use them to plan when to start, not to plan a submission.** Get the actual date from the linked page.
+These are the windows fellowships usually fall in, checked July 2026. Confirm the actual date on the linked page.
 
 | When | Fellowship | Who | Rough amount |
 | --- | --- | --- | --- |
@@ -37,22 +37,21 @@ These are the windows fellowships usually fall in, checked July 2026. **Use them
 | Mid Jan | McKnight Doctoral Fellowship | African American or Hispanic US citizens; **entering** | Stipend plus tuition |
 | Apr, Aug, Dec | NIH F31 | US citizens, nationals, PRs | $29,364/yr |
 | Apr | USDA NIFA AFRI Predoctoral | US citizens and PRs | Up to $180,000 |
-| Apr | UF Scholarship Universe | Admitted UF students | Varies |
+| Nov to May | UF Scholarship Universe | Admitted UF students | Varies |
 | Jun (LOI) | Simons Ecology and Evolution | Students **entering** a US PhD | $265,800 total |
 | Opens Sep, close TBA | Switzer Fellowship | Post-quals PhD candidates | $17,000 |
 | Varies | UF Research Abroad for Doctoral Students | Post-candidacy, research abroad | Up to $5,000 |
-| With admission | CALS Dean's Award | Incoming CALS students | $31,000 over 4 years |
 | Through your unit | Grinter Fellowship | **Incoming** PhD students | $2,000 to $4,000 |
 
 ---
 
 ### If you are not a US citizen or permanent resident
 
-Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA AFRI, McKnight, GCA, Hertz, and Fulbright US Student all require citizenship or permanent residency. That is not a reason to stop, but it changes where to look.
+Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA AFRI, McKnight, GCA, Hertz, and Fulbright US Student all require citizenship or permanent residency.
 
 Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **UF Research Abroad**, the **UF Biology department awards** once you are enrolled, and, if you are a Kenyan citizen or permanent resident, **Fogarty**.
 
-The most common route is still a departmental assistantship. Terms for those, including the hours a given FTE actually means, are in the [Laboratory Code of Conduct](/code-of-conduct/).
+A departmental assistantship is the usual route. Terms for those, including the hours a given FTE actually means, are in the [Laboratory Code of Conduct](/code-of-conduct/).
 
 ---
 
@@ -67,7 +66,7 @@ The most common route is still a departmental assistantship. Terms for those, in
 
 We work in Kenya and South Africa, in Florida, and in other systems, combining field ecology with laboratory automation, nanopore sequencing, and bioinformatics.
 
-If your project involves fieldwork in Kenya, read the [International Research Partnership Policy](/international-partnership/) before you build a timeline. Research licensing, access permits, and export agreements run on annual cycles and are not transferable between people, so a funded season can still be blocked on paperwork you do not control.
+If your project involves fieldwork in Kenya, read the [International Research Partnership Policy](/international-partnership/) before you build a timeline. Research licensing, access permits, and export agreements run on annual cycles and are not transferable between people.
 
 ---
 
@@ -81,7 +80,7 @@ If your project involves fieldwork in Kenya, read the [International Research Pa
 2. Your CV, including publications or research experience
 3. One paragraph on a project or area you would like to pursue
 
-I read enquiries personally, though I may not manage to reply to all of them. Admission on a Teaching Assistantship is possible but competitive; arriving with your own funding makes admission considerably easier.
+I read enquiries personally and may not reply to all of them. Admission on a Teaching Assistantship is possible but competitive. Arriving with your own funding makes admission easier.
 
 **Letters:** ask me at least three weeks before the deadline, and send your draft and the prompt with the request.
 
@@ -105,7 +104,7 @@ As of July 2026 the FY2027 solicitation had not been posted. Check the programme
 
 **Award:** $265,800 total over 3 to 5 years, including a $50,000/yr stipend.
 **Deadline:** Letter of intent, late June, with a full proposal the following spring.
-**Eligibility:** Students **entering** a US PhD programme, not students already enrolled. Plan for this before you start.
+**Eligibility:** Students **entering** a US PhD programme, not students already enrolled.
 
 - [Simons Fellowships](https://www.simonsfoundation.org/grant/simons-graduate-fellowships-in-ecology-and-evolution/)
 
@@ -117,9 +116,9 @@ As of July 2026 the FY2027 solicitation had not been posted. Check the programme
 
 - [McKnight Doctoral Fellowship](https://www.fefonline.org/mdf.html)
 
-#### Grinter Fellowship and CALS Dean's Award (UF)
+#### Grinter Fellowship (UF)
 
-Both are recruitment awards for **incoming** students, not dissertation support. Grinter is $2,000 to $4,000, nominated through your academic unit. The CALS Dean's Award is $31,000 spread over four years and is made automatically from the graduate application.
+A recruitment award for **incoming** students, not dissertation support. $2,000 to $4,000, nominated through your academic unit.
 
 - [Grinter Fellowship](https://grad.ufl.edu/gss/funding/grinter/)
 
@@ -165,7 +164,7 @@ Both are recruitment awards for **incoming** students, not dissertation support.
 **Deadlines:** 8 April, 8 August, 8 December for new applications. Resubmission dates differ; check the announcement.
 **Eligibility:** US citizens, nationals, or permanent residents.
 
-Ecology and conservation projects need a clear health or environmental-health framing here.
+F31 projects require a health or environmental-health framing.
 
 - [NIH F31 programme](https://www.nigms.nih.gov/training/individual-fellowships)
 - [Current NRSA stipend levels](https://grants.nih.gov/policy-and-compliance/policy-topics/nrsa)
@@ -202,7 +201,7 @@ Ecology and conservation projects need a clear health or environmental-health fr
 **Deadline:** Rolling, one application per twelve months.
 **Eligibility:** MSc and PhD students, or within 3 years of graduating. Kenya and South Africa are both eligible countries. Applicants based in advanced economies are considered only where the work is high conservation priority and builds local capacity.
 
-The only rolling deadline here, so the one that can rescue a field season mid-year.
+Rolling deadline.
 
 - [Rufford Small Grants](https://apply.ruffordsmallgrants.org/help/criteria)
 
@@ -250,7 +249,7 @@ The only rolling deadline here, so the one that can rescue a field season mid-ye
 **Deadline:** Mid September.
 **Eligibility:** Citizens or permanent residents of the US, **Kenya**, and several other countries. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
 
-The clearest One Health route here, and it funds Kenyan nationals directly.
+Funds Kenyan nationals directly.
 
 - [Fogarty Global Health Fellows](https://fogartyfellows.org/apply/)
 
@@ -283,9 +282,7 @@ The clearest One Health route here, and it funds Kenyan nationals directly.
 
 **Award:** Academic year $20,000 plus tuition and fees. Summer $2,500 plus up to $5,000 tuition.
 **Deadline:** February.
-**Eligibility:** US citizen or permanent resident, enrolled or admitted at UF. Languages include Swahili and Zulu.
-
-A full year of funding to learn Swahili, which maps directly onto Mara fieldwork.
+**Eligibility:** US citizen or permanent resident, enrolled or admitted at UF. Languages include Swahili and Zulu. Swahili is spoken at our Kenya field sites.
 
 - [FLAS, graduate](https://africa.ufl.edu/academics-programs/graduate-studies/flas-fellowships/)
 
@@ -304,7 +301,7 @@ The Biology graduate awards page lists more than a dozen internal awards, usuall
 Amounts range from a few hundred dollars to $4,000 and change year to year.
 
 - [UF Biology graduate awards](https://biology.ufl.edu/graduate-programs/awards/)
-- [UF Scholarship Universe, via CALS](https://cals.ufl.edu/scholarships/) (requires a UF login, so not usable before admission)
+- [UF Scholarship Universe](https://www.sfa.ufl.edu/scholarship-universe) (requires a GatorLink account, so not usable before admission)
 
 ---
 
@@ -319,18 +316,18 @@ Both still circulate on funding lists.
 
 ## Tips
 
-1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid November. Four applications in that window is not realistic unless you begin over the summer.
+1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid November.
 2. **Ask me for letters three weeks out**, with your draft and the prompt.
 3. **Check the deadline yourself.** This page is verified once a year; the programme pages are authoritative.
-4. **Apply to the small ones too.** Sigma Xi, Lewis and Clark, Explorers Club, and the Biology department awards are much less work per application and fund real fieldwork.
+4. **The small awards.** Sigma Xi, Lewis and Clark, Explorers Club, and the Biology department awards take less work per application.
 
 ---
 
 ## Programme information
 
 - [UF Department of Biology](https://biology.ufl.edu)
-- [UF CALS graduate programs](https://cals.ufl.edu/graduate/)
+- [UF Genetics Institute graduate program](https://ufgi.ufl.edu/grad-program/)
 - [UF Graduate School](https://grad.ufl.edu)
 - [Society for Conservation Biology](https://conbio.org)
 
-*Sources last verified: July 2026. Nothing here should be trusted for a deadline after June 2027 without checking the link.*
+*Sources last verified July 2026. Confirm every deadline against the linked page.*

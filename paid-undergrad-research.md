@@ -7,28 +7,28 @@ description: Programs to fund your work in the Dutton Lab
 
 # Getting Paid to Work in the Lab
 
-Several routes let undergraduates get paid to do research here. Two of them you can start this week; the rest are competitive awards with a mentor and a project attached.
+Several routes let undergraduates get paid to do research here. Two are open on a rolling basis. The rest are competitive awards that require a named mentor and a specific project.
 
-Some jargon first, because these pages are full of it. **PI** is the principal investigator, in this case me. **OPS** is "Other Personnel Services," UF's term for an hourly job with no benefits. **CLAS** is the College of Liberal Arts and Sciences and **CALS** is the College of Agricultural and Life Sciences; if you are not sure which one you are in, it is on your degree audit.
+**PI** is the principal investigator. **OPS** is Other Personnel Services, UF's term for an hourly job with no benefits. **CLAS** is the College of Liberal Arts and Sciences. **CALS** is the College of Agricultural and Life Sciences.
 
 ---
 
 ## Start here
 
-1. **Email me.** Subject line "Undergraduate research: [your name]." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph is fine. Attach a transcript if you have one handy. Yes, emailing a professor you have not met is the correct thing to do, and I will reply within about a week.
+1. **Email me.** Subject line "Undergraduate research: [your name]." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph. Attach a transcript if you have one. I reply within about a week.
 2. **Agree on a project.** Every competitive award below needs a named mentor and a specific project. None of them can be applied for cold.
 3. **Work backwards from the deadline.** Most UF programmes need a departmental nomination, and departments set internal deadlines weeks before the college one. Ask in the fall about a February deadline.
 4. **Ask me for a letter at least three weeks out**, and send me your draft and the prompt when you ask.
 
-**Order matters.** Emerging Scholars is the one award written for a sophomore with no experience, and it requires that you have no prior university research experience. If you are eligible, apply for it **before** you start a paid or for-credit position.
+**Emerging Scholars requires that you have no prior university research experience.** If you are eligible, apply for it **before** you start a paid or for-credit position.
 
-**If you have Federal Work-Study, tell me.** It makes hiring you considerably easier.
+**If you have Federal Work-Study, tell me.**
 
 ---
 
 ## Deadlines at a glance
 
-These are the windows programmes usually fall in, checked July 2026. **Use them to plan when to start, not to plan a submission.** Get the actual date from the linked page.
+These are the windows programmes usually fall in, checked July 2026. Confirm the actual date on the linked page.
 
 | When | Programme | Who | Rough amount |
 | --- | --- | --- | --- |
@@ -51,11 +51,11 @@ These are the windows programmes usually fall in, checked July 2026. **Use them 
 
 ## Direct lab employment
 
-These pay within weeks. Everything else on this page pays six to twelve months after you apply.
+These start on a rolling basis. The competitive awards below pay six to twelve months after you apply.
 
 ### OPS hourly positions
 
-**Pay:** UF requires at least Florida's minimum wage ($14.00/hour now, rising to $15.00 on 30 September 2026) and caps student wages at double it. Lab rates sit near the lower end.
+**Pay:** UF requires at least Florida's minimum wage ($14.00/hour now, rising to $15.00 on 30 September 2026) and caps student wages at double it.
 
 I hire undergraduates directly from grant or startup funds. There is no application form and these are not advertised anywhere. You ask me.
 
@@ -104,7 +104,7 @@ Every undergraduate in the lab also completes responsible conduct of research in
 
 **Award:** $1,000, paid $500 at the start of spring and $500 at the start of fall.
 **Deadline:** Late November.
-**Eligibility:** First and second years with no prior university-level research experience. Students who have taken a **CURE** course are not eligible. A CURE is a Course-based Undergraduate Research Experience, a class where the whole section does original research rather than a standard teaching lab. If you are unsure whether a class you took counts, email the programme before you write anything.
+**Eligibility:** First and second years with no prior university-level research experience. Students who have taken a **CURE** course are not eligible. A CURE is a Course-based Undergraduate Research Experience, a class where the whole section does original research rather than a standard teaching lab. If you are unsure whether a class you took counts, email the programme.
 
 - [Emerging Scholars](https://cur.aa.ufl.edu/emerging-scholars-program/)
 
@@ -133,9 +133,7 @@ Relevant here because our field programme is in Kenya. Read the [Field Safety an
 
 **Award:** Academic year $5,000 plus tuition and fees. Summer $2,500 plus up to $5,000 tuition.
 **Deadline:** February.
-**Eligibility:** US citizen or permanent resident, enrolled at UF. Languages include Swahili and Zulu.
-
-Direct fit if you are heading for the Mara.
+**Eligibility:** US citizen or permanent resident, enrolled at UF. Languages include Swahili and Zulu. Swahili is spoken at our Kenya field sites.
 
 - [FLAS, undergraduate](https://africa.ufl.edu/academics-programs/undergraduate-studies/flas-fellowships)
 
@@ -169,7 +167,7 @@ Direct fit if you are heading for the Mara.
 
 ### Sigma Xi Grants in Aid of Research
 
-**Award:** $500 to $2,000 for undergraduate members. Non-members are capped at $1,000, so joining is usually worth it.
+**Award:** $500 to $2,000 for undergraduate members. Non-members are capped at $1,000.
 **Deadlines:** Early March and early October.
 
 - [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
@@ -184,7 +182,7 @@ Direct fit if you are heading for the Mara.
 
 ### URAP Research Grant
 
-**Award:** $250. One is funded per year, so treat it as a supplement rather than a plan.
+**Award:** $250. One is funded per year.
 **Deadline:** Spring. The posted date is often behind; email the URAP coordinator through the Biology office to confirm the current cycle. A second award, the URAP Engagement Grant ($150, fall), is on the same page.
 
 - [URAP](https://biology.ufl.edu/undergraduates/urap/)
@@ -204,7 +202,7 @@ Apply at least one month before you travel.
 
 ---
 
-## Worth confirming before you plan around it
+## Status unconfirmed
 
 **Science for Life** was a UF early-research programme funded by the Howard Hughes Medical Institute, built around a 1-credit course and multi-year projects starting after the first year. It still appears on Biology pages. Confirm with the Biology undergraduate office that it is currently running before you build a plan on it.
 
@@ -216,4 +214,4 @@ Apply at least one month before you travel.
 - [Biology undergraduate research](https://biology.ufl.edu/undergraduates/research/)
 - [Do research in Biology](https://major.biology.ufl.edu/do-research/)
 
-*Sources last verified: July 2026. Nothing here should be trusted for a deadline after June 2027 without checking the link.*
+*Sources last verified July 2026. Confirm every deadline against the linked page.*
