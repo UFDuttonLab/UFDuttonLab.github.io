@@ -12,11 +12,11 @@ permalink: /international-partnership/
 
 This policy governs all laboratory research conducted outside the United States, with particular reference to our long-term programme in Kenya's Mara River ecosystem. It applies to every laboratory member who collects, receives, transports, analyses, or publishes on material or data originating outside the United States, and to every collaborator working with us under that programme.
 
-The policy covers two areas. The first is legal compliance: access to biological resources in Kenya is regulated, and the regulation now reaches sequence data as well as physical samples. The second is equitable partnership: the standards we hold ourselves to regarding credit, capacity, and benefit, which go beyond what any statute requires.<sup>[17](#ref17),[18](#ref18),[19](#ref19)</sup>
+This policy covers compliance with Kenyan access and benefit-sharing law, including for sequence data, and the laboratory's partnership standards for credit, capacity, and benefit.<sup>[17](#ref17),[18](#ref18),[19](#ref19)</sup>
 
 ## Legal Framework
 
-The United States is not a Party to the Nagoya Protocol. The obligations described below bind this laboratory through **Kenyan domestic law**, through the terms of our own permits and agreements, and through University of Florida and sponsor policy. They are not enforced by US federal agencies, and members should not assume that US non-participation reduces our exposure. Kenya has been a Party to the Convention on Biological Diversity since 24 October 1994 and to the Nagoya Protocol since 12 October 2014.<sup>[10](#ref10),[11](#ref11),[12](#ref12)</sup>
+The United States is not a Party to the Nagoya Protocol. The obligations described below bind this laboratory through **Kenyan domestic law**, through the terms of our own permits and agreements, and through University of Florida and sponsor policy. They are not enforced by US federal agencies. Kenya has been a Party to the Convention on Biological Diversity since 24 October 1994 and to the Nagoya Protocol since 12 October 2014.<sup>[10](#ref10),[11](#ref11),[12](#ref12)</sup>
 
 ### Kenya's access and benefit-sharing regulations
 
@@ -28,9 +28,9 @@ Members should read the following provisions directly.
 * **The access permit runs for one year, is not transferable, and is renewable once for one further year** (regulation 17). A multi-year research agreement does not substitute for the permit cycle. Permit expiry dates are tracked by the Principal Investigator and reviewed each January.<sup>[1](#ref1)</sup>
 * **No biological resource may leave Kenya without an executed Material Transfer Agreement** in the form of the Sixth Schedule, filed with the Authority. The exporter must declare the resource at the port of departure and produce a copy of the MTA. Breach is an offence under regulation 27, penalised under section 144 of the Act where the Regulations prescribe no specific penalty.<sup>[1](#ref1)</sup>
 * **Deposition is a permit condition.** Duplicates and holotypes of collected genetic resources must be deposited with the Authority and other relevant stakeholders, and on export a holotype must be deposited with the entity granting the MTA or with a depository gazetted by the Authority.<sup>[1](#ref1)</sup>
-* **Kenyan citizens must be guaranteed reasonable access to collected biological resources, whether those resources are held in Kenya or abroad.** This is a standing condition on every access permit and it is a direct, continuing obligation on material held in Gainesville. Section "Access to Held Material" below operationalises it.<sup>[1](#ref1)</sup>
+* **Kenyan citizens must be guaranteed reasonable access to collected biological resources, whether those resources are held in Kenya or abroad.** This is a standing condition on every access permit and it is a continuing obligation on material held in Gainesville. Section "Access to Held Material" below operationalises it.<sup>[1](#ref1)</sup>
 
-**CITES may apply to some taxa we encounter, and this policy does not attempt to state which.** CITES Appendices were amended at CoP20 in Samarkand, with those amendments entering into effect on 5 March 2026. Members should also check the current text of Resolution Conf. 12.3 (Rev.), which governs simplified procedures for biological samples, against the CoP20 outcomes. Any pre-2026 CITES guidance in a laboratory protocol should be treated as stale. Before exporting material from any listed taxon, confirm requirements directly with the Kenya CITES Management Authority and with UF Research Integrity, Security and Compliance rather than relying on this document.<sup>[16](#ref16)</sup>
+**CITES may apply to some taxa collected under this programme.** CITES Appendices were amended at CoP20 in Samarkand, with those amendments entering into effect on 5 March 2026. Members should also check the current text of Resolution Conf. 12.3 (Rev.), which governs simplified procedures for biological samples, against the CoP20 outcomes. Any pre-2026 CITES guidance in a laboratory protocol should be treated as stale. Before exporting material from any listed taxon, confirm requirements directly with the Kenya CITES Management Authority and with UF Research Integrity, Security and Compliance.<sup>[16](#ref16)</sup>
 
 Our specimens are deposited at the **National Museums of Kenya**, the national repository under the National Museums and Heritage Act. Confirm with NEMA that NMK appears on its approved depository list for the purposes of regulation 21(5), since the ABS regulations designate depositories separately.<sup>[1](#ref1),[7](#ref7)</sup>
 
@@ -46,7 +46,7 @@ Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a 
 
 ## Digital Sequence Information
 
-**Kenya regulates digital sequence information derived from its biological resources.** Regulation 4(1)(e) of Legal Notice 68 applies the regulations to "any digital sequence information relating to Kenya biological resources," and regulation 2 defines that term broadly as biological data associated with or derived from genetic resources, including nucleotide sequences and epigenetic, protein, and metabolite data. There is no separate DSI procedure; DSI flows through the same access permit, PIC, MAT, and benefit-sharing machinery as physical material. Depositing Mara-derived sequence in a public archive is therefore a regulated act.<sup>[1](#ref1)</sup>
+**Kenya regulates digital sequence information derived from its biological resources.** Regulation 4(1)(e) of Legal Notice 68 applies the regulations to "any digital sequence information relating to Kenya biological resources," and regulation 2 defines that term as biological data associated with or derived from genetic resources, including nucleotide sequences and epigenetic, protein, and metabolite data. There is no separate DSI procedure; DSI flows through the same access permit, PIC, MAT, and benefit-sharing machinery as physical material. Depositing Mara-derived sequence in a public archive is therefore a regulated act.<sup>[1](#ref1)</sup>
 
 At the international level, COP16 Decision 16/2, adopted at Cali on 1 November 2024, established a multilateral mechanism and the Cali Fund. Two points:
 
@@ -57,7 +57,7 @@ Accordingly, for every sequence submission derived from non-US material, laborat
 
 ## Access to Held Material
 
-To operationalise the permit condition guaranteeing Kenyan citizens reasonable access to collected resources, and to give effect to our own partnership commitments, the laboratory maintains the following:
+To operationalise the permit condition guaranteeing Kenyan citizens reasonable access to collected resources, the laboratory maintains the following:
 
 1. A current inventory of Kenyan-origin material held in Gainesville, with collection locality, permit reference, and MTA reference.
 2. A documented request pathway by which Kenyan researchers and institutions may request access to that material or to derived sequence data, with a response within 30 days.
@@ -65,17 +65,17 @@ To operationalise the permit condition guaranteeing Kenyan citizens reasonable a
 
 ## Equitable Partnership Standards
 
-The following are commitments, and they are auditable.
+The following are commitments.
 
 **Authorship.** In-country collaborators who contribute to study design, implementation, data acquisition, analysis, or interpretation meet ICMJE criterion 1 and are treated as prospective **co-authors**, not acknowledgees. Data ownership and intellectual property are property relationships, handled through the MTA and benefit-sharing terms rather than through the author list; treating them as authorship triggers would be gift authorship under our own policy. This follows Article 4 of the TRUST Code and Rule 9 of the standing guidance on ending helicopter research, and is applied through the four ICMJE criteria in our [Collaboration and Authorship Policy](/authorship/). Where a collaborator meets the first criterion, they must be offered the opportunity to meet criteria #2 and #3. Failure to offer that opportunity is a policy violation.<sup>[17](#ref17),[18](#ref18),[21](#ref21)</sup>
 
-**Field staff.** Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company. Its staff are employed by Soiyou under Kenyan law, not by this laboratory or by UF, so their pay, insurance, and employment protections are Soiyou's to set. What is ours is the contract rate we agree and the terms we ask for: TRUST Code Article 7 requires fair compensation of local support staff, and the contract rate is set to meet it. Soiyou staff who contribute intellectually are co-authors on the same terms as anyone else; those who do not meet the criteria are named in contributor statements and credited by name in presentations.<sup>[17](#ref17)</sup>
+**Field staff.** Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company. Its staff are employed by Soiyou under Kenyan law, not by this laboratory or by UF, so their pay, insurance, and employment protections are Soiyou's to set. What this laboratory sets is the contract rate it agrees and the terms it asks for. TRUST Code Article 7 requires fair compensation of local support staff, and the contract rate is negotiated against that standard. Soiyou staff who contribute intellectually are co-authors on the same terms as anyone else; those who do not meet the criteria are named in contributor statements and credited by name in presentations.<sup>[17](#ref17)</sup>
 
-**Agenda setting.** Research questions are co-developed. We do not arrive with a finished design seeking a sampling permit.<sup>[18](#ref18),[19](#ref19)</sup>
+**Agenda setting.** Research questions are co-developed.<sup>[18](#ref18),[19](#ref19)</sup>
 
-**Local infrastructure and capacity.** We use Kenyan laboratories, institutions, and services where feasible rather than defaulting to shipping everything to Florida, and every project carries an explicit capacity-building component. TRUST Code Article 20 requires a capacity-building plan; Rule 7 and Rule 8 of the helicopter-research guidance say the same in operational terms.<sup>[17](#ref17),[18](#ref18)</sup>
+**Local infrastructure and capacity.** We use Kenyan laboratories, institutions, and services where feasible, and every project carries an explicit capacity-building component. TRUST Code Article 20 requires a capacity-building plan. See also Rules 7 and 8 of the helicopter-research guidance.<sup>[17](#ref17),[18](#ref18)</sup>
 
-**Dissemination.** Results return to Kenyan audiences, in accessible form, and not only through paywalled journals. Local dissemination is a project deliverable.<sup>[18](#ref18),[22](#ref22)</sup>
+**Dissemination.** Results are returned to Kenyan audiences through a non-paywalled channel. Local dissemination is a project deliverable.<sup>[18](#ref18),[22](#ref22)</sup>
 
 **Community rights and traditional knowledge.** Where community rights or associated traditional knowledge attach to a sampling locality, Prior Informed Consent must be obtained in accordance with the customary laws, practices, protocols, and procedures of that community, per regulation 12 of Legal Notice 68. Data and metadata associated with such localities are governed by the CARE Principles for Indigenous Data Governance: Collective Benefit, Authority to Control, Responsibility, and Ethics.<sup>[1](#ref1),[20](#ref20)</sup>
 

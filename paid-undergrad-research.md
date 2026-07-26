@@ -16,8 +16,8 @@ Several routes let undergraduates get paid to do research here. Two are open on 
 ## Start here
 
 1. **Email me.** Subject line "Undergraduate research: [your name]." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph. Attach a transcript if you have one. I reply within about a week.
-2. **Agree on a project.** Every competitive award below needs a named mentor and a specific project. None of them can be applied for cold.
-3. **Work backwards from the deadline.** Most UF programmes need a departmental nomination, and departments set internal deadlines weeks before the college one. Ask in the fall about a February deadline.
+2. **Agree on a project.** Every competitive award below needs a named mentor and a specific project.
+3. **Work backwards from the deadline.** University Scholars and Summer International Research need a departmental nomination, and departments set internal deadlines weeks before the college one. Ask in the fall about a February deadline. Emerging Scholars closes in late November, so start earlier.
 4. **Ask me for a letter at least three weeks out**, and send me your draft and the prompt when you ask.
 
 **Emerging Scholars requires that you have no prior university research experience.** If you are eligible, apply for it **before** you start a paid or for-credit position.

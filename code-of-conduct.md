@@ -14,13 +14,13 @@ This document sets out how the Dutton Lab works: what members can expect from th
 
 This document is drafted with the whole group, revised on a schedule, and kept consistent with institutional policy.<sup>[9](#ref9),[5](#ref5)</sup>
 
-Expectations differ by career stage. Each role-specific section below is **two-way**: it states what the mentee owes and what the mentor owes.<sup>[5](#ref5)</sup>
+Each role-specific section below states what the mentee owes and what the mentor owes.<sup>[5](#ref5)</sup>
 
 ## Mentoring Philosophy
 
-Mentorship is a working alliance built on trust and reciprocity rather than a transfer of instructions, and effective mentorship measurably improves retention, particularly for women, first-generation students, and students from historically underrepresented groups. Fewer than half of undergraduate faculty believe their institution considers mentoring in promotion review, and only about a fifth of undergraduate science and engineering majors strongly agree that they had a mentor.<sup>[1](#ref1)</sup>
+Mentorship improves retention, including for women, first-generation students, and students from historically underrepresented groups. Fewer than half of undergraduate faculty believe their institution considers mentoring in promotion review, and only about a fifth of undergraduate science and engineering majors strongly agree that they had a mentor.<sup>[1](#ref1)</sup>
 
-The Principal Investigator's commitments to every member: regular scheduled meetings that are not cancelled by default; timely feedback on written work; honest assessment of progress, including when it is not going well; advocacy in the form of letters, introductions, and nominations; support for career paths outside academia without penalty; and mentor training on the PI's own part, including cultural humility and implicit bias.<sup>[1](#ref1),[8](#ref8)</sup>
+The Principal Investigator commits to every member: scheduled meetings that are not cancelled by default; feedback on written work; assessment of progress, including when it is not going well; advocacy in the form of letters, introductions, and nominations; support for career paths outside academia without penalty; and mentor training on the PI's own part, including cultural humility and implicit bias.<sup>[1](#ref1),[8](#ref8)</sup>
 
 ## Expectations by Role
 
@@ -50,13 +50,13 @@ Field operations in Kenya are run by **Soiyou Adventures**, whose staff are empl
 
 The laboratory holds a standing lab meeting and a journal club, and the PI holds individual meetings with each member. Cadence is set at the start of each semester and posted. Scheduled meetings are not displaced by travel.
 
-**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline, and members should not infer one. During field seasons, coverage and response expectations are set explicitly in the pre-departure meeting. Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Where a season would necessarily exceed an appointment's FTE cap, the reconciliation (comp time on return, a temporary FTE increase, or supplemental pay) is agreed with UF HR before departure.
+**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline. During field seasons, coverage and response expectations are set explicitly in the pre-departure meeting. Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Where a season would necessarily exceed an appointment's FTE cap, the reconciliation (comp time on return, a temporary FTE increase, or supplemental pay) is agreed with UF HR before departure.
 
 ## Hours, Leave, and Wellbeing
 
 Graduate assistant workload is governed by the collective bargaining agreement between the UF Board of Trustees and Graduate Assistants United. **A 0.50 FTE appointment means an average of no more than 20 hours per week; 0.33 FTE means no more than 13.3 hours; 0.25 FTE means no more than 10 hours.** The agreement also provides five days of paid personal leave per semester appointment and six weeks of unpaid parental or medical leave per twelve months, with continued University health premium contributions and the right to return to the same or a similar position.<sup>[27](#ref27),[28](#ref28)</sup>
 
-Members should note that the most recent agreement posted by UF Human Resources is the 2021 to 2023 contract and is nominally expired, with no successor posted. The laboratory treats those workload and leave terms as the operative floor regardless, and members should confirm current entitlements with UF HR or GAU.<sup>[27](#ref27)</sup>
+The most recent agreement posted by UF Human Resources is the 2021 to 2023 contract and is nominally expired, with no successor posted. The laboratory treats those workload and leave terms as the operative floor. Confirm current entitlements with UF HR or GAU.<sup>[27](#ref27)</sup>
 
 Beyond the contractual floor, standard working hours, weekends, and vacation are respected, and schedule autonomy is preferred over mandated hours, against the background of a documented mental health crisis in graduate education.<sup>[6](#ref6),[26](#ref26)</sup>
 
@@ -82,13 +82,13 @@ Several policies route a decision or a contact to the **Department Chair** becau
 
 ## Culture and Psychological Safety
 
-The organising concept here is **psychological safety**: a shared belief that the team is safe for interpersonal risk-taking. It is a measured construct that predicts team learning behaviour and, through it, performance.<sup>[11](#ref11)</sup>
+**Psychological safety** is a shared belief that the team is safe for interpersonal risk-taking. It is a measured construct that predicts team learning behaviour and, through it, performance.<sup>[11](#ref11)</sup>
 
-In practice this means: mistakes and failed experiments are reported early and without penalty; rejection and failure are discussed openly rather than hidden; and disagreement with the PI is expected and protected. If you think an analysis is wrong, say so, including when it is the PI's analysis.<sup>[6](#ref6),[10](#ref10)</sup>
+Mistakes and failed experiments are reported early and without penalty; rejection and failure are discussed at lab meeting; and disagreement with the PI is expected and protected. If you think an analysis is wrong, say so, including when it is the PI's analysis.<sup>[6](#ref6),[10](#ref10)</sup>
 
-Members hold named, expected roles in maintaining this culture, not only the PI. These include onboarding help for new members, skill-sharing sessions, peer mentoring, and watching out for colleagues' wellbeing.<sup>[10](#ref10)</sup>
+Members hold named roles in maintaining this culture: onboarding help for new members, skill-sharing sessions, and peer mentoring.<sup>[10](#ref10)</sup>
 
-We follow the Ecological Society of America Code of Ethics, whose provisions on general conduct, professional practice, and publication apply to everything this laboratory does, including its obligations to minimise harm to ecosystems and to engage meaningfully with local communities.<sup>[12](#ref12)</sup>
+We follow the Ecological Society of America Code of Ethics, whose provisions on general conduct, professional practice, and publication apply, including the obligations to minimise harm to ecosystems and to engage with local communities.<sup>[12](#ref12)</sup>
 
 ## Harassment, Discrimination, and Reporting
 
@@ -98,7 +98,7 @@ Fewer than half of surveyed researchers recalled ever encountering a code of con
 
 **Protected categories.** UF Regulation 1.006 prohibits discrimination and harassment on the basis of race, creed, colour, religion, age, disability, sex, sexual orientation, gender identity and expression, marital status, national origin, political opinions or affiliations, genetic information, and veteran status.<sup>[19](#ref19)</sup>
 
-**Mandatory reporting.** Under UF Policy 5-003, **every UF employee** who receives information about, observes, or suspects prohibited conduct must promptly report it to the Title IX Office. UF operates no "responsible employee" tier, so the Principal Investigator, laboratory staff, and graduate assistants are all covered. If you tell any of us, we are required to pass it on. This obligation is set by UF and cannot be waived by the laboratory. You are not required to report conduct you experienced yourself.<sup>[29](#ref29)</sup>
+**Mandatory reporting.** Under UF Policy 5-003, **every UF employee** who receives information about, observes, or suspects prohibited conduct must promptly report it to the Title IX Office. UF operates no "responsible employee" tier, so the Principal Investigator, laboratory staff, and graduate assistants are all covered. This obligation is set by UF and cannot be waived by the laboratory. You are not required to report conduct you experienced yourself.<sup>[29](#ref29)</sup>
 
 **The Ombuds is not a confidential route for harassment.** UF's Ombuds holds communications in confidence except where there is imminent risk of serious harm **or in cases involving sexual harassment**. The Ombuds is available for supervision disputes, workload, and interpersonal conflict.<sup>[18](#ref18),[14](#ref14)</sup>
 
@@ -118,13 +118,13 @@ Notebook discipline, version control, and data retention are governed by the [Da
 
 ## Authorship and Credit
 
-Authorship is governed by the [Collaboration and Authorship Policy](/authorship/) and awarded on actual contribution. Consistent with ESA publication standards: authorship requires substantial contribution; the author list is not changed without the consent of those affected; all coauthors approve the final manuscript; work is not submitted to more than one journal at a time; and post-submission errors are corrected promptly.<sup>[12](#ref12),[6](#ref6)</sup>
+Authorship is governed by the [Collaboration and Authorship Policy](/authorship/) and awarded on contribution. Consistent with ESA publication standards: authorship requires substantial contribution; the author list is not changed without the consent of those affected; all coauthors approve the final manuscript; work is not submitted to more than one journal at a time; and post-submission errors are corrected promptly.<sup>[12](#ref12),[6](#ref6)</sup>
 
-Instrument use in this laboratory is logged through the equipment scheduling application. Those records are one input among several and are never the sole basis for a contribution determination, since they capture bench time on Gainesville instruments and are structurally blind to analysis, writing, study design, and all fieldwork. They are not used for employment, hours, or performance purposes.
+Instrument use in this laboratory is logged through the equipment scheduling application. Those records are one input among several and are never the sole basis for a contribution determination, since they record only bench time on Gainesville instruments and do not record analysis, writing, study design, or fieldwork. They are not used for employment, hours, or performance purposes.
 
 ## International Collaboration
 
-Members working on the Kenya programme are expected to follow equitable partnership practice: co-developed research agendas, authorship for local intellectual contributions, use of local infrastructure and local sample processing where feasible, local specimen deposition, compliance with local law and permitting, an explicit capacity-building component, and dissemination back to local audiences in open access. These are auditable commitments, set out in full in the [International Research Partnership Policy](/international-partnership/).<sup>[16](#ref16),[12](#ref12)</sup>
+Members working on the Kenya programme are expected to follow equitable partnership practice: co-developed research agendas, authorship for local intellectual contributions, use of local infrastructure and local sample processing where feasible, local specimen deposition, compliance with local law and permitting, an explicit capacity-building component, and dissemination back to local audiences in open access. These are set out in full in the [International Research Partnership Policy](/international-partnership/).<sup>[16](#ref16),[12](#ref12)</sup>
 
 ## Onboarding and Departure
 

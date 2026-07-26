@@ -26,7 +26,7 @@ Each policy carries an effective date and a last-reviewed date, cites its source
 
 ### [Reproducibility Handbook](/reproducibility/)
 
-Preparing a computational manuscript for submission: pinning package versions with renv, setting up the repository, the metadata files, depositing at Zenodo and NCBI SRA, cross-linking the DOIs, and the Data Availability Statement. Written as a worked method with a public example repository.
+Preparing a computational manuscript for submission: pinning package versions with renv, setting up the repository, the metadata files, depositing at Zenodo and NCBI SRA, cross-linking the DOIs, and the Data Availability Statement. Includes a public example repository.
 
 ---
 

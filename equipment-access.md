@@ -10,7 +10,7 @@ permalink: /equipment-access/
 
 ## Purpose and Scope
 
-This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. It exists because the [Collaboration and Authorship Policy](/authorship/) defines two models of engagement for external users of our equipment, the Service and Access Model and the Collaborative Model, but describes only their authorship consequences. This document supplies the operational pathway: how someone actually obtains access, what training is required, who pays for what, and how usage is recorded.
+This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. The Service and Access Model and the Collaborative Model are defined in the [Collaboration and Authorship Policy](/authorship/), which states only their authorship consequences. This policy sets the access, training, cost, and recording requirements for both.
 
 Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling robots, Oxford Nanopore MinION sequencers, TapeStation and Bioanalyzer, QuantStudio 3 and Chai qPCR instruments, Absolute Q digital PCR, thermocyclers, and centrifuges, together with our allocation on the UF HiPerGator cluster.
 
@@ -18,9 +18,9 @@ Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling rob
 
 **The engagement model is agreed in writing before access is granted, not after data exist.**
 
-**Service and Access Model.** The external researcher operates independently using standard protocols, performs their own analysis, and receives no significant technical input from laboratory members. They are responsible for their own consumables. Attribution is to the Acknowledgments section, naming the laboratory and the funding source for the instrument. **Authorship is not warranted.**
+**Service and Access Model.** The external researcher operates independently using standard protocols, performs their own analysis, and receives no technical input from laboratory members beyond instrument training. They are responsible for their own consumables. Attribution is to the Acknowledgments section, naming the laboratory and the funding source for the instrument. **Authorship is not warranted.**
 
-**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of complex datasets. Laboratory members involved in the technical work **must be afforded the opportunity** to contribute to study design and data interpretation. Where they contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted and expected** under the four ICMJE criteria set out in the [Collaboration and Authorship Policy](/authorship/).
+**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of the resulting data. Laboratory members involved in the technical work **must be afforded the opportunity** to contribute to study design and data interpretation. Where they contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted and expected** under the four ICMJE criteria set out in the [Collaboration and Authorship Policy](/authorship/).
 
 Where the model is unclear at the outset, the default is the Collaborative Model, and the parties revisit the question at the first data review.
 
@@ -36,13 +36,13 @@ Where the model is unclear at the outset, the default is the Collaborative Model
 
 No member or external user operates an instrument unsupervised unless trained and certified on it; supervised hands-on training by a certified member is how certification is obtained. Certification is instrument-specific and recorded in the laboratory training register with the trainer's name and date. Members ask the PI for training; there is no separate application.
 
-An incorrectly written Opentrons protocol runs to completion without raising an error, and the resulting fault may not be detectable until the sequencing data are analysed. **Every new or modified protocol is dry-run without reagents before its first live run**, and protocol files are version-controlled under the [Data and Code Management Policy](/data-management/) rather than kept on a local desktop.
+Because an incorrectly written Opentrons protocol runs to completion without raising an error, **every new or modified protocol is dry-run without reagents before its first live run**. Protocol files are version-controlled under the [Data and Code Management Policy](/data-management/).
 
 Occupational health requirements are set by UF rather than by this laboratory; see the [Field Safety and Travel Policy](/field-safety/).<sup>[2](#ref2),[3](#ref3)</sup>
 
 ## Scheduling and Effort Attribution
 
-All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). Booking coordinates access across concurrent projects and creates a record of who did what, on which project, and when.
+All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). The booking record captures user, project, instrument, and time.
 
 That record is also a credit mechanism. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
 
@@ -65,11 +65,11 @@ Members report instrument faults immediately rather than working around them. An
 
 Data generated by laboratory members is subject to the [Data and Code Management Policy](/data-management/), including its metadata, deposition, and retention requirements. Data generated independently by an external user under the Service and Access Model is governed by their written agreement, not by that policy. Original research records remain with the University when personnel depart; departing individuals may take copies and remain bound by confidentiality obligations.<sup>[1](#ref1)</sup>
 
-External users retain rights in their own data as set out in their written agreement. Where an agreement is silent, the matter is resolved before any publication rather than after.
+External users retain rights in their own data as set out in their written agreement. Where an agreement is silent, the matter is resolved before any publication.
 
 ## Review
 
-This policy is reviewed annually and whenever significant instrumentation is added to the laboratory.
+This policy is reviewed annually and whenever new instrumentation is added to the laboratory.
 
 ---
 

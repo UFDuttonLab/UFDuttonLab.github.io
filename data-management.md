@@ -51,31 +51,31 @@ Metadata is recorded at the bench and at the sampling point, not added at the en
 | Sensor and chemistry time series | EML 2.2.0 | Deposited at EDI, not NCBI |
 | eDNA detections, telemetry occurrences | Darwin Core | Not applicable |
 
-MIxS is a living standard; the current release is **v6.3.1, 14 July 2026**, while NCBI packages sit at the 6.0 series. **Record which version was used for each submission.**<sup>[17](#ref17),[18](#ref18),[19](#ref19),[23](#ref23)</sup>
+The current MIxS release is **v6.3.1, 14 July 2026**, while NCBI packages sit at the 6.0 series. **Record which version was used for each submission.**<sup>[17](#ref17),[18](#ref18),[19](#ref19),[23](#ref23)</sup>
 
-The laboratory adopts the **Gold tier** of the published tier-based standards for FAIR sequence data and metadata sharing in microbiome research. In practice that means non-paywalled sequences with accessions in FASTQ or BCL; documented sequencing method; **PCR primer sequences recorded for every amplicon study**; no login barrier to access; an explicit data-access statement; and **analysis code published alongside the data**.<sup>[20](#ref20)</sup>
+The laboratory adopts the **Gold tier** of the published tier-based standards for FAIR sequence data and metadata sharing in microbiome research. The Gold tier requires non-paywalled sequences with accessions in FASTQ or BCL; documented sequencing method; **PCR primer sequences recorded for every amplicon study**; no login barrier to access; an explicit data-access statement; and **analysis code published alongside the data**.<sup>[20](#ref20)</sup>
 
-Sensor and chemistry time series are described in **Ecological Metadata Language 2.2.0** and deposited at the **Environmental Data Initiative**, validated with the EML Congruence Checker or ezEML. Note that EDI's default licence is CC0 1.0 and that **a data package that does not allow public access to both metadata and data will not receive a DOI**.<sup>[29](#ref29),[30](#ref30)</sup>
+Sensor and chemistry time series are described in **Ecological Metadata Language 2.2.0** and deposited at the **Environmental Data Initiative**, validated with the EML Congruence Checker or ezEML. EDI's default licence is CC0 1.0, and **a data package that does not allow public access to both metadata and data will not receive a DOI**.<sup>[29](#ref29),[30](#ref30)</sup>
 
-Occurrence records derived from eDNA detections or telemetry are expressed in **Darwin Core**, whose scope explicitly extends to metagenomics and genetic resources rather than being limited to museum specimens.<sup>[27](#ref27),[28](#ref28)</sup>
+Occurrence records derived from eDNA detections or telemetry are expressed in **Darwin Core**, whose scope covers metagenomics and genetic resources.<sup>[27](#ref27),[28](#ref28)</sup>
 
 ## After a Sequencing Run
 
 Complete the following on the day the run finishes.
 
-1. **Copy the complete run output to the RAID array in the PI's office.** Complete means the raw signal-level files as well as the basecalled reads: POD5, or FAST5 on older MinION runs, for Nanopore, and BCL for any outsourced Illumina run. Signal files are retained because re-basecalling with a later model requires them.
+1. **Copy the complete run output to the RAID array in the PI's office.** Complete means the raw signal-level files as well as the basecalled reads: POD5, or FAST5 on older MinION runs, for Nanopore, and BCL for any outsourced Illumina run. Retain the signal files; re-basecalling with a later model requires them.
 2. **Upload one working copy to `/blue`** for analysis. That is a working copy, not a second archive.
-3. **Register the BioProject and BioSamples now**, with the release date set to the expected publication date, per the workflow below.
+3. **Register the BioProject and BioSamples and upload the reads to SRA now**, with the release date set to the expected publication date, per the workflow below.
 
-**The RAID is the first copy, not the archive.** RAID protects against a single disk failing. It does not protect against fire, theft, flood, a controller failure that takes the whole array, ransomware, or somebody deleting the wrong directory. The office and HiPerGator are also on the same campus, so neither is a meaningful backup of the other. A registered submission under hold is the only copy that is off site and independently managed.
+**The RAID is the first copy, not the archive.** RAID protects against a single disk failing, not against fire, theft, flood, controller failure, ransomware, or deletion. The office and HiPerGator are on the same campus, so neither counts as an off-site copy. A registered submission under hold is the only copy that is off site and independently managed.
 
 ## Deposition Workflow
 
 **A manuscript produces three deposits, and they are cross-linked.** Raw reads go to **NCBI SRA**, which gives an accession rather than a DOI and is released on a date you set. Processed data objects go to **Zenodo** as a dataset record with a permanent DOI. Code goes to **GitHub and is archived to Zenodo** on release, also with a DOI. Each record carries related-identifier links to the other two, and all three appear in the Data Availability Statement. The step-by-step method, including the metadata file templates, is in the [Reproducibility Handbook](/reproducibility/).
 
-**BioProject registration is mandatory** before any SRA, WGS, or TSA submission, and grant information is captured in the BioProject record so that funder reporting resolves cleanly.<sup>[21](#ref21)</sup>
+**BioProject registration is mandatory** before any SRA, WGS, or TSA submission, and grant information is captured in the BioProject record so that funder reporting is linked to the award.<sup>[21](#ref21)</sup>
 
-Populate the SRA object model as NCBI documents it. Two rules apply: **EXPERIMENT is the primary publishable unit**, defined by the combination of library, sequencing strategy, layout, and instrument model, so it needs a real title and description rather than a filename; and **never mix samples or experiments within a single RUN**.<sup>[22](#ref22),[25](#ref25)</sup>
+Populate the SRA object model as NCBI documents it. Two rules apply: **EXPERIMENT is the primary publishable unit**, defined by the combination of library, sequencing strategy, layout, and instrument model, so its title and description must state the library, strategy, layout, and instrument model; and **never mix samples or experiments within a single RUN**.<sup>[22](#ref22),[25](#ref25)</sup>
 
 Standing operational rule: **register the BioProject and BioSamples at sequencing time, not at manuscript time.** Set the SRA release date to the anticipated publication date and release immediately on acceptance. The hold is set per BioProject and propagates to all associated BioSamples and runs. NCBI documents no maximum hold period, but our hold must not extend past publication or the end of the performance period, whichever comes first, per NIH policy.<sup>[26](#ref26),[1](#ref1)</sup>
 
@@ -89,21 +89,21 @@ Analyses are written as **R Markdown or Quarto documents executed through knitr*
 
 **`renv` is mandatory per project.** Run `renv::init()` at project creation, `renv::snapshot()` before every release or manuscript submission, and commit `renv.lock` to version control.<sup>[36](#ref36)</sup>
 
-Practices adopted directly from the reproducibility literature: record how every result was produced; avoid manual data manipulation; archive the exact versions of all software used; version-control all scripts; record random seeds; store the data underlying every plot; preserve raw data untouched and document all processing; keep code modular; and use a systematic project layout.<sup>[31](#ref31),[32](#ref32)</sup>
+Required practices: record how every result was produced; avoid manual data manipulation; archive the exact versions of all software used; version-control all scripts; record random seeds; store the data underlying every plot; preserve raw data untouched and document all processing; keep code modular; and use a systematic project layout.<sup>[31](#ref31),[32](#ref32)</sup>
 
 **Every repository carries a LICENSE file** before archiving. Default recommendations are MIT for permissive reuse and GPLv3 where share-alike is wanted.<sup>[33](#ref33),[35](#ref35)</sup>
 
-**Code is archived at publication with a DOI.** Enable the repository in Zenodo, then cut a GitHub release; Zenodo issues a new DOI for each release. Two hard constraints: **Zenodo can only access public repositories**, and **no release means no DOI**. Organization-owned repositories may require owner approval of Zenodo's OAuth grant.<sup>[33](#ref33),[34](#ref34)</sup>
+**Code is archived at publication with a DOI.** Enable the repository in Zenodo, then cut a GitHub release; Zenodo issues a new DOI for each release. Two constraints: **Zenodo can only access public repositories**, and **no release means no DOI**. Organization-owned repositories may require owner approval of Zenodo's OAuth grant.<sup>[33](#ref33),[34](#ref34)</sup>
 
 Because NSF's research misconduct definition now explicitly encompasses AI-based tools, **AI-assisted code and analysis must be disclosed** consistent with the [Artificial Intelligence Use Policy](/ai-policy/).<sup>[11](#ref11)</sup>
 
 ## Storage on HiPerGator
 
-**Nothing on HiPerGator is backed up by default.** UF Research Computing states this plainly: the storage systems are not backed up by default, and users are responsible for purchasing backup services or setting up their own backups.<sup>[38](#ref38),[39](#ref39),[41](#ref41)</sup>
+**Nothing on HiPerGator is backed up by default.** UF Research Computing states that the storage systems are not backed up by default and that users are responsible for purchasing backup services or setting up their own backups.<sup>[38](#ref38),[39](#ref39),[41](#ref41)</sup>
 
 * `/home` provides **40 GB** per user, for source code, scripts, and project documents. It **must not be used for job input or output**. The only recovery available without purchase is snapshots at `~/.snapshot/`: **daily for one week plus weekly for three additional weeks**.<sup>[38](#ref38),[39](#ref39)</sup>
 * `/blue` is the primary location for all files read or written during job execution, and requires an active compute allocation.<sup>[38](#ref38),[39](#ref39)</sup>
-* `/orange` is the archival tier and **requires an active `/blue` allocation**. This means that losing a compute allocation cascades into losing archival storage eligibility. **Project close triggers a mandatory off-HiPerGator egress review.**<sup>[38](#ref38)</sup>
+* `/orange` is the archival tier and **requires an active `/blue` allocation**; loss of the compute allocation ends `/orange` eligibility. **Project close triggers a mandatory off-HiPerGator egress review.**<sup>[38](#ref38)</sup>
 * `/red` data is **removed 24 hours after allocation expiration**, and local scratch is destroyed at job end and is irretrievably lost. Neither is ever a data-of-record location.<sup>[38](#ref38),[39](#ref39)</sup>
 * Backup on `/blue` and `/orange` can be purchased through UF Tivoli; current pricing and version-retention terms are on the UF Research Computing page.<sup>[40](#ref40)</sup>
 
@@ -133,7 +133,7 @@ Before any account is deprovisioned, the departing member receives a complete co
 
 Offboarding checklist:
 
-1. All data of record deposited to SRA or EDI under a **laboratory-owned account, not a personal one**; code archived to Zenodo with a DOI. `/orange` is a working copy only and is never an acceptable sole location, for the allocation-cascade reason above.
+1. All data of record deposited to SRA or EDI under a **laboratory-owned account, not a personal one**; code archived to Zenodo with a DOI. `/orange` is a working copy only and is never an acceptable sole location.
 2. All GitHub repositories transferred to the laboratory organization before the individual's account is deprovisioned.
 3. `renv.lock` and rendered outputs committed; final `renv::snapshot()` run.
 4. BioProject, BioSample, and SRA submissions reconciled and release dates confirmed.

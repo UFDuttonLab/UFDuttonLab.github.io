@@ -51,7 +51,7 @@ Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA
 
 Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **UF Research Abroad**, the **UF Biology department awards** once you are enrolled, and, if you are a Kenyan citizen or permanent resident, **Fogarty**.
 
-Terms for departmental assistantships, including the hours each FTE level corresponds to, are in the [Laboratory Code of Conduct](/code-of-conduct/).
+A departmental assistantship is the usual route. Terms, including the hours each FTE level corresponds to, are in the [Laboratory Code of Conduct](/code-of-conduct/).
 
 ---
 
@@ -306,8 +306,6 @@ Amounts range from a few hundred dollars to $4,000 and change year to year.
 ---
 
 ## No longer accepting applications
-
-Both still circulate on funding lists.
 
 - **Ford Foundation Fellowships.** The programme is winding down; 2023 was the last full cohort.
 - **EPA STAR Graduate Fellowships.** Ended in 2015.

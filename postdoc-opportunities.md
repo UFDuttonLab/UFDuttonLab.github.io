@@ -6,7 +6,7 @@ permalink: /postdoc-opportunities/
 
 ## Prospective Postdoctoral Researchers
 
-I welcome enquiries from postdoctoral researchers working on ecosystem ecology, microbial ecology, conservation genomics, or environmental DNA.
+I take enquiries from postdoctoral researchers working on ecosystem ecology, microbial ecology, conservation genomics, or environmental DNA.
 
 Almost everything below is a fellowship you bring with you rather than a position I advertise. If I have a funded line open I will say so in reply. Because most routes need a host, a jointly written proposal, and letters, start the conversation several months before any deadline, and ask me for a letter at least three weeks out with your draft and the prompt attached.
 
@@ -63,14 +63,12 @@ What the lab commits to on the mentoring side, including protected time for inde
 
 #### NSF Postdoctoral Research Fellowships in Biology
 
-**This programme changed substantially in 2026. Read the current solicitation rather than any older summary.**
+**This programme changed in 2026. Read the current solicitation.**
 
 **Award:** $110,000/yr ($85,000 stipend plus $25,000 research and training allowance) for 24 months.
 **Deadline:** Late September, annually.
 **Eligibility:** US citizens, nationals, or permanent residents at submission, with no more than 15 full-time months in a position requiring a doctorate before the deadline.
-**Scope:** Solicitation NSF 26-504 replaced NSF 24-593 and narrowed the competition to the intersection of AI and the biological sciences. The earlier Broadening Participation and Rules of Life tracks existed only under the archived solicitation.
-
-If your project is ecology-first rather than AI-first, read the current solicitation before investing time.
+**Scope:** Solicitation NSF 26-504 replaced NSF 24-593 and narrowed the competition to the intersection of AI and the biological sciences. The earlier Broadening Participation and Rules of Life tracks existed only under the archived solicitation. If your project is ecology-first rather than AI-first, read the current solicitation before investing time.
 
 - [NSF PRFB](https://www.nsf.gov/funding/opportunities/prfb-postdoctoral-research-fellowships-biology)
 
@@ -155,7 +153,7 @@ K99/R00 projects require a health framing.
 
 **Award:** $110,000/yr for up to 2 years.
 **Deadline:** Institutional nomination in May, full application in July.
-**Eligibility:** This is a **PhD-completion** fellowship and you must be **nominated by your PhD institution**, so raise it with your graduate programme many months ahead. A researcher already established in a postdoc is generally outside its window.
+**Eligibility:** This is a **PhD-completion** fellowship and you must be **nominated by your PhD institution**, so raise it with your graduate programme many months ahead.
 
 - [Schmidt Science Fellows](https://schmidtsciencefellows.org)
 
