@@ -9,19 +9,19 @@ permalink: /ai-policy/
 ---
 
 ## Purpose and Scope
-This policy establishes guidelines for the responsible use of artificial intelligence (AI) tools in all laboratory research activities, including data analysis, manuscript preparation, grant writing, and peer review. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, and staff) must adhere to these standards to maintain scientific integrity, comply with federal regulations, and uphold ethical research practices.<sup>[1](#ref1),[2](#ref2),[3](#ref3)</sup>
+This policy establishes guidelines for the responsible use of artificial intelligence (AI) tools in all laboratory research activities, including data analysis, manuscript preparation, grant writing, and peer review. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, and staff) must adhere to these standards to maintain scientific integrity and comply with federal regulations.<sup>[1](#ref1),[2](#ref2),[3](#ref3)</sup>
 
 ## Core Principles
-Laboratory AI use is guided by three foundational principles:
+Laboratory AI use is guided by three principles:
 * **Transparency:** Full disclosure of AI applications in research outputs.
 * **Accountability:** Humans remain solely responsible for the accuracy and integrity of all AI-generated outputs.
 * **Human Oversight:** AI tools must be used to augment, not replace, critical thinking and scientific judgment.<sup>[1](#ref1),[2](#ref2),[4](#ref4)</sup>
 
 ## Permitted Uses
-AI tools may be used for the following purposes with appropriate verification and disclosure. **Every permitted use below is subject to the data classification rules in [Data Protection and Privacy](#data-protection-and-privacy).** In practice this means the activity is permitted on a public platform only where the material you paste in is Open; where it is Sensitive or Restricted, which covers anything unpublished or confidential, the same activity is permitted only in an institutionally approved secure environment. Credentials are never pasted into any AI tool, secure environment included. Writing and grant drafting assistance are the common cases: a public platform is fine for general phrasing questions, and not for pasting in an unpublished manuscript or an unsubmitted proposal.
+AI tools may be used for the following purposes with appropriate verification and disclosure. **Every permitted use below is subject to the data classification rules in [Data Protection and Privacy](#data-protection-and-privacy).** In practice this means the activity is permitted on a public platform only where the material you paste in is Open; where it is Sensitive or Restricted, which covers anything unpublished or confidential, the same activity is permitted only in an institutionally approved secure environment. Credentials are never pasted into any AI tool, secure environment included. For writing and grant drafting assistance, a public platform may be used for general phrasing questions. Unpublished manuscripts and unsubmitted proposals are not entered into a public platform.
 
 1.  **Bioinformatics Workflows:** Including sequence quality control, taxonomic classification assistance, and metagenomic binning support.<sup>[5](#ref5),[6](#ref6),[7](#ref7)</sup>
-2.  **Literature Review:** Assisting in summarizing vast literature and hypothesis generation (must be verified against primary sources).
+2.  **Literature Review:** Summarizing literature and generating hypotheses (must be verified against primary sources).
 3.  **Data Visualization & Statistics:** Generating code for plots or suggesting statistical approaches.
 4.  **Writing Assistance:** Improving manuscript language, grammar, flow, and readability.
 5.  **Coding Assistance:** Debugging scripts and generating analysis pipelines.
@@ -43,7 +43,7 @@ The following applications are **strictly forbidden**:
 Researchers must classify data according to [UF's Data Classification Policy](https://policy.ufl.edu/policy/data-classification-policy/) before using AI tools.<sup>[1](#ref1),[3](#ref3),[25](#ref25)</sup>
 
 * **Public AI Platforms:** (e.g., ChatGPT, Claude, Gemini) may process data classified as Open under UF's Data Classification Policy. Note that "de-identified" is a human subjects concept: environmental sequence data contains no personal identifiers but is still **Sensitive** while unpublished, and Sensitive data does not go into a public platform.<sup>[2](#ref2),[12](#ref12),[23](#ref23)</sup>
-* **Sensitive and Restricted Data:** UF classifies research work in progress as **Sensitive** and applies **Restricted** to data bound by law, regulation, or contract. Both, including unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, requires the use of institutionally approved, secure AI environments (e.g., UF HiPerGator AI protected instances) or must not be processed through AI systems.<sup>[1](#ref1),[2](#ref2),[3](#ref3),[12](#ref12)</sup>
+* **Sensitive and Restricted Data:** UF classifies research work in progress as **Sensitive** and applies **Restricted** to data bound by law, regulation, or contract. Both categories, which include unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, require an institutionally approved, secure AI environment (e.g., UF HiPerGator AI protected instances), or must not be processed through AI systems at all.<sup>[1](#ref1),[2](#ref2),[3](#ref3),[12](#ref12)</sup>
 
 *When in doubt, consult with laboratory leadership before entering data into any AI tool.*
 
@@ -56,7 +56,7 @@ All AI use in research outputs requires transparent disclosure.<sup>[1](#ref1),[
 *Authors remain fully responsible for accuracy, originality, and integrity of all work regardless of AI involvement.*<sup>[8](#ref8),[13](#ref13),[15](#ref15)</sup>
 
 ## Quality Control and Validation
-All AI-generated outputs must undergo rigorous human verification.<sup>[1](#ref1),[4](#ref4),[17](#ref17)</sup> Researchers must:
+All AI-generated outputs must undergo human verification.<sup>[1](#ref1),[4](#ref4),[17](#ref17)</sup> Researchers must:
 
 1.  Validate all data interpretations, statistical results, and biological conclusions.
 2.  Check for algorithmic bias, particularly in taxonomic classifications and functional predictions.<sup>[5](#ref5),[7](#ref7)</sup>

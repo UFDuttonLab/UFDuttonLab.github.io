@@ -82,7 +82,7 @@ Part of your wages is federally covered, which makes you cheaper for a PI to hir
 ### BSC 4910, BSC 4912, BOT 4911, ZOO 4911
 
 **Credits:** 0 to 4. Registering for 0 credits costs nothing. Registering for 1 to 4 adds to your semester load, so check with your adviser whether it pushes you past your tuition cap before you register.
-**Proposal:** Due **the week before drop/add**, which is earlier than drop/add itself.
+**Proposal:** Due **the week before drop/add**.
 **Final report:** Due **by noon** on the last day of instruction. Missing it is an automatic NG, no grade.
 **Report length:** Minimum 750, 1,300, 1,600, and 1,800 words for 1, 2, 3, and 4 credits.
 **Caps:** Up to 6 credits in CLAS Biology, up to 3 in CALS.
@@ -91,7 +91,7 @@ Biology majors taking BSC 4910 or BOT 4911 for the first time also enroll in **B
 
 Other departments use their own numbers, including ALS 4911, BCH 4905, MCB 4905, AGR 4911, BMS 4905, and IDH 4917.
 
-Every undergraduate in the lab also completes responsible conduct of research instruction. Ask me which one.
+Every undergraduate in the lab also completes responsible conduct of research training. Ask me which course applies to you.
 
 - [Application forms](https://biology.ufl.edu/undergraduates/research/)
 - [Entering research](https://major.biology.ufl.edu/do-research/entering-research/)
@@ -125,7 +125,7 @@ The **CLAS University Scholars Award** is the CLAS instance of this same program
 **Deadline:** February.
 **Eligibility:** At least one year of prior UF research experience.
 
-Relevant here because our field programme is in Kenya. Read the [Field Safety and Travel Policy](/field-safety/) before you budget: the lab covers required training, the pre-travel medical consultation, vaccination, chemoprophylaxis, and protective equipment, so those do not come out of your award.
+Our field programme is in Kenya, so read the [Field Safety and Travel Policy](/field-safety/) before you budget: the lab covers required training, the pre-travel medical consultation, vaccination, chemoprophylaxis, and protective equipment, so those do not come out of your award.
 
 - [Summer International Research](https://cur.aa.ufl.edu/summer-undergraduate-international-research-program/)
 

@@ -16,13 +16,13 @@ Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling rob
 
 ## Choosing the Engagement Model Before Access
 
-**The engagement model is agreed in writing before access is granted, not after data exist.** Retrofitting a model onto a completed project is the most common source of authorship disputes involving shared equipment, and this policy is designed to prevent that rather than to adjudicate it.
+**The engagement model is agreed in writing before access is granted, not after data exist.**
 
 **Service and Access Model.** The external researcher operates independently using standard protocols, performs their own analysis, and receives no significant technical input from laboratory members. They are responsible for their own consumables. Attribution is to the Acknowledgments section, naming the laboratory and the funding source for the instrument. **Authorship is not warranted.**
 
-**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of complex datasets. Laboratory members involved in the technical work **must be afforded genuine opportunity** to contribute to study design and data interpretation. Where they contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted and expected** under the four ICMJE criteria set out in the [Collaboration and Authorship Policy](/authorship/).
+**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of complex datasets. Laboratory members involved in the technical work **must be afforded the opportunity** to contribute to study design and data interpretation. Where they contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted and expected** under the four ICMJE criteria set out in the [Collaboration and Authorship Policy](/authorship/).
 
-Where the model is genuinely unclear at the outset, the default is the Collaborative Model, and the parties revisit the question at the first data review.
+Where the model is unclear at the outset, the default is the Collaborative Model, and the parties revisit the question at the first data review.
 
 ## Access Pathway for External Users
 
@@ -36,7 +36,7 @@ Where the model is genuinely unclear at the outset, the default is the Collabora
 
 No member or external user operates an instrument unsupervised unless trained and certified on it; supervised hands-on training by a certified member is how certification is obtained. Certification is instrument-specific and recorded in the laboratory training register with the trainer's name and date. Members ask the PI for training; there is no separate application.
 
-Robotics deserve specific mention. The Opentrons platforms will execute a badly written protocol with complete confidence, and the failure mode is silent: plates are processed, tips are consumed, and the error surfaces only in the sequencing data weeks later. **Every new or modified protocol is dry-run without reagents before its first live run**, and protocol files are version-controlled under the [Data and Code Management Policy](/data-management/) rather than kept on a local desktop.
+An incorrectly written Opentrons protocol runs to completion without raising an error, and the resulting fault may not be detectable until the sequencing data are analysed. **Every new or modified protocol is dry-run without reagents before its first live run**, and protocol files are version-controlled under the [Data and Code Management Policy](/data-management/) rather than kept on a local desktop.
 
 Occupational health requirements are set by UF rather than by this laboratory; see the [Field Safety and Travel Policy](/field-safety/).<sup>[2](#ref2),[3](#ref3)</sup>
 
@@ -44,12 +44,12 @@ Occupational health requirements are set by UF rather than by this laboratory; s
 
 All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). Booking coordinates access across concurrent projects and creates a record of who did what, on which project, and when.
 
-That record is also a credit mechanism, because contribution is often reconstructed from memory months after the work. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
+That record is also a credit mechanism. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
 
 Booking rules:
 
 * Book before use, not after.
-* Cancel bookings you will not use; unused blocks on shared instruments are a real cost to colleagues.
+* Cancel bookings you will not use, so the time is released to other users.
 * Long or overnight runs are flagged at booking so that others can plan around them.
 * Recurring bookings for an entire project period require Principal Investigator approval, which is refused only for a stated scheduling reason and may be raised with the Department Chair if a member believes a refusal is blocking their degree progress.
 
@@ -59,7 +59,7 @@ External users under the Service and Access Model are responsible for their own 
 
 **We do not set our own instrument charges.** Charging any user for instrument time requires a rate established and approved through UF Auxiliary Accounting; users cannot be billed at unapproved rates, and equipment depreciation, which is what "wear" means, is not recoverable in an ordinary fee-for-service activity. If cost recovery ever becomes necessary, it goes through UF Auxiliary Accounting first and this policy is updated to match whatever rate is approved.<sup>[6](#ref6)</sup>
 
-Members report instrument faults immediately rather than working around them. An instrument left in a degraded state generates data that looks fine and is not, which is a research integrity exposure and not merely an inconvenience.<sup>[5](#ref5)</sup>
+Members report instrument faults immediately rather than working around them. An instrument operating in a degraded state can produce invalid data with no visible indication of malfunction, which is a research integrity issue.<sup>[5](#ref5)</sup>
 
 ## Data and Intellectual Property
 

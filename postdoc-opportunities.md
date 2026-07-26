@@ -80,7 +80,7 @@ If your project is ecology-first rather than AI-first, read the current solicita
 **Deadlines:** 8 April, 8 August, 8 December.
 **Eligibility:** US citizens, nationals, or permanent residents.
 
-The postdoctoral equivalent of the F31, and the usual step before K99/R00.
+This is the postdoctoral equivalent of the F31.
 
 - [NIH fellowships](https://www.nigms.nih.gov/training/individual-fellowships)
 

@@ -14,7 +14,7 @@ This policy governs all laboratory fieldwork conducted away from the University 
 
 UF has no field research safety policy, so this document is the operative standard for this laboratory rather than an implementation of a university programme.<sup>[10](#ref10),[11](#ref11)</sup>
 
-This policy is structured around four domains of safety: **physical, social, financial, and psychological**. Field safety documents that address only the first domain systematically fail the people most at risk.<sup>[34](#ref34),[33](#ref33)</sup>
+This policy is structured around four domains of safety: **physical, social, financial, and psychological**.<sup>[34](#ref34),[33](#ref33)</sup>
 
 ## Sponsor Requirements
 
@@ -22,7 +22,7 @@ For every proposal that proposes off-campus or off-site research, the Authorized
 
 Certain funding opportunities additionally require a **Safe and Harassment-free Fieldwork (SAHF) plan** to be submitted to NSF as a supplementary document, reviewed under Broader Impacts. Under the BIO and GEO pilot this is a two-page document submitted in lieu of the organizational plan required by PAPPG Chapter II.E.9, though the AOR certification is still made. Note that the two terms operate at different layers: "Safe and Inclusive Working Environments" remains the live PAPPG certification language, while SAHF is the name of the separate plan document, which was earlier called Safe and Inclusive Fieldwork (SAIF). Members preparing proposals should search for both terms.<sup>[1](#ref1),[2](#ref2),[6](#ref6)</sup>
 
-A SAHF plan must be a complete stand-alone document specific to the project, and it must address four components, which this policy is deliberately organised to supply:
+A SAHF plan must be a complete stand-alone document specific to the project, and it must address four components:
 
 1. The field setting and its unique challenges for the team.
 2. The steps taken to nurture a harassment-free off-site working environment, including codes of conduct and training.
@@ -33,7 +33,7 @@ The requirement extends to all team members collecting data off-site, to subawar
 
 ## Emergency Information
 
-**Filled in before every season and printed in the field pack.** A policy that names hippos, crocodiles, drowning, rabies, and road crashes and then carries no phone number is not a field document.
+**Filled in before every season and printed in the field pack.**
 
 | Contact | Detail |
 | --- | --- |
@@ -50,21 +50,21 @@ A **Field Safety Plan** is the written, per-campaign document described under Fi
 
 ## Pre-Departure Requirements
 
-No laboratory member travels internationally on laboratory business until every verifiable item below is complete and on file: travel registration, confirmation of insurance cover, Travel Authorization and myAssets export review, and the Field Safety Plan. The occupational health and advisory items below are attestations that a step happened, not records the laboratory collects.
+No laboratory member travels internationally on laboratory business until every verifiable item below is complete and on file: travel registration, confirmation of insurance cover, Travel Authorization and myAssets export review, completion of required training, and the Field Safety Plan. The occupational health and advisory items below are attestations that a step happened, not records the laboratory collects.
 
-**Immigration status.** Members who are not US citizens confirm with UF Immigration Services that their status permits re-entry, and check visa appointment availability, **before travel is booked**. Where re-entry risk exists the trip is rescheduled or the role adjusted; nobody is asked to accept immigration risk for a field season. Note that the Smart Traveler Enrollment Program referred to below is a US-citizen service; non-US members should register with their own consulate instead.
+**Immigration status.** Members who are not US citizens confirm with UF Immigration Services that their status permits re-entry, and check visa appointment availability, **before travel is booked**. Where re-entry risk exists the trip is rescheduled or the role adjusted. Note that the Smart Traveler Enrollment Program referred to below is a US-citizen service; non-US members should register with their own consulate instead.
 
 **Travel registration.** All UF faculty, staff, and graduate students travelling abroad on University business are required to register with the UF International Center prior to travel. Undergraduates register through the Student Travel Registry. Registration should not be filed more than six months in advance.<sup>[7](#ref7),[8](#ref8)</sup>
 
-**Insurance.** UF provides comprehensive travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are not covered by that arrangement, and neither are Soiyou Adventures staff, whose cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party actually holds, including confirming with Soiyou for their staff, and purchases evacuation cover for anyone in our own party who would otherwise have none. Nobody deploys uncovered. **Members must not assume this policy covers psychiatric emergencies**; many travel medical policies exclude them, and the laboratory verifies coverage before each field season.<sup>[7](#ref7),[8](#ref8),[27](#ref27)</sup>
+**Insurance.** UF provides travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are not covered by that arrangement, and neither are Soiyou Adventures staff, whose cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party actually holds, including confirming with Soiyou for their staff, and purchases evacuation cover for anyone in our own party who would otherwise have none. Nobody deploys uncovered. **Members must not assume this policy covers psychiatric emergencies**; many travel medical policies exclude them, and the laboratory verifies coverage before each field season.<sup>[7](#ref7),[8](#ref8),[27](#ref27)</sup>
 
-**Travel authorization and equipment.** A Travel Authorization in myUFL and the international travel acknowledgement are required for all foreign travel on University business. Equipment taken abroad, including telemetry receivers, data loggers, and laptops, requires a Foreign Travel Request in the myAssets Portal with pre-approval from UF Asset Management and export control review. This obligation is commonly missed by instrument-carrying field teams.<sup>[9](#ref9)</sup>
+**Travel authorization and equipment.** A Travel Authorization in myUFL and the international travel acknowledgement are required for all foreign travel on University business. Equipment taken abroad, including telemetry receivers, data loggers, and laptops, requires a Foreign Travel Request in the myAssets Portal with pre-approval from UF Asset Management and export control review.<sup>[9](#ref9)</sup>
 
 **Security advisory review.** Kenya currently carries a US Department of State Level 2 advisory, Exercise Increased Caution. The advisory must be re-checked before each season. The Department names specific areas to avoid, including the Kenya-Somalia border counties of Garissa, Wajir, and Mandera, Tana River County and the coast north of Malindi, western Turkana and West Pokot, and the Eastleigh and Kibera neighbourhoods of Nairobi. UFIC asks graduate students planning research in Level 4 countries to contact it directly. Beyond registration and insurance, we could find no published UF approval gate keyed to advisory level, so do not assume one exists in either direction: confirm with UFIC.<sup>[8](#ref8),[12](#ref12)</sup>
 
 **Minors and non-matriculated participants.** If anyone under 18 who is not a matriculated UF student joins field or laboratory work, UF's Youth Compliance policy governs, including registration lead times, background screening, and staffing ratios. Route it through UF Youth Compliance Services rather than through this policy.<sup>[43](#ref43)</sup>
 
-**Occupational health. This laboratory does not set its own vaccination or medication requirements.** Those belong to UF, are set through UF's own risk assessment, and we point to them rather than restate or add to them.
+**Occupational health. This laboratory does not set its own vaccination or medication requirements.** Those are set by UF through its own risk assessment.
 
 * Anyone who handles live animals or unfixed animal tissue, body fluids, or waste, is listed on an IACUC protocol, or accesses ACS-managed facilities enrols in the **UF Animal Contact Program**, which the IACUC verifies. Tetanus immunisation within ten years is required of all participants; rabies immunisation or a positive titre within two years is required of those handling wild, feral, free-roaming, or unvaccinated **carnivores**.<sup>[41](#ref41),[42](#ref42)</sup>
 * Other occupational vaccinations are recommended by the UF Biosafety Office or the IBC through the Biohazard Project Registration risk assessment. Under UF policy vaccination is **voluntary**: where a vaccine is recommended the individual completes the Acceptance, Declination, or Request for Additional Information form, and declining is handled through a UF General Counsel waiver rather than by exclusion from the work. Cost falls on the department or PI, not on the individual.<sup>[11](#ref11)</sup>
@@ -77,9 +77,9 @@ Bite prevention is a laboratory requirement rather than a medical decision: EPA-
 
 **Training.** Before first deployment, every member completes wilderness first aid, harassment intervention training, and the pre-trip meeting described below.<sup>[33](#ref33)</sup>
 
-## Water Contact: The Central Hazard
+## Water Contact
 
-The laboratory's work requires contact with Mara River and hippo-pool water. Members must understand that this is an accepted, quantified risk rather than a neutral activity.
+The laboratory's work requires contact with Mara River and hippo-pool water.
 
 **Treat all fresh surface water in the study system as schistosomiasis-infested.** CDC states that most freshwater surface water sources in Africa are potentially contaminated, and advises travellers to view with scepticism any local claim that a body of freshwater, including a fast-moving river, is free from schistosomiasis. Cercariae penetrate skin on contact, there is no vaccine, and brief incidental contact transmits.<sup>[19](#ref19),[20](#ref20),[21](#ref21),[22](#ref22),[23](#ref23)</sup>
 
@@ -92,7 +92,7 @@ Laboratory controls:
 
 ## Large Animals, Water Craft, and Vehicles
 
-**On hippos and crocodiles, this policy states candidly that no authoritative government or intergovernmental standard exists.** The clinical literature is limited to case series establishing severity. The laboratory therefore sets its own controls rather than citing a standard that does not exist.<sup>[23](#ref23),[24](#ref24),[28](#ref28),[29](#ref29)</sup>
+**No authoritative government or intergovernmental standard exists for work around hippos and crocodiles.** The clinical literature is limited to case series establishing severity. The laboratory therefore sets its own controls.<sup>[23](#ref23),[24](#ref24),[28](#ref28),[29](#ref29)</sup>
 
 Laboratory controls, which are not negotiable in the field:
 
@@ -106,7 +106,7 @@ Laboratory controls, which are not negotiable in the field:
 
 **Boat work** follows the USGS standard: a worn, USCG-approved PFD at all times aboard small craft; a dedicated operator plus sufficient crew while underway; CPR training for all watercraft operators; and a **float plan filed with a supervisor or someone knowledgeable of the intent to operate**, listing craft description, occupants, departure and return times, emergency equipment, route, communications, and the action to take if the party is overdue.<sup>[38](#ref38),[39](#ref39)</sup>
 
-**Road travel is statistically the largest killer.** Motor vehicle crashes are the leading cause of non-natural death among US citizens abroad, and fatal crash rates in sub-Saharan Africa are among the highest in the world. Seatbelts are worn at all times. **No night driving in rural areas**, consistent with State Department guidance to avoid travel after dark in Kenya. No alcohol before driving. Helmets meeting US standards for any two-wheeled travel. Overcrowded public transport is avoided.<sup>[23](#ref23),[25](#ref25),[12](#ref12)</sup>
+Motor vehicle crashes are the leading cause of non-natural death among US citizens abroad, and fatal crash rates in sub-Saharan Africa are among the highest in the world. Seatbelts are worn at all times. **No night driving in rural areas**, consistent with State Department guidance to avoid travel after dark in Kenya. No alcohol before driving. Helmets meeting US standards for any two-wheeled travel. Overcrowded public transport is avoided.<sup>[23](#ref23),[25](#ref25),[12](#ref12)</sup>
 
 **Wildlife handling.** Gloves are worn for handling any wildlife. After any bite, wash with soap and running water for **at least 20 minutes**, and for suspected rabies exposure stop the journey and seek care where appropriate post-exposure prophylaxis is available.<sup>[24](#ref24),[36](#ref36)</sup>
 
@@ -116,7 +116,7 @@ Laboratory controls, which are not negotiable in the field:
 
 Members **avoid working alone where possible**, a standard that applies with particular force to private property, controlled sites, and areas lacking reliable phone service. All three describe our field sites. Where solo work is unavoidable, the Field Safety Plan must specify check-in procedures, and the member must carry a field radio or satellite communication device.<sup>[36](#ref36)</sup>
 
-**Communication redundancy is an NSF requirement, not merely good practice.** The reporting pathway must minimise singular points, which in concrete terms means that **at least one reporting route must not pass through the Principal Investigator**, since the PI is a plausible subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated honestly, and is selected by the Department Chair rather than by the Principal Investigator. The UF Compliance Hotline (877-556-5356) is in the Emergency Information table above as a standing route that depends on nobody in the party, with the caveat that it is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set explicitly, and members enrol in the State Department's Smart Traveler Enrollment Program.<sup>[1](#ref1),[26](#ref26)</sup>
+**Communication redundancy is an NSF requirement.** The reporting pathway must minimise singular points, which in concrete terms means that **at least one reporting route must not pass through the Principal Investigator**, since the PI is a plausible subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated explicitly, and is selected by the Department Chair rather than by the Principal Investigator. The UF Compliance Hotline (877-556-5356) is in the Emergency Information table above as a standing route that depends on nobody in the party, with the caveat that it is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set explicitly, and members enrol in the State Department's Smart Traveler Enrollment Program.<sup>[1](#ref1),[26](#ref26)</sup>
 
 ## Stop-Work Authority
 
@@ -128,7 +128,7 @@ Retaliation against anyone who exercises stop-work authority is a violation of t
 
 ## Conduct, Harassment, and Wellbeing
 
-The empirical basis for this section is direct. The Survey of Academic Field Experiences found that 64 percent of respondents had experienced sexual harassment and 21.7 percent sexual assault at field sites; that harassment of women came predominantly from superiors while harassment of men came predominantly from peers; that over 90 percent of targeted women and 70 percent of targeted men were trainees or employees; and that fewer than a quarter had ever worked at a field site with a sexual harassment policy, and fewer than a fifth were satisfied with the outcome when they did report. That is precisely the risk structure of a team spanning undergraduates to principal investigator. Field-site climate also demonstrably shapes career trajectories, making this a retention issue and not only a compliance one.<sup>[30](#ref30),[31](#ref31)</sup>
+The Survey of Academic Field Experiences found that 64 percent of respondents had experienced sexual harassment and 21.7 percent sexual assault at field sites; that harassment of women came predominantly from superiors while harassment of men came predominantly from peers; that over 90 percent of targeted women and 70 percent of targeted men were trainees or employees; and that fewer than a quarter had ever worked at a field site with a sexual harassment policy, and fewer than a fifth were satisfied with the outcome when they did report. This laboratory's field teams span undergraduates to principal investigator, and field-site climate also shapes career trajectories.<sup>[30](#ref30),[31](#ref31)</sup>
 
 Accordingly:
 
@@ -136,7 +136,7 @@ Accordingly:
 * Risk is not uniform across the team. Members are informed of the risks some colleagues may face so that best practice can be defined together, rather than a single generic protocol being imposed. This includes a pre-season conversation about identity-based risk in the field context.<sup>[32](#ref32)</sup>
 * Workload and rest are planned realistically, including bathroom access.<sup>[33](#ref33)</sup>
 * Trusted local on-ground contacts are established in advance.<sup>[33](#ref33)</sup>
-* **No member fronts their own money.** Field costs, required training, the pre-travel medical consultation, travel vaccination, chemoprophylaxis, and personal protective equipment are paid by the grant or the PI in advance rather than reimbursed afterwards, and emergency funds are reachable from the field. Required training days count as work time for paid members. Financial exposure is a safety issue.<sup>[33](#ref33),[34](#ref34)</sup>
+* **No member fronts their own money.** Field costs, required training, the pre-travel medical consultation, travel vaccination, chemoprophylaxis, and personal protective equipment are paid by the grant or the PI in advance rather than reimbursed afterwards, and emergency funds are reachable from the field. Required training days count as work time for paid members.<sup>[33](#ref33),[34](#ref34)</sup>
 * The pre-travel consultation covers mental as well as physical health. As with every other medical matter in this policy, **the laboratory does not learn, verify, or record diagnoses or medications**, and no consultation outcome is a basis for excluding anyone from a field season. Members are encouraged to check with that provider whether any medication they take is legal and available in-country, to arrange telehealth before departure, and to note that high ambient temperature can affect the stability of some medications.<sup>[27](#ref27),[35](#ref35)</sup>
 * A structured debrief follows every field season.<sup>[33](#ref33)</sup>
 

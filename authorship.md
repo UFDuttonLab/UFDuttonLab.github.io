@@ -10,7 +10,7 @@ permalink: /authorship/
 
 ## Purpose and Scope
 
-This policy establishes clear and equitable standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff) must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration<sup>[1](#ref1),[3](#ref3)</sup>. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process<sup>[4](#ref4),[5](#ref5),[6](#ref6)</sup>.
+This policy establishes standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff) must adhere to these guidelines to ensure appropriate attribution of credit, accountability for research integrity, and transparent collaboration<sup>[1](#ref1),[3](#ref3)</sup>. This policy aims to prevent authorship disputes by establishing expectations early and documenting agreements throughout the research process<sup>[4](#ref4),[5](#ref5),[6](#ref6)</sup>.
 
 [![Authorship Policy Flowchart](/img/authorshipflowchart.jpg)](/img/authorshipflowchart.jpg)
 *Click on the flowchart above to view it in full size.*
@@ -20,7 +20,7 @@ This policy establishes clear and equitable standards for determining authorship
 When external researchers wish to use our laboratory's specialized equipment (e.g., sequencing platforms, robotics, analytical instruments, computational resources), the relationship will generally fall into one of two categories. **The specific model must be agreed upon prior to access.**
 
 ## 1. The Service & Access Model (Acknowledgment Only)
-* **Definition:** The collaborator requests access to equipment or resources but operates them independently. The Dutton Lab provides the "hardware" but not the "headware."
+* **Definition:** The collaborator requests access to equipment or resources but operates them independently.
 * **Requirements:**
     * **Independence:** The collaborator uses standard protocols and performs their own data analysis without significant technical input from our lab.
     * **Financials:** The collaborator is responsible for all consumables (reagents, kits, etc.). Any charge for instrument time would require a rate approved through UF Auxiliary Accounting; see the [Equipment Access and Shared Resource Policy](/equipment-access/).
@@ -28,19 +28,19 @@ When external researchers wish to use our laboratory's specialized equipment (e.
 * **Authorship Status:** Authorship is **not** warranted under this model.
 
 ## 2. The Collaborative Model (Authorship Warranted)
-* **Definition:** The project requires the unique technical expertise of Dutton Lab members to succeed. This includes modifying protocols for novel samples, designing custom hardware, developing new code, or interpreting complex datasets.
+* **Definition:** The project requires technical expertise held by Dutton Lab members. This includes modifying protocols for novel samples, designing custom hardware, developing new code, or interpreting complex datasets.
 * **Requirements:**
-    * **Intellectual Partnership:** Because the equipment cannot be used effectively without our specific know-how, lab members effectively become intellectual partners in the research.
+    * **Intellectual Partnership:** Lab members who supply the required technical expertise are intellectual contributors to the research.
     * **Opportunity to Contribute:** Lab members involved in the technical work **must be afforded the opportunity** to contribute intellectually to the study design and data interpretation.
 * **Authorship Status:** If lab members contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted** and expected, consistent with ICMJE guidelines.
 
 ## Core Principles
 
-Authorship in this laboratory is governed by three principles: **merit-based attribution** ensuring that authorship reflects genuine intellectual contribution; **accountability** requiring all authors to take responsibility for the integrity of published work; and **transparency** through early discussion, written agreements, and clear documentation of individual contributions<sup>[1](#ref1),[7](#ref7),[8](#ref8)</sup>. Authorship confers both credit and responsibility, and the two cannot be separated<sup>[9](#ref9),[10](#ref10)</sup>.
+Authorship in this laboratory is governed by three principles: **merit-based attribution** ensuring that authorship reflects intellectual contribution; **accountability** requiring all authors to take responsibility for the integrity of published work; and **transparency** through early discussion, written agreements, and clear documentation of individual contributions<sup>[1](#ref1),[7](#ref7),[8](#ref8)</sup>. Authorship confers both credit and responsibility, and the two cannot be separated<sup>[9](#ref9),[10](#ref10)</sup>.
 
 ## Authorship Criteria
 
-For projects operating under the **Collaborative Model**, this laboratory follows the International Committee of Medical Journal Editors (ICMJE) criteria, which are widely recognized across scientific disciplines and required by many journals<sup>[1](#ref1),[11](#ref11),[12](#ref12),[13](#ref13)</sup>. To qualify as an author, an individual must meet **all four** of the following criteria:
+For projects operating under the **Collaborative Model**, this laboratory follows the International Committee of Medical Journal Editors (ICMJE) criteria, which are required by many journals<sup>[1](#ref1),[11](#ref11),[12](#ref12),[13](#ref13)</sup>. To qualify as an author, an individual must meet **all four** of the following criteria:
 
 1. Substantial contributions to the conception or design of the work, or the acquisition, analysis, or interpretation of data;
 2. Drafting the manuscript or reviewing it critically for important intellectual content;
@@ -64,7 +64,7 @@ The following authorship practices are strictly prohibited:
 3. **Coercive authorship:** Demanding authorship based **solely** on position, financial support, or the provision of equipment/resources, **without a corresponding intellectual contribution to the work**<sup>[26](#ref26)</sup>.
 4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools should be disclosed in the methods or acknowledgments<sup>[27](#ref27),[28](#ref28)</sup>.
 
-These practices undermine scientific integrity and breach this policy and ESA publication standards. They are not research misconduct under UF Policy 14-004 unless the conduct also involves fabrication, falsification, or plagiarism<sup>[20](#ref20),[21](#ref21),[22](#ref22),[26](#ref26)</sup>.
+These practices breach this policy and ESA publication standards. They are not research misconduct under UF Policy 14-004 unless the conduct also involves fabrication, falsification, or plagiarism<sup>[20](#ref20),[21](#ref21),[22](#ref22),[26](#ref26)</sup>.
 
 ## Author Order and Position-Specific Responsibilities
 
@@ -77,7 +77,7 @@ In ecology and related fields, author order typically follows a first-last autho
 
 ## Authorship Discussions and Agreements
 
-Authorship must be discussed openly at the beginning of each project, before substantial work begins<sup>[7](#ref7),[8](#ref8),[34](#ref34),[35](#ref35),[36](#ref36)</sup>. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes<sup>[34](#ref34),[35](#ref35),[36](#ref36),[37](#ref37)</sup>. This agreement is a living document that should be revisited at key project milestones<sup>[34](#ref34),[35](#ref35),[36](#ref36)</sup>.
+Authorship must be discussed openly at the beginning of each project, before substantial work begins<sup>[7](#ref7),[8](#ref8),[34](#ref34),[35](#ref35),[36](#ref36)</sup>. The principal investigator or project leader is responsible for initiating these discussions. For projects involving multiple contributors, a written **Authorship Agreement** will be created and signed by all parties, documenting the proposed author list, specific CRediT roles, and decision-making processes<sup>[34](#ref34),[35](#ref35),[36](#ref36),[37](#ref37)</sup>. This agreement is revisited at key project milestones<sup>[34](#ref34),[35](#ref35),[36](#ref36)</sup>.
 
 [Authorship Agreement Template](https://docs.google.com/document/d/1jNxKBKBofz0KolyTq8oEt_7J-WP-WrAnfBgt8P0VHKs/copy)
 
@@ -89,7 +89,7 @@ Individuals who leave the laboratory before manuscript completion retain their r
 2. **Manuscript Review:** Departing authors must fulfill their obligation to review and approve the final manuscript (ICMJE criterion #3) within a reasonable timeframe (typically 2-4 weeks for initial drafts, 1-2 weeks for revisions).
 3. **Continued Contribution:** If substantial additional work is required after departure that fundamentally changes the scope or conclusions of the study, authorship order may be re-evaluated in consultation with all contributors.
 4. **Opt-Out:** Any author may opt out of authorship for any reason by notifying the corresponding author in writing. Where the person opting out is a trainee, the withdrawal is confirmed in writing no sooner than 14 days after first notice and copied to the Department Chair. Where someone opts out, their contributions are acknowledged appropriately. Soliciting an opt-out from someone you supervise is a violation of this policy.
-5. **Timely Completion:** Lead authors who leave the laboratory are expected to complete manuscript preparation within a reasonable timeframe (typically 6-12 months after departure, depending on the project's stage). Reassignment of lead authorship requires the written agreement of the original lead author or, failing agreement, a determination by the Department Chair. It is never made unilaterally by the laboratory. Written notice and a stated period to resume work must precede any proposal to reassign, the clock pauses whenever the manuscript is awaiting comments from the Principal Investigator (who returns comments within four weeks), and parental, medical, and bereavement leave pause it entirely. Loss of lead authorship never removes co-authorship where criterion #1 is met, and the laboratory must actively offer the opportunity to satisfy criteria #2 and #3.
+5. **Timely Completion:** Lead authors who leave the laboratory are expected to complete manuscript preparation within a reasonable timeframe (typically 6-12 months after departure, depending on the project's stage). Reassignment of lead authorship requires the written agreement of the original lead author or, failing agreement, a determination by the Department Chair. It is never made unilaterally by the laboratory. Written notice and a stated period to resume work must precede any proposal to reassign. That period pauses whenever the manuscript is awaiting comments from the Principal Investigator (who returns comments within four weeks), and parental, medical, and bereavement leave pause it entirely. Loss of lead authorship never removes co-authorship where criterion #1 is met, and the laboratory must actively offer the opportunity to satisfy criteria #2 and #3.
 
 ## Rights and Responsibilities of Trainees
 
@@ -99,7 +99,7 @@ Graduate students, postdoctoral researchers, and undergraduate researchers have 
 
 ## Preprints and Early Dissemination
 
-This laboratory supports the posting of preprints to accelerate scientific communication and establish priority of findings. Decisions about preprint posting should follow these guidelines:
+Preprint posting is permitted, subject to the following guidelines:
 
 1. **Consensus Required:** All authors must agree to preprint posting before submission to servers such as bioRxiv, medRxiv, or EcoEvoRxiv<sup>[51](#ref51)</sup>.
 2. **Timing:** Preprints may be posted at any time before or during journal submission, subject to co-author approval and journal policies.

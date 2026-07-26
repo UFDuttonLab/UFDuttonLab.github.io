@@ -4,11 +4,11 @@ title: Policies
 subtitle: How this lab operates
 ---
 
-These are the policies the Dutton Lab works to. They are written to be read by two audiences at once: prospective students and collaborators deciding whether this is a lab they want to work with, and current members who need to know what is expected of them.
+These are the policies the Dutton Lab works to.
 
 Each policy carries an effective date and a last-reviewed date, cites its sources, and is reviewed at least annually.
 
-**Where the University of Florida, a funding agency, or Kenyan law already sets a rule, we point to it rather than restate it, and we do not write stricter lab-level versions of it.** These policies cover the ground those rules leave open: how this particular lab works, in the places it works, with the people in it.
+**Where the University of Florida, a funding agency, or Kenyan law already sets a rule, we point to it rather than restate it, and we do not write stricter lab-level versions of it.** These policies cover matters those rules do not address.
 
 <style>
   /* Policy titles are headings first, links second. Scoped to this page. */
@@ -30,4 +30,4 @@ Preparing a computational manuscript for submission: pinning package versions wi
 
 ---
 
-*If something in these policies is unclear, out of date, or wrong, tell us. They are living documents and corrections are welcome from anyone, including people outside the lab.*
+*Corrections may be submitted by anyone, including people outside the lab, by email to the PI.*

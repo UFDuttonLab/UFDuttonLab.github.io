@@ -32,7 +32,7 @@ These are the windows fellowships usually fall in, checked July 2026. Confirm th
 | Early Nov | NSF GRFP | US citizens and PRs; entering, or years 1 to 2 | $37,000 plus $16,000/yr |
 | Mid Nov | APS Lewis and Clark | Doctoral fieldwork | About $5,400 |
 | Nov | DOE SCGSR | US citizens and PRs | Up to $3,600/month |
-| Dec | UF Biology department awards (7) | UF Biology grad students | $300 to $4,000 |
+| Dec | UF Biology department awards | UF Biology grad students | $300 to $4,000 |
 | Late Dec | GCA Ecological Restoration | US citizens and PRs | $8,000/yr |
 | Mid Jan | McKnight Doctoral Fellowship | African American or Hispanic US citizens; **entering** | Stipend plus tuition |
 | Apr, Aug, Dec | NIH F31 | US citizens, nationals, PRs | $29,364/yr |
@@ -51,7 +51,7 @@ Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA
 
 Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **UF Research Abroad**, the **UF Biology department awards** once you are enrolled, and, if you are a Kenyan citizen or permanent resident, **Fogarty**.
 
-A departmental assistantship is the usual route. Terms for those, including the hours a given FTE actually means, are in the [Laboratory Code of Conduct](/code-of-conduct/).
+Terms for departmental assistantships, including the hours each FTE level corresponds to, are in the [Laboratory Code of Conduct](/code-of-conduct/).
 
 ---
 
@@ -80,7 +80,7 @@ If your project involves fieldwork in Kenya, read the [International Research Pa
 2. Your CV, including publications or research experience
 3. One paragraph on a project or area you would like to pursue
 
-I read enquiries personally and may not reply to all of them. Admission on a Teaching Assistantship is possible but competitive. Arriving with your own funding makes admission easier.
+I read enquiries personally and may not reply to all of them. Admission on a Teaching Assistantship is possible.
 
 **Letters:** ask me at least three weeks before the deadline, and send your draft and the prompt with the request.
 
@@ -201,8 +201,6 @@ F31 projects require a health or environmental-health framing.
 **Deadline:** Rolling, one application per twelve months.
 **Eligibility:** MSc and PhD students, or within 3 years of graduating. Kenya and South Africa are both eligible countries. Applicants based in advanced economies are considered only where the work is high conservation priority and builds local capacity.
 
-Rolling deadline.
-
 - [Rufford Small Grants](https://apply.ruffordsmallgrants.org/help/criteria)
 
 #### Explorers Club Pathfinder Grant
@@ -249,7 +247,7 @@ Rolling deadline.
 **Deadline:** Mid September.
 **Eligibility:** Citizens or permanent residents of the US, **Kenya**, and several other countries. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
 
-Funds Kenyan nationals directly.
+The programme funds Kenyan nationals directly.
 
 - [Fogarty Global Health Fellows](https://fogartyfellows.org/apply/)
 
@@ -278,6 +276,8 @@ Funds Kenyan nationals directly.
 
 - [AAUW International Fellowships](https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/)
 
+### UF awards
+
 #### UF FLAS Fellowships, African languages
 
 **Award:** Academic year $20,000 plus tuition and fees. Summer $2,500 plus up to $5,000 tuition.
@@ -286,9 +286,9 @@ Funds Kenyan nationals directly.
 
 - [FLAS, graduate](https://africa.ufl.edu/academics-programs/graduate-studies/flas-fellowships/)
 
-### UF department awards
+#### UF department awards
 
-The Biology graduate awards page lists more than a dozen internal awards, usually with December deadlines. Several suit ecology and field research:
+The Biology graduate awards page lists more than a dozen internal awards, usually with December deadlines. These include:
 
 - Dr. Michael May Graduate Student Fellowship, dissertation research
 - H. Jane Brockmann Graduate Research Award, field research
@@ -319,7 +319,6 @@ Both still circulate on funding lists.
 1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid November.
 2. **Ask me for letters three weeks out**, with your draft and the prompt.
 3. **Check the deadline yourself.** This page is verified once a year; the programme pages are authoritative.
-4. **The small awards.** Sigma Xi, Lewis and Clark, Explorers Club, and the Biology department awards take less work per application.
 
 ---
 

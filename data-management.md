@@ -12,15 +12,15 @@ permalink: /data-management/
 
 This policy governs the management, documentation, storage, sharing, and retention of all research data and code produced by the laboratory. It covers amplicon and shotgun metagenomic sequence data, quantitative and digital PCR results, environmental DNA data, water chemistry and sensor time series, animal telemetry data, laboratory robotics protocols, and all analysis code.
 
-**Raw sequence data cannot be regenerated**, so this policy treats archival deposition as a preservation act rather than a publication afterthought. Note that sponsor requirements changed substantially in 2026: a plan template written before this year is obsolete.
+**Raw sequence data cannot be regenerated**, and sponsor requirements changed in 2026, so the deposition and retention rules below are not discretionary. See Sponsor Requirements.
 
 ## Sponsor Requirements
 
 ### NIH
 
-The NIH Policy for Data Management and Sharing has been in effect since 25 January 2023. It requires a DMS Plan with every application for research that generates scientific data, and does not reach training, infrastructure development, or non-research activities. Scientific data must be shared **as soon as possible and no later than the time of an associated publication or the end of the performance period, whichever comes first**; strongly encourages established repositories; and makes the approved Plan a **term and condition of award**.<sup>[1](#ref1),[6](#ref6)</sup>
+The NIH Policy for Data Management and Sharing has been in effect since 25 January 2023. It requires a DMS Plan with every application for research that generates scientific data, and does not reach training, infrastructure development, or non-research activities. It requires that scientific data be shared **as soon as possible and no later than the time of an associated publication or the end of the performance period, whichever comes first**, strongly encourages established repositories, and makes the approved Plan a **term and condition of award**.<sup>[1](#ref1),[6](#ref6)</sup>
 
-**The Plan format changed in 2026.** For applications submitted for **due dates on or after 25 May 2026**, NIH requires the updated format set out in NOT-OD-26-046, which supersedes the six narrative elements of NOT-OD-21-014. The new format has seven largely YES/NO elements, with a **300-word maximum** on the justification of sharing limitations and a **100-word maximum** on the table of key data types and repositories, and it asks directly about Genomic Data Sharing Policy compliance and Institutional Certification. Both formats were accepted until that date; only the new one is now.<sup>[2](#ref2),[3](#ref3),[4](#ref4),[5](#ref5)</sup>
+**The Plan format changed in 2026.** For applications submitted for **due dates on or after 25 May 2026**, NIH requires the updated format set out in NOT-OD-26-046, which supersedes the six narrative elements of NOT-OD-21-014. The new format has seven largely YES/NO elements, with a **300-word maximum** on the justification of sharing limitations and a **100-word maximum** on the table of key data types and repositories, and it asks directly about Genomic Data Sharing Policy compliance and Institutional Certification.<sup>[2](#ref2),[3](#ref3),[4](#ref4),[5](#ref5)</sup>
 
 Under the 2024 NIH Public Access Policy, in effect since **1 July 2025** (the originally announced 31 December 2025 date was brought forward by NOT-OD-25-101), Author Accepted Manuscripts must be submitted to PubMed Central **upon acceptance** and made publicly available **without embargo** on the Official Date of Publication. PMC deposit is free; the laboratory does not pay a publisher for it.<sup>[7](#ref7),[47](#ref47)</sup>
 
@@ -28,7 +28,7 @@ Large-scale human genomic studies must register in dbGaP under the NIH Genomic D
 
 ### NSF
 
-The current base guide is **PAPPG 24-1**, effective 20 May 2024, with the Data Management and Sharing Plan requirement at Chapter II.D.2.i(ii). Two supplements materially changed practice.<sup>[10](#ref10)</sup>
+The current base guide is **PAPPG 24-1**, effective 20 May 2024, with the Data Management and Sharing Plan requirement at Chapter II.D.2.i(ii). Two supplements amend it.<sup>[10](#ref10)</sup>
 
 **Supplement 1 (NSF 26-200), effective 8 December 2025:** recipients are required to share **all data supporting NSF-funded publications at the time of publication**, with exceptions justified in the DMSP. The same supplement extends the research misconduct definition to explicitly encompass **AI-based tools**, and makes Research Security Training mandatory.<sup>[11](#ref11)</sup>
 
@@ -61,37 +61,37 @@ Occurrence records derived from eDNA detections or telemetry are expressed in **
 
 ## After a Sequencing Run
 
-Do this on the day the run finishes, not when you get round to the analysis.
+Complete the following on the day the run finishes.
 
-1. **Copy the complete run output to the RAID array in the PI's office.** Complete means the raw signal-level files as well as the basecalled reads: POD5, or FAST5 on older MinION runs, for Nanopore, and BCL for any outsourced Illumina run. Keeping only the FASTQ is the most common irreversible mistake made with this kind of data, because re-basecalling with an improved model is a real future gain that disappears the moment the signal files are deleted.
+1. **Copy the complete run output to the RAID array in the PI's office.** Complete means the raw signal-level files as well as the basecalled reads: POD5, or FAST5 on older MinION runs, for Nanopore, and BCL for any outsourced Illumina run. Signal files are retained because re-basecalling with a later model requires them.
 2. **Upload one working copy to `/blue`** for analysis. That is a working copy, not a second archive.
 3. **Register the BioProject and BioSamples now**, with the release date set to the expected publication date, per the workflow below.
 
-**The RAID is the first copy, not the archive.** RAID protects against a single disk failing. It does not protect against fire, theft, flood, a controller failure that takes the whole array, ransomware, or somebody deleting the wrong directory. The office and HiPerGator are also on the same campus, so neither is a meaningful backup of the other. Step 3 is what makes a run survivable, because a registered submission under hold is the only copy that is off site and independently managed.
+**The RAID is the first copy, not the archive.** RAID protects against a single disk failing. It does not protect against fire, theft, flood, a controller failure that takes the whole array, ransomware, or somebody deleting the wrong directory. The office and HiPerGator are also on the same campus, so neither is a meaningful backup of the other. A registered submission under hold is the only copy that is off site and independently managed.
 
 ## Deposition Workflow
 
-**A manuscript produces three deposits, and they are cross-linked.** Raw reads go to **NCBI SRA**, which gives an accession rather than a DOI and is released on a date you set. Processed data objects go to **Zenodo** as a dataset record with a permanent DOI. Code goes to **GitHub and is archived to Zenodo** on release, also with a DOI. Each record carries related-identifier links to the other two, so a reader arriving at any one can reach the rest, and all three appear in the Data Availability Statement. The step-by-step method, including the metadata file templates, is in the [Reproducibility Handbook](/reproducibility/).
+**A manuscript produces three deposits, and they are cross-linked.** Raw reads go to **NCBI SRA**, which gives an accession rather than a DOI and is released on a date you set. Processed data objects go to **Zenodo** as a dataset record with a permanent DOI. Code goes to **GitHub and is archived to Zenodo** on release, also with a DOI. Each record carries related-identifier links to the other two, and all three appear in the Data Availability Statement. The step-by-step method, including the metadata file templates, is in the [Reproducibility Handbook](/reproducibility/).
 
 **BioProject registration is mandatory** before any SRA, WGS, or TSA submission, and grant information is captured in the BioProject record so that funder reporting resolves cleanly.<sup>[21](#ref21)</sup>
 
-Populate the SRA object model as NCBI documents it. The two rules people get wrong: **EXPERIMENT is the primary publishable unit**, defined by the combination of library, sequencing strategy, layout, and instrument model, so it needs a real title and description rather than a filename; and **never mix samples or experiments within a single RUN**.<sup>[22](#ref22),[25](#ref25)</sup>
+Populate the SRA object model as NCBI documents it. Two rules apply: **EXPERIMENT is the primary publishable unit**, defined by the combination of library, sequencing strategy, layout, and instrument model, so it needs a real title and description rather than a filename; and **never mix samples or experiments within a single RUN**.<sup>[22](#ref22),[25](#ref25)</sup>
 
 Standing operational rule: **register the BioProject and BioSamples at sequencing time, not at manuscript time.** Set the SRA release date to the anticipated publication date and release immediately on acceptance. The hold is set per BioProject and propagates to all associated BioSamples and runs. NCBI documents no maximum hold period, but our hold must not extend past publication or the end of the performance period, whichever comes first, per NIH policy.<sup>[26](#ref26),[1](#ref1)</sup>
 
-**Kenyan-origin material and its derived sequence data carry access obligations that survive the physical sample.** Kenya's Legal Notice 68 of 2025 applies to any digital sequence information relating to Kenyan biological resources. Before generating or depositing sequence from material originating outside the United States, the requirements in the [International Research Partnership Policy](/international-partnership/) must be satisfied, country of origin must be recorded in the submission metadata, and any access-derived restriction must be disclosed in the relevant sponsor plan. NIH's 300-word limitations element and NSF's DMSP exception justification are the correct places for that disclosure.<sup>[3](#ref3),[11](#ref11),[48](#ref48)</sup>
+**Kenyan-origin material and its derived sequence data carry access obligations.** Kenya's Legal Notice 68 of 2025 applies to any digital sequence information relating to Kenyan biological resources. Before generating or depositing sequence from material originating outside the United States, the requirements in the [International Research Partnership Policy](/international-partnership/) must be satisfied, country of origin must be recorded in the submission metadata, and any access-derived restriction must be disclosed in the relevant sponsor plan. NIH's 300-word limitations element and NSF's DMSP exception justification are the correct places for that disclosure.<sup>[3](#ref3),[11](#ref11),[48](#ref48)</sup>
 
 ## Code and Computational Reproducibility
 
-Analyses are written as **R Markdown or Quarto documents executed through knitr**. Quarto renders most existing `.Rmd` files without modification, so migration cost is low.<sup>[37](#ref37)</sup>
+Analyses are written as **R Markdown or Quarto documents executed through knitr**. Quarto renders most existing `.Rmd` files without modification.<sup>[37](#ref37)</sup>
 
-**Everything that produces a result goes in git.** R scripts, R Markdown and Quarto documents, HiPerGator job and SLURM submission scripts, Opentrons protocol files, and the environment lockfile. Push to the laboratory GitHub organisation rather than keeping the repository under a personal account, so that it survives your departure. Commit as you go: a single commit at the end of a project is a snapshot rather than a history, and it cannot tell you when a result changed or why.
+**Everything that produces a result goes in git**: R scripts, R Markdown and Quarto documents, HiPerGator job and SLURM submission scripts, Opentrons protocol files, and the environment lockfile. Push to the laboratory GitHub organisation rather than keeping the repository under a personal account. Commit incrementally rather than in a single commit at the end of a project.
 
 **`renv` is mandatory per project.** Run `renv::init()` at project creation, `renv::snapshot()` before every release or manuscript submission, and commit `renv.lock` to version control.<sup>[36](#ref36)</sup>
 
 Practices adopted directly from the reproducibility literature: record how every result was produced; avoid manual data manipulation; archive the exact versions of all software used; version-control all scripts; record random seeds; store the data underlying every plot; preserve raw data untouched and document all processing; keep code modular; and use a systematic project layout.<sup>[31](#ref31),[32](#ref32)</sup>
 
-**Every repository carries a LICENSE file** before archiving, so that readers know how they may reuse the work. Default recommendations are MIT for permissive reuse and GPLv3 where share-alike is wanted.<sup>[33](#ref33),[35](#ref35)</sup>
+**Every repository carries a LICENSE file** before archiving. Default recommendations are MIT for permissive reuse and GPLv3 where share-alike is wanted.<sup>[33](#ref33),[35](#ref35)</sup>
 
 **Code is archived at publication with a DOI.** Enable the repository in Zenodo, then cut a GitHub release; Zenodo issues a new DOI for each release. Two hard constraints: **Zenodo can only access public repositories**, and **no release means no DOI**. Organization-owned repositories may require owner approval of Zenodo's OAuth grant.<sup>[33](#ref33),[34](#ref34)</sup>
 
@@ -103,13 +103,13 @@ Because NSF's research misconduct definition now explicitly encompasses AI-based
 
 * `/home` provides **40 GB** per user, for source code, scripts, and project documents. It **must not be used for job input or output**. The only recovery available without purchase is snapshots at `~/.snapshot/`: **daily for one week plus weekly for three additional weeks**.<sup>[38](#ref38),[39](#ref39)</sup>
 * `/blue` is the primary location for all files read or written during job execution, and requires an active compute allocation.<sup>[38](#ref38),[39](#ref39)</sup>
-* `/orange` is the archival tier and **requires an active `/blue` allocation**. This means that losing a compute allocation cascades into losing archival storage eligibility, which is the single largest custody risk when a grant ends. **Project close triggers a mandatory off-HiPerGator egress review.**<sup>[38](#ref38)</sup>
+* `/orange` is the archival tier and **requires an active `/blue` allocation**. This means that losing a compute allocation cascades into losing archival storage eligibility. **Project close triggers a mandatory off-HiPerGator egress review.**<sup>[38](#ref38)</sup>
 * `/red` data is **removed 24 hours after allocation expiration**, and local scratch is destroyed at job end and is irretrievably lost. Neither is ever a data-of-record location.<sup>[38](#ref38),[39](#ref39)</sup>
-* Backup on `/blue` and `/orange` can be purchased through UF Tivoli; current pricing and version-retention terms are on the UF Research Computing page. A file deleted long enough ago is unrecoverable.<sup>[40](#ref40)</sup>
+* Backup on `/blue` and `/orange` can be purchased through UF Tivoli; current pricing and version-retention terms are on the UF Research Computing page.<sup>[40](#ref40)</sup>
 
-Given the above, **SRA and EDI deposition are the only genuinely durable copies in our stack**, which is the operational reason deposition happens at sequencing time rather than at publication.<sup>[24](#ref24),[30](#ref30),[38](#ref38)</sup>
+**SRA and EDI deposition are the only copies in this stack not subject to the storage limits above.** Deposition therefore happens at sequencing time rather than at publication.<sup>[24](#ref24),[30](#ref30),[38](#ref38)</sup>
 
-UF holds an enterprise **LabArchives** licence, which is the sanctioned electronic laboratory notebook and keeps notebook custody with the University by design.<sup>[46](#ref46)</sup>
+UF holds an enterprise **LabArchives** licence, which is the sanctioned electronic laboratory notebook and keeps notebook custody with the University.<sup>[46](#ref46)</sup>
 
 ## Retention
 
@@ -125,11 +125,11 @@ The laboratory retains records for the **longest applicable** of the following.
 
 ## Custody When a Member Leaves
 
-UF's rule is unambiguous and is quoted here because it is frequently misunderstood: personnel who leave the University "may be permitted to copy their laboratory notebooks and records and other research data and take the copies with them," but "the original notebooks and other research data will remain at the University," and confidentiality obligations survive departure.<sup>[44](#ref44),[43](#ref43)</sup>
+UF policy provides that personnel who leave the University "may be permitted to copy their laboratory notebooks and records and other research data and take the copies with them," but "the original notebooks and other research data will remain at the University," and confidentiality obligations survive departure.<sup>[44](#ref44),[43](#ref43)</sup>
 
 A **Records Disposition Request** documenting who takes custodianship of the records and data is filed on departure.<sup>[43](#ref43)</sup>
 
-Before any account is deprovisioned, the departing member receives a complete copy of their notebooks, data, code, and analysis records, and confirms receipt in writing. Because departing authors remain accountable for work they must still approve, the laboratory also commits to restoring access on request to any former member who is a co-author on a live or published manuscript.
+Before any account is deprovisioned, the departing member receives a complete copy of their notebooks, data, code, and analysis records, and confirms receipt in writing. Access is restored on request to any former member who is a co-author on a live or published manuscript.
 
 Offboarding checklist:
 
