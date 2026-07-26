@@ -18,7 +18,7 @@ Laboratory AI use is guided by three foundational principles:
 * **Human Oversight:** AI tools must be used to augment, not replace, critical thinking and scientific judgment.<sup>[1](#ref1),[2](#ref2),[4](#ref4)</sup>
 
 ## Permitted Uses
-AI tools may be used for the following purposes with appropriate verification and disclosure. **Every permitted use below is subject to the data classification rules in [Data Protection and Privacy](#data-protection-and-privacy);** where an activity involves unpublished, confidential, or otherwise restricted data, it is permitted only within an institutionally approved secure environment.
+AI tools may be used for the following purposes with appropriate verification and disclosure. **Every permitted use below is subject to the data classification rules in [Data Protection and Privacy](#data-protection-and-privacy).** In practice this means the activity is permitted on a public platform only where the material you paste in is Open; where it is Sensitive or Restricted, which covers anything unpublished or confidential, the same activity is permitted only in an institutionally approved secure environment. Credentials are never pasted into any AI tool, secure environment included. Writing and grant drafting assistance are the common cases: a public platform is fine for general phrasing questions, and not for pasting in an unpublished manuscript or an unsubmitted proposal.
 
 1.  **Bioinformatics Workflows:** Including sequence quality control, taxonomic classification assistance, and metagenomic binning support.<sup>[5](#ref5),[6](#ref6),[7](#ref7)</sup>
 2.  **Literature Review:** Assisting in summarizing vast literature and hypothesis generation (must be verified against primary sources).
@@ -42,8 +42,8 @@ The following applications are **strictly forbidden**:
 ## Data Protection and Privacy
 Researchers must classify data according to [UF's Data Classification Policy](https://policy.ufl.edu/policy/data-classification-policy/) before using AI tools.<sup>[1](#ref1),[3](#ref3),[25](#ref25)</sup>
 
-* **Public AI Platforms:** (e.g., ChatGPT, Claude, Gemini) may only process publicly available or fully de-identified data.<sup>[2](#ref2),[12](#ref12),[23](#ref23)</sup>
-* **Restricted Data:** Sensitive research data, including unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, requires the use of institutionally approved, secure AI environments (e.g., UF HiPerGator AI protected instances) or must not be processed through AI systems.<sup>[1](#ref1),[2](#ref2),[3](#ref3),[12](#ref12)</sup>
+* **Public AI Platforms:** (e.g., ChatGPT, Claude, Gemini) may process data classified as Open under UF's Data Classification Policy. Note that "de-identified" is a human subjects concept: environmental sequence data contains no personal identifiers but is still **Sensitive** while unpublished, and Sensitive data does not go into a public platform.<sup>[2](#ref2),[12](#ref12),[23](#ref23)</sup>
+* **Sensitive and Restricted Data:** UF classifies research work in progress as **Sensitive** and applies **Restricted** to data bound by law, regulation, or contract. Both, including unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, requires the use of institutionally approved, secure AI environments (e.g., UF HiPerGator AI protected instances) or must not be processed through AI systems.<sup>[1](#ref1),[2](#ref2),[3](#ref3),[12](#ref12)</sup>
 
 *When in doubt, consult with laboratory leadership before entering data into any AI tool.*
 
@@ -51,7 +51,7 @@ Researchers must classify data according to [UF's Data Classification Policy](ht
 All AI use in research outputs requires transparent disclosure.<sup>[1](#ref1),[4](#ref4),[8](#ref8),[13](#ref13)</sup>
 
 * **Manuscripts:** Describe AI applications in the Methods section for data analysis or research design. Acknowledge AI assistance for writing in the Acknowledgments section, specifying the tool name, version, purpose, and extent of use.<sup>[8](#ref8),[13](#ref13),[14](#ref14),[15](#ref15)</sup>
-* **Grant Applications:** Follow sponsor-specific guidelines. NIH permits limited AI use but will not consider applications that are substantially developed by AI, and since the 25 September 2025 receipt date it also limits any individual principal investigator to six applications per calendar year.<sup>[11](#ref11)</sup> NSF prohibits uploading proposal content to non-approved AI tools and encourages proposers to state in the project description whether and how generative AI was used.<sup>[10](#ref10)</sup>
+* **Grant Applications:** Follow sponsor-specific guidelines. NIH permits limited AI use but will not consider applications that are substantially developed by AI, and since the 25 September 2025 receipt date it also limits any individual principal investigator to six new, renewal, resubmission, or revision applications per calendar year, excluding T activity codes and R13 conference grants.<sup>[11](#ref11)</sup> NSF prohibits its **reviewers** from uploading proposal content, review information, or related records to non-approved generative AI tools, and **encourages** proposers to indicate in the project description whether and how generative AI was used to develop the proposal.<sup>[10](#ref10)</sup>
 
 *Authors remain fully responsible for accuracy, originality, and integrity of all work regardless of AI involvement.*<sup>[8](#ref8),[13](#ref13),[15](#ref15)</sup>
 

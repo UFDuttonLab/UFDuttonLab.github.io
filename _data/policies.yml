@@ -1,0 +1,30 @@
+# Index of laboratory policies, rendered by policies.md
+# Add a new policy here and it appears on the Policies page automatically.
+
+- title: "Collaboration and Authorship"
+  url: "/authorship/"
+  summary: "How authorship is determined and ordered, CRediT contributor roles, prohibited practices, engagement models for external collaborators, and dispute resolution."
+
+- title: "Responsible Use of AI"
+  url: "/ai-policy/"
+  summary: "Permitted and prohibited uses of AI tools, data classification before use, disclosure requirements for manuscripts and grants, and quality control of AI-generated output."
+
+- title: "International Research Partnership and Compliance"
+  url: "/international-partnership/"
+  summary: "Kenyan access and benefit-sharing law, research and wildlife permits, digital sequence information obligations, specimen deposition, and our equitable partnership standards."
+
+- title: "Field Safety and Travel"
+  url: "/field-safety/"
+  summary: "Pre-departure requirements, water contact and disease risk, large animal and vehicle hazards, stop-work authority, communication redundancy, and conduct in the field."
+
+- title: "Laboratory Code of Conduct and Mentoring Compact"
+  url: "/code-of-conduct/"
+  summary: "Expectations by role, meeting and communication norms, hours and leave, psychological safety, harassment reporting routes, and research integrity obligations."
+
+- title: "Data and Code Management"
+  url: "/data-management/"
+  summary: "Sponsor requirements, metadata standards by data type, deposition workflow, reproducibility practice, HiPerGator storage, retention periods, and custody at departure."
+
+- title: "Equipment Access and Shared Resource"
+  url: "/equipment-access/"
+  summary: "How internal and external users obtain instrument access, training and certification, scheduling, effort attribution, and cost responsibility."
