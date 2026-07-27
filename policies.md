@@ -6,8 +6,6 @@ permalink: /policies/
 
 Each policy carries an effective date and a last-reviewed date, cites its sources, and is reviewed at least annually.
 
-**Where the University of Florida, a funding agency, or Kenyan law already sets a rule, we point to it rather than restate it, and we do not write stricter lab-level versions of it.** 
-
 <style>
   /* Scoped to this page. */
   h3 a, h3 a:visited { color: #404040; text-decoration: none; border-bottom: 1px solid #d8d8d8; }
