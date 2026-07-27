@@ -12,7 +12,7 @@ permalink: /field-safety/
 
 This policy governs all laboratory fieldwork conducted away from the University of Florida campus, with particular reference to our long-term programme on the Mara River in Kenya. It applies to faculty, postdoctoral researchers, graduate and undergraduate students, staff, and visiting collaborators. Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company whose staff are employed by Soiyou rather than by UF; standards in this policy that apply to the whole party are imposed on Soiyou through its contract.
 
-UF has no field research safety policy, so this document is the operative standard for this laboratory.<sup>[10](#ref10),[11](#ref11)</sup>
+UF EH&S requires a Wildlife Field Safety Plan before wildlife field work starts, and requires IACUC protocols to describe field hazards and their controls. UF publishes no general field research safety policy beyond that, so the practices below supplement the UF requirements rather than replacing them.<sup>[10](#ref10),[11](#ref11)</sup>
 
 ## Sponsor Requirements
 
@@ -37,7 +37,7 @@ The requirement extends to all team members collecting data off-site, to subawar
 | --- | --- |
 | Nearest trauma facility | *to be completed per season* |
 | Nearest facility stocking rabies post-exposure prophylaxis | *to be completed per season* |
-| CISI 24-hour assistance line (covers faculty, staff, graduate students only) | *to be completed per season* |
+| CISI 24-hour assistance line (all UF travellers enrolled through the Travel Registry) | *to be completed per season* |
 | US Embassy Nairobi | *to be completed per season* |
 | PI mobile (Kenya and US) | *to be completed per season* |
 | Second contact outside the reporting line | *named in the Field Safety Plan* |
@@ -50,50 +50,50 @@ A **Field Safety Plan** is the written, per-campaign document described under Fi
 
 No laboratory member travels internationally on laboratory business until every verifiable item below is complete and on file: travel registration, confirmation of insurance cover, Travel Authorization and myAssets export review, completion of required training, and the Field Safety Plan. The occupational health and advisory items below are attestations that a step happened, not records the laboratory collects.
 
-**Immigration status.** Members who are not US citizens confirm with UF Immigration Services that their status permits re-entry, and check visa appointment availability, **before travel is booked**. Where re-entry risk exists the trip is rescheduled or the role adjusted. The Smart Traveler Enrollment Program is a US-citizen service; non-US members register with their own consulate instead.
+**Immigration status.** Members who are not US citizens confirm that their status permits re-entry with UFIC International Student Services (F-1), UFIC Exchange Visitor Services (J-1/J-2), or UF Immigration Compliance Services in UF HR (employment-based visas), and check visa appointment availability, **before travel is booked**. Where re-entry risk exists the trip is rescheduled or the role adjusted. The Smart Traveler Enrollment Program is a US-citizen service; non-US members register with their own consulate instead.
 
 **Travel registration.** All UF faculty, staff, and graduate students travelling abroad on University business are required to register with the UF International Center prior to travel. Undergraduates register through the Student Travel Registry. Registration should not be filed more than six months in advance.<sup>[7](#ref7),[8](#ref8)</sup>
 
-**Insurance.** UF provides travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are not covered by that arrangement, and neither are Soiyou Adventures staff, whose cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party holds, including confirming with Soiyou for their staff, and purchases evacuation cover for anyone in our own party who would otherwise have none. Nobody deploys uncovered. **Members must not assume this policy covers psychiatric emergencies.** The laboratory verifies psychiatric coverage before each field season.<sup>[7](#ref7),[8](#ref8),[27](#ref27)</sup>
+**Insurance.** UF provides travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are enrolled in CISI through the UF Student Travel Registry but pay the premium themselves; the no-charge arrangement covers faculty, staff, and graduate students only. Soiyou Adventures staff are not covered, and their cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party holds, including confirming with Soiyou for their staff, and purchases evacuation cover for anyone in our own party who would otherwise have none. Nobody deploys uncovered. **Members must not assume this policy covers psychiatric emergencies.** The laboratory verifies psychiatric coverage before each field season.<sup>[7](#ref7),[8](#ref8),[26](#ref26)</sup>
 
 **Travel authorization and equipment.** A Travel Authorization in myUFL and the international travel acknowledgement are required for all foreign travel on University business. Equipment taken abroad, including telemetry receivers, data loggers, and laptops, requires a Foreign Travel Request in the myAssets Portal with pre-approval from UF Asset Management and export control review.<sup>[9](#ref9)</sup>
 
-**Security advisory review.** Kenya currently carries a US Department of State Level 2 advisory, Exercise Increased Caution. The advisory must be re-checked before each season. The Department names specific areas to avoid, including the Kenya-Somalia border counties of Garissa, Wajir, and Mandera, Tana River County and the coast north of Malindi, western Turkana and West Pokot, and the Eastleigh and Kibera neighbourhoods of Nairobi. UFIC asks graduate students planning research in Level 4 countries to contact it directly. Confirm with UFIC whether any UF approval requirement is keyed to advisory level.<sup>[8](#ref8),[12](#ref12)</sup>
+**Security advisory review.** Kenya currently carries a US Department of State Level 2 advisory, Exercise Increased Caution. The advisory must be re-checked before each season. The Department names specific areas to avoid, including the Kenya-Somalia border counties of Garissa, Wajir, and Mandera, Lamu County, Tana River County except Tsavo National Park, Kilifi County north of Malindi, parts of Marsabit and Turkana within 50 km of the Ethiopian border, western Turkana and West Pokot, and the Eastleigh and Kibera neighbourhoods of Nairobi. UFIC asks graduate students planning research in Level 4 countries to contact it directly. Confirm with UFIC whether any UF approval requirement is keyed to advisory level.<sup>[8](#ref8),[12](#ref12)</sup>
 
-**Minors and non-matriculated participants.** If anyone under 18 who is not a matriculated UF student joins field or laboratory work, UF's Youth Compliance policy governs, including registration lead times, background screening, and staffing ratios. Route it through UF Youth Compliance Services rather than through this policy.<sup>[43](#ref43)</sup>
+**Minors and non-matriculated participants.** If anyone under 18 who is not a matriculated UF student joins field or laboratory work, UF's Youth Compliance policy governs, including registration lead times, background screening, and staffing ratios. Route it through UF Youth Compliance Services rather than through this policy.<sup>[42](#ref42)</sup>
 
 **Occupational health. This laboratory does not set its own vaccination or medication requirements.** Those are set by UF through its own risk assessment.
 
-* Anyone who handles live animals or unfixed animal tissue, body fluids, or waste, is listed on an IACUC protocol, or accesses ACS-managed facilities enrols in the **UF Animal Contact Program**, which the IACUC verifies. Tetanus immunisation within ten years is required of all participants; rabies immunisation or a positive titre within two years is required of those handling wild, feral, free-roaming, or unvaccinated **carnivores**.<sup>[41](#ref41),[42](#ref42)</sup>
+* Anyone who handles live animals or unfixed animal tissue, body fluids, or waste, is listed on an IACUC protocol, or accesses ACS-managed facilities enrols in the **UF Animal Contact Program**, which the IACUC verifies. Tetanus immunisation within ten years is required of all participants; rabies immunisation or a positive titre within two years is required of those handling wild, feral, free-roaming, or unvaccinated **carnivores**.<sup>[40](#ref40),[41](#ref41)</sup>
 * Other occupational vaccinations are recommended by the UF Biosafety Office or the IBC through the Biohazard Project Registration risk assessment. Under UF policy vaccination is **voluntary**: where a vaccine is recommended the individual completes the Acceptance, Declination, or Request for Additional Information form, and declining is handled through a UF General Counsel waiver rather than by exclusion from the work. Cost falls on the department or PI, not on the individual.<sup>[11](#ref11)</sup>
 
-**Travel vaccinations and malaria chemoprophylaxis are individual medical decisions**, made with UF Occupational Medicine Services or a travel medicine provider prescribing against current CDC and WHO guidance. The consultation happens before departure, and members carry any certificate it produces. The laboratory does not hold a copy. We do not require, verify, or record what was prescribed.<sup>[15](#ref15),[16](#ref16),[17](#ref17)</sup>
+**Travel vaccinations and malaria chemoprophylaxis are individual medical decisions**, made with UF Occupational Medicine Services or a travel medicine provider prescribing against current CDC and WHO guidance. The consultation happens before departure, and members carry any certificate it produces. The laboratory does not hold a copy. We do not require, verify, or record what was prescribed.<sup>[14](#ref14),[15](#ref15),[16](#ref16)</sup>
 
 Raise both of the following at that consultation:
 
-* **Yellow fever.** Kenya requires a certificate from travellers arriving from countries at risk of transmission. This applies to members routing through another African country and not to direct flights from the United States.<sup>[12](#ref12),[13](#ref13),[14](#ref14)</sup>
-* **Malaria.** Kenya's National Malaria Control Programme places Narok County, which contains the Kenyan Mara, in the **moderate burden stratum at 54.0 cases per 1,000**.<sup>[18](#ref18)</sup>
+* **Yellow fever.** Kenya requires a certificate from travellers arriving from countries at risk of yellow fever transmission. Whether your itinerary triggers it depends on your transits, so confirm your specific routing at the consultation and re-check if a carrier reroutes you.<sup>[12](#ref12),[13](#ref13)</sup>
+* **Malaria.** Kenya's National Malaria Control Programme places Narok County, which contains the Kenyan Mara, in the **moderate burden stratum**, whose adjusted median incidence is 54.0 cases per 1,000.<sup>[17](#ref17)</sup>
 
-Bite prevention is a laboratory requirement rather than a medical decision: EPA-registered repellents, long sleeves and trousers, permethrin-treated clothing, screened accommodation, and treated bed nets at remote camps.<sup>[17](#ref17)</sup>
+Bite prevention is a laboratory requirement rather than a medical decision: EPA-registered repellents, long sleeves and trousers, permethrin-treated clothing, screened accommodation, and treated bed nets at remote camps.<sup>[16](#ref16)</sup>
 
-**Training.** Before first deployment, every member completes wilderness first aid, harassment intervention training, and the pre-trip meeting described below.<sup>[33](#ref33)</sup>
+**Training.** Before first deployment, every member completes wilderness first aid, harassment intervention training, and the pre-trip meeting described below.<sup>[32](#ref32)</sup>
 
 ## Water Contact
 
 The laboratory's work requires contact with Mara River and hippo-pool water.
 
-**Treat all fresh surface water in the study system as schistosomiasis-infested.** CDC states that most freshwater surface water sources in Africa are potentially contaminated, and advises travellers to view with scepticism any local claim that a body of freshwater, including a fast-moving river, is free from schistosomiasis. Cercariae penetrate skin on contact, there is no vaccine, and brief incidental contact transmits.<sup>[19](#ref19),[20](#ref20),[21](#ref21),[22](#ref22),[23](#ref23)</sup>
+**Treat all fresh surface water in the study system as schistosomiasis-infested.** CDC states that most freshwater surface water sources in Africa are potentially contaminated, and advises travellers to view with scepticism any local claim that a body of freshwater, including a fast-moving river, is free from schistosomiasis. Cercariae penetrate skin on contact, there is no vaccine, and brief incidental contact transmits.<sup>[18](#ref18),[19](#ref19),[20](#ref20),[21](#ref21),[22](#ref22)</sup>
 
 Laboratory controls:
 
 * Barrier protection for all planned water entry. Waders or equivalent, inspected before each use.
-* Vigorous towel-drying immediately after any unavoidable skin contact. Towel-drying does not substitute for barrier protection.<sup>[20](#ref20)</sup>
-* River water used for washing is treated by one of the CDC-listed methods before use. The current methods and contact times are on the CDC prevention page; do not work from memory.<sup>[20](#ref20),[21](#ref21)</sup>
-* **Raise water exposure with UF Occupational Medicine Services before and after each season.** Whether to test for exposure, and when, is a clinical decision for that provider, not one this laboratory makes or records.<sup>[21](#ref21)</sup>
+* Vigorous towel-drying immediately after any unavoidable skin contact. Towel-drying does not substitute for barrier protection.<sup>[19](#ref19)</sup>
+* River water used for washing is treated by one of the CDC-listed methods before use. The current methods and contact times are on the CDC prevention page; do not work from memory.<sup>[19](#ref19),[20](#ref20)</sup>
+* **Raise water exposure with UF Occupational Medicine Services before and after each season.** Whether to test for exposure, and when, is a clinical decision for that provider, not one this laboratory makes or records.<sup>[20](#ref20)</sup>
 
 ## Large Animals, Water Craft, and Vehicles
 
-**No authoritative government or intergovernmental standard exists for work around hippos and crocodiles.** The clinical literature is limited to case series establishing severity. The laboratory therefore sets its own controls.<sup>[23](#ref23),[24](#ref24),[28](#ref28),[29](#ref29)</sup>
+**No authoritative government or intergovernmental standard exists for work around hippos and crocodiles.** The clinical literature is limited to case series establishing severity. The controls below are set by this laboratory.<sup>[23](#ref23),[27](#ref27),[28](#ref28)</sup>
 
 Laboratory controls:
 
@@ -103,43 +103,43 @@ Laboratory controls:
 * A dedicated spotter is posted to watch for surfacing animals whenever anyone is in or beside the water.
 * Defined boat standoff distances from hippos and crocodiles, agreed at the pre-trip meeting and not reduced for sampling convenience.
 
-**Drowning** is documented as a leading cause of injury death among US citizens visiting countries where water recreation is a major activity, driven by unfamiliar conditions, inability to swim, and absent supervision. Personal flotation devices must be sized for the wearer and US Coast Guard approved or comparable. No member swims alone or in unfamiliar water. A swim-competency check is required for all personnel entering water.<sup>[25](#ref25)</sup>
+**Drowning** is documented as a leading cause of injury death among US citizens visiting countries where water recreation is a major activity, driven by unfamiliar conditions, inability to swim, and absent supervision. Personal flotation devices must be sized for the wearer and US Coast Guard approved or comparable. No member swims alone or in unfamiliar water. A swim-competency check is required for all personnel entering water.<sup>[24](#ref24)</sup>
 
-**Boat work** follows the USGS standard: a worn, USCG-approved PFD at all times aboard small craft; a dedicated operator plus sufficient crew while underway; CPR training for all watercraft operators; and a **float plan filed with a supervisor or someone knowledgeable of the intent to operate**, listing craft description, occupants, departure and return times, emergency equipment, route, communications, and the action to take if the party is overdue.<sup>[38](#ref38),[39](#ref39)</sup>
+**Boat work** follows the USGS standard: a worn, USCG-approved PFD at all times aboard small craft; a dedicated operator plus sufficient crew while underway; CPR training for all watercraft operators; and a **float plan filed with a supervisor or someone knowledgeable of the intent to operate**, listing craft description, occupants, departure and return times, emergency equipment, route, communications, and the action to take if the party is overdue.<sup>[37](#ref37),[38](#ref38)</sup>
 
-Motor vehicle crashes are the leading cause of non-natural death among US citizens abroad, and fatal crash rates in sub-Saharan Africa are among the highest in the world. Seatbelts are worn at all times. **No night driving in rural areas**, consistent with State Department guidance to avoid travel after dark in Kenya. No alcohol before driving. Helmets meeting US standards for any two-wheeled travel. Overcrowded public transport is avoided.<sup>[23](#ref23),[25](#ref25),[12](#ref12)</sup>
+Motor vehicle crashes are the leading cause of non-natural death among US citizens abroad, and fatal crash rates in sub-Saharan Africa are among the highest in the world. Seatbelts are worn at all times. **No night driving in rural areas**, consistent with State Department guidance to avoid travel after dark in Kenya. No alcohol before driving. Helmets meeting US standards for any two-wheeled travel. Overcrowded public transport is avoided.<sup>[22](#ref22),[24](#ref24),[12](#ref12)</sup>
 
-**Wildlife handling.** Gloves are worn for handling any wildlife. After any bite, wash with soap and running water for **at least 15 minutes**, and for suspected rabies exposure stop the journey and seek care where rabies post-exposure prophylaxis is available.<sup>[24](#ref24),[36](#ref36)</sup>
+**Wildlife handling.** Gloves are worn for handling any wildlife. After any bite, wash with soap and running water for **at least 20 minutes**, and for suspected rabies exposure stop the journey and seek care where rabies post-exposure prophylaxis is available.<sup>[23](#ref23),[35](#ref35)</sup>
 
 ## Field Safety Plans, Lone Work, and Communication
 
-**Every field campaign has a written Field Safety Plan** before departure, documenting hazard assessment, communication strategy, emergency procedures, and required training. A mandatory pre-trip meeting covers the plan, logistics, the pack list, and any outstanding training.<sup>[36](#ref36),[37](#ref37)</sup>
+**Every field campaign has a written Field Safety Plan** before departure, documenting hazard assessment, communication strategy, emergency procedures, and required training. A mandatory pre-trip meeting covers the plan, logistics, the pack list, and any outstanding training.<sup>[35](#ref35),[36](#ref36)</sup>
 
-Members **avoid working alone where possible**, including on private property, at controlled sites, and in areas lacking reliable phone service. Where solo work is unavoidable, the Field Safety Plan must specify check-in procedures, and the member must carry a field radio or satellite communication device.<sup>[36](#ref36)</sup>
+Members **avoid working alone where possible**, including on private property, at controlled sites, and in areas lacking reliable phone service. Where solo work is unavoidable, the Field Safety Plan must specify check-in procedures, and the member must carry a field radio or satellite communication device.<sup>[35](#ref35)</sup>
 
-**Communication redundancy is an NSF requirement.** The reporting pathway must minimise singular points: **at least one reporting route must not pass through the Principal Investigator**, who may be the subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated explicitly, and is selected by the Department Chair rather than by the Principal Investigator. The UF Compliance Hotline (877-556-5356) is listed in the Emergency Information table above. It is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set explicitly, and members enrol in the State Department's Smart Traveler Enrollment Program or, if not US citizens, with their own consulate.<sup>[1](#ref1),[26](#ref26)</sup>
+**Communication redundancy is an NSF requirement.** The reporting pathway must minimise singular points: **at least one reporting route must not pass through the Principal Investigator**, who may be the subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated, and is selected by the Department Chair rather than by the Principal Investigator. The UF Compliance Hotline (877-556-5356) is listed in the Emergency Information table above. It is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set, and members enrol in the State Department's Smart Traveler Enrollment Program or, if not US citizens, with their own consulate.<sup>[1](#ref1),[25](#ref25)</sup>
 
 ## Stop-Work Authority
 
 **Every member of the field team, including undergraduates and Kenyan field staff, has unconditional authority to stop any field activity they judge unsafe, and no explanation is required at the moment of stopping.**
 
-USGS provisions give a watercraft operator final authority to abort and protect anyone reporting an unsafe condition from reprisal. This policy extends that authority to every member of the field party. Where a crew member calls a stop and the operator disagrees, the activity stops.<sup>[38](#ref38),[40](#ref40)</sup>
+USGS provisions give a watercraft operator final authority to abort and protect anyone reporting an unsafe condition from reprisal. This policy extends that authority to every member of the field party. Where a crew member calls a stop and the operator disagrees, the activity stops.<sup>[37](#ref37),[39](#ref39)</sup>
 
 Retaliation against anyone who exercises stop-work authority is a violation of this policy and of the [Laboratory Code of Conduct](/code-of-conduct/).
 
 ## Conduct, Harassment, and Wellbeing
 
-The Survey of Academic Field Experiences found that 64 percent of respondents had experienced sexual harassment and 21.7 percent sexual assault at field sites; that harassment of women came predominantly from superiors while harassment of men came predominantly from peers; that over 90 percent of targeted women and 70 percent of targeted men were trainees or employees; and that fewer than a quarter had ever worked at a field site with a sexual harassment policy, and fewer than a fifth were satisfied with the outcome when they did report. This laboratory's field teams span undergraduates to principal investigator, and field-site climate also shapes career trajectories.<sup>[30](#ref30),[31](#ref31)</sup>
+The Survey of Academic Field Experiences found that 64 percent of respondents had experienced sexual harassment and 21.7 percent sexual assault at field sites; that harassment of women came predominantly from superiors while harassment of men came predominantly from peers; that over 90 percent of targeted women and 70 percent of targeted men were trainees or employees; and that fewer than a quarter had ever worked at a field site with a sexual harassment policy, and fewer than a fifth were satisfied with the outcome when they did report. <sup>[29](#ref29),[30](#ref30)</sup>
 
 Accordingly:
 
-* **A written code of conduct with explicit reporting protocols and consequences is signed by every team member before deployment.**<sup>[33](#ref33)</sup>
-* Members are informed of the risks some colleagues may face, so that controls are defined together. This includes a pre-season conversation about identity-based risk in the field context.<sup>[32](#ref32)</sup>
-* Workload and rest are scheduled in the Field Safety Plan, including bathroom access.<sup>[33](#ref33)</sup>
-* Local on-ground contacts are named in the Field Safety Plan before departure.<sup>[33](#ref33)</sup>
-* **No member fronts their own money.** Field costs, required training, the pre-travel medical consultation, travel vaccination, chemoprophylaxis, and personal protective equipment are paid by the grant or the PI in advance rather than reimbursed afterwards, and emergency funds are reachable from the field. Required training days count as work time for paid members.<sup>[33](#ref33),[34](#ref34)</sup>
-* The pre-travel consultation covers mental as well as physical health. **The laboratory does not learn, verify, or record diagnoses or medications**, and no consultation outcome is a basis for excluding anyone from a field season. The consultation covers whether members' medications are legal and available in-country, telehealth arrangements before departure, and medication stability at high ambient temperature.<sup>[27](#ref27),[35](#ref35)</sup>
-* A debrief follows every field season.<sup>[33](#ref33)</sup>
+* **A written code of conduct with explicit reporting protocols and consequences is signed by every team member before deployment.**<sup>[32](#ref32)</sup>
+* Members are informed of the risks some colleagues may face, so that controls are defined together. This includes a pre-season conversation about identity-based risk in the field context.<sup>[31](#ref31)</sup>
+* Workload and rest are scheduled in the Field Safety Plan, including bathroom access.<sup>[32](#ref32)</sup>
+* Local on-ground contacts are named in the Field Safety Plan before departure.<sup>[32](#ref32)</sup>
+* **No member fronts their own money.** Field costs, required training, the pre-travel medical consultation, travel vaccination, chemoprophylaxis, and personal protective equipment are paid by the grant or the PI in advance rather than reimbursed afterwards, and emergency funds are reachable from the field. Required training days count as work time for paid members.<sup>[32](#ref32),[33](#ref33)</sup>
+* The pre-travel consultation covers mental as well as physical health. **The laboratory does not learn, verify, or record diagnoses or medications**, and no consultation outcome is a basis for excluding anyone from a field season. The consultation covers whether members' medications are legal and available in-country, telehealth arrangements before departure, and medication stability at high ambient temperature.<sup>[26](#ref26),[34](#ref34)</sup>
+* A debrief follows every field season.<sup>[32](#ref32)</sup>
 
 ## Review
 
@@ -151,13 +151,13 @@ This policy is reviewed annually, before each field season, and immediately upon
 
 *Please print and sign if hard copy is required, or confirm via email.*
 
-**Member Name (print):** ___________________________________
+**Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Member Signature:** ___________________________________  
-**Date:** __________________
+**Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** ___________________________________  
-**Date:** __________________
+**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** Everyone within the scope of this policy, including visiting collaborators and Kenyan field team members, must read and sign it before their first field deployment and before each subsequent field season. A translated copy is provided where English is not the signer’s working language.
 
@@ -179,34 +179,33 @@ This policy is reviewed annually, before each field season, and immediately upon
 <li id="ref11">University of Florida Environmental Health &amp; Safety. <a href="https://www.ehs.ufl.edu/policies/vaccination-policy-for-research-personnel/">Vaccination Policy for Research Personnel</a>.</li>
 <li id="ref12">U.S. Department of State, Bureau of Consular Affairs. <a href="https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Kenya.html">Kenya International Travel Information</a>. Travel Advisory Level 2, updated 17 March 2025.</li>
 <li id="ref13">World Health Organization. <a href="https://cdn.who.int/media/docs/default-source/travel-and-health/countries-with-risk-of-yellow-fever-transmission.pdf">International Travel and Health, Annex 1: Countries with risk of yellow fever transmission and countries requiring yellow fever vaccination (PDF)</a>. 18 November 2022, revised 3 January 2023.</li>
-<li id="ref14">World Health Organization. <a href="https://www.who.int/docs/default-source/documents/emergencies/travel-advice/yellow-fever-vaccination-requirements-country-list-2020-en.pdf">International Travel and Health country list: yellow fever vaccination requirements and recommendations, malaria situation, and other vaccination requirements (PDF)</a>. 1 July 2020.</li>
-<li id="ref15">Staples JE, O'Laughlin K. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html">Yellow Fever</a>. In: <em>CDC Yellow Book: Health Information for International Travel</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref16">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/malaria/hcp/drug-malaria/index.html">Choosing a Drug to Prevent Malaria</a>. Last reviewed 18 July 2024.</li>
-<li id="ref17">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/malaria/prevention/index.html">Preventing Malaria While Traveling</a>. Last reviewed 12 March 2024.</li>
-<li id="ref18">Ministry of Health, National Malaria Control Programme, Republic of Kenya. <a href="https://www.afro.who.int/sites/default/files/2025-03/Kenya%20Malaria%20Strategy%20%7C%202023-2027.pdf">Kenya Malaria Strategy 2023-2027 (PDF)</a>. 2023.</li>
-<li id="ref19">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/schistosomiasis/about/index.html">About Schistosomiasis</a>. Last reviewed 17 June 2024.</li>
-<li id="ref20">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/schistosomiasis/prevention/index.html">Preventing Schistosomiasis</a>. Last reviewed 4 March 2024.</li>
-<li id="ref21">Straily A, Secor WE. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/schistosomiasis.html">Schistosomiasis</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref22">World Health Organization. <a href="https://www.who.int/news-room/fact-sheets/detail/schistosomiasis">Schistosomiasis fact sheet</a>. Updated 23 February 2026.</li>
-<li id="ref23">Geissler A, Kasule JN, Ojwang J. <a href="https://www.cdc.gov/yellow-book/hcp/africa-middle-east/african-safaris-and-climbing-expeditions.html">African Safaris and Climbing Expeditions</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref24">Cossaboom CM, Wallace RM, Barton Behravesh C. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/zoonotic-exposures.html">Zoonotic Exposures: Bites, Scratches, and Other Hazards</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref25">Ballesteros MF, Decenteceo FM, Zia M, Alvarado-Ramy F. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/injury-and-death-during-travel.html">Injury and Death During Travel</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref26">Lehner VM. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/safety-and-security-overseas.html">Safety and Security Overseas</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref27">Valk TH. <a href="https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/mental-health-in-travelers.html">Mental Health in Travelers</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
-<li id="ref28">Haddara MM, Haberisoni JB, Trelles M, Gohou JP, Christella K, Dominguez L, Ali E. <a href="https://doi.org/10.1093/omcr/omaa061">Hippopotamus bite morbidity: a report of 11 cases from Burundi</a>. <em>Oxford Medical Case Reports</em>. 2020;2020(8):omaa061.</li>
-<li id="ref29">Matanzima J. <a href="https://doi.org/10.1007/978-981-99-9573-8_5">Negative Human-Wildlife Interactions at Lake Kariba: Emphasis on Crocodile and Hippo Attacks on People</a>. In: <em>The Materiality of Lake Kariba</em>. Springer Nature Singapore, 2024:135-172.</li>
-<li id="ref30">Clancy KBH, Nelson RG, Rutherford JN, Hinde K. <a href="https://doi.org/10.1371/journal.pone.0102172">Survey of Academic Field Experiences (SAFE): Trainees Report Harassment and Assault</a>. <em>PLOS ONE</em>. 2014;9(7):e102172.</li>
-<li id="ref31">Nelson RG, Rutherford JN, Hinde K, Clancy KBH. <a href="https://doi.org/10.1111/aman.12929">Signaling Safety: Characterizing Fieldwork Experiences and Their Implications for Career Trajectories</a>. <em>American Anthropologist</em>. 2017;119(4):710-722.</li>
-<li id="ref32">Demery AJC, Pipkin MA. <a href="https://doi.org/10.1038/s41559-020-01328-5">Safe fieldwork strategies for at-risk individuals, their supervisors and institutions</a>. <em>Nature Ecology &amp; Evolution</em>. 2021;5(1):5-9.</li>
-<li id="ref33">Nordseth AE, Gerson JR, Aguilar LK, Dunham AE, Gentles A, Neale Z, Rebol E. <a href="https://doi.org/10.1002/fee.2649">The Fieldwork Wellness Framework: a new approach to field research in ecology</a>. <em>Frontiers in Ecology and the Environment</em>. 2023;21(6):297-303.</li>
-<li id="ref34">Walsh LL. <a href="https://doi.org/10.1126/sciadv.aeb6753">Enabling Fieldwork for All (EFFA) Framework: Supporting physical, social, financial, and psychological safety in the field</a>. <em>Science Advances</em>. 2026;12(9):eaeb6753.</li>
-<li id="ref35">John CM, Khan SB. <a href="https://doi.org/10.1038/s41561-018-0219-0">Mental health in the field</a>. <em>Nature Geoscience</em>. 2018;11(9):618-620.</li>
-<li id="ref36">University of California, Office of the President, Risk Services. <a href="https://www.ucop.edu/safety-and-loss-prevention/_files/field-research-safety/uc-field-research-safety-manual.pdf">Field Operations Safety Manual (PDF)</a>. 2019.</li>
-<li id="ref37">University of California, Berkeley, Office of Environment, Health &amp; Safety. <a href="https://ehs.berkeley.edu/safety-subjects/field-research">Field Research</a>.</li>
-<li id="ref38">U.S. Geological Survey. <a href="https://www.fws.gov/sites/default/files/documents/USGS%20CHAPTER%2031_03_2020%20-%20REM%20LJW.pdf">Survey Manual 445-2-H, Chapter 31: Watercraft Safety (PDF)</a>. March 2020 revision.</li>
-<li id="ref39">U.S. Geological Survey. <a href="https://www.usgs.gov/survey-manual/4121-watercraft">Survey Manual 412.1: Watercraft</a>. 22 January 1990.</li>
-<li id="ref40">U.S. Geological Survey. <a href="https://www.usgs.gov/survey-manual/4451-occupational-safety-and-health-policy-and-responsibilities">Survey Manual 445.1: Occupational Safety and Health Policy and Responsibilities</a>. 6 September 2023.</li>
-<li id="ref41">University of Florida Environmental Health &amp; Safety. <a href="https://www.ehs.ufl.edu/departments/research-safety-services/animal-research-safety/animal-contact-program/">Animal Contact Program</a>.</li>
-<li id="ref42">University of Florida Environmental Health &amp; Safety, Occupational Medicine. <a href="https://www.ehs.ufl.edu/departments/occupational-safety-risk/occupational-medicine/medical-monitoring/animal-contact/">Medical Monitoring: Animal Contact</a>.</li>
-<li id="ref43">University of Florida. <a href="https://policy.ufl.edu/policy/youth-compliance/">Youth Compliance and Child Abuse Reporting (Policy 5-002)</a>.</li>
+<li id="ref14">Staples JE, O'Laughlin K. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html">Yellow Fever</a>. In: <em>CDC Yellow Book: Health Information for International Travel</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref15">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/malaria/hcp/drug-malaria/index.html">Choosing a Drug to Prevent Malaria</a>. Last reviewed 18 July 2024.</li>
+<li id="ref16">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/malaria/prevention/index.html">Preventing Malaria While Traveling</a>. Last reviewed 12 March 2024.</li>
+<li id="ref17">Ministry of Health, National Malaria Control Programme, Republic of Kenya. <a href="https://www.afro.who.int/sites/default/files/2025-03/Kenya%20Malaria%20Strategy%20%7C%202023-2027.pdf">Kenya Malaria Strategy 2023-2027 (PDF)</a>. 2023.</li>
+<li id="ref18">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/schistosomiasis/about/index.html">About Schistosomiasis</a>. Last reviewed 17 June 2024.</li>
+<li id="ref19">Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/schistosomiasis/prevention/index.html">Preventing Schistosomiasis</a>. Last reviewed 4 March 2024.</li>
+<li id="ref20">Straily A, Secor WE. <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/schistosomiasis.html">Schistosomiasis</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref21">World Health Organization. <a href="https://www.who.int/news-room/fact-sheets/detail/schistosomiasis">Schistosomiasis fact sheet</a>. Updated 23 February 2026.</li>
+<li id="ref22">Geissler A, Kasule JN, Ojwang J. <a href="https://www.cdc.gov/yellow-book/hcp/africa-middle-east/african-safaris-and-climbing-expeditions.html">African Safaris and Climbing Expeditions</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref23">Cossaboom CM, Wallace RM, Barton Behravesh C. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/zoonotic-exposures.html">Zoonotic Exposures: Bites, Scratches, and Other Hazards</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref24">Ballesteros MF, Decenteceo FM, Zia M, Alvarado-Ramy F. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/injury-and-death-during-travel.html">Injury and Death During Travel</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref25">Lehner VM. <a href="https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/safety-and-security-overseas.html">Safety and Security Overseas</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref26">Valk TH. <a href="https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/mental-health-in-travelers.html">Mental Health in Travelers</a>. In: <em>CDC Yellow Book</em>, 2026 Edition. Centers for Disease Control and Prevention, 23 April 2025.</li>
+<li id="ref27">Haddara MM, Haberisoni JB, Trelles M, Gohou JP, Christella K, Dominguez L, Ali E. <a href="https://doi.org/10.1093/omcr/omaa061">Hippopotamus bite morbidity: a report of 11 cases from Burundi</a>. <em>Oxford Medical Case Reports</em>. 2020;2020(8):omaa061.</li>
+<li id="ref28">Matanzima J. <a href="https://doi.org/10.1007/978-981-99-9573-8_5">Negative Human-Wildlife Interactions at Lake Kariba: Emphasis on Crocodile and Hippo Attacks on People</a>. In: <em>The Materiality of Lake Kariba</em>. Springer Nature Singapore, 2024:135-172.</li>
+<li id="ref29">Clancy KBH, Nelson RG, Rutherford JN, Hinde K. <a href="https://doi.org/10.1371/journal.pone.0102172">Survey of Academic Field Experiences (SAFE): Trainees Report Harassment and Assault</a>. <em>PLOS ONE</em>. 2014;9(7):e102172.</li>
+<li id="ref30">Nelson RG, Rutherford JN, Hinde K, Clancy KBH. <a href="https://doi.org/10.1111/aman.12929">Signaling Safety: Characterizing Fieldwork Experiences and Their Implications for Career Trajectories</a>. <em>American Anthropologist</em>. 2017;119(4):710-722.</li>
+<li id="ref31">Demery AJC, Pipkin MA. <a href="https://doi.org/10.1038/s41559-020-01328-5">Safe fieldwork strategies for at-risk individuals, their supervisors and institutions</a>. <em>Nature Ecology &amp; Evolution</em>. 2021;5(1):5-9.</li>
+<li id="ref32">Nordseth AE, Gerson JR, Aguilar LK, Dunham AE, Gentles A, Neale Z, Rebol E. <a href="https://doi.org/10.1002/fee.2649">The Fieldwork Wellness Framework: a new approach to field research in ecology</a>. <em>Frontiers in Ecology and the Environment</em>. 2023;21(6):297-303.</li>
+<li id="ref33">Walsh LL. <a href="https://doi.org/10.1126/sciadv.aeb6753">Enabling Fieldwork for All (EFFA) Framework: Supporting physical, social, financial, and psychological safety in the field</a>. <em>Science Advances</em>. 2026;12(9):eaeb6753.</li>
+<li id="ref34">John CM, Khan SB. <a href="https://doi.org/10.1038/s41561-018-0219-0">Mental health in the field</a>. <em>Nature Geoscience</em>. 2018;11(9):618-620.</li>
+<li id="ref35">University of California, Office of the President, Risk Services. <a href="https://www.ucop.edu/safety-and-loss-prevention/_files/field-research-safety/uc-field-research-safety-manual.pdf">Field Operations Safety Manual (PDF)</a>. 2019.</li>
+<li id="ref36">University of California, Berkeley, Office of Environment, Health &amp; Safety. <a href="https://ehs.berkeley.edu/safety-subjects/field-research">Field Research</a>.</li>
+<li id="ref37">U.S. Geological Survey. <a href="https://www.fws.gov/sites/default/files/documents/USGS%20CHAPTER%2031_03_2020%20-%20REM%20LJW.pdf">Survey Manual 445-2-H, Chapter 31: Watercraft Safety (PDF)</a>. March 2020 revision.</li>
+<li id="ref38">U.S. Geological Survey. <a href="https://www.usgs.gov/survey-manual/4121-watercraft">Survey Manual 412.1: Watercraft</a>. 22 January 1990.</li>
+<li id="ref39">U.S. Geological Survey. <a href="https://www.usgs.gov/survey-manual/4451-occupational-safety-and-health-policy-and-responsibilities">Survey Manual 445.1: Occupational Safety and Health Policy and Responsibilities</a>. 6 September 2023.</li>
+<li id="ref40">University of Florida Environmental Health &amp; Safety. <a href="https://www.ehs.ufl.edu/departments/research-safety-services/animal-research-safety/animal-contact-program/">Animal Contact Program</a>.</li>
+<li id="ref41">University of Florida Environmental Health &amp; Safety, Occupational Medicine. <a href="https://www.ehs.ufl.edu/departments/occupational-safety-risk/occupational-medicine/medical-monitoring/animal-contact/">Medical Monitoring: Animal Contact</a>.</li>
+<li id="ref42">University of Florida. <a href="https://policy.ufl.edu/policy/youth-compliance/">Youth Compliance and Child Abuse Reporting (Policy 5-002)</a>.</li>
 </ol>

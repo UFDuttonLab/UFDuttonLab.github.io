@@ -20,18 +20,18 @@ These are the windows fellowships usually fall in, checked July 2026. Confirm th
 | --- | --- | --- | --- |
 | Rolling | Rufford Small Grants | MSc/PhD, project in Kenya or South Africa | Up to about £7,000 |
 | Late Aug | Explorers Club Pathfinder | Grad students doing fieldwork | $2,500 to $5,000 |
-| Early Sep | Welder Wildlife Fellowship | Grad students, residency in Texas | About $24,000 to $26,400/yr |
+| Early Sep | Welder Wildlife Fellowship | Grad students at accredited US institutions | About $24,000 to $26,400/yr |
 | Mid Sep | AAUW International Fellowship | Women who are **not** US citizens or PRs | $20,000 to $25,000 |
-| Mid Sep | Fogarty Global Health Fellowship | US or Kenyan citizens and PRs | $7,500 research funding |
+| Mid Sep | Fogarty Global Health Fellowship | US citizens and PRs (predoctoral) | $7,500 research funding |
 | Early Oct | Fulbright US Student Program | US citizens, no PhD yet | Stipend, travel, health |
-| Early Oct, and early Mar | Sigma Xi Grants in Aid | Any grad researcher | $500 to $5,000 |
+| 1 Oct and 15 Mar | Sigma Xi Grants in Aid | Any grad researcher | $500 to $5,000 |
 | Late Oct | Hertz Fellowship | US citizens and PRs | Up to $250,000 total |
 | Late Oct | HHMI Gilliam | PhD years 2 to 3, with adviser, HHMI-eligible institution | $65,000/yr |
 | Late Oct | Soros Fellowship | US immigration status required; age 30 or under | Up to $90,000 |
-| Late Oct | NDSEG | US citizens and PRs | $43,200/yr plus tuition |
-| Early Nov | NSF GRFP | US citizens and PRs; entering, or years 1 to 2 | $37,000 plus $16,000/yr |
+| Late Oct | NDSEG | US citizens and nationals; **PRs not eligible** | $43,200/yr plus tuition |
+| Early Nov | NSF GRFP | US citizens and PRs; entering, or year 1 only | $37,000 plus $16,000/yr |
 | Mid Nov | APS Lewis and Clark | Doctoral fieldwork | About $5,400 |
-| Nov | DOE SCGSR | US citizens and PRs | Up to $3,600/month |
+| May and Nov | DOE SCGSR | US citizens and PRs | Up to $3,600/month |
 | Dec | UF Biology department awards | UF Biology grad students | $300 to $4,000 |
 | Late Dec | GCA Ecological Restoration | US citizens and PRs | $8,000/yr |
 | Mid Jan | McKnight Doctoral Fellowship | African American or Hispanic US citizens; **entering** | Stipend plus tuition |
@@ -39,7 +39,7 @@ These are the windows fellowships usually fall in, checked July 2026. Confirm th
 | Apr | USDA NIFA AFRI Predoctoral | US citizens and PRs | Up to $180,000 |
 | Nov to May | UF Scholarship Universe | Admitted UF students | Varies |
 | Jun (LOI) | Simons Ecology and Evolution | Students **entering** a US PhD | $265,800 total |
-| Opens Sep, close TBA | Switzer Fellowship | Post-quals PhD candidates | $17,000 |
+| Opens Sep, close TBA | Switzer Fellowship | US citizens, PRs, DACA, refugee/asylee; post-quals | $17,000 |
 | Varies | UF Research Abroad for Doctoral Students | Post-candidacy, research abroad | Up to $5,000 |
 | Through your unit | Grinter Fellowship | **Incoming** PhD students | $2,000 to $4,000 |
 
@@ -47,9 +47,9 @@ These are the windows fellowships usually fall in, checked July 2026. Confirm th
 
 ### If you are not a US citizen or permanent resident
 
-Most US federal fellowships are closed to you: GRFP, NDSEG, SCGSR, NIH F31, USDA AFRI, McKnight, GCA, Hertz, and Fulbright US Student all require citizenship or permanent residency.
+Most US federal fellowships are closed to you: GRFP, SCGSR, NIH F31, USDA AFRI, and Fulbright US Student all require citizenship or permanent residency, and NDSEG requires citizenship even of permanent residents. Several non-federal awards are also citizenship-restricted: McKnight, Hertz, GCA, and Switzer.
 
-Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **UF Research Abroad**, the **UF Biology department awards** once you are enrolled, and, if you are a Kenyan citizen or permanent resident, **Fogarty**.
+Open to you, and listed below: **AAUW International Fellowships**, **Rufford Small Grants**, **Explorers Club**, **Sigma Xi**, **APS Lewis and Clark**, **Welder Wildlife**, **UF Research Abroad**, and the **UF Biology department awards** once you are enrolled. Fogarty is open to Kenyan nationals at the postdoctoral level only.
 
 A departmental assistantship is the usual route. Terms, including the hours each FTE level corresponds to, are in the [Laboratory Code of Conduct](/code-of-conduct/).
 
@@ -72,7 +72,7 @@ If your project involves fieldwork in Kenya, read the [International Research Pa
 
 ### How to Contact Me
 
-**Subject line:** "Prospective Graduate Student - [Your Name]"
+**Subject line:** "Prospective Graduate Student - your name"
 
 **Please include:**
 
@@ -94,7 +94,7 @@ I read enquiries personally and may not reply to all of them. Admission on a Tea
 
 **Award:** $37,000/yr stipend plus $16,000/yr cost-of-education, 3 years within a 5-year window.
 **Deadline:** Early November, **staggered by field**. Life Sciences falls a few days before the others.
-**Eligibility:** US citizens, nationals, and permanent residents; entering, or in year 1 or 2.
+**Eligibility:** US citizens, nationals, and permanent residents. You must not have completed more than one academic year of graduate study, so second-year students are not eligible.
 
 As of July 2026 the FY2027 solicitation had not been posted. Check the programme page from late summer.
 
@@ -128,7 +128,7 @@ A recruitment award for **incoming** students, not dissertation support. $2,000 
 
 **Award:** Full tuition and required fees, $43,200/yr, health insurance up to $1,600/yr, and up to $5,000 professional travel.
 **Deadline:** Late October.
-**Eligibility:** US citizens and permanent residents.
+**Eligibility:** US citizens, US dual citizens, and US nationals. **Permanent residents are not eligible.**
 
 - [NDSEG](https://ndseg.sysplus.com)
 
@@ -166,14 +166,14 @@ A recruitment award for **incoming** students, not dissertation support. $2,000 
 
 F31 projects require a health or environmental-health framing.
 
-- [NIH F31 programme](https://www.nigms.nih.gov/training/individual-fellowships)
-- [Current NRSA stipend levels](https://grants.nih.gov/policy-and-compliance/policy-topics/nrsa)
+- [NIH F31 programme](https://grants.nih.gov/funding/activity-codes/F31)
+- [Current NRSA stipend levels](https://grants.nih.gov/policy-and-compliance/policy-topics/nih-fiscal-policies/stipends-summary)
 
 #### Switzer Environmental Fellowship
 
 **Award:** $17,000.
 **Deadline:** Applications open in September; the close date is not yet published.
-**Eligibility:** From the 2027 cycle the fellowship is open nationally, having previously been limited to New England and California. PhD candidates must have passed qualifying exams.
+**Eligibility:** US citizenship, permanent residency, DACA, or refugee/asylee status. PhD candidates must have passed qualifying exams. From the 2027 cycle the fellowship is open nationally, having previously been limited to New England and California.
 
 - [Switzer Fellowship](https://www.switzernetwork.org/fellowship/become-fellow)
 
@@ -214,7 +214,7 @@ F31 projects require a health or environmental-health framing.
 #### Sigma Xi Grants in Aid of Research
 
 **Award:** $500 to $5,000 for graduate members; non-members capped at $1,000.
-**Deadlines:** Early March and early October.
+**Deadlines:** 15 March and 1 October.
 
 - [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
 
@@ -245,11 +245,9 @@ F31 projects require a health or environmental-health framing.
 
 **Award:** $7,500 research funding for US pre-doctoral fellows, over a 12-month placement.
 **Deadline:** Mid September.
-**Eligibility:** Citizens or permanent residents of the US, **Kenya**, and several other countries. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
+**Eligibility:** At the predoctoral level, US citizens and permanent residents only. Nationals of Kenya and other LMICs are eligible at the **postdoctoral** level. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
 
-The programme funds Kenyan nationals directly.
-
-- [Fogarty Global Health Fellows](https://fogartyfellows.org/apply/)
+- [Fogarty Global Health Fellows](https://www.fic.nih.gov/Programs/Pages/scholars-fellows-global-health.aspx)
 
 #### Garden Club of America Fellowship in Ecological Restoration
 
@@ -315,8 +313,6 @@ Amounts range from a few hundred dollars to $4,000 and change year to year.
 ## Tips
 
 1. **Start a year ahead.** GRFP, NDSEG, Soros, Gilliam, and Hertz all fall between late October and mid November.
-2. **Ask me for letters three weeks out**, with your draft and the prompt.
-3. **Check the deadline yourself.** This page is verified once a year; the programme pages are authoritative.
 
 ---
 

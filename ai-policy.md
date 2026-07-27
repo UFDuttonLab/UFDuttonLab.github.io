@@ -12,10 +12,9 @@ permalink: /ai-policy/
 This policy establishes guidelines for the use of artificial intelligence (AI) tools in all laboratory research activities, including data analysis, manuscript preparation, grant writing, and peer review. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, and staff) must adhere to these standards.<sup>[1](#ref1),[2](#ref2),[3](#ref3)</sup>
 
 ## Core Principles
-Laboratory AI use is guided by three principles:
+Laboratory AI use is guided by two principles:
 * **Transparency:** Full disclosure of AI applications in research outputs.
 * **Accountability:** Humans remain solely responsible for the accuracy and integrity of all AI-generated outputs.
-* **Human Oversight:** AI tools must be used to augment, not replace, critical thinking and scientific judgment.<sup>[1](#ref1),[2](#ref2),[4](#ref4)</sup>
 
 ## Permitted Uses
 AI tools may be used for the following purposes, subject to the verification and disclosure requirements below. **Every permitted use below is subject to the data classification rules in [Data Protection and Privacy](#data-protection-and-privacy).** The activity is permitted on a public platform only where the material you paste in is Open; where it is Sensitive or Restricted, which covers anything unpublished or confidential, the same activity is permitted only in an institutionally approved secure environment. Credentials are never pasted into any AI tool, secure environment included. For writing and grant drafting assistance, a public platform may be used for general phrasing questions. Unpublished manuscripts and unsubmitted proposals are not entered into a public platform.
@@ -32,7 +31,7 @@ AI tools may be used for the following purposes, subject to the verification and
 ## Prohibited Uses
 The following applications are **prohibited**:
 1.  **Unattributed Content:** Submitting AI-generated content as original work without substantial human contribution and disclosure.<sup>[1](#ref1),[2](#ref2),[8](#ref8)</sup>
-2.  **Peer Review Violation:** Using AI tools to conduct peer review of manuscripts or grant applications. Uploading confidential manuscripts or proposals to AI platforms violates confidentiality obligations and is expressly prohibited by both NIH and NSF.<sup>[9](#ref9),[10](#ref10)</sup>
+2.  **Peer Review Violation:** Using AI tools to conduct peer review of manuscripts or grant applications. Uploading confidential manuscripts or proposals to AI platforms violates confidentiality obligations and is prohibited by both NIH and NSF.<sup>[9](#ref9),[10](#ref10)</sup>
 3.  **Data Privacy Violations:** Inputting confidential, proprietary, or unpublished research data into public AI platforms (e.g., standard ChatGPT, Claude) without approved data protection measures.<sup>[1](#ref1),[2](#ref2),[12](#ref12)</sup>
 4.  **Sensitive Data Exposure:** Entering human subjects data, protected health information (HIPAA), student records (FERPA), or export-controlled information into unapproved AI systems.<sup>[1](#ref1),[2](#ref2),[3](#ref3)</sup>
 5.  **Code Security Risks:** Pasting API keys, passwords, or server credentials into AI chatbots for debugging purposes.
@@ -43,7 +42,7 @@ The following applications are **prohibited**:
 Researchers must classify data according to [UF's Data Classification Policy](https://policy.ufl.edu/policy/data-classification-policy/) before using AI tools.<sup>[1](#ref1),[3](#ref3),[25](#ref25)</sup>
 
 * **Public AI Platforms:** (e.g., ChatGPT, Claude, Gemini) may process data classified as Open under UF's Data Classification Policy. "De-identified" is a human subjects concept: environmental sequence data contains no personal identifiers but is still **Sensitive** while unpublished, and Sensitive data does not go into a public platform.<sup>[2](#ref2),[12](#ref12),[23](#ref23)</sup>
-* **Sensitive and Restricted Data:** UF classifies research work in progress as **Sensitive** and applies **Restricted** to data bound by law, regulation, or contract. Both categories, which include unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, require an institutionally approved, secure AI environment (e.g., UF HiPerGator AI protected instances), or must not be processed through AI systems at all.<sup>[1](#ref1),[2](#ref2),[3](#ref3),[12](#ref12)</sup>
+* **Sensitive and Restricted Data:** UF classifies research work in progress as **Sensitive** and applies **Restricted** to data bound by law, regulation, or contract. Both categories, which include unpublished sequences, microbiome datasets with human subjects metadata, proprietary collaborator data, and preliminary results, require an institutionally approved, secure AI environment (e.g., UF HiPerGator-RV / ResVault for regulated data), or must not be processed through AI systems at all.<sup>[25](#ref25),[1](#ref1)</sup>
 
 *When in doubt, consult with laboratory leadership before entering data into any AI tool.*
 
@@ -60,14 +59,14 @@ All AI-generated outputs must undergo human verification.<sup>[1](#ref1),[4](#re
 
 1.  Validate all data interpretations, statistical results, and biological conclusions.
 2.  Check for algorithmic bias, including in taxonomic classifications and functional predictions.<sup>[5](#ref5),[7](#ref7)</sup>
-3.  Verify all citations and factual claims against the primary source. AI systems generate plausible but incorrect information ("hallucinations").<sup>[15](#ref15)</sup>
+3.  Verify all citations and factual claims against the primary source; AI-generated citations may be fabricated.<sup>[15](#ref15)</sup>
 4.  Ensure reproducibility by documenting AI tool parameters, prompts, and version information.<sup>[1](#ref1),[3](#ref3),[4](#ref4)</sup>
 
 ## Training and Education
 New laboratory members will receive onboarding on this policy and on discipline-specific AI guidance.<sup>[3](#ref3),[18](#ref18),[19](#ref19)</sup> Onboarding and the annual policy review cover current AI methods in ecology and microbiology,<sup>[6](#ref6),[21](#ref21)</sup> institutional guidance, and journal policies.<sup>[20](#ref20),[8](#ref8),[13](#ref13)</sup> Principal investigators and senior researchers are responsible for mentoring trainees on this policy.<sup>[22](#ref22)</sup>
 
 ## Compliance and Review
-This policy aligns with UF's AI research guidance,<sup>[1](#ref1),[3](#ref3)</sup> federal funding agency requirements,<sup>[9](#ref9),[10](#ref10),[11](#ref11),[16](#ref16)</sup> peer institutional guidance,<sup>[2](#ref2),[12](#ref12),[17](#ref17),[23](#ref23)</sup> and major journal and publisher policies in ecology and microbiology.<sup>[8](#ref8),[13](#ref13),[14](#ref14),[15](#ref15)</sup> Laboratory members who violate this policy may face consequences under UF's Research Misconduct Policy and applicable federal research integrity requirements.<sup>[1](#ref1),[16](#ref16)</sup> This policy will be reviewed annually.
+This policy aligns with UF's AI research guidance,<sup>[1](#ref1),[3](#ref3)</sup> federal funding agency requirements,<sup>[9](#ref9),[10](#ref10),[11](#ref11),[16](#ref16)</sup> peer institutional guidance,<sup>[2](#ref2),[12](#ref12),[17](#ref17),[23](#ref23)</sup> and journal and publisher policies in ecology and microbiology.<sup>[8](#ref8),[13](#ref13),[14](#ref14),[15](#ref15)</sup> Laboratory members who violate this policy may face consequences under UF's Research Misconduct Policy and applicable federal research integrity requirements.<sup>[1](#ref1),[16](#ref16)</sup> This policy will be reviewed annually.
 
 ## Questions and Guidance
 Laboratory members with questions about this policy should consult with the Principal Investigator before proceeding. For uses involving Sensitive or Restricted data, IRB protocols, or applications not listed above, consultation with UF's AI working group or Office of Research is recommended.<sup>[1](#ref1),[24](#ref24)</sup>
@@ -77,13 +76,13 @@ Laboratory members with questions about this policy should consult with the Prin
 ### Policy Acknowledgment
 *Please print and sign if hard copy is required, or confirm via email.*
 
-**Member Name (print):** ___________________________________
+**Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Member Signature:** ___________________________________  
-**Date:** __________________
+**Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** ___________________________________  
-**Date:** __________________
+**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members must read and acknowledge understanding of this policy upon joining the laboratory and annually thereafter.
 

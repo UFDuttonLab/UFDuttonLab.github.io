@@ -31,7 +31,7 @@ These are the windows fellowships usually fall in, checked July 2026. Confirm th
 | Early Nov | AAAS Science and Technology Policy Fellowship | US citizens | $80,000 to $105,000 |
 | Feb, Jun, Oct | NIH K99/R00 | Under 4 yrs postdoc | R00 up to $249,000/yr |
 | Apr, Aug, Dec | NIH F32 | US citizens, nationals, PRs | Stipend plus allowances |
-| Feb | L'Oreal USA For Women in Science | Women; postdoc already started | $75,000 |
+| Feb | L'Oreal USA For Women in Science | Women who are US citizens or PRs; postdoc started | $75,000 |
 | Apr | USDA NIFA AFRI Postdoctoral | US citizens and PRs | Up to $244,000 |
 | Mid Dec | HHMI Hanna H. Gray Fellows | Basic bio only; under 7 yrs postdoc | Salary plus support |
 | May (LOI) | Human Frontier Science Program | Mobility rule; excludes conservation | 3 years |
@@ -80,7 +80,7 @@ What the lab commits to on the mentoring side, including protected time for inde
 
 This is the postdoctoral equivalent of the F31.
 
-- [NIH fellowships](https://www.nigms.nih.gov/training/individual-fellowships)
+- [NIH fellowships](https://grants.nih.gov/funding/activity-codes/F32)
 
 #### NIH K99/R00 Pathway to Independence
 
@@ -90,7 +90,7 @@ This is the postdoctoral equivalent of the F31.
 
 K99/R00 projects require a health framing.
 
-- [K99/R00](https://www.nih.gov/research-training/careers-nih/k99-r00-pathway-independence-award)
+- [K99/R00](https://nigms.nih.gov/training/careerdev/Pages/PathwayIndependence)
 
 #### USDA NIFA AFRI Postdoctoral Fellowships
 
@@ -129,7 +129,7 @@ K99/R00 projects require a health framing.
 
 **Award:** $255,000 total, $85,000/yr for 3 years.
 **Deadline:** Early October, with reference letters about a month later.
-**Eligibility:** Field eligibility is not stated plainly on the public pages; check fit before investing time.
+**Eligibility:** All areas of basic life sciences. Apply within 5 years of the PhD (or MD/DVM, whichever is later) as of 1 October. Non-US citizens must work in a US laboratory. Postdocs in HHMI labs are not eligible, and you may not hold another postdoctoral fellowship concurrently.
 
 - [LSRF](https://lsrf.org/apply/)
 
@@ -153,7 +153,7 @@ K99/R00 projects require a health framing.
 
 **Award:** $110,000/yr for up to 2 years.
 **Deadline:** Institutional nomination in May, full application in July.
-**Eligibility:** This is a **PhD-completion** fellowship and you must be **nominated by your PhD institution**, so raise it with your graduate programme many months ahead.
+**Eligibility:** This is a **PhD-completion** fellowship and you must be nominated by your PhD institution, and only Schmidt's **nominating partner institutions** can nominate. Confirm your institution is one before planning around it.
 
 - [Schmidt Science Fellows](https://schmidtsciencefellows.org)
 
@@ -179,7 +179,7 @@ K99/R00 projects require a health framing.
 
 **Award:** $75,000 for one fellowship year.
 **Deadline:** February.
-**Eligibility:** PhD conferred and a postdoctoral position already started by the date the current cycle specifies.
+**Eligibility:** US citizens or permanent residents, at a US institution, not holding a faculty position. PhD conferred and a postdoctoral position already started by the date the current cycle specifies.
 
 - [L'Oreal USA FWIS](https://www.loreal.com/en/usa/pages/group/fwis/)
 
@@ -207,7 +207,7 @@ K99/R00 projects require a health framing.
 **Deadline:** Mid September.
 **Eligibility:** Citizens or permanent residents of the US, **Kenya**, and several other countries. Kenyan sites include the University of Nairobi, KEMRI, and Moi University.
 
-- [Fogarty Global Health Fellows](https://fogartyfellows.org/apply/)
+- [Fogarty Global Health Fellows](https://www.fic.nih.gov/Programs/Pages/scholars-fellows-global-health.aspx)
 
 #### AAAS Science and Technology Policy Fellowship
 
@@ -215,7 +215,7 @@ K99/R00 projects require a health framing.
 **Deadline:** Early November, with applications opening in the summer.
 **Eligibility:** US citizens.
 
-- [AAAS STPF application](https://fellowshipapp.aaas.org/)
+- [AAAS STPF application](https://www.aaas.org/programs/science-technology-policy-fellowships/become-fellow-stipend-and-support)
 
 ### University of Florida
 
@@ -230,7 +230,7 @@ K99/R00 projects require a health framing.
 
 ## Status unconfirmed
 
-**NatureNet Science Fellows** (The Nature Conservancy) was not accepting applications when this page was last checked. Confirm with TNC before ruling it out.
+**NatureNet Science Fellows** (The Nature Conservancy). The programme is no longer taking applications; the last listed cohort was 2019.
 
 ---
 
@@ -239,7 +239,7 @@ K99/R00 projects require a health framing.
 - [Johns Hopkins postdoctoral funding database](https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/)
 - [Society for Conservation Biology](https://conbio.org)
 - [Conservation Careers](https://www.conservation-careers.com/conservation-scholarships-research-projects/)
-- [ESA community, including the ECOLOG-L list](https://community.esa.org)
+- [ESA community, including the ECOLOG-L list](https://community.esa.org/ecolog-l/)
 - [UF Office of Postdoctoral Affairs](https://postdoc.aa.ufl.edu)
 - [UF Research](https://research.ufl.edu)
 

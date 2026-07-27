@@ -5,9 +5,7 @@ permalink: /paid-undergrad-research/
 description: Programs to fund your work in the Dutton Lab
 ---
 
-# Getting Paid to Work in the Lab
-
-Several routes let undergraduates get paid to do research here. Two are open on a rolling basis. The rest are competitive awards that require a named mentor and a specific project.
+Two routes are open on a rolling basis. The rest are competitive awards that require a named mentor and a specific project.
 
 **PI** is the principal investigator. **OPS** is Other Personnel Services, UF's term for an hourly job with no benefits. **CLAS** is the College of Liberal Arts and Sciences. **CALS** is the College of Agricultural and Life Sciences.
 
@@ -15,7 +13,7 @@ Several routes let undergraduates get paid to do research here. Two are open on 
 
 ## Start here
 
-1. **Email me.** Subject line "Undergraduate research: [your name]." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph. Attach a transcript if you have one. I reply within about a week.
+1. **Email me.** Subject line "Undergraduate research: your name." Tell me your year, your major, roughly how many hours a week you have, and what you find interesting. One paragraph. Attach a transcript if you have one. I reply within about a week.
 2. **Agree on a project.** Every competitive award below needs a named mentor and a specific project.
 3. **Work backwards from the deadline.** University Scholars and Summer International Research need a departmental nomination, and departments set internal deadlines weeks before the college one. Ask in the fall about a February deadline. Emerging Scholars closes in late November, so start earlier.
 4. **Ask me for a letter at least three weeks out**, and send me your draft and the prompt when you ask.
@@ -36,7 +34,7 @@ These are the windows programmes usually fall in, checked July 2026. Confirm the
 | Rolling | Federal Work-Study | Aid package includes FWS; US citizen or PR | Hourly |
 | Before drop/add | Research credit | Any undergrad | Credit, no stipend |
 | Late Aug | Explorers Club Rising Explorer | Undergrads doing fieldwork | About $1,500 |
-| Early Oct, and early Mar | Sigma Xi Grants in Aid | Any undergrad researcher | $500 to $2,000 |
+| 1 Oct and 15 Mar | Sigma Xi Grants in Aid | Any undergrad researcher | $500 to $2,000 |
 | Apr, Jul, Oct | UF Honors Wentworth Fund | Honors students | Varies |
 | Early Nov | CLAS Sustainability Research Award | Any major, not graduating that spring | $750 |
 | Late Nov | Emerging Scholars | First and second years, no prior research | $1,000 |
@@ -81,7 +79,7 @@ Part of your wages is federally covered, which makes you cheaper for a PI to hir
 
 ### BSC 4910, BSC 4912, BOT 4911, ZOO 4911
 
-**Credits:** 0 to 4. Registering for 0 credits costs nothing. Registering for 1 to 4 adds to your semester load, so check with your adviser whether it pushes you past your tuition cap before you register.
+**Credits:** BSC 4912 is 0 to 4 credits; BSC 4910, BOT 4911, and ZOO 4911 are 0 to 3. Registering for 0 credits costs nothing. Registering for 1 to 4 adds to your semester load, so check with your adviser whether it pushes you past your tuition cap before you register.
 **Proposal:** Due **the week before drop/add**.
 **Final report:** Due **by noon** on the last day of instruction. Missing it is an automatic NG, no grade.
 **Report length:** Minimum 750, 1,300, 1,600, and 1,800 words for 1, 2, 3, and 4 credits.
@@ -168,7 +166,7 @@ Our field programme is in Kenya, so read the [Field Safety and Travel Policy](/f
 ### Sigma Xi Grants in Aid of Research
 
 **Award:** $500 to $2,000 for undergraduate members. Non-members are capped at $1,000.
-**Deadlines:** Early March and early October.
+**Deadlines:** 15 March and 1 October.
 
 - [Sigma Xi GIAR](https://www.sigmaxi.org/programs/grants-in-aid)
 

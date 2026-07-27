@@ -10,7 +10,7 @@ permalink: /equipment-access/
 
 ## Purpose and Scope
 
-This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. The Service and Access Model and the Collaborative Model are defined in the [Collaboration and Authorship Policy](/authorship/), which states only their authorship consequences. This policy sets the access, training, cost, and recording requirements for both.
+This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. The Service and Access Model and the Collaborative Model are defined in the [Collaboration and Authorship Policy](/authorship/), which states only their authorship consequences. This policy sets the access, training, and recording requirements for both.
 
 Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling robots, Oxford Nanopore MinION sequencers, TapeStation and Bioanalyzer, QuantStudio 3 and Chai qPCR instruments, Absolute Q digital PCR, thermocyclers, and centrifuges, together with our allocation on the UF HiPerGator cluster.
 
@@ -44,7 +44,7 @@ Occupational health requirements are set by UF rather than by this laboratory; s
 
 All instrument use is booked through the [laboratory scheduling application](https://ufduttonlab.github.io/lab-scheduler/). The booking record captures user, project, instrument, and time.
 
-That record is also a credit mechanism. Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing at all for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
+Scheduling records provide contemporaneous evidence of technical contribution and are one input consulted when contributor roles are assigned under the CRediT taxonomy. They are never the sole basis for such a determination: they capture instrument time and nothing else, so they are silent on analysis, writing, interpretation, and fieldwork, and they record nothing for colleagues who never book an instrument. They are not used for employment, hours, or performance purposes.<sup>[4](#ref4)</sup>
 
 Booking rules:
 
@@ -59,7 +59,7 @@ External users under the Service and Access Model are responsible for their own 
 
 **We do not set our own instrument charges.** Charging any user for instrument time requires a rate established and approved through UF Auxiliary Accounting; users cannot be billed at unapproved rates, and equipment depreciation, which is what "wear" means, is not recoverable in an ordinary fee-for-service activity. If cost recovery ever becomes necessary, it goes through UF Auxiliary Accounting first and this policy is updated to match whatever rate is approved.<sup>[6](#ref6)</sup>
 
-Members report instrument faults immediately rather than working around them. An instrument operating in a degraded state can produce invalid data with no visible indication of malfunction, which is a research integrity issue.<sup>[5](#ref5)</sup>
+Members report instrument faults immediately rather than working around them; a degraded instrument can produce invalid data with no visible indication of malfunction.<sup>[5](#ref5)</sup>
 
 ## Data and Intellectual Property
 
@@ -77,13 +77,13 @@ This policy is reviewed annually and whenever new instrumentation is added to th
 
 *Please print and sign if hard copy is required, or confirm via email.*
 
-**Member Name (print):** ___________________________________
+**Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Member Signature:** ___________________________________  
-**Date:** __________________
+**Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** ___________________________________  
-**Date:** __________________
+**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members and certified external users must read and acknowledge this policy before first independent instrument use and annually thereafter.
 
