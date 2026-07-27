@@ -42,7 +42,7 @@ Federal grants fund specific projects on fixed timelines. They do not cover the 
 
 **Sequencing and laboratory consumables.** Extraction kits, library preparation reagents, and flow cells are the recurring cost of every microbiome dataset we produce. Gift funds let us sequence pilot samples and follow unexpected results before a grant is written around them.
 
-**Field operations in Kenya.** Our field camp and research operations in the Maasai Mara are run under contract by Soiyou Adventures, a Kenyan company. Gift funds pay for vehicle time, boat operation, and the sampling logistics that a research permit does not cover.
+**Field operations in Kenya.** Our field camp and research operations in the Maasai Mara are run under contract by Soiyou Adventures, a Kenyan company. Gift funds pay for vehicle time and the sampling logistics that a research permit does not cover.
 
 **Open-source environmental sensors.** We build and deploy low-cost sensors to record dissolved oxygen, temperature, and flow across our study sites. Gift funds cover hardware, replacement of units lost to floods and wildlife, and the deployment trips that maintain the record.
 
