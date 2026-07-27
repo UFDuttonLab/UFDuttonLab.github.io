@@ -29,6 +29,8 @@ We study how animals and their microbiomes move nutrients, carbon, and microorga
 
 **Florida.** Carbon cycling across the terrestrial-aquatic interface of wetlands, alligators as ecosystem engineers linking wetland and riverine systems, and bottlenose dolphins as environmental sentinels for coastal health.
 
+**Zoos and aquariums.** Health assessment for non-model species in human managed care. Nearly every animal in a zoo is a species with no reference gut microbiome, so there is no baseline against which a veterinarian can read a change. We build those baselines from feces, which requires no handling, no anesthesia, and no restraint, at institutions accredited by the Association of Zoos and Aquariums. Extraction and full-length 16S nanopore sequencing run on the [lab's Opentrons OT-2 and Flex robots](/lab/), which is what makes sampling at this scale affordable. Sampled species range from great apes and gibbons to okapi, giraffe, rhinoceros, and hippopotamus, among many others. The lab holds research agreements with more than 20 US zoos and aquariums.
+
 Our full research program and publication list are on the [Research](/research/) and [Publications](/publications/) pages.
 
 ## In the news
