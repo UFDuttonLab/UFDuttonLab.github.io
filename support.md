@@ -24,7 +24,7 @@ Two findings from this work:
 
 Our full research program and publication list are on the [Research](/research/) and [Publications](/publications/) pages.
 
-### In the news
+## In the news
 
 [Ecologists uncover the hidden power of animals in shaping ecosystems](https://news.clas.ufl.edu/animal-microbiome/), by Lauren Barnett, UF College of Liberal Arts and Sciences, June 27, 2024.
 
@@ -33,6 +33,20 @@ Our full research program and publication list are on the [Research](/research/)
 </div>
 
 <p style="text-align: center; font-size: 15px; color: #777777;">From Land to River: The Journey of Resources. UF College of Liberal Arts and Sciences.</p>
+
+### Selected press coverage
+
+Our papers have been covered by *The Atlantic*, *The Washington Post*, *Science*, *National Geographic*, *Smithsonian*, and CBC Radio.
+
+- *The Atlantic*, [Hippos Poop So Much That Sometimes All the Fish Die](https://www.theatlantic.com/science/archive/2018/05/hippos-poop-so-much-that-sometimes-all-the-fish-die/560486/), Ed Yong, May 16, 2018.
+- *The Washington Post*, [This river kills thousands of wildebeests, then gives life to everything else](https://www.washingtonpost.com/news/animalia/wp/2017/06/19/six-thousand-wildebeest-die-in-a-serengeti-river-every-year-heres-why-thats-a-good-thing/), Darryl Fears, June 20, 2017.
+- *Science*, [Pooping hippos create 'community guts' in African ponds](https://www.science.org/content/article/pooping-hippos-create-community-guts-african-ponds), December 2021.
+- *Science*, [Excess hippo dung may be harming aquatic species across Africa](https://www.science.org/content/article/excess-hippo-dung-may-be-harming-aquatic-species-across-africa), May 2018.
+- *Science*, [Every year, thousands of drowned wildebeest feed this African ecosystem](https://www.science.org/content/article/every-year-thousands-drowned-wildebeest-feed-african-ecosystem), June 2017.
+- *The Atlantic*, [How the Mass Drownings of Wildebeest Feed the Serengeti](https://www.theatlantic.com/science/archive/2017/06/how-the-mass-drownings-of-wildebeest-feed-the-serengeti/530799/), June 2017.
+- *National Geographic*, [How 2 Million Pounds of Rotting Flesh Helps the Serengeti](https://www.nationalgeographic.com/animals/article/wildebeest-serengeti-migration-carcasses), Shaena Montanari, June 19, 2017.
+- *Smithsonian*, [The Upside of Rotting Carcasses](https://www.smithsonianmag.com/science-nature/upside-rotting-carcasses-180964183/), Diana Crow, July 25, 2017.
+- CBC Radio, *Quirks & Quarks*, [Flushing hippo toilets smother fish in African rivers](https://www.cbc.ca/radio/quirks/may-19-2018-psychadelic-science-understanding-kilauea-up-close-hippo-poop-kills-fish-1.4667264/flushing-hippo-toilets-smother-fish-in-african-rivers-1.4667344), May 19, 2018.
 
 ## What gifts support
 
