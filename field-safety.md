@@ -12,7 +12,7 @@ permalink: /field-safety/
 
 This policy governs all laboratory fieldwork conducted away from the University of Florida campus, with particular reference to our long-term programme on the Mara River in Kenya. It applies to faculty, postdoctoral researchers, graduate and undergraduate students, staff, and visiting collaborators. Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company whose staff are employed by Soiyou rather than by UF; standards in this policy that apply to the whole party are imposed on Soiyou through its contract.
 
-UF EH&S requires a Wildlife Field Safety Plan before wildlife field work starts, and requires IACUC protocols to describe field hazards and their controls. UF publishes no general field research safety policy beyond that, so the practices below supplement the UF requirements rather than replacing them.<sup>[10](#ref10),[11](#ref11)</sup>
+UF EH&S requires a Wildlife Field Safety Plan before wildlife field work starts, and requires IACUC protocols to describe field hazards and their controls. The practices below supplement UF requirements and do not replace them.<sup>[10](#ref10),[11](#ref11)</sup>
 
 ## Sponsor Requirements
 
@@ -54,7 +54,7 @@ No laboratory member travels internationally on laboratory business until every 
 
 **Travel registration.** All UF faculty, staff, and graduate students travelling abroad on University business are required to register with the UF International Center prior to travel. Undergraduates register through the Student Travel Registry. Registration should not be filed more than six months in advance.<sup>[7](#ref7),[8](#ref8)</sup>
 
-**Insurance.** UF provides travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are enrolled in CISI through the UF Student Travel Registry but pay the premium themselves; the no-charge arrangement covers faculty, staff, and graduate students only. Soiyou Adventures staff are not covered, and their cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party holds, including confirming with Soiyou for their staff, and purchases evacuation cover for anyone in our own party who would otherwise have none. Nobody deploys uncovered. **Members must not assume this policy covers psychiatric emergencies.** The laboratory verifies psychiatric coverage before each field season.<sup>[7](#ref7),[8](#ref8),[26](#ref26)</sup>
+**Insurance.** UF provides travel health insurance through **CISI**, including emergency evacuation, repatriation, travel assistance, and security coverage, at no charge to faculty, staff, and graduate students. **Undergraduates are enrolled in CISI through the UF Student Travel Registry but pay the premium themselves; the no-charge arrangement covers faculty, staff, and graduate students only. Soiyou Adventures staff are not covered, and their cover is a matter for their own employer.** Before each season the laboratory confirms in writing what cover every person in the party holds, including confirming with Soiyou for their staff. Eligibility, scope, and exclusions are set by UF and CISI, not by this laboratory. Confirm your own coverage and its exclusions with the UF International Center and the carrier before you travel. **Do not assume any particular condition, including a psychiatric emergency, is covered.** Confirm exclusions with the carrier before travel.<sup>[7](#ref7),[8](#ref8),[26](#ref26)</sup>
 
 **Travel authorization and equipment.** A Travel Authorization in myUFL and the international travel acknowledgement are required for all foreign travel on University business. Equipment taken abroad, including telemetry receivers, data loggers, and laptops, requires a Foreign Travel Request in the myAssets Portal with pre-approval from UF Asset Management and export control review.<sup>[9](#ref9)</sup>
 
@@ -64,7 +64,7 @@ No laboratory member travels internationally on laboratory business until every 
 
 **Occupational health. This laboratory does not set its own vaccination or medication requirements.** Those are set by UF through its own risk assessment.
 
-* Anyone who handles live animals or unfixed animal tissue, body fluids, or waste, is listed on an IACUC protocol, or accesses ACS-managed facilities enrols in the **UF Animal Contact Program**, which the IACUC verifies. Tetanus immunisation within ten years is required of all participants; rabies immunisation or a positive titre within two years is required of those handling wild, feral, free-roaming, or unvaccinated **carnivores**.<sup>[40](#ref40),[41](#ref41)</sup>
+* Anyone who handles live animals or unfixed animal tissue, body fluids, or waste, is listed on an IACUC protocol, or accesses ACS-managed facilities enrols in the **UF Animal Contact Program**, which the IACUC verifies. The Animal Contact Program sets whatever immunisation and titre requirements apply to your role, on its own interval, together with its declination pathway. This laboratory sets none of its own and holds no vaccination records.<sup>[40](#ref40),[41](#ref41)</sup>
 * Other occupational vaccinations are recommended by the UF Biosafety Office or the IBC through the Biohazard Project Registration risk assessment. Under UF policy vaccination is **voluntary**: where a vaccine is recommended the individual completes the Acceptance, Declination, or Request for Additional Information form, and declining is handled through a UF General Counsel waiver rather than by exclusion from the work. Cost falls on the department or PI, not on the individual.<sup>[11](#ref11)</sup>
 
 **Travel vaccinations and malaria chemoprophylaxis are individual medical decisions**, made with UF Occupational Medicine Services or a travel medicine provider prescribing against current CDC and WHO guidance. The consultation happens before departure, and members carry any certificate it produces. The laboratory does not hold a copy. We do not require, verify, or record what was prescribed.<sup>[14](#ref14),[15](#ref15),[16](#ref16)</sup>
@@ -103,13 +103,13 @@ Laboratory controls:
 * A dedicated spotter is posted to watch for surfacing animals whenever anyone is in or beside the water.
 * Defined boat standoff distances from hippos and crocodiles, agreed at the pre-trip meeting and not reduced for sampling convenience.
 
-**Drowning** is documented as a leading cause of injury death among US citizens visiting countries where water recreation is a major activity, driven by unfamiliar conditions, inability to swim, and absent supervision. Personal flotation devices must be sized for the wearer and US Coast Guard approved or comparable. No member swims alone or in unfamiliar water. A swim-competency check is required for all personnel entering water.<sup>[24](#ref24)</sup>
+**Drowning** is documented as a leading cause of injury death among US citizens visiting countries where water recreation is a major activity, driven by unfamiliar conditions, inability to swim, and absent supervision. Flotation devices are worn for all boat work and all water entry. No member enters the water alone. Water entry and boat work have physical demands; if you need an adjustment to perform them, contact the UF Disability Resource Center or ADA coordinator, who determine what is reasonable.<sup>[24](#ref24)</sup>
 
-**Boat work** follows the USGS standard: a worn, USCG-approved PFD at all times aboard small craft; a dedicated operator plus sufficient crew while underway; CPR training for all watercraft operators; and a **float plan filed with a supervisor or someone knowledgeable of the intent to operate**, listing craft description, occupants, departure and return times, emergency equipment, route, communications, and the action to take if the party is overdue.<sup>[37](#ref37),[38](#ref38)</sup>
+**Boat work** follows the practices in the USGS watercraft standard: a worn flotation device at all times aboard, a dedicated operator plus sufficient crew while underway, and a float plan lodged before departure listing craft, occupants, departure and return times, route, communications, and the action to take if the party is overdue.<sup>[37](#ref37),[38](#ref38)</sup>
 
 Motor vehicle crashes are the leading cause of non-natural death among US citizens abroad, and fatal crash rates in sub-Saharan Africa are among the highest in the world. Seatbelts are worn at all times. **No night driving in rural areas**, consistent with State Department guidance to avoid travel after dark in Kenya. No alcohol before driving. Helmets meeting US standards for any two-wheeled travel. Overcrowded public transport is avoided.<sup>[22](#ref22),[24](#ref24),[12](#ref12)</sup>
 
-**Wildlife handling.** Gloves are worn for handling any wildlife. After any bite, wash with soap and running water for **at least 20 minutes**, and for suspected rabies exposure stop the journey and seek care where rabies post-exposure prophylaxis is available.<sup>[23](#ref23),[35](#ref35)</sup>
+**Wildlife handling.** Gloves are worn for handling any wildlife. After any bite or scratch, begin wound washing immediately and seek medical care. Follow the current CDC guidance linked below for wound care and rabies post-exposure prophylaxis rather than working from memory or from this page. The nearest facility stocking rabies PEP is recorded in the Emergency Information table before every season.<sup>[23](#ref23),[35](#ref35)</sup>
 
 ## Field Safety Plans, Lone Work, and Communication
 
@@ -117,13 +117,13 @@ Motor vehicle crashes are the leading cause of non-natural death among US citize
 
 Members **avoid working alone where possible**, including on private property, at controlled sites, and in areas lacking reliable phone service. Where solo work is unavoidable, the Field Safety Plan must specify check-in procedures, and the member must carry a field radio or satellite communication device.<sup>[35](#ref35)</sup>
 
-**Communication redundancy is an NSF requirement.** The reporting pathway must minimise singular points: **at least one reporting route must not pass through the Principal Investigator**, who may be the subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated, and is selected by the Department Chair rather than by the Principal Investigator. The UF Compliance Hotline (877-556-5356) is listed in the Emergency Information table above. It is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set, and members enrol in the State Department's Smart Traveler Enrollment Program or, if not US citizens, with their own consulate.<sup>[1](#ref1),[25](#ref25)</sup>
+**Communication redundancy is an NSF requirement.** The reporting pathway must minimise singular points: **at least one reporting route must not pass through the Principal Investigator**, who may be the subject of a complaint. A second contact outside the field team's reporting line is named in the Field Safety Plan before each deployment, with their institutional role and their reporting obligations stated, and is someone other than the Principal Investigator. The UF Compliance Hotline (877-556-5356) is listed in the Emergency Information table above. It is a US toll-free number and may not dial from a Kenyan mobile. Itineraries and lodging are shared, check-in expectations are set, and members enrol in the State Department's Smart Traveler Enrollment Program or, if not US citizens, with their own consulate.<sup>[1](#ref1),[25](#ref25)</sup>
 
 ## Stop-Work Authority
 
-**Every member of the field team, including undergraduates and Kenyan field staff, has unconditional authority to stop any field activity they judge unsafe, and no explanation is required at the moment of stopping.**
+**Any member of the field party may stop a field activity they judge unsafe, and no explanation is required at the moment of stopping.** For Soiyou Adventures personnel, stop-work authority and protection from reprisal sit in the contract between this laboratory and Soiyou, and are administered by Soiyou as their employer.
 
-USGS provisions give a watercraft operator final authority to abort and protect anyone reporting an unsafe condition from reprisal. This policy extends that authority to every member of the field party. Where a crew member calls a stop and the operator disagrees, the activity stops.<sup>[37](#ref37),[39](#ref39)</sup>
+USGS provisions give a watercraft operator final authority to abort and protect anyone reporting an unsafe condition from reprisal. On the water the operator retains final authority to complete a manoeuvre where stopping immediately would be less safe. Any call to stop is debriefed the same day.<sup>[37](#ref37),[39](#ref39)</sup>
 
 Retaliation against anyone who exercises stop-work authority is a violation of this policy and of the [Laboratory Code of Conduct](/code-of-conduct/).
 
@@ -134,11 +134,11 @@ The Survey of Academic Field Experiences found that 64 percent of respondents ha
 Accordingly:
 
 * **A written code of conduct with explicit reporting protocols and consequences is signed by every team member before deployment.**<sup>[32](#ref32)</sup>
-* Members are informed of the risks some colleagues may face, so that controls are defined together. This includes a pre-season conversation about identity-based risk in the field context.<sup>[31](#ref31)</sup>
+* Field settings can carry different risks for different people. If you want the Field Safety Plan to account for something specific to you, raise it with the PI, the named second contact, or a UF office of your choice. You are not asked to explain why.<sup>[31](#ref31)</sup>
 * Workload and rest are scheduled in the Field Safety Plan, including bathroom access.<sup>[32](#ref32)</sup>
 * Local on-ground contacts are named in the Field Safety Plan before departure.<sup>[32](#ref32)</sup>
-* **No member fronts their own money.** Field costs, required training, the pre-travel medical consultation, travel vaccination, chemoprophylaxis, and personal protective equipment are paid by the grant or the PI in advance rather than reimbursed afterwards, and emergency funds are reachable from the field. Required training days count as work time for paid members.<sup>[32](#ref32),[33](#ref33)</sup>
-* The pre-travel consultation covers mental as well as physical health. **The laboratory does not learn, verify, or record diagnoses or medications**, and no consultation outcome is a basis for excluding anyone from a field season. The consultation covers whether members' medications are legal and available in-country, telehealth arrangements before departure, and medication stability at high ambient temperature.<sup>[26](#ref26),[34](#ref34)</sup>
+* **Members should not be out of pocket for laboratory field costs.** Allowable expenses are charged to the project or advanced through UF Travel; what is allowable is determined by UF Sponsored Programs and the sponsor. Emergency funds are reachable from the field. Whether training time is compensable is determined by UF Human Resources for your classification. Personal medical costs are handled through your health plan and UF Occupational Medicine Services.<sup>[32](#ref32),[33](#ref33)</sup>
+* The pre-travel consultation covers mental as well as physical health. **The laboratory does not learn, verify, or record diagnoses or medications, and makes no medical judgment about who deploys.** Any fitness-for-duty determination is made by UF Occupational Medicine Services. The consultation covers whether members' medications are legal and available in-country, telehealth arrangements before departure, and medication stability at high ambient temperature.<sup>[26](#ref26),[34](#ref34)</sup>
 * A debrief follows every field season.<sup>[32](#ref32)</sup>
 
 ## Review
@@ -149,17 +149,15 @@ This policy is reviewed annually, before each field season, and immediately upon
 
 ### Policy Acknowledgment
 
-*Please print and sign if hard copy is required, or confirm via email.*
+*Confirm by email, or sign a printed copy if you prefer.*
 
 **Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Member Acknowledgment:** Everyone within the scope of this policy, including visiting collaborators and Kenyan field team members, must read and sign it before their first field deployment and before each subsequent field season. A translated copy is provided where English is not the signer’s working language.
+**Member Acknowledgment:** UF members within the scope of this policy confirm they have read it before their first field deployment and before each subsequent field season. Soiyou Adventures personnel are not asked to sign a UF policy; the corresponding obligations sit in the contract with Soiyou. A translated copy is provided where English is not the reader's working language.
 
 ---
 

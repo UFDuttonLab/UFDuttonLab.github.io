@@ -66,7 +66,7 @@ All AI-generated outputs must undergo human verification.<sup>[1](#ref1),[4](#re
 New laboratory members will receive onboarding on this policy and on discipline-specific AI guidance.<sup>[3](#ref3),[18](#ref18),[19](#ref19)</sup> Onboarding and the annual policy review cover current AI methods in ecology and microbiology,<sup>[6](#ref6),[21](#ref21)</sup> institutional guidance, and journal policies.<sup>[20](#ref20),[8](#ref8),[13](#ref13)</sup> Principal investigators and senior researchers are responsible for mentoring trainees on this policy.<sup>[22](#ref22)</sup>
 
 ## Compliance and Review
-This policy aligns with UF's AI research guidance,<sup>[1](#ref1),[3](#ref3)</sup> federal funding agency requirements,<sup>[9](#ref9),[10](#ref10),[11](#ref11),[16](#ref16)</sup> peer institutional guidance,<sup>[2](#ref2),[12](#ref12),[17](#ref17),[23](#ref23)</sup> and journal and publisher policies in ecology and microbiology.<sup>[8](#ref8),[13](#ref13),[14](#ref14),[15](#ref15)</sup> Laboratory members who violate this policy may face consequences under UF's Research Misconduct Policy and applicable federal research integrity requirements.<sup>[1](#ref1),[16](#ref16)</sup> This policy will be reviewed annually.
+This policy aligns with UF's AI research guidance,<sup>[1](#ref1),[3](#ref3)</sup> federal funding agency requirements,<sup>[9](#ref9),[10](#ref10),[11](#ref11),[16](#ref16)</sup> peer institutional guidance,<sup>[2](#ref2),[12](#ref12),[17](#ref17),[23](#ref23)</sup> and journal and publisher policies in ecology and microbiology.<sup>[8](#ref8),[13](#ref13),[14](#ref14),[15](#ref15)</sup> Research misconduct at UF means fabrication, falsification, or plagiarism (Policy 14-004). Most breaches of this policy are not research misconduct and are handled within the laboratory. Where conduct also involves fabrication, falsification, or plagiarism, it is referred to the UF Research Integrity Officer.<sup>[1](#ref1),[16](#ref16)</sup> This policy will be reviewed annually.
 
 ## Questions and Guidance
 Laboratory members with questions about this policy should consult with the Principal Investigator before proceeding. For uses involving Sensitive or Restricted data, IRB protocols, or applications not listed above, consultation with UF's AI working group or Office of Research is recommended.<sup>[1](#ref1),[24](#ref24)</sup>
@@ -74,15 +74,13 @@ Laboratory members with questions about this policy should consult with the Prin
 ---
 
 ### Policy Acknowledgment
-*Please print and sign if hard copy is required, or confirm via email.*
+*Confirm by email, or sign a printed copy if you prefer.*
 
 **Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members must read and acknowledge understanding of this policy upon joining the laboratory and annually thereafter.
 

@@ -40,19 +40,19 @@ Weekly hours, expected duration of involvement, and dissemination goals are set 
 
 ### Field team members
 
-Field operations in Kenya are run by **Soiyou Adventures**, whose staff are employed by that company under Kenyan law rather than by UF. Their credit is governed by the [Collaboration and Authorship Policy](/authorship/) on the same terms as anyone else, and the conduct expectations in this document govern how we work with them. Because UF's formal complaint channels are not open to non-UF personnel, the binding no-retaliation and conduct terms sit in our contract with Soiyou.
+Field operations in Kenya are run by **Soiyou Adventures**, whose staff are employed by that company under Kenyan law rather than by UF. Their credit is governed by the [Collaboration and Authorship Policy](/authorship/) on the same terms as anyone else, and the conduct expectations in this document govern how we work with them. Conduct and no-retaliation terms for joint field operations sit in the contract between this laboratory and Soiyou. Anyone, UF-affiliated or not, may report conduct concerns to the UF Title IX Office or the UF Compliance Hotline; this laboratory does not limit who may report or to whom.
 
 ## Meetings and Communication
 
 The laboratory holds a standing lab meeting and a journal club, and the PI holds individual meetings with each member. Cadence is set at the start of each semester and posted. Scheduled meetings are not displaced by travel.
 
-**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline. During field seasons, coverage and response expectations are set explicitly in the pre-departure meeting. Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Where a season would necessarily exceed an appointment's FTE cap, the reconciliation (comp time on return, a temporary FTE increase, or supplemental pay) is agreed with UF HR before departure.
+**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline. During field seasons, coverage and response expectations are set explicitly in the pre-departure meeting. Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Field seasons are scheduled to fit within your appointment. Appointment FTE, workload limits, and any adjustment to them are set by UF Human Resources and the applicable collective bargaining agreement. If you believe your assigned work exceeds your appointment, raise it with UF HR or your union representative.
 
 ## Hours, Leave, and Wellbeing
 
 Graduate assistant workload is governed by the collective bargaining agreement between the UF Board of Trustees and Graduate Assistants United. **A 0.50 FTE appointment means an average of no more than 20 hours per week; 0.33 FTE means no more than 13.3 hours; 0.25 FTE means no more than 10 hours.** The agreement also provides five days of paid personal leave per semester appointment and six weeks of unpaid parental or medical leave per twelve months, with continued University health premium contributions and the right to return to the same or a similar position.<sup>[25](#ref25),[26](#ref26)</sup>
 
-The most recent agreement posted by UF Human Resources is the 2021 to 2023 contract and is nominally expired, with no successor posted. The laboratory treats those workload and leave terms as the operative floor. Confirm current entitlements with UF HR or GAU.<sup>[25](#ref25)</sup>
+Graduate assistant workload, leave, and benefits are governed by the agreement between the UF Board of Trustees and Graduate Assistants United and by UF Human Resources. The most recent posted agreement is the 2021 to 2023 contract. Confirm your current entitlements with UF HR or your GAU representative; this laboratory does not set, interpret, or supplement those terms.<sup>[25](#ref25)</sup>
 
 Beyond the contractual floor, standard working hours, weekends, and vacation are respected, and schedule autonomy is preferred over mandated hours.<sup>[5](#ref5),[24](#ref24)</sup>
 
@@ -66,15 +66,15 @@ Fieldwork, conferences, teaching, illness, and travel are not working from home.
 
 ### Undergraduate researchers: terms
 
-Undergraduate involvement is on one of three bases, stated in writing before starting: paid hourly, course credit, or volunteer. Whichever applies, a maximum weekly hours figure is agreed at the outset, hours above it are neither expected nor a condition of a letter of recommendation, exam periods and illness reduce hours without penalty, and no undergraduate is asked to incur an unreimbursed cost.
+Undergraduate involvement is arranged through UF's established mechanisms and stated in writing before starting: hourly employment through UF Human Resources, or research course credit through the department. Whether any unpaid arrangement is permissible is determined by UF HR, not by this laboratory. Whichever applies, a maximum weekly hours figure is agreed at the outset, hours above it are neither expected nor a condition of a letter of recommendation, exam periods and illness reduce hours without penalty, and no undergraduate is asked to incur an unreimbursed cost.
 
 ### Accommodations
 
-Any member may request an adjustment to laboratory or field work. Requests go through UF's Disability Resource Center or ADA coordinator rather than being decided informally in the laboratory, and may be raised with the Department Chair rather than the PI. Where a physical requirement exists, such as the swim-competency check in the [Field Safety and Travel Policy](/field-safety/), field roles are redesigned around the requirement rather than the member being excluded. Non-water field roles are available in every season.
+Any member may request an adjustment to laboratory or field work. Requests go through UF's Disability Resource Center or ADA coordinator rather than being decided informally in the laboratory, and may be raised with the Department Chair rather than the PI. Students route to the Disability Resource Center; employees, including graduate assistants and postdocs, route to the UF ADA office. The Chair is an alternative point of contact, not the decision-maker. This laboratory implements what UF approves and does not decide accommodation requests.
 
 ## Routes Outside the Laboratory
 
-Several policies route a decision or a contact to the **Department Chair** because the Principal Investigator cannot fairly decide a matter in which they are a party. The PI is responsible for confirming with the Chair, annually, that these routes are accepted, and for naming the current Chair and an alternate in the laboratory onboarding pack. Where the Chair declines or does not respond within ten working days, the matter goes to the College Dean. Harassment matters go to the Title IX Office rather than to the Ombuds, for the reason given below.
+Several policies route a decision or a contact to the **Department Chair** because the Principal Investigator cannot fairly decide a matter in which they are a party. The PI names the current Chair in the laboratory onboarding pack. The Chair, the College Dean, the UF Ombuds, and the UF offices named below set their own procedures and timelines. Nothing in this policy alters or delays a deadline set by a UF regulation; confirm applicable deadlines with the office concerned. Harassment matters go to the Title IX Office rather than to the Ombuds, for the reason given below.
 
 ## Culture and Psychological Safety
 
@@ -94,7 +94,7 @@ Fewer than half of surveyed researchers recalled ever encountering a code of con
 
 **Protected categories.** UF Regulation 1.006 prohibits discrimination and harassment on the basis of race, creed, colour, religion, age, disability, sex, sexual orientation, gender identity and expression, marital status, national origin, political opinions or affiliations, genetic information, and veteran status.<sup>[17](#ref17)</sup>
 
-**Mandatory reporting.** Under UF Policy 5-003, **every UF employee** who receives information about, observes, or suspects prohibited conduct must promptly report it to the Title IX Office. UF operates no "responsible employee" tier, so the Principal Investigator, laboratory staff, and graduate assistants are all covered. This obligation is set by UF and cannot be waived by the laboratory. You are not required to report conduct you experienced yourself.<sup>[27](#ref27)</sup>
+**Mandatory reporting.** Under UF Policy 5-003, **every UF employee** who receives information about, observes, or suspects prohibited conduct must promptly report it to the Title IX Office. Read UF Policy 5-003 directly and confirm its scope with the Title IX Office (titleix@ufl.edu, 352-273-1400, report.ufl.edu). This laboratory does not interpret, narrow, or waive that obligation.<sup>[27](#ref27)</sup>
 
 **The Ombuds is not a confidential route for harassment.** UF's Ombuds holds communications in confidence except where there is imminent risk of serious harm **or in cases involving sexual harassment**. The Ombuds is available for supervision disputes, workload, and interpersonal conflict.<sup>[16](#ref16),[12](#ref12)</sup>
 
@@ -134,15 +134,13 @@ This document is reviewed annually with the whole laboratory, and amended by agr
 
 ### Policy Acknowledgment
 
-*Please print and sign if hard copy is required, or confirm via email.*
+*Confirm by email, or sign a printed copy if you prefer.*
 
 **Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members must read and acknowledge this document upon joining the laboratory and annually thereafter.
 

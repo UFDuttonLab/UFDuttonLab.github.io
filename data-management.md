@@ -129,7 +129,7 @@ UF policy provides that personnel who leave the University "may be permitted to 
 
 A **Records Disposition Request** documenting who takes custodianship of the records and data is filed on departure.<sup>[42](#ref42)</sup>
 
-Before any account is deprovisioned, the departing member receives a complete copy of their notebooks, data, code, and analysis records, and confirms receipt in writing. Access is restored on request to any former member who is a co-author on a live or published manuscript.
+Request your copies well before your last day: UF account deprovisioning is controlled by UF IT and may happen automatically on separation. The departing member receives a complete copy of their notebooks, data, code, and analysis records and confirms receipt in writing. The laboratory will support a request for continued access where you are a co-author on a live manuscript, but cannot guarantee UF grants it.
 
 Offboarding checklist:
 
@@ -148,15 +148,13 @@ This policy is reviewed annually and immediately upon any change to NIH or NSF d
 
 ### Policy Acknowledgment
 
-*Please print and sign if hard copy is required, or confirm via email.*
+*Confirm by email, or sign a printed copy if you prefer.*
 
 **Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members must read and acknowledge this policy upon joining the laboratory and annually thereafter.
 

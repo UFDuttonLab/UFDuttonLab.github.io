@@ -18,7 +18,7 @@ The United States is not a Party to the Nagoya Protocol. The obligations describ
 
 ### Kenya's access and benefit-sharing regulations
 
-Kenya's operative instrument is the **Environmental Management and Co-ordination (Access to Biological Resources and Benefit Sharing) (No. 2) Regulations, 2025**, Legal Notice No. 68 of 2025, in force since **24 March 2025** and administered by the National Environment Management Authority (NEMA) as Competent National Authority. Legal Notice 68 replaced Legal Notice 19 of 2025, which came into force on 7 February 2025 and was revoked on 24 March 2025 by regulation 29 of Legal Notice 68. **Any laboratory document, protocol, or grant narrative still citing the 2006 regulations or Legal Notice 19 of 2025 is out of date and must be corrected.**<sup>[1](#ref1),[2](#ref2),[8](#ref8)</sup>
+Kenya's operative instrument is the **Environmental Management and Co-ordination (Access to Biological Resources and Benefit Sharing) (No. 2) Regulations, 2025**, Legal Notice No. 68 of 2025, in force since **24 March 2025** and administered by the National Environment Management Authority (NEMA) as Competent National Authority. Legal Notice 68 replaced Legal Notice 19 of 2025, which came into force on 7 February 2025 and was revoked on 24 March 2025 by regulation 29 of Legal Notice 68. **Confirm the instrument currently in force with NEMA and UF RISC before relying on any citation, including a citation on this page.**<sup>[1](#ref1),[2](#ref2),[8](#ref8)</sup>
 
 * **All access requires a permit, including non-commercial academic access.** Applications under regulation 11 must be supported by evidence of Prior Informed Consent and Mutually Agreed Terms, a research clearance certificate, localities specified by GPS coordinates, and a Material Transfer Agreement where applicable.<sup>[1](#ref1)</sup>
 * **The access permit runs for one year, is not transferable, and is renewable once for one further year** (regulation 17). A multi-year research agreement does not substitute for the permit cycle. Permit expiry dates are tracked by the Principal Investigator and reviewed each January.<sup>[1](#ref1)</sup>
@@ -34,11 +34,11 @@ Our specimens are deposited at the **National Museums of Kenya**, the national r
 
 Research licensing through the **National Commission for Science, Technology and Innovation (NACOSTI)** operates separately from ABS permitting, under the Science, Technology and Innovation Act No. 28 of 2013 and the Research Licensing Regulations 2014. Licences run one year. Non-Kenyan researchers must hold affiliation with a Kenyan host institution, itself valid one year, and renewal requires a progress report lodged at least 30 days before expiry. The County Director of Education, County Commissioner, and County Governor must be notified before fieldwork begins, and a final report must be deposited with the Commission within one year of completion.<sup>[3](#ref3),[4](#ref4)</sup>
 
-**Wildlife-related sampling triggers a third and independent regime.** Under the Wildlife Conservation and Management Act 2013, section 59(1), no research on the wildlife sector may be conducted without a permit from the Wildlife Research and Training Institute; section 22(1)(b) requires the written approval of the **Cabinet Secretary**, given on the advice of Kenya Wildlife Service, to export wildlife resources for bio-prospecting or any other research. The Act defines "wildlife" to include **microorganisms**, and defines "specimen" to include material taken for research, so hippo, fish, and wildlife-associated microbial sampling all sit inside this regime. Where any part of the work is characterised as bio-prospecting, KWS is a joint partner on behalf of the people of Kenya under section 22(6).<sup>[5](#ref5),[6](#ref6)</sup>
+**Wildlife-related sampling triggers a third and independent regime.** Under the Wildlife Conservation and Management Act 2013, section 59(1), no research on the wildlife sector may be conducted without a permit from the Wildlife Research and Training Institute; section 22(1)(b) requires the written approval of the **Cabinet Secretary**, given on the advice of Kenya Wildlife Service, to export wildlife resources for bio-prospecting or any other research. The Act defines "wildlife" to include microorganisms and defines "specimen" to include material taken for research, so the scope of this regime is not a determination this laboratory makes. Obtain a written scope determination from WRTI and KWS before any sampling campaign and route it through UF Research Integrity, Security and Compliance. Where any part of the work is characterised as bio-prospecting, KWS is a joint partner on behalf of the people of Kenya under section 22(6).<sup>[5](#ref5),[6](#ref6)</sup>
 
 ## What the Kenyan Affiliation Obligates You to Disclose
 
-Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both are disclosable on NSF Senior Personnel Documents and NIH Other Support, and NSF now requires Research Security Training. Before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office.
+Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both may be disclosable on NSF Senior Personnel Documents and NIH Other Support. Disclosure determinations are made by UF Sponsored Programs and the UF research security office, not by this laboratory. Before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office.
 
 ## Digital Sequence Information
 
@@ -56,8 +56,8 @@ Accordingly, for every sequence submission derived from non-US material, laborat
 To operationalise the permit condition guaranteeing Kenyan citizens reasonable access to collected resources, the laboratory maintains the following:
 
 1. A current inventory of Kenyan-origin material held in Gainesville, with collection locality, permit reference, and MTA reference.
-2. A documented request pathway by which Kenyan researchers and institutions may request access to that material or to derived sequence data, with a response within 30 days.
-3. A default position that requests from Kenyan researchers are granted, on terms mirroring the H3Africa model: access is provided in collaboration with the requesting researcher, structured to build capability, with terms set by agreement and attribution required in resulting outputs. H3Africa is a human genomics framework and does not govern our material, but we adopt its sample-sovereignty norm voluntarily.<sup>[25](#ref25),[26](#ref26)</sup>
+2. A documented request pathway by which Kenyan researchers and institutions may request access to that material or to derived sequence data. Requests are acknowledged promptly and routed to UF.
+3. Laboratory support for such requests, on terms mirroring the H3Africa model: access provided in collaboration with the requesting researcher, structured to build capability, with attribution required in resulting outputs. Transfers of University-held material and data are executed by UF through a Material Transfer Agreement and are subject to UF and export-control review; this laboratory routes requests promptly but does not control the outcome or the timeline. H3Africa is a human genomics framework and does not govern our material, but we adopt its sample-sovereignty norm voluntarily.<sup>[25](#ref25),[26](#ref26)</sup>
 
 ## Equitable Partnership Standards
 
@@ -91,15 +91,13 @@ This policy is reviewed annually, and immediately upon any amendment to Kenyan A
 
 ### Policy Acknowledgment
 
-*Please print and sign if hard copy is required, or confirm via email.*
+*Confirm by email, or sign a printed copy if you prefer.*
 
 **Member Name (print):** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Member Acknowledgment:** All laboratory members engaged in international research must read and acknowledge understanding of this policy before their first field deployment and annually thereafter.
 

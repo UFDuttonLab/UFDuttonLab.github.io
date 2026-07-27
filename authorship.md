@@ -88,8 +88,8 @@ Individuals who leave the laboratory before manuscript completion retain their r
 1. **Communication:** Departing authors must provide updated contact information and remain responsive to communications regarding the manuscript.
 2. **Manuscript Review:** Departing authors must fulfill their obligation to review and approve the final manuscript (ICMJE criterion #3) within 2-4 weeks for initial drafts and 1-2 weeks for revisions.
 3. **Continued Contribution:** If substantial additional work is required after departure that changes the scope or conclusions of the study, authorship order may be re-evaluated in consultation with all contributors.
-4. **Opt-Out:** Any author may opt out of authorship for any reason by notifying the corresponding author in writing. Where the person opting out is a trainee, the withdrawal is confirmed in writing no sooner than 14 days after first notice and copied to the Department Chair. Where someone opts out, their contributions are acknowledged in the Acknowledgments section. Soliciting an opt-out from someone you supervise is a violation of this policy.
-5. **Completion after departure:** Lead authors who leave the laboratory are expected to complete manuscript preparation within 6-12 months after departure, depending on the project's stage. Reassignment of lead authorship requires the written agreement of the original lead author or, failing agreement, a determination by the Department Chair. Written notice and a stated period to resume work must precede any proposal to reassign. That period pauses whenever the manuscript is awaiting comments from the Principal Investigator (who returns comments within four weeks), and parental, medical, and bereavement leave pause it entirely. Loss of lead authorship never removes co-authorship where criterion #1 is met, and the laboratory must offer the opportunity to satisfy criteria #2 and #3.
+4. **Opt-Out:** Any author may opt out of authorship for any reason by notifying the corresponding author in writing. If you would like a third party present or informed, the Department Chair, the UF Ombuds, and the Graduate School are available; that is your choice, not a requirement. Where someone opts out, their contributions are acknowledged in the Acknowledgments section. Soliciting an opt-out from someone you supervise is a violation of this policy.
+5. **Completion after departure:** Lead authors who leave the laboratory are expected to complete manuscript preparation within 6-12 months after departure, depending on the project's stage. Reassignment of lead authorship requires the written agreement of the original lead author or, failing agreement, a determination by the Department Chair. Written notice and a stated period to resume work must precede any proposal to reassign. That period pauses whenever the manuscript is awaiting comments from the Principal Investigator (who returns comments within four weeks), and is extended on request. A request for extension needs no reason, and the laboratory does not ask for one. Loss of lead authorship never removes co-authorship where criterion #1 is met, and the laboratory must offer the opportunity to satisfy criteria #2 and #3.
 
 ## Rights and Responsibilities of Trainees
 
@@ -143,7 +143,7 @@ Authorship disputes should first be resolved through direct discussion among the
 
 1. The matter should be escalated to the **Department Chair** or an uninvolved senior faculty member for mediation<sup>[4](#ref4),[5](#ref5),[43](#ref43),[44](#ref44)</sup>.
 2. If mediation is unsuccessful, the matter may be referred to the **College Dean** or the **University Ombuds**.
-3. Where the Principal Investigator is a party to the dispute, the PI recuses and final authority rests with the **Department Chair** or a Chair-appointed senior faculty member with no involvement in the work. The UF Ombuds and the Research Integrity Officer are available at any stage and do not require the earlier steps to be exhausted first.
+3. Where the Principal Investigator is a party to the dispute, the PI recuses and the decision rests with the **Department Chair** or a Chair-appointed senior faculty member with no involvement in the work, subject to the referral in step 2. The UF Ombuds is available at any stage and does not require the earlier steps to be exhausted first. The Research Integrity Officer is the route only where the allegation includes fabrication, falsification, or plagiarism.
 
 **Note:** Research misconduct means fabrication, falsification, or plagiarism. Authorship disputes, including guest, gift, and ghost authorship, follow the pathway above and are not research misconduct unless the conduct also involves fabrication, falsification, or plagiarism. Misconduct allegations are referred to **UF Research Integrity, Security & Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[4](#ref4),[5](#ref5),[22](#ref22),[43](#ref43)</sup>.
 
@@ -164,8 +164,6 @@ This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Socie
 **Member Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Principal Investigator Signature:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  
-**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 *All laboratory members must read, sign, and date an acknowledgment of this policy upon joining the laboratory and annually thereafter.*
 
