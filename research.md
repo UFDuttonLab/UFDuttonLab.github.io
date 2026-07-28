@@ -18,6 +18,7 @@ Our current research projects include:
 - Can we use dolphins as environmental sentinels?
 - How does carbon cycling change over the terrestrial aquatic interface of wetlands?
 - How does the meta-gut dynamic with hippos in rivers alter their behavior?
+- What stays constant in a hippo gut microbiome across wild, introduced, and managed care populations, and what does the environment override?
 - How does artificial surface water change where large herbivores go, and what follows for the water they use?
 
 ## Animal influences on biogeochemistry
@@ -74,6 +75,8 @@ Kemp A, Vane CH, Kim A, Dutton CL, Subalusky A, Kemp S, Parnell A. Fecal steroid
 
 Through defecation and death, animals transfer a portion of their gut microbiome to the environment together with the organic matter, nutrients, and metabolic byproducts that comprise their feces or carcass. These inputs can directly shape the external environment in a way that can support the persistence of gut microbiota outside the host gut. These dynamics could influence microbial community assembly in both the host and the environment, with subsequent effects on ecosystem function and transference amongst hosts. The potential effects of animal gut microbiomes on biogeochemical cycles remain poorly understood. Our research has shown that hippo inputs can drive anoxic conditions in hippo pools, which may facilitate the persistence of hippo gut microbes that accompany defecation. We have also shown that microbial communities in hippo pools converge on that of the hippo gut under certain conditions, raising the possibility that hippo gut microbiota influence ecosystem function in hippo pools and may be re-ingested by hippos and other taxa sharing that environment. Thus, in high-density hippo pools, the pool can function as a coupled gut-environment meta-ecosystem, a metagut. We use 16S rRNA sequencing and transcriptomics to characterize hippo gut microbiomes and the dormant and active microbial communities within hippo pools at different densities and environmental contexts, and we use the hippo system to identify the abiotic and biotic drivers controlling microbiome transference between hosts and the environment.
 
+We are extending this work across hippo populations that differ in nearly everything except the host species. We compare gut microbiomes among wild hippos in the Mara, the introduced population of the Magdalena River in Colombia, and hippos in human managed care at US zoos, which vary in diet, water chemistry, and animal density. The population modeling and management side of the Colombian work is led by the Subalusky lab with [Elizabeth Anderson](https://www.tropicalriverslab.net/elizabeth-anderson) at Florida International University.
+
 Dutton CL. Animal inputs drive shifts in biogeochemical processes and microbial communities. PhD Dissertation. Department of Ecology and Evolutionary Biology. 2019. New Haven, CT: Yale University.
 
 Handler KS, Subalusky AL, Kendall CJ, Dutton CL, Rosi EJ, Post DM. Temporal resource partitioning of wildebeest carcasses by scavengers after riverine mass mortality events. Ecosphere. 2021. doi: 10.1002/ecs2.3326.
@@ -102,7 +105,7 @@ Dutton CL, Follis M, Munaweera J, Maisha FM, Mulligan CJ, Moore JM. The gut micr
 
 ## Wildlife, water, and management
 
-Where large animals can reach water determines where their inputs land. In Kruger National Park, South Africa, we work on how artificial surface water changes the spatial and temporal footprint of herbivores, and how impoundments alter elephant distribution and activity. In Colombia, we model the growth of the introduced hippo population of the Magdalena River under alternative management strategies, together with the coupled human and natural dynamics that follow from it.
+Where large animals can reach water determines where their inputs land. In Kruger National Park, South Africa, we work on how artificial surface water changes the spatial and temporal footprint of herbivores, and how impoundments alter elephant distribution and activity. Across East African rangelands we work on how livestock intensification interacts with wildlife populations over time scales long enough to detect an effect.
 
 Ogutu JO, Stabach JA, Hopcraft JGC, Boone RB, Dublin HT, Dutton CL, et al. Short-term study fails to capture negative impacts of livestock intensification on wildlife. Proc Natl Acad Sci U S A. 2025;122(23). doi: 10.1073/pnas.2502418122.
 
