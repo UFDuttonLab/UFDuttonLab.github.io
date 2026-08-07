@@ -107,11 +107,15 @@ Dutton CL, Follis M, Munaweera J, Maisha FM, Mulligan CJ, Moore JM. The gut micr
 
 Where large animals can reach water determines where their inputs land. In Kruger National Park, South Africa, we work on how artificial surface water changes the spatial and temporal footprint of herbivores, and how impoundments alter elephant distribution and activity. Across East African rangelands we work on how livestock intensification interacts with wildlife populations over time scales long enough to detect an effect.
 
+We have proposed the ripple effect as a framework for the ecological impacts of surface water in drylands, which comprise 41 percent of the Earth's surface. The piosphere concept describes localized degradation of soil and vegetation around a water source; the ripple effect extends it to the cross-scale, reciprocal impacts that animal aggregations generate across linked terrestrial and aquatic ecosystems, and identifies the restoration of spatiotemporal variability in surface water as the management target.
+
 Ogutu JO, Stabach JA, Hopcraft JGC, Boone RB, Dublin HT, Dutton CL, et al. Short-term study fails to capture negative impacts of livestock intensification on wildlife. Proc Natl Acad Sci U S A. 2025;122(23). doi: 10.1073/pnas.2502418122.
 
 McCleery RA, Ferreria SM, Mhlava P, Mathebula O, Tanneback T, Coetsee C, Dalu T, Dutton CL, Khosa D, Munyai LF, Parker DM, Subalusky AL, Twala B, Voysey MD, Wigley BJ. Artificial surface water broadens the spatiotemporal footprint of herbivores and alters species responses. Ecological Applications. 2026;36(1):e70185.
 
 Twala BB, Ngcobo SP, McCleery RA, Dalu T, Dutton CL, Ferreria SM, Munyai L, Subalusky A, Voysey MD, Coetsee C, Wigley B, Parker DM. Effects of water impoundments on the distribution and activity of elephants in the southern Kruger National Park. African Journal of Ecology. 2026;64(2):e70154.
+
+Subalusky AL, Dutton CL, McCleery RA. The ripple effect of surface water on dryland ecosystems. Trends in Ecology & Evolution. 2026. doi: 10.1016/j.tree.2026.07.004.
 
 ## Invasive species and open source technology
 

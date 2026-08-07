@@ -18,6 +18,8 @@ Frauendorf, T. C., A. Reside, C. L. Dutton, L. Njoroge, E. Njagi, E. J. Rosi, D.
 
 McCleery, R. A., S. M. Ferreria, P. Mhlava, O. Mathebula, T. Tanneback, C. Coetsee, T. Dalu, C. L. Dutton, D. Khosa, L. F. Munyai, D. M. Parker, A. L. Subalusky, B. Twala, M. D. Voysey, and B. J. Wigley. Artificial surface water broadens the spatiotemporal footprint of herbivores and alters species responses. [Ecological Applications 36(1), e70185 (2026).](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.70185)
 
+Subalusky, A. L., C. L. Dutton, and R. A. McCleery. The ripple effect of surface water on dryland ecosystems. [Trends in Ecology & Evolution, in press (2026).](https://doi.org/10.1016/j.tree.2026.07.004)
+
 Twala, B. B., S. P. Ngcobo, R. A. McCleery, T. Dalu, C. L. Dutton, S. M. Ferreria, L. Munyai, A. Subalusky, M. D. Voysey, C. Coetsee, B. Wigley, and D. M. Parker. Effects of water impoundments on the distribution and activity of elephants in the southern Kruger National Park. [African Journal of Ecology 64(2), e70154 (2026).](https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.70154)
 
 ### 2025
