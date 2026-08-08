@@ -27,27 +27,27 @@ Our current research projects include:
 
 Animals can influence biogeochemistry of ecosystems in myriad ways. In aquatic systems, animals primarily influence biogeochemistry through consumption, egestion and excretion, death, and bioturbation. The influence of animals on aquatic systems depends on the animal's life history characteristics as well as the environmental context of the aquatic system. We use hippos and their pools as a model system to understand the potential effects of animals on aquatic biogeochemistry. Hippos can have substantial effects on aquatic biogeochemistry because of their large body size, their daily transport of terrestrial resources into aquatic ecosystems, and their tendency to aggregate in pools. The biogeochemical effects of hippos on different types of water bodies (rivers, lakes, or wetlands) can be significantly different depending on the in situ biogeochemical regimes. We developed a sediment fingerprinting method to quantify the proportion of riverine suspended sediment due to hippo dung, which allows us to quantify hippo dung transport under a range of flow conditions. We have used this technique in concert with sediment coring and dating to understand historical inputs by hippos within a whole-watershed context, and applied the same approach to erosion and sediment source problems in river basins across East Africa.
 
-Dutton CL, Anisfeld SC, Ernstberger H. A novel sediment fingerprinting method using filtration: Application to the Mara River, East Africa. Journal of Soils and Sediments. 2013 December; 13(10):1708. doi: 10.1007/s11368-013-0725-z.
+Frauendorf TC, Reside A, Dutton CL, Njoroge L, Njagi E, Rosi EJ, Post DM, Subalusky AL. A gradient of wildlife subsidies alters riverine food web structure. Freshwater Biology. 2026 Apr 7;71(4):e70208. [doi: 10.1111/fwb.70208](https://doi.org/10.1111/fwb.70208).
 
-Subalusky AL, Dutton CL, Rosi EJ, Post DM. Annual mass drownings of the Serengeti wildebeest migration influence nutrient cycling and storage in the Mara River. Proc Natl Acad Sci U S A. 2017 Jul 18;114(29):7647-7652. doi: 10.1073/pnas.1614778114.
+Saha AK, Dutton CL, Manyifika M, Jantzi SC, Sirikare SN. Sediment fingerprinting enables the determination of soil erosion sources and sediment transport processes in a topographically complex Nile headwater basin. Soil Systems. 2025 Jul 4;9(3):70. [doi: 10.3390/soilsystems9030070](https://doi.org/10.3390/soilsystems9030070).
 
-Subalusky AL, Dutton CL, Njoroge L, Rosi EJ, Post DM. Organic matter and nutrient inputs from large wildlife influence ecosystem function in the Mara River, Africa. Ecology. 2018 Nov;99(11):2558-2574. doi: 10.1002/ecy.2509.
+Subalusky AL, Dutton CL. Role of aquatic and terrestrial carcasses in freshwater ecosystems. In: Carrion Ecology, Evolution, and Their Applications. 2nd ed. Boca Raton: CRC Press; 2025 Jun 4. p. 424-436. [doi: 10.1201/9781003610885-23](https://doi.org/10.1201/9781003610885-23).
 
-Schoelynck J, Subalusky AL, Struyf E, Dutton CL, Unzué-Belmonte D, Van de Vijver B, Post DM, Rosi EJ, Meire P, Frings P. Hippos (Hippopotamus amphibius): The animal silicon pump. Sci Adv. 2019 May;5(5):eaav0395. doi: 10.1126/sciadv.aav0395.
+Twining CW, Blanco A, Dutton CL, Kainz M, Harvey E, Kraus J, Martin-Creuzburg D, et al. Integrating the bright and dark sides of aquatic resource subsidies, a synthesis. Ecology Letters. 2025 Apr 8;28(4):e70109. [doi: 10.1111/ele.70109](https://doi.org/10.1111/ele.70109).
 
-Masese FO, Kiplagat MJ, González-Quijano CR, Subalusky AL, Dutton CL, Post DM, Singer GA. Hippopotamus are distinct from domestic livestock in their resource subsidies to and effects on aquatic ecosystems. Proc R Soc B. 2020;287:20193000. doi: 10.1098/rspb.2019.3000.
+Pringle RM, Abraham JO, Anderson TM, Coverdale TC, Davies AB, Dutton CL, Gaylard A, Goheen JR, Holdo RM, Hutchinson MC, Kimuyu CM, Long RA, Subalusky AL, Veldhuis MP. Impacts of large herbivores on terrestrial ecosystems. Current Biology. 2023 Jun 5;33(11):R584-R610. [doi: 10.1016/j.cub.2023.04.024](https://doi.org/10.1016/j.cub.2023.04.024).
 
-Akayezu P, Musinguzi L, Natugonza V, Ogutu-Ohwayo R, Mwathe K, Dutton CL, Manyifika M. Using sediment fingerprinting to identify erosion hotspots in a sub-catchment of Lake Kivu, Rwanda. Environmental Monitoring and Assessment. 2020. doi: 10.1007/s10661-020-08774-5.
+Akayezu P, Musinguzi L, Natugonza V, Ogutu-Ohwayo R, Mwathe K, Dutton CL, Manyifika M. Using sediment fingerprinting to identify erosion hotspots in a sub-catchment of Lake Kivu, Rwanda. Environmental Monitoring and Assessment. 2020 Dec 2;192(12):806. [doi: 10.1007/s10661-020-08774-5](https://doi.org/10.1007/s10661-020-08774-5).
 
-Pringle RM, Abraham JO, Anderson TM, Coverdale TC, Davies AB, Dutton CL, Gaylard A, Goheen JR, Holdo RM, Hutchinson MC, Kimuyu CM, Long RA, Subalusky AL, Veldhuis MP. Impacts of large herbivores on terrestrial ecosystems. Current Biology. 2023;33:11.
+Masese FO, Kiplagat MJ, González-Quijano CR, Subalusky AL, Dutton CL, Post DM, Singer GA. Hippopotamus are distinct from domestic livestock in their resource subsidies to and effects on aquatic ecosystems. Proc R Soc B. 2020 Apr 29;287(1926):20193000. [doi: 10.1098/rspb.2019.3000](https://doi.org/10.1098/rspb.2019.3000).
 
-Saha AK, Dutton C, Manyifika M, Jantzi SC, Sirikare SN. Sediment fingerprinting enables the determination of soil erosion sources and sediment transport processes in a topographically complex Nile headwater basin. Soil Systems. 2025;9(3):70.
+Schoelynck J, Subalusky AL, Struyf E, Dutton CL, Unzué-Belmonte D, Van de Vijver B, Post DM, Rosi EJ, Meire P, Frings P. Hippos (Hippopotamus amphibius): The animal silicon pump. Science Advances. 2019 May 1;5(5):eaav0395. [doi: 10.1126/sciadv.aav0395](https://doi.org/10.1126/sciadv.aav0395).
 
-Twining CW, Blanco A, Dutton C, Kainz M, Harvey E, Kraus J, Martin-Creuzburg D, et al. Integrating the bright and dark sides of aquatic resource subsidies, a synthesis. Ecology Letters. 2025. doi: 10.1111/ele.70109.
+Subalusky AL, Dutton CL, Njoroge L, Rosi EJ, Post DM. Organic matter and nutrient inputs from large wildlife influence ecosystem function in the Mara River, Africa. Ecology. 2018 Oct 8;99(11):2558-2574. [doi: 10.1002/ecy.2509](https://doi.org/10.1002/ecy.2509).
 
-Subalusky AL, Dutton C. Role of aquatic and terrestrial carcasses in freshwater ecosystems. In: Carrion Ecology, Evolution, and Their Applications. 2025.
+Subalusky AL, Dutton CL, Rosi EJ, Post DM. Annual mass drownings of the Serengeti wildebeest migration influence nutrient cycling and storage in the Mara River. Proc Natl Acad Sci U S A. 2017 Jun 19;114(29):7647-7652. [doi: 10.1073/pnas.1614778114](https://doi.org/10.1073/pnas.1614778114).
 
-Frauendorf TC, Reside A, Dutton CL, Njoroge L, Njagi E, Rosi EJ, Post DM, Subalusky AL. A gradient of wildlife subsidies alters riverine food web structure. Freshwater Biology. 2026;71(4):e70208.
+Dutton CL, Anisfeld SC, Ernstberger H. A novel sediment fingerprinting method using filtration: application to the Mara River, East Africa. Journal of Soils and Sediments. 2013 Jun 14;13(10):1708-1723. [doi: 10.1007/s11368-013-0725-z](https://doi.org/10.1007/s11368-013-0725-z).
 
 ## Environmental variability as a driver of biogeochemical and microbial community change
 
@@ -55,19 +55,19 @@ Frauendorf TC, Reside A, Dutton CL, Njoroge L, Njagi E, Rosi EJ, Post DM, Subalu
 
 Many ecosystems are facing increasing environmental variability due to changes in temperature and precipitation patterns caused by climate change. In East Africa, the amount of precipitation is projected to increase slightly but become much more variable, with more frequent and intense droughts. We study how this environmental variability alters interactions between animals, their microbial symbionts, environmental microbial communities, and aquatic ecosystem function. We have shown that hippo pools can become increasingly toxic to aquatic life in periods between flushing flows (periodic flood events). When these pools are flushed during episodic rains, large fish kills can occur due to the mobilization of reduced compounds and very high sediment loads. As flows become more irregular, these fish kill events could be increasing, causing other potential changes in ecosystem function. We use mesocosm experiments and whole ecosystem manipulations to document the response of environmental microbial communities and aquatic biogeochemistry to changes in environmental variability, and low-cost open source instrumentation to document that variability across our study regions and between experimental treatments.
 
-Dutton CL, Subalusky AL, Anisfeld SC, Njoroge L, Rosi EJ, Post DM. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. PLoS One. 2018;13(2):e0192828. doi: 10.1371/journal.pone.0192828.
+Blaszczak JR, Koenig LE, Mejia FH, Gómez-Gener L, Dutton CL, Carter AM, Grimm NB, Harvey JW, Helton AM, Cohen MJ. Extent, patterns, and drivers of hypoxia in the world's streams and rivers. Limnology and Oceanography Letters. 2022 Dec 8;8(3):453-463. [doi: 10.1002/lol2.10297](https://doi.org/10.1002/lol2.10297).
 
-Dutton CL, Subalusky AL, Hamilton SK, Rosi EJ, Post DM. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nat Commun. 2018 May 16;9(1):1951. doi: 10.1038/s41467-018-04391-6.
+Kemp A, Vane CH, Kim A, Dutton CL, Subalusky AL, Kemp S, Parnell A. Fecal steroids as a potential tool for conservation paleobiology in East Africa. Biodiversity and Conservation. 2021 Nov 18;31(1):183-209. [doi: 10.1007/s10531-021-02328-y](https://doi.org/10.1007/s10531-021-02328-y).
 
-Dutton CL, Subalusky AL, Hill TD, Aleman JC, Rosi EJ, Onyango KB, Kanuni K, Cousins JA, Staver AC, Post DM. A 2000-year sediment record reveals rapidly changing sedimentation and land use since the 1960s in the Upper Mara-Serengeti Ecosystem. Sci Total Environ. 2019 May 10;664:148-160. doi: 10.1016/j.scitotenv.2019.01.421.
+Frauendorf TC, Subalusky AL, Dutton CL, Hamilton SK, Masese FO, Rosi EJ, Singer GA, Post DM. Animal legacies lost and found in river ecosystems. Environmental Research Letters. 2021 Nov 1;16(11):115011. [doi: 10.1088/1748-9326/ac2cb0](https://doi.org/10.1088/1748-9326/ac2cb0).
 
-Dutton CL, Subalusky AL, Hamilton SK, Bayer EC, Njoroge L, Rosi EJ, Post DM. Alternative biogeochemical states of river pools mediated by hippo use and flow variability. Ecosystems. 2020. doi: 10.1007/s10021-020-00518-3.
+Dutton CL, Subalusky AL, Hamilton SK, Bayer EC, Njoroge L, Rosi EJ, Post DM. Alternative biogeochemical states of river pools mediated by hippo use and flow variability. Ecosystems. 2020 Jun 8;24(2):284-300. [doi: 10.1007/s10021-020-00518-3](https://doi.org/10.1007/s10021-020-00518-3).
 
-Frauendorf T, Subalusky AL, Dutton CL, Hamilton SK, Masese FO, Rosi EJ, Singer GA, Post DM. Animal legacies lost and found in freshwater ecosystems. Environmental Research Letters. 2021. doi: 10.1088/1748-9326/ac2cb0.
+Dutton CL, Subalusky AL, Hill TD, Aleman JC, Rosi EJ, Onyango KB, Kanuni K, Cousins JA, Staver AC, Post DM. A 2000-year sediment record reveals rapidly changing sedimentation and land use since the 1960s in the Upper Mara-Serengeti Ecosystem. Science of the Total Environment. 2019 Feb 1;664:148-160. [doi: 10.1016/j.scitotenv.2019.01.421](https://doi.org/10.1016/j.scitotenv.2019.01.421).
 
-Blaszczak JR, Koenig LE, Mejia FH, Gómez-Gener L, Dutton CL, Carter AM, Grimm NB, Harvey JW, Helton AM, Cohen MJ. Extent, patterns, and drivers of hypoxia in the world's streams and rivers. Limnology and Oceanography Letters. 2022. doi: 10.1002/lol2.10297.
+Dutton CL, Subalusky AL, Hamilton SK, Rosi EJ, Post DM. Organic matter loading by hippopotami causes subsidy overload resulting in downstream hypoxia and fish kills. Nature Communications. 2018 May 16;9:1951. [doi: 10.1038/s41467-018-04391-6](https://doi.org/10.1038/s41467-018-04391-6).
 
-Kemp A, Vane CH, Kim A, Dutton CL, Subalusky A, Kemp S, Parnell A. Fecal steroids as a potential tool for conservation paleobiology in East Africa. Biodiversity and Conservation. 2022. doi: 10.1007/s10531-021-02328-y.
+Dutton CL, Subalusky AL, Anisfeld SC, Njoroge L, Rosi EJ, Post DM. The influence of a semi-arid sub-catchment on suspended sediments in the Mara River, Kenya. PLOS ONE. 2018 Feb 8;13(2):e0192828. [doi: 10.1371/journal.pone.0192828](https://doi.org/10.1371/journal.pone.0192828).
 
 ## Interactions between gut microbiome and environmental microbe communities
 
@@ -77,13 +77,13 @@ Through defecation and death, animals transfer a portion of their gut microbiome
 
 We are extending this work across hippo populations that differ in nearly everything except the host species. We compare gut microbiomes among wild hippos in the Mara, the introduced population of the Magdalena River in Colombia, and hippos in human managed care at US zoos, which vary in diet, water chemistry, and animal density. The population modeling and management side of the Colombian work is led by the Subalusky lab with [Elizabeth Anderson](https://www.tropicalriverslab.net/elizabeth-anderson) at Florida International University.
 
+Dutton CL, Goeckner A, Goldwire T, Grupstra CGB, Houghtaling D, Nonnamaker LE, Subalusky AL. Bioreactors on the move: how animals contribute to microbial community coalescence and shape ecosystem function. Environmental Microbiology. 2026 Mar 30;28(4):e70291. [doi: 10.1111/1462-2920.70291](https://doi.org/10.1111/1462-2920.70291).
+
+Dutton CL, Subalusky AL, Sanchez A, Estrela S, Lu N, Hamilton SK, Njoroge L, Rosi EJ, Post DM. The meta-gut: community coalescence of animal gut and environmental microbiomes. Scientific Reports. 2021 Nov 30;11:23117. [doi: 10.1038/s41598-021-02349-1](https://doi.org/10.1038/s41598-021-02349-1). Named one of the [top 100 papers in Microbiology at Scientific Reports for 2021](https://www.nature.com/collections/jejbehijhi).
+
+Handler KS, Subalusky AL, Kendall CJ, Dutton CL, Rosi EJ, Post DM. Temporal resource partitioning of wildebeest carcasses by scavengers after riverine mass mortality events. Ecosphere. 2021 Jan 20;12(1):e03326. [doi: 10.1002/ecs2.3326](https://doi.org/10.1002/ecs2.3326).
+
 Dutton CL. Animal inputs drive shifts in biogeochemical processes and microbial communities. PhD Dissertation. Department of Ecology and Evolutionary Biology. 2019. New Haven, CT: Yale University.
-
-Handler KS, Subalusky AL, Kendall CJ, Dutton CL, Rosi EJ, Post DM. Temporal resource partitioning of wildebeest carcasses by scavengers after riverine mass mortality events. Ecosphere. 2021. doi: 10.1002/ecs2.3326.
-
-Dutton CL, Subalusky AL, Sanchez A, Estrela S, Lu N, Hamilton SK, Njoroge L, Rosi EJ, Post DM. The meta-gut: community coalescence of animal gut and environmental microbiomes. Scientific Reports. 2021 December. doi: 10.1038/s41598-021-02349-1. Named one of the [top 100 papers in Microbiology at Scientific Reports for 2021](https://www.nature.com/collections/jejbehijhi).
-
-Dutton CL, Goeckner A, Goldwire T, Grupstra CGB, Houghtaling D, Nonnamaker LE, Subalusky A. Bioreactors on the move: how animals contribute to microbial community coalescence and shape ecosystem function. Environmental Microbiology. 2026;28(4):e70291. doi: 10.1111/1462-2920.70291.
 
 ## Microbiomes and animal health
 
@@ -97,11 +97,11 @@ The same non-invasive approach extends to free-living animals. We are testing wh
 
 The questions that make a microbiome informative about an animal apply to people. Working in the Democratic Republic of the Congo with collaborators in anthropology and public health, we have shown that maternal psychosocial stress during pregnancy is associated with reduced diversity in the early infant gut microbiome, and that the composition of that early microbiome predicts a child's later susceptibility to malaria. The analysis code and data for the malaria work are public at [UFDuttonLab/congo-malaria-microbiome](https://github.com/UFDuttonLab/congo-malaria-microbiome).
 
-Dutton CL, Maisha FM, Quinn E, Morales KL, Moore J, Mulligan CJ. Maternal psychosocial stress is associated with reduced diversity in the early infant gut microbiome. Microorganisms. 2023 Jan;11(4):975.
+Dutton CL, Follis M, Munaweera J, Maisha FM, Mulligan CJ, Moore JM. The gut microbiome in early life predicts malaria susceptibility. Frontiers in Cellular and Infection Microbiology. 2026 Jun 23;16:1769376. [doi: 10.3389/fcimb.2026.1769376](https://doi.org/10.3389/fcimb.2026.1769376).
 
-Mulligan CJ, Quinn EB, Hamadmad D, Dutton CL, Nevell L, Binder AM, Panter-Brick C, Dajani R. Epigenetic signatures of intergenerational exposure to violence in three generations of Syrian refugees. Scientific Reports. 2025. doi: 10.1038/s41598-025-89818-z.
+Mulligan CJ, Quinn EB, Hamadmad D, Dutton CL, Nevell L, Binder AM, Panter-Brick C, Dajani R. Epigenetic signatures of intergenerational exposure to violence in three generations of Syrian refugees. Scientific Reports. 2025 Feb 27;15:5945. [doi: 10.1038/s41598-025-89818-z](https://doi.org/10.1038/s41598-025-89818-z).
 
-Dutton CL, Follis M, Munaweera J, Maisha FM, Mulligan CJ, Moore JM. The gut microbiome in early life predicts malaria susceptibility. Frontiers in Cellular and Infection Microbiology. 2026;16:1769376.
+Dutton CL, Maisha FM, Quinn E, Morales KL, Moore J, Mulligan CJ. Maternal psychosocial stress is associated with reduced diversity in the early infant gut microbiome. Microorganisms. 2023 Apr 8;11(4):975. [doi: 10.3390/microorganisms11040975](https://doi.org/10.3390/microorganisms11040975).
 
 ## Wildlife, water, and management
 
@@ -109,13 +109,13 @@ Where large animals can reach water determines where their inputs land. In Kruge
 
 We have proposed the ripple effect as a framework for the ecological impacts of surface water in drylands, which comprise 41 percent of the Earth's surface. The piosphere concept describes localized degradation of soil and vegetation around a water source; the ripple effect extends it to the cross-scale, reciprocal impacts that animal aggregations generate across linked terrestrial and aquatic ecosystems, and identifies the restoration of spatiotemporal variability in surface water as the management target.
 
-Ogutu JO, Stabach JA, Hopcraft JGC, Boone RB, Dublin HT, Dutton CL, et al. Short-term study fails to capture negative impacts of livestock intensification on wildlife. Proc Natl Acad Sci U S A. 2025;122(23). doi: 10.1073/pnas.2502418122.
+Subalusky AL, Dutton CL, McCleery RA. The ripple effect of surface water on dryland ecosystems. Trends in Ecology & Evolution. 2026 Aug; in press. [doi: 10.1016/j.tree.2026.07.004](https://doi.org/10.1016/j.tree.2026.07.004).
 
-McCleery RA, Ferreria SM, Mhlava P, Mathebula O, Tanneback T, Coetsee C, Dalu T, Dutton CL, Khosa D, Munyai LF, Parker DM, Subalusky AL, Twala B, Voysey MD, Wigley BJ. Artificial surface water broadens the spatiotemporal footprint of herbivores and alters species responses. Ecological Applications. 2026;36(1):e70185.
+Twala BB, Ngcobo SP, McCleery RA, Dalu T, Dutton CL, Ferreria SM, Munyai L, Subalusky AL, Voysey MD, Coetsee C, Wigley B, Parker DM. Effects of water impoundments on the distribution and activity of elephants in the southern Kruger National Park. African Journal of Ecology. 2026 Feb 9;64(2):e70154. [doi: 10.1111/aje.70154](https://doi.org/10.1111/aje.70154).
 
-Twala BB, Ngcobo SP, McCleery RA, Dalu T, Dutton CL, Ferreria SM, Munyai L, Subalusky A, Voysey MD, Coetsee C, Wigley B, Parker DM. Effects of water impoundments on the distribution and activity of elephants in the southern Kruger National Park. African Journal of Ecology. 2026;64(2):e70154.
+McCleery RA, Ferreria SM, Mhlava P, Mathebula O, Tanneback T, Coetsee C, Dalu T, Dutton CL, Khosa D, Munyai LF, Parker DM, Subalusky AL, Twala B, Voysey MD, Wigley BJ. Artificial surface water broadens the spatiotemporal footprint of herbivores and alters species responses. Ecological Applications. 2026 Jan 1;36(1):e70185. [doi: 10.1002/eap.70185](https://doi.org/10.1002/eap.70185).
 
-Subalusky AL, Dutton CL, McCleery RA. The ripple effect of surface water on dryland ecosystems. Trends in Ecology & Evolution. 2026. doi: 10.1016/j.tree.2026.07.004.
+Ogutu JO, Stabach JA, Hopcraft JGC, Boone RB, Dublin HT, Dutton CL, et al. Short-term study fails to capture negative impacts of livestock intensification on wildlife. Proc Natl Acad Sci U S A. 2025 May 30;122(23):e2502418122. [doi: 10.1073/pnas.2502418122](https://doi.org/10.1073/pnas.2502418122).
 
 ## Invasive species and open source technology
 
@@ -125,7 +125,7 @@ We prioritize open source and low-cost hardware because it lets us instrument mo
 
 The same approach produced our low-cost environmental sensors, our laboratory automation, and the scheduling software the lab runs on. Instrument details are on the [Lab](/lab/) page.
 
-Klein R, Dutton CL, Koeser AK. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. Arboricultural Journal. 2022. doi: 10.1080/03071375.2022.2030603.
+Klein R, Dutton CL, Koeser AK. Development of a low-cost traffic counter for assessing likelihood of impact for tree risk assessment. Arboricultural Journal. 2022 Feb 27;45(1):49-71. [doi: 10.1080/03071375.2022.2030603](https://doi.org/10.1080/03071375.2022.2030603).
 
 ## Easy explainer
 
