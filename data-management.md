@@ -4,7 +4,7 @@ title: Data and Code Management Policy
 permalink: /data-management/
 ---
 
-*Effective Date: July 2026 · Last reviewed: July 2026*
+*Effective Date: July 2026 · Last reviewed: August 2026*
 
 ---
 
@@ -30,9 +30,9 @@ Large-scale human genomic studies must register in dbGaP under the NIH Genomic D
 
 The current base guide is **PAPPG 24-1**, effective 20 May 2024, with the Data Management and Sharing Plan requirement at Chapter II.D.2.i(ii). Two supplements amend it.<sup>[10](#ref10)</sup>
 
-**Supplement 1 (NSF 26-200), effective 8 December 2025:** recipients are required to share **all data supporting NSF-funded publications at the time of publication**, with exceptions justified in the DMSP. The same supplement extends the research misconduct definition to explicitly encompass **AI-based tools**, and makes Research Security Training mandatory.<sup>[11](#ref11)</sup>
+**Supplement 1 (NSF 26-200), applying to NSF financial assistance awarded on or after 8 December 2025:** recipients are required to share **all data supporting NSF-funded publications at the time of publication**, with exceptions justified in the DMSP. The same supplement extends the research misconduct definition to explicitly encompass **AI-based tools**, and directs recipients to NSF Important Notice 149 for mandatory Research Security Training requirements.<sup>[11](#ref11)</sup>
 
-**Supplement 2 (NSF 26-202), effective 22 January 2026:** DMSPs are created in a **Research.gov tool rather than uploaded as a PDF**, with the tool launching 27 April 2026; the DMSP is reviewed as part of merit review; **the twelve-month publication embargo is eliminated**, with Author Accepted Manuscripts or Versions of Record deposited in NSF-PAR at or before publication; and prior written Program Officer approval is required where a change to the plan constitutes a change in objectives or scope.<sup>[12](#ref12),[15](#ref15)</sup>
+**Supplement 2 (NSF 26-202), applying to NSF financial assistance awarded on or after 22 January 2026:** DMSPs are created in a **Research.gov tool rather than uploaded as a PDF**, with the tool launching 27 April 2026; the DMSP is reviewed as part of merit review; **the twelve-month publication embargo is eliminated**, with Author Accepted Manuscripts or Versions of Record deposited in NSF-PAR at or before publication; and prior written Program Officer approval is required where a change to the plan constitutes a change in objectives or scope.<sup>[12](#ref12),[15](#ref15)</sup>
 
 NSF BIO guidance requires plans consistent with the **FAIR** principles, permits reference to the **CARE** principles for Indigenous data governance, expects recognised community-accepted repositories, and expects persistent identifiers such as DOIs. The BIO form covers up to four data types or research products.<sup>[13](#ref13),[16](#ref16)</sup>
 
@@ -49,11 +49,11 @@ Metadata is recorded at the bench and at the sampling point, not added at the en
 | Metagenome-assembled genomes | GSC MIMAG | `MIMAG` series |
 | Single-amplified genomes | GSC MISAG | `MISAG.water.6.0` |
 | Sensor and chemistry time series | EML 2.2.0 | Deposited at EDI, not NCBI |
-| eDNA detections, telemetry occurrences | Darwin Core | Not applicable |
+| eDNA detections, telemetry occurrences | Darwin Core | OBIS or GBIF Darwin Core Archive, not NCBI |
 
 The current MIxS release is **v6.3.1, 14 July 2026**, while NCBI packages sit at the 6.0 series. **Record which version was used for each submission.**<sup>[17](#ref17),[18](#ref18),[19](#ref19),[22](#ref22)</sup>
 
-The laboratory adopts the **Gold tier** of the published tier-based standards for FAIR sequence data and metadata sharing in microbiome research. The Gold tier requires non-paywalled sequences with accessions in FASTQ or BCL; documented sequencing method; **PCR primer sequences recorded for every amplicon study**; no login barrier to access; an explicit data-access statement; and **analysis code published alongside the data**.<sup>[20](#ref20)</sup>
+The laboratory adopts the **Gold tier** of the published tier-based standards for FAIR sequence data and metadata sharing in microbiome research. The Gold tier requires non-paywalled sequences with accessions in FASTQ or BCL; documented sequencing method; **PCR primer sequences recorded for every amplicon study**; no login barrier to access; an explicit data-access statement; and **analysis code published alongside the data**. Gold tier is the default. It is displaced where controlled access is required: dbGaP-eligible human data, an access-derived restriction under a Kenyan permit or MTA, or data governed by the CARE Principles under the [International Research Partnership Policy](/international-partnership/). In those cases the highest tier compatible with the restriction is used, the restriction and its legal basis are stated in the data-access statement, and the deposit is not made at EDI, whose terms require public access to both metadata and data.<sup>[20](#ref20)</sup>
 
 Sensor and chemistry time series are described in **Ecological Metadata Language 2.2.0** and deposited at the **Environmental Data Initiative**, validated with the EML Congruence Checker or ezEML. EDI's default licence is CC0 1.0, and **a data package that does not allow public access to both metadata and data will not receive a DOI**.<sup>[28](#ref28),[29](#ref29)</sup>
 
@@ -68,6 +68,8 @@ Complete the following on the day the run finishes.
 3. **Register the BioProject and BioSamples and upload the reads to SRA now**, with the release date set to the expected publication date, per the workflow below.
 
 **The RAID is the first copy, not the archive.** RAID protects against a single disk failing, not against fire, theft, flood, controller failure, ransomware, or deletion. The office and HiPerGator are on the same campus, so neither counts as an off-site copy. A registered submission under hold is the only copy that is off site and independently managed.
+
+Signal-level files (POD5, FAST5, BCL) are not carried by the deposition workflow below, which takes basecalled reads only. They therefore require a purchased off-campus copy: `/orange` plus UF Tivoli backup, or an equivalent off-site service, arranged at project start and recorded in the project record. Where no such copy is funded, that is recorded as an accepted loss at project start rather than discovered at retention time.
 
 ## Deposition Workflow
 
@@ -103,25 +105,25 @@ Because NSF's research misconduct definition now explicitly encompasses AI-based
 
 * `/home` provides **40 GB** per user, for source code, scripts, and project documents. It **must not be used for job input or output**. The only recovery available without purchase is snapshots at `~/.snapshot/`: **daily for one week plus weekly for three additional weeks**.<sup>[37](#ref37),[38](#ref38)</sup>
 * `/blue` is the primary location for all files read or written during job execution, and requires an active compute allocation.<sup>[37](#ref37),[38](#ref38)</sup>
-* `/orange` is the archival tier and **requires an active `/blue` allocation**; loss of the compute allocation ends `/orange` eligibility. <sup>[37](#ref37)</sup> This laboratory requires an off-HiPerGator egress review at project close.
+* `/orange` is UF's nearline tier, not this laboratory's archive, and **requires an active `/blue` allocation**; loss of the compute allocation ends `/orange` eligibility. <sup>[37](#ref37)</sup> This laboratory requires an off-HiPerGator egress review at project close.
 * `/red` data is **removed 24 hours after allocation expiration**, and local scratch is destroyed at job end and is irretrievably lost. Neither is ever a data-of-record location.<sup>[37](#ref37),[38](#ref38)</sup>
 * Backup on `/blue` and `/orange` can be purchased through UF Tivoli; current pricing and version-retention terms are on the UF Research Computing page.<sup>[39](#ref39)</sup>
 
-**SRA and EDI deposition are the only copies in this stack not subject to the storage limits above.**<sup>[23](#ref23),[29](#ref29),[37](#ref37)</sup>
+**Deposition in an external repository is the only data-of-record location in this stack: NCBI SRA for raw reads, the Environmental Data Initiative for sensor and chemistry time series, OBIS or GBIF for Darwin Core occurrence records, and Zenodo for processed data objects and archived code. Every other location named in this policy, including the RAID, `/home`, `/blue`, `/orange`, `/red`, and local scratch, is a working copy.**<sup>[23](#ref23),[29](#ref29),[37](#ref37)</sup>
 
-UF holds an enterprise **LabArchives** licence, which is the sanctioned electronic laboratory notebook and keeps notebook custody with the University.<sup>[45](#ref45)</sup>
+UF holds an enterprise **LabArchives** licence.<sup>[45](#ref45)</sup> Original research records remain with the University on departure.<sup>[43](#ref43)</sup>
 
 ## Retention
 
 The laboratory retains records for the **longest applicable** of the following.
 
-* **Three years** from submission of the final financial report for all federally funded research records under 2 CFR 200.334, extended automatically while any litigation, claim, or audit finding is open. Under NIH terms the clock runs from the annual Federal Financial Report.<sup>[41](#ref41),[8](#ref8)</sup>
+* **Three years** from submission of the final financial report for all federally funded research records under 2 CFR 200.334, extended where any litigation, claim, or audit is started before the three-year period expires, until it is resolved. Under NIH terms the equivalent clock runs from submission of the annual Federal Financial Report; where both apply, the later date controls.<sup>[41](#ref41),[8](#ref8)</sup>
 * **Five fiscal years** after completion or termination of the project, per the UF records schedule for federal project files and grant files. **This, not the federal three years, is the binding floor at UF.**<sup>[42](#ref42)</sup>
 * **Life of the patent** for original laboratory data supporting any UF patent.<sup>[42](#ref42),[43](#ref43)</sup>
 * **Ten anniversary years** for clinical study records, where applicable.<sup>[42](#ref42)</sup>
 * **Seven years** for research misconduct inquiry and investigation files, held by the UF Research Integrity Officer. A misconduct allegation gives UF authority to access and take custody of records in any location, physical or electronic, so a preserve-and-hold obligation attaches immediately on notice of an allegation.<sup>[44](#ref44)</sup>
 
-**Working rule:** retain raw sequence data, instrument-level outputs, and analysis code for the longest of five fiscal years after project close, the life of any patent, ten anniversary years for clinical study records, or seven years from the **close** of any misconduct proceeding. Nothing is deleted while a claim, audit, or proceeding is open.
+**Working rule:** retain all research records, including raw sequence data, instrument-level outputs, notebooks, and analysis code, for the longest applicable period above. In practice for this laboratory that is five fiscal years after project close, extended by the life of any patent, by ten anniversary years for clinical study records, and by seven years from the **close** of any misconduct proceeding in which the records were within scope. Nothing is deleted while a claim, audit, or proceeding is open.
 
 ## Custody When a Member Leaves
 
@@ -129,11 +131,11 @@ UF policy provides that personnel who leave the University "may be permitted to 
 
 A **Records Disposition Request** documenting who takes custodianship of the records and data is filed on departure.<sup>[42](#ref42)</sup>
 
-Request your copies well before your last day: UF account deprovisioning is controlled by UF IT and may happen automatically on separation. The departing member receives a complete copy of their notebooks, data, code, and analysis records and confirms receipt in writing. The laboratory will support a request for continued access where you are a co-author on a live manuscript, but cannot guarantee UF grants it.
+Request your copies well before your last day: UF account deprovisioning is controlled by UF IT and may happen automatically on separation. The laboratory supports the copy request and provides the working files it holds, and receipt is confirmed in writing. What may be copied, and whether access survives separation, is determined by UF under Policy 14-006 and by UF IT, not by this laboratory. The laboratory will support a request for continued access where you are a co-author on a live manuscript, but cannot guarantee UF grants it.
 
 Offboarding checklist:
 
-1. All data of record deposited to SRA or EDI under a **laboratory-owned account, not a personal one**; code archived to Zenodo with a DOI. `/orange` is a working copy only and is never an acceptable sole location.
+1. All data of record deposited to SRA, EDI, or OBIS/GBIF as the data type requires, under a **laboratory-owned account, not a personal one**; code archived to Zenodo with a DOI. `/orange` is a working copy only and is never an acceptable sole location.
 2. All GitHub repositories transferred to the laboratory organization before the individual's account is deprovisioned.
 3. `renv.lock` and rendered outputs committed; final `renv::snapshot()` run.
 4. BioProject, BioSample, and SRA submissions reconciled and release dates confirmed.
@@ -169,7 +171,7 @@ This policy is reviewed annually and immediately upon any change to NIH or NSF d
 <li id="ref4">NIH Office of Extramural Research. <a href="https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/04/2026-pilot-data-management-and-sharing-plan-format-available">2026 Pilot Data Management and Sharing Plan Format Available</a>. NIH Extramural Nexus, 29 April 2026.</li>
 <li id="ref5">National Institutes of Health. <a href="https://grants.nih.gov/grants-process/write-application/forms-directory/data-management-and-sharing-plan-format-page">Data Management and Sharing Plan Format Page</a>. Last updated 15 April 2026.</li>
 <li id="ref6">National Institutes of Health. <a href="https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms">Data Management and Sharing Policy</a>.</li>
-<li id="ref7">National Institutes of Health. <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-047.html">2024 NIH Public Access Policy (NOT-OD-25-047)</a>. Released 17 December 2024; effective 31 December 2025.</li>
+<li id="ref7">National Institutes of Health. <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-047.html">2024 NIH Public Access Policy (NOT-OD-25-047)</a>. Released 17 December 2024; originally effective 31 December 2025, moved to 1 July 2025 by NOT-OD-25-101.</li>
 <li id="ref8">National Institutes of Health. <a href="https://grants.nih.gov/grants/policy/nihgps/HTML5/section_8/8.4.2_record_retention_and_access.htm">NIH Grants Policy Statement, Section 8.4.2: Record Retention and Access</a>. Revised March 2026.</li>
 <li id="ref9">National Institutes of Health. <a href="https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/gds">Genomic Data Sharing Policy</a>.</li>
 <li id="ref10">U.S. National Science Foundation. <a href="https://www.nsf.gov/policies/pappg/24-1">Proposal and Award Policies and Procedures Guide, NSF 24-1</a>. Effective 20 May 2024. See Chapter II.D.2.i(ii).</li>
@@ -203,7 +205,7 @@ This policy is reviewed annually and immediately upon any change to NIH or NSF d
 <li id="ref38">UFIT Research Computing. <a href="https://docs.rc.ufl.edu/quickstart/practical_storage/">Practical Storage Use</a>. University of Florida.</li>
 <li id="ref39">UFIT Research Computing. <a href="https://docs.rc.ufl.edu/services/tivoli_backup/">Tivoli Backup</a>. University of Florida.</li>
 <li id="ref40">UFIT Research Computing. <a href="https://docs.rc.ufl.edu/">UFIT Research Computing User Documentation</a>. University of Florida.</li>
-<li id="ref41">Office of Management and Budget. <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR4acc10e7e3b676f/section-200.334">2 CFR 200.334: Record retention requirements</a>. eCFR, last amended 16 July 2026.</li>
+<li id="ref41">Office of Management and Budget. <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR4acc10e7e3b676f/section-200.334">2 CFR 200.334: Record retention requirements</a>. eCFR; section last amended 22 April 2024 (89 FR 30136).</li>
 <li id="ref42">University of Florida, George A. Smathers Libraries. <a href="https://records.uflib.ufl.edu/record-retention/research-records-data/">Research Records and Data</a>. Records Management at UF. See GS1-SL Items 137 and 422 and GS4 Item 137.</li>
 <li id="ref43">University of Florida. <a href="https://policy.ufl.edu/policy/intellectual-property/">Intellectual Property Policy (Policy 14-006)</a>. See Section C.2.</li>
 <li id="ref44">University of Florida. <a href="https://policy.ufl.edu/policy/research-integrity/">UF Research Integrity Policy (Policy 14-004)</a>. Substantively amended 24 March 2026.</li>

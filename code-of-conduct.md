@@ -4,13 +4,15 @@ title: Laboratory Code of Conduct and Mentoring Compact
 permalink: /code-of-conduct/
 ---
 
-*Effective Date: July 2026 · Last reviewed: July 2026*
+*Effective Date: July 2026 · Last reviewed: August 2026*
 
 ---
 
 ## Purpose and Status of This Document
 
-This document covers everyone in the laboratory: the Principal Investigator and any other faculty, postdoctoral researchers, graduate students, undergraduate researchers, staff, visiting scholars, and field team members.
+**Laboratory member** means the Principal Investigator and any other faculty, postdoctoral researchers, graduate students, undergraduate researchers, staff (technical and administrative), and visiting scholars and visiting collaborators holding a UF appointment or a UF-approved visiting arrangement. Every policy in this suite uses that definition.
+
+It does not include Soiyou Adventures personnel, who are employed by Soiyou under Kenyan law, or external users under the [Equipment Access and Shared Resource Policy](/equipment-access/). Where a provision reaches those groups it says so expressly, and for Soiyou personnel the corresponding terms sit in the contract between this laboratory and Soiyou.
 
 ## Mentoring Philosophy
 
@@ -36,7 +38,7 @@ UF points STEM students to myIDP as a supplementary tool. Separately, NIH encour
 
 ### Undergraduate researchers
 
-Weekly hours, expected duration of involvement, and dissemination goals are set in writing at the start. Duties progress from supporting an existing project to leading one. **Every undergraduate completes responsible conduct of research instruction.**<sup>[7](#ref7)</sup>
+Weekly hours, expected duration of involvement, and dissemination goals are set in writing at the start. Duties progress from supporting an existing project to leading one. Responsible conduct of research instruction is completed as required by UF and by the sponsor supporting the work.<sup>[7](#ref7)</sup>
 
 ### Field team members
 
@@ -46,21 +48,21 @@ Field operations in Kenya are run by **Soiyou Adventures**, whose staff are empl
 
 The laboratory holds a standing lab meeting and a journal club, and the PI holds individual meetings with each member. Cadence is set at the start of each semester and posted. Scheduled meetings are not displaced by travel.
 
-**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline. During field seasons, coverage and response expectations are set explicitly in the pre-departure meeting. Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Field seasons are scheduled to fit within your appointment. Appointment FTE, workload limits, and any adjustment to them are set by UF Human Resources and the applicable collective bargaining agreement. If you believe your assigned work exceeds your appointment, raise it with UF HR or your union representative.
+**There is no expectation of after-hours or weekend response.** Messages sent outside working hours do not carry an implied deadline. During field seasons, coverage and response expectations are set explicitly in the pre-trip meeting described in the [Field Safety and Travel Policy](/field-safety/). Those expectations include a guaranteed rest day each week and uninterrupted sleep hours. Field seasons are scheduled to fit within your appointment. Appointment FTE, workload limits, and any adjustment to them are set by UF Human Resources and the applicable collective bargaining agreement. If you believe your assigned work exceeds your appointment, raise it with UF HR or your union representative.
 
 ## Hours, Leave, and Wellbeing
 
-Graduate assistant workload is governed by the collective bargaining agreement between the UF Board of Trustees and Graduate Assistants United. **A 0.50 FTE appointment means an average of no more than 20 hours per week; 0.33 FTE means no more than 13.3 hours; 0.25 FTE means no more than 10 hours.** The agreement also provides five days of paid personal leave per semester appointment and six weeks of unpaid parental or medical leave per twelve months, with continued University health premium contributions and the right to return to the same or a similar position.<sup>[25](#ref25),[26](#ref26)</sup>
-
-Graduate assistant workload, leave, and benefits are governed by the agreement between the UF Board of Trustees and Graduate Assistants United and by UF Human Resources. The most recent posted agreement is the 2021 to 2023 contract. Confirm your current entitlements with UF HR or your GAU representative; this laboratory does not set, interpret, or supplement those terms.<sup>[25](#ref25)</sup>
+Graduate assistant workload, leave, and benefits are governed by the agreement between the UF Board of Trustees and Graduate Assistants United, as amended, and by UF Human Resources. Appointment FTE and the hours it corresponds to, personal leave, and parental and medical leave are set there. The most recent posted agreement is the 2021 to 2023 contract, which has been amended several times since 2022.<sup>[25](#ref25),[26](#ref26)</sup> Confirm your current entitlements with UF HR or your GAU representative; this laboratory does not set, interpret, or supplement those terms.
 
 Beyond the contractual floor, standard working hours, weekends, and vacation are respected, and schedule autonomy is preferred over mandated hours.<sup>[5](#ref5),[24](#ref24)</sup>
 
 ### Working in person
 
-**Graduate students and postdoctoral researchers are expected to work in the laboratory rather than from home.** UF directed a full return to in-person work for employees on remote or hybrid arrangements in July 2025, with a deadline of 25 August 2025, and any exception requires **written approval from the Vice President of Human Resources** rather than an informal understanding with the PI.<sup>[28](#ref28),[29](#ref29)</sup>
+**Laboratory work is done in the laboratory.** UF directed a full return to in-person work for employees on remote or hybrid arrangements in July 2025, with a deadline of 25 August 2025, and any standing remote or hybrid arrangement requires **written approval from the Vice President of Human Resources** rather than an informal understanding with the PI.<sup>[28](#ref28),[29](#ref29)</sup>
 
 The laboratory's own reason is that in-person work supports collaboration, informal review of results before they reach a manuscript, and training of junior members.
+
+Within that, the schedule is worked out with the PI. Part-time students, members who commute from outside Gainesville, and members whose time is split with another appointment set their in-laboratory days at the start of each semester, and an occasional day worked off site by prior arrangement is expected and needs no justification. What the laboratory cannot grant is a standing remote or hybrid arrangement. That is UF HR's to approve, and whether a given pattern requires their approval is a question for UF HR rather than for this laboratory.
 
 Fieldwork, conferences, teaching, illness, and travel are not working from home. Remote arrangements are approved through UF's process. Where remote or hybrid work is sought as a **disability accommodation**, it goes to the UF ADA office, never through the PI's discretion. See Accommodations below.<sup>[28](#ref28)</sup>
 
@@ -90,7 +92,7 @@ We follow the Ecological Society of America Code of Ethics, whose provisions on 
 
 **Organizational climate is the strongest predictor of sexual harassment, and legal-compliance-driven training does not reduce it.**<sup>[11](#ref11)</sup>
 
-Fewer than half of surveyed researchers recalled ever encountering a code of conduct at a field site. The evidence and the resulting controls are set out in the [Field Safety and Travel Policy](/field-safety/), which requires a signed field code of conduct before every deployment.<sup>[13](#ref13)</sup>
+Fewer than half of surveyed researchers recalled ever encountering a code of conduct at a field site, and fewer than a quarter had worked at a site with a sexual harassment policy. Both figures come from the same survey. The evidence and the resulting controls are set out in the [Field Safety and Travel Policy](/field-safety/), which requires a signed field code of conduct before every deployment.<sup>[13](#ref13)</sup>
 
 **Protected categories.** UF Regulation 1.006 prohibits discrimination and harassment on the basis of race, creed, colour, religion, age, disability, sex, sexual orientation, gender identity and expression, marital status, national origin, political opinions or affiliations, genetic information, and veteran status.<sup>[17](#ref17)</sup>
 
@@ -108,13 +110,13 @@ Retaliation against anyone who raises a concern, in any of these channels or inf
 
 UF defines research misconduct as **fabrication, falsification, or plagiarism** in proposing, performing, or reviewing research, or in reporting research results, requiring a significant departure from accepted practices and proved by a preponderance of the evidence.<sup>[22](#ref22)</sup>
 
-**All faculty, staff, and students must promptly report observed or suspected research misconduct.** The named route is the UF Research Integrity Officer, Cassandra C. Farley, or Deputy Research Integrity Officer, Amber Moore, at RIO@research.ufl.edu or 352-392-9174. An anonymous alternative is the UF Compliance Hotline at 877-556-5356.<sup>[22](#ref22),[23](#ref23)</sup>
+**All faculty, staff, and students must promptly report observed or suspected research misconduct.** The named route is the UF Research Integrity Officer or Deputy Research Integrity Officer, at RIO@research.ufl.edu or 352-392-9174; current officeholders are listed on the UF RISC page. An anonymous alternative is the UF Compliance Hotline at 877-556-5356.<sup>[22](#ref22),[23](#ref23)</sup>
 
 Notebook discipline, version control, and data retention are governed by the [Data and Code Management Policy](/data-management/).
 
 ## Authorship and Credit
 
-Authorship is governed by the [Collaboration and Authorship Policy](/authorship/) and awarded on contribution. Consistent with ESA publication standards: authorship requires substantial contribution; the author list is not changed without the consent of those affected; all coauthors approve the final manuscript; work is not submitted to more than one journal at a time; and post-submission errors are corrected promptly.<sup>[10](#ref10),[5](#ref5)</sup>
+Authorship is governed by the [Collaboration and Authorship Policy](/authorship/) and awarded on contribution. Consistent with ESA publication standards: authorship requires substantial contribution; the author list is not changed without the consent of those affected, except through the escalation and reassignment pathway in the [Collaboration and Authorship Policy](/authorship/), which requires written notice, a stated period to resume work, and a determination by the Department Chair; all coauthors approve the final manuscript; work is not submitted to more than one journal at a time; and post-submission errors are corrected promptly.<sup>[10](#ref10),[5](#ref5)</sup>
 
 Instrument use in this laboratory is logged through the equipment scheduling application. Those records are one input among several and are never the sole basis for a contribution determination, since they record only bench time on Gainesville instruments and do not record analysis, writing, study design, or fieldwork. They are not used for employment, hours, or performance purposes.
 
@@ -142,7 +144,7 @@ This document is reviewed annually with the whole laboratory, and amended by agr
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-**Member Acknowledgment:** All laboratory members must read and acknowledge this document upon joining the laboratory and annually thereafter.
+**Member Acknowledgment:** All laboratory members, as defined above, must read and acknowledge this document upon joining the laboratory and annually thereafter.
 
 ---
 
@@ -165,15 +167,15 @@ This document is reviewed annually with the whole laboratory, and amended by agr
 <li id="ref14">Haelewaters D, Hofmann TA, Romero-Olivares AL. <a href="https://doi.org/10.1371/journal.pcbi.1009277">Ten simple rules for Global North researchers to stop perpetuating helicopter research in the Global South</a>. <em>PLOS Computational Biology</em>. 2021;17(8):e1009277.</li>
 <li id="ref15">University of Florida. <a href="https://titleix.ufl.edu/">Title IX Office</a>. titleix@ufl.edu, 352-273-1400.</li>
 <li id="ref16">University of Florida. <a href="https://ombuds.ufl.edu/">Office of the Ombuds</a>. 352-392-1308.</li>
-<li id="ref17">University of Florida. <a href="https://policy.ufl.edu/regulation/1-006/">Regulation 1.006: Non-Discrimination, Harassment, and Invasion of Privacy Policies</a>. Amended 28 March 2025.</li>
+<li id="ref17">University of Florida. <a href="https://policy.ufl.edu/regulation/1-006/">Regulation 1.006: Non-Discrimination/Harassment/Invasion of Privacy Policies</a>. Amended 28 March 2025.</li>
 <li id="ref18">University of Florida. <a href="https://policy.ufl.edu/regulation/1-0063/">Regulation 1.0063: Affirmative Action; Complaints and Appeal Procedures for Academic Personnel and TEAMS Staff Members</a>. Amended 28 March 2025.</li>
 <li id="ref19">University of Florida. <a href="https://policy.ufl.edu/regulation/4-012/">Regulation 4.012: Student Grievance Procedure</a>.</li>
 <li id="ref20">University of Florida Graduate School. <a href="https://gradcatalog.ufl.edu/graduate/regulations/">Graduate Academic Regulations</a>. 2025-2026 Graduate Catalog.</li>
 <li id="ref21">University of Florida. <a href="https://postdoc.aa.ufl.edu/about-us/">Office of Postdoctoral Affairs</a>. postdoc-affairs@ufl.edu.</li>
 <li id="ref22">University of Florida. <a href="https://policy.ufl.edu/policy/research-integrity/">UF Research Integrity Policy (Policy 14-004)</a>. Effective 27 August 2020; substantively amended 24 March 2026.</li>
-<li id="ref23">University of Florida Research Integrity, Security and Compliance. <a href="https://research.ufl.edu/compliance/research-integrity.html">Research Misconduct</a>. RIO@research.ufl.edu, 352-392-9174; UF Compliance Hotline 877-556-5356.</li>
+<li id="ref23">University of Florida Research Integrity, Security and Compliance. <a href="https://research.ufl.edu/services/risc/research-integrity">Research Misconduct</a>. RIO@research.ufl.edu, 352-392-9174; UF Compliance Hotline 877-556-5356.</li>
 <li id="ref24">Evans TM, Bira L, Beltran Gastelum J, Weiss LT, Vanderford NL. <a href="https://doi.org/10.1038/nbt.4089">Evidence for a mental health crisis in graduate education</a>. <em>Nature Biotechnology</em>. 2018;36(3):282-284.</li>
-<li id="ref25">University of Florida Human Resources. <a href="https://admin.hr.ufl.edu/compliance/employee-relations-and-ethics/union-negotiations/gau-collective-bargaining-agreement/">Agreement Between University of Florida Board of Trustees and Graduate Assistants United / United Faculty of Florida, 2021-2023</a>. See Articles 7.1, 8.2, 8.3 and 22.</li>
+<li id="ref25">University of Florida Human Resources. <a href="https://admin.hr.ufl.edu/compliance/employee-relations-and-ethics/union-negotiations/gau-collective-bargaining-agreement/">Agreement Between University of Florida Board of Trustees and Graduate Assistants United / United Faculty of Florida, 2021-2023</a>. See Articles 7.1, 8.2, 8.3 and 22, and the amendments to Articles 8 (11 October 2022), 10 (18 August 2022; 1 September 2023), 17 (27 October 2023) and 12 (MOU, 26 August 2024).</li>
 <li id="ref26">University of Florida Graduate School. <a href="https://grad.ufl.edu/work/ga">Graduate Assistants</a>.</li>
 <li id="ref27">University of Florida. <a href="https://policy.ufl.edu/policy/title-ix/">Title IX Policy (Policy 5-003)</a>. See Sections 5.5, 5.8 and 6.1.</li>
 <li id="ref28">University of Florida Human Resources. <a href="https://hr.ufl.edu/return-to-workplace/">Return to Workplace</a>. Full in-person work required by 25 August 2025 unless an extension or exception is approved in writing by the Vice President of Human Resources; disability accommodation requests route to the UF ADA office.</li>

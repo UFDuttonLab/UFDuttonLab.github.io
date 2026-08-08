@@ -4,13 +4,13 @@ title: Equipment Access and Shared Resource Policy
 permalink: /equipment-access/
 ---
 
-*Effective Date: July 2026 · Last reviewed: July 2026*
+*Effective Date: July 2026 · Last reviewed: August 2026*
 
 ---
 
 ## Purpose and Scope
 
-This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. The Service and Access Model and the Collaborative Model are defined in the [Collaboration and Authorship Policy](/authorship/), which states only their authorship consequences. This policy sets the access, training, and recording requirements for both.
+This policy sets out how laboratory instrumentation is accessed, scheduled, and credited, both by laboratory members and by external researchers. The Service and Access Model and the Collaborative Model are defined in the [Collaboration and Authorship Policy](/authorship/), which states their authorship consequences. This policy sets the access, training, and recording requirements for both.
 
 Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling robots, Oxford Nanopore MinION sequencers, TapeStation and Bioanalyzer, QuantStudio 3 and Chai qPCR instruments, Absolute Q digital PCR, thermocyclers, and centrifuges, together with our allocation on the UF HiPerGator cluster.
 
@@ -20,7 +20,7 @@ Covered instrumentation includes our Opentrons OT-2 and Flex liquid handling rob
 
 **Service and Access Model.** The external researcher operates independently using standard protocols, performs their own analysis, and receives no technical input from laboratory members beyond instrument training. They are responsible for their own consumables. Attribution is to the Acknowledgments section, naming the laboratory and the funding source for the instrument. **Authorship is not warranted.**
 
-**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of the resulting data. Laboratory members involved in the technical work **must be afforded the opportunity** to contribute to study design and data interpretation. Where they contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted and expected** under the four ICMJE criteria set out in the [Collaboration and Authorship Policy](/authorship/).
+**Collaborative Model.** The project requires the specific technical expertise of laboratory members, whether through protocol modification for novel sample types, custom hardware, new code, or interpretation of the resulting data. Laboratory members involved in the technical work **must be afforded the opportunity** to contribute to study design and data interpretation. Laboratory members who supply that expertise meet ICMJE criterion 1 and are prospective co-authors. They must be offered the opportunity to satisfy criteria #2 and #3, and co-authorship follows where all four criteria in the [Collaboration and Authorship Policy](/authorship/) are met.
 
 Where the model is unclear at the outset, the default is the Collaborative Model, and the parties revisit the question at the first data review.
 
@@ -28,7 +28,7 @@ Where the model is unclear at the outset, the default is the Collaborative Model
 
 1. **Enquiry** to the Principal Investigator describing the work, sample type, instrument required, approximate volume, and timeline.
 2. **Model determination** and a written record of which model applies, consumables responsibility, and the attribution or authorship expectation. Any agreement allocating data rights, intellectual property, confidentiality, or liability is executed by UF through Sponsored Programs or UF Innovate, not by this laboratory.
-3. **Compliance clearance.** Where samples originate outside the United States, the requirements of the [International Research Partnership Policy](/international-partnership/) must be satisfied before material arrives, including any Material Transfer Agreement. Where samples are biohazardous or of animal origin, the relevant institutional approvals must be in place.
+3. **Compliance clearance.** Where samples originate outside the United States, the external user provides, before material arrives, the source-country access permit or a written statement that none is required, any Material Transfer Agreement, and any import permit; UF Sponsored Programs and UF RISC confirm sufficiency. For Kenyan-origin material, the [International Research Partnership Policy](/international-partnership/) applies in full. Where samples are biohazardous or of animal origin, the relevant institutional approvals must be in place.
 4. **Training and certification** on the specific instrument, delivered by a certified laboratory member and recorded in the laboratory training register.
 5. **Scheduling account** created on the laboratory scheduling application.
 
@@ -83,7 +83,7 @@ This policy is reviewed annually and whenever new instrumentation is added to th
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-**Member Acknowledgment:** All laboratory members and certified external users must read and acknowledge this policy before first independent instrument use and annually thereafter.
+**Member Acknowledgment:** All laboratory members must read and acknowledge this policy before first independent instrument use and annually thereafter. The corresponding obligations for external users sit in their UF-executed agreement.
 
 ---
 

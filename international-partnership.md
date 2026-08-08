@@ -4,13 +4,13 @@ title: International Research Partnership and Compliance Policy
 permalink: /international-partnership/
 ---
 
-*Effective Date: July 2026 · Last reviewed: July 2026*
+*Effective Date: July 2026 · Last reviewed: August 2026*
 
 ---
 
 ## Purpose and Scope
 
-This policy governs all laboratory research conducted outside the United States, with particular reference to our long-term programme in Kenya's Mara River ecosystem. It applies to every laboratory member who collects, receives, transports, analyses, or publishes on material or data originating outside the United States, and to every collaborator working with us under that programme.
+This policy governs all laboratory research conducted outside the United States, with particular reference to our long-term programme in Kenya's Mara River ecosystem. It applies to every laboratory member who collects, receives, transports, analyses, or publishes on material or data originating outside the United States, and to every collaborator working with us under that programme. Where an external user brings Kenyan-origin material into the laboratory under the [Equipment Access and Shared Resource Policy](/equipment-access/), this policy applies to that material.
 
 ## Legal Framework
 
@@ -21,12 +21,12 @@ The United States is not a Party to the Nagoya Protocol. The obligations describ
 Kenya's operative instrument is the **Environmental Management and Co-ordination (Access to Biological Resources and Benefit Sharing) (No. 2) Regulations, 2025**, Legal Notice No. 68 of 2025, in force since **24 March 2025** and administered by the National Environment Management Authority (NEMA) as Competent National Authority. Legal Notice 68 replaced Legal Notice 19 of 2025, which came into force on 7 February 2025 and was revoked on 24 March 2025 by regulation 29 of Legal Notice 68. **Confirm the instrument currently in force with NEMA and UF RISC before relying on any citation, including a citation on this page.**<sup>[1](#ref1),[2](#ref2),[8](#ref8)</sup>
 
 * **All access requires a permit, including non-commercial academic access.** Applications under regulation 11 must be supported by evidence of Prior Informed Consent and Mutually Agreed Terms, a research clearance certificate, localities specified by GPS coordinates, and a Material Transfer Agreement where applicable.<sup>[1](#ref1)</sup>
-* **The access permit runs for one year, is not transferable, and is renewable once for one further year** (regulation 17). A multi-year research agreement does not substitute for the permit cycle. Permit expiry dates are tracked by the Principal Investigator and reviewed each January.<sup>[1](#ref1)</sup>
+* **The access permit runs for one year, is not transferable, and is renewable once for one further year** (regulation 17). A multi-year research agreement does not substitute for the permit cycle. Permit and licence expiry dates are tracked by the Principal Investigator, reviewed each January, and reviewed again no later than 60 days before any individual expiry date, so that the NACOSTI progress report can be lodged at least 30 days before expiry.<sup>[1](#ref1)</sup>
 * **No biological resource may leave Kenya without an executed Material Transfer Agreement** in the form of the Sixth Schedule, filed with the Authority. The exporter must declare the resource at the port of departure and produce a copy of the MTA. Breach is an offence under regulation 27, and regulation 28 applies the section 144 penalty where the Regulations prescribe no specific one.<sup>[1](#ref1)</sup>
 * **Deposition is a permit condition.** Duplicates and holotypes of collected genetic resources must be deposited with the Authority and other relevant stakeholders, and on export a holotype must be deposited with the entity granting the MTA or with a depository gazetted by the Authority.<sup>[1](#ref1)</sup>
 * **Kenyan citizens must be guaranteed reasonable access to collected biological resources, whether those resources are held in Kenya or abroad.** This is a standing condition on every access permit and it is a continuing obligation on material held in Gainesville. Section "Access to Held Material" below operationalises it.<sup>[1](#ref1)</sup>
 
-**CITES may apply to some taxa collected under this programme.** CITES Appendices were amended at CoP20 in Samarkand, with those amendments entering into effect on 5 March 2026. Members should also check the current text of Resolution Conf. 12.3 (Rev.), which governs simplified procedures for biological samples, against the CoP20 outcomes. Any pre-2026 CITES guidance in a laboratory protocol should be treated as stale. Before exporting material from any listed taxon, confirm requirements directly with the Kenya CITES Management Authority and with UF Research Integrity, Security and Compliance.<sup>[16](#ref16)</sup>
+**CITES may apply to some taxa collected under this programme.** CITES Appendices were amended at CoP20 in Samarkand, with those amendments entering into effect on 5 March 2026. Members should also check the current text of Resolution Conf. 12.3 (Rev. CoP20), which governs simplified procedures for biological samples, against the CoP20 outcomes. Any pre-2026 CITES guidance in a laboratory protocol should be treated as stale. Before exporting material from any listed taxon, confirm requirements directly with the Kenya CITES Management Authority and with UF Research Integrity, Security and Compliance.<sup>[16](#ref16)</sup>
 
 Our specimens are deposited at the **National Museums of Kenya**, the national repository under the National Museums and Heritage Act. Confirm with NEMA that NMK appears on its approved depository list for the purposes of regulation 21(5), since the ABS regulations designate depositories separately.<sup>[1](#ref1),[7](#ref7)</sup>
 
@@ -38,7 +38,7 @@ Research licensing through the **National Commission for Science, Technology and
 
 ## What the Kenyan Affiliation Obligates You to Disclose
 
-Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both may be disclosable on NSF Senior Personnel Documents and NIH Other Support. Disclosure determinations are made by UF Sponsored Programs and the UF research security office, not by this laboratory. Before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office.
+Holding a NACOSTI-mandated affiliation with a Kenyan host institution creates a **foreign institutional affiliation**, and in-kind support from that host (bench space, vehicles, staff time) is **foreign support**. Both may be disclosable on NSF Senior Personnel Documents and NIH Other Support. Disclosure determinations are made by UF Sponsored Programs and the UF research security office, not by this laboratory. Before any proposal submission, and at onboarding, members confirm their disclosures with UF Sponsored Programs and the UF research security office. NSF 26-200 additionally directs recipients to NSF Important Notice 149 for mandatory Research Security Training; confirm your training status with UF Sponsored Programs before any proposal submission.
 
 ## Digital Sequence Information
 
@@ -63,7 +63,7 @@ To operationalise the permit condition guaranteeing Kenyan citizens reasonable a
 
 **Authorship.** In-country collaborators who contribute to study design, implementation, data acquisition, analysis, or interpretation meet ICMJE criterion 1 and are treated as prospective **co-authors**, not acknowledgees. Data ownership and intellectual property are property relationships, handled through the MTA and benefit-sharing terms rather than through the author list; treating them as authorship triggers would be gift authorship under our own policy. This follows Article 4 of the TRUST Code and Rule 9 of the standing guidance on ending helicopter research, and is applied through the four ICMJE criteria in our [Collaboration and Authorship Policy](/authorship/). Where a collaborator meets the first criterion, they must be offered the opportunity to meet criteria #2 and #3. Failure to offer that opportunity is a policy violation.<sup>[17](#ref17),[18](#ref18),[21](#ref21)</sup>
 
-**Field staff.** Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company. Its staff are employed by Soiyou under Kenyan law, not by this laboratory or by UF, so their pay, insurance, and employment protections are Soiyou's to set. What this laboratory sets is the contract rate it agrees and the terms it asks for. TRUST Code Article 7 requires fair compensation of local support staff, and the contract rate is negotiated against that standard. Soiyou staff who contribute intellectually are co-authors on the same terms as anyone else; those who do not meet the criteria are named in contributor statements and credited by name in presentations.<sup>[17](#ref17)</sup>
+**Field staff.** Field camp and research operations in Kenya are run by **Soiyou Adventures**, a Kenyan company. Its staff are employed by Soiyou under Kenyan law, not by this laboratory or by UF, so their pay, insurance, and employment protections are Soiyou's to set. What this laboratory sets is the contract rate it agrees and the terms it asks for. TRUST Code Article 7 requires fair compensation of local support staff, and the contract rate is negotiated against that standard. Soiyou staff who contribute intellectually are co-authors on the same terms as anyone else; those who do not meet the criteria are acknowledged in the Acknowledgments section and credited by name in presentations, in each case with their consent, as required by the [Collaboration and Authorship Policy](/authorship/).<sup>[17](#ref17)</sup>
 
 **Agenda setting.** Research questions are co-developed.<sup>[18](#ref18),[19](#ref19)</sup>
 
@@ -99,7 +99,7 @@ This policy is reviewed annually, and immediately upon any amendment to Kenyan A
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-**Member Acknowledgment:** All laboratory members engaged in international research must read and acknowledge understanding of this policy before their first field deployment and annually thereafter.
+**Member Acknowledgment:** All laboratory members engaged in international research must read and acknowledge understanding of this policy before their first field deployment and before each subsequent field season.
 
 ---
 

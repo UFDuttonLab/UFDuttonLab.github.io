@@ -4,7 +4,9 @@ title: Policies
 permalink: /policies/
 ---
 
-Each policy carries an effective date and a last-reviewed date, cites its sources, and is reviewed at least annually.
+Each policy carries an effective date and a last-reviewed date, cites its sources, and is reviewed at least annually. Where UF, a funder, or Kenyan law already sets a rule, these policies point to it. They do not restate it and do not write a stricter laboratory-level version.
+
+*Index last reviewed: August 2026.*
 
 <style>
   /* Scoped to this page. */
@@ -28,4 +30,4 @@ Preparing a computational manuscript for submission: pinning package versions wi
 
 ---
 
-*Corrections may be submitted by anyone, including people outside the lab, by email to the PI.*
+*Corrections may be submitted by anyone, including people outside the lab, by email to the PI. Substantive amendments to the Laboratory Code of Conduct are made by agreement with the laboratory rather than by unilateral revision.*

@@ -4,26 +4,26 @@ title: Collaboration and Authorship Policy
 permalink: /authorship/
 ---
 
-*Effective Date: January 2026 · Last reviewed: July 2026*
+*Effective Date: January 2026 · Last reviewed: August 2026*
 
 ---
 
 ## Purpose and Scope
 
-This policy establishes standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members (faculty, postdoctoral researchers, graduate students, undergraduate students, visiting scholars, and technical staff) must adhere to these guidelines<sup>[1](#ref1),[3](#ref3)</sup>.<sup>[4](#ref4),[5](#ref5),[6](#ref6)</sup>.
+This policy establishes standards for determining authorship on all scholarly outputs from this laboratory, including peer-reviewed publications, conference presentations, preprints, datasets, and software. All laboratory members, as defined in the [Laboratory Code of Conduct](/code-of-conduct/), together with Soiyou Adventures personnel and other non-UF collaborators in respect of credit for work on laboratory outputs, must adhere to these guidelines<sup>[1](#ref1),[3](#ref3)</sup>.<sup>[4](#ref4),[5](#ref5),[6](#ref6)</sup>.
 
 [![Authorship Policy Flowchart](/img/authorshipflowchart.jpg)](/img/authorshipflowchart.jpg)
 *Click on the flowchart above to view it in full size.*
 
 ## Models of Engagement: Using Lab Resources
 
-When external researchers wish to use our laboratory's equipment (e.g., sequencing platforms, robotics, analytical instruments, computational resources), the relationship falls into one of two categories. **The specific model must be agreed upon prior to access.**
+When external researchers wish to use our laboratory's equipment (e.g., sequencing platforms, robotics, analytical instruments, computational resources), the relationship falls into one of two categories. **The specific model is agreed in writing before access is granted, not after data exist. Where the model is unclear at the outset, the default is the Collaborative Model. See the [Equipment Access and Shared Resource Policy](/equipment-access/).**
 
 ## 1. The Service & Access Model (Acknowledgment Only)
 * **Definition:** The collaborator requests access to equipment or resources but operates them independently.
 * **Requirements:**
     * **Independence:** The collaborator uses standard protocols and performs their own data analysis without technical input from our lab beyond instrument training.
-    * **Financials:** The collaborator is responsible for all consumables (reagents, kits, etc.). Any charge for instrument time would require a rate approved through UF Auxiliary Accounting; see the [Equipment Access and Shared Resource Policy](/equipment-access/).
+    * **Access, training, consumables, and any charge:** governed by the [Equipment Access and Shared Resource Policy](/equipment-access/).
     * **Attribution:** The Dutton Lab and the specific funding source for the equipment must be recognized in the **Acknowledgments** section of any resulting publications.
 * **Authorship Status:** Authorship is **not** warranted under this model.
 
@@ -32,7 +32,7 @@ When external researchers wish to use our laboratory's equipment (e.g., sequenci
 * **Requirements:**
     * **Intellectual Partnership:** Lab members who supply the required technical expertise are intellectual contributors to the research.
     * **Opportunity to Contribute:** Lab members involved in the technical work **must be afforded the opportunity** to contribute intellectually to the study design and data interpretation.
-* **Authorship Status:** If lab members contribute intellectually and participate in drafting or revising the manuscript, **co-authorship is warranted** and expected, consistent with ICMJE guidelines.
+* **Authorship Status:** Lab members who supply the required technical expertise meet ICMJE criterion 1 and are prospective co-authors. They must be offered the opportunity to satisfy criteria #2 and #3, and co-authorship follows where all four criteria in the Authorship Criteria section below are met. Failure to offer that opportunity is a violation of this policy.
 
 ## Core Principles
 
@@ -42,14 +42,14 @@ Authorship in this laboratory is governed by three principles: **merit-based att
 
 For projects operating under the **Collaborative Model**, this laboratory follows the International Committee of Medical Journal Editors (ICMJE) criteria, <sup>[1](#ref1),[11](#ref11)</sup>. To qualify as an author, an individual must meet **all four** of the following criteria:
 
-1. Substantial contributions to the conception or design of the work, or the acquisition, analysis, or interpretation of data;
-2. Drafting the manuscript or reviewing it critically for important intellectual content;
-3. Final approval of the version to be published; and
-4. Agreement to be accountable for all aspects of the work, ensuring that questions related to accuracy or integrity are appropriately investigated and resolved<sup>[1](#ref1),[11](#ref11)</sup>.
+1. Substantial contributions to the conception or design of the work; or the acquisition, analysis, or interpretation of data for the work; AND
+2. Drafting the work or reviewing it critically for important intellectual content; AND
+3. Final approval of the version to be published; AND
+4. Agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved<sup>[1](#ref1),[11](#ref11)</sup>.
 
 Individuals who do not meet all four criteria should be recognized in the Acknowledgments section rather than as authors<sup>[1](#ref1),[11](#ref11),[12](#ref12)</sup>.
 
-All individuals who meet the first criterion must be given the opportunity to participate in reviewing, drafting, and final approval of the manuscript<sup>[1](#ref1)</sup>.
+ICMJE provides that all individuals who meet the first criterion should have the opportunity to participate in reviewing, drafting, and final approval of the work; in this laboratory that opportunity must be offered<sup>[1](#ref1)</sup>.
 
 ## Contribution Roles and CRediT Taxonomy
 
@@ -62,7 +62,7 @@ The following authorship practices are prohibited:
 1. **Guest, gift, or honorary authorship:** Inclusion of individuals who have not made substantial intellectual contributions to enhance prestige, increase publication likelihood, or as professional courtesy<sup>[18](#ref18),[19](#ref19),[20](#ref20),[21](#ref21)</sup>.
 2. **Ghost authorship:** Intentional exclusion of individuals who have made substantial contributions, including appropriation of student or trainee work by faculty without proper attribution<sup>[20](#ref20),[22](#ref22),[23](#ref23),[39](#ref39)</sup>.
 3. **Coercive authorship:** Demanding authorship based **solely** on position, financial support, or the provision of equipment/resources, **without a corresponding intellectual contribution to the work**<sup>[24](#ref24)</sup>.
-4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools should be disclosed in the methods or acknowledgments<sup>[25](#ref25),[26](#ref26)</sup>.
+4. **AI Authorship:** Listing artificial intelligence tools (e.g., LLMs) as authors. Authorship requires human accountability; AI tools must be disclosed as set out in the [Artificial Intelligence Use Policy](/ai-policy/)<sup>[25](#ref25),[26](#ref26)</sup>.
 
 These practices breach this policy and ESA publication standards. They are not research misconduct under UF Policy 14-004 unless the conduct also involves fabrication, falsification, or plagiarism<sup>[18](#ref18),[19](#ref19),[20](#ref20),[24](#ref24)</sup>.
 
@@ -71,7 +71,7 @@ These practices breach this policy and ESA publication standards. They are not r
 In ecology and related fields, author order typically follows a first-last author emphasis (FLAE) convention<sup>[27](#ref27),[28](#ref28),[29](#ref29),[46](#ref46)</sup>.
 
 * **First Author:** The individual who contributed most substantially to the research, typically leading study design, data collection and analysis, and manuscript preparation<sup>[27](#ref27),[28](#ref28),[30](#ref30),[31](#ref31)</sup>.
-* **Last Author:** Generally the senior investigator or principal investigator who provided conceptual guidance, supervision, funding, and laboratory resources, and who bears ultimate responsibility for the integrity of the work<sup>[27](#ref27),[28](#ref28),[29](#ref29),[30](#ref30),[31](#ref31)</sup>.
+* **Last Author:** Generally the senior investigator or principal investigator who provided conceptual guidance, supervision, funding, and laboratory resources, and who, like every author, is accountable for all aspects of the work under criterion 4 above<sup>[27](#ref27),[28](#ref28),[29](#ref29),[30](#ref30),[31](#ref31)</sup>.
 * **Middle Authors:** Individuals who made specific, substantial contributions in areas such as methodology, data generation, analysis, or interpretation, typically listed in descending order of contribution<sup>[30](#ref30),[31](#ref31)</sup>.
 * **Corresponding Author:** Responsible for manuscript submission, managing revisions, ensuring all co-authors meet criteria and approve the final manuscript, and serving as the point of contact for post-publication inquiries<sup>[27](#ref27),[28](#ref28),[29](#ref29),[30](#ref30)</sup>. In this laboratory, the first author will serve as corresponding author unless the first author is unreachable, declines the role, or the journal requires an institutional contact<sup>[27](#ref27),[28](#ref28),[29](#ref29)</sup>.
 
@@ -86,9 +86,9 @@ Authorship must be discussed at the beginning of each project, before substantia
 Individuals who leave the laboratory before manuscript completion retain their right to authorship if they have met the ICMJE criteria through their contributions to date<sup>[6](#ref6),[36](#ref36)</sup>. However, the following expectations apply:
 
 1. **Communication:** Departing authors must provide updated contact information and remain responsive to communications regarding the manuscript.
-2. **Manuscript Review:** Departing authors must fulfill their obligation to review and approve the final manuscript (ICMJE criterion #3) within 2-4 weeks for initial drafts and 1-2 weeks for revisions.
+2. **Manuscript Review:** Departing authors must fulfill their obligation to review and approve the final manuscript (ICMJE criterion #3) within 2-4 weeks for initial drafts and 1-2 weeks for revisions. These periods are indicative, not disciplinary, and are extended on request; a request needs no reason and the laboratory does not ask for one.
 3. **Continued Contribution:** If substantial additional work is required after departure that changes the scope or conclusions of the study, authorship order may be re-evaluated in consultation with all contributors.
-4. **Opt-Out:** Any author may opt out of authorship for any reason by notifying the corresponding author in writing. If you would like a third party present or informed, the Department Chair, the UF Ombuds, and the Graduate School are available; that is your choice, not a requirement. Where someone opts out, their contributions are acknowledged in the Acknowledgments section. Soliciting an opt-out from someone you supervise is a violation of this policy.
+4. **Opt-Out:** Any author may opt out of authorship for any reason by notifying the corresponding author in writing. If you would like a third party present or informed, the Department Chair, the UF Ombuds, and the Graduate School are available; that is your choice, not a requirement. Where someone opts out, they are offered acknowledgment of their contributions in the Acknowledgments section and are named only if they consent. Declining acknowledgment as well as authorship is permitted and requires no reason. Soliciting an opt-out from someone you supervise is a violation of this policy.
 5. **Completion after departure:** Lead authors who leave the laboratory are expected to complete manuscript preparation within 6-12 months after departure, depending on the project's stage. Reassignment of lead authorship requires the written agreement of the original lead author or, failing agreement, a determination by the Department Chair. Written notice and a stated period to resume work must precede any proposal to reassign. That period pauses whenever the manuscript is awaiting comments from the Principal Investigator (who returns comments within four weeks), and is extended on request. A request for extension needs no reason, and the laboratory does not ask for one. Loss of lead authorship never removes co-authorship where criterion #1 is met, and the laboratory must offer the opportunity to satisfy criteria #2 and #3.
 
 ## Rights and Responsibilities of Trainees
@@ -113,20 +113,20 @@ Authorship on datasets, software packages, and other research products follows t
 
 1. **Data Papers:** Individuals who make substantial contributions to data collection, curation, quality control, and documentation may warrant authorship on data descriptor manuscripts.
 2. **Software and Code:** Authors of computational tools should include those who contributed substantially to design, implementation, testing, documentation, and ongoing maintenance.
-3. **Repositories:** Data and code deposited in repositories (e.g., NCBI, GitHub, Dryad) must name contributors in metadata and README files, even if formal authorship is not applicable.
+3. **Repositories:** Data and code deposited in repositories (NCBI SRA, EDI, Zenodo, and GitHub, per the [Data and Code Management Policy](/data-management/)) must name contributors in metadata and README files, even if formal authorship is not applicable.
 
 ## Collaborative and Multi-Institutional Projects
 
-For external collaborations, authorship agreements should be established at the outset and explicitly reference dispute resolution processes<sup>[4](#ref4),[5](#ref5),[8](#ref8)</sup>. Multi-institutional consortia should list individual authors who meet ICMJE criteria rather than the consortium name alone, although consortium names may be listed separately<sup>[25](#ref25)</sup>. Co-senior authorship ("these authors contributed equally") should be documented in the authorship agreement and indicated in the publication<sup>[27](#ref27),[28](#ref28)</sup>.
+For external collaborations, the written Authorship Agreement required above is established at the outset and explicitly references dispute resolution processes<sup>[4](#ref4),[5](#ref5),[8](#ref8)</sup>. Multi-institutional consortia should list individual authors who meet ICMJE criteria rather than the consortium name alone, although consortium names may be listed separately<sup>[25](#ref25)</sup>. Co-first authorship ("these authors contributed equally") and co-senior authorship ("these authors jointly supervised this work") are both permitted, are documented in the authorship agreement, and are indicated in the publication with the notation the journal uses<sup>[27](#ref27),[28](#ref28)</sup>.
 
 ## Use of Artificial Intelligence Tools
 
 AI use is governed by the [Artificial Intelligence Use Policy](/ai-policy/), which sets disclosure placement and permitted uses. In summary:
 
 1. **No AI Authorship:** AI tools cannot be listed as authors, as they cannot take responsibility for the work<sup>[25](#ref25),[26](#ref26)</sup>.
-2. **Disclosure Requirements:** The specific AI tools used, their version/date, and their application (e.g., "ChatGPT-4 was used to improve the clarity of the abstract") must be described in the Methods or Acknowledgments section<sup>[2](#ref2),[25](#ref25)</sup>.
+2. **Disclosure Requirements:** Placement is set by the [Artificial Intelligence Use Policy](/ai-policy/): AI applied to data analysis or research design is described in the Methods section, and in all cases a disclosure statement naming the tool, version or date, purpose, and extent of use appears in the Acknowledgments<sup>[2](#ref2),[25](#ref25)</sup>.
 3. **Author Responsibility:** Authors are responsible for all content, including AI-generated text, figures, or code. All AI outputs must be verified before submission<sup>[2](#ref2),[25](#ref25)</sup>.
-4. **Data Analysis:** AI tools used for data analysis should be described in the Methods section like any other analytical tool, with version numbers and parameters specified.
+4. **Data Analysis:** AI tools used for data analysis are described in the Methods section like any other analytical tool, with version numbers and parameters specified.
 
 ## Post-Publication Responsibilities and Corrections
 
@@ -145,7 +145,7 @@ Authorship disputes should first be resolved through direct discussion among the
 2. If mediation is unsuccessful, the matter may be referred to the **College Dean** or the **University Ombuds**.
 3. Where the Principal Investigator is a party to the dispute, the PI recuses and the decision rests with the **Department Chair** or a Chair-appointed senior faculty member with no involvement in the work, subject to the referral in step 2. The UF Ombuds is available at any stage and does not require the earlier steps to be exhausted first. The Research Integrity Officer is the route only where the allegation includes fabrication, falsification, or plagiarism.
 
-**Note:** Research misconduct means fabrication, falsification, or plagiarism. Authorship disputes, including guest, gift, and ghost authorship, follow the pathway above and are not research misconduct unless the conduct also involves fabrication, falsification, or plagiarism. Misconduct allegations are referred to **UF Research Integrity, Security & Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[4](#ref4),[5](#ref5),[22](#ref22),[43](#ref43)</sup>.
+**Note:** Research misconduct means fabrication, falsification, or plagiarism. Authorship disputes, including guest, gift, and ghost authorship, follow the pathway above and are not research misconduct unless the conduct also involves fabrication, falsification, or plagiarism. Misconduct allegations are referred to **UF Research Integrity, Security &amp; Compliance (RISC)** and the **Research Integrity Officer (RIO)**<sup>[4](#ref4),[5](#ref5),[22](#ref22),[43](#ref43)</sup>.
 
 ## Acknowledgments
 
@@ -153,7 +153,7 @@ Individuals who contributed to the research but do not meet all four ICMJE autho
 
 ## Compliance and Review
 
-This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Society of America guidelines<sup>[27](#ref27),[45](#ref45)</sup>, and UF research integrity standards. All laboratory members are required to read and acknowledge this policy upon joining and annually thereafter. This policy is reviewed annually. Violations may result in internal consequences and investigation under UF's Research Misconduct Policy where applicable.
+This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Society of America guidelines<sup>[27](#ref27),[45](#ref45)</sup>, and UF research integrity standards. All laboratory members are required to read and acknowledge this policy upon joining and annually thereafter. This policy is reviewed annually. Violations are handled within the laboratory and through the Dispute Resolution pathway above. They are referred to the UF Research Integrity Officer only where the conduct also involves fabrication, falsification, or plagiarism.
 
 ---
 
@@ -165,7 +165,9 @@ This policy aligns with ICMJE recommendations, CRediT taxonomy, Ecological Socie
 **Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-*All laboratory members must read, sign, and date an acknowledgment of this policy upon joining the laboratory and annually thereafter.*
+*All laboratory members must read and acknowledge this policy upon joining the laboratory and annually thereafter.*
+
+*Confirm by email, or sign a printed copy if you prefer.*
 
 ---
 
