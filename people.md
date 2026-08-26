@@ -12,12 +12,6 @@ Interested in joining the lab as an [Undergraduate](https://ufduttonlab.github.i
 Chris is an Assistant Professor at the University of Florida who leads the lab, specializing in environmental microbiology, ecology, and open source low-cost technologies. He earned his PhD in 2019 from the Department of Ecology and Evolutionary Biology at Yale University, a Master’s of Environmental Studies from Yale’s School of Forestry and Environmental Studies (2012), and a Bachelor’s degree in saxophone performance, music, and criminal justice from the prestigious School of Music at Indiana University Bloomington (1999). The Dutton Lab at the University of Florida explores how environmental and animal microbiomes shape ecosystems and alter health. Every initiative from the lab aims to make research and education more effective and inclusive, empowering students, scientists, and the broader public to engage with ecology and protect natural resources.
 
 # Postdoctoral Associates
-## Dr. Audrey Goeckner  
-
-![Audrey](img/audrey.jpg)
-
-Audrey joined the Dutton lab as a postdoctoral research associate in August 2024. She received her B.S. in environmental science from the University of South Florida in 2017 and her M.S in soil and water sciences from the University of Florida in 2020 working on carbon burial and greenhouse gas fluxes in stormwater ponds. Audrey received her PhD in soil, water, and ecosystem sciences in 2024 from the University of Florida working on the biogeochemistry and microbial ecology of stormwater ponds and their effects on streams that receive pond discharge. In the Dutton lab, Audrey focuses on environmental genomics, contributing to a variety of projects that explore the structure and function of microbial communities at terrestrial-aquatic interfaces, along river continua, and within lake ecosystems. As a freshwater ecosystem and microbial ecologist, Audrey wants to explore what microbial metabolic functions are associated to ecosystem scale fluxes and pools of carbon and nitrogen.
-
 ## Dr. Emily (Lee) Nonnamaker
 
 ![Lee](img/lee.jpg)
@@ -79,23 +73,11 @@ Cecilia is a third year undergraduate who joined the Dutton lab in Fall ‘25 to
 
 Maggie is a second year undergrad student who joined the Dutton lab in the spring of 2025. She is currently working towards a Biology degree to purse future health or veterinary studies. After assisting with the development of robotic python lures over the summer, she now contributes to several ongoing research projects within the lab, primarily aiding in DNA extraction and analysis processes.
 
-## Ryleigh Sperry
-
-![Ryleigh](img/ryleigh.jpg)
-
-Ryleigh joined the Dutton lab as an undergrad student in the summer of 2025. She is currently pursuing a degree in Wildlife, Ecology, and Conservation with a pre-professional focus with the goal of attending graduate school to obtain a doctorate in veterinary medicine. Ryleigh is interested in DNA extraction and sequencing in order to answer questions about animal behavior and health.
-
 ## Will Sophocles
 
 ![Will](img/will.jpg)
 
 Will joined the Dutton Lab as a rising sophomore in August 2025. He is pursuing a Bachelor of Science in Applied Biology with a minor in Environmental Science at the University of Florida. Since joining the lab, he has worked with peers to analyze DNA concentrations and prepare environmental samples, particularly those collected from Florida wetlands, to study the diversity and vast functions of microbial communities. As an aspiring physician, Will hopes to apply the research experience and laboratory skills he has gained in the Dutton Lab to his future career in medicine.
-
-## Sierra Mulholland
-
-![Sierra](img/sierra.jpeg)
-
-Sierra is a 4th year undergraduate studying public health and zoology. She joined the Dutton lab after taking his microbiome course through the biology Semester of Immersion program. She assists in DNA extraction and analysis, primarily with the Animal Kingdom samples, and is interested in learning more about microbiology for both animal and human health applications. 
 
 # Kenya Field Team
 
@@ -107,7 +89,27 @@ Geemi Paul has been part of our team since 2010, beginning as a volunteer sortin
 
 # Past Members
 
-Alesha Wallen 
+## Dr. Audrey Goeckner
+
+![Audrey](img/audrey.jpg)
+
+Audrey was a postdoctoral research associate in the Dutton lab from August 2024 to 2026. She received her B.S. in environmental science from the University of South Florida in 2017 and her M.S in soil and water sciences from the University of Florida in 2020, working on carbon burial and greenhouse gas fluxes in stormwater ponds. She received her PhD in soil, water, and ecosystem sciences in 2024 from the University of Florida, working on the biogeochemistry and microbial ecology of stormwater ponds and their effects on streams that receive pond discharge. In the Dutton lab, Audrey worked on environmental genomics, contributing to projects that explored the structure and function of microbial communities at terrestrial-aquatic interfaces, along river continua, and within lake ecosystems. As a freshwater ecosystem and microbial ecologist, she focused on the microbial metabolic functions associated with ecosystem scale fluxes and pools of carbon and nitrogen.
+
+## Ryleigh Sperry
+
+![Ryleigh](img/ryleigh.jpg)
+
+Ryleigh was an undergraduate researcher in the Dutton lab from the summer of 2025 to 2026. She worked toward a degree in Wildlife, Ecology, and Conservation with a pre-professional focus, with the goal of attending graduate school for a doctorate in veterinary medicine. In the lab, Ryleigh worked on DNA extraction and sequencing to answer questions about animal behavior and health.
+
+## Sierra Mulholland
+
+![Sierra](img/sierra.jpeg)
+
+Sierra was an undergraduate researcher in the Dutton lab until 2026, studying public health and zoology. She joined after taking Chris's microbiome course through the Biology Semester of Immersion program. In the lab, she carried out DNA extraction and analysis, primarily on the Animal Kingdom samples, with an interest in microbiology for both animal and human health applications.
+
+## Earlier members
+
+Alesha Wallen
 
 Faith Dunlap
 
