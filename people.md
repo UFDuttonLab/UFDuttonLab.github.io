@@ -79,6 +79,12 @@ Maggie is a second year undergrad student who joined the Dutton lab in the sprin
 
 Will joined the Dutton Lab as a rising sophomore in August 2025. He is pursuing a Bachelor of Science in Applied Biology with a minor in Environmental Science at the University of Florida. Since joining the lab, he has worked with peers to analyze DNA concentrations and prepare environmental samples, particularly those collected from Florida wetlands, to study the diversity and vast functions of microbial communities. As an aspiring physician, Will hopes to apply the research experience and laboratory skills he has gained in the Dutton Lab to his future career in medicine.
 
+## Pooja Khalil
+
+![Pooja](img/pooja.jpg)
+
+Pooja joined the Dutton Lab as a freshman in the spring of 2026. She is pursuing a combined degree at the University of Florida, majoring in Microbiology and Cell Science while working toward a Master of Public Health. Her interests lie at the intersection of environmental factors and human health, particularly how environmental conditions can influence disease and overall well-being. Through her work in the Dutton Lab, she hopes to gain valuable research and laboratory experience that will contribute to her future career as a physician.
+
 # Kenya Field Team
 
 ## Geemi Paul
