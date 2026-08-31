@@ -53,6 +53,14 @@ Suzanna joined the Dutton Lab as a part time MS student in Fall 2025. She works 
 
 Cameron graduated from the University of Florida with a B.S. in Zoology in 2026.  She joined the Dutton Lab as a Master’s student in Fall 2026.  She enjoys both lab and field work and hopes to combine them in her future career.  Cameron is interested in the connections between microbial ecology and the health and behavior of wildlife under human managed care.
 
+# Post-Baccalaureate Researchers
+
+## August Gerkin
+
+![August](img/august.jpg)
+
+August has been working in the Dutton Lab since the Spring semester of 2026 and recently graduated from the University of Florida with a BA in English. He has assisted with various projects in the lab and is currently in the Everglades helping with the robotic rabbits. This year, he hopes to gain more experience within the field of ecology and is excited to see where he goes next.
+
 # Undergrads
 
 ## Charlotte Levet Bourtayre
