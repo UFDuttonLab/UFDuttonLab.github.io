@@ -15,101 +15,137 @@
   --ink:#152622; --muted:#55605B; --mutedLight:#A8BDB4;
   --sans:'IBM Plex Sans',-apple-system,Segoe UI,Arial,sans-serif;
   --serif:'Source Serif 4',Georgia,serif;
+  --navh:52px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--light);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;scroll-padding-top:0}
+body{margin:0;background:var(--light);color:var(--ink);font-family:var(--sans);font-size:clamp(15px,1.9vh,18px);line-height:1.55;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--rust)}
 a:hover{text-decoration:none}
 
+/* one panel per screen */
+header.hero, section.band, div.part{
+  height:100dvh;min-height:100dvh;
+  scroll-snap-align:start;scroll-snap-stop:always;
+  display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:calc(var(--navh) + 2vh) 0 3vh;
+}
+footer{scroll-snap-align:start}
+
 /* nav */
-.nav{position:sticky;top:0;z-index:20;background:rgba(21,38,34,.96);backdrop-filter:blur(6px);border-bottom:1px solid #2b413a}
-.nav-in{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
-.nav a{color:#C7D7CE;text-decoration:none;font-size:14px;letter-spacing:.04em}
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;height:var(--navh);background:rgba(21,38,34,.94);backdrop-filter:blur(6px);border-bottom:1px solid #2b413a;display:flex;align-items:center}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;gap:16px;align-items:center;width:100%;overflow-x:auto;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{color:#C7D7CE;text-decoration:none;font-size:13px;letter-spacing:.04em;white-space:nowrap}
 .nav a:hover{color:var(--amber)}
-.nav .brand{color:var(--light);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-right:auto}
+.nav .brand{color:var(--light);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-right:auto;white-space:nowrap}
+
+/* progress rail */
+.rail{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:7px}
+.rail button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(21,38,34,.26);cursor:pointer;transition:background .2s,transform .2s}
+.rail button:hover{transform:scale(1.5)}
+.rail button[aria-current="true"]{background:var(--rust);transform:scale(1.5)}
+.rail.on-dark button{background:rgba(246,243,236,.3)}
+.rail.on-dark button[aria-current="true"]{background:var(--amber)}
 
 /* hero */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:var(--light);background:var(--dark)}
+.hero{color:var(--light);background:var(--dark);align-items:flex-end}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,38,34,.86) 0%,rgba(21,38,34,.42) 32%,rgba(21,38,34,.92) 100%)}
-.hero-in{position:relative;max-width:1180px;margin:0 auto;padding:120px 20px 72px;width:100%}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 18px}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,86px);line-height:1.05;margin:0 0 20px;max-width:16ch}
-.hero .lede{font-size:clamp(18px,2.4vw,27px);line-height:1.4;color:#C7D7CE;max-width:46ch;margin:0 0 36px}
-.byline{display:flex;flex-wrap:wrap;gap:6px 36px;font-size:16px}
+.hero-in{position:relative;max-width:1180px;margin:0 auto;padding:0 20px 8vh;width:100%}
+.eyebrow{font-size:clamp(11px,1.4vh,13px);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 14px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,8vh,86px);line-height:1.05;margin:0 0 18px;max-width:16ch}
+.hero .lede{font-size:clamp(17px,3vh,27px);line-height:1.35;color:#C7D7CE;max-width:46ch;margin:0 0 4vh}
+.byline{display:flex;flex-wrap:wrap;gap:6px 36px;font-size:clamp(14px,1.8vh,16px)}
 .byline b{font-weight:600}
 .byline span{color:#C7D7CE}
+.scrollcue{position:absolute;left:50%;bottom:2.5vh;transform:translateX(-50%);color:#C7D7CE;font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
 
 /* layout */
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-section.band{padding:84px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px;width:100%;max-height:100%}
 section.band.dark{background:var(--dark);color:var(--light)}
 section.band.dark .muted{color:var(--mutedLight)}
 section.band.tint{background:var(--light2)}
-h2.sec{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,52px);line-height:1.1;margin:0 0 10px;max-width:22ch}
-h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.15;margin:0 0 12px}
-p{margin:0 0 18px;max-width:72ch}
+h2.sec{font-family:var(--serif);font-weight:400;font-size:clamp(26px,5vh,50px);line-height:1.1;margin:0 0 10px;max-width:24ch}
+h3{font-family:var(--serif);font-weight:400;font-size:clamp(20px,3.2vh,33px);line-height:1.15;margin:0 0 10px}
+p{margin:0 0 14px;max-width:72ch}
 .muted{color:var(--muted)}
-.small{font-size:15px}
-.cite{font-size:14px;color:var(--muted);margin:10px 0 0}
+.small{font-size:clamp(14px,1.75vh,16px)}
+.cite{font-size:clamp(12px,1.5vh,14px);color:var(--muted);margin:10px 0 0;max-width:none}
 section.band.dark .cite{color:var(--mutedLight)}
 
 /* part divider */
-.part{position:relative;color:var(--light);background:var(--dark);min-height:52vh;display:flex;align-items:center}
+.part{color:var(--light);background:var(--dark)}
 .part img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .part .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,38,34,.95) 0%,rgba(21,38,34,.86) 55%,rgba(21,38,34,.64) 100%)}
-.part .wrap{position:relative;padding-top:64px;padding-bottom:64px}
-.part h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5.4vw,64px);line-height:1.05;margin:0 0 16px;max-width:18ch}
-.part p{color:#C7D7CE;font-size:clamp(17px,2vw,22px);max-width:52ch}
+.part .wrap{position:relative}
+.part h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,7vh,64px);line-height:1.05;margin:0 0 14px;max-width:18ch}
+.part p{color:#C7D7CE;font-size:clamp(16px,2.6vh,22px);max-width:52ch}
 
 /* blocks */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px;margin:28px 0 0}
-.stat .n{font-family:var(--sans);font-size:clamp(30px,4vw,44px);font-weight:600;line-height:1;color:var(--green);margin:0 0 8px;white-space:nowrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(14px,2.4vh,26px);margin:3vh 0 0}
+.stat .n{font-size:clamp(26px,4.6vh,44px);font-weight:600;line-height:1;color:var(--green);margin:0 0 6px;white-space:nowrap}
 section.band.dark .stat .n{color:var(--amber)}
-.stat p{font-size:16px;color:var(--muted);margin:0}
+.stat p{font-size:clamp(13px,1.75vh,16px);color:var(--muted);margin:0}
 section.band.dark .stat p{color:var(--mutedLight)}
-figure{margin:0}
-figure img{border-radius:10px}
-figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+figure{margin:0;min-width:0}
+figure img{border-radius:10px;max-height:56vh;width:auto;margin:0 auto}
+figcaption{font-size:clamp(12px,1.5vh,14px);color:var(--muted);margin-top:8px}
 section.band.dark figcaption{color:var(--mutedLight)}
-.fig-contain{background:#fff;border-radius:10px;padding:14px}
-.pull{border-left:4px solid var(--rust);padding:6px 0 6px 24px;margin:36px 0}
-.pull p{font-family:var(--serif);font-size:clamp(21px,2.8vw,30px);line-height:1.35;margin:0 0 10px}
-.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.photos img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.fig-contain{background:#fff;border-radius:10px;padding:12px;display:flex;justify-content:center}
+.fig-contain img{max-height:54vh;object-fit:contain}
+.pull{border-left:4px solid var(--rust);padding:4px 0 4px 22px;margin:3vh 0}
+.pull p{font-family:var(--serif);font-size:clamp(20px,4vh,30px);line-height:1.3;margin:0 0 8px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,20px)}
+.photos img{border-radius:10px;width:100%;max-height:42vh;aspect-ratio:4/3;object-fit:cover}
+.photos figure img{max-height:42vh}
 
 /* table */
-table{border-collapse:collapse;width:100%;font-size:16px;margin:24px 0 0}
-th{background:var(--dark);color:var(--light);text-align:left;font-weight:600;padding:12px 14px;font-size:15px}
-td{padding:12px 14px;border-bottom:1px solid #d9d3c5;vertical-align:top}
+table{border-collapse:collapse;width:100%;font-size:clamp(12px,1.72vh,16px);margin:2.4vh 0 0}
+th{background:var(--dark);color:var(--light);text-align:left;font-weight:600;padding:clamp(5px,1.1vh,12px) 14px}
+td{padding:clamp(5px,1.1vh,12px) 14px;border-bottom:1px solid #d9d3c5;vertical-align:top}
 tr:nth-child(even) td{background:rgba(0,0,0,.025)}
 td.num{white-space:nowrap;font-weight:600;color:var(--green)}
 
 /* press */
-.press{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:28px}
-.press a{display:block;background:var(--dark2);border-radius:10px;padding:18px 20px;text-decoration:none;color:var(--light);border:1px solid #2b413a}
+.press{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.6vh,16px);margin-top:3vh}
+.press a{display:block;background:var(--dark2);border-radius:10px;padding:clamp(10px,1.8vh,20px);text-decoration:none;color:var(--light);border:1px solid #2b413a}
 .press a:hover{border-color:var(--amber)}
-.press .outlet{font-weight:600;font-size:18px;margin:0 0 6px}
-.press .head{font-size:14px;color:var(--mutedLight);margin:0}
+.press .outlet{font-weight:600;font-size:clamp(14px,2vh,18px);margin:0 0 4px;max-width:none}
+.press .head{font-size:clamp(11px,1.5vh,14px);color:var(--mutedLight);margin:0;max-width:none}
 
 /* cta */
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:28px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:3vh}
 .contact a{color:var(--amber)}
-footer{background:#0E1A17;color:var(--mutedLight);padding:44px 0;font-size:14px}
+footer{background:#0E1A17;color:var(--mutedLight);padding:40px 0;font-size:14px}
 footer a{color:var(--amber)}
 
+.tightfig img{max-height:38vh}
+.grid2 .fig-contain img{max-height:50vh}
+.grid2 .stats{margin-top:0}
+
+.dense table{font-size:clamp(11px,1.6vh,15px)}
+.dense th,.dense td{padding:clamp(4px,.95vh,10px) 12px}
+
 @media (max-width:860px){
-  .grid2,.grid3,.grid4,.photos{grid-template-columns:1fr}
-  section.band{padding:56px 0}
-  .nav-in{font-size:13px}
+  html{scroll-snap-type:none}
+  header.hero, section.band, div.part{height:auto;min-height:auto;padding:52px 0;display:block;overflow:visible}
+  header.hero{min-height:88vh;display:flex}
+  div.part{min-height:46vh;display:flex}
+  .rail{display:none}
+  .grid2,.grid3,.grid4,.photos,.press{grid-template-columns:1fr}
+  figure img,.fig-contain img,.photos img{max-height:none}
   table{font-size:14px;table-layout:fixed}
   th,td{padding:9px 8px;overflow-wrap:anywhere}
   td.num{white-space:normal}
+  .hero-in{padding-bottom:6vh}
+}
+@media (max-width:1100px) and (min-width:861px){
+  .press{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
@@ -140,6 +176,7 @@ footer a{color:var(--amber)}
       <p style="margin:0"><b>Christopher Dutton and Amanda Subalusky</b></p>
       <span>Department of Biology, University of Florida</span>
     </div>
+    <p class="scrollcue">Scroll</p>
   </div>
 </header>
 
@@ -184,15 +221,27 @@ footer a{color:var(--amber)}
       </div>
     </div>
     <p class="cite">The research licence is Kenyan, the specimens are lodged at the National Museums of Kenya, and the occurrence records are published openly.</p>
+  </div>
+</section>
 
-    <h3 style="margin-top:56px">In the room</h3>
-    <div class="photos">
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">The collaboration in practice</p>
+    <h2 class="sec">In the room</h2>
+    <div class="photos" style="margin-top:3vh">
       <figure><img src="assets/image2.jpeg" alt="Researchers, county officers and a ranger outside a meeting venue in Narok"><figcaption>Basin stakeholder workshop, Narok, July 2023</figcaption></figure>
       <figure><img src="assets/image3.jpeg" alt="The team with Maasai Mara University staff and students in lab coats beneath the university entrance sign"><figcaption>Maasai Mara University, July 2026</figcaption></figure>
       <figure><img src="assets/image4.jpeg" alt="Four people around a table working through results on a laptop"><figcaption>Working through results with partners, April 2024</figcaption></figure>
     </div>
-    <h3 style="margin-top:40px">And in the field</h3>
-    <div class="photos">
+    <p class="cite">Photographs from the Dutton and Subalusky labs</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">The collaboration in practice</p>
+    <h2 class="sec">And in the field</h2>
+    <div class="photos" style="margin-top:3vh">
       <figure><img src="assets/image5.jpeg" alt="A catfish on a hand scale being weighed by the field crew"><figcaption>Working up the catch, June 2022</figcaption></figure>
       <figure><img src="assets/image6.jpeg" alt="The fish sampling crew on a rock shelf in the river"><figcaption>The fish sampling crew on the Mara, August 2023</figcaption></figure>
       <figure><img src="assets/image7.jpeg" alt="Field crew and their families on the riverbank with a ranger"><figcaption>The field crew and their families, July 2024</figcaption></figure>
@@ -217,7 +266,7 @@ footer a{color:var(--amber)}
   </div>
 </section>
 
-<section class="band tint" id="arc">
+<section class="band tint dense" id="arc">
   <div class="wrap">
     <h2 class="sec">The field campaigns behind this page, by the year they started</h2>
     <p class="muted">The camp was established in 2008. These threads run in parallel; the page follows them one at a time.</p>
@@ -297,7 +346,14 @@ footer a{color:var(--amber)}
       <figure><img src="assets/image12.jpeg" alt="The coring raft under tow on a wetland channel, papyrus and banana on the bank"><figcaption>Taking the cores: a raft floated on jerry cans, a hand-driven tube, and two thousand years of basin history in the mud underneath. Mara Wetland, Tanzania, August 2015.</figcaption></figure>
       <figure><img src="assets/image11.jpeg" alt="Two members of the crew driving a coring tube from the raft"></figure>
     </div>
-    <div class="grid2" style="margin-top:40px">
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Mara Wetland, Tanzania</p>
+    <h2 class="sec">What the cores say</h2>
+    <div class="grid2" style="margin-top:3vh">
       <figure class="fig-contain"><img src="assets/image13.png" alt="Human and cattle populations in Kenya and Tanzania since 1950 plotted against sediment accumulation in the Mara Wetland since 1900"></figure>
       <div>
         <p class="muted">Cores from the Mara Wetland in Tanzania, dated with lead-210 and radiocarbon, hold the whole basin's history.</p>
@@ -381,11 +437,18 @@ footer a{color:var(--amber)}
         <div class="stat"><p class="n">6–9%</p><p>of the soft-tissue carbon, nitrogen and phosphorus removed by birds; the rest stays in the river</p></div>
       </div>
     </div>
-    <figure style="margin-top:36px">
+    <p class="cite">Handler et al. 2021, <i>Ecosphere</i> 12:e03326, Fig 2. Scavenger nutrient removal: Subalusky et al. 2017, <i>PNAS</i> 114:7647&#8211;7652, Fig 2E.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Camera trap, 27 October 2012</p>
+    <h2 class="sec">What a mass drowning looks like from the bank</h2>
+    <figure style="margin-top:3vh">
       <a href="https://www.youtube.com/watch?v=G8pVC5JEZxA"><img src="assets/image19.jpeg" alt="Camera trap frame of a carcass pile with marabou storks and vultures feeding along the water"></a>
       <figcaption>What a mass drowning looks like from the bank: marabou storks and vultures working a carcass pile, 27 October 2012. <a href="https://www.youtube.com/watch?v=G8pVC5JEZxA">Watch the clip</a></figcaption>
     </figure>
-    <p class="cite">Handler et al. 2021, <i>Ecosphere</i> 12:e03326, Fig 2. Scavenger nutrient removal: Subalusky et al. 2017, <i>PNAS</i> 114:7647–7652, Fig 2E.</p>
   </div>
 </section>
 
@@ -435,7 +498,7 @@ footer a{color:var(--amber)}
   <div class="wrap">
     <p class="eyebrow" style="color:var(--rust)">Continuous record, December 2012 to February 2015</p>
     <h2 class="sec">The oxygen crashes, and the fish die</h2>
-    <figure class="fig-contain" style="margin-top:24px"><img src="assets/image25.png" alt="Continuous dissolved oxygen record at New Mara Bridge showing repeated crashes after flushing flows"></figure>
+    <figure class="fig-contain tightfig" style="margin-top:2vh"><img src="assets/image25.png" alt="Continuous dissolved oxygen record at New Mara Bridge showing repeated crashes after flushing flows"></figure>
     <div class="stats">
       <div class="stat"><p class="n">49</p><p>flushing flows dropped the river's oxygen in three years</p></div>
       <div class="stat"><p class="n">13</p><p>of those drove it below 2 mg per litre</p></div>
@@ -562,11 +625,19 @@ footer a{color:var(--amber)}
       <div><h3 style="font-size:22px">The Mau carries the dry season</h3><p class="muted small">The Amala and Nyangores are 13% of the catchment above Mara Mines but supply between 14% and 75% of mainstem low flows, and most of what arrives between July and October.</p></div>
       <div><h3 style="font-size:22px">Three dams proposed</h3><p class="muted small">Two on the Mau headwaters, one below Serengeti. The Reserve Flow is proposed at Q95, which is a drought flow. Attenuating peak flows would remove the flushing that keeps hippo pools liveable.</p></div>
     </div>
-    <div class="grid2" style="margin-top:36px">
+    <p class="cite">McClain, Subalusky et al. 2014, <i>Hydrological Sciences Journal</i> 59:801&#8211;819.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Where the pressure actually falls</p>
+    <h2 class="sec">Dry season, middle reaches, one shared water</h2>
+    <div class="grid2" style="margin-top:3vh">
       <figure><img src="assets/image32.jpeg" alt="A water extraction pump and pipe drawing from the Amala River"><figcaption>Water extraction from the Amala</figcaption></figure>
       <p class="muted">As of 2005, water use across the basin was under 2% of annual runoff. The pressure is concentrated in the dry season, in the middle reaches, where the lodges, the livestock and the wildlife draw on the same water at the same time of year.</p>
     </div>
-    <p class="cite">McClain, Subalusky et al. 2014, <i>Hydrological Sciences Journal</i> 59:801–819.</p>
+    <p class="cite">Basin water use estimate: McClain, Subalusky et al. 2014, <i>Hydrological Sciences Journal</i> 59:801&#8211;819.</p>
   </div>
 </section>
 
@@ -584,11 +655,18 @@ footer a{color:var(--amber)}
         <div class="stat"><p class="n">70,000</p><p>visitors in three months to the Mara River exhibit in Nairobi</p></div>
       </div>
     </div>
-    <figure style="margin-top:40px">
+    <p class="cite">Figures: JRS Biodiversity Foundation report, July 2026.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Nairobi, March 2026</p>
+    <h2 class="sec">Secrets of the Mara</h2>
+    <figure style="margin-top:2vh">
       <a href="https://jrsbiodiversity.org/secrets-of-the-mara-three-year-study-reveals-hidden-biodiversity-of-east-africas-mara-river/"><img src="assets/image34.png" alt="Ribbon cutting at the Secrets of the Mara exhibit, National Museums of Kenya"></a>
       <figcaption><a href="https://jrsbiodiversity.org/secrets-of-the-mara-three-year-study-reveals-hidden-biodiversity-of-east-africas-mara-river/">“Secrets of the Mara”: three years of basin biodiversity survey, opened as a public exhibit at the National Museums of Kenya</a>, March 2026. Photograph: National Museums of Kenya.</figcaption>
     </figure>
-    <p class="cite">Figures: JRS Biodiversity Foundation report, July 2026.</p>
   </div>
 </section>
 
@@ -682,5 +760,51 @@ footer a{color:var(--amber)}
   </div>
 </footer>
 
+
+<nav class="rail" id="rail" aria-label="Section navigation"></nav>
+<script>
+(function(){
+  var panels = Array.prototype.slice.call(document.querySelectorAll('header.hero, section.band, div.part, footer'));
+  var rail = document.getElementById('rail');
+  panels.forEach(function(p, i){
+    var b = document.createElement('button');
+    var h = p.querySelector('h1, h2');
+    b.type = 'button';
+    b.title = h ? h.textContent.trim().slice(0, 60) : 'Section ' + (i + 1);
+    b.setAttribute('aria-label', b.title);
+    b.addEventListener('click', function(){ p.scrollIntoView({behavior:'smooth'}); });
+    rail.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(rail.children);
+  var current = 0;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var i = panels.indexOf(e.target);
+      if (i < 0) return;
+      current = i;
+      dots.forEach(function(d, j){ d.setAttribute('aria-current', j === i ? 'true' : 'false'); });
+      var dark = e.target.classList.contains('dark') || e.target.classList.contains('part') ||
+                 e.target.classList.contains('hero') || e.target.tagName === 'FOOTER';
+      rail.classList.toggle('on-dark', dark);
+    });
+  }, {threshold: 0.55});
+  panels.forEach(function(p){ io.observe(p); });
+
+  function go(n){
+    var t = panels[Math.max(0, Math.min(panels.length - 1, current + n))];
+    if (t) t.scrollIntoView({behavior:'smooth'});
+  }
+  document.addEventListener('keydown', function(e){
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ' || e.key === 'ArrowRight'){ e.preventDefault(); go(1); }
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    else if (e.key === 'Home'){ e.preventDefault(); panels[0].scrollIntoView({behavior:'smooth'}); }
+    else if (e.key === 'End'){ e.preventDefault(); panels[panels.length-1].scrollIntoView({behavior:'smooth'}); }
+  });
+})();
+</script>
 </body>
 </html>
