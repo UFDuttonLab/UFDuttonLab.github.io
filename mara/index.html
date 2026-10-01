@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What the Mara River Carries | Dutton Lab, University of Florida</title>
+<meta name="description" content="Eighteen years of measurement on the Mara River: sediment sources, the wildebeest migration subsidy, hippo loading and oxygen crashes, the meta-gut, and what the monitoring costs to run.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#152622; --dark2:#20342E; --light:#F6F3EC; --light2:#EDE8DC;
+  --rust:#A44E1E; --amber:#E8A06B; --green:#1F4E46;
+  --ink:#152622; --muted:#55605B; --mutedLight:#A8BDB4;
+  --sans:'IBM Plex Sans',-apple-system,Segoe UI,Arial,sans-serif;
+  --serif:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--light);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--rust)}
+a:hover{text-decoration:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(21,38,34,.96);backdrop-filter:blur(6px);border-bottom:1px solid #2b413a}
+.nav-in{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.nav a{color:#C7D7CE;text-decoration:none;font-size:14px;letter-spacing:.04em}
+.nav a:hover{color:var(--amber)}
+.nav .brand{color:var(--light);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-right:auto}
+
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:var(--light);background:var(--dark)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,38,34,.86) 0%,rgba(21,38,34,.42) 32%,rgba(21,38,34,.92) 100%)}
+.hero-in{position:relative;max-width:1180px;margin:0 auto;padding:120px 20px 72px;width:100%}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin:0 0 18px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,86px);line-height:1.05;margin:0 0 20px;max-width:16ch}
+.hero .lede{font-size:clamp(18px,2.4vw,27px);line-height:1.4;color:#C7D7CE;max-width:46ch;margin:0 0 36px}
+.byline{display:flex;flex-wrap:wrap;gap:6px 36px;font-size:16px}
+.byline b{font-weight:600}
+.byline span{color:#C7D7CE}
+
+/* layout */
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section.band{padding:84px 0}
+section.band.dark{background:var(--dark);color:var(--light)}
+section.band.dark .muted{color:var(--mutedLight)}
+section.band.tint{background:var(--light2)}
+h2.sec{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,52px);line-height:1.1;margin:0 0 10px;max-width:22ch}
+h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,36px);line-height:1.15;margin:0 0 12px}
+p{margin:0 0 18px;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+.cite{font-size:14px;color:var(--muted);margin:10px 0 0}
+section.band.dark .cite{color:var(--mutedLight)}
+
+/* part divider */
+.part{position:relative;color:var(--light);background:var(--dark);min-height:52vh;display:flex;align-items:center}
+.part img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.part .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,38,34,.95) 0%,rgba(21,38,34,.86) 55%,rgba(21,38,34,.64) 100%)}
+.part .wrap{position:relative;padding-top:64px;padding-bottom:64px}
+.part h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5.4vw,64px);line-height:1.05;margin:0 0 16px;max-width:18ch}
+.part p{color:#C7D7CE;font-size:clamp(17px,2vw,22px);max-width:52ch}
+
+/* blocks */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px;margin:28px 0 0}
+.stat .n{font-family:var(--sans);font-size:clamp(30px,4vw,44px);font-weight:600;line-height:1;color:var(--green);margin:0 0 8px;white-space:nowrap}
+section.band.dark .stat .n{color:var(--amber)}
+.stat p{font-size:16px;color:var(--muted);margin:0}
+section.band.dark .stat p{color:var(--mutedLight)}
+figure{margin:0}
+figure img{border-radius:10px}
+figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+section.band.dark figcaption{color:var(--mutedLight)}
+.fig-contain{background:#fff;border-radius:10px;padding:14px}
+.pull{border-left:4px solid var(--rust);padding:6px 0 6px 24px;margin:36px 0}
+.pull p{font-family:var(--serif);font-size:clamp(21px,2.8vw,30px);line-height:1.35;margin:0 0 10px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.photos img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* table */
+table{border-collapse:collapse;width:100%;font-size:16px;margin:24px 0 0}
+th{background:var(--dark);color:var(--light);text-align:left;font-weight:600;padding:12px 14px;font-size:15px}
+td{padding:12px 14px;border-bottom:1px solid #d9d3c5;vertical-align:top}
+tr:nth-child(even) td{background:rgba(0,0,0,.025)}
+td.num{white-space:nowrap;font-weight:600;color:var(--green)}
+
+/* press */
+.press{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:28px}
+.press a{display:block;background:var(--dark2);border-radius:10px;padding:18px 20px;text-decoration:none;color:var(--light);border:1px solid #2b413a}
+.press a:hover{border-color:var(--amber)}
+.press .outlet{font-weight:600;font-size:18px;margin:0 0 6px}
+.press .head{font-size:14px;color:var(--mutedLight);margin:0}
+
+/* cta */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:28px}
+.contact a{color:var(--amber)}
+footer{background:#0E1A17;color:var(--mutedLight);padding:44px 0;font-size:14px}
+footer a{color:var(--amber)}
+
+@media (max-width:860px){
+  .grid2,.grid3,.grid4,.photos{grid-template-columns:1fr}
+  section.band{padding:56px 0}
+  .nav-in{font-size:13px}
+  table{font-size:14px;table-layout:fixed}
+  th,td{padding:9px 8px;overflow-wrap:anywhere}
+  td.num{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-in">
+  <span class="brand">The Mara River</span>
+  <a href="#work">The work</a>
+  <a href="#river">The river</a>
+  <a href="#sediment">Sediment</a>
+  <a href="#wildebeest">The migration</a>
+  <a href="#hippos">Hippos</a>
+  <a href="#metagut">Meta-gut</a>
+  <a href="#threads">Three threads</a>
+  <a href="#built">What is built</a>
+  <a href="#costs">Costs</a>
+  <a href="references.html">References</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <img src="assets/image1.jpeg" alt="Aerial view of the Mara River meandering through the open plains of the Maasai Mara">
+  <div class="scrim"></div>
+  <div class="hero-in">
+    <p class="eyebrow">Prepared for the Mara Ecosystem Investors Association</p>
+    <h1>What the Mara River Carries</h1>
+    <p class="lede">Eighteen years of measurement in one river, and what we are trying to build next.</p>
+    <div class="byline">
+      <p style="margin:0"><b>Christopher Dutton and Amanda Subalusky</b></p>
+      <span>Department of Biology, University of Florida</span>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="work">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Since 2008</p>
+    <h2 class="sec">How the work gets done</h2>
+    <p class="muted">Amanda and I have been working this river together since 2008. Almost nothing on this page was done by the two of us alone.</p>
+    <div class="grid3" style="margin-top:32px">
+      <div>
+        <h3>A permanent camp</h3>
+        <p class="muted small">Eighteen years in the same place. Two Kenyan staff, a lab tent, two Land Rovers. Run by Soiyou Adventures, whose staff manage the camp and the field operations.</p>
+      </div>
+      <div>
+        <h3>Under Kenyan authority</h3>
+        <p class="muted small">Current NACOSTI permits under a ten-year research agreement, with prior informed consent in place. Specimens are deposited at the National Museums of Kenya.</p>
+      </div>
+      <div>
+        <h3>Two labs, one river</h3>
+        <p class="muted small">Amanda's lab works on the food web and the migration. Mine works on biogeochemistry and microbiomes. Most of the papers behind this page carry both names.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="partners">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Eighteen years, none of it done alone</p>
+    <h2 class="sec">Who does this with us</h2>
+    <div class="grid3" style="margin-top:28px;align-items:start">
+      <div>
+        <h3 style="font-size:24px">In the basin</h3>
+        <p class="muted small">National Museums of Kenya · Maasai Mara University · University of Eldoret · The Mara Conservancy · Mara River Water Resource Users Association · Water Resources Authority · Narok and Transmara counties · NACOSTI · Soiyou Adventures</p>
+      </div>
+      <div>
+        <h3 style="font-size:24px">Research partners abroad</h3>
+        <p class="muted small">Cary Institute of Ecosystem Studies · Yale University · Michigan State University · University of Antwerp · IHE Delft · University of Groningen · British Geological Survey · Maynooth University</p>
+      </div>
+      <div>
+        <h3 style="font-size:24px">Funders and conservation partners</h3>
+        <p class="muted small">US National Science Foundation · JRS Biodiversity Foundation · WWF Kenya, Tanzania and UK</p>
+      </div>
+    </div>
+    <p class="cite">The research licence is Kenyan, the specimens are lodged at the National Museums of Kenya, and the occurrence records are published openly.</p>
+
+    <h3 style="margin-top:56px">In the room</h3>
+    <div class="photos">
+      <figure><img src="assets/image2.jpeg" alt="Researchers, county officers and a ranger outside a meeting venue in Narok"><figcaption>Basin stakeholder workshop, Narok, July 2023</figcaption></figure>
+      <figure><img src="assets/image3.jpeg" alt="The team with Maasai Mara University staff and students in lab coats beneath the university entrance sign"><figcaption>Maasai Mara University, July 2026</figcaption></figure>
+      <figure><img src="assets/image4.jpeg" alt="Four people around a table working through results on a laptop"><figcaption>Working through results with partners, April 2024</figcaption></figure>
+    </div>
+    <h3 style="margin-top:40px">And in the field</h3>
+    <div class="photos">
+      <figure><img src="assets/image5.jpeg" alt="A catfish on a hand scale being weighed by the field crew"><figcaption>Working up the catch, June 2022</figcaption></figure>
+      <figure><img src="assets/image6.jpeg" alt="The fish sampling crew on a rock shelf in the river"><figcaption>The fish sampling crew on the Mara, August 2023</figcaption></figure>
+      <figure><img src="assets/image7.jpeg" alt="Field crew and their families on the riverbank with a ranger"><figcaption>The field crew and their families, July 2024</figcaption></figure>
+    </div>
+    <p class="cite">Photographs from the Dutton and Subalusky labs</p>
+  </div>
+</section>
+
+<section class="band" id="river">
+  <div class="wrap">
+    <h2 class="sec">One perennial river, four very different catchments</h2>
+    <p class="muted">The Mara rises at about 2,900 m in the Mau Forest and reaches Lake Victoria at 1,130 m, across a basin of roughly 13,500 km².</p>
+    <div class="grid2" style="margin-top:28px">
+      <figure class="fig-contain"><img src="assets/image8.png" alt="Map of the Mara River basin showing the Upper Mara, Middle Mara, Talek and Nyangores sub-catchments and the gauging sites"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">1.1 m</p><p>people in the basin; over 60% rely on the river directly for domestic water</p></div>
+        <div class="stat"><p class="n">1.3 m</p><p>wildebeest on the migration route that crosses it</p></div>
+        <div class="stat"><p class="n">4,000+</p><p>hippos in the Kenyan reaches, at 36 per river kilometre the largest single population on the continent</p></div>
+      </div>
+    </div>
+    <p class="cite">Map: Dutton et al. 2018, <i>PLOS ONE</i> 13:e0192828, Fig 1. Basin area and population: Dutton et al. 2019, <i>Science of the Total Environment</i> 664:148–160. Hippo density: Schoelynck et al. 2019, <i>Science Advances</i> 5:eaav0395.</p>
+  </div>
+</section>
+
+<section class="band tint" id="arc">
+  <div class="wrap">
+    <h2 class="sec">The field campaigns behind this page, by the year they started</h2>
+    <p class="muted">The camp was established in 2008. These threads run in parallel; the page follows them one at a time.</p>
+    <table>
+      <tr><th>Years in the field</th><th>What we were measuring</th><th>Where</th></tr>
+      <tr><td class="num">2007–2012</td><td>Environmental flows: hydraulics, fish, invertebrates</td><td>Six sites, Kenya and Tanzania</td></tr>
+      <tr><td class="num">2009–2015</td><td>Fish kills; continuous oxygen record from Dec 2012</td><td>New Mara Bridge</td></tr>
+      <tr><td class="num">2010–2013</td><td>Scavenger camera traps and vulture telemetry</td><td>Two crossing sites</td></tr>
+      <tr><td class="num">2011</td><td>Sediment fingerprinting; first gauged discharge</td><td>Emarti, Talek, New Mara Bridge</td></tr>
+      <tr><td class="num">2011–2014</td><td>Continuous stage and turbidity record</td><td>Emarti and New Mara Bridge</td></tr>
+      <tr><td class="num">2011–2018</td><td>Mass drowning surveys; carcass and bone experiments</td><td>Twelve crossing sites</td></tr>
+      <tr><td class="num">2012</td><td>Hippo loading model and captive mass balance</td><td>Mara and Talek; Milwaukee County Zoo</td></tr>
+      <tr><td class="num">Feb 2014</td><td>Silicon mass balance</td><td>Ten mainstem sites and one hippo pool</td></tr>
+      <tr><td class="num">2014–2017</td><td>Seventeen hippo pools; the Hippo Subsidy Index</td><td>Mara, Talek, Olare Orok, Ntiakntiak</td></tr>
+      <tr><td class="num">Aug 2015</td><td>Sediment cores covering 2,000 years</td><td>Mara Wetland, Tanzania</td></tr>
+      <tr><td class="num">Jul 2016–Oct 2017</td><td>Microbiome surveys and the meta-gut experiment</td><td>Twenty pools, then four in detail</td></tr>
+      <tr><td class="num">2023–2026</td><td>Fish telemetry and basin biodiversity survey</td><td>Mara River, Kenya</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- PART ONE -->
+<div class="part" id="sediment">
+  <img src="assets/image9.jpeg" alt="A giraffe standing on the bank above the Mara River">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <p class="eyebrow">Part one · 2011 to 2015</p>
+    <h2>What the land sends down</h2>
+    <p>Where the river's sediment actually comes from, and when that changed.</p>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Fieldwork 2011</p>
+    <h2 class="sec">Where the mud comes from</h2>
+    <p class="muted">We built chemical fingerprints for each sub-catchment from the elemental composition of its soils, then matched the suspended sediment arriving at the Kenya–Tanzania border back to those sources.</p>
+    <div class="stats">
+      <div class="stat"><p class="n">51%</p><p>from the Talek, which carried only 7% of the flow</p></div>
+      <div class="stat"><p class="n">34%</p><p>from the Upper Mara and the Mau Forest</p></div>
+      <div class="stat"><p class="n">5%</p><p>hippo dung, the first time anyone had fingerprinted wildlife waste as a source of river sediment</p></div>
+    </div>
+    <p class="cite">Dutton, Anisfeld &amp; Ernstberger 2013, <i>Journal of Soils and Sediments</i> 13:1708–1723. These shares are for three months of 2011 at New Mara Bridge; the wetland cores below integrate decades and give the Talek a smaller long-term share.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Fieldwork 2011 to 2014</p>
+    <h2 class="sec">Three and a half years of continuous gauging</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image10.png" alt="Suspended sediment flux at Emarti and New Mara Bridge over the gauged record"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">220</p><p>tonnes of sediment per day leaving the forested Upper Mara at Emarti</p></div>
+        <div class="stat"><p class="n">710</p><p>tonnes per day at the border, 126 km downstream</p></div>
+        <div class="stat"><p class="n">3.5×</p><p>flashier at the border than upstream, and rising every year of the record</p></div>
+      </div>
+    </div>
+    <p class="cite">Dutton et al. 2018, <i>PLOS ONE</i> 13:e0192828, Fig 7.</p>
+  </div>
+</section>
+
+<section class="band dark">
+  <div class="wrap">
+    <div class="pull" style="border-color:var(--amber)">
+      <p>Two-thirds of the river's sediment comes from the flat, semi-arid, heavily grazed country below the forest.</p>
+    </div>
+    <p class="muted">That is contrary to the accepted view that deforestation in the Mau is responsible for most of the load. The Upper Mara is half the size of the Middle Mara and Talek catchment and receives twice the rainfall, yet the two yield sediment at the same rate per square kilometre.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Cores taken August 2015</p>
+    <h2 class="sec">Two thousand years of the basin, read from the wetland</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure><img src="assets/image12.jpeg" alt="The coring raft under tow on a wetland channel, papyrus and banana on the bank"><figcaption>Taking the cores: a raft floated on jerry cans, a hand-driven tube, and two thousand years of basin history in the mud underneath. Mara Wetland, Tanzania, August 2015.</figcaption></figure>
+      <figure><img src="assets/image11.jpeg" alt="Two members of the crew driving a coring tube from the raft"></figure>
+    </div>
+    <div class="grid2" style="margin-top:40px">
+      <figure class="fig-contain"><img src="assets/image13.png" alt="Human and cattle populations in Kenya and Tanzania since 1950 plotted against sediment accumulation in the Mara Wetland since 1900"></figure>
+      <div>
+        <p class="muted">Cores from the Mara Wetland in Tanzania, dated with lead-210 and radiocarbon, hold the whole basin's history.</p>
+        <p><b>The Talek's share doubled</b>, from under 10% of the wetland's sediment in the 1970s to about 20% in recent years.</p>
+        <p><b>Mercury reached 2.5 times</b> its historic background in the 1960s, then fell after 1984.</p>
+        <p><b>Nitrogen isotopes shifted</b> from the 1960s, the signature of added human and agricultural nitrogen.</p>
+      </div>
+    </div>
+    <p class="cite">Dutton et al. 2019, <i>Science of the Total Environment</i> 664:148–160, Fig 7.</p>
+  </div>
+</section>
+
+<!-- PART TWO -->
+<div class="part" id="wildebeest">
+  <img src="assets/image14.jpeg" alt="Wildebeest carcasses piled on the bank of the Mara River after a mass drowning">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <p class="eyebrow">Part two · 2010 to 2018</p>
+    <h2>What the migration leaves behind</h2>
+    <p>For the weeks the carcasses are in the water, they deliver more nitrogen per day than all four thousand hippos combined.</p>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Field surveys 2011 to 2015</p>
+    <h2 class="sec">Counting the drownings, then following the carbon</h2>
+    <p class="muted">Mass drownings of more than 100 animals happened in at least 13 of 15 years. We counted them, weighed carcasses, ran decomposition experiments and traced the nutrients into fish.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">6,250</p><p>carcasses a year, on average, about 0.5% of the herd</p></div>
+        <div class="stat"><p class="n">1,096 t</p><p>of biomass a year, carrying 107 t carbon, 25 t nitrogen, 13 t phosphorus</p></div>
+        <div class="stat"><p class="n">34–50%</p><p>of what fish were eating, while carcasses were in the river</p></div>
+      </div>
+      <figure class="fig-contain"><img src="assets/image15.png" alt="Annual wildebeest drowning counts and the resulting carbon, nitrogen and phosphorus inputs"></figure>
+    </div>
+    <p class="cite">Subalusky, Dutton, Rosi &amp; Post 2017, <i>PNAS</i> 114:7647–7652, Fig 3.</p>
+  </div>
+</section>
+
+<section class="band dark">
+  <div class="wrap">
+    <div class="grid2">
+      <figure><img src="assets/image16.jpeg" alt="Wildebeest drowning at a crossing, animals in the current below the bank"></figure>
+      <div>
+        <div class="pull" style="border-color:var(--amber)">
+          <p>Every year the migration puts about ten blue whales' worth of carcass into a river that averages 12.5 cubic metres per second.</p>
+        </div>
+        <p class="muted">Per metre of channel that is nearly four times the mean spawning biomass of Pacific salmon runs in British Columbia. Mass drownings were probably common in rivers worldwide; they have declined as the great migrations were lost and people settled the banks.</p>
+      </div>
+    </div>
+    <p class="cite">Subalusky, Dutton, Rosi &amp; Post 2017, <i>PNAS</i> 114:7647–7652 · Photo: Chris Dutton</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Experiments 2012 to 2018</p>
+    <h2 class="sec">The flesh is gone in weeks. The bones run for decades.</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image17.jpeg" alt="Decomposition experiment showing mass loss from wildebeest soft tissue and bone over time"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">95%</p><p>of a carcass's phosphorus is locked in the skeleton</p></div>
+        <div class="stat"><p class="n">80+ yr</p><p>for the recalcitrant fraction of a bone to break down; the labile part goes in about four months</p></div>
+        <div class="stat"><p class="n">5,100 t</p><p>of wildebeest bone standing in the channel at any moment, feeding biofilm that supplies about a quarter of fish tissue</p></div>
+      </div>
+    </div>
+    <p class="cite">Subalusky et al. 2020, <i>Frontiers in Ecology and Evolution</i> 8:31, Fig 2.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Camera traps and vulture telemetry, 2010 to 2013</p>
+    <h2 class="sec">The birds cannot keep up</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image18.jpeg" alt="Scavenger assemblage at carcasses over time from camera trap records"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">1.6 : 1</p><p>vultures per carcass at a mass drowning, against 105 : 1 for a single carcass on land</p></div>
+        <div class="stat"><p class="n">30–34%</p><p>marabou storks, which are only 2–4% of birds at a land carcass</p></div>
+        <div class="stat"><p class="n">6–9%</p><p>of the soft-tissue carbon, nitrogen and phosphorus removed by birds; the rest stays in the river</p></div>
+      </div>
+    </div>
+    <figure style="margin-top:36px">
+      <a href="https://www.youtube.com/watch?v=G8pVC5JEZxA"><img src="assets/image19.jpeg" alt="Camera trap frame of a carcass pile with marabou storks and vultures feeding along the water"></a>
+      <figcaption>What a mass drowning looks like from the bank: marabou storks and vultures working a carcass pile, 27 October 2012. <a href="https://www.youtube.com/watch?v=G8pVC5JEZxA">Watch the clip</a></figcaption>
+    </figure>
+    <p class="cite">Handler et al. 2021, <i>Ecosphere</i> 12:e03326, Fig 2. Scavenger nutrient removal: Subalusky et al. 2017, <i>PNAS</i> 114:7647–7652, Fig 2E.</p>
+  </div>
+</section>
+
+<!-- PART THREE -->
+<div class="part" id="hippos">
+  <img src="assets/image20.jpeg" alt="Hippos crowded into a pool on the Mara River">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <p class="eyebrow">Part three · 2012 to 2017</p>
+    <h2>What the hippos put in</h2>
+    <p>Four thousand animals, a hundred and seventy pools, and a river that goes anoxic without any pollution at all.</p>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Loading model, fieldwork 2012</p>
+    <h2 class="sec">The hippopotamus conveyor belt</h2>
+    <p class="muted">Hippos graze on land at night and return to the water by day. An average animal puts about 8.7 kg of wet dung into the river every day. Across the population that is 36,200 kg a day, or 8,563 kg of dry matter.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">670%</p><p>of the coarse organic matter the entire upstream catchment delivers</p></div>
+        <div class="stat"><p class="n">27–29%</p><p>of the nitrogen and phosphorus load, from one species</p></div>
+        <div class="stat"><p class="n">260–1,563</p><p>hectares of grassland production moved into the river each year</p></div>
+      </div>
+      <figure class="fig-contain"><img src="assets/image21.png" alt="Diagram of the hippopotamus conveyor belt moving grassland carbon and nutrients into the river"><figcaption>The population inside the reserve rose 1,500% between 1959 and 2006.</figcaption></figure>
+    </div>
+    <p class="cite">Subalusky, Dutton, Rosi-Marshall &amp; Post 2015, <i>Freshwater Biology</i> 60:512–525, Fig 2.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">The captive trial behind the loading model</p>
+    <h2 class="sec">One pool, twenty-four hours, two hippos</h2>
+    <div class="photos" style="margin-top:24px">
+      <figure><img src="assets/image22.jpeg" alt="Captive hippo pool drained and clean before the trial"><figcaption>Before</figcaption></figure>
+      <figure><img src="assets/image23.jpeg" alt="Two hippos in the trial pool"><figcaption>Hippos in</figcaption></figure>
+      <figure><img src="assets/image24.jpeg" alt="The same pool after twenty-four hours, water heavily loaded with dung"><figcaption>Twenty-four hours later</figcaption></figure>
+    </div>
+    <p class="muted" style="margin-top:24px">To put a number on what one animal delivers, we ran a mass balance in a captive pool: drain it through a sieve, weigh everything that came out, refill, let the animals in, and measure the water again a day later. That is where the 8.7 kg per hippo per day comes from.</p>
+    <p class="cite">Captive feeding trial reported in Subalusky, Dutton, Rosi-Marshall &amp; Post 2015, <i>Freshwater Biology</i> 60:512–525.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Continuous record, December 2012 to February 2015</p>
+    <h2 class="sec">The oxygen crashes, and the fish die</h2>
+    <figure class="fig-contain" style="margin-top:24px"><img src="assets/image25.png" alt="Continuous dissolved oxygen record at New Mara Bridge showing repeated crashes after flushing flows"></figure>
+    <div class="stats">
+      <div class="stat"><p class="n">49</p><p>flushing flows dropped the river's oxygen in three years</p></div>
+      <div class="stat"><p class="n">13</p><p>of those drove it below 2 mg per litre</p></div>
+      <div class="stat"><p class="n">9</p><p>fish kills documented over five years</p></div>
+      <div class="stat"><p class="n">0.34</p><p>mg per litre, the low point on 10 December 2013, held under 1 for 210 minutes</p></div>
+    </div>
+    <p class="cite">Dutton et al. 2018, <i>Nature Communications</i> 9:1951, Fig 1.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Seventeen pools surveyed, 2014 to 2017</p>
+    <h2 class="sec">It is not how many hippos. It is how long the water sits.</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image26.png" alt="Hippo Subsidy Index against pool chemistry across seventeen pools"></figure>
+      <div>
+        <p><b>The index.</b> Hippo number multiplied by water residence time. It predicts nitrogen, phosphorus, carbon, oxygen demand and both greenhouse gases.</p>
+        <p><b>Hippo number alone.</b> Predicted none of them. A pool with forty hippos and fast throughflow stays clean; one with twenty and slow water does not.</p>
+        <p><b>Two states.</b> Pools sit in one of two conditions, oxic or anoxic. Three of the four high-index pools crossed over within two weeks of a flush.</p>
+      </div>
+    </div>
+    <p class="cite">Dutton et al. 2021, <i>Ecosystems</i> 24:284–300, Fig 2.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Bottom water in high-subsidy pools, August to September 2017</p>
+    <h2 class="sec">What is actually in the bottom of a hippo pool</h2>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <p>Total ammonia nitrogen above 13 mg N per litre, past the level known to impair aquatic organisms.</p>
+        <p>Oxygen demand in the range of untreated domestic sewage, though orders of magnitude below a livestock waste lagoon.</p>
+        <p>Methane among the highest ever reported for any open water body, about 435 micromoles per litre, against 37 for the highest previously recorded ponds.</p>
+        <p class="muted">Each flushing flow resets the pool. Between flows it slides back toward anoxia.</p>
+      </div>
+      <figure class="fig-contain"><img src="assets/image27.png" alt="Bottom water chemistry of high-subsidy hippo pools compared with reference waters"></figure>
+    </div>
+    <p class="cite">Dutton et al. 2021, <i>Ecosystems</i> 24:284–300, Fig 4.</p>
+  </div>
+</section>
+
+<section class="band dark">
+  <div class="wrap">
+    <p class="eyebrow">The management conclusion</p>
+    <div class="pull" style="border-color:var(--amber)">
+      <p>“To maintain good water quality in river systems with hippos, maintaining the natural flow regime, for example, by minimizing hydrologic alterations by storage dams and excessive water abstraction, should be considered more important than regulating the size of the hippo population.”</p>
+    </div>
+    <p class="cite">Dutton, Subalusky, Hamilton, Bayer, Njoroge, Rosi &amp; Post 2021, <i>Ecosystems</i> 24:284–300.</p>
+  </div>
+</section>
+
+<!-- PART FOUR -->
+<div class="part" id="metagut">
+  <img src="assets/image28.jpeg" alt="Hippos in the Ngerende pool on the Mara River">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <p class="eyebrow">Part four · 2016 to 2017</p>
+    <h2>The river as a gut</h2>
+    <p>Hippos do not only load carbon and nutrients. They load a working microbial community that keeps functioning outside the animal.</p>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Sequencing surveys July 2016 and August to October 2017</p>
+    <h2 class="sec">The meta-gut</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image29.png" alt="Shared active microbial taxa between hippo gut and pool sediment compared with upstream reference sites"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">87</p><p>actively functioning microbial taxa shared between the hippo gut and the pool bottom, and absent immediately upstream</p></div>
+        <div class="stat"><p class="n">30%</p><p>of the pool's active microbial community derived from hippo dung, just before a flushing event</p></div>
+        <div class="stat"><p class="n">RNA</p><p>not DNA, so these are organisms alive and working, not dead cells washed in with the dung</p></div>
+      </div>
+    </div>
+    <p class="cite">Dutton et al. 2021, <i>Scientific Reports</i> 11:23117, Fig 1.</p>
+  </div>
+</section>
+
+<!-- PART FIVE -->
+<div class="part" id="threads">
+  <img src="assets/image30.jpeg" alt="Elephants drinking at a water pan in dry grassland">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <p class="eyebrow">Part five · running alongside, in the same years</p>
+    <h2>Three more threads from the same river</h2>
+    <p>Silicon and Lake Victoria; cattle against hippos; and environmental flows against the dams.</p>
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Dry season campaign, February 2014</p>
+    <h2 class="sec">Hippos are a silicon pump, and Lake Victoria is downstream</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure class="fig-contain"><img src="assets/image31.png" alt="Silicon mass balance along the Mara mainstem showing the hippo contribution"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">0.4 t</p><p>of silicon a day carried from grassland into the river as dung</p></div>
+        <div class="stat"><p class="n">76%</p><p>of the river's silicon flux is affected by hippos, at most</p></div>
+        <div class="stat"><p class="n">17×</p><p>faster dissolution of silica from hippo dung than from undigested grass</p></div>
+        <div class="stat"><p class="n">5%</p><p>of Lake Victoria's inflow is the Mara, and silicon is what its diatoms are built from</p></div>
+      </div>
+    </div>
+    <p class="cite">Schoelynck et al. 2019, <i>Science Advances</i> 5:eaav0395, Fig 1.</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Mesocosm experiment with Frank Masese, Eldoret</p>
+    <h2 class="sec">Cattle are not a substitute for hippos</h2>
+    <p class="muted">Inside the reserve cattle contribute about 6% of organic matter loading. Along the Talek they contribute 57%. Over 250,000 cattle graze the communal lands adjoining the reserve. Cattle numbers in the basin more than double in the dry season.</p>
+    <p class="cite">Masese et al. 2020, <i>Proceedings of the Royal Society B</i> 287:20193000.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Environmental flow assessment, field seasons 2007 to 2012</p>
+    <h2 class="sec">What the river needs is variability, not a minimum</h2>
+    <div class="grid3" style="margin-top:24px">
+      <div><h3 style="font-size:22px">Every part of the hydrograph does a job</h3><p class="muted small">High flows water the riparian terraces. Low flows expose the sandbars that become habitat when water rises. Freshes clean the pools. Rising flows cue fish to spawn.</p></div>
+      <div><h3 style="font-size:22px">The Mau carries the dry season</h3><p class="muted small">The Amala and Nyangores are 13% of the catchment above Mara Mines but supply between 14% and 75% of mainstem low flows, and most of what arrives between July and October.</p></div>
+      <div><h3 style="font-size:22px">Three dams proposed</h3><p class="muted small">Two on the Mau headwaters, one below Serengeti. The Reserve Flow is proposed at Q95, which is a drought flow. Attenuating peak flows would remove the flushing that keeps hippo pools liveable.</p></div>
+    </div>
+    <div class="grid2" style="margin-top:36px">
+      <figure><img src="assets/image32.jpeg" alt="A water extraction pump and pipe drawing from the Amala River"><figcaption>Water extraction from the Amala</figcaption></figure>
+      <p class="muted">As of 2005, water use across the basin was under 2% of annual runoff. The pressure is concentrated in the dry season, in the middle reaches, where the lodges, the livestock and the wildlife draw on the same water at the same time of year.</p>
+    </div>
+    <p class="cite">McClain, Subalusky et al. 2014, <i>Hydrological Sciences Journal</i> 59:801–819.</p>
+  </div>
+</section>
+
+<!-- BUILT -->
+<section class="band tint" id="built">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Standing now, in the basin</p>
+    <h2 class="sec">What the work has already built</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure><img src="assets/image33.jpeg" alt="Dancers performing with visitors and museum staff at the opening of the Mara River exhibit"></figure>
+      <div class="stats" style="margin:0">
+        <div class="stat"><p class="n">46</p><p>fish carrying radio tags, producing 1.9 million detections</p></div>
+        <div class="stat"><p class="n">49,380</p><p>invertebrate specimens digitised, 28,000 of them open on GBIF</p></div>
+        <div class="stat"><p class="n">250+</p><p>Kenyan and Tanzanian scientists and students trained</p></div>
+        <div class="stat"><p class="n">70,000</p><p>visitors in three months to the Mara River exhibit in Nairobi</p></div>
+      </div>
+    </div>
+    <figure style="margin-top:40px">
+      <a href="https://jrsbiodiversity.org/secrets-of-the-mara-three-year-study-reveals-hidden-biodiversity-of-east-africas-mara-river/"><img src="assets/image34.png" alt="Ribbon cutting at the Secrets of the Mara exhibit, National Museums of Kenya"></a>
+      <figcaption><a href="https://jrsbiodiversity.org/secrets-of-the-mara-three-year-study-reveals-hidden-biodiversity-of-east-africas-mara-river/">“Secrets of the Mara”: three years of basin biodiversity survey, opened as a public exhibit at the National Museums of Kenya</a>, March 2026. Photograph: National Museums of Kenya.</figcaption>
+    </figure>
+    <p class="cite">Figures: JRS Biodiversity Foundation report, July 2026.</p>
+  </div>
+</section>
+
+<section class="band dark" id="press">
+  <div class="wrap">
+    <p class="eyebrow">Where this work has been told</p>
+    <h2 class="sec">The Mara's story travels</h2>
+    <div class="press">
+      <a href="https://www.nationalgeographic.com/animals/article/wildebeest-serengeti-migration-carcasses"><p class="outlet">National Geographic</p><p class="head">How 2 million pounds of rotting flesh helps the Serengeti</p></a>
+      <a href="https://www.smithsonianmag.com/smart-news/east-africa-relies-hippo-poop-transport-key-nutrient-180972086/"><p class="outlet">Smithsonian Magazine</p><p class="head">The Mara relies on hippo dung to move a key nutrient</p></a>
+      <a href="https://www.nbcnews.com/science/weird-science/poop-hunting-crocodile-robot-dodges-hippo-science-n113586"><p class="outlet">NBC News</p><p class="head">The crocodile-shaped airboat that samples hippo pools</p></a>
+      <a href="https://news.mongabay.com/2018/05/death-by-hippo-poop-scientists-solve-a-fish-massacre-in-the-mara-river/"><p class="outlet">Mongabay</p><p class="head">Scientists solve a fish massacre in the Mara River</p></a>
+      <a href="https://www.sciencenews.org/article/hippo-poop-cycles-silicon-through-east-african-environment"><p class="outlet">Science News</p><p class="head">Hippo dung cycles silicon through East Africa</p></a>
+      <a href="https://www.popsci.com/world-secretly-runs-on-hippo-poop/"><p class="outlet">Popular Science</p><p class="head">The world secretly runs on hippo dung</p></a>
+      <a href="https://www.livescience.com/62593-hippo-poop-suffocates-fish.html"><p class="outlet">Live Science</p><p class="head">Hippo dung is literally suffocating fish</p></a>
+      <a href="https://www.cbc.ca/radio/quirks/may-19-2018-psychadelic-science-understanding-kilauea-up-close-hippo-poop-kills-fish-1.4667264/flushing-hippo-toilets-smother-fish-in-african-rivers-1.4667344"><p class="outlet">CBC Quirks &amp; Quarks</p><p class="head">Flushing hippo pools smother fish in African rivers</p></a>
+      <a href="https://daily.jstor.org/hippo-poop-kills-fish-but-theres-an-upside"><p class="outlet">JSTOR Daily</p><p class="head">Hippo dung kills fish, but there is an upside</p></a>
+      <a href="https://cen.acs.org/articles/95/i30/Wildebeest-woes-Drowning-devil-weed.html"><p class="outlet">Chemical &amp; Engineering News</p><p class="head">Wildebeest woes: what the drownings feed</p></a>
+      <a href="https://www.futurity.org/hippo-pools-poop-meta-gut-2668142/"><p class="outlet">Futurity</p><p class="head">Hippo pools become their meta-gut</p></a>
+      <a href="https://www.science.org/content/article/pooping-hippos-create-community-guts-african-ponds"><p class="outlet">Science</p><p class="head">Hippos create community guts in African ponds</p></a>
+    </div>
+    <p class="cite" style="margin-top:28px">The meta-gut framework is taught in Slonczewski, Foster and Zinser, <i>Microbiology: An Evolving Science</i> (W. W. Norton). A Mara hippo pool is now a textbook case.</p>
+  </div>
+</section>
+
+<section class="band" id="pipeline">
+  <div class="wrap">
+    <h2 class="sec">What we are trying to get funded</h2>
+    <div class="grid2" style="margin-top:24px">
+      <figure><img src="assets/image35.jpeg" alt="Three of the fish crew with a catfish on the bank of the Mara"></figure>
+      <figure><img src="assets/image36.jpeg" alt="The hydrometeorological station at Serena airstrip"></figure>
+    </div>
+    <div class="grid3" style="margin-top:36px">
+      <div><h3 style="font-size:22px">A fish tracking network</h3><p class="muted small">Acoustic and radio receivers along the mainstem, showing where fish go during floods and oxygen crashes. Proposed to the Disney Conservation Fund.</p></div>
+      <div><h3 style="font-size:22px">A flood and water early-warning network</h3><p class="muted small">River stage, rainfall and water quality sensors hosted at lodges and communities, reporting in real time. The monitoring backbone of Mara WISE.</p></div>
+      <div><h3 style="font-size:22px">A Mara Water Stewardship Fund</h3><p class="muted small">A locally governed fund modelled on the Upper Tana–Nairobi Water Fund, led by Maasai Mara University with Narok County and the Water Resources Authority.</p></div>
+    </div>
+    <p class="cite">Also in the pipeline: NASA Earth observation, a Moore Foundation project on gut symbionts, and a Templeton grant.</p>
+  </div>
+</section>
+
+<section class="band dark" id="honest">
+  <div class="wrap">
+    <div class="grid2">
+      <figure><img src="assets/image37.jpeg" alt="Field vehicles parked under a tree at the camp on the Mara"></figure>
+      <div>
+        <p class="eyebrow">The measurement itself</p>
+        <div class="pull" style="border-color:var(--amber)">
+          <p>Everything on this page was measured from one camp.</p>
+        </div>
+        <p class="muted">Eighteen years in the same place, two Kenyan staff, a lab tent and two Land Rovers. The record is continuous because the camp is permanent. A station that stops for a season leaves a gap in the record that cannot be filled afterwards, which is what makes an eighteen-year baseline rare and what the figures below are keeping in place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="costs">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Approximate, US dollars, at the scale we run them</p>
+    <h2 class="sec">To give you an idea of what all of this costs</h2>
+    <p class="muted">It is simpler to say what each piece costs than to make a general appeal. The numbers are smaller than people usually assume, and every line here is fundable on its own.</p>
+    <table>
+      <tr><th>What it is</th><th>Cost</th><th>What it does</th></tr>
+      <tr><td>A flood sensor</td><td class="num">$300</td><td>Built in our lab. River stage, live. Hours of warning downstream.</td></tr>
+      <tr><td>A TAHMO weather station</td><td class="num">$3,000</td><td>Rainfall, temperature, wind and humidity, into the TAHMO network.</td></tr>
+      <tr><td>A student field season</td><td class="num">$8,000</td><td>How most of the work on this page actually got done.</td></tr>
+      <tr><td>A water quality station</td><td class="num">$10,000</td><td>Oxygen, turbidity and conductivity, continuously. Plus upkeep.</td></tr>
+      <tr><td>The field camp, one year</td><td class="num">$15,000</td><td>Two staff, the vehicles, and every sensor on this list maintained.</td></tr>
+    </table>
+    <p style="margin-top:28px">Two of the things we need are not money at all: somewhere on your properties to mount a station, and a seat for MEIA at the table as the Mara Water Stewardship Fund is designed.</p>
+  </div>
+</section>
+
+<section class="band dark" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Thank you</p>
+    <h2 class="sec">Almost everywhere else, the animals were taken out of the rivers before anyone thought to measure what they were doing.</h2>
+    <p class="muted">The Mara is a working baseline for what a river with its wildlife intact actually does, and the reference against which rivers that lost theirs are now compared. Keeping the measurement running is the part we would like your help with.</p>
+    <div class="contact">
+      <div><p style="margin:0"><b>Christopher Dutton</b><br><a href="mailto:duttonc@ufl.edu">duttonc@ufl.edu</a></p></div>
+      <div><p style="margin:0"><b>Amanda Subalusky</b><br><a href="mailto:asubalusky@ufl.edu">asubalusky@ufl.edu</a></p></div>
+      <div><p style="margin:0">Department of Biology<br>University of Florida</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 8px"><a href="references.html">Every paper behind this page, with DOI links</a></p>
+    <p style="margin:0">Dutton Lab and Subalusky Lab, Department of Biology, University of Florida. Photographs from the Dutton and Subalusky labs unless credited otherwise. Figures reproduced from the cited papers.</p>
+  </div>
+</footer>
+
+</body>
+</html>
