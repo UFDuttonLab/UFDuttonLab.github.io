@@ -123,6 +123,11 @@ td.num{white-space:nowrap;font-weight:600;color:var(--green)}
 .photopanel .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,38,34,.90) 0%,rgba(21,38,34,.56) 24%,rgba(21,38,34,.88) 56%,rgba(21,38,34,.97) 100%)}
 .photopanel .wrap{position:relative}
 
+.netpanel .photos img{max-height:26vh}
+.netpanel .natfig img{max-height:56vh}
+.netpanel .stats{gap:clamp(10px,1.6vh,22px)}
+.netpanel .stat p:last-child{font-size:clamp(12px,1.6vh,15px)}
+
 .give{border-left:4px solid var(--amber);padding-left:clamp(16px,1.6vw,26px);margin-top:3vh;color:var(--light)}
 .give p{max-width:84ch;font-size:clamp(14px,1.9vh,19px)}
 .give a{color:var(--amber)}
@@ -175,6 +180,7 @@ footer a{color:var(--amber)}
   <a href="#hippos">Hippos</a>
   <a href="#metagut">Meta-gut</a>
   <a href="#threads">Three threads</a>
+  <a href="#network">The network</a>
   <a href="#built">What is built</a>
   <a href="#costs">Costs</a>
   <a href="references.html">References</a>
@@ -659,6 +665,29 @@ footer a{color:var(--amber)}
       <p class="muted">As of 2005, water use across the basin was under 2% of annual runoff. The pressure is concentrated in the dry season, in the middle reaches, where the lodges, the livestock and the wildlife draw on the same water at the same time of year.</p>
     </div>
     <p class="cite">Basin water use estimate: McClain, Subalusky et al. 2014, <i>Hydrological Sciences Journal</i> 59:801&#8211;819.</p>
+  </div>
+</section>
+
+<section class="band tint netpanel" id="network">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--rust)">Built for the MaMaSe Initiative, 2014</p>
+    <h2 class="sec">We have already wired this basin once</h2>
+    <div class="grid2" style="margin-top:2vh; align-items:center">
+      <figure class="natfig"><img src="assets/net-map.jpeg" alt="Map of the Mara River Basin showing sixteen weather stations and eleven water level stations across the catchment and the Maasai Mara National Reserve"></figure>
+      <div>
+        <p class="muted">For UNESCO-IHE and the Mau Mara Serengeti Sustainable Water Initiative we built, installed and handed over a basin-wide network: sixteen weather stations and eleven water level stations, from Olenguruone in the Mau at 8,420 feet down to Rekero Camp inside the Reserve at 4,940 feet. Every one of them was assembled in the lab from open-source parts.</p>
+        <div class="photos" style="grid-template-columns:1fr 1fr; margin:2vh 0">
+          <figure><img src="assets/net-weather.jpeg" alt="Weather station on a steel pole: tipping bucket rain collector above a white radiation shield with a small solar panel"><figcaption>Weather station at Mulot</figcaption></figure>
+          <figure><img src="assets/net-level.jpeg" alt="Water level sensor on a boom extending from the bank out over a muddy river channel"><figcaption>Water level station on the Ntiakntiak</figcaption></figure>
+        </div>
+        <div class="stats" style="margin-top:0">
+          <div class="stat"><p class="n">27</p><p>stations across the Kenyan basin, on six rivers</p></div>
+          <div class="stat"><p class="n">30 min</p><p>between readings, sent by SMS to a base station and posted to an open repository</p></div>
+          <div class="stat"><p class="n">$16</p><p>per station per month to run, against about $80 for a conventional remote station</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="cite">Dutton 2014, <i>Experimental Low-Cost Open Source Monitoring Network, Mara River Basin</i>, prepared for M. McClain, UNESCO-IHE, MaMaSe Initiative.</p>
   </div>
 </section>
 
