@@ -13,6 +13,7 @@ Join me for one of my courses at the University of Florida!
  - Population and Community Ecology portion of General Ecology (Fall 2025)
  - Animal and Ecosystem Microbiomes (Spring 2026)
  - Ecology portion of Intro Bio BSC2011 (Spring 2026)
+ - Ecology portion of Intro Bio BSC2011 (Fall 2026)
 
 ## WEB APPS FOR TEACHING
 
@@ -30,6 +31,7 @@ I'm always pushing myself to learn new methods and try new ways of teaching. As 
  - [Diversity Explorer](https://ufduttonlab.github.io/diversity/) (explore how Alpha, Beta, and Gamma diversity changes)
  - [PEEP: Power Estimator for Ecological Planning](https://ufduttonlab.github.io/peep-power/) Our friendly companion for sample size calculations, power analysis, and experimental design.
  - [BSC 2011 Ecology Study Guide](https://ufduttonlab.github.io/BSC2011_Ecology_Study_Guide.html) - Spring 2026
+ - [BSC 2011 Ecology Study Guide](https://ufduttonlab.github.io/BSC2011_Ecology_Study_Guide_v3.html) - Fall 2026 (321 practice questions with figures, Quick 6, timed mock exam, and review of missed questions)
 
 ![Class at UF](img/IMG_20200130_110114.jpg){:style="float: center;margin-right: 7px;:class="img-responsive"}
 
