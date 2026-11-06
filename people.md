@@ -5,6 +5,8 @@ subtitle:
 ---
 Interested in joining the lab as an [Undergraduate](https://ufduttonlab.github.io/paid-undergrad-research), [Graduate](https://ufduttonlab.github.io/grad-opportunities/), or [Post-doc](https://ufduttonlab.github.io/postdoc-opportunities/)?
 
+**Now hiring:** a postdoc/project manager, a field research lead, and three field technicians for our [Cape Canaveral beach mouse project](/beach-mouse-jobs/).
+
 ## Christopher Dutton
 
 ![Chris](img/chris.jpg)
