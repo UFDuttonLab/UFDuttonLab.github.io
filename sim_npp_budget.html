@@ -82,6 +82,7 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
 .takeaways ol{display:grid;grid-template-columns:1fr 1fr;gap:.6em 1.4em;padding-left:1.2em}
 .takeaways li{font-size:.95em;line-height:1.4}
 .takeaways li b{color:var(--accent)}
+.refs{font-size:.72em;color:var(--dim);margin-top:.7em;line-height:1.35}
 @media (max-width:900px){
   :root{--fs:15px}
   .app{height:auto;min-height:100vh}
@@ -117,8 +118,8 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
       <div class="card">
         <div class="label">2 · Adjust</div>
         <div class="ctrl">
-          <div class="ctrl-top"><span class="ctrl-name">GPP <small>g C/m²/yr</small></span><span class="ctrl-val" id="cvGPP" style="color:var(--gpp)"></span></div>
-          <input type="range" id="sGPP" min="100" max="4000" step="50" value="2500">
+          <div class="ctrl-top"><span class="ctrl-name">GPP <small>g/m²/yr</small></span><span class="ctrl-val" id="cvGPP" style="color:var(--gpp)"></span></div>
+          <input type="range" id="sGPP" min="100" max="6000" step="10" value="2500">
         </div>
         <div class="ctrl" style="margin-bottom:0">
           <div class="ctrl-top"><span class="ctrl-name">Plant respiration <small>% of GPP</small></span><span class="ctrl-val" id="cvResp" style="color:var(--resp)"></span></div>
@@ -133,7 +134,7 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
         <div><span class="g">GPP</span> − <span class="r">R<sub>plant</sub></span> = <span class="n">NPP</span></div>
         <div class="nums"><span class="g" id="eG"></span> − <span class="r" id="eR"></span> = <span class="n" id="eN"></span></div>
       </div>
-      <div class="unit">g C/m²/yr</div>
+      <div class="unit">g dry mass/m²/yr</div>
       <div class="bars">
         <div class="bcol"><div class="axis" id="axis" style="flex:1"></div><div class="bname">&nbsp;</div></div>
         <div class="bcol">
@@ -152,7 +153,7 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
     </section>
 
     <section class="card cmp">
-      <div class="label">3 · Compare biomes: NPP (g C/m²/yr)</div>
+      <div class="label">3 · Compare biomes: NPP (g/m²/yr)</div>
       <div class="rows" id="rows"><div class="cur" id="cur"><span id="curLbl"></span></div></div>
       <div class="cmp-foot">Dashed line = current settings</div>
     </section>
@@ -167,27 +168,31 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
 <div class="takeaways" id="tk">
   <div class="label">Key takeaways</div>
   <ol>
-    <li><b>GPP = NPP + respiration.</b> Plants use roughly half of the carbon they fix in photosynthesis (GPP) for their own respiration. Only what remains (NPP) becomes new biomass available to consumers.</li>
+    <li><b>GPP = NPP + respiration.</b> Plants use roughly half of the energy they capture in photosynthesis (GPP) for their own respiration. Only what remains (NPP) becomes new biomass available to consumers.</li>
     <li><b>NPP is the energy base for all other life.</b> Every herbivore, predator and decomposer ultimately depends on plant net production. NPP sets the upper limit on ecosystem biomass and biodiversity.</li>
     <li><b>Climate drives NPP across biomes.</b> Warm, wet biomes (tropical forests, estuaries) produce the most NPP. Deserts and tundra produce the least. Temperature, precipitation and sunlight are the key controls.</li>
-    <li><b>The respiration fraction matters.</b> Plants in harsh environments (cold, dry) spend a higher percentage of GPP on respiration, leaving less NPP. Identical GPP can yield very different NPP across biomes.</li>
+    <li><b>The respiration fraction varies.</b> Plants respire 35 to 70% of GPP. Tropical forests respire the largest share, so their NPP is about 1.4 times that of temperate forests even though their GPP is about twice as high.</li>
   </ol>
+  <div class="refs">NPP values follow Whittaker and Likens 1973, Human Ecology 1:357 (dry mass, as in the lecture figure), except coral reef, set below tropical rainforest. Respiration fractions follow DeLucia et al. 2007, Global Change Biology 13:1157, and Malhi 2012, Journal of Ecology 100:65.</div>
 </div>
 
 <script>
+// NPP (g dry mass/m²/yr) matches Whittaker and Likens 1973, the figure used in lecture.
+// Respiration share follows DeLucia et al. 2007 (tropical forests highest) and Malhi 2012.
+// GPP = NPP / (1 - respiration share).
 const biomes = [
-  { name:'Tropical Rainforest', gpp:3000, resp:52, color:'#1E7B3A' },
-  { name:'Temperate Forest',    gpp:1800, resp:50, color:'#3A6A9C' },
-  { name:'Boreal Forest',       gpp:1200, resp:55, color:'#5B4B8A' },
-  { name:'Tropical Savanna',    gpp:1600, resp:48, color:'#C9770F' },
-  { name:'Temperate Grassland', gpp:900,  resp:45, color:'#7F8F14' },
-  { name:'Tundra',              gpp:250,  resp:60, color:'#5F6F80' },
-  { name:'Desert',              gpp:150,  resp:65, color:'#A33D27' },
-  { name:'Open Ocean',          gpp:250,  resp:40, color:'#2D7FB8' },
-  { name:'Coral Reef',          gpp:2500, resp:45, color:'#C2457A' },
-  { name:'Estuary',             gpp:2200, resp:48, color:'#1A8AA0' },
+  { name:'Tropical Rainforest', gpp:4950, resp:65, color:'#1E7B3A' },
+  { name:'Temperate Forest',    gpp:2460, resp:50, color:'#3A6A9C' },
+  { name:'Boreal Forest',       gpp:1690, resp:55, color:'#5B4B8A' },
+  { name:'Tropical Savanna',    gpp:1400, resp:50, color:'#C9770F' },
+  { name:'Temperate Grassland', gpp:980,  resp:50, color:'#7F8F14' },
+  { name:'Tundra',              gpp:300,  resp:50, color:'#5F6F80' },
+  { name:'Desert',              gpp:220,  resp:55, color:'#A33D27' },
+  { name:'Open Ocean',          gpp:200,  resp:35, color:'#2D7FB8' },
+  { name:'Coral Reef',          gpp:3200, resp:50, color:'#C2457A' },
+  { name:'Estuary',             gpp:2480, resp:50, color:'#1A8AA0' },
 ];
-const GMAX = 4000;
+const GMAX = 6000;
 let active = null;
 const $ = id => document.getElementById(id);
 const fmt = n => Math.round(n).toLocaleString();
@@ -203,7 +208,7 @@ biomes.forEach((b, i) => {
 
 // Comparison rows, sorted from highest to lowest NPP
 const maxNPP = Math.max(...biomes.map(nppOf));
-const scaleMax = Math.ceil(maxNPP / 200) * 200;
+const scaleMax = Math.ceil(maxNPP * 1.12 / 250) * 250;
 biomes.map((b, i) => ({ b, i })).sort((a, z) => nppOf(z.b) - nppOf(a.b)).forEach(({ b, i }) => {
   const r = document.createElement('div');
   r.className = 'row'; r.dataset.i = i;
@@ -214,7 +219,7 @@ biomes.map((b, i) => ({ b, i })).sort((a, z) => nppOf(z.b) - nppOf(a.b)).forEach
 });
 
 // y axis for budget bars
-[0, 1000, 2000, 3000, 4000].forEach(v => {
+[0, 1500, 3000, 4500, 6000].forEach(v => {
   const s = document.createElement('span');
   s.style.bottom = (v / GMAX * 100) + '%';
   s.textContent = v.toLocaleString();
