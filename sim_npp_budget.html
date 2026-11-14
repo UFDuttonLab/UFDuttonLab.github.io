@@ -5,268 +5,269 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NPP Budget Calculator</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0f1e;--surface:#131a2e;--border:#253050;--text:#e0e6f0;--dim:#7a8aaa;--accent:#64ffda;--gpp:#f59e0b;--npp:#34d399;--resp:#ff6b6b}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:16px}
-h1{font-family:'Space Mono',monospace;font-size:1.4rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-.sub{color:var(--dim);font-size:0.82rem;margin-bottom:16px;text-align:center}
+:root{
+  --bg:#ffffff;--panel:#f4f7f1;--line:#d5ddd0;--ink:#1f2a1d;--ink2:#4a5546;--dim:#6b7568;
+  --accent:#1D6B62;--gpp:#C9770F;--npp:#2F7D32;--resp:#A33D27;
+  --fs:clamp(16px, calc(0.95vw + 0.75vh), 28px);
+}
+html,body{height:100%}
+body{font-family:"Century Gothic",CenturyGothic,"URW Gothic","Avenir Next",Avenir,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:var(--fs);line-height:1.3}
+.app{display:grid;grid-template-rows:auto 1fr auto;height:100vh;padding:1.1em 1.4em .5em;gap:.8em}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:1em;border-bottom:3px solid var(--accent);padding-bottom:.45em}
+h1{font-size:1.9em;font-weight:700;color:var(--accent)}
+.sub{font-size:1em;color:var(--ink2);margin-top:.1em}
+.hbtns{display:flex;gap:.5em;flex-shrink:0}
+.hbtn{font:inherit;font-size:.8em;font-weight:700;padding:.45em .9em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.hbtn:hover,.hbtn.on{background:var(--accent);color:#fff}
+main{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr) minmax(0,1.3fr);gap:1em;min-height:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:.6em;padding:.8em 1em;min-height:0}
+.col{display:flex;flex-direction:column;gap:.8em;min-height:0}
+.label{font-size:.78em;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5em}
+.biomes{display:grid;grid-template-columns:1fr 1fr;gap:.35em}
+.bb{font:inherit;font-size:.74em;font-weight:700;padding:.5em .45em;border:2px solid var(--line);border-radius:.35em;background:#fff;color:var(--ink2);cursor:pointer;text-align:left;display:flex;align-items:center;gap:.4em;line-height:1.1}
+.bb .sw{width:.8em;height:.8em;border-radius:50%;flex-shrink:0}
+.bb .k{margin-left:auto;font-size:.8em;color:var(--dim);font-weight:400}
+.bb:hover{border-color:var(--ink2)}
+.bb.active{border-color:var(--ink);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.ctrl{margin-bottom:.6em}
+.ctrl-top{display:flex;justify-content:space-between;align-items:baseline;gap:.5em}
+.ctrl-name{font-weight:700}
+.ctrl-name small{font-weight:400;color:var(--dim);font-size:.8em}
+.ctrl-val{font-weight:700;font-size:1.35em;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.45em 0 .1em;cursor:pointer;background:#dfe5da}
+#sGPP{background:linear-gradient(90deg,#f6e3c4,var(--gpp))}
+#sResp{background:linear-gradient(90deg,#f0d3cc,var(--resp))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.35em;height:1.35em;border-radius:50%;background:#fff;border:.22em solid var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+input[type=range]::-moz-range-thumb{width:1.1em;height:1.1em;border-radius:50%;background:#fff;border:.22em solid var(--ink)}
 
-.container{display:flex;gap:20px;width:100%;max-width:1000px;flex-wrap:wrap;justify-content:center}
-.left{flex:1;min-width:340px;max-width:420px}
-.right{flex:1;min-width:380px;max-width:540px}
-.panel{background:var(--surface);border-radius:12px;padding:18px;margin-bottom:16px}
-.panel-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+/* Budget column */
+.budget{display:flex;flex-direction:column;background:#fff}
+.eq{text-align:center;font-weight:700;font-size:1.25em;line-height:1.25}
+.eq .g{color:var(--gpp)} .eq .r{color:var(--resp)} .eq .n{color:var(--npp)}
+.eq .nums{font-size:1.15em;font-variant-numeric:tabular-nums;margin-top:.15em}
+.unit{text-align:center;font-size:.75em;color:var(--dim);margin-top:.1em}
+.bars{flex:1;min-height:0;display:grid;grid-template-columns:2.6em 1fr 1fr;gap:0 .9em;margin-top:.6em;position:relative}
+.axis{position:relative;font-size:.7em;color:var(--dim);font-variant-numeric:tabular-nums}
+.axis span{position:absolute;right:0;transform:translateY(50%)}
+.bcol{display:flex;flex-direction:column;min-height:0}
+.btrack{flex:1;position:relative;border-bottom:2px solid var(--ink);background:repeating-linear-gradient(to top,#eef1eb 0,#eef1eb 1px,transparent 1px,transparent 25%)}
+.bstack{position:absolute;left:8%;right:8%;bottom:0;display:flex;flex-direction:column-reverse;transition:height .45s ease}
+.seg{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1em;font-variant-numeric:tabular-nums;transition:height .45s ease;overflow:hidden;white-space:nowrap}
+.seg:last-child{border-radius:.3em .3em 0 0}
+.bname{text-align:center;font-weight:700;margin-top:.35em;font-size:.95em}
+.cue{text-align:center;font-size:.9em;margin-top:.5em;color:var(--ink2)}
+.cue b{color:var(--npp);font-size:1.15em}
 
-/* Biome buttons */
-.biome-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px}
-.biome-btn{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;padding:8px 10px;border:2px solid var(--border);border-radius:6px;background:transparent;color:var(--dim);cursor:pointer;transition:all 0.2s;text-align:left}
-.biome-btn:hover{border-color:var(--accent);color:var(--text)}
-.biome-btn.active{border-color:var(--accent);background:rgba(100,255,218,0.08);color:var(--accent)}
+/* Comparison column */
+.cmp{display:flex;flex-direction:column;background:#fff}
+.rows{flex:1;min-height:0;margin-top:1.3em;display:flex;flex-direction:column;justify-content:space-around;position:relative}
+.row{display:grid;grid-template-columns:9.2em 1fr;align-items:center;gap:.6em;cursor:pointer}
+.row .nm{text-align:right;font-size:.9em;color:var(--ink2);font-weight:400;white-space:nowrap}
+.row .trk{position:relative;height:1.15em}
+.row .fill{position:absolute;left:0;top:0;bottom:0;border-radius:0 .25em .25em 0;opacity:.6;transition:opacity .2s,width .45s}
+.row .val{position:absolute;top:50%;transform:translateY(-50%);font-size:.8em;font-weight:700;color:var(--ink2);padding-left:.35em;font-variant-numeric:tabular-nums;transition:left .45s}
+.row.active .nm{color:var(--ink);font-weight:700}
+.row.active .fill{opacity:1}
+.row.active .val{color:var(--ink)}
+.row:hover .fill{opacity:.8}
+.cur{position:absolute;top:0;bottom:0;border-left:2.5px dashed var(--ink);pointer-events:none;transition:left .45s}
+.cur span{position:absolute;bottom:100%;transform:translateX(-50%);font-size:.72em;font-weight:700;white-space:nowrap;background:#fff;padding:0 .3em}
+.cmp-foot{font-size:.72em;color:var(--dim);margin-top:.4em;text-align:right}
 
-/* Sliders */
-.ctrl{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.ctrl label{font-size:0.75rem;color:var(--dim);min-width:140px;font-weight:500}
-.ctrl input[type="range"]{flex:1;accent-color:var(--accent)}
-.ctrl .cv{font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--accent);min-width:70px;text-align:right}
-
-/* Bar diagram */
-.bar-diagram{position:relative;height:300px;display:flex;align-items:flex-end;justify-content:center;gap:40px;padding-bottom:30px}
-.bar-col{display:flex;flex-direction:column;align-items:center;position:relative}
-.bar{width:80px;border-radius:6px 6px 0 0;transition:height 0.5s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;display:flex;align-items:center;justify-content:center}
-.bar-label{font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:700;color:var(--bg);position:absolute;width:100%;text-align:center}
-.bar-label.outside{color:var(--text);top:-22px}
-.bar-name{font-size:0.75rem;color:var(--dim);margin-top:8px;text-align:center;font-weight:600}
-
-.bar-gpp{background:var(--gpp)}
-.bar-npp{background:var(--npp)}
-.bar-resp{background:var(--resp)}
-
-/* Stacked bar */
-.stacked{width:100px;display:flex;flex-direction:column-reverse;border-radius:6px 6px 0 0;overflow:hidden}
-.stack-seg{display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;color:var(--bg);transition:height 0.5s}
-
-/* Summary */
-.summary{background:var(--surface);border-radius:12px;padding:14px 18px;text-align:center}
-.summary p{font-size:0.88rem;line-height:1.6}
-.summary strong{color:var(--accent)}
-.summary .eq{font-family:'Space Mono',monospace;font-size:1rem;color:var(--text);margin:8px 0}
-
-/* Comparison chart */
-canvas#compChart{width:100%;height:240px;display:block;border-radius:8px;background:#0d1225}
-
-.takeaway{background:#131a2e;border-radius:10px;padding:14px 18px;margin-top:10px;width:100%;max-width:1140px}
-.takeaway .pt{font-family:'Space Mono',monospace;font-size:0.66rem;color:#7a8aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
-.tk-list{display:flex;flex-direction:column;gap:8px}
-.tk-item{font-size:0.82rem;color:#e0e6f0;line-height:1.5;padding:6px 10px;background:#1a2240;border-radius:6px;border-left:3px solid #64ffda}
-.tk-item strong{color:#64ffda}
+footer{display:flex;justify-content:space-between;font-size:.68em;color:var(--dim)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+.takeaways{position:fixed;left:1.4em;right:1.4em;bottom:2.2em;background:#fff;border:2px solid var(--accent);border-radius:.6em;padding:1em 1.2em;box-shadow:0 10px 40px rgba(0,0,0,.25);display:none;z-index:10}
+.takeaways.show{display:block}
+.takeaways ol{display:grid;grid-template-columns:1fr 1fr;gap:.6em 1.4em;padding-left:1.2em}
+.takeaways li{font-size:.95em;line-height:1.4}
+.takeaways li b{color:var(--accent)}
+@media (max-width:900px){
+  :root{--fs:15px}
+  .app{height:auto;min-height:100vh}
+  main{grid-template-columns:1fr}
+  .bars{height:300px;flex:none}
+  .rows{height:380px;flex:none}
+  header{flex-wrap:wrap}
+  .hbtn.fs,.hbtn.tk,.keys{display:none}
+  .takeaways{position:static;display:block;box-shadow:none;margin-top:.5em}
+  .takeaways ol{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<h1>NPP Budget Calculator</h1>
-<p class="sub">Gross Primary Production → Net Primary Production: where does the energy go?</p>
+<div class="app">
+  <header>
+    <div>
+      <h1>NPP Budget Calculator</h1>
+      <div class="sub">Gross primary production minus plant respiration leaves net primary production</div>
+    </div>
+    <div class="hbtns">
+      <button class="hbtn tk" id="tkBtn" onclick="toggleTk()">Key takeaways</button>
+      <button class="hbtn fs" onclick="toggleFs()">Full screen</button>
+    </div>
+  </header>
 
-<div class="container">
-  <div class="left">
-    <div class="panel">
-      <div class="panel-title">Choose a Biome</div>
-      <div class="biome-grid" id="biomeGrid"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-title">Adjust Parameters</div>
-      <div class="ctrl">
-        <label>GPP (g C/m²/yr)</label>
-        <input type="range" id="sGPP" min="100" max="4000" step="50" value="2500" oninput="update()">
-        <span class="cv" id="cvGPP">2,500</span>
+  <main>
+    <section class="col">
+      <div class="card">
+        <div class="label">1 · Pick a biome</div>
+        <div class="biomes" id="biomes"></div>
       </div>
-      <div class="ctrl">
-        <label>Plant respiration (%)</label>
-        <input type="range" id="sResp" min="20" max="80" step="1" value="50" oninput="update()">
-        <span class="cv" id="cvResp">50%</span>
+      <div class="card">
+        <div class="label">2 · Adjust</div>
+        <div class="ctrl">
+          <div class="ctrl-top"><span class="ctrl-name">GPP <small>g C/m²/yr</small></span><span class="ctrl-val" id="cvGPP" style="color:var(--gpp)"></span></div>
+          <input type="range" id="sGPP" min="100" max="4000" step="50" value="2500">
+        </div>
+        <div class="ctrl" style="margin-bottom:0">
+          <div class="ctrl-top"><span class="ctrl-name">Plant respiration <small>% of GPP</small></span><span class="ctrl-val" id="cvResp" style="color:var(--resp)"></span></div>
+          <input type="range" id="sResp" min="20" max="80" step="1" value="50">
+        </div>
       </div>
-    </div>
-    <div class="summary" id="summary"></div>
-  </div>
+    </section>
 
-  <div class="right">
-    <div class="panel">
-      <div class="panel-title">Energy Budget</div>
-      <div class="bar-diagram" id="barDiagram"></div>
-    </div>
-    <div class="panel">
-      <div class="panel-title">NPP Across Biomes (g C/m²/yr)</div>
-      <canvas id="compChart"></canvas>
-    </div>
-  </div>
+    <section class="card budget">
+      <div class="label" id="budgetTitle">Carbon budget</div>
+      <div class="eq">
+        <div><span class="g">GPP</span> − <span class="r">R<sub>plant</sub></span> = <span class="n">NPP</span></div>
+        <div class="nums"><span class="g" id="eG"></span> − <span class="r" id="eR"></span> = <span class="n" id="eN"></span></div>
+      </div>
+      <div class="unit">g C/m²/yr</div>
+      <div class="bars">
+        <div class="bcol"><div class="axis" id="axis" style="flex:1"></div><div class="bname">&nbsp;</div></div>
+        <div class="bcol">
+          <div class="btrack"><div class="bstack" id="gStack"><div class="seg" id="gSeg" style="background:var(--gpp)"></div></div></div>
+          <div class="bname" style="color:var(--gpp)">GPP</div>
+        </div>
+        <div class="bcol">
+          <div class="btrack"><div class="bstack" id="nStack">
+            <div class="seg" id="nSeg" style="background:var(--npp)"></div>
+            <div class="seg" id="rSeg" style="background:var(--resp)"></div>
+          </div></div>
+          <div class="bname"><span style="color:var(--npp)">NPP</span> + <span style="color:var(--resp)">R</span></div>
+        </div>
+      </div>
+      <div class="cue">New biomass for consumers: <b id="cuePct"></b> of GPP</div>
+    </section>
+
+    <section class="card cmp">
+      <div class="label">3 · Compare biomes: NPP (g C/m²/yr)</div>
+      <div class="rows" id="rows"><div class="cur" id="cur"><span id="curLbl"></span></div></div>
+      <div class="cmp-foot">Dashed line = current settings</div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="keys">Keys: 1 to 9 and 0 select a biome · T takeaways · F full screen</span>
+    <span>Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener">Dutton Lab</a> @ University of Florida</span>
+  </footer>
+</div>
+
+<div class="takeaways" id="tk">
+  <div class="label">Key takeaways</div>
+  <ol>
+    <li><b>GPP = NPP + respiration.</b> Plants use roughly half of the carbon they fix in photosynthesis (GPP) for their own respiration. Only what remains (NPP) becomes new biomass available to consumers.</li>
+    <li><b>NPP is the energy base for all other life.</b> Every herbivore, predator and decomposer ultimately depends on plant net production. NPP sets the upper limit on ecosystem biomass and biodiversity.</li>
+    <li><b>Climate drives NPP across biomes.</b> Warm, wet biomes (tropical forests, estuaries) produce the most NPP. Deserts and tundra produce the least. Temperature, precipitation and sunlight are the key controls.</li>
+    <li><b>The respiration fraction matters.</b> Plants in harsh environments (cold, dry) spend a higher percentage of GPP on respiration, leaving less NPP. Identical GPP can yield very different NPP across biomes.</li>
+  </ol>
 </div>
 
 <script>
 const biomes = [
-  { name: 'Tropical Rainforest', gpp: 3000, resp: 52, color: '#34d399' },
-  { name: 'Temperate Forest', gpp: 1800, resp: 50, color: '#60a5fa' },
-  { name: 'Boreal Forest', gpp: 1200, resp: 55, color: '#818cf8' },
-  { name: 'Tropical Savanna', gpp: 1600, resp: 48, color: '#f59e0b' },
-  { name: 'Temperate Grassland', gpp: 900, resp: 45, color: '#a3e635' },
-  { name: 'Tundra', gpp: 250, resp: 60, color: '#94a3b8' },
-  { name: 'Desert', gpp: 150, resp: 65, color: '#d97706' },
-  { name: 'Open Ocean', gpp: 250, resp: 40, color: '#38bdf8' },
-  { name: 'Coral Reef', gpp: 2500, resp: 45, color: '#f472b6' },
-  { name: 'Estuary', gpp: 2200, resp: 48, color: '#2dd4bf' },
+  { name:'Tropical Rainforest', gpp:3000, resp:52, color:'#1E7B3A' },
+  { name:'Temperate Forest',    gpp:1800, resp:50, color:'#3A6A9C' },
+  { name:'Boreal Forest',       gpp:1200, resp:55, color:'#5B4B8A' },
+  { name:'Tropical Savanna',    gpp:1600, resp:48, color:'#C9770F' },
+  { name:'Temperate Grassland', gpp:900,  resp:45, color:'#7F8F14' },
+  { name:'Tundra',              gpp:250,  resp:60, color:'#5F6F80' },
+  { name:'Desert',              gpp:150,  resp:65, color:'#A33D27' },
+  { name:'Open Ocean',          gpp:250,  resp:40, color:'#2D7FB8' },
+  { name:'Coral Reef',          gpp:2500, resp:45, color:'#C2457A' },
+  { name:'Estuary',             gpp:2200, resp:48, color:'#1A8AA0' },
 ];
+const GMAX = 4000;
+let active = null;
+const $ = id => document.getElementById(id);
+const fmt = n => Math.round(n).toLocaleString();
+const nppOf = b => b.gpp * (1 - b.resp / 100);
 
-let activeBiome = null;
-
-// Build biome buttons
-const grid = document.getElementById('biomeGrid');
 biomes.forEach((b, i) => {
   const btn = document.createElement('button');
-  btn.className = 'biome-btn';
-  btn.textContent = b.name;
-  btn.onclick = () => selectBiome(i, btn);
-  grid.appendChild(btn);
+  btn.className = 'bb';
+  btn.innerHTML = `<span class="sw" style="background:${b.color}"></span>${b.name}<span class="k">${(i+1)%10}</span>`;
+  btn.onclick = () => selectBiome(i);
+  $('biomes').appendChild(btn);
 });
 
-function selectBiome(i, btn) {
-  document.querySelectorAll('.biome-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  activeBiome = i;
-  document.getElementById('sGPP').value = biomes[i].gpp;
-  document.getElementById('sResp').value = biomes[i].resp;
+// Comparison rows, sorted from highest to lowest NPP
+const maxNPP = Math.max(...biomes.map(nppOf));
+const scaleMax = Math.ceil(maxNPP / 200) * 200;
+biomes.map((b, i) => ({ b, i })).sort((a, z) => nppOf(z.b) - nppOf(a.b)).forEach(({ b, i }) => {
+  const r = document.createElement('div');
+  r.className = 'row'; r.dataset.i = i;
+  const w = nppOf(b) / scaleMax * 100;
+  r.innerHTML = `<div class="nm">${b.name}</div><div class="trk"><div class="fill" style="width:${w}%;background:${b.color}"></div><div class="val" style="left:${w}%">${fmt(nppOf(b))}</div></div>`;
+  r.onclick = () => selectBiome(i);
+  $('rows').appendChild(r);
+});
+
+// y axis for budget bars
+[0, 1000, 2000, 3000, 4000].forEach(v => {
+  const s = document.createElement('span');
+  s.style.bottom = (v / GMAX * 100) + '%';
+  s.textContent = v.toLocaleString();
+  $('axis').appendChild(s);
+});
+
+function selectBiome(i){
+  active = i;
+  $('sGPP').value = biomes[i].gpp; $('sResp').value = biomes[i].resp;
   update();
 }
+$('sGPP').oninput = $('sResp').oninput = update;
 
-function update() {
-  const gpp = parseInt(document.getElementById('sGPP').value);
-  const respPct = parseInt(document.getElementById('sResp').value);
-  document.getElementById('cvGPP').textContent = gpp.toLocaleString();
-  document.getElementById('cvResp').textContent = respPct + '%';
+function update(){
+  const gpp = +$('sGPP').value, rp = +$('sResp').value;
+  const resp = gpp * rp / 100, npp = gpp - resp;
+  const modified = active !== null && (gpp !== biomes[active].gpp || rp !== biomes[active].resp);
+  $('cvGPP').textContent = gpp.toLocaleString();
+  $('cvResp').textContent = rp + '%';
+  $('eG').textContent = fmt(gpp); $('eR').textContent = fmt(resp); $('eN').textContent = fmt(npp);
+  $('cuePct').textContent = Math.round(100 - rp) + '%';
+  $('budgetTitle').textContent = active === null ? 'Carbon budget' : biomes[active].name + (modified ? ' (modified)' : '');
 
-  const resp = gpp * respPct / 100;
-  const npp = gpp - resp;
-  const nppPct = ((npp / gpp) * 100).toFixed(0);
+  const h = gpp / GMAX * 100;
+  $('gStack').style.height = h + '%'; $('nStack').style.height = h + '%';
+  $('gSeg').style.height = '100%';
+  $('nSeg').style.height = (100 - rp) + '%'; $('rSeg').style.height = rp + '%';
+  $('gSeg').textContent = h > 6 ? fmt(gpp) : '';
+  $('nSeg').textContent = h * (100 - rp) / 100 > 6 ? fmt(npp) : '';
+  $('rSeg').textContent = h * rp / 100 > 6 ? fmt(resp) : '';
 
-  // Bar diagram
-  const maxH = 240;
-  const diagram = document.getElementById('barDiagram');
-  diagram.innerHTML = '';
+  document.querySelectorAll('.bb').forEach((b, i) => b.classList.toggle('active', i === active));
+  document.querySelectorAll('.row').forEach(r => r.classList.toggle('active', +r.dataset.i === active));
 
-  // GPP bar
-  const gppCol = document.createElement('div');
-  gppCol.className = 'bar-col';
-  const gppBar = document.createElement('div');
-  gppBar.className = 'bar bar-gpp';
-  gppBar.style.height = maxH + 'px';
-  const gppLbl = document.createElement('div');
-  gppLbl.className = 'bar-label';
-  gppLbl.textContent = gpp.toLocaleString();
-  gppBar.appendChild(gppLbl);
-  gppCol.appendChild(gppBar);
-  const gppName = document.createElement('div');
-  gppName.className = 'bar-name';
-  gppName.textContent = 'GPP';
-  gppCol.appendChild(gppName);
-  diagram.appendChild(gppCol);
-
-  // = sign
-  const eq = document.createElement('div');
-  eq.style.cssText = 'font-family:"Space Mono";font-size:1.5rem;color:#7a8aaa;align-self:center;margin-bottom:30px';
-  eq.textContent = '=';
-  diagram.appendChild(eq);
-
-  // Stacked NPP + Respiration
-  const stackCol = document.createElement('div');
-  stackCol.className = 'bar-col';
-  const stack = document.createElement('div');
-  stack.className = 'stacked';
-  stack.style.height = maxH + 'px';
-
-  const nppSeg = document.createElement('div');
-  nppSeg.className = 'stack-seg';
-  nppSeg.style.height = (npp / gpp * 100) + '%';
-  nppSeg.style.background = '#34d399';
-  nppSeg.textContent = Math.round(npp).toLocaleString();
-  stack.appendChild(nppSeg);
-
-  const respSeg = document.createElement('div');
-  respSeg.className = 'stack-seg';
-  respSeg.style.height = (resp / gpp * 100) + '%';
-  respSeg.style.background = '#ff6b6b';
-  respSeg.textContent = Math.round(resp).toLocaleString();
-  stack.appendChild(respSeg);
-
-  stackCol.appendChild(stack);
-  const stackName = document.createElement('div');
-  stackName.className = 'bar-name';
-  stackName.innerHTML = '<span style="color:#34d399">NPP</span> + <span style="color:#ff6b6b">Respiration</span>';
-  stackCol.appendChild(stackName);
-  diagram.appendChild(stackCol);
-
-  // Summary
-  document.getElementById('summary').innerHTML = `
-    <div class="eq">GPP − R<sub>plant</sub> = NPP</div>
-    <p>${gpp.toLocaleString()} − ${Math.round(resp).toLocaleString()} = <strong>${Math.round(npp).toLocaleString()} g C/m²/yr</strong></p>
-    <p style="margin-top:6px;font-size:0.82rem;color:var(--dim)">Plants use <strong style="color:var(--resp)">${respPct}%</strong> of GPP for their own respiration. Only <strong style="color:var(--npp)">${nppPct}%</strong> becomes new biomass available to consumers.</p>
-  `;
-
-  drawComparison();
+  // dashed marker for the current settings, positioned within the bar track
+  const trk = document.querySelector('.row .trk'), rows = $('rows');
+  const left = trk.getBoundingClientRect().left - rows.getBoundingClientRect().left;
+  const x = left + Math.min(1, npp / scaleMax) * trk.clientWidth;
+  $('cur').style.left = x + 'px';
+  $('curLbl').textContent = 'Now: ' + fmt(npp) + (npp > scaleMax ? ' →' : '');
 }
 
-function drawComparison() {
-  const cv = document.getElementById('compChart');
-  const ctx = cv.getContext('2d');
-  const dpr = window.devicePixelRatio || 1;
-  cv.width = cv.offsetWidth * dpr;
-  cv.height = cv.offsetHeight * dpr;
-  ctx.scale(dpr, dpr);
-  const W = cv.offsetWidth, H = cv.offsetHeight;
-  ctx.clearRect(0, 0, W, H);
-
-  const pad = { l: 145, r: 55, t: 10, b: 10 };
-  const cW = W - pad.l - pad.r;
-  const barH = 14;
-  const gap = (H - pad.t - pad.b) / biomes.length;
-
-  const maxNPP = Math.max(...biomes.map(b => b.gpp * (1 - b.resp / 100)));
-
-  biomes.forEach((b, i) => {
-    const npp = b.gpp * (1 - b.resp / 100);
-    const y = pad.t + i * gap + gap / 2;
-    const w = (npp / maxNPP) * cW;
-
-    // Bar
-    ctx.fillStyle = i === activeBiome ? b.color : b.color + '88';
-    ctx.beginPath();
-    ctx.roundRect(pad.l, y - barH / 2, w, barH, 3);
-    ctx.fill();
-
-    // Label
-    ctx.fillStyle = i === activeBiome ? '#e0e6f0' : '#7a8aaa';
-    ctx.font = (i === activeBiome ? '700' : '500') + ' 11px "DM Sans"';
-    ctx.textAlign = 'right';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(b.name, pad.l - 8, y);
-
-    // Value
-    ctx.fillStyle = i === activeBiome ? b.color : '#5a6a8a';
-    ctx.font = '700 10px "Space Mono"';
-    ctx.textAlign = 'left';
-    ctx.fillText(Math.round(npp).toLocaleString(), pad.l + w + 6, y);
-  });
-}
-
-// Init
-update();
-window.addEventListener('resize', () => { update(); });
+function toggleTk(){ const on = $('tk').classList.toggle('show'); $('tkBtn').classList.toggle('on', on); }
+function toggleFs(){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' && e.key.startsWith('Arrow')) return;
+  if (/^[0-9]$/.test(e.key)) selectBiome((+e.key + 9) % 10);
+  else if (e.key === 't' || e.key === 'T') toggleTk();
+  else if (e.key === 'f' || e.key === 'F') toggleFs();
+  else if (e.key === 'Escape') { $('tk').classList.remove('show'); $('tkBtn').classList.remove('on'); }
+});
+window.addEventListener('resize', update);
+selectBiome(0);
 </script>
-<div class="takeaway">
-  <div class="pt">Key Takeaways</div>
-  <div class="tk-list">
-    <div class="tk-item">🔋 <strong>GPP = NPP + Respiration</strong> — plants use roughly half of the energy they capture in photosynthesis (GPP) for their own cellular respiration. Only what remains (NPP) becomes new biomass available to consumers.</div>
-    <div class="tk-item">🌿 <strong>NPP is the energy base for all other life</strong> — every herbivore, predator, and decomposer ultimately depends on the net production of plants. NPP sets the upper limit on ecosystem biomass and biodiversity.</div>
-    <div class="tk-item">🌎 <strong>Climate drives NPP across biomes</strong> — warm, wet biomes (tropical forests, estuaries) produce the most NPP. Deserts and tundra produce the least. Temperature, precipitation, and sunlight are the key controls.</div>
-    <div class="tk-item">🧮 <strong>The respiration fraction matters</strong> — plants in harsh environments (cold, dry) spend a higher percentage of GPP on respiration, leaving less NPP. This is why identical GPP can yield very different NPP across biomes.</div>
-  </div>
-</div>
-<div style="text-align:center;padding:12px 0 6px;font-family:sans-serif;font-size:0.75rem;color:#4a5a7a">Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener" style="color:#64ffda;text-decoration:none;font-weight:600">Dutton Lab</a> @ University of Florida</div>
 </body>
 </html>
