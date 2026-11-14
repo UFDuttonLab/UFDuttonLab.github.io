@@ -32,7 +32,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%}
 .ctrl-top{display:flex;justify-content:space-between;align-items:baseline}
 .ctrl-name{font-weight:700;font-size:1em}
 .ctrl-val{font-weight:700;font-size:1.35em;color:var(--accent);font-variant-numeric:tabular-nums}
-.note{font-size:.78em;color:var(--ink2);min-height:1.3em;margin-top:.15em}
+.note{font-size:.72em;color:#A33D27;font-weight:700;margin-left:.3em}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.35em 0 .1em;cursor:pointer}
 #sTemp{background:linear-gradient(90deg,#3A6A9C,#9cc3d9 40%,#f1d48a 70%,#c9502f)}
 #sMoist{background:linear-gradient(90deg,#d8b98a,#b9cf9a 50%,#5b9ec4 79%,#2c5f8a 80%,#2c5f8a)}
@@ -53,6 +53,9 @@ input[type=range]::-moz-range-thumb{width:1.1em;height:1.1em;border-radius:50%;b
 .bar{height:.8em;background:#e6ebe2;border-radius:.4em;overflow:hidden}
 .bar i{display:block;height:100%;border-radius:.4em;transition:width .35s}
 .limit{font-size:.82em;margin-top:.4em;font-weight:700}
+.chk{display:flex;align-items:center;gap:.45em;font-size:.8em;font-weight:700;color:var(--ink2);cursor:pointer;margin-top:.1em}
+.chk input{width:1.1em;height:1.1em;accent-color:var(--accent)}
+.refs{font-size:.72em;color:var(--dim);margin-top:.7em;line-height:1.35}
 footer{display:flex;justify-content:space-between;font-size:.68em;color:var(--dim)}
 footer a{color:var(--accent);font-weight:700;text-decoration:none}
 .takeaways{position:fixed;left:1.4em;right:1.4em;bottom:2.2em;background:#fff;border:2px solid var(--accent);border-radius:.6em;padding:1em 1.2em;box-shadow:0 10px 40px rgba(0,0,0,.25);display:none;z-index:10}
@@ -100,9 +103,9 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
           <input type="range" id="sTemp" min="-10" max="30" value="15">
         </div>
         <div class="ctrl" style="margin-bottom:0">
-          <div class="ctrl-top"><span class="ctrl-name">Soil moisture</span><span class="ctrl-val" id="cvM"></span></div>
+          <div class="ctrl-top"><span class="ctrl-name">Soil moisture <span class="note" id="moistNote"></span></span><span class="ctrl-val" id="cvM"></span></div>
           <input type="range" id="sMoist" min="0" max="100" value="50">
-          <div class="note" id="moistNote"></div>
+          <label class="chk"><input type="checkbox" id="photo" checked> Sunlight breaks down litter at dry, open sites</label>
         </div>
       </div>
 
@@ -137,11 +140,12 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
 <div class="takeaways" id="tk">
   <div class="label">Key takeaways</div>
   <ol>
-    <li><b>Temperature is the primary driver.</b> In this model decomposition roughly quadruples for every 10°C increase (Q₁₀ ≈ 4), so tropical litter disappears in months while tundra litter persists for decades.</li>
-    <li><b>Moisture enables microbial activity.</b> Decomposers need water. Deserts decompose slowly despite high temperatures because microbial activity is water limited.</li>
+    <li><b>Temperature is a primary driver.</b> Microbial decomposition roughly doubles for every 10°C increase (Q₁₀ ≈ 2), so tropical litter is half gone within months while tundra litter takes about 6 years.</li>
+    <li><b>Moisture enables microbial activity.</b> Decomposers need water. In deserts microbes are water limited despite high temperatures, and sunlight (photodegradation) breaks down much of the surface litter instead.</li>
     <li><b>Too much water slows decomposition.</b> Waterlogged soils become anaerobic, which suppresses aerobic decomposers. Peat bogs preserve organic matter for thousands of years.</li>
     <li><b>This explains soil carbon patterns.</b> Tropical forests have thin organic layers because decomposition outpaces litter input. Boreal forests and peatlands build deep organic soils because litter input outpaces decomposition.</li>
   </ol>
+  <div class="refs">Model: k = 1.9 × 2<sup>(T−25)/10</sup> × f(moisture) + photodegradation. Preset k values fall within litterbag ranges from Parton et al. 2007, Science 315:361. Photodegradation after Austin and Vivanco 2006, Nature 442:555.</div>
 </div>
 
 <script>
@@ -159,13 +163,19 @@ const biomes = [
 const YEARS = 10;
 let active = -1;
 
-// Model unchanged from the original page
-function tempEffect(t){ return Math.max(0.01, Math.pow(4, (t - 25) / 10)); }
+// Microbial decay: k = 1.9 * Q10^((T-25)/10) * f(moisture), Q10 = 2
+// Moisture rises to an optimum at 80%, then halves every 5% (waterlogging, anoxia)
+// Photodegradation: up to 0.25 per yr added at dry, open sites (moisture below 30%)
+// Calibrated so preset k values fall in published litterbag ranges (Parton et al. 2007)
+const Q10 = 2, BASE = 1.9, PHOTO_MAX = 0.25;
+function tempEffect(t){ return Math.pow(Q10, (t - 25) / 10); }
 function moistEffect(m){
-  let e = m <= 80 ? 0.01 + 0.99 * Math.pow(m / 80, 2.5) : Math.pow(0.5, (m - 80) / 5);
+  let e = m <= 80 ? 0.02 + 0.98 * Math.pow(m / 80, 1.5) : Math.pow(0.5, (m - 80) / 5);
   return Math.max(0.005, e);
 }
-function calcK(t, m){ return tempEffect(t) * moistEffect(m) * 2.5; }
+function photoK(m){ return photoOn() ? PHOTO_MAX * Math.max(0, 1 - m / 30) : 0; }
+function photoOn(){ const c = document.getElementById('photo'); return !c || c.checked; }
+function calcK(t, m){ return BASE * tempEffect(t) * moistEffect(m) + photoK(m); }
 
 const $ = id => document.getElementById(id);
 const sT = $('sTemp'), sM = $('sMoist');
@@ -184,6 +194,7 @@ function selectBiome(i){
   render();
 }
 sT.oninput = sM.oninput = () => { active = -1; render(); };
+$('photo').onchange = render;
 
 function fmtHalf(k){
   const h = Math.log(2) / k;
@@ -196,8 +207,8 @@ function render(){
   const t = +sT.value, m = +sM.value, k = calcK(t, m);
   $('cvT').textContent = t + '°C';
   $('cvM').textContent = m + '%';
-  $('moistNote').textContent = m > 80 ? 'Waterlogged: low oxygen slows decomposers'
-                             : m < 20 ? 'Too dry: microbes are water limited' : '';
+  $('moistNote').textContent = m > 80 ? 'waterlogged, low oxygen'
+                             : m < 20 ? 'too dry for microbes' : '';
   document.querySelectorAll('.bb').forEach((b, i) => b.classList.toggle('active', i === active));
   $('statTitle').textContent = active >= 0 ? biomes[active].name : 'Your settings';
   $('stK').textContent = k < 0.1 ? k.toFixed(3) : k.toFixed(2);
@@ -207,7 +218,9 @@ function render(){
   const te = tempEffect(t) / tempEffect(30), me = moistEffect(m);
   $('mT').style.width = Math.max(2, te * 100) + '%';
   $('mM').style.width = Math.max(2, me * 100) + '%';
-  $('limit').textContent = 'Limiting factor: ' + (te < me ? 'temperature' : 'moisture');
+  const pk = photoK(m);
+  $('limit').textContent = 'Limiting factor: ' + (te < me ? 'temperature' : 'moisture') +
+    (pk > 0 ? ' · sunlight adds ' + Math.round(100 * pk / k) + '% of decay' : '');
   draw(t, m);
 }
 
