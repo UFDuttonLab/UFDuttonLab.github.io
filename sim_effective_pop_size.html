@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effective Population Size Calculator</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;--panel:#f4f7f1;--line:#d5ddd0;--ink:#1f2a1d;--ink2:#4a5546;--dim:#6b7568;
+  --accent:#1D6B62;--male:#2F6FB3;--female:#C9770F;--non:#c3cbbf;--good:#2F7D32;--bad:#A33D27;
+  --fs:clamp(16px, calc(0.95vw + 0.75vh), 28px);
+}
+html,body{height:100%}
+body{font-family:"Century Gothic",CenturyGothic,"URW Gothic","Avenir Next",Avenir,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:var(--fs);line-height:1.3}
+.app{display:grid;grid-template-rows:auto 1fr auto;height:100vh;padding:1.1em 1.4em .5em;gap:.8em}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:1em;border-bottom:3px solid var(--accent);padding-bottom:.45em}
+h1{font-size:1.9em;font-weight:700;color:var(--accent)}
+.sub{font-size:1em;color:var(--ink2);margin-top:.1em}
+.hbtns{display:flex;gap:.5em;flex-shrink:0}
+.hbtn{font:inherit;font-size:.8em;font-weight:700;padding:.45em .9em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.hbtn:hover,.hbtn.on{background:var(--accent);color:#fff}
+main{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr) minmax(0,1.3fr);gap:1em;min-height:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:.6em;padding:.8em 1em;min-height:0}
+.col{display:flex;flex-direction:column;gap:.8em;min-height:0}
+.label{font-size:.78em;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5em}
+.presets{display:grid;grid-template-columns:1fr;gap:.35em}
+.bb{font:inherit;font-size:.78em;font-weight:700;padding:.5em .55em;border:2px solid var(--line);border-radius:.35em;background:#fff;color:var(--ink2);cursor:pointer;text-align:left;display:flex;align-items:center;gap:.5em;line-height:1.15}
+.bb .d{font-weight:400;color:var(--dim)}
+.bb .k{margin-left:auto;font-size:.8em;color:var(--dim);font-weight:400}
+.bb:hover{border-color:var(--ink2)}
+.bb.active{border-color:var(--ink);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.ctrl{margin-bottom:.55em}
+.ctrl-top{display:flex;justify-content:space-between;align-items:baseline;gap:.5em}
+.ctrl-name{font-weight:700}
+.ctrl-val{font-weight:700;font-size:1.35em;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.45em 0 .1em;cursor:pointer;background:#dfe5da}
+#sM{background:linear-gradient(90deg,#d3e2f2,var(--male))}
+#sF{background:linear-gradient(90deg,#f6e3c4,var(--female))}
+#sN{background:linear-gradient(90deg,#eef1eb,#8f998b)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.35em;height:1.35em;border-radius:50%;background:#fff;border:.22em solid var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+input[type=range]::-moz-range-thumb{width:1.1em;height:1.1em;border-radius:50%;background:#fff;border:.22em solid var(--ink)}
+
+.pop{display:flex;flex-direction:column;background:#fff}
+.eq{text-align:center;font-weight:700;font-size:1.15em;line-height:1.3}
+.eq .m{color:var(--male)} .eq .f{color:var(--female)} .eq .n{color:var(--accent)}
+.eq .nums{font-size:1.1em;font-variant-numeric:tabular-nums;margin-top:.1em}
+.big{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4em;margin-top:.6em}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:.45em;padding:.35em .5em;text-align:center}
+.stat .n{font-size:1.8em;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05}
+.stat .t{font-size:.72em;color:var(--ink2);font-weight:700}
+.wrap{position:relative;flex:1;min-height:0;margin-top:.6em}
+canvas{position:absolute;inset:0;width:100%;height:100%}
+.legend{display:flex;gap:1em;flex-wrap:wrap;justify-content:center;font-size:.74em;font-weight:700;color:var(--ink2);margin-top:.4em}
+.legend i{display:inline-block;width:.8em;height:.8em;border-radius:50%;margin-right:.35em;vertical-align:-.05em}
+
+.drift{display:flex;flex-direction:column;background:#fff}
+.runbar{display:grid;grid-template-columns:2fr 1fr;gap:.4em}
+.rb{font:inherit;font-size:.9em;font-weight:700;padding:.45em .3em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.rb:hover{background:var(--accent);color:#fff}
+.rb.reset{border-color:#C0392B;color:#C0392B}
+.rb.reset:hover{background:#C0392B;color:#fff}
+.dnote{font-size:.78em;color:var(--ink2);margin-top:.45em;line-height:1.3}
+.dstats{display:grid;grid-template-columns:1fr 1fr;gap:.4em;margin-top:.5em}
+
+footer{display:flex;justify-content:space-between;font-size:.68em;color:var(--dim)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+.takeaways{position:fixed;left:1.4em;right:1.4em;bottom:2.2em;background:#fff;border:2px solid var(--accent);border-radius:.6em;padding:1em 1.2em;box-shadow:0 10px 40px rgba(0,0,0,.25);display:none;z-index:10}
+.takeaways.show{display:block}
+.takeaways ol{display:grid;grid-template-columns:1fr 1fr;gap:.6em 1.4em;padding-left:1.2em}
+.takeaways li{font-size:.95em;line-height:1.4}
+.takeaways li b{color:var(--accent)}
+.refs{font-size:.72em;color:var(--dim);margin-top:.7em;line-height:1.35}
+@media (max-width:900px){
+  :root{--fs:15px}
+  .app{height:auto;min-height:100vh}
+  main{grid-template-columns:1fr}
+  .pop .wrap{height:220px;flex:none}
+  .drift .wrap{height:300px;flex:none}
+  header{flex-wrap:wrap}
+  .hbtn.fs,.hbtn.tk,.keys{display:none}
+  .takeaways{position:static;display:block;box-shadow:none;margin-top:.5em}
+  .takeaways ol{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Effective Population Size Calculator</h1>
+      <div class="sub">How many animals are passing on genes, and how fast does the population lose alleles?</div>
+    </div>
+    <div class="hbtns">
+      <button class="hbtn tk" id="tkBtn" onclick="toggleTk()">Key takeaways</button>
+      <button class="hbtn fs" onclick="toggleFs()">Full screen</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="col">
+      <div class="card">
+        <div class="label">1 · Pick a scenario</div>
+        <div class="presets" id="presets"></div>
+      </div>
+      <div class="card">
+        <div class="label">2 · Who breeds?</div>
+        <div class="ctrl">
+          <div class="ctrl-top"><span class="ctrl-name">Breeding males</span><span class="ctrl-val" id="cvM" style="color:var(--male)"></span></div>
+          <input type="range" id="sM" min="1" max="200" step="1" value="8">
+        </div>
+        <div class="ctrl">
+          <div class="ctrl-top"><span class="ctrl-name">Breeding females</span><span class="ctrl-val" id="cvF" style="color:var(--female)"></span></div>
+          <input type="range" id="sF" min="1" max="200" step="1" value="8">
+        </div>
+        <div class="ctrl" style="margin-bottom:0">
+          <div class="ctrl-top"><span class="ctrl-name">Adults not breeding</span><span class="ctrl-val" id="cvN" style="color:var(--dim)"></span></div>
+          <input type="range" id="sN" min="0" max="200" step="1" value="0">
+        </div>
+      </div>
+    </section>
+
+    <section class="card pop">
+      <div class="label" id="popTitle">The population</div>
+      <div class="eq">
+        <div><span class="n">N<sub>e</sub></span> = 4 <span class="m">N<sub>m</sub></span> <span class="f">N<sub>f</sub></span> / (<span class="m">N<sub>m</sub></span> + <span class="f">N<sub>f</sub></span>)</div>
+        <div class="nums">4 × <span class="m" id="eM"></span> × <span class="f" id="eF"></span> / <span id="eS"></span> = <span class="n" id="eN"></span></div>
+      </div>
+      <div class="big">
+        <div class="stat"><div class="n" id="stC"></div><div class="t">Head count N</div></div>
+        <div class="stat"><div class="n" id="stE" style="color:var(--accent)"></div><div class="t">Effective size N<sub>e</sub></div></div>
+        <div class="stat"><div class="n" id="stR"></div><div class="t">N<sub>e</sub> / N</div></div>
+      </div>
+      <div class="wrap"><canvas id="herd"></canvas></div>
+      <div class="legend"><span><i style="background:var(--male)"></i>breeding male</span><span><i style="background:var(--female)"></i>breeding female</span><span><i style="background:var(--non)"></i>not breeding</span></div>
+    </section>
+
+    <section class="card drift">
+      <div class="label">3 · Genetic drift over 100 generations</div>
+      <div class="runbar">
+        <button class="rb" id="btnRun" onclick="runDrift()">▶ Run drift</button>
+        <button class="rb reset" onclick="clearDrift()">Clear</button>
+      </div>
+      <div class="wrap"><canvas id="chart"></canvas></div>
+      <div class="dstats">
+        <div class="stat"><div class="n" id="stH" style="color:var(--accent)"></div><div class="t">Genetic diversity left after 100 generations</div></div>
+        <div class="stat"><div class="n" id="stL" style="color:var(--bad)"></div><div class="t">Genes that lost an allele</div></div>
+      </div>
+      <div class="dnote">Each thin line is one gene with two alleles that start at 50%. A line that reaches 0% or 100% has lost an allele for good.</div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="keys">Keys: 1 to 6 select a scenario · Space run drift · C clear · T takeaways · F full screen</span>
+    <span>Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener">Dutton Lab</a> @ University of Florida</span>
+  </footer>
+</div>
+
+<div class="takeaways" id="tk">
+  <div class="label">Key takeaways</div>
+  <ol>
+    <li><b>N<sub>e</sub> is usually smaller than the head count.</b> Animals that never breed add to the census but not to the gene pool.</li>
+    <li><b>The rarer sex sets the limit.</b> With 1 breeding male, N<sub>e</sub> can never reach 4, no matter how many females breed.</li>
+    <li><b>An equal sex ratio gives the largest N<sub>e</sub></b> for a fixed number of breeders. Compare 8 males and 8 females with 14 males and 2 females.</li>
+    <li><b>Small N<sub>e</sub> means fast genetic drift.</b> Alleles are lost by chance, so the population has less variation to draw on when climate, habitat or disease changes.</li>
+  </ol>
+  <div class="refs">N<sub>e</sub> = 4 N<sub>m</sub> N<sub>f</sub> / (N<sub>m</sub> + N<sub>f</sub>) for unequal numbers of breeding males and females (Wright 1931, Genetics 16:97). Expected heterozygosity after t generations is (1 − 1/(2N<sub>e</sub>))<sup>t</sup> of the starting value. Drift lines are Wright-Fisher simulations with 2N<sub>e</sub> gene copies.</div>
+</div>
+
+<script>
+const presets = [
+  { name:'Equal sexes',       d:'8 males, 8 females',     m:8,   f:8,   n:0 },
+  { name:'Cheetah supermoms', d:'5 males, 2 females',     m:5,   f:2,   n:9 },
+  { name:'Panther refuge',    d:'30 males, 170 females',  m:30,  f:170, n:0 },
+  { name:'Harem',             d:'2 males, 40 females',    m:2,   f:40,  n:38 },
+  { name:'One male',          d:'1 male, 100 females',    m:1,   f:100, n:0 },
+  { name:'Large and balanced',d:'100 males, 100 females', m:100, f:100, n:0 },
+];
+const G = 100;
+let active = 0, lines = [], lost = 0;
+const $ = id => document.getElementById(id);
+const fmt = x => x >= 100 ? Math.round(x).toLocaleString() : (Math.round(x * 10) / 10).toString();
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const FS = () => parseFloat(getComputedStyle(document.body).fontSize);
+const ne = () => { const m = +$('sM').value, f = +$('sF').value; return 4 * m * f / (m + f); };
+
+presets.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.className = 'bb';
+  b.innerHTML = `${p.name}<span class="d">${p.d}</span><span class="k">${i + 1}</span>`;
+  b.onclick = () => selectPreset(i);
+  $('presets').appendChild(b);
+});
+function selectPreset(i){
+  active = i;
+  $('sM').value = presets[i].m; $('sF').value = presets[i].f; $('sN').value = presets[i].n;
+  update();
+}
+$('sM').oninput = $('sF').oninput = $('sN').oninput = update;
+
+function ctx(c){
+  const r = c.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+  c.width = Math.max(1, r.width * d); c.height = Math.max(1, r.height * d);
+  const x = c.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0);
+  return [x, r.width, r.height];
+}
+function drawHerd(){
+  const m = +$('sM').value, f = +$('sF').value, n = +$('sN').value, tot = m + f + n;
+  const [x, W, H] = ctx($('herd')); x.clearRect(0, 0, W, H);
+  const cols = Math.max(1, Math.ceil(Math.sqrt(tot * W / H))), rows = Math.ceil(tot / cols);
+  const s = Math.min(W / cols, H / rows, FS() * 2.6), rad = Math.max(1.5, s * 0.38);
+  const ox = (W - cols * s) / 2 + s / 2, oy = (H - rows * s) / 2 + s / 2;
+  const cm = css('--male'), cf = css('--female'), cn = css('--non');
+  for (let i = 0; i < tot; i++){
+    x.beginPath(); x.arc(ox + (i % cols) * s, oy + Math.floor(i / cols) * s, rad, 0, 7);
+    x.fillStyle = i < m ? cm : i < m + f ? cf : cn; x.fill();
+  }
+}
+function drawChart(){
+  const [x, W, H] = ctx($('chart')); x.clearRect(0, 0, W, H);
+  const fs = FS(), L = fs * 2.9, R = fs * .6, T = fs * .7, B = fs * 2.3, gw = W - L - R, gh = H - T - B;
+  x.font = `${fs * .72}px "Century Gothic","URW Gothic","Segoe UI",sans-serif`;
+  x.lineWidth = 1;
+  [0, .25, .5, .75, 1].forEach(v => {
+    const y = T + gh * (1 - v);
+    x.strokeStyle = '#e3e8df'; x.beginPath(); x.moveTo(L, y); x.lineTo(L + gw, y); x.stroke();
+    x.fillStyle = css('--dim'); x.textAlign = 'right'; x.textBaseline = 'middle'; x.fillText(Math.round(v * 100) + '%', L - fs * .35, y);
+  });
+  x.strokeStyle = css('--ink'); x.lineWidth = 2; x.beginPath(); x.moveTo(L, T + gh); x.lineTo(L + gw, T + gh); x.stroke();
+  x.textAlign = 'center'; x.textBaseline = 'top'; x.fillStyle = css('--dim');
+  [0, 25, 50, 75, 100].forEach(g => x.fillText(g, L + gw * g / G, T + gh + fs * .3));
+  x.fillStyle = css('--ink2'); x.font = `700 ${fs * .78}px "Century Gothic","URW Gothic","Segoe UI",sans-serif`;
+  x.fillText('Generations', L + gw / 2, T + gh + fs * 1.2);
+  lines.forEach(l => {
+    x.beginPath();
+    l.forEach((p, i) => { const px = L + gw * i / G, py = T + gh * (1 - p); i ? x.lineTo(px, py) : x.moveTo(px, py); });
+    x.strokeStyle = 'rgba(74,85,70,.5)'; x.lineWidth = Math.max(1.2, fs * .09); x.stroke();
+  });
+  const N = ne();
+  x.beginPath();
+  for (let g = 0; g <= G; g++){ const h = Math.pow(1 - 1 / (2 * N), g), px = L + gw * g / G, py = T + gh * (1 - h); g ? x.lineTo(px, py) : x.moveTo(px, py); }
+  x.strokeStyle = css('--accent'); x.lineWidth = Math.max(3, fs * .22); x.stroke();
+  x.fillStyle = css('--accent'); x.textAlign = 'right'; x.textBaseline = 'bottom';
+  const hEnd = Math.pow(1 - 1 / (2 * N), G);
+  const ly = Math.max(T + fs, T + gh * (1 - hEnd) - fs * .55); x.lineWidth = fs * .3; x.strokeStyle = 'rgba(255,255,255,.92)'; x.lineJoin = 'round';
+  x.strokeText('expected diversity left', L + gw - fs * .2, ly); x.fillText('expected diversity left', L + gw - fs * .2, ly);
+}
+function binom(n, p){
+  if (n > 80){ let u = 0; for (let i = 0; i < 6; i++) u += Math.random(); return Math.max(0, Math.min(n, Math.round(n * p + Math.sqrt(n * p * (1 - p)) * (u - 3) * 1.4142))); }
+  let k = 0; for (let i = 0; i < n; i++) if (Math.random() < p) k++; return k;
+}
+function runDrift(){
+  const n2 = Math.max(2, Math.round(2 * ne()));
+  for (let k = 0; k < 8; k++){
+    let p = .5; const l = [p];
+    for (let g = 0; g < G; g++){ if (p > 0 && p < 1) p = binom(n2, p) / n2; l.push(p); }
+    lines.push(l); if (p === 0 || p === 1) lost++;
+  }
+  while (lines.length > 40){ const e = lines.shift()[G]; if (e === 0 || e === 1) lost--; }
+  drawChart(); driftStats();
+}
+function clearDrift(){ lines = []; lost = 0; drawChart(); driftStats(); }
+function driftStats(){
+  const h = Math.pow(1 - 1 / (2 * ne()), G);
+  $('stH').textContent = (h < .01 ? 'under 1' : Math.round(h * 100)) + '%';
+  $('stL').textContent = lines.length ? lost + ' of ' + lines.length : 'press Run';
+}
+function update(){
+  const m = +$('sM').value, f = +$('sF').value, n = +$('sN').value, N = ne(), tot = m + f + n;
+  const p = active === null ? null : presets[active];
+  if (p && (p.m !== m || p.f !== f || p.n !== n)) active = null;
+  $('cvM').textContent = m; $('cvF').textContent = f; $('cvN').textContent = n;
+  $('eM').textContent = m; $('eF').textContent = f; $('eS').textContent = m + f; $('eN').textContent = fmt(N);
+  $('stC').textContent = tot.toLocaleString(); $('stE').textContent = fmt(N);
+  const r = N / tot;
+  $('stR').textContent = Math.round(r * 100) + '%';
+  $('stR').style.color = r < .5 ? css('--bad') : r < .9 ? css('--female') : css('--good');
+  $('popTitle').textContent = active === null ? 'The population' : presets[active].name;
+  document.querySelectorAll('.bb').forEach((b, i) => b.classList.toggle('active', i === active));
+  lines = []; lost = 0;
+  drawHerd(); drawChart(); driftStats();
+}
+function toggleTk(){ const on = $('tk').classList.toggle('show'); $('tkBtn').classList.toggle('on', on); }
+function toggleFs(){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' && e.key.startsWith('Arrow')) return;
+  if (/^[1-6]$/.test(e.key)) selectPreset(+e.key - 1);
+  else if (e.key === ' ') { e.preventDefault(); runDrift(); }
+  else if (e.key === 'c' || e.key === 'C') clearDrift();
+  else if (e.key === 't' || e.key === 'T') toggleTk();
+  else if (e.key === 'f' || e.key === 'F') toggleFs();
+  else if (e.key === 'Escape') { $('tk').classList.remove('show'); $('tkBtn').classList.remove('on'); }
+});
+window.addEventListener('resize', () => { drawHerd(); drawChart(); });
+document.addEventListener('fullscreenchange', () => setTimeout(() => { drawHerd(); drawChart(); }, 100));
+selectPreset(0);
+</script>
+</body>
+</html>

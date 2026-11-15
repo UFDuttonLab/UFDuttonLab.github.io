@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metapopulation Simulator</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;--panel:#f4f7f1;--line:#d5ddd0;--ink:#1f2a1d;--ink2:#4a5546;--dim:#6b7568;
+  --accent:#1D6B62;--src:#2F7D32;--sink:#A33D27;
+  --fs:clamp(16px, calc(0.95vw + 0.75vh), 28px);
+}
+html,body{height:100%}
+body{font-family:"Century Gothic",CenturyGothic,"URW Gothic","Avenir Next",Avenir,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:var(--fs);line-height:1.3}
+.app{display:grid;grid-template-rows:auto 1fr auto;height:100vh;padding:1.1em 1.4em .5em;gap:.8em}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:1em;border-bottom:3px solid var(--accent);padding-bottom:.45em}
+h1{font-size:1.9em;font-weight:700;color:var(--accent);letter-spacing:.01em}
+.sub{font-size:1em;color:var(--ink2);margin-top:.1em}
+.hbtns{display:flex;gap:.5em;flex-shrink:0}
+.hbtn{font:inherit;font-size:.8em;font-weight:700;padding:.45em .9em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.hbtn:hover,.hbtn.on{background:var(--accent);color:#fff}
+main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1em;min-height:0}
+.left{display:grid;grid-template-rows:minmax(0,1.45fr) minmax(0,1fr);gap:.8em;min-height:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:.6em;padding:.8em 1em;min-height:0}
+.label{font-size:.78em;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35em}
+.chart-card{display:flex;flex-direction:column;background:#fff}
+.scene-card{padding:0;overflow:hidden;position:relative}
+.wrap{position:relative;flex:1;min-height:0;height:100%}
+canvas{position:absolute;inset:0;width:100%;height:100%}
+.side{display:flex;flex-direction:column;gap:.6em;min-height:0}
+.side .card{padding:.6em .9em}
+.prow{display:grid;grid-template-columns:5.6em 1fr 4.6em;align-items:center;gap:.6em;margin-bottom:.4em}
+.pb{font:inherit;font-size:.78em;font-weight:700;padding:.4em .45em;border:2px solid var(--line);border-radius:.35em;background:#fff;color:var(--ink2);cursor:pointer;display:flex;align-items:center;gap:.35em;white-space:nowrap}
+.pb .sw{width:.8em;height:.8em;border-radius:50%;flex-shrink:0}
+.pb .k{margin-left:auto;font-size:.8em;color:var(--dim);font-weight:400}
+.pb:hover{border-color:var(--ink2)}
+.pb.on{border-color:var(--accent);background:var(--accent);color:#fff}
+.pb.on .k{color:#cfe5e1}
+.rv{font-weight:700;font-size:1.05em;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.hint{font-size:.74em;color:var(--ink2);margin-bottom:.5em;line-height:1.3}
+.ctrl{margin-top:.5em}
+.ctrl-top{display:flex;justify-content:space-between;align-items:baseline}
+.ctrl-name{font-weight:700;font-size:1em}
+.ctrl-val{font-weight:700;font-size:1.25em;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.3em 0 .1em;cursor:pointer;background:linear-gradient(90deg,var(--sink),#e9ece6 50%,var(--src))}
+#sD{background:linear-gradient(90deg,#e3e8df,var(--accent))}
+input[type=range]:disabled{opacity:.45;cursor:not-allowed}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.35em;height:1.35em;border-radius:50%;background:#fff;border:.22em solid var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+input[type=range]::-moz-range-thumb{width:1.1em;height:1.1em;border-radius:50%;background:#fff;border:.22em solid var(--ink)}
+.runbar{display:grid;grid-template-columns:2fr 1fr;gap:.4em;margin-top:.5em}
+.rb{font:inherit;font-size:.9em;font-weight:700;padding:.45em .3em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.rb:hover,.rb.on{background:var(--accent);color:#fff}
+.rb.reset{border-color:#C0392B;color:#C0392B}
+.rb.reset:hover{background:#C0392B;color:#fff}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:.4em}
+.stat{background:#fff;border:1px solid var(--line);border-radius:.45em;padding:.35em .6em}
+.stat .n{font-size:1.8em;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05}
+.stat .t{font-size:.78em;color:var(--ink2);font-weight:700}
+.stat .x{font-size:.72em;color:var(--dim);font-weight:700}
+.phase{font-size:1.05em;font-weight:700;line-height:1.3}
+.phase small{display:block;font-size:.78em;color:var(--ink2);font-weight:400;margin-top:.2em}
+.refs{font-size:.72em;color:var(--dim);margin-top:.7em;line-height:1.35}
+footer{display:flex;justify-content:space-between;font-size:.68em;color:var(--dim)}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+.takeaways{position:fixed;left:1.4em;right:1.4em;bottom:2.2em;background:#fff;border:2px solid var(--accent);border-radius:.6em;padding:1em 1.2em;box-shadow:0 10px 40px rgba(0,0,0,.25);display:none;z-index:10}
+.takeaways.show{display:block}
+.takeaways ol{display:grid;grid-template-columns:1fr 1fr;gap:.6em 1.4em;padding-left:1.2em}
+.takeaways li{font-size:.95em;line-height:1.4}
+.takeaways li b{color:var(--accent)}
+@media (max-width:900px){
+  :root{--fs:15px}
+  .app{height:auto;min-height:100vh}
+  main{grid-template-columns:1fr}
+  .left{grid-template-rows:auto auto}
+  .scene-card{height:320px}
+  .chart-card .wrap{height:240px;flex:none}
+  header{flex-wrap:wrap}
+  .hbtn.fs,.hbtn.tk,.keys{display:none}
+  .takeaways{position:static;display:block;box-shadow:none;margin-top:.5em}
+  .takeaways ol{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Metapopulation Simulator</h1>
+      <div class="sub">Four populations linked by dispersal. You can protect two. The other habitat is lost in year 20.</div>
+    </div>
+    <div class="hbtns">
+      <button class="hbtn tk" id="tkBtn" onclick="toggleTk()">Key takeaways</button>
+      <button class="hbtn fs" onclick="toggleFs()">Full screen</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="left">
+      <div class="card scene-card"><div class="wrap"><canvas id="scene"></canvas></div></div>
+      <div class="card chart-card">
+        <div class="label">Animals in each population over time</div>
+        <div class="wrap"><canvas id="chart"></canvas></div>
+      </div>
+    </section>
+
+    <section class="side">
+      <div class="card">
+        <div class="label">1 · Protect two, and set growth rates r</div>
+        <div id="patches"></div>
+        <div class="ctrl">
+          <div class="ctrl-top"><span class="ctrl-name">Dispersal</span><span class="ctrl-val" id="cvD"></span></div>
+          <input type="range" id="sD" min="0" max="3" step="0.1" value="1">
+        </div>
+        <div class="runbar">
+          <button class="rb" id="btnRun" onclick="toggleRun()">▶ Run</button>
+          <button class="rb reset" onclick="reset()">Reset</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label" id="yrLbl">Year 0</div>
+        <div class="big">
+          <div class="stat"><div class="n" id="stN" style="color:var(--accent)"></div><div class="t">Animals in total</div><div class="x">started at 800</div></div>
+          <div class="stat"><div class="n" id="stP"></div><div class="t">Populations alive</div><div class="x">started at 4</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="label">What is happening</div>
+        <div class="phase" id="phase"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="keys">Keys: 1 to 4 protect a population · Space run or pause · R reset · T takeaways · F full screen</span>
+    <span>Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener">Dutton Lab</a> @ University of Florida</span>
+  </footer>
+</div>
+
+<div class="takeaways" id="tk">
+  <div class="label">Key takeaways</div>
+  <ol>
+    <li><b>Sources export, sinks import.</b> In a source, births exceed deaths (r above 0), so surplus animals disperse. In a sink, deaths exceed births (r below 0), and the population lasts only while immigrants keep arriving.</li>
+    <li><b>Protect the sources.</b> Keep populations 1 and 4 and the metapopulation persists. Keep only the two sinks and it declines toward extinction.</li>
+    <li><b>Open versus closed populations.</b> Set dispersal to 0 with nothing protected. Each population now runs on births and deaths alone (the BD model), and the sinks drain away. Dispersal is the I and E in BIDE.</li>
+    <li><b>A crowded patch is not always a good patch.</b> A sink can hold many animals while losing more than it produces. Protecting poor habitat by mistake risks an ecological trap.</li>
+  </ol>
+  <div class="refs">Each population grows as N + rN(1 − N/K) when r is above 0 and declines as N + rN when r is below 0, with K = 500. Each year the dispersal share of every population leaves and is split evenly among the other surviving populations. Source-sink dynamics follow Pulliam 1988, American Naturalist 132:652.</div>
+</div>
+
+<script>
+const K = 500, YEARS = 150, LOSS = 20, N0 = 200;
+const P = [
+  { r: 0.03, x:.76, y:.31, color:'#2F6FB3' },
+  { r:-0.04, x:.76, y:.77, color:'#C2457A' },
+  { r:-0.02, x:.24, y:.31, color:'#C9770F' },
+  { r: 0.02, x:.24, y:.77, color:'#5B4B8A' },
+];
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const FS = () => parseFloat(getComputedStyle(document.body).fontSize);
+let hist = null, t = 0, running = false, last = 0, acc = 0, movers = [], sim = null;
+
+P.forEach((p, i) => {
+  const d = document.createElement('div'); d.className = 'prow';
+  d.innerHTML = `<button class="pb" id="pb${i}"><span class="sw" style="background:${p.color}"></span>Pop. ${i + 1}<span class="k">${i + 1}</span></button><input type="range" id="r${i}" min="-0.06" max="0.06" step="0.01" value="${p.r}"><span class="rv" id="rv${i}"></span>`;
+  $('patches').appendChild(d);
+  $('pb' + i).onclick = () => toggleProtect(i);
+  $('r' + i).oninput = () => { if (!running) { clearRun(); draw(); } };
+});
+$('sD').oninput = () => { if (!running) { clearRun(); draw(); } };
+const prot = [false, false, false, false];
+function toggleProtect(i){
+  if (running) return;
+  if (!prot[i] && prot.filter(Boolean).length >= 2) return;
+  prot[i] = !prot[i]; clearRun(); draw();
+}
+const rOf = i => +$('r' + i).value;
+
+function simulate(){
+  const r = P.map((_, i) => rOf(i)), m = +$('sD').value / 100, any = prot.some(Boolean), pr = prot.slice();
+  let N = [N0, N0, N0, N0]; const h = [N.slice()];
+  for (let y = 1; y <= YEARS; y++){
+    const alive = P.map((_, i) => !any || pr[i] || y < LOSS);
+    const G = N.map((n, i) => alive[i] ? Math.max(0, n + (r[i] > 0 ? r[i] * n * (1 - n / K) : r[i] * n)) : 0);
+    const cnt = alive.filter(Boolean).length, out = G.map(n => n * m);
+    N = G.map((n, i) => {
+      if (!alive[i]) return 0;
+      let inc = 0; if (cnt > 1) G.forEach((_, j) => { if (j !== i && alive[j]) inc += out[j] / (cnt - 1); });
+      return n - (cnt > 1 ? out[i] : 0) + inc;
+    }).map(n => n < 1 ? 0 : n);
+    h.push(N.slice());
+  }
+  return { h, any, pr, r, m };
+}
+function clearRun(){ hist = null; sim = null; t = 0; acc = 0; movers = []; setLocked(false); $('btnRun').textContent = '▶ Run'; $('btnRun').classList.remove('on'); }
+function setLocked(on){ P.forEach((_, i) => $('r' + i).disabled = on); $('sD').disabled = on; }
+function stop(){ running = false; $('btnRun').textContent = t > 0 && t < YEARS ? '▶ Resume' : '▶ Run'; $('btnRun').classList.remove('on'); }
+function toggleRun(){
+  if (running){ stop(); return; }
+  if (!sim || t >= YEARS){ sim = simulate(); hist = sim.h; t = 0; movers = []; }
+  running = true; setLocked(true); $('btnRun').textContent = '❚❚ Pause'; $('btnRun').classList.add('on');
+  last = performance.now(); requestAnimationFrame(tick);
+}
+function reset(){
+  running = false; prot.fill(false);
+  P.forEach((p, i) => $('r' + i).value = p.r); $('sD').value = 1;
+  clearRun(); draw();
+}
+function tick(now){
+  if (!running) return;
+  acc += (now - last) / 1000; last = now;
+  const step = 1 / 14;
+  while (acc >= step && t < YEARS){
+    acc -= step; t++;
+    const N = hist[t];
+    if (sim.m > 0) P.forEach((_, i) => {
+      if (N[i] > 0 && Math.random() < .55 * Math.sqrt(N[i] / K) * Math.min(1, sim.m * 100)){
+        const o = [0, 1, 2, 3].filter(j => j !== i && (!sim.any || sim.pr[j] || t < LOSS));
+        if (o.length) movers.push({ a:i, b:o[Math.floor(Math.random() * o.length)], p:0, bend:(Math.random() - .5) * .16 });
+      }
+    });
+  }
+  movers.forEach(mv => mv.p += .035); movers = movers.filter(mv => mv.p < 1);
+  draw();
+  if (t >= YEARS){ movers = []; stop(); setLocked(false); draw(); return; }
+  requestAnimationFrame(tick);
+}
+
+function ctx(c){
+  const b = c.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+  c.width = Math.max(1, b.width * d); c.height = Math.max(1, b.height * d);
+  const x = c.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0);
+  return [x, b.width, b.height];
+}
+// fixed pseudo-random numbers so the landscape does not flicker between frames
+const RND = []; { let s = 7; for (let i = 0; i < 4000; i++){ s = (s * 16807) % 2147483647; RND.push(s / 2147483647); } }
+function drawScene(){
+  const [x, W, H] = ctx($('scene')), fs = FS();
+  // farmland
+  x.fillStyle = '#e7dfbf'; x.fillRect(0, 0, W, H);
+  const fc = ['#e2d9b3', '#ebe4c8', '#dcd6a8', '#e9dfb9', '#d9d2a2'];
+  let k = 0;
+  for (let gy = 0; gy < 5; gy++) for (let gx = 0; gx < 8; gx++){
+    x.fillStyle = fc[Math.floor(RND[k++] * fc.length)];
+    x.fillRect(gx * W / 8 + 1, gy * H / 5 + 1, W / 8 - 2, H / 5 - 2);
+  }
+  const N = hist ? hist[t] : [N0, N0, N0, N0];
+  const any = sim ? sim.any : prot.some(Boolean), pr = sim ? sim.pr : prot;
+  const base = Math.min(W * .13, H * .185);
+  const F = `"Century Gothic","URW Gothic","Segoe UI",sans-serif`;
+  // dispersal routes
+  x.setLineDash([fs * .3, fs * .35]); x.lineWidth = Math.max(1.5, fs * .1); x.strokeStyle = 'rgba(31,42,29,.22)';
+  for (let i = 0; i < 4; i++) for (let j = i + 1; j < 4; j++){ x.beginPath(); x.moveTo(P[i].x * W, P[i].y * H); x.lineTo(P[j].x * W, P[j].y * H); x.stroke(); }
+  x.setLineDash([]);
+  P.forEach((p, i) => {
+    const cx = p.x * W, cy = p.y * H, r = rOf(i), gone = hist && any && !pr[i] && t >= LOSS;
+    // habitat footprint
+    x.beginPath(); x.arc(cx, cy, base, 0, 7);
+    x.fillStyle = gone ? '#cdbf96' : '#cfe3c4'; x.fill();
+    if (pr[i]){ x.lineWidth = Math.max(4, fs * .32); x.strokeStyle = css('--accent'); x.stroke(); }
+    else { x.lineWidth = Math.max(1.5, fs * .1); x.strokeStyle = gone ? '#a8996e' : '#9db88f'; x.setLineDash([fs * .35, fs * .3]); x.stroke(); x.setLineDash([]); }
+    // animals as a disc whose area tracks population size
+    if (!gone && N[i] > 0){
+      x.beginPath(); x.arc(cx, cy, Math.max(fs * .35, base * .92 * Math.sqrt(N[i] / K)), 0, 7);
+      x.fillStyle = r > 0 ? css('--src') : r < 0 ? css('--sink') : '#6b7568'; x.globalAlpha = .88; x.fill(); x.globalAlpha = 1;
+    }
+    // labels
+    x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.font = `700 ${fs * (gone ? .95 : 1.25)}px ${F}`; x.lineWidth = fs * .22; x.strokeStyle = 'rgba(255,255,255,.9)'; x.lineJoin = 'round';
+    const txt = gone ? 'habitat lost' : N[i] > 0 ? Math.round(N[i]).toString() : 'extinct';
+    x.fillStyle = gone || N[i] <= 0 ? css('--sink') : css('--ink');
+    x.strokeText(txt, cx, cy); x.fillText(txt, cx, cy);
+    x.font = `700 ${fs * .8}px ${F}`;
+    const tag = `Pop. ${i + 1}  ` + (r > 0 ? 'source' : r < 0 ? 'sink' : 'r = 0') + (pr[i] ? '  · protected' : '');
+    const ty = cy - base - fs * .62;
+    x.strokeText(tag, cx, ty); x.fillStyle = p.color; x.fillText(tag, cx, ty);
+  });
+  // dispersers
+  movers.forEach(mv => {
+    const a = P[mv.a], b = P[mv.b], mx = (a.x + b.x) / 2 - (b.y - a.y) * mv.bend, my = (a.y + b.y) / 2 + (b.x - a.x) * mv.bend, q = mv.p;
+    const px = ((1 - q) * (1 - q) * a.x + 2 * (1 - q) * q * mx + q * q * b.x) * W, py = ((1 - q) * (1 - q) * a.y + 2 * (1 - q) * q * my + q * q * b.y) * H;
+    x.beginPath(); x.arc(px, py, Math.max(3, fs * .24), 0, 7); x.fillStyle = '#fff'; x.fill(); x.lineWidth = Math.max(1.5, fs * .09); x.strokeStyle = css('--ink'); x.stroke();
+  });
+  x.font = `700 ${fs * .68}px ${F}`; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillStyle = css('--ink2');
+  x.fillText('disc size = number of animals', W / 2, H * .5 - fs * .5);
+  x.fillText('white dots = dispersers', W / 2, H * .5 + fs * .5);
+}
+function drawChart(){
+  const [x, W, H] = ctx($('chart')), fs = FS();
+  const L = fs * 2.6, R = fs * 3.6, T = fs * .5, B = fs * 1.5, gw = W - L - R, gh = H - T - B, max = K * 1.05;
+  const F = `"Century Gothic","URW Gothic","Segoe UI",sans-serif`;
+  x.clearRect(0, 0, W, H); x.font = `${fs * .72}px ${F}`;
+  [0, 250, 500].forEach(v => {
+    const y = T + gh * (1 - v / max);
+    x.strokeStyle = '#e3e8df'; x.lineWidth = 1; x.beginPath(); x.moveTo(L, y); x.lineTo(L + gw, y); x.stroke();
+    x.fillStyle = css('--dim'); x.textAlign = 'right'; x.textBaseline = 'middle'; x.fillText(v, L - fs * .35, y);
+  });
+  x.strokeStyle = css('--ink'); x.lineWidth = 2; x.beginPath(); x.moveTo(L, T + gh); x.lineTo(L + gw, T + gh); x.stroke();
+  x.textAlign = 'center'; x.textBaseline = 'top'; x.fillStyle = css('--dim');
+  [0, 50, 100, 150].forEach(g => x.fillText(g === 150 ? '150 years' : g, L + gw * g / YEARS, T + gh + fs * .3));
+  const any = sim ? sim.any : prot.some(Boolean);
+  if (any){
+    const lx = L + gw * LOSS / YEARS;
+    x.strokeStyle = css('--sink'); x.lineWidth = Math.max(1.5, fs * .1); x.setLineDash([fs * .3, fs * .3]); x.beginPath(); x.moveTo(lx, T); x.lineTo(lx, T + gh); x.stroke(); x.setLineDash([]);
+    x.fillStyle = css('--sink'); x.textAlign = 'left'; x.textBaseline = 'top'; x.font = `700 ${fs * .7}px ${F}`; x.fillText('unprotected habitat lost', lx + fs * .3, T);
+  }
+  if (!hist) return;
+  const ends = [];
+  P.forEach((p, i) => {
+    x.beginPath();
+    for (let k = 0; k <= t; k++){ const px = L + gw * k / YEARS, py = T + gh * (1 - hist[k][i] / max); k ? x.lineTo(px, py) : x.moveTo(px, py); }
+    x.strokeStyle = p.color; x.lineWidth = Math.max(3, fs * .2); x.lineJoin = 'round'; x.stroke();
+    if (hist[t][i] > 0) ends.push({ i, y: T + gh * (1 - hist[t][i] / max) });
+  });
+  // direct labels, nudged apart
+  ends.sort((a, b) => a.y - b.y);
+  for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < fs * .85) ends[k].y = ends[k - 1].y + fs * .85;
+  const over = ends.length ? ends[ends.length - 1].y - (T + gh) : 0;
+  if (over > 0) ends.forEach(e => e.y -= over);
+  x.font = `700 ${fs * .74}px ${F}`; x.textAlign = 'left'; x.textBaseline = 'middle';
+  ends.forEach(e => { x.fillStyle = P[e.i].color; x.fillText('Pop. ' + (e.i + 1), L + gw * t / YEARS + fs * .35, e.y); });
+}
+function draw(){
+  P.forEach((p, i) => {
+    const r = rOf(i);
+    $('rv' + i).textContent = (r > 0 ? '+' : r < 0 ? '−' : '') + Math.abs(r).toFixed(2);
+    $('rv' + i).style.color = r > 0 ? css('--src') : r < 0 ? css('--sink') : css('--dim');
+    $('pb' + i).classList.toggle('on', prot[i]);
+  });
+  $('cvD').textContent = (+$('sD').value).toFixed(1) + '% per year';
+  const N = hist ? hist[t] : [N0, N0, N0, N0], tot = N.reduce((a, b) => a + b, 0), aliveN = N.filter(n => n > 0).length;
+  $('yrLbl').textContent = 'Year ' + t;
+  $('stN').textContent = Math.round(tot).toLocaleString();
+  $('stP').textContent = aliveN + ' of 4';
+  $('stP').style.color = aliveN >= 3 ? css('--src') : aliveN >= 1 ? '#C9770F' : css('--sink');
+  $('phase').innerHTML = phase(tot);
+  drawScene(); drawChart();
+}
+function phase(tot){
+  const n = prot.filter(Boolean).length;
+  if (!hist){
+    if (n === 0) return 'Pick two populations to protect.<small>Click a population button, then press Run. With none protected, all habitat stays.</small>';
+    if (n === 1) return 'Pick one more population.<small>You can afford to protect two.</small>';
+    return 'Ready. Press Run.<small>Unprotected habitat disappears in year 20.</small>';
+  }
+  const srcKept = sim.r.filter((r, i) => r > 0 && (!sim.any || sim.pr[i])).length;
+  if (sim.any && t < LOSS) return 'All four populations are linked.<small>Sources send out surplus animals. Sinks are shrinking even with immigrants.</small>';
+  if (t < YEARS){
+    if (tot < 1) return 'The metapopulation is extinct.<small>No surviving population could sustain itself.</small>';
+    if (srcKept === 0) return 'No source is left.<small>Deaths exceed births everywhere, so every population is draining away.</small>';
+    if (srcKept === 1) return 'One source is carrying everything.<small>Its surplus keeps the other population alive.</small>';
+    return 'The sources are growing.<small>Births exceed deaths, and dispersers move between the protected patches.</small>';
+  }
+  if (tot < 1) return 'The metapopulation went extinct.<small>Without a source there are no surplus animals to keep the others going.</small>';
+  if (srcKept === 0) return `Still falling: ${Math.round(tot)} animals left.<small>Sinks cannot last without immigrants from a source.</small>`;
+  if (srcKept === 1) return `It persists, with ${Math.round(tot).toLocaleString()} animals.<small>One source supports it all. Lose that patch and the rest follow.</small>`;
+  return `The metapopulation persists, with ${Math.round(tot).toLocaleString()} animals.<small>${sim.any ? 'Both protected populations are sources.' : 'Sources keep the sinks supplied with immigrants.'}</small>`;
+}
+function toggleTk(){ const on = $('tk').classList.toggle('show'); $('tkBtn').classList.toggle('on', on); }
+function toggleFs(){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' && e.key.startsWith('Arrow')) return;
+  if (/^[1-4]$/.test(e.key)) toggleProtect(+e.key - 1);
+  else if (e.key === ' ') { e.preventDefault(); toggleRun(); }
+  else if (e.key === 'r' || e.key === 'R') reset();
+  else if (e.key === 't' || e.key === 'T') toggleTk();
+  else if (e.key === 'f' || e.key === 'F') toggleFs();
+  else if (e.key === 'Escape') { $('tk').classList.remove('show'); $('tkBtn').classList.remove('on'); }
+});
+window.addEventListener('resize', draw);
+document.addEventListener('fullscreenchange', () => setTimeout(draw, 100));
+draw();
+</script>
+</body>
+</html>
