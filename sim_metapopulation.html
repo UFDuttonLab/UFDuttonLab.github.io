@@ -87,7 +87,7 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
   <header>
     <div>
       <h1>Metapopulation Simulator</h1>
-      <div class="sub">Four populations linked by dispersal. You can protect two. The other habitat is lost in year 20.</div>
+      <div class="sub">Four populations linked by dispersal. You can protect two. Other habitat is lost in year 20. Chance makes every run different.</div>
     </div>
     <div class="hbtns">
       <button class="hbtn tk" id="tkBtn" onclick="toggleTk()">Key takeaways</button>
@@ -143,15 +143,15 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
   <div class="label">Key takeaways</div>
   <ol>
     <li><b>Sources export, sinks import.</b> In a source, births exceed deaths (r above 0), so surplus animals disperse. In a sink, deaths exceed births (r below 0), and the population lasts only while immigrants keep arriving.</li>
-    <li><b>Protect the sources.</b> Keep populations 1 and 4 and the metapopulation persists. Keep only the two sinks and it declines toward extinction.</li>
-    <li><b>Open versus closed populations.</b> Set dispersal to 0 with nothing protected. Each population now runs on births and deaths alone (the BD model), and the sinks drain away. Dispersal is the I and E in BIDE.</li>
+    <li><b>Protect the sources.</b> Keep populations 1 and 4 and the metapopulation persists. Keep only the two sinks and both go extinct, usually within 150 to 250 years.</li>
+    <li><b>Open versus closed populations.</b> Set dispersal to 0 with nothing protected. Each population now runs on births and deaths alone (the BD model), and the sinks go extinct. Dispersal is the I and E in BIDE.</li>
     <li><b>A crowded patch is not always a good patch.</b> A sink can hold many animals while losing more than it produces. Protecting poor habitat by mistake risks an ecological trap.</li>
   </ol>
-  <div class="refs">Each population grows as N + rN(1 − N/K) when r is above 0 and declines as N + rN when r is below 0, with K = 500. Each year the dispersal share of every population leaves and is split evenly among the other surviving populations. Source-sink dynamics follow Pulliam 1988, American Naturalist 132:652.</div>
+  <div class="refs">The model follows individual animals and includes chance, so no two runs are identical. Each year every animal has a 10% chance of dying. Its chance of leaving one offspring is 10% + r(1 − N/K) where r is above 0 and 10% + r where r is below 0, with K = 500, so the expected yearly change is rN(1 − N/K) or rN. Each animal then leaves with the dispersal probability and settles in one of the other surviving populations at random. Source-sink dynamics follow Pulliam 1988, American Naturalist 132:652.</div>
 </div>
 
 <script>
-const K = 500, YEARS = 150, LOSS = 20, N0 = 200;
+const K = 500, YEARS = 300, LOSS = 20, N0 = 200, D0 = 0.10;
 const P = [
   { r: 0.03, x:.76, y:.31, color:'#2F6FB3' },
   { r:-0.04, x:.76, y:.77, color:'#C2457A' },
@@ -179,21 +179,32 @@ function toggleProtect(i){
 }
 const rOf = i => +$('r' + i).value;
 
+// Individual-based and stochastic. Every animal has a 10% chance of dying each year (D0).
+// Its chance of leaving one offspring is D0 + r(1 - N/K) where r is above 0, and D0 + r where r is below 0,
+// so the expected change is the same rN(1 - N/K) or rN as in lecture. Chance does the rest.
+function draw1(n, p){ let k = 0; for (let i = 0; i < n; i++) if (Math.random() < p) k++; return k; }
 function simulate(){
   const r = P.map((_, i) => rOf(i)), m = +$('sD').value / 100, any = prot.some(Boolean), pr = prot.slice();
-  let N = [N0, N0, N0, N0]; const h = [N.slice()];
+  let N = [N0, N0, N0, N0]; const h = [N.slice()], ext = [null, null, null, null]; let metaExt = null;
   for (let y = 1; y <= YEARS; y++){
     const alive = P.map((_, i) => !any || pr[i] || y < LOSS);
-    const G = N.map((n, i) => alive[i] ? Math.max(0, n + (r[i] > 0 ? r[i] * n * (1 - n / K) : r[i] * n)) : 0);
-    const cnt = alive.filter(Boolean).length, out = G.map(n => n * m);
-    N = G.map((n, i) => {
+    const G = N.map((n, i) => {
       if (!alive[i]) return 0;
-      let inc = 0; if (cnt > 1) G.forEach((_, j) => { if (j !== i && alive[j]) inc += out[j] / (cnt - 1); });
-      return n - (cnt > 1 ? out[i] : 0) + inc;
-    }).map(n => n < 1 ? 0 : n);
+      const b = Math.max(0, D0 + (r[i] > 0 ? r[i] * (1 - n / K) : r[i]));
+      return Math.max(0, n + draw1(n, b) - draw1(n, D0));
+    });
+    const cnt = alive.filter(Boolean).length, nx = G.slice();
+    if (cnt > 1) G.forEach((g, i) => {
+      if (!alive[i]) return;
+      const em = draw1(g, m), others = [0, 1, 2, 3].filter(j => j !== i && alive[j]);
+      nx[i] -= em; for (let k = 0; k < em; k++) nx[others[Math.floor(Math.random() * others.length)]]++;
+    });
+    N = nx;
+    N.forEach((n, i) => { if (alive[i]){ if (n === 0 && ext[i] === null) ext[i] = y; if (n > 0) ext[i] = null; } });
+    if (metaExt === null && N.reduce((a, b) => a + b, 0) === 0) metaExt = y;
     h.push(N.slice());
   }
-  return { h, any, pr, r, m };
+  return { h, any, pr, r, m, ext, metaExt };
 }
 function clearRun(){ hist = null; sim = null; t = 0; acc = 0; movers = []; setLocked(false); $('btnRun').textContent = '▶ Run'; $('btnRun').classList.remove('on'); }
 function setLocked(on){ P.forEach((_, i) => $('r' + i).disabled = on); $('sD').disabled = on; }
@@ -212,7 +223,7 @@ function reset(){
 function tick(now){
   if (!running) return;
   acc += (now - last) / 1000; last = now;
-  const step = 1 / 14;
+  const step = 1 / 26;
   while (acc >= step && t < YEARS){
     acc -= step; t++;
     const N = hist[t];
@@ -223,7 +234,7 @@ function tick(now){
       }
     });
   }
-  movers.forEach(mv => mv.p += .035); movers = movers.filter(mv => mv.p < 1);
+  movers.forEach(mv => mv.p += .05); movers = movers.filter(mv => mv.p < 1);
   draw();
   if (t >= YEARS){ movers = []; stop(); setLocked(false); draw(); return; }
   requestAnimationFrame(tick);
@@ -290,7 +301,7 @@ function drawScene(){
 }
 function drawChart(){
   const [x, W, H] = ctx($('chart')), fs = FS();
-  const L = fs * 2.6, R = fs * 3.6, T = fs * .5, B = fs * 1.5, gw = W - L - R, gh = H - T - B, max = K * 1.05;
+  const L = fs * 2.6, R = fs * 3.6, T = fs * .5, B = fs * 1.5, gw = W - L - R, gh = H - T - B, max = K * 1.12;
   const F = `"Century Gothic","URW Gothic","Segoe UI",sans-serif`;
   x.clearRect(0, 0, W, H); x.font = `${fs * .72}px ${F}`;
   [0, 250, 500].forEach(v => {
@@ -300,7 +311,7 @@ function drawChart(){
   });
   x.strokeStyle = css('--ink'); x.lineWidth = 2; x.beginPath(); x.moveTo(L, T + gh); x.lineTo(L + gw, T + gh); x.stroke();
   x.textAlign = 'center'; x.textBaseline = 'top'; x.fillStyle = css('--dim');
-  [0, 50, 100, 150].forEach(g => x.fillText(g === 150 ? '150 years' : g, L + gw * g / YEARS, T + gh + fs * .3));
+  [0, 100, 200, 300].forEach(g => x.fillText(g === 300 ? '300 years' : g, L + gw * g / YEARS, T + gh + fs * .3));
   const any = sim ? sim.any : prot.some(Boolean);
   if (any){
     const lx = L + gw * LOSS / YEARS;
@@ -347,17 +358,18 @@ function phase(tot){
     return 'Ready. Press Run.<small>Unprotected habitat disappears in year 20.</small>';
   }
   const srcKept = sim.r.filter((r, i) => r > 0 && (!sim.any || sim.pr[i])).length;
+  const N = hist[t], gone = [0, 1, 2, 3].filter(i => (!sim.any || sim.pr[i]) && N[i] === 0 && sim.ext[i] !== null && sim.ext[i] <= t);
+  const goneTxt = gone.length ? ' Population ' + gone.map(i => (i + 1) + ' went extinct in year ' + sim.ext[i]).join(', population ') + '.' : '';
+  if (sim.metaExt !== null && t >= sim.metaExt) return `The metapopulation went extinct in year ${sim.metaExt}.<small>No surviving population could sustain itself, and no source was left to send immigrants.</small>`;
   if (sim.any && t < LOSS) return 'All four populations are linked.<small>Sources send out surplus animals. Sinks are shrinking even with immigrants.</small>';
   if (t < YEARS){
-    if (tot < 1) return 'The metapopulation is extinct.<small>No surviving population could sustain itself.</small>';
-    if (srcKept === 0) return 'No source is left.<small>Deaths exceed births everywhere, so every population is draining away.</small>';
-    if (srcKept === 1) return 'One source is carrying everything.<small>Its surplus keeps the other population alive.</small>';
-    return 'The sources are growing.<small>Births exceed deaths, and dispersers move between the protected patches.</small>';
+    if (srcKept === 0) return 'No source is left.<small>Deaths exceed births everywhere, so every population is draining away.' + goneTxt + '</small>';
+    if (srcKept === 1) return 'One source is carrying everything.<small>Its surplus keeps the other population supplied.' + goneTxt + '</small>';
+    return 'The sources are holding.<small>Births exceed deaths, and dispersers move between patches.' + goneTxt + '</small>';
   }
-  if (tot < 1) return 'The metapopulation went extinct.<small>Without a source there are no surplus animals to keep the others going.</small>';
-  if (srcKept === 0) return `Still falling: ${Math.round(tot)} animals left.<small>Sinks cannot last without immigrants from a source.</small>`;
-  if (srcKept === 1) return `It persists, with ${Math.round(tot).toLocaleString()} animals.<small>One source supports it all. Lose that patch and the rest follow.</small>`;
-  return `The metapopulation persists, with ${Math.round(tot).toLocaleString()} animals.<small>${sim.any ? 'Both protected populations are sources.' : 'Sources keep the sinks supplied with immigrants.'}</small>`;
+  if (srcKept === 0) return `Still falling: ${Math.round(tot)} animals left in year 300.<small>Sinks cannot last without immigrants from a source.${goneTxt}</small>`;
+  if (srcKept === 1) return `It persists, with ${Math.round(tot).toLocaleString()} animals.<small>One source supports it all. Lose that patch and the rest follow.${goneTxt}</small>`;
+  return `The metapopulation persists, with ${Math.round(tot).toLocaleString()} animals.<small>${sim.any ? 'Both protected populations are sources.' : 'Sources keep the sinks supplied with immigrants.'}${goneTxt}</small>`;
 }
 function toggleTk(){ const on = $('tk').classList.toggle('show'); $('tkBtn').classList.toggle('on', on); }
 function toggleFs(){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
