@@ -8,8 +8,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#ffffff;--panel:#f3f6f8;--line:#d3dbe2;--ink:#1b2530;--ink2:#46525e;--dim:#66717c;
-  --accent:#1D6B62;
-  --atm:#E07B24;--ocean:#2F6FB3;--soil:#7B5BA6;--land:#2E8B4A;--fossil:#C0392B;
+  --accent:#1D6B62;--atm:#E07B24;--ocean:#2F6FB3;--fossil:#2b2b2b;
   --fs:clamp(16px, calc(0.95vw + 0.75vh), 28px);
 }
 html,body{height:100%}
@@ -22,42 +21,39 @@ h1{font-size:1.9em;font-weight:700;color:var(--accent);letter-spacing:.01em}
 .hbtn{font:inherit;font-size:.8em;font-weight:700;padding:.45em .9em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
 .hbtn:hover,.hbtn.on{background:var(--accent);color:#fff}
 main{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:1em;min-height:0}
-.charts{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1.55fr);gap:.8em;min-height:0}
+.left{display:grid;grid-template-rows:minmax(0,1.35fr) minmax(0,1fr);gap:.8em;min-height:0}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:.6em;padding:.8em 1em;min-height:0}
 .label{font-size:.78em;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35em}
 .chart-card{display:flex;flex-direction:column;background:#fff}
-.chart-wrap{position:relative;flex:1;min-height:0}
+.scene-card{padding:0;overflow:hidden;position:relative}
+.wrap{position:relative;flex:1;min-height:0;height:100%}
 canvas{position:absolute;inset:0;width:100%;height:100%}
 .side{display:flex;flex-direction:column;gap:.6em;min-height:0}
 .side .card{padding:.6em .9em}
 .ctrl{margin-bottom:.35em}
 .ctrl-top{display:flex;justify-content:space-between;align-items:baseline}
 .ctrl-name{font-weight:700;font-size:1em}
-.ctrl-val{font-weight:700;font-size:1.3em;font-variant-numeric:tabular-nums}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.35em 0 .1em;cursor:pointer}
-#sFossil{background:linear-gradient(90deg,#f1ddd9,#C0392B)}
-#sDefor{background:linear-gradient(90deg,#dceee1,#8a5a2b)}
+.ctrl-val{font-weight:700;font-size:1.25em;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:.7em;border-radius:.35em;margin:.35em 0 .1em;cursor:pointer;background:linear-gradient(90deg,#d9d9d9,#2b2b2b)}
+input[type=range]:disabled{opacity:.45;cursor:not-allowed}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.35em;height:1.35em;border-radius:50%;background:#fff;border:.22em solid var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.3)}
 input[type=range]::-moz-range-thumb{width:1.1em;height:1.1em;border-radius:50%;background:#fff;border:.22em solid var(--ink)}
-.runbar{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:.35em;margin-top:.45em}
-.rb{font:inherit;font-size:.78em;font-weight:700;padding:.45em .3em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
+.runbar{display:grid;grid-template-columns:2fr 1fr;gap:.4em;margin-top:.5em}
+.rb{font:inherit;font-size:.9em;font-weight:700;padding:.45em .3em;border:2px solid var(--accent);border-radius:.4em;background:#fff;color:var(--accent);cursor:pointer}
 .rb:hover,.rb.on{background:var(--accent);color:#fff}
-.rb.reset{border-color:var(--fossil);color:var(--fossil)}
-.rb.reset:hover{background:var(--fossil);color:#fff}
-.scen{display:grid;grid-template-columns:1fr 1fr;gap:.35em}
-.sb{font:inherit;font-size:.74em;font-weight:700;padding:.4em .45em;border:2px solid var(--line);border-radius:.35em;background:#fff;color:var(--ink2);cursor:pointer;text-align:left;display:flex;align-items:center;gap:.4em;line-height:1.1}
-.sb .k{margin-left:auto;font-size:.8em;color:var(--dim);font-weight:400}
-.sb:hover{border-color:var(--ink2)}
-.sb.active{border-color:var(--ink);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:.4em}
-.stat{background:#fff;border:1px solid var(--line);border-radius:.45em;padding:.3em .6em}
-.stat .n{font-size:1.45em;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.rb.reset{border-color:#C0392B;color:#C0392B}
+.rb.reset:hover{background:#C0392B;color:#fff}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:.4em}
+.stat{background:#fff;border:1px solid var(--line);border-radius:.45em;padding:.35em .6em}
+.stat .n{font-size:1.8em;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.05}
 .stat .t{font-size:.78em;color:var(--ink2);font-weight:700}
-.split{margin-top:.5em}
-.split .bar{display:flex;height:1.1em;border-radius:.4em;overflow:hidden;background:#e6ebef}
-.split .bar i{display:block;height:100%;transition:width .3s}
-.split .leg{display:flex;justify-content:space-between;font-size:.74em;font-weight:700;margin-top:.25em}
-.total{font-size:.78em;font-weight:700;color:var(--ink2);margin-top:.45em}
+.stat .x{font-size:.72em;color:var(--dim);font-weight:700}
+.phase{font-size:1.05em;font-weight:700;line-height:1.3}
+.phase small{display:block;font-size:.78em;color:var(--ink2);font-weight:400;margin-top:.2em}
+.where{margin-top:.5em}
+.where .bar{display:flex;height:1.1em;border-radius:.4em;overflow:hidden;background:#e6ebef}
+.where .bar i{display:block;height:100%;transition:width .2s}
+.where .leg{display:flex;justify-content:space-between;font-size:.74em;font-weight:700;margin-top:.25em}
 .refs{font-size:.72em;color:var(--dim);margin-top:.7em;line-height:1.35}
 footer{display:flex;justify-content:space-between;font-size:.68em;color:var(--dim)}
 footer a{color:var(--accent);font-weight:700;text-decoration:none}
@@ -70,8 +66,8 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
   :root{--fs:15px}
   .app{height:auto;min-height:100vh}
   main{grid-template-columns:1fr}
-  .charts{grid-template-rows:auto auto}
-  .chart-wrap{height:55vw;min-height:240px;flex:none}
+  .left{grid-template-rows:auto auto}
+  .wrap{height:60vw;min-height:240px;flex:none}
   header{flex-wrap:wrap}
   .hbtn.fs{display:none}
   .takeaways{position:static;display:block;box-shadow:none;margin-top:.5em}
@@ -85,7 +81,7 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
   <header>
     <div>
       <h1>Carbon Cycle Simulator</h1>
-      <div class="sub">Burn fossil fuels and clear forests, then follow where the carbon goes</div>
+      <div class="sub">Dig up fossil carbon, burn it, and watch the air and ocean find a new balance</div>
     </div>
     <div class="hbtns">
       <button class="hbtn tk" id="tkBtn" onclick="toggleTk()">Key takeaways</button>
@@ -94,59 +90,52 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
   </header>
 
   <main>
-    <div class="charts">
+    <div class="left">
+      <section class="card scene-card"><div class="wrap"><canvas id="scene"></canvas></div></section>
       <section class="card chart-card">
-        <div class="label">Carbon dioxide in the air</div>
-        <div class="chart-wrap"><canvas id="ppmChart"></canvas></div>
-      </section>
-      <section class="card chart-card">
-        <div class="label">Where the carbon went: change in each reservoir since 2025</div>
-        <div class="chart-wrap"><canvas id="chgChart"></canvas></div>
+        <div class="label">CO₂ in the air and ocean pH over time</div>
+        <div class="wrap"><canvas id="chart"></canvas></div>
       </section>
     </div>
 
     <section class="side">
       <div class="card">
         <div class="ctrl">
-          <div class="ctrl-top"><span class="ctrl-name">Fossil fuel burning</span><span class="ctrl-val" id="cvF" style="color:var(--fossil)"></span></div>
-          <input type="range" id="sFossil" min="0" max="25" step="0.5" value="10">
+          <div class="ctrl-top"><span class="ctrl-name">Fossil carbon we burn</span><span class="ctrl-val" id="cvE"></span></div>
+          <input type="range" id="sE" min="500" max="5000" step="250" value="2000">
         </div>
         <div class="ctrl" style="margin-bottom:0">
-          <div class="ctrl-top"><span class="ctrl-name">Deforestation</span><span class="ctrl-val" id="cvD" style="color:#8a5a2b"></span></div>
-          <input type="range" id="sDefor" min="0" max="5" step="0.1" value="1">
+          <div class="ctrl-top"><span class="ctrl-name">Burn rate</span><span class="ctrl-val" id="cvR"></span></div>
+          <input type="range" id="sR" min="5" max="25" step="1" value="10">
         </div>
         <div class="runbar">
           <button class="rb" id="btnRun" onclick="toggleRun()">▶ Run</button>
-          <button class="rb" onclick="runTo(2100)">2100</button>
-          <button class="rb" onclick="runTo(2300)">2300</button>
           <button class="rb reset" onclick="resetSim()">Reset</button>
         </div>
       </div>
 
       <div class="card">
-        <div class="label">Scenarios</div>
-        <div class="scen" id="scen"></div>
+        <div class="label">Year <span id="yD">0</span></div>
+        <div class="big">
+          <div class="stat"><div class="n" id="stP" style="color:var(--atm)"></div><div class="t">CO₂ in the air (ppm)</div><div class="x">started at 280</div></div>
+          <div class="stat"><div class="n" id="stH" style="color:var(--ocean)"></div><div class="t">Ocean pH</div><div class="x" id="stA"></div></div>
+        </div>
+        <div class="where">
+          <div class="label" style="margin:0 0 .25em">Where the burned carbon is</div>
+          <div class="bar"><i id="bA" style="background:var(--atm)"></i><i id="bO" style="background:var(--ocean)"></i></div>
+          <div class="leg"><span style="color:var(--atm)" id="lA">Air</span><span style="color:var(--ocean)" id="lO">Ocean</span></div>
+        </div>
       </div>
 
       <div class="card">
-        <div class="label">Year <span id="yD">2025</span></div>
-        <div class="stats">
-          <div class="stat"><div class="n" id="stP" style="color:var(--atm)"></div><div class="t">CO₂ (ppm)</div></div>
-          <div class="stat"><div class="n" id="stW" style="color:var(--fossil)"></div><div class="t">Long-term warming</div></div>
-          <div class="stat"><div class="n" id="stE"></div><div class="t">Gt C released since 2025</div></div>
-          <div class="stat"><div class="n" id="stA" style="color:var(--atm)"></div><div class="t">Of that, still in the air</div></div>
-        </div>
-        <div class="split">
-          <div class="bar"><i id="bA" style="background:var(--atm)"></i><i id="bO" style="background:var(--ocean)"></i><i id="bL" style="background:var(--land)"></i></div>
-          <div class="leg"><span style="color:var(--atm)">Air</span><span style="color:var(--ocean)">Ocean</span><span style="color:var(--land)">Plants and soils</span></div>
-        </div>
-        <div class="total" id="tot"></div>
+        <div class="label">What is happening</div>
+        <div class="phase" id="phase"></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <span class="keys">Keys: Space run or pause · 1 to 4 scenarios · R reset · T takeaways · F full screen</span>
+    <span class="keys">Keys: Space run or pause · R reset · T takeaways · F full screen</span>
     <span>Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener">Dutton Lab</a> @ University of Florida</span>
   </footer>
 </div>
@@ -154,250 +143,291 @@ footer a{color:var(--accent);font-weight:700;text-decoration:none}
 <div class="takeaways" id="tk">
   <div class="label">Key takeaways</div>
   <ol>
-    <li><b>Carbon is conserved.</b> Burning moves carbon out of the ground; every tonne lost from fossil fuels shows up in the air, the ocean, plants or soils. The bottom chart always balances.</li>
-    <li><b>Fossil fuels add old carbon to the fast cycle.</b> Carbon locked away for millions of years returns to the atmosphere in decades, faster than natural sinks can absorb it.</li>
-    <li><b>The ocean is the biggest sink but it is slow.</b> It takes up carbon over decades to centuries, and the more it absorbs, the less it can take. The extra CO₂ also makes seawater more acidic.</li>
-    <li><b>Stopping emissions does not reset the clock.</b> When burning stops, CO₂ falls slowly and settles well above the preindustrial 280 ppm. The extra carbon stays in the fast cycle for thousands of years.</li>
+    <li><b>Burning moves carbon; it does not destroy it.</b> Every tonne taken from underground ends up in the air or the ocean. The number of dots never changes.</li>
+    <li><b>The ocean absorbs CO₂, but slowly.</b> It keeps taking up carbon for centuries, chasing a balance with the air, even after the burning stops.</li>
+    <li><b>The balance is a new normal.</b> Once all the fossil carbon is out and the ocean catches up, CO₂ stays far above where it started. Roughly a quarter to a third of what we burned stays in the air.</li>
+    <li><b>The ocean pays for it.</b> The carbon the ocean absorbs makes seawater more acidic, and the pH keeps falling after emissions stop. Only over tens of thousands of years do dissolving seafloor carbonate and rock weathering bring CO₂ back down.</li>
   </ol>
-  <div class="refs">Simplified five-box model with annual steps. Starting stocks (Gt C): atmosphere 890 (≈420 ppm), plants 550, soils 1,500, ocean 38,000, fossil fuels 4,000. 1 ppm CO₂ = 2.12 Gt C. Gross land fluxes after IPCC AR6 WG1 Fig. 5.12. Sinks start at today’s values (ocean ~2.5, land ~3.3 Gt C/yr; Friedlingstein et al. 2023, Global Carbon Budget); the land sink comes from CO₂ fertilization and weakens as plant and soil stocks catch up. Long-term warming = 3 °C per doubling of CO₂ (equilibrium climate sensitivity, IPCC AR6), CO₂ only.</div>
+  <div class="refs">Simplified two-box model (air and ocean); plants and soils are left out. The ocean takes up CO₂ in proportion to the gap between the air and the ocean’s own balance point, which rises as the ocean fills (buffering). Long-term air fraction of 20 to 35% follows Archer et al. 2009, Annu. Rev. Earth Planet. Sci. 37:117. Preindustrial surface ocean pH ≈ 8.2; today ≈ 8.05 (IPCC AR6). 1 ppm CO₂ = 2.12 Gt C. Each dot = 10 Gt C.</div>
 </div>
 
 <script>
-const GT_PPM = 2.12;
-const I = { atm:890, land:550, soil:1500, ocean:38000, fossil:4000 };
-const TOTAL = I.atm + I.land + I.soil + I.ocean + I.fossil;
-const START = 2025;
-const PH = 120, AR = 60, LF = 60, SR = 60;
-// Sinks calibrated to today: ocean ~2.5 and land ~3.3 Gt C/yr (Global Carbon Budget)
-const OCEAN_RATE = 2.5, OCEAN_BUFFER = 0.25, LAND_SINK = 3.3, LAND_T = 40;
-const C = { atm:'#E07B24', ocean:'#2F6FB3', soil:'#7B5BA6', land:'#2E8B4A', fossil:'#C0392B' };
-const NAMES = { atm:'Air', ocean:'Ocean', soil:'Soils', land:'Plants', fossil:'Fossil fuels' };
-
-const scenarios = [
-  { name:'Today’s rate',       f:10, d:1.0 },
-  { name:'Stop all emissions', f:0,  d:0   },
-  { name:'Double emissions',   f:20, d:2.0 },
-  { name:'Halve emissions',    f:5,  d:0.5 },
-];
-let active = 0;
-
-let S, yr, hist, cum, running = false, timer = null, runner = null;
+const GT_PPM = 2.12, P0 = 280, BUF = 2000, K = 0.03, PH0 = 8.2, DOT = 10, XMAX = 600;
 const $ = id => document.getElementById(id);
-const sF = $('sFossil'), sD = $('sDefor');
+const sE = $('sE'), sR = $('sR');
+let F, A, X, yr, hist, running = false, last = 0, acc = 0;
+let dots = [];
 
-scenarios.forEach((s, i) => {
-  const b = document.createElement('button');
-  b.className = 'sb';
-  b.innerHTML = `${s.name}<span class="k">${i+1}</span>`;
-  b.onclick = () => selectScen(i);
-  $('scen').appendChild(b);
-});
-function selectScen(i){ active = i; sF.value = scenarios[i].f; sD.value = scenarios[i].d; render(); }
-sF.oninput = sD.oninput = () => { active = -1; render(); };
+const ppmAir = () => P0 + A / GT_PPM;
+const ppmOcean = () => P0 * Math.exp(X / BUF);
+const pH = () => PH0 - 0.25 * Math.log2(ppmOcean() / P0);
 
 function step(){
-  const fb = Math.min(+sF.value, S.fossil);
-  const df = Math.min(+sD.value, Math.max(0, S.land - 10));
-  const lf = Math.max(0, S.land / I.land), sf = Math.max(0, S.soil / I.soil);
-  const photo = PH * lf, aResp = AR * lf, litter = LF * lf, sResp = SR * sf;
-  const regrowth = 6.0 * lf * Math.max(0, 1 - lf);
-  const ppm = S.atm / GT_PPM;
-  // CO2 fertilization: plants take up extra carbon at high CO2, until land stocks catch up
-  const landGain = (S.land + S.soil) - (I.land + I.soil);
-  const fert = LAND_SINK * Math.log(Math.max(ppm, 1) / 280) / Math.log(1.5) - landGain / LAND_T;
-  const eqPPM = 280 + (S.ocean - I.ocean) * OCEAN_BUFFER;
-  const ou = OCEAN_RATE * (ppm - eqPPM) / (420 - 280);
-  S.atm   += aResp + sResp + fb + df - photo - ou - regrowth - fert;
-  S.fossil -= fb;
-  S.land  += photo - aResp - litter - df + regrowth + fert;
-  S.soil  += litter - sResp;
-  S.ocean += ou;
-  cum += fb + df;
+  const b = Math.min(+sR.value, F);
+  F -= b; A += b;
+  const fl = K * (ppmAir() - ppmOcean());
+  A -= fl; X += fl;
   yr++;
-  hist.push({ yr, ...S, cum });
+  hist.push({ yr, ppm: ppmAir(), ph: pH(), burning: b > 0 });
 }
 
 function resetSim(){
-  stopAll();
-  S = { ...I }; yr = START; cum = 0;
-  hist = [{ yr, ...S, cum }];
+  stop();
+  F = +sE.value; A = 0; X = 0; yr = 0; acc = 0;
+  hist = [{ yr: 0, ppm: P0, ph: PH0, burning: true }];
+  dots = [];
+  const n = Math.round(F / DOT);
+  for (let i = 0; i < n; i++) dots.push({ where: 'fossil', u: Math.random(), v: Math.random(), t: 1, fu: 0, fv: 0, from: 'fossil' });
+  sE.disabled = sR.disabled = false;
+  $('btnRun').textContent = '▶ Run';
   render();
 }
-function stopAll(){
-  running = false; clearInterval(timer); clearInterval(runner);
-  $('btnRun').textContent = '▶ Run'; $('btnRun').classList.remove('on');
-}
+function stop(){ running = false; $('btnRun').textContent = yr > 0 && yr < XMAX ? '▶ Resume' : '▶ Run'; $('btnRun').classList.remove('on'); }
 function toggleRun(){
-  if (running) { stopAll(); return; }
-  clearInterval(runner);
-  running = true; $('btnRun').textContent = '⏸ Pause'; $('btnRun').classList.add('on');
-  timer = setInterval(() => { if (yr >= 2500) { stopAll(); return; } step(); render(); }, 80);
-}
-function runTo(t){
-  stopAll();
-  runner = setInterval(() => {
-    for (let i = 0; i < 4 && yr < t; i++) step();
-    render();
-    if (yr >= t) clearInterval(runner);
-  }, 16);
+  if (running){ stop(); return; }
+  if (yr >= XMAX) resetSim();
+  running = true; sE.disabled = sR.disabled = true;
+  $('btnRun').textContent = '⏸ Pause'; $('btnRun').classList.add('on');
+  last = performance.now();
 }
 
-function pct(x){ return Math.round(100 * x) + '%'; }
-function render(){
-  $('cvF').textContent = (+sF.value).toFixed(1) + ' Gt C/yr';
-  $('cvD').textContent = (+sD.value).toFixed(1) + ' Gt C/yr';
-  document.querySelectorAll('.sb').forEach((b, i) => b.classList.toggle('active', i === active));
-  const ppm = S.atm / GT_PPM;
-  $('yD').textContent = yr;
-  $('stP').textContent = Math.round(ppm);
-  $('stW').textContent = '+' + (3.0 * Math.log2(Math.max(ppm, 1) / 280)).toFixed(1) + ' °C';
-  $('stE').textContent = Math.round(cum).toLocaleString();
-  const dA = S.atm - I.atm, dO = S.ocean - I.ocean, dL = (S.land - I.land) + (S.soil - I.soil);
-  if (cum > 0.5){
-    // share of released carbon held by each sink; the air share can fall as old excess drains
-    const pos = Math.max(0, dA) + Math.max(0, dO) + Math.max(0, dL) || 1;
-    $('stA').textContent = pct(Math.max(0, dA) / cum);
-    $('bA').style.width = 100 * Math.max(0, dA) / pos + '%';
-    $('bO').style.width = 100 * Math.max(0, dO) / pos + '%';
-    $('bL').style.width = 100 * Math.max(0, dL) / pos + '%';
-  } else {
-    $('stA').textContent = '—';
-    ['bA','bO','bL'].forEach(id => $(id).style.width = '0%');
+// move dots between reservoirs to match the model; one dot = 10 Gt C
+function syncDots(){
+  const want = { fossil: Math.round(F / DOT), atm: Math.round(A / DOT) };
+  let nf = dots.filter(d => d.where === 'fossil').length;
+  while (nf > want.fossil){
+    const d = dots.find(d => d.where === 'fossil');
+    d.from = 'fossil'; d.where = 'atm'; d.fu = d.u; d.fv = d.v; d.u = Math.random(); d.v = Math.random(); d.t = 0; nf--;
   }
-  const total = S.atm + S.land + S.soil + S.ocean + S.fossil;
-  $('tot').textContent = 'Total carbon in all five reservoirs: ' + Math.round(total).toLocaleString() + ' Gt C (unchanged)';
-  drawPPM(); drawChange();
+  let na = dots.filter(d => d.where === 'atm').length;
+  while (na > want.atm){
+    const d = dots.find(d => d.where === 'atm' && d.t >= 1) || dots.find(d => d.where === 'atm');
+    d.from = 'atm'; d.where = 'ocean'; d.fu = d.u; d.fv = d.v; d.u = Math.random(); d.v = Math.random(); d.t = 0; na--;
+  }
 }
 
-function setup(id){
-  const cv = $(id), ctx = cv.getContext('2d');
-  const W = cv.clientWidth, H = cv.clientHeight;
-  const dpr = window.devicePixelRatio || 1;
-  cv.width = W * dpr; cv.height = H * dpr;
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, W, H);
-  return { ctx, W, H, fs: parseFloat(getComputedStyle(document.body).fontSize) };
+function loop(now){
+  if (running){
+    acc += Math.min(0.2, (now - last) / 1000) * 15;   // 15 model years per second
+    while (acc >= 1 && yr < XMAX){ step(); acc -= 1; }
+    if (yr >= XMAX) stop();
+    syncDots();
+    render();
+  }
+  last = now;
+  for (const d of dots) if (d.t < 1) d.t = Math.min(1, d.t + 0.025);
+  drawScene(now);
+  requestAnimationFrame(loop);
+}
+
+function render(){
+  $('cvE').textContent = (+sE.value).toLocaleString() + ' Gt C';
+  $('cvR').textContent = sR.value + ' Gt C/yr';
+  $('yD').textContent = yr;
+  $('stP').textContent = Math.round(ppmAir());
+  const p = pH();
+  $('stH').textContent = p.toFixed(2);
+  const more = Math.pow(10, PH0 - p) - 1;
+  $('stA').textContent = more < 0.005 ? 'started at 8.20' : Math.round(100 * more) + '% more acidic than at start';
+  const burned = (+sE.value) - F;
+  if (burned > 0){
+    $('bA').style.width = 100 * A / burned + '%'; $('bO').style.width = 100 * X / burned + '%';
+    $('lA').textContent = 'Air ' + Math.round(100 * A / burned) + '%';
+    $('lO').textContent = 'Ocean ' + Math.round(100 * X / burned) + '%';
+  } else { $('bA').style.width = $('bO').style.width = '0%'; $('lA').textContent = 'Air'; $('lO').textContent = 'Ocean'; }
+  const gap = ppmAir() - ppmOcean();
+  let msg;
+  if (yr === 0) msg = 'Air and ocean are in balance.<small>All the fossil carbon is still underground. Press Run.</small>';
+  else if (F > 0.01) msg = 'Burning. CO₂ piles up in the air.<small>The ocean absorbs some, but it cannot keep up.</small>';
+  else if (gap > 3) msg = 'All the fossil carbon is out.<small>CO₂ in the air slowly falls as the ocean keeps absorbing, and the ocean keeps getting more acidic.</small>';
+  else msg = 'A new normal.<small>Air and ocean are back in balance, but CO₂ is far above 280 ppm and the ocean is more acidic. It stays like this for thousands of years.</small>';
+  $('phase').innerHTML = msg;
+  drawChart();
+}
+
+// ---------- scene ----------
+function sizeCanvas(cv){
+  const W = cv.clientWidth, H = cv.clientHeight, dpr = window.devicePixelRatio || 1;
+  if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)){ cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+  const ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); return { ctx, W, H };
 }
 const font = (w, s) => `${w} ${s}px "Century Gothic",CenturyGothic,"URW Gothic","Avenir Next","Segoe UI",sans-serif`;
-function niceStep(range, n){ const r = range / n, m = Math.pow(10, Math.floor(Math.log10(r))), d = r / m; return (d <= 1.5 ? 1 : d <= 3.5 ? 2 : d <= 7.5 ? 5 : 10) * m; }
-function xRange(){ return [START, Math.max(START + 75, yr)]; }
+const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
+const rgb = c => `rgb(${c[0]},${c[1]},${c[2]})`;
 
-function drawPPM(){
-  const { ctx, W, H, fs } = setup('ppmChart');
-  if (!W || !H) return;
-  const pad = { l: fs * 3.4, r: fs * 4.2, t: fs * 0.5, b: fs * 1.6 };
-  const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b;
-  const [x0, x1] = xRange();
-  let hi = 500;
-  for (const h of hist) hi = Math.max(hi, h.atm / GT_PPM);
-  hi = Math.ceil(hi * 1.08 / 50) * 50;
-  const lo = 250;
-  const tx = y => pad.l + (y - x0) / (x1 - x0) * cW;
-  const ty = p => pad.t + (1 - (p - lo) / (hi - lo)) * cH;
-  ctx.font = font(400, fs * 0.8); ctx.fillStyle = '#46525e'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
-  const st = niceStep(hi - lo, 4);
-  for (let p = Math.ceil(lo / st) * st; p <= hi; p += st){
-    ctx.strokeStyle = '#e4e9ed'; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(pad.l, ty(p)); ctx.lineTo(pad.l + cW, ty(p)); ctx.stroke();
-    ctx.fillText(p, pad.l - fs * 0.4, ty(p));
+function regions(W, H){
+  const sea = H * 0.52, landW = W * 0.4;
+  return {
+    sea, landW,
+    atm: { x: W * 0.04, y: H * 0.15, w: W * 0.92, h: sea - H * 0.27 },
+    ocean: { x: landW + W * 0.04, y: sea + H * 0.07, w: W - landW - W * 0.08, h: H * 0.3 },
+    fossil: { x: W * 0.04, y: H * 0.80, w: landW - W * 0.1, h: H * 0.11 },
+    stack: { x: landW * 0.72, y: sea - H * 0.19 }
+  };
+}
+function pos(R, where, u, v){ const r = R[where]; return [r.x + u * r.w, r.y + v * r.h]; }
+
+function drawScene(now){
+  const { ctx, W, H } = sizeCanvas($('scene'));
+  if (!W) return;
+  const fs = parseFloat(getComputedStyle(document.body).fontSize);
+  const R = regions(W, H);
+  const haze = Math.min(1, (ppmAir() - P0) / 700);
+  const g = ctx.createLinearGradient(0, 0, 0, R.sea);
+  g.addColorStop(0, rgb(mix([88, 150, 214], [150, 140, 120], haze)));
+  g.addColorStop(1, rgb(mix([196, 225, 245], [222, 205, 170], haze)));
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, R.sea);
+  const acid = Math.min(1, (PH0 - pH()) / 0.5);
+  const og = ctx.createLinearGradient(0, R.sea, 0, H);
+  og.addColorStop(0, rgb(mix([40, 120, 200], [80, 150, 130], acid)));
+  og.addColorStop(1, rgb(mix([10, 40, 95], [40, 75, 65], acid)));
+  ctx.fillStyle = og; ctx.fillRect(R.landW, R.sea, W - R.landW, H - R.sea);
+  ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 2;
+  for (let k = 0; k < 2; k++){
+    ctx.beginPath();
+    for (let x = R.landW; x <= W; x += 6){
+      const y = R.sea + 3 + k * 10 + 3 * Math.sin(x / 28 + now / 600 + k);
+      x === R.landW ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
   }
-  ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-  const xs = niceStep(x1 - x0, 6);
-  for (let y = Math.ceil(x0 / xs) * xs; y <= x1; y += xs) ctx.fillText(y, tx(y), pad.t + cH + fs * 0.25);
-  // preindustrial reference
-  ctx.setLineDash([fs * 0.4, fs * 0.3]); ctx.strokeStyle = '#8c969f'; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.moveTo(pad.l, ty(280)); ctx.lineTo(pad.l + cW, ty(280)); ctx.stroke(); ctx.setLineDash([]);
-  ctx.font = font(400, fs * 0.72); ctx.fillStyle = '#66717c'; ctx.textAlign = 'left'; ctx.textBaseline = 'bottom';
-  ctx.fillText('preindustrial 280 ppm', pad.l + fs * 0.3, ty(280) - 2);
-  ctx.save(); ctx.translate(fs * 0.8, pad.t + cH / 2); ctx.rotate(-Math.PI / 2);
-  ctx.font = font(700, fs * 0.8); ctx.fillStyle = '#46525e'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('ppm', 0, 0); ctx.restore();
-  ctx.strokeStyle = C.atm; ctx.lineWidth = fs * 0.28; ctx.lineJoin = 'round'; ctx.beginPath();
-  hist.forEach((h, i) => { const X = tx(h.yr), Y = ty(h.atm / GT_PPM); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); });
-  ctx.stroke();
-  const last = hist[hist.length - 1], X = tx(last.yr), Y = ty(last.atm / GT_PPM);
-  ctx.fillStyle = C.atm; ctx.beginPath(); ctx.arc(X, Y, fs * 0.35, 0, Math.PI * 2); ctx.fill();
-  ctx.font = font(700, fs * 0.95); ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-  ctx.fillText(Math.round(last.atm / GT_PPM), X + fs * 0.5, Y);
+  // land and ground layers
+  const ground = x => R.sea - H * 0.03 - H * 0.015 * Math.sin(x / 40);
+  ctx.fillStyle = '#5c8f3e';
+  ctx.beginPath(); ctx.moveTo(0, ground(0));
+  for (let x = 0; x <= R.landW; x += 8) ctx.lineTo(x, ground(x));
+  ctx.lineTo(R.landW + W * 0.015, R.sea + H * 0.02); ctx.lineTo(R.landW + W * 0.015, H); ctx.lineTo(0, H); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = '#8a6a45'; ctx.fillRect(0, R.sea + H * 0.01, R.landW + W * 0.012, H);
+  ctx.fillStyle = '#6e5235'; ctx.fillRect(0, R.sea + H * 0.13, R.landW + W * 0.01, H);
+  ctx.fillStyle = '#1d1b19';
+  ctx.beginPath(); ctx.roundRect(R.fossil.x - 10, R.fossil.y - 10, R.fossil.w + 20, R.fossil.h + 20, 8); ctx.fill();
+  for (const tx of [0.05, 0.12, 0.19]){
+    const x = W * tx, y = ground(x);
+    ctx.fillStyle = '#5a3d22'; ctx.fillRect(x - 3, y - H * 0.06, 6, H * 0.06);
+    ctx.fillStyle = '#2f7a3a'; ctx.beginPath(); ctx.arc(x, y - H * 0.085, H * 0.045, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#3f9a49'; ctx.beginPath(); ctx.arc(x - H * 0.012, y - H * 0.1, H * 0.028, 0, Math.PI * 2); ctx.fill();
+  }
+  // power plant, smokestack and pipe down to the fossil carbon
+  const sx = R.stack.x, sy = R.stack.y;
+  ctx.fillStyle = '#7d848c'; ctx.fillRect(sx - W * 0.07, sy + H * 0.1, W * 0.08, H * 0.07);
+  ctx.fillStyle = '#9aa1a8'; ctx.fillRect(sx - W * 0.008, sy, W * 0.016, H * 0.17);
+  ctx.strokeStyle = '#3d3d3d'; ctx.setLineDash([6, 5]); ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(sx, sy + H * 0.17); ctx.lineTo(sx, R.fossil.y - 10); ctx.stroke(); ctx.setLineDash([]);
+  if (running && F > 0.01){
+    for (let i = 0; i < 4; i++){
+      const t = ((now / 900) + i / 4) % 1;
+      ctx.fillStyle = `rgba(90,90,90,${0.45 * (1 - t)})`;
+      ctx.beginPath(); ctx.arc(sx + t * W * 0.03, sy - t * H * 0.1, 6 + t * 14, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+  // carbon dots
+  const r0 = Math.max(2.5, fs * 0.17);
+  for (const d of dots){
+    let [x, y] = pos(R, d.where, d.u, d.v);
+    if (d.t < 1){
+      const [x0, y0] = pos(R, d.from, d.fu, d.fv);
+      const e = d.t * d.t * (3 - 2 * d.t);
+      if (d.from === 'fossil'){
+        if (e < 0.5){ const s = e / 0.5; x = x0 + (sx - x0) * s; y = y0 + (sy - y0) * s; }
+        else { const s = (e - 0.5) / 0.5; x = sx + (x - sx) * s; y = sy + (y - sy) * s; }
+      } else { x = x0 + (x - x0) * e; y = y0 + (y - y0) * e; }
+    }
+    const settled = d.t >= 1;
+    const bob = d.where === 'fossil' && settled ? 0 : 1.5 * Math.sin(now / 700 + d.u * 20);
+    ctx.fillStyle = d.where === 'fossil' && settled ? '#6a6a6a' : d.where === 'ocean' && settled ? '#d6f0ff' : '#ff9a3c';
+    ctx.beginPath(); ctx.arc(x, y + bob, r0, 0, Math.PI * 2); ctx.fill();
+  }
+  // air to ocean arrow
+  const fl = K * (ppmAir() - ppmOcean());
+  if (fl > 0.05){
+    const ax = R.landW + (W - R.landW) * 0.5, w = Math.min(fs * 1.6, 4 + fl * 2.2);
+    ctx.fillStyle = 'rgba(255,255,255,.9)';
+    ctx.beginPath();
+    ctx.moveTo(ax - w / 2, R.sea - H * 0.1); ctx.lineTo(ax + w / 2, R.sea - H * 0.1);
+    ctx.lineTo(ax + w / 2, R.sea - H * 0.02); ctx.lineTo(ax + w, R.sea - H * 0.02);
+    ctx.lineTo(ax, R.sea + H * 0.04); ctx.lineTo(ax - w, R.sea - H * 0.02); ctx.lineTo(ax - w / 2, R.sea - H * 0.02);
+    ctx.closePath(); ctx.fill();
+    ctx.font = font(700, fs * 0.8); ctx.fillStyle = '#10243d'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText('Ocean absorbing ' + fl.toFixed(1) + ' Gt C/yr', ax + w + 8, R.sea - H * 0.06);
+  }
+  ctx.textBaseline = 'top'; ctx.textAlign = 'left';
+  const tag = (t, x, y, c) => { ctx.font = font(700, fs * 0.95); ctx.fillStyle = c; ctx.fillText(t, x, y); };
+  tag('AIR  ' + Math.round(ppmAir()) + ' ppm CO₂', W * 0.02, H * 0.03, '#10243d');
+  tag('OCEAN  pH ' + pH().toFixed(2), R.landW + W * 0.03, H - fs * 1.6, '#ffffff');
+  tag('FOSSIL CARBON  ' + Math.round(F).toLocaleString() + ' Gt', W * 0.02, R.fossil.y - fs * 2.1, '#ffffff');
+  ctx.font = font(400, fs * 0.7); ctx.fillStyle = '#10243d'; ctx.textAlign = 'right';
+  ctx.fillText('each dot = 10 billion tonnes of carbon', W - W * 0.02, H * 0.035);
 }
 
-function drawChange(){
-  const { ctx, W, H, fs } = setup('chgChart');
-  if (!W || !H) return;
-  const pad = { l: fs * 3.4, r: fs * 6.6, t: fs * 0.6, b: fs * 2.6 };
-  const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b;
-  const [x0, x1] = xRange();
-  const keys = ['atm', 'ocean', 'soil', 'land', 'fossil'];
-  // stack positives up and negatives down at each year
-  const stacks = hist.map(h => {
-    let up = 0, dn = 0; const o = {};
-    for (const k of keys){
-      const v = h[k] - I[k];
-      if (v >= 0){ o[k] = [up, up + v]; up += v; } else { o[k] = [dn + v, dn]; dn += v; }
-    }
-    o.up = up; o.dn = dn; return o;
-  });
-  let ext = 200;
-  for (const s of stacks) ext = Math.max(ext, s.up, -s.dn);
-  const st = niceStep(ext * 2, 6);
-  ext = Math.ceil(ext * 1.05 / st) * st;
-  const tx = y => pad.l + (y - x0) / (x1 - x0) * cW;
-  const ty = v => pad.t + (1 - (v + ext) / (2 * ext)) * cH;
-  ctx.font = font(400, fs * 0.8); ctx.fillStyle = '#46525e'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
-  for (let v = -ext; v <= ext + 1e-9; v += st){
-    ctx.strokeStyle = v === 0 ? '#1b2530' : '#e4e9ed'; ctx.lineWidth = v === 0 ? 2 : 1;
-    ctx.beginPath(); ctx.moveTo(pad.l, ty(v)); ctx.lineTo(pad.l + cW, ty(v)); ctx.stroke();
-    ctx.fillText((v > 0 ? '+' : '') + Math.round(v).toLocaleString(), pad.l - fs * 0.4, ty(v));
+// ---------- chart: two stacked panels sharing the time axis ----------
+function drawChart(){
+  const { ctx, W, H } = sizeCanvas($('chart'));
+  if (!W) return;
+  ctx.clearRect(0, 0, W, H);
+  const fs = parseFloat(getComputedStyle(document.body).fontSize);
+  const pad = { l: fs * 4.6, r: fs * 1.2, t: fs * 0.7, b: fs * 1.5 };
+  const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b, gap = fs * 0.6, ph1 = (cH - gap) / 2;
+  const top1 = pad.t, top2 = pad.t + ph1 + gap;
+  const tx = y => pad.l + y / XMAX * cW;
+  const pmax = Math.max(800, Math.ceil(Math.max(...hist.map(h => h.ppm)) / 200) * 200);
+  const ty = p => top1 + (1 - (p - 250) / (pmax - 250)) * ph1;
+  const pmin = Math.min(7.8, Math.floor(Math.min(...hist.map(h => h.ph)) * 10) / 10 - 0.05);
+  const tyH = v => top2 + (1 - (v - pmin) / (8.25 - pmin)) * ph1;
+  const endBurn = hist.findIndex(h => !h.burning);
+  const eb = endBurn < 0 ? hist[hist.length - 1].yr : hist[endBurn].yr;
+  if (eb > 0){
+    ctx.fillStyle = 'rgba(224,123,36,.10)'; ctx.fillRect(tx(0), pad.t, tx(eb) - tx(0), cH);
+    ctx.font = font(700, fs * 0.72); ctx.fillStyle = '#b8611b'; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    ctx.fillText('burning', (tx(0) + tx(eb)) / 2, pad.t + fs * 0.1);
   }
-  ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-  const xs = niceStep(x1 - x0, 6);
-  for (let y = Math.ceil(x0 / xs) * xs; y <= x1; y += xs) ctx.fillText(y, tx(y), pad.t + cH + fs * 0.25);
-  ctx.font = font(700, fs * 0.85);
-  ctx.fillText('Year', pad.l + cW / 2, pad.t + cH + fs * 1.35);
-  ctx.save(); ctx.translate(fs * 0.8, pad.t + cH / 2); ctx.rotate(-Math.PI / 2);
-  ctx.textBaseline = 'middle'; ctx.fillText('Gt C', 0, 0); ctx.restore();
-  ctx.font = font(700, fs * 0.78); ctx.textAlign = 'left'; ctx.textBaseline = 'top'; ctx.fillStyle = '#66717c';
-  ctx.fillText('▲ gained', pad.l + fs * 0.4, pad.t + fs * 0.2);
-  ctx.textBaseline = 'bottom'; ctx.fillText('▼ lost', pad.l + fs * 0.4, pad.t + cH - fs * 0.2);
-  if (hist.length < 2){
-    ctx.font = font(400, fs * 0.9); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#66717c';
-    ctx.fillText('Press Run (Space) to start', pad.l + cW / 2, ty(ext / 2));
-    return;
+  ctx.font = font(400, fs * 0.75); ctx.textBaseline = 'middle'; ctx.textAlign = 'right';
+  ctx.lineWidth = 1;
+  const st = pmax > 1200 ? 400 : 200;
+  for (let p = 400; p <= pmax; p += st){
+    ctx.strokeStyle = '#e4e9ed'; ctx.beginPath(); ctx.moveTo(pad.l, ty(p)); ctx.lineTo(pad.l + cW, ty(p)); ctx.stroke();
+    ctx.fillStyle = '#E07B24'; ctx.fillText(p, pad.l - fs * 0.3, ty(p));
   }
-  for (const k of keys){
-    ctx.fillStyle = C[k]; ctx.globalAlpha = 0.85; ctx.beginPath();
-    stacks.forEach((s, i) => { const X = tx(hist[i].yr), Y = ty(s[k][1]); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); });
-    for (let i = stacks.length - 1; i >= 0; i--) ctx.lineTo(tx(hist[i].yr), ty(stacks[i][k][0]));
-    ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1;
+  ctx.fillStyle = '#E07B24'; ctx.fillText(280, pad.l - fs * 0.3, ty(280));
+  for (let v = 8.2; v >= pmin - 1e-9; v -= 0.1){
+    ctx.strokeStyle = '#e4e9ed'; ctx.beginPath(); ctx.moveTo(pad.l, tyH(v)); ctx.lineTo(pad.l + cW, tyH(v)); ctx.stroke();
+    ctx.fillStyle = '#2F6FB3'; ctx.fillText(v.toFixed(1), pad.l - fs * 0.3, tyH(v));
   }
-  // right-edge labels for layers thick enough to read
-  const last = stacks[stacks.length - 1], h = hist[hist.length - 1];
-  const labels = [];
-  for (const k of keys){
-    const [a, b] = last[k], v = h[k] - I[k];
-    if (Math.abs(v) < 1) continue;
-    labels.push({ y: ty((a + b) / 2), text: NAMES[k] + ' ' + (v > 0 ? '+' : '−') + Math.round(Math.abs(v)).toLocaleString(), color: C[k] });
-  }
-  const gap = fs * 1.0;
-  labels.sort((a, b) => a.y - b.y);
-  for (let i = 1; i < labels.length; i++) if (labels[i].y - labels[i-1].y < gap) labels[i].y = labels[i-1].y + gap;
-  ctx.font = font(700, fs * 0.8); ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-  labels.forEach(L => { ctx.fillStyle = L.color; ctx.fillText(L.text, pad.l + cW + fs * 0.4, L.y); });
+  ctx.setLineDash([fs * 0.4, fs * 0.3]);
+  ctx.strokeStyle = 'rgba(224,123,36,.55)'; ctx.beginPath(); ctx.moveTo(pad.l, ty(280)); ctx.lineTo(pad.l + cW, ty(280)); ctx.stroke();
+  ctx.strokeStyle = 'rgba(47,111,179,.55)'; ctx.beginPath(); ctx.moveTo(pad.l, tyH(8.2)); ctx.lineTo(pad.l + cW, tyH(8.2)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.font = font(700, fs * 0.78); ctx.textAlign = 'center';
+  ctx.save(); ctx.translate(fs * 0.7, top1 + ph1 / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = '#E07B24'; ctx.fillText('CO₂ ppm', 0, 0); ctx.restore();
+  ctx.save(); ctx.translate(fs * 0.7, top2 + ph1 / 2); ctx.rotate(-Math.PI / 2); ctx.fillStyle = '#2F6FB3'; ctx.fillText('ocean pH', 0, 0); ctx.restore();
+  ctx.strokeStyle = '#1b2530'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(pad.l, pad.t + cH); ctx.lineTo(pad.l + cW, pad.t + cH); ctx.stroke();
+  ctx.fillStyle = '#46525e'; ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.font = font(400, fs * 0.75);
+  for (let y = 0; y <= XMAX; y += 100) ctx.fillText(y === XMAX ? y + ' years' : y, tx(y) - (y === XMAX ? fs * 1.2 : 0), pad.t + cH + fs * 0.2);
+  const line = (key, map, color) => {
+    ctx.strokeStyle = color; ctx.lineWidth = fs * 0.25; ctx.lineJoin = 'round'; ctx.beginPath();
+    hist.forEach((h, i) => { const X = tx(h.yr), Y = map(h[key]); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); });
+    ctx.stroke();
+    const l = hist[hist.length - 1];
+    ctx.fillStyle = color; ctx.beginPath(); ctx.arc(tx(l.yr), map(l[key]), fs * 0.3, 0, Math.PI * 2); ctx.fill();
+  };
+  line('ppm', ty, '#E07B24');
+  line('ph', tyH, '#2F6FB3');
 }
 
 function toggleTk(){ const on = $('tk').classList.toggle('show'); $('tkBtn').classList.toggle('on', on); }
 function toggleFs(){ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); }
+sE.oninput = sR.oninput = resetSim;
 document.addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT' && e.key.startsWith('Arrow')) return;
-  const n = parseInt(e.key);
-  if (n >= 1 && n <= scenarios.length) selectScen(n - 1);
-  else if (e.key === ' ') { e.preventDefault(); toggleRun(); }
+  if (e.key === ' '){ e.preventDefault(); toggleRun(); }
   else if (e.key === 'r' || e.key === 'R') resetSim();
   else if (e.key === 't' || e.key === 'T') toggleTk();
   else if (e.key === 'f' || e.key === 'F') toggleFs();
-  else if (e.key === 'Escape') { $('tk').classList.remove('show'); $('tkBtn').classList.remove('on'); }
+  else if (e.key === 'Escape'){ $('tk').classList.remove('show'); $('tkBtn').classList.remove('on'); }
 });
 window.addEventListener('resize', render);
 resetSim();
+requestAnimationFrame(loop);
 </script>
 </body>
 </html>
