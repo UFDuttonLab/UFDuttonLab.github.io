@@ -1002,6 +1002,29 @@
   .site-footer a:hover { text-decoration: underline; }
   .site-footer a:focus { outline: 2px solid var(--uf-blue); outline-offset: 2px; border-radius: 2px; }
 
+
+  /* PRINT ALL QUESTIONS */
+  .print-all-link { display: inline-block; margin-top: 6px; font-weight: 400 !important; font-size: 0.8rem; }
+  #print-all { display: none; }
+  @media print {
+    body.print-all > *:not(#print-all) { display: none !important; }
+    body.print-all #print-all { display: block; color: #000; font-size: 10.5pt; line-height: 1.35; }
+    #print-all h1 { font-size: 16pt; margin: 0 0 4pt; }
+    #print-all .pa-meta { font-size: 9pt; color: #444; margin: 0 0 10pt; }
+    #print-all h2 { font-size: 13pt; margin: 14pt 0 6pt; border-bottom: 1px solid #999; padding-bottom: 2pt; break-after: avoid; }
+    #print-all .pa-q { margin: 0 0 10pt; }
+    #print-all .pa-head { break-inside: avoid; }
+    #print-all .pa-exp { orphans: 3; widows: 3; }
+    #print-all .pa-stem { font-weight: 600; margin: 0 0 3pt; }
+    #print-all .pa-fig { margin: 4pt 0; max-width: 3.6in; }
+    #print-all .pa-fig svg { max-width: 3.6in; height: auto; }
+    #print-all ol.pa-choices { list-style: upper-alpha; margin: 0 0 3pt 18pt; padding: 0; }
+    #print-all ol.pa-choices li.pa-correct { font-weight: 700; }
+    #print-all .pa-ans { margin: 2pt 0 0; }
+    #print-all .pa-exp { margin: 2pt 0 0; color: #222; }
+    #print-all .key-term { font-weight: 600; }
+  }
+
   /* HIDDEN */
   .hidden { display: none !important; }
 
@@ -1154,7 +1177,9 @@
 
 <footer class="site-footer" role="contentinfo">
   Developed by <a href="https://ufduttonlab.github.io/" target="_blank" rel="noopener noreferrer">Dutton Lab @ UF</a>
+  <br><a href="#" class="print-all-link" onclick="printAllQuestions(); return false;">Print all questions and answers</a>
 </footer>
+<div id="print-all" aria-hidden="true"></div>
 
 <script>
 // ============================================================
@@ -2545,6 +2570,36 @@ function shuffleArray(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+
+// ============================================================
+// PRINT ALL QUESTIONS AND ANSWERS
+// ============================================================
+function printAllQuestions() {
+  const box = document.getElementById('print-all');
+  const L = i => String.fromCharCode(65 + i);
+  const order = Object.keys(TOPICS).map(Number).sort((a, b) => (a === 0) - (b === 0) || a - b);
+  let n = 0, html = '<h1>BSC2011 Ecology Study Guide: All Questions and Answers</h1>' +
+    '<p class="pa-meta">' + ALL_QUESTIONS.length + ' questions. Correct choices are in bold.</p>';
+  order.forEach(t => {
+    const qs = ALL_QUESTIONS.filter(q => q.t === t);
+    if (!qs.length) return;
+    html += '<h2>' + TOPICS[t] + '</h2>';
+    qs.forEach(q => {
+      n++;
+      html += '<div class="pa-q"><div class="pa-head"><p class="pa-stem">' + n + '. ' + q.q + '</p>' +
+        (q.fig ? '<div class="pa-fig">' + q.fig + '</div>' : '') +
+        '<ol class="pa-choices">' + q.c.map((c, i) => '<li' + (i === q.correct ? ' class="pa-correct"' : '') + '>' + c + '</li>').join('') + '</ol>' +
+        '<p class="pa-ans"><strong>Answer: ' + L(q.correct) + '</strong></p></div>' +
+        '<p class="pa-exp">' + q.explanation + '</p></div>';
+    });
+  });
+  box.innerHTML = html;
+  document.body.classList.add('print-all');
+  const done = () => { document.body.classList.remove('print-all'); box.innerHTML = ''; window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  setTimeout(() => window.print(), 50);
 }
 
 // Start
